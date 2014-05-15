@@ -39,7 +39,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>62EC7B3C-FB54-439E-864F-B061DDD0AC84</string>
+						<string>AC77444D-950E-44EC-AE0C-355D6F140D10</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -179,7 +179,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>B3025616-7291-4D7F-9C13-DBCC8392F6D5</string>
+			<string>1740828C-9036-4505-A6AC-DCE3CD56393B</string>
 			<key>relativeImagePath</key>
 			<string>levels/</string>
 			<key>rotation</key>
@@ -230,7 +230,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>DBB6DA05-EB98-4762-ACD6-11C3AEDF6DDA</string>
+						<string>F26B29A2-902A-4D1C-A112-7A161F1C05D6</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -370,7 +370,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>B3025616-7291-4D7F-9C13-DBCC8392F6D5</string>
+			<string>1740828C-9036-4505-A6AC-DCE3CD56393B</string>
 			<key>relativeImagePath</key>
 			<string>levels/</string>
 			<key>rotation</key>
@@ -402,7 +402,7 @@
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>AE9EC1AA-374B-4F6B-A043-CFD848AAB324</string>
+	<string>4416E4CC-6A0D-4852-8183-2D01FAA2ACE3</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -415,7 +415,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>62EC7B3C-FB54-439E-864F-B061DDD0AC84</key>
+		<key>AC77444D-950E-44EC-AE0C-355D6F140D10</key>
 		<array>
 			<array>
 				<string>{2.75, -10}</string>
@@ -497,7 +497,7 @@
 				<string>{2.75, -10}</string>
 			</array>
 		</array>
-		<key>DBB6DA05-EB98-4762-ACD6-11C3AEDF6DDA</key>
+		<key>F26B29A2-902A-4D1C-A112-7A161F1C05D6</key>
 		<array>
 			<array>
 				<string>{13.5, 30.5}</string>
@@ -612,7 +612,7 @@
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>B3025616-7291-4D7F-9C13-DBCC8392F6D5</string>
+	<string>1740828C-9036-4505-A6AC-DCE3CD56393B</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

@@ -44,7 +44,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039420157670974731, 0}, {0.040751412510871887, 1}}</string>
+			<string>{{0.039420224726200104, 0}, {0.040750246495008469, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -58,7 +58,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.039420157670974731, 0}, {0.040751412510871887, 1}}</string>
+			<string>{{0.039420224726200104, 0}, {0.040750246495008469, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -71,6 +71,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>gravityAreaTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>parallaxLevel.lhs</key>
 				<dict>
 					<key>publish</key>
