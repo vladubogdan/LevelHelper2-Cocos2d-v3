@@ -74,6 +74,6 @@ Select all sprites in the level and now choose "Dynamic" as the physics "Type" o
 <img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/loadLevel.png" alt="Load Level"/>
 
 Congratulation! You just loaded your first basic level. 
-<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/levelLoad.giv" alt="Loaded Level"/>
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/levelLoad.gif" alt="Loaded Level"/>
 
-Don't forget to Watch this repository in order to get notifications when new updates are available.
+Don't forget to Watch and Start this repository in order to get notifications when new updates are available.
