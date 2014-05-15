@@ -47,3 +47,14 @@ Drag a few in the editor in order to create a very basic level.
 Select all sprites in the level and now choose "Dynamic" as the physics "Type" of the selected sprites.
 
 <img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/dynamicType.png" alt="Dynamic Type"/>
+
+
+7. Save the level by clicking "Command-S" and then publish to an optimised Cocos2d format that will be loaded by the API found on this repository.
+
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/saveLevel.png" alt="Save Level"/>
+
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/publishLevel.png" alt="Publish Level"/>
+
+8. Add the "levels" folder in your Xcode project using "Create folder references for any added folders" option so that every time we publish a new level Xcode will automatically refresh.
+
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/addLevels.png" alt="Add Levels"/>
