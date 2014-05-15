@@ -1,0 +1,3084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>{{0.9560433030128479, 1}, {0.47780376672744751, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.5, 0.5}</string>
+			<key>imageFileName</key>
+			<string>bgrd.png</string>
+			<key>name</key>
+			<string>bgrd</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>800C9E33-833F-462E-AB90-9D8B54943881</string>
+			<key>zOrder</key>
+			<integer>-4</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>devicePositions</key>
+			<dict>
+				<key>1024x768</key>
+				<string>{0.39522822460664125, 0.7386283854140856}</string>
+				<key>1136x640</key>
+				<string>{-0.040612004586728291, 0.073195461381874341}</string>
+				<key>2048x1536</key>
+				<string>{0.017349054029909893, -0.027565117727317557}</string>
+				<key>960x640</key>
+				<string>{0.34052949434650753, -0.065237318712570408}</string>
+			</dict>
+			<key>generalPosition</key>
+			<string>{0.34052949434650753, -0.065237318712570408}</string>
+			<key>imageFileName</key>
+			<string>carTire.png</string>
+			<key>name</key>
+			<string>carTire</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>perDevicePosition</key>
+			<true/>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{96, 93}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>E2BB9E73-0080-490C-A3DB-E3931302686E</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.15490319325569241, 0.14889323078696179}</string>
+			<key>imageFileName</key>
+			<string>carTire.png</string>
+			<key>name</key>
+			<string>carTire_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{96, 93}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>4951EB8F-5C28-4605-BDCF-EFAA5D3B0EB9</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.26669573783874512, 0.99715375900268555}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>active</key>
+					<true/>
+					<key>fps</key>
+					<integer>24</integer>
+					<key>name</key>
+					<string>anim</string>
+					<key>properties</key>
+					<dict>
+						<key>Rotation</key>
+						<dict>
+							<key>Frames</key>
+							<array>
+								<dict>
+									<key>frameIndex</key>
+									<integer>0</integer>
+									<key>rotations</key>
+									<dict/>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>19</integer>
+									<key>rotations</key>
+									<dict>
+										<key>DD5A63BD-D9C3-4D13-AED5-14BB617E8A08</key>
+										<real>70.977607727050781</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>39</integer>
+									<key>rotations</key>
+									<dict>
+										<key>DD5A63BD-D9C3-4D13-AED5-14BB617E8A08</key>
+										<real>156.05538940429688</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>49</integer>
+									<key>rotations</key>
+									<dict>
+										<key>DD5A63BD-D9C3-4D13-AED5-14BB617E8A08</key>
+										<real>317.85610961914062</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>59</integer>
+									<key>rotations</key>
+									<dict/>
+								</dict>
+							</array>
+							<key>type</key>
+							<string>LHRotationProperty</string>
+						</dict>
+					</dict>
+					<key>repetitions</key>
+					<integer>0</integer>
+					<key>totalFrames</key>
+					<integer>60</integer>
+				</dict>
+			</array>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{-0.081983566394289234, 0.19786400337616214}</string>
+					<key>imageFileName</key>
+					<string>robots.png</string>
+					<key>name</key>
+					<string>greenRobot</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>DD5A63BD-D9C3-4D13-AED5-14BB617E8A08</string>
+					<key>relativeImagePath</key>
+					<string>levels/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{110, 133}</string>
+					<key>spriteName</key>
+					<string>greenRobot</string>
+					<key>spriteUUID</key>
+					<string>9C8173A8-5D80-4F56-AFDB-115E6D744990</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>CC8588F6-C1B5-455E-AA8A-25DCD37EA880</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{1.3346866786908045, 0.5034229276216895}</string>
+			<key>imageFileName</key>
+			<string>robots.png</string>
+			<key>name</key>
+			<string>pinkRobot</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>levels/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{110, 133}</string>
+			<key>spriteName</key>
+			<string>pinkRobot</string>
+			<key>spriteUUID</key>
+			<string>68189927-8EF2-4BEE-BDC3-20BA98F11C64</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>DD5A63BD-D9C3-4D13-AED5-14BB617E8A08</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.27967896793186664, 0.52142398989270755}</string>
+			<key>imageFileName</key>
+			<string>carTire.png</string>
+			<key>name</key>
+			<string>carTire_2</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{96, 93}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>F0A7DDD2-B57B-492B-9350-BD37444CFF20</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.15417774021625519, 0.93758690357208252}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>active</key>
+					<true/>
+					<key>fps</key>
+					<integer>24</integer>
+					<key>name</key>
+					<string>test</string>
+					<key>properties</key>
+					<dict>
+						<key>Rotation</key>
+						<dict>
+							<key>Frames</key>
+							<array>
+								<dict>
+									<key>frameIndex</key>
+									<integer>0</integer>
+									<key>rotations</key>
+									<dict/>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>19</integer>
+									<key>rotations</key>
+									<dict>
+										<key>1942FF0A-4E49-4308-BA5D-D187A0DC3157</key>
+										<real>89.763069152832031</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>44</integer>
+									<key>rotations</key>
+									<dict>
+										<key>1942FF0A-4E49-4308-BA5D-D187A0DC3157</key>
+										<real>264.28179931640625</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>59</integer>
+									<key>rotations</key>
+									<dict/>
+								</dict>
+							</array>
+							<key>type</key>
+							<string>LHRotationProperty</string>
+						</dict>
+					</dict>
+					<key>repetitions</key>
+					<integer>0</integer>
+					<key>totalFrames</key>
+					<integer>60</integer>
+				</dict>
+			</array>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.020465713342056092, 0.15839442049766211}</string>
+					<key>imageFileName</key>
+					<string>robots.png</string>
+					<key>name</key>
+					<string>blueRobot</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>1942FF0A-4E49-4308-BA5D-D187A0DC3157</string>
+					<key>relativeImagePath</key>
+					<string>levels/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{110, 133}</string>
+					<key>spriteName</key>
+					<string>blueRobot</string>
+					<key>spriteUUID</key>
+					<string>2F3A5F3F-DA9C-471B-930F-35601F2AE875</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>E581205C-94CF-423B-85FE-34463BCE6089</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.24549648364384968, 0.58333737850189205}</string>
+			<key>name</key>
+			<string>UntitledNode</string>
+			<key>nodeType</key>
+			<string>LHNode</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{91.554359436035156, 89.761566162109375}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>1942FF0A-4E49-4308-BA5D-D187A0DC3157</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>active</key>
+					<true/>
+					<key>fps</key>
+					<integer>24</integer>
+					<key>name</key>
+					<string>waveing</string>
+					<key>properties</key>
+					<dict>
+						<key>Children Positions</key>
+						<dict>
+							<key>Frames</key>
+							<array/>
+							<key>subproperties</key>
+							<dict>
+								<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{3.7343022196715197, -40.446936095171054}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>5</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{3.7343022196715197, -40.446936095171054}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>11</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{106.57885156691225, 8.1549052729648963}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>16</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{72.644986064548561, -18.421647133752202}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>21</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{22.483973638785756, -50.223716498205448}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>26</integer>
+											<key>positions</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<string>{3.7343022196715197, -40.446936095171054}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>locked</key>
+									<false/>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+							</dict>
+							<key>type</key>
+							<string>LHChildrenPositionsProperty</string>
+						</dict>
+						<key>Children Rotations</key>
+						<dict>
+							<key>Frames</key>
+							<array>
+								<dict>
+									<key>frameIndex</key>
+									<integer>0</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>7.1650009155273438</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>-720.5911865234375</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>-11.89794921875</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>5</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>7.1650009155273438</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>-720.5911865234375</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>263.901123046875</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>11</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>56.405910491943359</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>85.501792907714844</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>297.59237670898438</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>16</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>18.696359634399414</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>58.728855133056641</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>297.59237670898438</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>21</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>40.159095764160156</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>32.841781616210938</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>253.03814697265625</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>26</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>58.464351654052734</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>7.8434262275695801</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>236.12619018554688</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>31</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>11.10453987121582</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>7.8434262275695801</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>283.62802124023438</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>36</integer>
+									<key>rotations</key>
+									<dict>
+										<key>10A73A0A-55D2-4696-89CF-37057401BC48</key>
+										<real>-1.9139679670333862</real>
+										<key>1F319FB9-1B53-47BC-968B-E97015D53237</key>
+										<real>356.06317138671875</real>
+										<key>2200C5AF-6D90-4671-89F2-5DD4B7B48094</key>
+										<real>3.8631041049957275</real>
+										<key>317B547C-5884-406B-B2CF-8446A7BC46D2</key>
+										<real>7.1650009155273438</real>
+										<key>33816908-07F0-4A6F-AFD0-E340CC185B62</key>
+										<real>1.6841177940368652</real>
+										<key>3B3A4BD0-03C9-430F-A740-2904762C9DC8</key>
+										<real>-0.84014892578125</real>
+										<key>40E27B9D-7375-4135-BE98-61FAD88CDAF3</key>
+										<real>356.08987426757812</real>
+										<key>590909F7-7CB3-4D9C-8738-2B9445BF8B91</key>
+										<real>-1.9139679670333862</real>
+										<key>5A01200C-2AB5-419A-9F31-E2A232328191</key>
+										<real>-359.287841796875</real>
+										<key>728E8E39-DB4B-4670-AA5A-001E6A1FB847</key>
+										<real>-1.4785642623901367</real>
+										<key>764452AD-2A45-444C-B111-6646F73A437F</key>
+										<real>357.92868041992188</real>
+										<key>777DF209-ED1F-4870-A06E-4E6A65D616F8</key>
+										<real>-357.94183349609375</real>
+										<key>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</key>
+										<real>356.3387451171875</real>
+										<key>90838252-152C-4F74-8B1E-0939BA238BF5</key>
+										<real>1.1981198787689209</real>
+										<key>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</key>
+										<real>5.8066048622131348</real>
+										<key>9E5CAB03-D6E2-4387-9969-4B860E900869</key>
+										<real>8.4649419784545898</real>
+										<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+										<real>-720.5911865234375</real>
+										<key>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</key>
+										<real>3.4335906505584717</real>
+										<key>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</key>
+										<real>358.30905151367188</real>
+										<key>BBC28918-7F8B-4309-9593-9ECC47BBBD51</key>
+										<real>-1.9139679670333862</real>
+										<key>CAFD2F94-8A40-4942-97C4-261967C070ED</key>
+										<real>-359.82415771484375</real>
+										<key>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</key>
+										<real>359.82867431640625</real>
+										<key>E96F1D23-9A84-41A2-90BE-B55B14830C13</key>
+										<real>-359.287841796875</real>
+										<key>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</key>
+										<real>-11.89794921875</real>
+										<key>FE24A211-936A-42FC-A49B-10CCB1215517</key>
+										<real>0.57369029521942139</real>
+									</dict>
+								</dict>
+							</array>
+							<key>subproperties</key>
+							<dict>
+								<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>-720.5911865234375</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>5</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>-720.5911865234375</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>11</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>81.701004028320312</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>16</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>51.018688201904297</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>21</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>26.487506866455078</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>26</integer>
+											<key>rotations</key>
+											<dict>
+												<key>A360E120-5915-40AF-B9E0-63724091FF43</key>
+												<real>-720.5911865234375</real>
+											</dict>
+										</dict>
+									</array>
+									<key>locked</key>
+									<false/>
+									<key>type</key>
+									<string>LHRotationProperty</string>
+								</dict>
+							</dict>
+							<key>type</key>
+							<string>LHChildrenRotationsProperty</string>
+						</dict>
+					</dict>
+					<key>repetitions</key>
+					<integer>0</integer>
+					<key>totalFrames</key>
+					<integer>40</integer>
+				</dict>
+			</array>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.46979895234107971, 0.045409064739942551}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.5, 0.5}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.0019094111631563493, -0.082381477818968915}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>pelvis.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>FE24A211-936A-42FC-A49B-10CCB1215517</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{68, 50}</string>
+							<key>spriteName</key>
+							<string>pelvis.png</string>
+							<key>spriteUUID</key>
+							<string>EEB1E088-DE50-4684-81DA-E26419D642A5</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>5D3100E8-4726-4DB2-971B-922CBF220786</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.47391897439956665, 0.13728436827659607}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.45018437504768372, 0.14011798799037933}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.27164581418037415, 0.32847562432289124}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{-0.0040177217955594223, 0.034891857727332012}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>foot_LEFT.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>2200C5AF-6D90-4671-89F2-5DD4B7B48094</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>1.1981198787689209</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{58, 30}</string>
+											<key>spriteName</key>
+											<string>foot_LEFT.png</string>
+											<key>spriteUUID</key>
+											<string>379AC1F4-D7DB-46D1-A9C2-DE845FE267F0</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>90838252-152C-4F74-8B1E-0939BA238BF5</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{0.00097772865983400208, 0.036626229711367309}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>leg_lower_L_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>1F319FB9-1B53-47BC-968B-E97015D53237</string>
+									<key>relativeImagePath</key>
+									<string>levels/</string>
+									<key>rotation</key>
+									<real>3.8631041049957275</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{40, 66}</string>
+									<key>spriteName</key>
+									<string>leg_lower_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>C8BD3DE9-2B40-4DED-8358-EB775AAA2E4B</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>2200C5AF-6D90-4671-89F2-5DD4B7B48094</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.015046128089828652, -0.065425083693552558}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>leg_upper_L_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>FE24A211-936A-42FC-A49B-10CCB1215517</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>356.06317138671875</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{38, 74}</string>
+							<key>spriteName</key>
+							<string>leg_upper_L_outline.png</string>
+							<key>spriteUUID</key>
+							<string>5B53AB47-346B-4106-9A91-9359045F674E</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>1F319FB9-1B53-47BC-968B-E97015D53237</string>
+							<key>zOrder</key>
+							<integer>1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.55787175893783569, 0.097570821642875671}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.7326505184173584, 0.24834446609020233}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.24622276425361633, 0.26522743701934814}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{-0.0078580837587944926, 0.037690172836798763}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>foot_RIGHT.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>357.92868041992188</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{58, 30}</string>
+											<key>spriteName</key>
+											<string>foot_RIGHT.png</string>
+											<key>spriteUUID</key>
+											<string>B6DA3C3D-3A09-4C1E-9936-B2D2207A165F</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>764452AD-2A45-444C-B111-6646F73A437F</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{0.0022093323968301803, 0.038417068792190492}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>leg_lower_R_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</string>
+									<key>relativeImagePath</key>
+									<string>levels/</string>
+									<key>rotation</key>
+									<real>5.8066048622131348</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{42, 63}</string>
+									<key>spriteName</key>
+									<string>leg_lower_R_outline.png</string>
+									<key>spriteUUID</key>
+									<string>05E1EDF9-579B-42AE-A74E-109C0584DEAF</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>9D99C44C-4A78-4598-80BC-FF5431FA8E3C</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.016650290175189635, -0.059108761340702198}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>leg_upper_R_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>FE24A211-936A-42FC-A49B-10CCB1215517</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>358.30905151367188</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{45, 69}</string>
+							<key>spriteName</key>
+							<string>leg_upper_R_outline.png</string>
+							<key>spriteUUID</key>
+							<string>94813C28-48CE-4F9E-B88E-8CA0EEB033B1</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B7E05077-31C1-4B3D-BDBB-B5C0FE92C037</string>
+							<key>zOrder</key>
+							<integer>2</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{-0.015198149407967775, 0.032704379323428331}</string>
+					<key>name</key>
+					<string>lowerBody</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>06BD1A28-9F8C-4A6C-8FCB-D24ED5BC1B6A</string>
+					<key>rotation</key>
+					<real>0.57369029521942139</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{116.54508209228516, 144.56781005859375}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>FE24A211-936A-42FC-A49B-10CCB1215517</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.44440919160842896, 0.90037292242050171}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.22857189178466797, 0.15189126133918762}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.13908813893795013, 0.28713369369506836}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.24079601466655731, 0.45777952671051025}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{0.013528772415309713, -0.0012630087925814769}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>hand_L_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>317B547C-5884-406B-B2CF-8446A7BC46D2</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>8.4649419784545898</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{31, 35}</string>
+											<key>spriteName</key>
+											<string>hand_L_outline.png</string>
+											<key>spriteUUID</key>
+											<string>00E7A15D-F08B-486E-89AA-F61CB3B01FC1</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>9E5CAB03-D6E2-4387-9969-4B860E900869</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{0.01336355538954089, 0.025298711109749839}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>forearm_L_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</string>
+									<key>relativeImagePath</key>
+									<string>levels/</string>
+									<key>rotation</key>
+									<real>7.1650009155273438</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{51, 29}</string>
+									<key>spriteName</key>
+									<string>forearm_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>3A565676-B217-4A03-8B4C-6778BB7AFF26</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>317B547C-5884-406B-B2CF-8446A7BC46D2</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.013813679393315563, 0.033720379907407415}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>shoulder_L_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-11.89794921875</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{44, 63}</string>
+							<key>spriteName</key>
+							<string>shoulder_L_outline.png</string>
+							<key>spriteUUID</key>
+							<string>E00DCC2C-D3BC-4A53-AC00-D698E2F0D7F2</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>FB14F0D7-0DC4-4026-A85F-694D2B3C1F40</string>
+							<key>zOrder</key>
+							<integer>-1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.33748188614845276, 0.84348529577255249}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.38864982128143311, 0.93079876899719238}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.5, 0.5}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{0.02068051810546952, 0.03215019373708583}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>mouth.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>33816908-07F0-4A6F-AFD0-E340CC185B62</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>-1.9139679670333862</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{24, 16}</string>
+											<key>spriteName</key>
+											<string>mouth.png</string>
+											<key>spriteUUID</key>
+											<string>B5C51836-9688-4792-ABEE-4EC1BB67AFEF</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>590909F7-7CB3-4D9C-8738-2B9445BF8B91</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.25314894318580627, 0.2715039849281311}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{0.0064735426762267661, -0.0044527141789890033}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>eyes_OPEN.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>33816908-07F0-4A6F-AFD0-E340CC185B62</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>-1.9139679670333862</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{38, 25}</string>
+											<key>spriteName</key>
+											<string>eyes_OPEN.png</string>
+											<key>spriteUUID</key>
+											<string>4BC3E757-EDDE-4818-B19E-704C3499EAA2</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>BBC28918-7F8B-4309-9593-9ECC47BBBD51</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.5, 0.5}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{-0.000742683047450754, -0.013593555420707526}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>hair.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>33816908-07F0-4A6F-AFD0-E340CC185B62</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>-1.9139679670333862</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{72, 69}</string>
+											<key>spriteName</key>
+											<string>hair.png</string>
+											<key>spriteUUID</key>
+											<string>0C92FBC2-A5B5-4D6E-AD4A-FD69CE2F01A0</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>10A73A0A-55D2-4696-89CF-37057401BC48</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.5, 0.5}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{0.0038898981454911661, -0.063198337648704778}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>hat.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>33816908-07F0-4A6F-AFD0-E340CC185B62</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>-720.5911865234375</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{100, 58}</string>
+											<key>spriteName</key>
+											<string>hat.png</string>
+											<key>spriteUUID</key>
+											<string>30CFF8A4-718A-4D6E-BEB9-0BE9C0B77DC6</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>A360E120-5915-40AF-B9E0-63724091FF43</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{-0.0027485261617955395, 0.0015691837201957763}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>head.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</string>
+									<key>relativeImagePath</key>
+									<string>levels/</string>
+									<key>rotation</key>
+									<real>1.6841177940368652</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{71, 83}</string>
+									<key>spriteName</key>
+									<string>head.png</string>
+									<key>spriteUUID</key>
+									<string>7179BDC7-3698-4413-83A4-A4C7145B19E0</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>33816908-07F0-4A6F-AFD0-E340CC185B62</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.0049474972174751979, 0.0010971798421587132}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>neck_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>359.82867431640625</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{33, 28}</string>
+							<key>spriteName</key>
+							<string>neck_outline.png</string>
+							<key>spriteUUID</key>
+							<string>D279AF55-F641-4024-8AAE-EA6215F74549</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>E778117A-ECC3-49D9-8D77-B9317EEFC3EE</string>
+							<key>zOrder</key>
+							<integer>-1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.5, 0.5}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.0033416783739334951, 0.1398601103160626}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>gun-belt.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-359.287841796875</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{71, 21}</string>
+							<key>spriteName</key>
+							<string>gun-belt.png</string>
+							<key>spriteUUID</key>
+							<string>464A0E31-8F77-4397-8E5E-B7F07ED56CA7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>5A01200C-2AB5-419A-9F31-E2A232328191</string>
+							<key>zOrder</key>
+							<integer>-1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.43700125813484192, 0.81601619720458984}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.002654737265582578, 0.11789666820754086}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>torso_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-357.94183349609375</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{77, 104}</string>
+							<key>spriteName</key>
+							<string>torso_outline.png</string>
+							<key>spriteUUID</key>
+							<string>4AC4D7DF-638D-4D26-B6AC-BF5D59F61501</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>777DF209-ED1F-4870-A06E-4E6A65D616F8</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.5, 0.5}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.0027910680061346226, 0.065768078306406519}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>vest_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-1.4785642623901367</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{76, 93}</string>
+							<key>spriteName</key>
+							<string>vest_outline.png</string>
+							<key>spriteUUID</key>
+							<string>C9B55117-9B00-41C8-999D-53A2C0189BC8</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>728E8E39-DB4B-4670-AA5A-001E6A1FB847</string>
+							<key>zOrder</key>
+							<integer>1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.31090718507766724, 0.21464477479457855}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.044730741898208491, 0.11715084070173516}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>gun.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-359.82415771484375</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{31, 42}</string>
+							<key>spriteName</key>
+							<string>gun.png</string>
+							<key>spriteUUID</key>
+							<string>A59EA0EC-6D13-4D6C-BAE7-B6C652254F6C</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>CAFD2F94-8A40-4942-97C4-261967C070ED</string>
+							<key>zOrder</key>
+							<integer>2</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.5, 0.5}</string>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.027460901583640524, 0.1398895033318274}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>gun-holster.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-359.287841796875</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{27, 41}</string>
+							<key>spriteName</key>
+							<string>gun-holster.png</string>
+							<key>spriteUUID</key>
+							<string>D2C4D003-9E5B-4A04-8C88-140EBEED4262</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>E96F1D23-9A84-41A2-90BE-B55B14830C13</string>
+							<key>zOrder</key>
+							<integer>3</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.83513325452804565, 0.17859967052936554}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.70623433589935303, 0.1069457158446312}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.43002957105636597, 0.13123144209384918}</string>
+											<key>colorOverlay</key>
+											<string>{{1, 1}, {1, 1}}</string>
+											<key>generalPosition</key>
+											<string>{-0.0035423224971301791, 0.030970150130053487}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>hand_R_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</string>
+											<key>relativeImagePath</key>
+											<string>levels/</string>
+											<key>rotation</key>
+											<real>356.08987426757812</real>
+											<key>scale</key>
+											<string>{1, 1}</string>
+											<key>size</key>
+											<string>{34, 36}</string>
+											<key>spriteName</key>
+											<string>hand_R_outline.png</string>
+											<key>spriteUUID</key>
+											<string>E644259F-50EA-4E5A-B5C2-678F46CDB230</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>40E27B9D-7375-4135-BE98-61FAD88CDAF3</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{-0.012984302640979805, 0.025107004178718473}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>forearm_R_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>3B3A4BD0-03C9-430F-A740-2904762C9DC8</string>
+									<key>relativeImagePath</key>
+									<string>levels/</string>
+									<key>rotation</key>
+									<real>356.3387451171875</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{32, 54}</string>
+									<key>spriteName</key>
+									<string>forearm_R_outline.png</string>
+									<key>spriteUUID</key>
+									<string>9F828740-428F-4279-88E1-F37EC5BDABA9</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>8D470B26-AD77-4DA0-8E20-6524B5D55BE1</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{-0.022170223969201666, 0.026568047874008016}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>shoulder_R_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+							<key>relativeImagePath</key>
+							<string>levels/</string>
+							<key>rotation</key>
+							<real>-0.84014892578125</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{54, 54}</string>
+							<key>spriteName</key>
+							<string>shoulder_R_outline.png</string>
+							<key>spriteUUID</key>
+							<string>FB46BFDD-6BD1-47DB-9391-D2DB7FFEEBC0</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>3B3A4BD0-03C9-430F-A740-2904762C9DC8</string>
+							<key>zOrder</key>
+							<integer>4</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{-0.023220739005605989, 0.025155399996802962}</string>
+					<key>name</key>
+					<string>upperBody</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>06BD1A28-9F8C-4A6C-8FCB-D24ED5BC1B6A</string>
+					<key>rotation</key>
+					<real>3.4335906505584717</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{144.59010314941406, 200.13526916503906}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>A6048C76-426A-4399-A1A1-2D16EFFE5CFD</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.87769170508047445, 0.29857523819412513}</string>
+			<key>name</key>
+			<string>Officer</string>
+			<key>nodeType</key>
+			<string>LHNode</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{193.73593139648438, 346.62652587890625}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>06BD1A28-9F8C-4A6C-8FCB-D24ED5BC1B6A</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.0064731292965373539, 0.029758836725237981}</string>
+					<key>imageFileName</key>
+					<string>robots.png</string>
+					<key>name</key>
+					<string>blueRobot_1</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>C6D3CFB1-44D0-461A-9517-39E6E44C01BE</string>
+					<key>relativeImagePath</key>
+					<string>levels/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{110, 133}</string>
+					<key>spriteName</key>
+					<string>blueRobot</string>
+					<key>spriteUUID</key>
+					<string>2F3A5F3F-DA9C-471B-930F-35601F2AE875</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>03FAAD92-6C6C-4D31-A440-5F13E7C0F324</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.43271275758743288, 0.2245159238576889}</string>
+			<key>name</key>
+			<string>UntitledNode_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHNode</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{158.0875244140625, 133.92095947265625}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>C6D3CFB1-44D0-461A-9517-39E6E44C01BE</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>closed</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{0, 0}, {0, 1}}</string>
+			<key>generalPosition</key>
+			<string>{1.4372481572868614, 0.47950243783228075}</string>
+			<key>name</key>
+			<string>UntitledBezier</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>3</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHBezier</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>points</key>
+			<array>
+				<dict>
+					<key>ctrl1</key>
+					<string>{-462.81915283203125, -169.25588798522949}</string>
+					<key>ctrl2</key>
+					<string>{-416.7563476060177, 357.86906219445854}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{-462.81915283203125, -269.25588798522949}</string>
+				</dict>
+				<dict>
+					<key>ctrl1</key>
+					<string>{8.289465566653746, 274.45223552811177}</string>
+					<key>ctrl2</key>
+					<string>{8.289465566653746, 254.45223552811183}</string>
+					<key>hasCtrl1</key>
+					<false/>
+					<key>hasCtrl2</key>
+					<false/>
+					<key>mainPt</key>
+					<string>{8.289465566653746, 264.45223552811183}</string>
+				</dict>
+				<dict>
+					<key>ctrl1</key>
+					<string>{115.52787886058593, 254.13812805675798}</string>
+					<key>ctrl2</key>
+					<string>{378.44517880616388, 255.67522642204932}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{378.44517880616388, 265.67522642204932}</string>
+				</dict>
+				<dict>
+					<key>ctrl1</key>
+					<string>{564.29485005977926, 34.049757649781895}</string>
+					<key>ctrl2</key>
+					<string>{384.43284798040185, -86.260939297740435}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{384.43284798040179, -186.26093929774038}</string>
+				</dict>
+			</array>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.8949012756347656, 1.1045050621032715}</string>
+			<key>size</key>
+			<string>{925.6383056640625, 538.51177978515625}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>09029945-C00A-4F7D-A43E-561E3C84500C</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.076782597910861713, 0.84090564166399351}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_statue</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>levels/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{105, 148}</string>
+			<key>spriteName</key>
+			<string>object_statue</string>
+			<key>spriteUUID</key>
+			<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>2A187EA5-B01F-46E9-82C8-AF288E5B4381</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.5770331834556004, 0.84672864675521853}</string>
+			<key>name</key>
+			<string>UntitledTexturedShape</string>
+			<key>nodeType</key>
+			<string>LHTexturedShape</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>points</key>
+			<array>
+				<dict>
+					<key>point</key>
+					<string>{-216.06191386046294, 22.816912174224854}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{106.05289932404605, -24.176267491937779}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{407.87558135680422, 44.554269256943826}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{591.00018833040542, 87.226713281055027}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-563.50080871582031, -54.300179843775865}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-487.57750795982867, -87.522697152854107}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-434.90146400676588, 6.1201989513003809}</string>
+				</dict>
+			</array>
+			<key>relativeImagePath</key>
+			<string>/images/tile.png</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{0.7064550518989563, 1}</string>
+			<key>size</key>
+			<string>{1182.0003662109375, 175.04539489746094}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>triangles</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.14233483374118805, 1}, {0.25278279185295105, 1}}</string>
+					<key>point</key>
+					<string>{407.87558135680422, 44.554269256943826}</string>
+					<key>uv</key>
+					<string>{0.84507226943969727, 0.75452977418899536}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{591.00018833040542, 87.226713281055027}</string>
+					<key>uv</key>
+					<string>{1, 0.99830907583236694}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.34958231449127197, 0.48741218447685242}, {0.99819433689117432, 1}}</string>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+					<key>uv</key>
+					<string>{-7.5272046373697776e-09, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.14233483374118805, 1}, {0.25278279185295105, 1}}</string>
+					<key>point</key>
+					<string>{106.05289932404605, -24.176267491937779}</string>
+					<key>uv</key>
+					<string>{0.58972322940826416, 0.36188572645187378}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.14233483374118805, 1}, {0.25278279185295105, 1}}</string>
+					<key>point</key>
+					<string>{407.87558135680422, 44.554269256943826}</string>
+					<key>uv</key>
+					<string>{0.84507226943969727, 0.75452977418899536}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.34958231449127197, 0.48741218447685242}, {0.99819433689117432, 1}}</string>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+					<key>uv</key>
+					<string>{-7.5272046373697776e-09, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.12586817145347595, 0.98612409830093384}, {0.44490784406661987, 1}}</string>
+					<key>point</key>
+					<string>{-216.06191386046294, 22.816912174224854}</string>
+					<key>uv</key>
+					<string>{0.35010451078414917, 0.5326617956161499}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.14233483374118805, 1}, {0.25278279185295105, 1}}</string>
+					<key>point</key>
+					<string>{106.05289932404605, -24.176267491937779}</string>
+					<key>uv</key>
+					<string>{0.58972322940826416, 0.36188572645187378}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.34958231449127197, 0.48741218447685242}, {0.99819433689117432, 1}}</string>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+					<key>uv</key>
+					<string>{-7.5272046373697776e-09, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 0.1203286200761795}, {0.17403072118759155, 1}}</string>
+					<key>point</key>
+					<string>{-434.90146400676588, 6.1201989513003809}</string>
+					<key>uv</key>
+					<string>{0.13206318020820618, 0.53496348857879639}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 0.1203286200761795}, {0.17403072118759155, 1}}</string>
+					<key>point</key>
+					<string>{-216.06191386046294, 22.816912174224854}</string>
+					<key>uv</key>
+					<string>{0.31934279203414917, 0.5278857946395874}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.34958231449127197, 0.48741218447685242}, {0.99819433689117432, 1}}</string>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+					<key>uv</key>
+					<string>{-7.5272046373697776e-09, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 0.1203286200761795}, {0.17403072118759155, 1}}</string>
+					<key>point</key>
+					<string>{-434.90146400676588, 6.1201989513003809}</string>
+					<key>uv</key>
+					<string>{0.13206318020820618, 0.53496348857879639}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{0.34958231449127197, 0.48741218447685242}, {0.99819433689117432, 1}}</string>
+					<key>point</key>
+					<string>{-591.00019200262705, 87.522698764674374}</string>
+					<key>uv</key>
+					<string>{-7.5272046373697776e-09, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-563.50080871582031, -54.300179843775865}</string>
+					<key>uv</key>
+					<string>{0.023265114054083824, 0.18979372084140778}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 0.1203286200761795}, {0.17403072118759155, 1}}</string>
+					<key>point</key>
+					<string>{-434.90146400676588, 6.1201989513003809}</string>
+					<key>uv</key>
+					<string>{0.13206318020820618, 0.53496348857879639}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-563.50080871582031, -54.300179843775865}</string>
+					<key>uv</key>
+					<string>{0.023265114054083824, 0.18979372084140778}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-487.57750795982867, -87.522697152854107}</string>
+					<key>uv</key>
+					<string>{0.087498009204864502, 1.6902835797694138e-09}</string>
+				</dict>
+			</array>
+			<key>uuid</key>
+			<string>52D3E754-0DEB-4492-905A-D564C307B818</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>127.939453125</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{0.23474551737308502, 0.93505847454071045}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.6286661543733606, 0.62401663793575146}</string>
+			<key>name</key>
+			<string>UntitledTexturedShape_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>3</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHTexturedShape</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>points</key>
+			<array>
+				<dict>
+					<key>point</key>
+					<string>{107.36054992675781, 13.445358276367188}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{79.454543262282414, 73.157182673044417}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-107.36055755615234, 67.287778262965389}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-42.63945007324223, -73.157182102076646}</string>
+				</dict>
+			</array>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{214.72111511230469, 146.31436157226562}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>triangles</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{79.454543262282414, 73.157182673044417}</string>
+					<key>uv</key>
+					<string>{0.890625, 0.5}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-107.36055755615234, 67.287778262965389}</string>
+					<key>uv</key>
+					<string>{0.3046875, 0.83829116821289062}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-42.63945007324223, -73.157182102076646}</string>
+					<key>uv</key>
+					<string>{0.3046875, 0.16170883178710938}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-42.63945007324223, -73.157182102076646}</string>
+					<key>uv</key>
+					<string>{-2.8421708795129297e-16, -7.5976052116288884e-09}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{107.36054992675781, 13.445358276367188}</string>
+					<key>uv</key>
+					<string>{0.54228383302688599, 0.72318547964096069}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{79.454543262282414, 73.157182673044417}</string>
+					<key>uv</key>
+					<string>{1.8947806745745518e-16, 1}</string>
+				</dict>
+			</array>
+			<key>uuid</key>
+			<string>5E584121-24EE-4D05-ABA2-2631B3B3B6B3</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>activeCamera</key>
+			<true/>
+			<key>followedNodeUUID</key>
+			<string>B158790F-8959-42AE-8BBC-EA15F60684E9</string>
+			<key>generalPosition</key>
+			<string>{0.68132209777832031, 0.49702310562133789}</string>
+			<key>name</key>
+			<string>UntitledCamera</string>
+			<key>nodeType</key>
+			<string>LHCamera</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>restrictToGameWorld</key>
+			<true/>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>2D7F9DFF-FAE9-4C0F-842D-556CD34A8C95</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{1.1397585413594054, 0.29416487151029169}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_statue_1</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>levels/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{105, 148}</string>
+			<key>spriteName</key>
+			<string>object_statue</string>
+			<key>spriteUUID</key>
+			<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>7CEBE542-90C4-468F-B709-6A49DF5AB859</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.68132210194723042, 0.16694465290359056}</string>
+			<key>imageFileName</key>
+			<string>carTire.png</string>
+			<key>name</key>
+			<string>carTire_3</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{96, 93}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B158790F-8959-42AE-8BBC-EA15F60684E9</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>gameWorld</key>
+	<dict>
+		<key>1024x768</key>
+		<string>{{-0.033206582069396973, -0.099482201039791107}, {2.7495729923248291, 1.1980546712875366}}</string>
+		<key>1136x640</key>
+		<string>{{-0.093611203134059906, 0}, {2.843184232711792, 0.9997517466545105}}</string>
+		<key>2048x1536</key>
+		<string>{{-0.033631730824708939, -0.10297689586877823}, {2.7265486717224121, 1.2067307233810425}}</string>
+		<key>960x640</key>
+		<string>{{-0.0028002043254673481, -0.0011920708930119872}, {2.7163665294647217, 1.000382661819458}}</string>
+		<key>general</key>
+		<string>{{-0.093611203134059906, 0}, {2.843184232711792, 0.9997517466545105}}</string>
+	</dict>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>3CBE4A2B-35BF-41E0-8B87-672D515227ED</string>
+</dict>
+</plist>

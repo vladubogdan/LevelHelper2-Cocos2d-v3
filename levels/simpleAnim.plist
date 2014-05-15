@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>active</key>
+					<true/>
+					<key>fps</key>
+					<integer>24</integer>
+					<key>name</key>
+					<string>simpleANim</string>
+					<key>properties</key>
+					<dict>
+						<key>Position</key>
+						<dict>
+							<key>Frames</key>
+							<array>
+								<dict>
+									<key>frameIndex</key>
+									<integer>0</integer>
+									<key>positions</key>
+									<dict>
+										<key>39104350-704B-41B8-8076-03902D5F5A00</key>
+										<string>{105.90155652537942, 80.528121825307608}</string>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>19</integer>
+									<key>positions</key>
+									<dict>
+										<key>39104350-704B-41B8-8076-03902D5F5A00</key>
+										<string>{872.24921277537942, 78.895309325307608}</string>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>38</integer>
+									<key>positions</key>
+									<dict>
+										<key>39104350-704B-41B8-8076-03902D5F5A00</key>
+										<string>{890.21015027537942, 563.33360278233886}</string>
+									</dict>
+								</dict>
+								<dict>
+									<key>frameIndex</key>
+									<integer>59</integer>
+									<key>positions</key>
+									<dict>
+										<key>39104350-704B-41B8-8076-03902D5F5A00</key>
+										<string>{105.90155652537942, 80.528121825307608}</string>
+									</dict>
+								</dict>
+							</array>
+							<key>type</key>
+							<string>LHPositionProperty</string>
+						</dict>
+					</dict>
+					<key>repetitions</key>
+					<integer>1</integer>
+					<key>totalFrames</key>
+					<integer>60</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.11031412138060356, 0.12582519035204315}</string>
+			<key>imageFileName</key>
+			<string>carTire.png</string>
+			<key>name</key>
+			<string>carTire</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>07622233-C5A4-45BE-8950-D8DED0BA1448</string>
+			<key>relativeImagePath</key>
+			<string>images/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{96, 93}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>39104350-704B-41B8-8076-03902D5F5A00</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>B7A3E7ED-17EA-48D7-8469-45210B42985F</key>
+		<array>
+			<array>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{31.25, -16.5}</string>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-36.75, -15}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+			</array>
+			<array>
+				<string>{-33.25, 10.5}</string>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-25.75, 19}</string>
+			</array>
+			<array>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-11.25, 26}</string>
+			</array>
+			<array>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-4.75, -8}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{6.25, 27}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
+			</array>
+		</array>
+		<key>E7229635-071F-43EB-AA6B-5C53C4FFA5D4</key>
+		<array>
+			<array>
+				<string>{13.5, 30.5}</string>
+				<string>{-5, 30.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{34.5, -5.5}</string>
+				<string>{35, 27}</string>
+				<string>{23.5, 29.5}</string>
+			</array>
+			<array>
+				<string>{23.5, 29.5}</string>
+				<string>{13.5, 30.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{34.5, -5.5}</string>
+				<string>{23.5, 29.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{31, -17.5}</string>
+				<string>{34.5, -5.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{29, -21.5}</string>
+				<string>{31, -17.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{25, -26.5}</string>
+				<string>{29, -21.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{19.5, -29.5}</string>
+				<string>{25, -26.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{14.5, -31}</string>
+				<string>{19.5, -29.5}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{7.5, -32}</string>
+				<string>{14.5, -31}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{7.5, -32}</string>
+				<string>{-6, -31.5}</string>
+				<string>{-5.5, -32}</string>
+			</array>
+			<array>
+				<string>{-35, -3.5}</string>
+				<string>{-5, 30.5}</string>
+				<string>{-27.5, 28.5}</string>
+			</array>
+			<array>
+				<string>{-35, -3.5}</string>
+				<string>{-27.5, 28.5}</string>
+				<string>{-39.5, 26}</string>
+			</array>
+			<array>
+				<string>{-46, 2}</string>
+				<string>{-35, -3.5}</string>
+				<string>{-39.5, 26}</string>
+			</array>
+			<array>
+				<string>{-46, 2}</string>
+				<string>{-39.5, 26}</string>
+				<string>{-50.5, 21}</string>
+			</array>
+			<array>
+				<string>{-53, 9}</string>
+				<string>{-46, 2}</string>
+				<string>{-50.5, 21}</string>
+			</array>
+			<array>
+				<string>{-53, 9}</string>
+				<string>{-50.5, 21}</string>
+				<string>{-54, 16.5}</string>
+			</array>
+			<array>
+				<string>{-53, 9}</string>
+				<string>{-54, 16.5}</string>
+				<string>{-54, 11}</string>
+			</array>
+			<array>
+				<string>{-5, 30.5}</string>
+				<string>{-35, -3.5}</string>
+				<string>{-31.5, -14.5}</string>
+				<string>{-27, -22.5}</string>
+				<string>{-22.5, -27}</string>
+				<string>{-19, -29}</string>
+				<string>{-12.5, -31}</string>
+				<string>{-6, -31.5}</string>
+			</array>
+			<array>
+				<string>{53.5, 13.5}</string>
+				<string>{49.5, 19.5}</string>
+				<string>{45.5, 22.5}</string>
+				<string>{35, 27}</string>
+				<string>{34.5, -5.5}</string>
+				<string>{47, -1}</string>
+				<string>{52.5, 4.5}</string>
+				<string>{54, 10}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>07622233-C5A4-45BE-8950-D8DED0BA1448</string>
+</dict>
+</plist>
