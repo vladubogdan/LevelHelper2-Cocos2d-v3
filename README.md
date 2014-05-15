@@ -67,3 +67,13 @@ Select all sprites in the level and now choose "Dynamic" as the physics "Type" o
 11) Setup your project to use the library by clicking on your Xcode Project (1), then on your target (2), then on "Build Phases" (3) and finally dragging the "libLevelHelper2API.a" file inside "Link Binary With Libraries" list. 
 
 <img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/setupLib.png" alt="Setup Lib"/>
+
+
+12) Finally, load the level using the API. Inside AppDelegate.m import "LevelHelper2API.h" and in the "startScene" method add the following line "return [LHScene sceneWithContentOfFile:@"levels/myFirstLevel.plist"];"
+
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/loadLevel.png" alt="Load Level"/>
+
+Congratulation! You just loaded your first basic level. 
+<img src="https://raw.githubusercontent.com/vladubogdan/LevelHelper2-Cocos2d-v3/master/readmeFiles/levelLoad.giv" alt="Loaded Level"/>
+
+Don't forget to Watch this repository in order to get notifications when new updates are available.
