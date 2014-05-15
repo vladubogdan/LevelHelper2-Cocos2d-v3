@@ -52,9 +52,9 @@
 
 -(CCScene *)startScene
 {
-//    return [LHScene sceneWithContentOfFile:@"levels/ropeJointLevel.plist"];
+    return [LHScene sceneWithContentOfFile:@"levels/ropeJointLevel.plist"];
     
-    return [LHScene sceneWithContentOfFile:@"levels/gravityAreaTest.plist"];
+//    return [LHScene sceneWithContentOfFile:@"levels/gravityAreaTest.plist"];
     
 }
 

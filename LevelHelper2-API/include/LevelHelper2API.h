@@ -20,6 +20,8 @@
 #import "LHSprite.h"
 #import "LHWater.h"
 #import "LHAnimation.h"
+#import "LHDistanceJointNode.h"
+#import "LHGravityArea.h"
 
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"

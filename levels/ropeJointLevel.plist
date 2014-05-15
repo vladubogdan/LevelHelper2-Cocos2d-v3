@@ -244,6 +244,220 @@
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>dampingRatio</key>
+			<real>0.0</real>
+			<key>frequency</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>UntitledDistanceJoint</string>
+			<key>nodeType</key>
+			<string>LHDistanceJoint</string>
+			<key>parentUUID</key>
+			<string>AE9EC1AA-374B-4F6B-A043-CFD848AAB324</string>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>relativePosB</key>
+			<string>{0, 0}</string>
+			<key>spriteAUUID</key>
+			<string>764E076D-FFCE-4321-BD73-2332E9FB5521</string>
+			<key>spriteBUUID</key>
+			<string>99BD16DB-808C-4A22-A63E-537213702A18</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B0D331C2-5803-46EB-B848-549B89ABD432</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.63235227509600145, 0.15336877324183912}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>AE9EC1AA-374B-4F6B-A043-CFD848AAB324</string>
+			<key>relativeImagePath</key>
+			<string>levels/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>764E076D-FFCE-4321-BD73-2332E9FB5521</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.8117035741326476, 0.28184916848041042}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>collisionCategories</key>
+					<array>
+						<string>DEFAULT</string>
+						<string>BlueRobot</string>
+						<string>GreenRobot</string>
+						<string>PinkRobot</string>
+						<string>Category_05</string>
+						<string>Category_06</string>
+						<string>Category_07</string>
+						<string>Category_08</string>
+						<string>Category_09</string>
+						<string>Category_10</string>
+						<string>Category_11</string>
+						<string>Category_12</string>
+						<string>Category_13</string>
+						<string>Category_14</string>
+						<string>Category_15</string>
+						<string>Category_16</string>
+					</array>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>ignoreCategories</key>
+					<array/>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>AE9EC1AA-374B-4F6B-A043-CFD848AAB324</string>
+			<key>relativeImagePath</key>
+			<string>levels/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>99BD16DB-808C-4A22-A63E-537213702A18</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>designResolution</key>
 	<string>{960, 640}</string>
@@ -301,89 +515,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>62EC7B3C-FB54-439E-864F-B061DDD0AC84</key>
-		<array>
-			<array>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{31.25, -16.5}</string>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-36.75, -15}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-			</array>
-			<array>
-				<string>{-33.25, 10.5}</string>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-25.75, 19}</string>
-			</array>
-			<array>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-11.25, 26}</string>
-			</array>
-			<array>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-4.75, -8}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{6.25, 27}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
-			</array>
-		</array>
-		<key>DBB6DA05-EB98-4762-ACD6-11C3AEDF6DDA</key>
+		<key>B7374487-FEBB-4B1A-A843-CE59355F7D16</key>
 		<array>
 			<array>
 				<string>{13.5, 30.5}</string>
@@ -494,6 +626,88 @@
 				<string>{47, -1}</string>
 				<string>{52.5, 4.5}</string>
 				<string>{54, 10}</string>
+			</array>
+		</array>
+		<key>CAA572ED-09FF-4D63-B356-803F22759B1B</key>
+		<array>
+			<array>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{31.25, -16.5}</string>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-36.75, -15}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+			</array>
+			<array>
+				<string>{-33.25, 10.5}</string>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-25.75, 19}</string>
+			</array>
+			<array>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-11.25, 26}</string>
+			</array>
+			<array>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-4.75, -8}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{6.25, 27}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
 			</array>
 		</array>
 	</dict>
