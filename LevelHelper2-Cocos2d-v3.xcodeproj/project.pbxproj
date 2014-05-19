@@ -661,7 +661,6 @@
 		6E1223591924CBB3005E8532 /* LHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHAsset.h; sourceTree = "<group>"; };
 		6E12235A1924CBB3005E8532 /* LHBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBezier.h; sourceTree = "<group>"; };
 		6E12235B1924CBB3005E8532 /* LHCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHCamera.h; sourceTree = "<group>"; };
-		6E12235C1924CBB3005E8532 /* LHDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDrawNode.h; sourceTree = "<group>"; };
 		6E12235D1924CBB3005E8532 /* LHNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNode.h; sourceTree = "<group>"; };
 		6E12235E1924CBB3005E8532 /* LHNodeAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeAnimationProtocol.h; sourceTree = "<group>"; };
 		6E12235F1924CBB3005E8532 /* LHNodeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeProtocol.h; sourceTree = "<group>"; };
@@ -1594,7 +1593,6 @@
 				6E1223591924CBB3005E8532 /* LHAsset.h */,
 				6E12235A1924CBB3005E8532 /* LHBezier.h */,
 				6E12235B1924CBB3005E8532 /* LHCamera.h */,
-				6E12235C1924CBB3005E8532 /* LHDrawNode.h */,
 				6E12235D1924CBB3005E8532 /* LHNode.h */,
 				6E12235E1924CBB3005E8532 /* LHNodeAnimationProtocol.h */,
 				6E12235F1924CBB3005E8532 /* LHNodeProtocol.h */,
