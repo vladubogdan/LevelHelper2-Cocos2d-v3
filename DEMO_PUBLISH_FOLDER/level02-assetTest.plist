@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>assetFile</key>
+			<string>OfficerAsset.lhasset</string>
+			<key>assetUUID</key>
+			<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.43387393951416015, 0.64101476669311519}</string>
+			<key>name</key>
+			<string>UntitledAsset</string>
+			<key>nodeType</key>
+			<string>LHAsset</string>
+			<key>parentUUID</key>
+			<string>1033031F-A3D6-4C32-B096-0D6253B456E9</string>
+			<key>rotation</key>
+			<real>20.53118896484375</real>
+			<key>scale</key>
+			<string>{2.0414586067199707, 1}</string>
+			<key>size</key>
+			<string>{249.82267761230469, 442.64926147460938}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>9DE0F87B-85A6-4865-B078-79CCC0D8AF0B</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>1033031F-A3D6-4C32-B096-0D6253B456E9</string>
+</dict>
+</plist>

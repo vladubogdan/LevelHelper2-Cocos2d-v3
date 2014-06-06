@@ -857,7 +857,7 @@
                     break;
                 }
             }
-            if(!any && foundAtLeastOne && foundCount == [tagValues count] && [childTags count] == [tagValues count]){
+            if(!any && foundAtLeastOne && foundCount == [tagValues count]){
                 [temp addObject:child];
             }
 
