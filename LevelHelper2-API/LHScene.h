@@ -9,6 +9,15 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+#include "Box2D.h"
+#endif
+#endif //LH_USE_BOX2D
+
+
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 #define LH_ARC_ENABLED 1
 #endif
@@ -45,5 +54,30 @@
  @return A dictionary containing the asset information or nil.
  */
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+-(b2World*)box2dWorld;
+
+
+//subclass the following methods if you want special Box2d handling
+-(void)step:(float)dt;
+-(void)afterStep:(float)dt;
+
+-(float)ptm;
+
+-(b2Vec2)metersFromPoint:(CGPoint)point;
+-(CGPoint)pointFromMeters:(b2Vec2)vec;
+
+-(float)metersFromValue:(float)val;
+-(float)valueFromMeters:(float)meter;
+
+#endif
+#endif //LH_USE_BOX2D
+
+/*Sets the global gravity force
+@param gravity A point representing the gravity force in x and y direction.
+ */
+-(void)setGlobalGravity:(CGPoint)gravity;
 
 @end

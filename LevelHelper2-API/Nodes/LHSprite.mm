@@ -156,9 +156,36 @@
 - (void)visit
 {
     [_animationProtocolImp visit];
-    
     [super visit];
 }
+
+
+#if LH_USE_BOX2D
+- (CGAffineTransform)nodeToParentTransform
+{
+    if([_physicsProtocolImp body])
+        _transform = [_physicsProtocolImp nodeTransform];
+    
+    return [super nodeToParentTransform];
+}
+-(void)setPosition:(CGPoint)position{
+    
+    [super setPosition:position];
+    if([_physicsProtocolImp body]){
+        [_physicsProtocolImp updateTransform];
+    }
+}
+-(void)setRotation:(float)rotation
+{
+    [super setRotation:rotation];
+    if([_physicsProtocolImp body]){
+        [_physicsProtocolImp updateTransform];
+    }
+}
+
+
+#endif //LH_USE_BOX2D
+
 
 #pragma mark - LHNodeProtocol Required
 

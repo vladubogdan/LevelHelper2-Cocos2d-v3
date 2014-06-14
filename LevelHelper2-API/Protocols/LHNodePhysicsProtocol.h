@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+class b2Body;
+#endif
+#endif //LH_USE_BOX2D
 
 @protocol LHNodePhysicsProtocol <NSObject>
 
@@ -18,6 +25,16 @@
 
 + (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+-(b2Body*)body;
+-(CGAffineTransform)nodeTransform;
+-(CGAffineTransform)absoluteTransform;
+-(void)updateTransform;
+#endif
+#endif //LH_USE_BOX2D
+
 
 @end
 

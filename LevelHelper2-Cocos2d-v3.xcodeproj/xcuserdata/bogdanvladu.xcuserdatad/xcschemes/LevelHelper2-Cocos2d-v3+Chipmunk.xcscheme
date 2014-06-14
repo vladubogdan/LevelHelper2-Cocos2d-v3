@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E121FE21924BD85005E8532"
-               BuildableName = "LevelHelper2-Cocos2d-v3.app"
-               BlueprintName = "LevelHelper2-Cocos2d-v3"
+               BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+               BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
                ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
