@@ -15,16 +15,13 @@
 @implementation LHCamera
 {
     LHNodeProtocolImpl* _nodeProtocolImp;
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
     
     BOOL _active;
     BOOL _restricted;
     
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
-    
-    
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
 }
 
 -(void)dealloc{
@@ -32,9 +29,7 @@
     LH_SAFE_RELEASE(_followedNodeUUID);
 
     LH_SAFE_RELEASE(_nodeProtocolImp);
-    
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
+    LH_SAFE_RELEASE(_animationProtocolImp);
 
     LH_SUPER_DEALLOC();
 }
@@ -91,10 +86,8 @@
         _active = [dict boolForKey:@"activeCamera"];
         _restricted = [dict boolForKey:@"restrictToGameWorld"];
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
 
     }
     
@@ -188,13 +181,11 @@
     return pt;
 }
 
--(void)update:(CCTime)dt
+-(void)visit
 {
     if(![self isActive])return;
     
-    if(activeAnimation){
-        [activeAnimation updateTimeWithDelta:dt];
-    }
+    [_animationProtocolImp visit];
 
     if([self followedNode]){
         CGPoint pt = [self transformToRestrictivePosition:[[self followedNode] position]];
@@ -208,10 +199,10 @@
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
-#pragma mark - LHNodeAnimationProtocol
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
+#pragma mark - LHNodeAnimationProtocol Required
+
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 
 @end

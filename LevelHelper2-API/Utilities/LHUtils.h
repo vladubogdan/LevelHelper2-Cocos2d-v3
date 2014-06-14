@@ -179,12 +179,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 @class LHAnimation;
 @interface LHUtils : NSObject
 
-+(void)createAnimationsForNode:(id)node
-               animationsArray:(NSMutableArray* __strong*)_animations
-               activeAnimation:(LHAnimation* __weak*)activeAnimation
-                fromDictionary:(NSDictionary*)dict;
-
-
 +(NSString*)imagePathWithFilename:(NSString*)filename
                            folder:(NSString*)folder
                            suffix:(NSString*)suffix;

@@ -15,18 +15,13 @@
 
 @implementation LHParallax
 {
-    NSTimeInterval lastTime;
-    
     CGPoint lastPosition;
     
     LHNodeProtocolImpl* _nodeProtocolImp;
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
     
     NSString* _followedNodeUUID;
     CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
-    
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
-
 }
 
 -(void)dealloc{
@@ -34,10 +29,7 @@
     LH_SAFE_RELEASE(_followedNodeUUID);
     
     LH_SAFE_RELEASE(_nodeProtocolImp);
-    
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
-
+    LH_SAFE_RELEASE(_animationProtocolImp);
     
     LH_SUPER_DEALLOC();
 }
@@ -106,10 +98,8 @@
             _followedNodeUUID = [[NSString alloc] initWithString:followedUUID];
         }
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
 
     }
     
@@ -129,21 +119,6 @@
     _followedNode = node;
 }
 
--(void)visit
-{
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float dt = thisTime - lastTime;
-    
-    if(activeAnimation){
-        [activeAnimation updateTimeWithDelta:dt];
-    }
-    
-    [self transformLayerPositions];
-    
-    [super visit];
-    
-    lastTime = thisTime;
-}
 -(void)transformLayerPositions
 {
     CGPoint parallaxPos = [self position];
@@ -188,16 +163,25 @@
     lastPosition = parallaxPos;
 }
 
+-(void)visit
+{
+    [_animationProtocolImp visit];
+    
+    [self transformLayerPositions];
+    
+    [super visit];
+}
+
 
 #pragma mark LHNodeProtocol Required
 
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
-#pragma mark - LHNodeAnimationProtocol
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
+#pragma mark - LHNodeAnimationProtocol Required
+
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 
 @end

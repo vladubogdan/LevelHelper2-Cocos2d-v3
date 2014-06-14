@@ -21,6 +21,8 @@
 }
 
 -(void)dealloc{
+    
+    _node = nil;
     LH_SAFE_RELEASE(_uuid);
     LH_SAFE_RELEASE(_tags);
     LH_SAFE_RELEASE(_userProperty);

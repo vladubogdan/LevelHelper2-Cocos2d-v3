@@ -15,12 +15,8 @@
 
 @implementation LHShape
 {
-    NSTimeInterval lastTime;
-    
     LHNodeProtocolImpl* _nodeProtocolImp;
-    
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
     
     NSMutableArray* outlinePoints;
     NSMutableArray* trianglePoints;
@@ -29,13 +25,11 @@
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
+    LH_SAFE_RELEASE(_animationProtocolImp);
     
     LH_SAFE_RELEASE(outlinePoints);
     LH_SAFE_RELEASE(trianglePoints);
     
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
-
     LH_SUPER_DEALLOC();
 }
 
@@ -212,10 +206,8 @@
             }
         }
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
     }
     
     return self;
@@ -298,16 +290,9 @@
 
 -(void)visit
 {
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float dt = thisTime - lastTime;
-    
-    if(activeAnimation){
-        [activeAnimation updateTimeWithDelta:dt];
-    }
-    
+    [_animationProtocolImp visit];
+
     [super visit];
-    
-    lastTime = thisTime;
 }
 
 #pragma mark LHNodeProtocol Required
@@ -315,10 +300,10 @@
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
-#pragma mark - LHNodeAnimationProtocol
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
+#pragma mark - LHNodeAnimationProtocol Required
+
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
+#import "cocos2d.h"
 
 /**
  LevelHelper 2 nodes that can be animated conform to this protocol.
@@ -25,6 +26,10 @@
  */
 -(void)setActiveAnimation:(LHAnimation*)animation;
 
+/**
+ Returns the active animation on a node or nil if no active animation.
+ */
+-(LHAnimation*)activeAnimation;
 /**
  Set position on the node controlled by the animation.
  @param point A point value.
@@ -56,3 +61,24 @@
 -(void)setOpacity:(float)opacity;
 
 @end
+
+
+@interface LHNodeAnimationProtocolImp : NSObject
+
++ (instancetype)animationProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
+- (instancetype)initAnimationProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
+
+-(void)visit;
+-(void)setActiveAnimation:(LHAnimation*)anim;
+-(LHAnimation*)activeAnimation;
+@end
+
+#define LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(void)setActiveAnimation:(LHAnimation*)anim{\
+[_animationProtocolImp setActiveAnimation:anim];\
+}\
+\
+-(LHAnimation*)activeAnimation{\
+return [_animationProtocolImp activeAnimation];\
+}\
+

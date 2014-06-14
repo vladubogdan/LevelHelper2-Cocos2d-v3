@@ -55,8 +55,6 @@
     NSMutableDictionary* _loadedAssetsInformations;
     
     CGRect gameWorldRect;
-    NSMutableArray* cameras;
-    
     NSTimeInterval previousUpdateTime;
 }
 
@@ -72,7 +70,6 @@
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
-    LH_SAFE_RELEASE(cameras);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
     LH_SUPER_DEALLOC();
@@ -360,19 +357,6 @@
     }
     
     return texture;
-}
-
--(LHCamera*)cameraWithName:(NSString*)name
-{
-    for(LHCamera* cam in cameras){
-        if([[cam name] isEqualToString:name]){
-            return cam;
-        }
-    }
-    return nil;
-}
--(NSMutableArray*)cameras{
-    return cameras;
 }
 
 -(CGRect)gameWorldRect{

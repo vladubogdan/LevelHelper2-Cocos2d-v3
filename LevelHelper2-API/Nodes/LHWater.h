@@ -20,6 +20,4 @@
 + (instancetype)waterNodeWithDictionary:(NSDictionary*)dict
                                  parent:(CCNode*)prnt;
 
-
-
 @end

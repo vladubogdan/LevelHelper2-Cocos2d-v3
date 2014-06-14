@@ -18,8 +18,6 @@
  End users will have to subclass this class in order to add they're own game logic.
  */
 
-@class LHCamera;
-
 @interface LHScene : CCScene <LHNodeProtocol>
 
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile;
