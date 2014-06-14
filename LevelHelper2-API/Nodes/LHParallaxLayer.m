@@ -64,10 +64,7 @@
                                       fromUnit:unitPos];
             }
         }
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-        
+                
         _xRatio = [dict floatForKey:@"xRatio"];
         _yRatio = [dict floatForKey:@"yRatio"];
 

@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 
 /**
  LHShape class is used to load and display a shape from a level file.
@@ -17,7 +18,7 @@
  */
 
 
-@interface LHShape : CCDrawNode <CCTextureProtocol, LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHShape : CCDrawNode <CCTextureProtocol, LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 {
     CCTexture *_texture; // Texture used to render the shape
     

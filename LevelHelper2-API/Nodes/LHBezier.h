@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 
 /**
  LHBezier class is used to load and display a bezier from a level file.
@@ -16,7 +17,7 @@
  */
 
 
-@interface LHBezier : CCDrawNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHBezier : CCDrawNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 + (instancetype)bezierNodeWithDictionary:(NSDictionary*)dict
                                   parent:(CCNode*)prnt;

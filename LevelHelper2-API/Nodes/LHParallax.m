@@ -77,9 +77,6 @@
         }
         
         
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-                                
         NSArray* childrenInfo = [dict objectForKey:@"children"];
         if(childrenInfo)
         {

@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 
 /**
  LHAsset class is used to load an asset object from a level file or from the resources folder.
@@ -16,7 +17,7 @@
  */
 
 
-@interface LHAsset : CCNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHAsset : CCNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 +(instancetype)assetWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt;

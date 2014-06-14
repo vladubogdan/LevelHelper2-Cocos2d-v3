@@ -30,12 +30,14 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
     LHNodeProtocolImpl* _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
+    LHNodePhysicsProtocolImp* _physicsProtocolImp;
 }
 
 -(void)dealloc{
 
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     
     LH_SAFE_RELEASE(linePoints);
 
@@ -87,16 +89,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
         [self setPosition:pos];
 
         CCColor* colorOverlay = [dict colorForKey:@"colorOverlay"];
-        
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setOpacity:alpha/255.0f];
-        
-        float rot = [dict floatForKey:@"rotation"];
-        [self setRotation:rot];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-        
+                
         NSArray* points = [dict objectForKey:@"points"];
         BOOL closed = [dict boolForKey:@"closed"];
         
@@ -178,9 +171,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
 
-        
-        [LHUtils loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"]
-                             forNode:self];
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+                                                                                                node:self];
         
         
         //scale must be set after loading the physic info or else spritekit will not resize the body

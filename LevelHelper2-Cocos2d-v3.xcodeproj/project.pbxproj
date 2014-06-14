@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E0D55C2194C16590036E940 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C1194C16590036E940 /* LHNodeProtocol.m */; };
 		6E0D55C4194C22130036E940 /* LHNodeAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C3194C22130036E940 /* LHNodeAnimationProtocol.m */; };
+		6E0D55C7194C2C770036E940 /* LHNodePhysicsProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C6194C2C770036E940 /* LHNodePhysicsProtocol.m */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -264,6 +265,8 @@
 /* Begin PBXFileReference section */
 		6E0D55C1194C16590036E940 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
 		6E0D55C3194C22130036E940 /* LHNodeAnimationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeAnimationProtocol.m; sourceTree = "<group>"; };
+		6E0D55C5194C2C4E0036E940 /* LHNodePhysicsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodePhysicsProtocol.h; sourceTree = "<group>"; };
+		6E0D55C6194C2C770036E940 /* LHNodePhysicsProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodePhysicsProtocol.m; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1786,6 +1789,8 @@
 				6E89FE0A192E23100040478F /* LHNodeProtocol.h */,
 				6E0D55C1194C16590036E940 /* LHNodeProtocol.m */,
 				6E89FE0B192E23100040478F /* LHUserPropertyProtocol.h */,
+				6E0D55C5194C2C4E0036E940 /* LHNodePhysicsProtocol.h */,
+				6E0D55C6194C2C770036E940 /* LHNodePhysicsProtocol.m */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1984,6 +1989,7 @@
 				6E89FE10192E23100040478F /* LHOpacityFrame.m in Sources */,
 				6E1220A81924BD86005E8532 /* CCPhysicsJoint.m in Sources */,
 				6E1220861924BD86005E8532 /* CCMotionStreak.m in Sources */,
+				6E0D55C7194C2C770036E940 /* LHNodePhysicsProtocol.m in Sources */,
 				6E1220361924BD85005E8532 /* CCActionInstant.m in Sources */,
 				6E1221301924BD87005E8532 /* base64.c in Sources */,
 				6E89FE15192E23100040478F /* LHAnimationProperty.m in Sources */,

@@ -252,18 +252,7 @@ typedef struct _LH_V2F_C4B_Triangle
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
         
         [self setColor:[dict colorForKey:@"colorOverlay"]];
-        
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setOpacity:alpha/255.0f];
-        
-        float rot = [dict floatForKey:@"rotation"];
-        [self setRotation:rot];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-        
-
-        
+                
         NSArray* childrenInfo = [dict objectForKey:@"children"];
         if(childrenInfo)
         {

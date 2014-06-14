@@ -9,13 +9,14 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 /**
  LHNode class is used to load a node object from a level file.
  Users can retrieve node objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 
-@interface LHNode : CCNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHNode : CCNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 +(instancetype)nodeWithDictionary:(NSDictionary*)dict
                            parent:(CCNode*)prnt;

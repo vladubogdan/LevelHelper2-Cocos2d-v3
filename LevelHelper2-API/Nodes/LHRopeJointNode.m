@@ -180,8 +180,6 @@ double fcat(double x, void *data)
         colorInfo.size.height = [dict floatForKey:@"alpha"]/255.0f;
         alphaValue = [dict floatForKey:@"alpha"]/255.0f;
         
-        self.zOrder = [dict intForKey:@"zOrder"];
-        
         nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
         nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
         

@@ -15,8 +15,9 @@
 
 @implementation LHShape
 {
-    LHNodeProtocolImpl* _nodeProtocolImp;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
+    LHNodePhysicsProtocolImp*   _physicsProtocolImp;
     
     NSMutableArray* outlinePoints;
     NSMutableArray* trianglePoints;
@@ -26,6 +27,7 @@
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     
     LH_SAFE_RELEASE(outlinePoints);
     LH_SAFE_RELEASE(trianglePoints);
@@ -98,21 +100,14 @@
         
         [self setPosition:pos];
         
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setOpacity:alpha/255.0f];
         
-        float rot = [dict floatForKey:@"rotation"];
-        [self setRotation:rot];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-                
         self.contentSize = [dict sizeForKey:@"size"];
         
         NSArray* triangles = [dict objectForKey:@"triangles"];
         [self ensureCapacity:[triangles count]];
         
         CCColor* colorOverlay = [dict colorForKey:@"colorOverlay"];
+        float alpha = [dict floatForKey:@"alpha"];
         ccColor4B c4 = ccc4(colorOverlay.red*255.0f,
                             colorOverlay.green*255.0f,
                             colorOverlay.blue*255.0f, alpha);
@@ -186,8 +181,8 @@
 
         _dirty = YES;
     
-        [LHUtils loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"]
-                             forNode:self];        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+                                                                                                node:self];
         
         //scale must be set after loading the physic info or else spritekit will not resize the body
         CGPoint scl = [dict pointForKey:@"scale"];

@@ -16,13 +16,15 @@
 {
     CGSize _size;
 
-    LHNodeProtocolImpl* _nodeProtocolImp;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
+    LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     
     LH_SUPER_DEALLOC();
 }
@@ -73,18 +75,9 @@
         }
         
         [self setPosition:pos];
-
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setOpacity:alpha/255.0f];
         
-        float rot = [dict floatForKey:@"rotation"];
-        [self setRotation:rot];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZOrder:z];
-        
-        [LHUtils loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"]
-                             forNode:self];
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+                                                                                                node:self];
         
         //scale must be set after loading the physic info or else spritekit will not resize the body
         CGPoint scl = [dict pointForKey:@"scale"];

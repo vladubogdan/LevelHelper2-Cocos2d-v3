@@ -9,13 +9,14 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
-#import "LHUserPropertyProtocol.h"
+#import "LHNodePhysicsProtocol.h"
+
 /**
  LHSprite class is used to load textured rectangles that are found in a level file.
  Users can retrieve a sprite object by calling the scene (LHScene) childNodeWithName: method.
  */
 
-@interface LHSprite : CCSprite <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHSprite : CCSprite <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 + (instancetype)spriteNodeWithDictionary:(NSDictionary*)dict
                                   parent:(CCNode*)prnt;

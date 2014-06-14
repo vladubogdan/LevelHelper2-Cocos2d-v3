@@ -14,7 +14,8 @@
 
 @implementation LHNodeProtocolImpl
 {
-    __weak id _node;
+    __weak CCNode* _node;
+    
     NSString*           _uuid;
     NSMutableArray*     _tags;
     id<LHUserPropertyProtocol> _userProperty;
@@ -69,6 +70,15 @@
                 }
             }
         }
+        
+        if([dict objectForKey:@"alpha"])
+            [_node setOpacity:[dict floatForKey:@"alpha"]/255.0f];
+        
+        if([dict objectForKey:@"rotation"])
+            [_node setRotation:[dict floatForKey:@"rotation"]];
+        
+        if([dict objectForKey:@"zOrder"])
+            [_node setZOrder:[dict floatForKey:@"zOrder"]];
     }
     return self;
 }

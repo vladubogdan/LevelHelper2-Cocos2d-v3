@@ -189,10 +189,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 +(CGPoint)positionForNode:(CCNode*)node
                  fromUnit:(CGPoint)unitPos;
 
-+(void)loadPhysicsFromDict:(NSDictionary*)dict
-                   forNode:(CCNode*)node;
-
-
 #if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs;
 #endif

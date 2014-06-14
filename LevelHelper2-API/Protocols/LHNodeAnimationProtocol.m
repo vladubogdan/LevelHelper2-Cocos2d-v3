@@ -31,7 +31,7 @@
 }
 
 + (instancetype)animationProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
-    return LH_AUTORELEASED([[self alloc] initNodeProtocolImpWithDictionary:dict node:nd]);
+    return LH_AUTORELEASED([[self alloc] initAnimationProtocolImpWithDictionary:dict node:nd]);
 }
 
 - (instancetype)initAnimationProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
