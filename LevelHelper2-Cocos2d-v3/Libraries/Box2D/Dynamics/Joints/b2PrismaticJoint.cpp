@@ -108,7 +108,7 @@ b2PrismaticJoint::b2PrismaticJoint(const b2PrismaticJointDef* def)
 	m_referenceAngle = def->referenceAngle;
 
 	m_impulse.SetZero();
-	m_motorMass = 0.0f;
+	m_motorMass = 0.0;
 	m_motorImpulse = 0.0f;
 
 	m_lowerTranslation = def->lowerTranslation;
@@ -173,9 +173,6 @@ void b2PrismaticJoint::InitVelocityConstraints(const b2SolverData& data)
 
 		m_s1 = b2Cross(d + rA, m_perp);
 		m_s2 = b2Cross(rB, m_perp);
-
-        float32 s1test;
-        s1test = b2Cross(rA, m_perp);
 
 		float32 k11 = mA + mB + iA * m_s1 * m_s1 + iB * m_s2 * m_s2;
 		float32 k12 = iA * m_s1 + iB * m_s2;
@@ -352,6 +349,17 @@ void b2PrismaticJoint::SolveVelocityConstraints(const b2SolverData& data)
 
 		vB += mB * P;
 		wB += iB * LB;
+
+		b2Vec2 Cdot10 = Cdot1;
+
+		Cdot1.x = b2Dot(m_perp, vB - vA) + m_s2 * wB - m_s1 * wA;
+		Cdot1.y = wB - wA;
+
+		if (b2Abs(Cdot1.x) > 0.01f || b2Abs(Cdot1.y) > 0.01f)
+		{
+			b2Vec2 test = b2Mul22(m_K, df);
+			Cdot1.x += 0.0f;
+		}
 	}
 
 	data.velocities[m_indexA].v = vA;

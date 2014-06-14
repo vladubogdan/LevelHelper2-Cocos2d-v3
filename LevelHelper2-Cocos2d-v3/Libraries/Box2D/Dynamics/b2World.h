@@ -104,7 +104,7 @@ public:
 	/// @see SetAutoClearForces
 	void ClearForces();
 
-	/// Call this to draw shapes and other debug draw data. This is intentionally non-const.
+	/// Call this to draw shapes and other debug draw data.
 	void DrawDebugData();
 
 	/// Query the world for all fixtures that potentially overlap the
@@ -194,11 +194,6 @@ public:
 	/// Get the flag that controls automatic clearing of forces after each time step.
 	bool GetAutoClearForces() const;
 
-	/// Shift the world origin. Useful for large worlds.
-	/// The body shift formula is: position -= newOrigin
-	/// @param newOrigin the new origin with respect to the old origin
-	void ShiftOrigin(const b2Vec2& newOrigin);
-
 	/// Get the contact manager for testing.
 	const b2ContactManager& GetContactManager() const;
 
@@ -247,7 +242,7 @@ private:
 	bool m_allowSleep;
 
 	b2DestructionListener* m_destructionListener;
-	b2Draw* g_debugDraw;
+	b2Draw* m_debugDraw;
 
 	// This is used to compute the time step ratio to
 	// support a variable time step.

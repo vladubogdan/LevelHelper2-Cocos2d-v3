@@ -16,6 +16,9 @@
 
 #import "LHScene.h"
 
+#if LH_USE_BOX2D
+
+
 @implementation LHBox2dDrawNode
 {
     LHBox2dDebug* debug;
@@ -219,3 +222,5 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 //	glDrawArrays(GL_LINE_LOOP, 0, 8);
 	
 }
+
+#endif //LH_USE_BOX2D

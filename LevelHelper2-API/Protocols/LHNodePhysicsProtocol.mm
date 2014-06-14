@@ -117,6 +117,8 @@
         
         b2Shape* shape= NULL;
 
+        NSMutableArray* fixShapes = [NSMutableArray array];
+        NSArray* fixturesInfo = nil;
         
         if(shapeType == 0)//RECTANGLE
         {
@@ -202,16 +204,20 @@
 //            }
 //            
 //        }
-//        else if(shapeType == 4)//OVAL
-//        {
-//            fixturesInfo = [dict objectForKey:@"ovalShape"];
-//        }
-//        else if(shapeType == 5)//TRACED
-//        {
-//            NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
-//            LHScene* scene = (LHScene*)[_node scene];
-//            fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
-//        }
+        else if(shapeType == 4)//OVAL
+        {
+            NSLog(@"OVAL SHAPE %@", [_node name]);
+            
+            fixturesInfo = [dict objectForKey:@"ovalShape"];
+        }
+        else if(shapeType == 5)//TRACED
+        {
+            NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
+            LHScene* scene = (LHScene*)[_node scene];
+            fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            NSLog(@"CREATE TRACED FIXTURE FOR SPRITE %@", [_node name]);
+            
+        }
 //        else if(shapeType == 2)//POLYGON
 //        {
 //            
@@ -242,32 +248,95 @@
 //            }
 //        }
 //        
-//        if(fixturesInfo)
-//        {
-//            for(NSArray* fixPoints in fixturesInfo)
-//            {
-//                int count = (int)[fixPoints count];
-//                CGPoint points[count];
-//                
-//                int i = count - 1;
-//                for(int j = 0; j< count; ++j)
-//                {
-//                    NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
-//                    CGPoint point = LHPointFromString(pointStr);
-//                    
+        if(fixturesInfo)
+        {
+            /*
+            for(NSArray* fixPoints in fixturesInfo)
+            {
+                int count = (int)[fixPoints count];
+
+                b2Vec2 *verts = new b2Vec2[count];
+                b2PolygonShape shapeDef;
+                
+                int i = count - 1;
+                for(int j = 0; j< count; ++j)
+                {
+                    NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
+                    CGPoint point = LHPointFromString(pointStr);
+                    
 //                    point.x += _node.contentSize.width*0.5;
 //                    point.y -= _node.contentSize.height*0.5;
-//                    point.y = -point.y;
-//                    
-//                    
+                    point.y = -point.y;
+                    
+                    verts[j] = [scene metersFromPoint:point];
 //                    points[j] = point;
-//                    i = i-1;
-//                }
-//                
-//                CCPhysicsShape* shape = [CCPhysicsShape polygonShapeWithPoints:points count:count cornerRadius:0];
-//                [fixShapes addObject:shape];
-//            }
-//        }
+                    i = i-1;
+                }
+                
+                shapeDef.Set(verts, count);
+                
+                b2FixtureDef fixture;
+                
+                fixture.density     = [fixInfo floatForKey:@"density"];
+                fixture.friction    = [fixInfo floatForKey:@"friction"];
+                fixture.restitution = [fixInfo floatForKey:@"restitution"];
+                fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
+                
+                //                    fixture.filter.maskBits = [fixInfo mask].intValue;
+                //                    fixture.filter.categoryBits = [fixInfo category].intValue;
+                
+                fixture.shape = &shapeDef;
+                _body->CreateFixture(&fixture);
+                delete[] verts;
+            }
+            */
+            
+            int flipx = [_node scaleX] < 0 ? -1 : 1;
+            int flipy = [_node scaleY] < 0 ? -1 : 1;
+            
+            for(NSArray* fixPoints in fixturesInfo)
+            {
+                int count = (int)[fixPoints count];
+                if(count > 2)
+                {
+                    b2Vec2 *verts = new b2Vec2[count];
+                    b2PolygonShape shapeDef;
+                    
+                    int i = 0;
+                    for(int j = count-1; j >=0; --j)
+                    {
+                        const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
+                        
+                        NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
+                        CGPoint point = LHPointFromString(pointStr);
+
+//                        point.x += _node.contentSize.width*0.5;
+//                        point.y -= _node.contentSize.height*0.5;
+                        point.y = -point.y;
+                        
+                        verts[idx] = [scene metersFromPoint:point];
+                        ++i;
+                    }
+                    
+                    shapeDef.Set(verts, count);
+                    
+                    b2FixtureDef fixture;
+                    
+                    fixture.density     = [fixInfo floatForKey:@"density"];
+                    fixture.friction    = [fixInfo floatForKey:@"friction"];
+                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
+                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
+                    
+//                    fixture.filter.maskBits = [fixInfo mask].intValue;
+//                    fixture.filter.categoryBits = [fixInfo category].intValue;
+                    
+                    fixture.shape = &shapeDef;
+                    _body->CreateFixture(&fixture);
+                    delete[] verts;
+                }
+            }
+            
+        }
 //        if([fixShapes count] > 0){
 //            _node.physicsBody =  [CCPhysicsBody bodyWithShapes:fixShapes];
 //        }

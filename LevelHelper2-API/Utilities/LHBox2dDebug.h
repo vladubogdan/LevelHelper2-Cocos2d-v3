@@ -19,6 +19,9 @@
  */
 
 #import "cocos2d.h"
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
 
 class LHBox2dDebug;
 @interface LHBox2dDrawNode : CCDrawNode
@@ -69,3 +72,5 @@ public:
 
 
 #endif//LH_BOX2D_DEBUG_RENDER_H
+
+#endif//LH_USE_BOX2D

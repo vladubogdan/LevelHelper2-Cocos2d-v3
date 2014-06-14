@@ -16,18 +16,15 @@
 * 3. This notice may not be removed or altered from any source distribution.
 */
 
-#ifndef B2_DRAW_H
-#define B2_DRAW_H
-
 #include <Box2D/Common/b2Math.h>
 
 /// Color for debug drawing. Each value has the range [0,1].
 struct b2Color
 {
 	b2Color() {}
-	b2Color(float32 r, float32 g, float32 b, float32 a = 1.0f) : r(r), g(g), b(b), a(a) {}
-	void Set(float32 ri, float32 gi, float32 bi, float32 ai = 1.0f) { r = ri; g = gi; b = bi; a = ai; }
-	float32 r, g, b, a;
+	b2Color(float32 r, float32 g, float32 b) : r(r), g(g), b(b) {}
+	void Set(float32 ri, float32 gi, float32 bi) { r = ri; g = gi; b = bi; }
+	float32 r, g, b;
 };
 
 /// Implement and register this class with a b2World to provide debug drawing of physics
@@ -82,5 +79,3 @@ public:
 protected:
 	uint32 m_drawFlags;
 };
-
-#endif

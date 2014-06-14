@@ -66,10 +66,12 @@ void b2WeldJoint::InitVelocityConstraints(const b2SolverData& data)
 	m_invIA = m_bodyA->m_invI;
 	m_invIB = m_bodyB->m_invI;
 
+	b2Vec2 cA = data.positions[m_indexA].c;
 	float32 aA = data.positions[m_indexA].a;
 	b2Vec2 vA = data.velocities[m_indexA].v;
 	float32 wA = data.velocities[m_indexA].w;
 
+	b2Vec2 cB = data.positions[m_indexB].c;
 	float32 aB = data.positions[m_indexB].a;
 	b2Vec2 vB = data.velocities[m_indexB].v;
 	float32 wB = data.velocities[m_indexB].w;
@@ -128,12 +130,6 @@ void b2WeldJoint::InitVelocityConstraints(const b2SolverData& data)
 
 		invM += m_gamma;
 		m_mass.ez.z = invM != 0.0f ? 1.0f / invM : 0.0f;
-	}
-	else if (K.ez.z == 0.0f)
-	{
-		K.GetInverse22(&m_mass);
-		m_gamma = 0.0f;
-		m_bias = 0.0f;
 	}
 	else
 	{
@@ -277,17 +273,7 @@ bool b2WeldJoint::SolvePositionConstraints(const b2SolverData& data)
 
 		b2Vec3 C(C1.x, C1.y, C2);
 	
-		b2Vec3 impulse;
-		if (K.ez.z > 0.0f)
-		{
-			impulse = -K.Solve33(C);
-		}
-		else
-		{
-			b2Vec2 impulse2 = -K.Solve22(C1);
-			impulse.Set(impulse2.x, impulse2.y, 0.0f);
-		}
-
+		b2Vec3 impulse = -K.Solve33(C);
 		b2Vec2 P(impulse.x, impulse.y);
 
 		cA -= mA * P;
