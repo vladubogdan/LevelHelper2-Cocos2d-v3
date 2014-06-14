@@ -160,19 +160,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 +(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
                          parent:(CCNode*)prnt;
 
-+(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name
-                                     forNode:(CCNode*)selfNode;
-
-+(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid
-                                     forNode:(CCNode*)selfNode;
-
-+(NSMutableArray*)childrenOfType:(Class)type
-                         forNode:(CCNode*)selfNode;
-
-+(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any
-                           forNode:(CCNode*)selfNode;
-
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 
 -(NSString*)currentDeviceSuffix:(BOOL)keep2x;
@@ -191,12 +178,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 @class LHDevice;
 @class LHAnimation;
 @interface LHUtils : NSObject
-
-+(id)userPropertyForNode:(id)node
-          fromDictionary:(NSDictionary*)dict;
-
-+(void)tagsFromDictionary:(NSDictionary*)dict
-             savedToArray:(NSArray* __strong*)_tags;
 
 +(void)createAnimationsForNode:(id)node
                animationsArray:(NSMutableArray* __strong*)_animations

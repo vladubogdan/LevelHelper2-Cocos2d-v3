@@ -16,9 +16,8 @@
 @implementation LHNode
 {
     NSTimeInterval  lastTime;
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
@@ -27,9 +26,9 @@
 -(void)dealloc{
     activeAnimation = nil;
     LH_SAFE_RELEASE(_animations);
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_userProperty);
-    LH_SAFE_RELEASE(_tags);
+
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+    
     LH_SUPER_DEALLOC();
 }
 
@@ -48,12 +47,10 @@
         
         
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
-    
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
+        
         
         self.contentSize = [dict sizeForKey:@"size"];
         
@@ -124,30 +121,6 @@
     return self;
 }
 
--(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name
-{
-    return [LHScene childNodeWithName:name
-                              forNode:self];
-}
-
--(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues
-                         containsAny:any
-                             forNode:self];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
-
 - (void)visit
 {
     NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
@@ -161,18 +134,11 @@
     
     lastTime = thisTime;
 }
-#pragma mark - LHNodeProtocol
--(NSString*)uuid{
-    return _uuid;
-}
 
--(NSArray*)tags{
-    return _tags;
-}
+#pragma mark LHNodeProtocol Required
 
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 #pragma mark - LHNodeAnimationProtocol
 -(void)setActiveAnimation:(LHAnimation*)anim{

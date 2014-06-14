@@ -31,9 +31,7 @@
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableDictionary* loadedTextures;
     NSMutableDictionary* loadedTextureAtlases;
@@ -66,9 +64,7 @@
 -(void)dealloc{
     physicsNode = nil;
     
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_userProperty);
-    LH_SAFE_RELEASE(_tags);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(gravityNodes);
@@ -154,11 +150,8 @@
 //        [self setAnchorPoint:CGPointMake(0.5, 0.5)];
         
 
-        [self setName:levelPlistFile];
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){
@@ -539,45 +532,8 @@
 
 #pragma mark LHNodeProtocol Required
 
--(NSString*)uuid{
-    return _uuid;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
--(LHScene*)scene{
-    return self;
-}
-
--(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name{
-    return [LHScene childNodeWithName:name
-                              forNode:physicsNode];
-}
-
-
--(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:physicsNode];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues
-                         containsAny:any
-                            forNode:physicsNode];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:physicsNode];
-}
 
 #pragma mark - TOUCH SUPPORT
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
@@ -764,113 +720,6 @@
     }
     
     return nil;
-}
-
-+(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)nameVal
-                                     forNode:(CCNode*)selfNode{
-    for(CCNode<LHNodeProtocol>* node in [selfNode children])
-    {
-        if([node conformsToProtocol:@protocol(LHNodeProtocol)])
-        {
-            if([[node name] isEqualToString:nameVal]){
-                return node;
-            }
-            CCNode <LHNodeProtocol>* retNode = [node childNodeWithName:nameVal];
-            if(retNode){
-                return retNode;
-            }
-        }
-    }
-    return nil;
-}
-
-+(CCNode<LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid
-                                    forNode:(CCNode*)selfNode{
-    for(CCNode<LHNodeProtocol>* node in [selfNode children])
-    {
-        if([node conformsToProtocol:@protocol(LHNodeProtocol)])
-        {
-            if([[node uuid] isEqualToString:uuid]){
-                return node;
-            }
-            
-            if([node respondsToSelector:@selector(childNodeWithUUID:)])
-            {
-                CCNode<LHNodeProtocol>* retNode = [node childNodeWithUUID:uuid];
-                if(retNode){
-                    return retNode;
-                }
-            }
-        }
-    }
-    return nil;
-}
-
-+(NSMutableArray*)childrenOfType:(Class)type
-                         forNode:(CCNode*)selfNode{
-    
-    NSMutableArray* temp = [NSMutableArray array];
-    for(CCNode* child in [selfNode children]){
-        if([child isKindOfClass:type]){
-            [temp addObject:child];
-        }
-        
-        if([child respondsToSelector:@selector(childrenOfType:)])
-        {
-            NSMutableArray* childArray = [child performSelector:@selector(childrenOfType:)
-                                          withObject:type];
-            if(childArray){
-                [temp addObjectsFromArray:childArray];
-            }
-        }
-    }
-    return temp;
-}
-
-+(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any
-                          forNode:(CCNode*)selfNode
-{
-    NSMutableArray* temp = [NSMutableArray array];
-    for(id<LHNodeProtocol> child in [selfNode children]){
-        if([child conformsToProtocol:@protocol(LHNodeProtocol)])
-        {
-            NSArray* childTags =[child tags];
-
-            int foundCount = 0;
-            BOOL foundAtLeastOne = NO;
-            for(NSString* tg in childTags)
-            {
-                for(NSString* st in tagValues){
-                    if([st isEqualToString:tg])
-                    {
-                        ++foundCount;
-                        foundAtLeastOne = YES;
-                        if(any){
-                            break;
-                        }
-                    }
-                }
-                
-                if(any && foundAtLeastOne){
-                    [temp addObject:child];
-                    break;
-                }
-            }
-            if(!any && foundAtLeastOne && foundCount == [tagValues count]){
-                [temp addObject:child];
-            }
-
-            if([child respondsToSelector:@selector(childrenWithTags:containsAny:)])
-            {
-                NSMutableArray* childArray = [child childrenWithTags:tagValues containsAny:any];
-                if(childArray){
-                    [temp addObjectsFromArray:childArray];
-                }
-            }
-        }
-    }
-    return temp;
 }
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{

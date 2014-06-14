@@ -14,9 +14,7 @@
 
 @implementation LHCamera
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     BOOL _active;
     BOOL _restricted;
@@ -33,9 +31,7 @@
     _followedNode = nil;
     LH_SAFE_RELEASE(_followedNodeUUID);
 
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(_animations);
     activeAnimation = nil;
@@ -57,13 +53,9 @@
     if(self = [super init]){
         
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
@@ -196,20 +188,6 @@
     return pt;
 }
 
-#pragma mark LHNodeProtocol Required
-
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
 -(void)update:(CCTime)dt
 {
     if(![self isActive])return;
@@ -224,6 +202,11 @@
     }
     [self setSceneView];
 }
+
+#pragma mark LHNodeProtocol Required
+
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 #pragma mark - LHNodeAnimationProtocol
 -(void)setActiveAnimation:(LHAnimation*)anim{

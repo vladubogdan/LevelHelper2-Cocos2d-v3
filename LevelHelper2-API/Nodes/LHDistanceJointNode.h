@@ -29,21 +29,6 @@
 -(CGPoint)anchorB;
 
 /**
- Returns the unique identifier of this joint node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
-/**
  Returns the actual Cocos2d/Chipmunk joint that connects the two bodies together.
  */
 -(CCPhysicsJoint*)joint;

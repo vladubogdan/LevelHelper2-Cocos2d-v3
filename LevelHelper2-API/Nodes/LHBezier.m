@@ -28,9 +28,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
 {
     NSTimeInterval lastTime;
     NSMutableArray* linePoints;
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
@@ -38,10 +37,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 -(void)dealloc{
 
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
-
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+    
     LH_SAFE_RELEASE(linePoints);
     
     LH_SAFE_RELEASE(_animations);
@@ -65,13 +62,9 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-                
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
                                       fromUnit:unitPos];
@@ -243,32 +236,9 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 
 #pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
-}
 
--(NSArray*)tags{
-    return _tags;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
--(CCNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
 
 #pragma mark - LHNodeAnimationProtocol
 -(void)setActiveAnimation:(LHAnimation*)anim{

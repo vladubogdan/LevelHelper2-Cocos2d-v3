@@ -15,9 +15,7 @@
 
 @implementation LHDistanceJointNode
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     CCPhysicsJoint* __unsafe_unretained joint;
     
@@ -41,9 +39,7 @@
     
     joint = nil;
     
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
 
     LH_SAFE_RELEASE(nodeAUUID);
     LH_SAFE_RELEASE(nodeBUUID);
@@ -64,12 +60,9 @@
     if(self = [super init]){
         
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         relativePosA = [dict pointForKey:@"relativePosA"];
         relativePosB = [dict pointForKey:@"relativePosB"];
@@ -119,17 +112,9 @@
 }
 
 #pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
-}
 
--(NSArray*)tags{
-    return _tags;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
 
 #pragma mark LHNodeProtocol Optional
 
@@ -165,17 +150,6 @@
                                                                             -relativePosB.y + nodeB.contentSize.height*0.5)
                                                     minDistance:_length
                                                     maxDistance:_length];
-
-//        joint = [CCPhysicsJoint connectedSpringJointWithBodyA:nodeA.physicsBody
-//                                                        bodyB:nodeB.physicsBody
-//                                                      anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
-//                                                                          -relativePosA.y + nodeA.contentSize.height*0.5)
-//                                                      anchorB:CGPointMake(relativePosB.x + nodeB.contentSize.width*0.5,
-//                                                                          -relativePosB.y + nodeB.contentSize.height*0.5)
-//                                                   restLength:_length
-//                                                    stiffness:_frequency
-//                                                      damping:_dampingRatio];
-//        
         
         LH_SAFE_RELEASE(nodeAUUID);
         LH_SAFE_RELEASE(nodeBUUID);

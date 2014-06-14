@@ -17,9 +17,7 @@
 {
     NSTimeInterval lastTime;
     
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
@@ -30,9 +28,7 @@
 
 
 -(void)dealloc{
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(outlinePoints);
     LH_SAFE_RELEASE(trianglePoints);
@@ -79,12 +75,8 @@
             _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
         }
         
-        [self setName:[dict objectForKey:@"name"]];
-        
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
@@ -320,32 +312,8 @@
 
 #pragma mark LHNodeProtocol Required
 
--(NSString*)uuid{
-    return _uuid;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
--(CCNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
 
 #pragma mark - LHNodeAnimationProtocol
 -(void)setActiveAnimation:(LHAnimation*)anim{

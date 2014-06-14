@@ -16,9 +16,7 @@
 {
     NSTimeInterval lastTime;
     
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
 
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
@@ -26,9 +24,7 @@
 
 -(void)dealloc{
 
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animations);
     activeAnimation = nil;
     LH_SUPER_DEALLOC();
@@ -79,12 +75,8 @@
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
-        
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
@@ -177,37 +169,6 @@
 //    }
 }
 
--(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name{
-    return [LHScene childNodeWithName:name
-                              forNode:self];
-}
-
--(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
 - (void)visit
 {
     NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
@@ -221,6 +182,10 @@
     
     lastTime = thisTime;
 }
+
+#pragma mark LHNodeProtocol Required
+
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 #pragma mark - 
 -(void)setActiveAnimation:(LHAnimation*)anim{

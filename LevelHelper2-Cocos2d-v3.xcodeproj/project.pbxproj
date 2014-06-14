@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E0D55C2194C16590036E940 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C1194C16590036E940 /* LHNodeProtocol.m */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -260,6 +261,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E0D55C1194C16590036E940 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1779,6 +1781,7 @@
 			children = (
 				6E89FE09192E23100040478F /* LHNodeAnimationProtocol.h */,
 				6E89FE0A192E23100040478F /* LHNodeProtocol.h */,
+				6E0D55C1194C16590036E940 /* LHNodeProtocol.m */,
 				6E89FE0B192E23100040478F /* LHUserPropertyProtocol.h */,
 			);
 			path = Protocols;
@@ -2008,6 +2011,7 @@
 				6E89FE19192E23100040478F /* LHChildrenRotationsProperty.m in Sources */,
 				6E12213D1924BD87005E8532 /* ccUtils.c in Sources */,
 				6E1220AE1924BD86005E8532 /* CCPhysicsShape.m in Sources */,
+				6E0D55C2194C16590036E940 /* LHNodeProtocol.m in Sources */,
 				6E1220B61924BD86005E8532 /* CCRenderTexture.m in Sources */,
 				6E12203C1924BD86005E8532 /* CCActionManager.m in Sources */,
 				6E1220E01924BD86005E8532 /* CCSprite9Slice.m in Sources */,

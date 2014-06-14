@@ -15,6 +15,7 @@
 
 @protocol LHNodeAnimationProtocol;
 @protocol LHUserPropertyProtocol;
+
 @protocol LHNodeProtocol <NSObject>
 
 @required
@@ -77,8 +78,56 @@
  */
 -(NSMutableArray*)childrenOfType:(Class)type;
 
-
-
 -(BOOL)lateLoading;
 
 @end
+
+
+
+#pragma mark - LHNodeProtocol Implementation
+
+@interface LHNodeProtocolImpl : NSObject
+
++ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)prnt;
+
+-(NSString*)uuid;
+-(NSArray*)tags;
+-(id<LHUserPropertyProtocol>)userProperty;
+
+-(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name;
+-(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
+-(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
+-(NSMutableArray*)childrenOfType:(Class)type;
+
+@end
+
+
+#define LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(NSString*)uuid{\
+return [_nodeProtocolImp uuid];\
+}\
+\
+-(NSArray*)tags{ \
+    return [_nodeProtocolImp tags]; \
+} \
+\
+-(id<LHUserPropertyProtocol>)userProperty{\
+    return [_nodeProtocolImp userProperty];\
+}\
+\
+-(CCNode*)childNodeWithName:(NSString*)name{\
+    return [_nodeProtocolImp childNodeWithName:name];\
+}\
+\
+-(CCNode*)childNodeWithUUID:(NSString*)uuid{\
+    return [_nodeProtocolImp childNodeWithUUID:uuid];\
+}\
+\
+-(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{\
+    return [_nodeProtocolImp childrenWithTags:tagValues containsAny:any];\
+}\
+\
+-(NSMutableArray*)childrenOfType:(Class)type{\
+    return [_nodeProtocolImp childrenOfType:type];\
+}\

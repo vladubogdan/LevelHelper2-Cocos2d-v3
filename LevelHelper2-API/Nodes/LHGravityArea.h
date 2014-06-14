@@ -21,21 +21,6 @@
                                   parent:(CCNode*)prnt;
 
 /**
- Returns the unique identifier of this node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
-/**
  Returns whether or not this gravity area is a radial.
  */
 -(BOOL)isRadial;

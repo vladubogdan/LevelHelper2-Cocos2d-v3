@@ -145,9 +145,7 @@ typedef struct _LH_V2F_C4B_Triangle
 
 @implementation LHWater
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl* _nodeProtocolImp;
         
     float width, height;
     float numLines;
@@ -172,10 +170,11 @@ typedef struct _LH_V2F_C4B_Triangle
 
 -(void)dealloc{
     
-    LH_SAFE_RELEASE(_uuid);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+    
     LH_SAFE_RELEASE(bodySplashes);
     LH_SAFE_RELEASE(waves);
-    LH_SAFE_RELEASE(_userProperty);
+    
     LH_SUPER_DEALLOC();
 }
 
@@ -194,12 +193,8 @@ typedef struct _LH_V2F_C4B_Triangle
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
-        
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         self.contentSize = [dict sizeForKey:@"size"];
         
@@ -407,21 +402,6 @@ typedef struct _LH_V2F_C4B_Triangle
 //                      wavesRect.size.width,
 //                      wavesRect.size.height);
 //}
-
-#pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
-
 
 -(void)ensureCapacity:(NSUInteger)count
 {
@@ -640,5 +620,8 @@ typedef struct _LH_V2F_C4B_Triangle
     }
 }
 
+#pragma mark LHNodeProtocol Required
+
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 @end

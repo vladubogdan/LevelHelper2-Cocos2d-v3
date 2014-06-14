@@ -17,38 +17,38 @@
 
 @implementation LHUtils
 
-+(id)userPropertyForNode:(id)node fromDictionary:(NSDictionary*)dict
-{
-    id _userProperty = nil;
-    
-    NSDictionary* userPropInfo = [dict objectForKey:@"userPropertyInfo"];
-    NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
-    if(userPropInfo && userPropClassName)
-    {
-        Class userPropClass = NSClassFromString(userPropClassName);
-        if(userPropClass){
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wundeclared-selector"
-            _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
-                                                withObject:node];
-    #pragma clang diagnostic pop
-            if(_userProperty){
-                [_userProperty setPropertiesFromDictionary:userPropInfo];
-            }
-        }
-    }
-    
-    return _userProperty;
-}
-
-+(void)tagsFromDictionary:(NSDictionary*)dict
-             savedToArray:(NSArray* __strong*)_tags
-{
-    NSArray* loadedTags = [dict objectForKey:@"tags"];
-    if(loadedTags){
-        *_tags = [[NSArray alloc] initWithArray:loadedTags];
-    }
-}
+//+(id)userPropertyForNode:(id)node fromDictionary:(NSDictionary*)dict
+//{
+//    id _userProperty = nil;
+//    
+//    NSDictionary* userPropInfo = [dict objectForKey:@"userPropertyInfo"];
+//    NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
+//    if(userPropInfo && userPropClassName)
+//    {
+//        Class userPropClass = NSClassFromString(userPropClassName);
+//        if(userPropClass){
+//    #pragma clang diagnostic push
+//    #pragma clang diagnostic ignored "-Wundeclared-selector"
+//            _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
+//                                                withObject:node];
+//    #pragma clang diagnostic pop
+//            if(_userProperty){
+//                [_userProperty setPropertiesFromDictionary:userPropInfo];
+//            }
+//        }
+//    }
+//    
+//    return _userProperty;
+//}
+//
+//+(void)tagsFromDictionary:(NSDictionary*)dict
+//             savedToArray:(NSArray* __strong*)_tags
+//{
+//    NSArray* loadedTags = [dict objectForKey:@"tags"];
+//    if(loadedTags){
+//        *_tags = [[NSArray alloc] initWithArray:loadedTags];
+//    }
+//}
 
 +(void)createAnimationsForNode:(id)node
                animationsArray:(NSMutableArray* __strong*)_animations

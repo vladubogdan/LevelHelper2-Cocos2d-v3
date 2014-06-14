@@ -23,22 +23,6 @@
 
 
 /**
- Returns the unique identifier of this bezier node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
-
-/**
  Returns the points used to draw this bezier node. Array of NSValue with CGPoints;
  */
 -(NSMutableArray*)linePoints;
