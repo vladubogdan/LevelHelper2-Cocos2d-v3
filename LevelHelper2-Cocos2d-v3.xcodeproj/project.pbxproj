@@ -82,7 +82,7 @@
 		6E0D5611194C32A30036E940 /* NSThread+performBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12214A1924BD87005E8532 /* NSThread+performBlock.m */; };
 		6E0D5612194C32A30036E940 /* LHSceneSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.m */; };
 		6E0D5613194C32A30036E940 /* CCShaderCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1220D51924BD86005E8532 /* CCShaderCache.m */; };
-		6E0D5614194C32A30036E940 /* LHGravityArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF9192E23100040478F /* LHGravityArea.m */; };
+		6E0D5614194C32A30036E940 /* LHGravityArea.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF9192E23100040478F /* LHGravityArea.mm */; };
 		6E0D5615194C32A30036E940 /* LHRopeJointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE01192E23100040478F /* LHRopeJointNode.m */; };
 		6E0D5616194C32A30036E940 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1222121924BD88005E8532 /* CCBSequenceProperty.m */; };
 		6E0D5617194C32A30036E940 /* CCGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221191924BD87005E8532 /* CCGLView.m */; };
@@ -504,7 +504,7 @@
 		6E89FE25192E23100040478F /* LHCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF3192E23100040478F /* LHCamera.m */; };
 		6E89FE26192E23100040478F /* LHDistanceJointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF5192E23100040478F /* LHDistanceJointNode.m */; };
 		6E89FE27192E23100040478F /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF7192E23100040478F /* LHDrawNode.m */; };
-		6E89FE28192E23100040478F /* LHGravityArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF9192E23100040478F /* LHGravityArea.m */; };
+		6E89FE28192E23100040478F /* LHGravityArea.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF9192E23100040478F /* LHGravityArea.mm */; };
 		6E89FE29192E23100040478F /* LHNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDFB192E23100040478F /* LHNode.mm */; };
 		6E89FE2A192E23100040478F /* LHParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDFD192E23100040478F /* LHParallax.m */; };
 		6E89FE2B192E23100040478F /* LHParallaxLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDFF192E23100040478F /* LHParallaxLayer.m */; };
@@ -1120,7 +1120,7 @@
 		6E89FDF6192E23100040478F /* LHDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDrawNode.h; sourceTree = "<group>"; };
 		6E89FDF7192E23100040478F /* LHDrawNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDrawNode.m; sourceTree = "<group>"; };
 		6E89FDF8192E23100040478F /* LHGravityArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGravityArea.h; sourceTree = "<group>"; };
-		6E89FDF9192E23100040478F /* LHGravityArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHGravityArea.m; sourceTree = "<group>"; };
+		6E89FDF9192E23100040478F /* LHGravityArea.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGravityArea.mm; sourceTree = "<group>"; };
 		6E89FDFA192E23100040478F /* LHNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNode.h; sourceTree = "<group>"; };
 		6E89FDFB192E23100040478F /* LHNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHNode.mm; sourceTree = "<group>"; };
 		6E89FDFC192E23100040478F /* LHParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHParallax.h; sourceTree = "<group>"; };
@@ -2322,7 +2322,7 @@
 				6E89FDF6192E23100040478F /* LHDrawNode.h */,
 				6E89FDF7192E23100040478F /* LHDrawNode.m */,
 				6E89FDF8192E23100040478F /* LHGravityArea.h */,
-				6E89FDF9192E23100040478F /* LHGravityArea.m */,
+				6E89FDF9192E23100040478F /* LHGravityArea.mm */,
 				6E89FDFA192E23100040478F /* LHNode.h */,
 				6E89FDFB192E23100040478F /* LHNode.mm */,
 				6E89FDFC192E23100040478F /* LHParallax.h */,
@@ -2619,7 +2619,7 @@
 				6E0D5611194C32A30036E940 /* NSThread+performBlock.m in Sources */,
 				6E0D5612194C32A30036E940 /* LHSceneSubclass.m in Sources */,
 				6E0D5613194C32A30036E940 /* CCShaderCache.m in Sources */,
-				6E0D5614194C32A30036E940 /* LHGravityArea.m in Sources */,
+				6E0D5614194C32A30036E940 /* LHGravityArea.mm in Sources */,
 				6E0D5615194C32A30036E940 /* LHRopeJointNode.m in Sources */,
 				6E0D58EA194CD6A40036E940 /* b2EdgeShape.cpp in Sources */,
 				6E0D58E3194CD6A40036E940 /* b2CollidePolygon.cpp in Sources */,
@@ -2828,7 +2828,7 @@
 				6E12214B1924BD87005E8532 /* NSThread+performBlock.m in Sources */,
 				6E89FE33192E261E0040478F /* LHSceneSubclass.m in Sources */,
 				6E1220D61924BD86005E8532 /* CCShaderCache.m in Sources */,
-				6E89FE28192E23100040478F /* LHGravityArea.m in Sources */,
+				6E89FE28192E23100040478F /* LHGravityArea.mm in Sources */,
 				6E89FE2C192E23100040478F /* LHRopeJointNode.m in Sources */,
 				6E1222131924BD88005E8532 /* CCBSequenceProperty.m in Sources */,
 				6E12211A1924BD87005E8532 /* CCGLView.m in Sources */,

@@ -10,6 +10,8 @@
 #import "LHUtils.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
+#import "LHConfig.h"
+#import "LHPhysicsNode.h"
 
 @implementation LHGravityArea
 {
@@ -112,6 +114,63 @@
                       size.height);
 }
 
+#if LH_USE_BOX2D
+-(void)visit
+{
+    LHScene* scene = (LHScene*)[self scene];
+    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene physicsNode];
+
+    b2World* world =  [pNode box2dWorld];
+    
+    if(!world)return;
+    
+    CGSize size = self.contentSize;
+    float ptm = [scene ptm];
+    CGRect rect = [self globalRect];
+    
+    for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
+	{
+        if([self isRadial])
+        {
+            CGPoint globalPos = [self convertToWorldSpaceAR:CGPointZero];
+            
+            b2Vec2 b2TouchPosition = [scene metersFromPoint:globalPos];
+            b2Vec2 b2BodyPosition = b2Vec2(b->GetPosition().x, b->GetPosition().y);
+    
+            float maxDistance = [scene metersFromValue:(size.width*0.5)];
+            float maxForce = -[self force]/ptm;
+            
+            CGFloat distance = b2Distance(b2BodyPosition, b2TouchPosition);
+            if(distance < maxDistance)
+            {
+                CGFloat strength = (maxDistance - distance) / maxDistance;
+                float force = strength * maxForce;
+                CGFloat angle = atan2f(b2BodyPosition.y - b2TouchPosition.y, b2BodyPosition.x - b2TouchPosition.x);
+
+                b->ApplyLinearImpulse(b2Vec2(cosf(angle) * force, sinf(angle) * force), b->GetPosition());
+            }
+        }
+        else{
+            b2Vec2 b2BodyPosition = b2Vec2(b->GetPosition().x, b->GetPosition().y);
+            
+            CGPoint pos = [scene pointFromMeters:b2BodyPosition];
+            
+            if(CGRectContainsPoint(rect, pos))
+            {
+                float force = [self force]/ptm;
+                
+                float directionX = [self direction].x;
+                float directionY = [self direction].y;
+                b->ApplyLinearImpulse(b2Vec2(directionX * force, -directionY * force), b->GetPosition());
+            }
+        }
+	}
+    
+    [super visit];
+}
+
+#else //chipmunk
+
 -(void)visit
 {
     CGRect rect = [self globalRect];
@@ -124,7 +183,6 @@
         {
             CGPoint pos = [node convertToWorldSpaceAR:CGPointZero];
 
-            
             if(CGRectContainsPoint(rect, pos))
             {
                 if([self isRadial])
@@ -159,6 +217,7 @@
     
     [super visit];
 }
+#endif
 
 #pragma mark LHNodeProtocol Required
 

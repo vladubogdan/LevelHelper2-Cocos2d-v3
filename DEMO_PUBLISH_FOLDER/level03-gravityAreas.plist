@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.46633707850220768, 0.048642571415985006}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>8CDE313D-F623-4F44-A5AD-6AAEE303BE91</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>28.757312774658203</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>309DB8F0-7E8A-4E47-B28B-C21A67A25FBF</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{1, 0}</string>
+			<key>force</key>
+			<real>10</real>
+			<key>generalPosition</key>
+			<string>{0.35052448908487954, 0.77542786598205571}</string>
+			<key>name</key>
+			<string>UntitledGravityArea_3</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{3.6616518497467041, 2.2085022926330566}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>0</integer>
+			<key>uuid</key>
+			<string>A2D882A4-D6B0-44FB-821C-730644AC8FDE</string>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{-4.3711390001862412e-08, -0.999999999999999}</string>
+			<key>force</key>
+			<real>30</real>
+			<key>generalPosition</key>
+			<string>{0.26995198527971903, 0.40810302793979647}</string>
+			<key>name</key>
+			<string>UntitledGravityArea</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{3.8051517009735107, 3.8051517009735107}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>1</integer>
+			<key>uuid</key>
+			<string>412EF2B0-2D97-4EE7-B3F6-C224C12938F6</string>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{-4.3711390001862412e-08, 0.999999999999999}</string>
+			<key>force</key>
+			<real>20</real>
+			<key>generalPosition</key>
+			<string>{0.80362542470296228, 0.77498478889465328}</string>
+			<key>name</key>
+			<string>UntitledGravityArea_2</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{3.1095719337463379, 2.2129330635070801}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>0</integer>
+			<key>uuid</key>
+			<string>1EC341B6-04C4-463E-B674-664D7072D57B</string>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{-0.99999999999999623, 8.7422780003724745e-08}</string>
+			<key>force</key>
+			<real>20</real>
+			<key>generalPosition</key>
+			<string>{0.80425198872884118, 0.30765929222106936}</string>
+			<key>name</key>
+			<string>UntitledGravityArea_1</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{3.1866469383239746, 2.388031005859375}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>0</integer>
+			<key>uuid</key>
+			<string>191E2CC3-48C1-479E-99AD-70E30F21B50C</string>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>1024x768</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>1136x640</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>2048x1536</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>960x640</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>general</key>
+		<string>{{0, 0}, {1, 1}}</string>
+	</dict>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>8CDE313D-F623-4F44-A5AD-6AAEE303BE91</key>
+		<array>
+			<array>
+				<string>{34.75, -27.75}</string>
+				<string>{35.25, -28.25}</string>
+				<string>{38.75, -26.75}</string>
+				<string>{40.25, -22.75}</string>
+			</array>
+			<array>
+				<string>{26.25, -19.75}</string>
+				<string>{32.75, -27.25}</string>
+				<string>{34.75, -27.75}</string>
+				<string>{40.25, -22.75}</string>
+				<string>{40.25, -17.75}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{27.25, -12.25}</string>
+			</array>
+			<array>
+				<string>{17.25, -1.75}</string>
+				<string>{27.25, -12.25}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{34.25, 12.25}</string>
+				<string>{27.75, 18.75}</string>
+			</array>
+			<array>
+				<string>{7.25, 3.25}</string>
+				<string>{17.25, -1.75}</string>
+				<string>{27.75, 18.75}</string>
+				<string>{22.25, 22.25}</string>
+				<string>{16.25, 24.75}</string>
+				<string>{6.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{1.75, 4.25}</string>
+				<string>{7.25, 3.25}</string>
+				<string>{6.25, 26.75}</string>
+				<string>{-4.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{-6.75, 3.75}</string>
+				<string>{1.75, 4.25}</string>
+				<string>{-4.25, 26.75}</string>
+				<string>{-15.25, 24.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-6.75, 3.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-23.75, 21.25}</string>
+				<string>{-29.75, 17.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-29.75, 17.25}</string>
+				<string>{-37.25, 8.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-37.25, 8.75}</string>
+				<string>{-40.75, 0.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, 0.25}</string>
+				<string>{-40.75, -3.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, -3.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+			<array>
+				<string>{-36.75, -7.75}</string>
+				<string>{-33.75, -7.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+</dict>
+</plist>

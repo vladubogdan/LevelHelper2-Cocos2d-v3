@@ -51,11 +51,11 @@
 
 -(CCScene *)startScene
 {
-    return [LHSceneCameraTest scene];
+//    return [LHSceneCameraTest scene];
     
 //    return [LHBodyPhysicsTypeScene scene];
 //    return [LHBodyScaleTestScene scene];
-//    return [LHSceneSubclass scene];
+    return [LHSceneSubclass scene];
 }
 
 @end

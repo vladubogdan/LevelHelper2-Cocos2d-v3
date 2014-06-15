@@ -89,13 +89,16 @@
         float angle = [_node rotation];
         bodyDef.angle = CC_DEGREES_TO_RADIANS(angle);
 
-//        bodyDef.userData = self;
+        bodyDef.userData = LH_BRIDGE_CAST(self);
+        
         _body = world->CreateBody(&bodyDef);
-//        _body->SetUserData(self);
-//        _body->SetFixedRotation([self physics].fixedRotation);
-//        _body->SetGravityScale([self physics].gravityScale.floatValue);
-//        _body->SetSleepingAllowed([self physics].allowSleep);
-//        _body->SetBullet([self physics].bullet);
+        _body->SetUserData(LH_BRIDGE_CAST(self));
+
+        _body->SetFixedRotation([dict boolForKey:@"fixedRotation"]);
+        _body->SetGravityScale([dict floatForKey:@"gravityScale"]);
+
+        _body->SetSleepingAllowed([dict boolForKey:@"allowSleep"]);
+        _body->SetBullet([dict boolForKey:@"bullet"]);
         
         CGSize sizet = [_node contentSize];
         sizet.width  = [scene metersFromValue:sizet.width];
