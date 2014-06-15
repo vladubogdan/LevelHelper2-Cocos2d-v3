@@ -11,6 +11,7 @@
 
 #import "LHSceneSubclass.h"
 #import "LHBodyScaleTestScene.h"
+#import "LHBodyPhysicsTypeScene.h"
 
 @implementation AppDelegate
 
@@ -49,7 +50,8 @@
 
 -(CCScene *)startScene
 {
-    return [LHBodyScaleTestScene scene];
+    return [LHBodyPhysicsTypeScene scene];
+//    return [LHBodyScaleTestScene scene];
 //    return [LHSceneSubclass scene];
 }
 

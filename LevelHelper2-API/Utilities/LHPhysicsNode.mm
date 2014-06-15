@@ -8,19 +8,21 @@
 
 #import "LHPhysicsNode.h"
 #import "LHUtils.h"
-
-#include <cstdio>
-#include <cstdarg>
-
-#include <cstring>
-
 #import "LHScene.h"
 
 
+#if LH_USE_BOX2D
 
+#include <cstdio>
+#include <cstdarg>
+#include <cstring>
+#include "Box2D.h"
 
+#else
 
+//#import "CCPhysics+ObjectiveChipmunk.h"
 
+#endif
 
 #if LH_USE_BOX2D
 
@@ -37,7 +39,7 @@ class LHBox2dDebug;
 @end
 
 
-#include "Box2D.h"
+
 struct b2AABB;
 class LHBox2dDebug : public b2Draw
 {
@@ -397,6 +399,10 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 #pragma mark - CHIPMUNK SUPPORT
 #else //CHIPMUNK
+
+//-(cpSpace*)chipmunkSpace{
+//    return [[super space] space];
+//}
 
 -(void)setDebugDraw:(BOOL)val{
     //something

@@ -208,24 +208,25 @@ static float MAX_BEZIER_STEPS = 24.0f;
 -(void)visit
 {
     [_animationProtocolImp visit];
+    [_physicsProtocolImp visit];
     
     [super visit];
 }
 
 #pragma mark - Box2D Support
-
 #if LH_USE_BOX2D
 LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 #endif //LH_USE_BOX2D
 
+#pragma mark - Common Physics Engines Support
+LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 #pragma mark LHNodeProtocol Required
-
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark - LHNodeAnimationProtocol Required
-
 LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
 
 @end

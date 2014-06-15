@@ -31,8 +31,13 @@ class b2World;
 #endif
 
 #else//CHIPMUNK
-@interface LHPhysicsNode : CCPhysicsNode <LHNodeProtocol>
 
+class cpSpace;
+
+@interface LHPhysicsNode : CCPhysicsNode <LHNodeProtocol>
+#ifdef __cplusplus
+//-(cpSpace*)chipmunkSpace;
+#endif
 #endif
 
 

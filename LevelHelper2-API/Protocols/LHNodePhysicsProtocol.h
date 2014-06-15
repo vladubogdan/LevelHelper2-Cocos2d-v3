@@ -16,7 +16,43 @@ class b2Body;
 #endif
 #endif //LH_USE_BOX2D
 
+typedef enum
+{
+	LH_STATIC_BODY = 0,
+	LH_KINEMATIC_BODY,//not available in chipmunk - wil used dynamic instead
+	LH_DYNAMIC_BODY,
+    LH_NO_PHYSICS
+    
+} LH_PHYSICS_TYPE;
+
+
 @protocol LHNodePhysicsProtocol <NSObject>
+
+@required
+
+/**
+ Returns the type of the physics body.
+ @return A LH_PHYSICS_TYPE enum value; 0 = static, 1 = Kinematic (not available in Chipmunk), 2 = Dynamic, 3 = No Physics
+ */
+-(LH_PHYSICS_TYPE)physicsType;
+
+/**
+ Set the physics body type; 
+ Note: On Box2d setting a body to No Physics type will not actually delete the body but will make it inactive. It will no longer participate in physics simulation, but it will still exist in order to make it dynamic/static later on.
+ Node: On Chipmunk setting a body to No Physics will make it static and sensor. Setting it back to static/dynamic will set the initial sensor state.
+
+ If you really want to delete the body use the appropriate method to do so. After deleting the body you will no longer be able to set it back again until you recreate the Cocos2d node.
+ 
+ @param type A LH_PHYSICS_TYPE enum value. 0 = static, 1 = Kinematic (not available in Chipmunk), 2 = Dynamic, 3 = No Physics
+ */
+-(void)setPhysicsType:(LH_PHYSICS_TYPE)type;
+
+/**
+ Removed the physics body from the node. The Cocos2d node will still be alive. If you want to remove the node also call "removeFromParent" instead.
+ Note that you won't be able to recreate the body after removal without recreating the entire Cocos2d node. If you need the physics body at a later time you may want
+ to change the physics type to No Physics.
+*/
+-(void)removeBody;
 
 @end
 
@@ -26,6 +62,13 @@ class b2Body;
 + (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 
+-(LH_PHYSICS_TYPE)bodyType;
+-(void)setBodyType:(LH_PHYSICS_TYPE)type;
+
+-(void)removeBody;
+
+-(void)visit;
+
 #if LH_USE_BOX2D
 #ifdef __cplusplus
 -(b2Body*)body;
@@ -34,11 +77,9 @@ class b2Body;
 -(void)updateTransform;
 -(CGPoint)position;
 -(float)rotation;
-
 -(void)updateScale;
 #endif
 #endif //LH_USE_BOX2D
-
 
 @end
 
@@ -94,3 +135,16 @@ class b2Body;
         [_physicsProtocolImp updateScale];\
     }\
 }
+
+#define LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(LH_PHYSICS_TYPE)physicsType{\
+    return [_physicsProtocolImp bodyType];\
+}\
+-(void)setPhysicsType:(LH_PHYSICS_TYPE)type{\
+    return [_physicsProtocolImp setBodyType:type];\
+}\
+-(void)removeBody{\
+    [_physicsProtocolImp removeBody];\
+}
+
+

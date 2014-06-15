@@ -16,15 +16,24 @@
 
 #import "LHConfig.h"
 
+#import "LHPhysicsNode.h"
+
 #if LH_USE_BOX2D
-#ifdef __cplusplus
+
 #include "Box2D.h"
 #include <vector>
-#endif
+
+#else
+
+//#import "CCPhysics+ObjectiveChipmunk.h"
+
 #endif //LH_USE_BOX2D
 
 @implementation LHNodePhysicsProtocolImp
 {
+    BOOL originallySensor;
+    BOOL scheduledForRemoval;
+    
 #if LH_USE_BOX2D
     b2Body* _body;
     CGPoint previousScale;
@@ -399,6 +408,51 @@
     return _body;
 }
 
+-(LH_PHYSICS_TYPE)bodyType{
+    if(_body){
+        return (LH_PHYSICS_TYPE)_body->GetType();
+    }
+    return LH_NO_PHYSICS;
+}
+-(void)setBodyType:(LH_PHYSICS_TYPE)type{
+    if(_body){
+        if(type != LH_NO_PHYSICS)
+        {
+            _body->SetActive(true);
+            _body->SetType((b2BodyType)type);
+        }
+        else{
+            _body->SetType((b2BodyType)0);
+            _body->SetActive(false);
+        }
+        //for no physics - we should do something else
+    }
+}
+
+-(void)removeBody{
+    
+    if(_body){
+        b2World* world = _body->GetWorld();
+        if(world){
+            if(!world->IsLocked()){
+                world->DestroyBody(_body);
+                _body = NULL;
+                scheduledForRemoval = false;
+            }
+            else{
+                scheduledForRemoval = true;
+            }
+        }
+    }
+}
+
+-(void)visit{
+    if(_body && scheduledForRemoval){
+        [self removeBody];
+    }
+}
+
+
 static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhysicsProtocolImp *physicsImp)
 {
 	return CGAffineTransformConcat(physicsImp.absoluteTransform, CGAffineTransformInvert(NodeToB2BodyTransform(node.parent)));
@@ -543,6 +597,70 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 #pragma mark - CHIPMUNK SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 #else //chipmunk
+
+-(LH_PHYSICS_TYPE)bodyType{
+    if([_node physicsBody]){
+        if([[_node physicsBody] type] == CCPhysicsBodyTypeDynamic){
+            return LH_DYNAMIC_BODY;
+        }
+        else{
+            return LH_STATIC_BODY;
+        }
+    }
+    return LH_NO_PHYSICS;
+}
+-(void)setBodyType:(LH_PHYSICS_TYPE)type{
+    if([_node physicsBody]){
+        
+//        LHScene* scene = (LHScene*)[_node scene];
+//        LHPhysicsNode* pNode = (LHPhysicsNode*)[scene physicsNode];
+//        cpSpace* space = [pNode chipmunkSpace];
+//        ChipmunkBody* body = [[_node physicsBody] body];
+//        cpBody*  body = [[[_node physicsBody] body] body];
+        
+        if(type == LH_STATIC_BODY)
+        {
+            [[_node physicsBody] setSensor:originallySensor];
+            [[_node physicsBody] setType:CCPhysicsBodyTypeStatic];
+        }
+        else if(type == LH_DYNAMIC_BODY || type == LH_KINEMATIC_BODY)
+        {
+            [[_node physicsBody] setSensor:originallySensor];
+            [[_node physicsBody] setType:CCPhysicsBodyTypeDynamic];
+        }
+        else if(type == LH_NO_PHYSICS)
+        {
+            [[_node physicsBody] setSensor:YES];
+            [[_node physicsBody] setType:CCPhysicsBodyTypeStatic];
+            
+//            ChipmunkSpace* sp = [body space];
+//            [body removeFromSpace:[body space]];
+//            
+//            [sp reindexStatic];
+            
+//            - (void)addToSpace:(ChipmunkSpace *)space;
+//            - (void)removeFromSpace:(ChipmunkSpace *)space;
+//            if(cpSpaceContainsBody(space, body))
+//            {
+//                cpSpaceRemoveBody(space, body);
+//            }
+        }
+    }
+}
+
+-(void)removeBody{
+    
+    if([_node physicsBody])
+    {
+        [_node setPhysicsBody:nil];        
+    }
+}
+
+-(void)visit{
+    //nothing to do for chipmunk
+}
+
+
 
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
     
@@ -739,6 +857,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
         if(fixInfo && _node.physicsBody)
         {
+            originallySensor = [fixInfo boolForKey:@"sensor"];
+            
             NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
             NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
             if(!ignoreCats || [ignoreCats count] == 0){

@@ -2821,7 +2821,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.14476835057139398, 0.17805365920066835}</string>
+			<string>{0.19360003198186557, 0.23793760538101197}</string>
 			<key>imageFileName</key>
 			<string>officer.png</string>
 			<key>name</key>
@@ -2835,7 +2835,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>BCE3F94B-8683-4288-AD11-AC4CF7D56BA2</string>
+				<string>7DC92CAE-E899-4881-A904-069484978FBC</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -2869,7 +2869,7 @@
 			<key>relativeImagePath</key>
 			<string>DEMO_PUBLISH_FOLDER/</string>
 			<key>rotation</key>
-			<real>312.03518676757812</real>
+			<real>7.8772878646850586</real>
 			<key>scale</key>
 			<string>{1, 1}</string>
 			<key>size</key>
@@ -2950,7 +2950,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>BCE3F94B-8683-4288-AD11-AC4CF7D56BA2</key>
+		<key>7DC92CAE-E899-4881-A904-069484978FBC</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>
