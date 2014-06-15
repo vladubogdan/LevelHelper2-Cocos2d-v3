@@ -138,7 +138,7 @@
     if(_active)
     {
         CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
-        [[self scene] setPosition:transPoint];
+        [[[self scene] physicsNode] setPosition:transPoint];
     }
 }
 
@@ -171,8 +171,8 @@
             x = MAX(x, worldRect.origin.x + winSize.width *0.5);
         }
         
-        y = MIN(y, worldRect.origin.y + worldRect.size.height - winSize.height*0.5);
-        y = MAX(y, worldRect.origin.y + winSize.height*0.5);
+        y = MAX(y, worldRect.origin.y + worldRect.size.height + winSize.height*0.5);
+        y = MIN(y, worldRect.origin.y - winSize.height*0.5);
     }
     
     CGPoint pt = CGPointMake(winSize.width*0.5-x,

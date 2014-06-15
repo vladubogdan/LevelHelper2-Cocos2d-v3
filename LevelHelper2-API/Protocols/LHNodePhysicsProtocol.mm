@@ -460,7 +460,7 @@ static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(CCNode *n = node; n; n = n.parent){
+	for(CCNode *n = node; n && ![n isKindOfClass:[LHPhysicsNode class]]; n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;

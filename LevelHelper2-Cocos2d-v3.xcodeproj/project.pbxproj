@@ -273,6 +273,8 @@
 		6E0D5918194D76130036E940 /* LHPhysicsNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5916194D76130036E940 /* LHPhysicsNode.mm */; };
 		6E0D591B194D947E0036E940 /* LHBodyPhysicsTypeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D591A194D947E0036E940 /* LHBodyPhysicsTypeScene.m */; };
 		6E0D591C194D947E0036E940 /* LHBodyPhysicsTypeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D591A194D947E0036E940 /* LHBodyPhysicsTypeScene.m */; };
+		6E0D591F194DB4B10036E940 /* LHSceneCameraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D591E194DB4B10036E940 /* LHSceneCameraTest.m */; };
+		6E0D5920194DB4B10036E940 /* LHSceneCameraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D591E194DB4B10036E940 /* LHSceneCameraTest.m */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -639,6 +641,8 @@
 		6E0D5916194D76130036E940 /* LHPhysicsNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHPhysicsNode.mm; sourceTree = "<group>"; };
 		6E0D5919194D947E0036E940 /* LHBodyPhysicsTypeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHBodyPhysicsTypeScene.h; path = Classes/LHBodyPhysicsTypeScene.h; sourceTree = "<group>"; };
 		6E0D591A194D947E0036E940 /* LHBodyPhysicsTypeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHBodyPhysicsTypeScene.m; path = Classes/LHBodyPhysicsTypeScene.m; sourceTree = "<group>"; };
+		6E0D591D194DB4B10036E940 /* LHSceneCameraTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCameraTest.h; path = Classes/LHSceneCameraTest.h; sourceTree = "<group>"; };
+		6E0D591E194DB4B10036E940 /* LHSceneCameraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHSceneCameraTest.m; path = Classes/LHSceneCameraTest.m; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2212,6 +2216,8 @@
 				6E0D5912194D72F00036E940 /* LHBodyScaleTestScene.m */,
 				6E0D5919194D947E0036E940 /* LHBodyPhysicsTypeScene.h */,
 				6E0D591A194D947E0036E940 /* LHBodyPhysicsTypeScene.m */,
+				6E0D591D194DB4B10036E940 /* LHSceneCameraTest.h */,
+				6E0D591E194DB4B10036E940 /* LHSceneCameraTest.m */,
 				6E12228E1924BD88005E8532 /* AppDelegate.h */,
 				6E12228F1924BD88005E8532 /* AppDelegate.m */,
 			);
@@ -2728,6 +2734,7 @@
 				6E0D5670194C32A30036E940 /* cocos2d.m in Sources */,
 				6E0D5909194CD6A40036E940 /* b2RopeJoint.cpp in Sources */,
 				6E0D5671194C32A30036E940 /* ALSource.m in Sources */,
+				6E0D5920194DB4B10036E940 /* LHSceneCameraTest.m in Sources */,
 				6E0D58FB194CD6A40036E940 /* b2Contact.cpp in Sources */,
 				6E0D5672194C32A30036E940 /* CCParticleSystem.m in Sources */,
 				6E0D5673194C32A30036E940 /* CCScene.m in Sources */,
@@ -2794,6 +2801,7 @@
 				6E89FE17192E23100040478F /* LHChildrenOpacitiesProperty.m in Sources */,
 				6E12213B1924BD87005E8532 /* CCProfiling.m in Sources */,
 				6E1221621924BD87005E8532 /* OALAction.m in Sources */,
+				6E0D591F194DB4B10036E940 /* LHSceneCameraTest.m in Sources */,
 				6E1220F81924BD86005E8532 /* CCTexturePVR.m in Sources */,
 				6E1222071924BD87005E8532 /* CCBAnimationManager.m in Sources */,
 				6E89FE26192E23100040478F /* LHDistanceJointNode.m in Sources */,

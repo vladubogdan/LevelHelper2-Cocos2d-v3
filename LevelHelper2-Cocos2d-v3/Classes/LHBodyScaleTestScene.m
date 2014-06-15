@@ -65,6 +65,7 @@
         [chainNode setScaleY:[chainNode scaleY]+0.2];
     }
     
+    [super touchBegan:touch withEvent:event];
 }
 
 

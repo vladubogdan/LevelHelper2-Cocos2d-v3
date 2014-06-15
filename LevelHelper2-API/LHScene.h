@@ -39,7 +39,6 @@
  */
 -(CCTexture*)textureWithImagePath:(NSString*)imagePath;
 
-
 /**
  Returns the game world rectangle or CGRectZero if the game world rectangle is not set in the level file.
  */
@@ -70,6 +69,10 @@
 #endif
 #endif //LH_USE_BOX2D
 
+
+/*Get the global gravity force.
+ */
+-(CGPoint)globalGravity;
 /*Sets the global gravity force
 @param gravity A point representing the gravity force in x and y direction.
  */

@@ -148,8 +148,6 @@
         designOffset         = childrenOffset;
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
         
-//        [self setAnchorPoint:CGPointMake(0.5, 0.5)];
-        
 
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -269,7 +267,6 @@
                                            (1.0f - bRect.origin.y)*designSize.height + offset.y,
                                            bRect.size.width*designSize.width ,
                                            -(bRect.size.height)*designSize.height);
-                gameWorldRect.origin.y -= sceneSize.height;
             }
         }
         
@@ -625,6 +622,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 }
 #endif //LH_USE_BOX2D
 
+-(CGPoint)globalGravity{
+    return [_physicsNode gravity];
+}
 -(void)setGlobalGravity:(CGPoint)gravity{
     [_physicsNode setGravity:gravity];
 }
@@ -708,21 +708,15 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
     else if([nodeType isEqualToString:@"LHCamera"])
     {
-        if(scene)
-        {
-            LHCamera* cm = [LHCamera cameraWithDictionary:childInfo
-                                                    parent:prnt];
-            return cm;
-        }
+        LHCamera* cm = [LHCamera cameraWithDictionary:childInfo
+                                                parent:prnt];
+        return cm;
     }
     else if([nodeType isEqualToString:@"LHRopeJoint"])
     {
-        if(scene)
-        {
-            LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
-                                                                        parent:prnt];
-            [scene addLateLoadingNode:jt];
-        }
+        LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
+                                                                    parent:prnt];
+        [scene addLateLoadingNode:jt];
     }
 //    else if([nodeType isEqualToString:@"LHWeldJoint"])
 //    {

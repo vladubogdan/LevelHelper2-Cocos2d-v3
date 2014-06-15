@@ -48,6 +48,8 @@
     
     NSLog(@"TRY TO REMOVE BODY");
     [spr removeBody];
+    
+    [super touchBegan:touch withEvent:event];
 }
 
 

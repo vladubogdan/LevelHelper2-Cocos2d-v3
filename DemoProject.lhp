@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.45644199848175049, 0}, {0.049516279250383377, 1}}</string>
+			<string>{{0.3754633367061615, 0}, {0.047666311264038086, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-iphone5</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078214749693870544, 1}}</string>
+			<string>{{1, 1}, {0.078228786587715149, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.42057669162750244, 0}, {0.94168412685394287, 1}}</string>
+			<string>{{0.33830922842025757, 0}, {0.92545497417449951, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.42057669162750244, 0}, {0.94168412685394287, 1}}</string>
+			<string>{{0.33830922842025757, 0}, {0.92545497417449951, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -79,6 +79,11 @@
 					<true/>
 				</dict>
 				<key>level02-assetTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level03-camera.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
