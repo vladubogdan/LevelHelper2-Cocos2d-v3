@@ -30,7 +30,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>8CDE313D-F623-4F44-A5AD-6AAEE303BE91</string>
+				<string>9E4D9281-A2A9-4AC8-9937-1728BAD70CF8</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -86,34 +86,6 @@
 			<key>areaSize</key>
 			<string>{128, 128}</string>
 			<key>direction</key>
-			<string>{1, 0}</string>
-			<key>force</key>
-			<real>10</real>
-			<key>generalPosition</key>
-			<string>{0.35052448908487954, 0.77542786598205571}</string>
-			<key>name</key>
-			<string>UntitledGravityArea_3</string>
-			<key>nodeType</key>
-			<string>LHAreaGravity</string>
-			<key>parentUUID</key>
-			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
-			<key>scale</key>
-			<string>{3.6616518497467041, 2.2085022926330566}</string>
-			<key>size</key>
-			<string>{128, 128}</string>
-			<key>tags</key>
-			<array>
-				<string>DEFAULT</string>
-			</array>
-			<key>type</key>
-			<integer>0</integer>
-			<key>uuid</key>
-			<string>A2D882A4-D6B0-44FB-821C-730644AC8FDE</string>
-		</dict>
-		<dict>
-			<key>areaSize</key>
-			<string>{128, 128}</string>
-			<key>direction</key>
 			<string>{-4.3711390001862412e-08, -0.999999999999999}</string>
 			<key>force</key>
 			<real>30</real>
@@ -142,39 +114,11 @@
 			<key>areaSize</key>
 			<string>{128, 128}</string>
 			<key>direction</key>
-			<string>{-4.3711390001862412e-08, 0.999999999999999}</string>
-			<key>force</key>
-			<real>20</real>
-			<key>generalPosition</key>
-			<string>{0.80362542470296228, 0.77498478889465328}</string>
-			<key>name</key>
-			<string>UntitledGravityArea_2</string>
-			<key>nodeType</key>
-			<string>LHAreaGravity</string>
-			<key>parentUUID</key>
-			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
-			<key>scale</key>
-			<string>{3.1095719337463379, 2.2129330635070801}</string>
-			<key>size</key>
-			<string>{128, 128}</string>
-			<key>tags</key>
-			<array>
-				<string>DEFAULT</string>
-			</array>
-			<key>type</key>
-			<integer>0</integer>
-			<key>uuid</key>
-			<string>1EC341B6-04C4-463E-B674-664D7072D57B</string>
-		</dict>
-		<dict>
-			<key>areaSize</key>
-			<string>{128, 128}</string>
-			<key>direction</key>
 			<string>{-0.99999999999999623, 8.7422780003724745e-08}</string>
 			<key>force</key>
 			<real>20</real>
 			<key>generalPosition</key>
-			<string>{0.80425198872884118, 0.30765929222106936}</string>
+			<string>{0.78582916259765623, 0.30765929222106936}</string>
 			<key>name</key>
 			<string>UntitledGravityArea_1</string>
 			<key>nodeType</key>
@@ -182,7 +126,7 @@
 			<key>parentUUID</key>
 			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
 			<key>scale</key>
-			<string>{3.1866469383239746, 2.388031005859375}</string>
+			<string>{2.9103047847747803, 2.388031005859375}</string>
 			<key>size</key>
 			<string>{128, 128}</string>
 			<key>tags</key>
@@ -193,6 +137,62 @@
 			<integer>0</integer>
 			<key>uuid</key>
 			<string>191E2CC3-48C1-479E-99AD-70E30F21B50C</string>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{1, 0}</string>
+			<key>force</key>
+			<real>10</real>
+			<key>generalPosition</key>
+			<string>{0.34698403676350914, 0.77123842239379881}</string>
+			<key>name</key>
+			<string>UntitledGravityArea_3</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{3.6085448265075684, 2.1666076183319092}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>0</integer>
+			<key>uuid</key>
+			<string>A2D882A4-D6B0-44FB-821C-730644AC8FDE</string>
+		</dict>
+		<dict>
+			<key>areaSize</key>
+			<string>{128, 128}</string>
+			<key>direction</key>
+			<string>{-4.3711390001862412e-08, 0.999999999999999}</string>
+			<key>force</key>
+			<real>20</real>
+			<key>generalPosition</key>
+			<string>{0.79067217508951826, 0.77482113838195799}</string>
+			<key>name</key>
+			<string>UntitledGravityArea_2</string>
+			<key>nodeType</key>
+			<string>LHAreaGravity</string>
+			<key>parentUUID</key>
+			<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+			<key>scale</key>
+			<string>{2.9152717590332031, 2.1307797431945801}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>type</key>
+			<integer>0</integer>
+			<key>uuid</key>
+			<string>1EC341B6-04C4-463E-B674-664D7072D57B</string>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -257,7 +257,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>8CDE313D-F623-4F44-A5AD-6AAEE303BE91</key>
+		<key>9E4D9281-A2A9-4AC8-9937-1728BAD70CF8</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>

@@ -86,6 +86,56 @@
         _direction = [dict pointForKey:@"direction"];
         _force = [dict floatForKey:@"force"];
         _radial = [dict intForKey:@"type"] == 1;
+        
+        
+#if LH_DEBUG
+        CCDrawNode* debug = [CCDrawNode node];
+        [self addChild:debug];
+        
+        
+        if(_radial)
+        {
+            const float32 k_segments = 32.0f;
+            int vertexCount=32;
+            const float32 k_increment = 2.0f * b2_pi / k_segments;
+            float32 theta = 0.0f;
+            
+            CGPoint* vertices = new CGPoint[vertexCount];
+            for (int32 i = 0; i < k_segments; ++i){
+                vertices[i] = CGPointMake(size.width*0.5 *cosf(theta), size.width*0.5 *sinf(theta));
+                theta += k_increment;
+            }
+            
+            CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 0, 1, 1)];
+            CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 0, 1, 0.3)];
+            [debug drawPolyWithVerts:vertices
+                               count:vertexCount
+                           fillColor:fillColor
+                         borderWidth:1 borderColor:borderColor];
+            
+            delete[] vertices;
+        }
+        else{
+            
+            CGPoint* vertices = new CGPoint[4];
+
+            vertices[0] = CGPointMake(-size.width*0.5, -size.height*0.5);
+            vertices[1] = CGPointMake(size.width*0.5, -size.height*0.5);
+            vertices[2] = CGPointMake(size.width*0.5, size.height*0.5);
+            vertices[3] = CGPointMake(-size.width*0.5, size.height*0.5);
+            
+            CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
+            CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
+            
+            [debug drawPolyWithVerts:vertices
+                               count:4
+                           fillColor:fillColor
+                         borderWidth:1 borderColor:borderColor];
+            
+            delete[] vertices;
+        }
+#endif//LH_DEBUG
+        
     }
     
     return self;
@@ -161,7 +211,7 @@
                 
                 float directionX = [self direction].x;
                 float directionY = [self direction].y;
-                b->ApplyLinearImpulse(b2Vec2(directionX * force, -directionY * force), b->GetPosition());
+                b->ApplyLinearImpulse(b2Vec2(directionX * force, directionY * force), b->GetPosition());
             }
         }
 	}

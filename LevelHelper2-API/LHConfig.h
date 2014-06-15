@@ -21,6 +21,13 @@
 
 //the demo project "LevelHelper2-Cocos2d-v3+Box2d" uses a preprocessor macro so LH_USE_BOX2D will be 0 in this file, that way chipmunk demo will not give any errors.
 
+// To enable debug mode set LH_DEBUG to 1 or define a LH_DEBUG as a preprocessor macro.
+#ifndef LH_DEBUG
+#define LH_DEBUG 1
+#endif
+
+
+
 #endif
 
 
