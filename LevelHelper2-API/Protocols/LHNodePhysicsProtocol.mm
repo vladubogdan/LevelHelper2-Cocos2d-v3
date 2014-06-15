@@ -54,6 +54,10 @@
     return LH_AUTORELEASED([[self alloc] initPhysicsProtocolImpWithDictionary:dict node:nd]);
 }
 
+-(CCNode*)node{
+    return _node;
+}
+
 #if LH_USE_BOX2D
 
 #pragma mark - BOX2D SUPPORT
@@ -89,10 +93,10 @@
         float angle = [_node rotation];
         bodyDef.angle = CC_DEGREES_TO_RADIANS(angle);
 
-        bodyDef.userData = LH_BRIDGE_CAST(self);
+        bodyDef.userData = LH_VOID_BRIDGE_CAST(self);
         
         _body = world->CreateBody(&bodyDef);
-        _body->SetUserData(LH_BRIDGE_CAST(self));
+        _body->SetUserData(LH_VOID_BRIDGE_CAST(self));
 
         _body->SetFixedRotation([dict boolForKey:@"fixedRotation"]);
         _body->SetGravityScale([dict floatForKey:@"gravityScale"]);

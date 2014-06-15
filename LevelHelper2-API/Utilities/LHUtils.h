@@ -16,15 +16,17 @@
 #define LH_SAFE_RELEASE(X) if(X){ X = nil;}
 #define LH_AUTORELEASED(X) X
 #define LH_SUPER_DEALLOC() self
-#define LH_BRIDGE_CAST(X) (__bridge void*)X
+#define LH_VOID_BRIDGE_CAST(X) (__bridge void*)X
+
+#define LH_ID_BRIDGE_CAST(X) (__bridge id)X;
 
 #else
 
 #define LH_SAFE_RELEASE(X) if(X){[X release]; X = nil;}
 #define LH_AUTORELEASED(X) [X autorelease]
 #define LH_SUPER_DEALLOC() [super dealloc]
-#define LH_BRIDGE_CAST(X) X
-
+#define LH_VOID_BRIDGE_CAST(X) X
+#define LH_ID_BRIDGE_CAST(X) X;
 #endif
 
 #define LH_SAFE_DELETE(X) if(X){delete X; X = NULL;}
@@ -152,6 +154,13 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
     return(vPoint);
 }
 
+NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
+{
+    return !(r1.origin.x + r1.size.width < r2.origin.x ||
+             r1.origin.y + r1.size.height < r2.origin.y ||
+             r1.origin.x > r2.origin.x + r2.size.width ||
+             r1.origin.y > r2.origin.y + r2.size.height);
+}
 
 @class LHRopeJointNode;
 @class LHWater;
