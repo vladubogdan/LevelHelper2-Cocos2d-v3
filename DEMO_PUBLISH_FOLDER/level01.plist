@@ -47,6 +47,78 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.45934187769249052, 0.3200730848841179}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B77E54A1-2FEB-477B-8031-B1AC79EDE152</string>
+			<key>zOrder</key>
+			<integer>-3</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
 			<key>animations</key>
 			<array>
 				<dict>
@@ -1692,10 +1764,10 @@
 				<key>2048x1536</key>
 				<string>{0.14583333333333334, 0.8454332151075773}</string>
 				<key>960x640</key>
-				<string>{0.84400135800242426, 0.46350295245647433}</string>
+				<string>{0.85464739228288333, 0.17051286399364471}</string>
 			</dict>
 			<key>generalPosition</key>
-			<string>{0.84400135800242426, 0.46350295245647433}</string>
+			<string>{0.85464739228288333, 0.17051286399364471}</string>
 			<key>name</key>
 			<string>Officer</string>
 			<key>nodePhysics</key>
@@ -1883,7 +1955,7 @@
 				<key>shape</key>
 				<integer>4</integer>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>0</integer>
 			</dict>
 			<key>nodeType</key>
 			<string>LHNode</string>
@@ -1894,7 +1966,7 @@
 			<key>rotation</key>
 			<real>352.94927978515625</real>
 			<key>scale</key>
-			<string>{0.98953640460968018, 1.3891732692718506}</string>
+			<string>{0.98953640460968018, 0.48917326331138611}</string>
 			<key>size</key>
 			<string>{194.71827697753906, 315.79171752929688}</string>
 			<key>tags</key>
@@ -2527,87 +2599,13 @@
 		</dict>
 		<dict>
 			<key>alpha</key>
-			<real>102.79385375976562</real>
-			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
-			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
-			<key>generalPosition</key>
-			<string>{0.1483543833096822, 0.17805365920066835}</string>
-			<key>imageFileName</key>
-			<string>officer.png</string>
-			<key>name</key>
-			<string>hat</string>
-			<key>nodePhysics</key>
-			<dict>
-				<key>allowSleep</key>
-				<true/>
-				<key>bullet</key>
-				<false/>
-				<key>fixedRotation</key>
-				<false/>
-				<key>fixtureUUID</key>
-				<string>A011A500-D080-4A78-A7CC-9AB7ADF3F0F3</string>
-				<key>genericFixture</key>
-				<dict>
-					<key>category</key>
-					<integer>1</integer>
-					<key>density</key>
-					<real>0.10000000149011612</real>
-					<key>fixtureID</key>
-					<integer>0</integer>
-					<key>friction</key>
-					<real>0.20000000298023224</real>
-					<key>mask</key>
-					<integer>65535</integer>
-					<key>name</key>
-					<string>GenericFixture</string>
-					<key>restitution</key>
-					<real>0.0</real>
-					<key>sensor</key>
-					<false/>
-				</dict>
-				<key>gravityScale</key>
-				<real>1</real>
-				<key>shape</key>
-				<integer>5</integer>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>nodeType</key>
-			<string>LHSprite</string>
-			<key>parentUUID</key>
-			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
-			<key>relativeImagePath</key>
-			<string>DEMO_PUBLISH_FOLDER/</string>
-			<key>rotation</key>
-			<real>312.03518676757812</real>
-			<key>scale</key>
-			<string>{1, 1}</string>
-			<key>size</key>
-			<string>{100, 58}</string>
-			<key>spriteName</key>
-			<string>hat.png</string>
-			<key>spriteUUID</key>
-			<string>30CFF8A4-718A-4D6E-BEB9-0BE9C0B77DC6</string>
-			<key>tags</key>
-			<array>
-				<string>DEFAULT</string>
-			</array>
-			<key>uuid</key>
-			<string>1C1FCB25-914C-4D0A-9032-8396545628D5</string>
-			<key>zOrder</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.61828988006520169, 0.67932647196736151}</string>
+			<string>{0.65288949271845709, 0.89089539377178961}</string>
 			<key>imageFileName</key>
 			<string>ropeAssets.png</string>
 			<key>name</key>
@@ -2679,7 +2677,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.5187987104429429, 0.8258098605043076}</string>
+			<string>{0.50549116684731099, 0.84177891192499621}</string>
 			<key>imageFileName</key>
 			<string>ropeAssets.png</string>
 			<key>name</key>
@@ -2751,7 +2749,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.35215908244410055, 0.81900908754069823}</string>
+			<string>{0.34058852349876262, 0.81501682468552605}</string>
 			<key>imageFileName</key>
 			<string>ropeAssets.png</string>
 			<key>name</key>
@@ -2823,11 +2821,11 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.2454966684118407, 0.67139223886353849}</string>
+			<string>{0.14476835057139398, 0.17805365920066835}</string>
 			<key>imageFileName</key>
-			<string>ropeAssets.png</string>
+			<string>officer.png</string>
 			<key>name</key>
-			<string>thumb_tack_2</string>
+			<string>hat</string>
 			<key>nodePhysics</key>
 			<dict>
 				<key>allowSleep</key>
@@ -2836,6 +2834,8 @@
 				<false/>
 				<key>fixedRotation</key>
 				<false/>
+				<key>fixtureUUID</key>
+				<string>BCE3F94B-8683-4288-AD11-AC4CF7D56BA2</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -2858,9 +2858,9 @@
 				<key>gravityScale</key>
 				<real>1</real>
 				<key>shape</key>
-				<integer>1</integer>
+				<integer>5</integer>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>2</integer>
 			</dict>
 			<key>nodeType</key>
 			<string>LHSprite</string>
@@ -2869,23 +2869,23 @@
 			<key>relativeImagePath</key>
 			<string>DEMO_PUBLISH_FOLDER/</string>
 			<key>rotation</key>
-			<real>0.0</real>
+			<real>312.03518676757812</real>
 			<key>scale</key>
-			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<string>{1, 1}</string>
 			<key>size</key>
-			<string>{62, 72}</string>
+			<string>{100, 58}</string>
 			<key>spriteName</key>
-			<string>thumb_tack</string>
+			<string>hat.png</string>
 			<key>spriteUUID</key>
-			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<string>30CFF8A4-718A-4D6E-BEB9-0BE9C0B77DC6</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>B77E54A1-2FEB-477B-8031-B1AC79EDE152</string>
+			<string>1C1FCB25-914C-4D0A-9032-8396545628D5</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>6</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -2950,7 +2950,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>A011A500-D080-4A78-A7CC-9AB7ADF3F0F3</key>
+		<key>BCE3F94B-8683-4288-AD11-AC4CF7D56BA2</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>

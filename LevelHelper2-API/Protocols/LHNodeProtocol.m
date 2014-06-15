@@ -122,15 +122,12 @@
 
 -(CCNode*)childNodeWithName:(NSString*)name
 {
-    NSLog(@"NODE %@",_node);
     if([[_node name] isEqualToString:name]){
         return _node;
     }
     
     for(CCNode<LHNodeProtocol>* node in [_node children])
     {
-        NSLog(@"CHILD %@", node);
-        
         if([node respondsToSelector:@selector(childNodeWithName:)])
         {
             if([[node name] isEqualToString:name]){

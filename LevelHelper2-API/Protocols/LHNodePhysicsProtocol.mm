@@ -27,7 +27,7 @@
 {
 #if LH_USE_BOX2D
     b2Body* _body;
-    NSDictionary* _bodyInfo;//used when scale is changed - we recreate the body
+    CGPoint previousScale;
 #endif
     __weak CCNode* _node;
 }
@@ -35,7 +35,7 @@
 -(void)dealloc{
     _node = nil;
 #if LH_USE_BOX2D
-    LH_SAFE_RELEASE(_bodyInfo);
+    //XXXX we need to delete the body
 #endif
     
     LH_SUPER_DEALLOC();
@@ -61,9 +61,6 @@
         if(!dict){
             return self;
         }
-        
-        _bodyInfo = [[NSDictionary alloc] initWithDictionary:dict];
-        
         
         int shapeType = [dict intForKey:@"shape"];
         int type = [dict intForKey:@"type"];
@@ -98,6 +95,7 @@
         float scaleX = [_node scaleX];
         float scaleY = [_node scaleY];
 
+        previousScale = CGPointMake(scaleX, scaleY);
         
         sizet.width *= scaleX;
         sizet.height*= scaleY;
@@ -448,7 +446,97 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     }
 }
 
+-(CGPoint)position
+{
+	if(_body){
+        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
+		return [_node convertPositionFromPoints:pt type:[_node positionType]];
+	}
+	return CGPointZero;
+}
+-(float)rotation{
+    if([self body]){
+        return CC_RADIANS_TO_DEGREES([self body]->GetAngle());
+    }
+    return 0.0f;
+}
+
 -(void)updateScale{
+    
+    if(_body){
+        
+        //this will update the transform
+        [_node position];
+        [_node rotation];
+
+        float scaleX = [_node scaleX];
+        float scaleY = [_node scaleY];
+        
+        b2Fixture* fix = _body->GetFixtureList();
+        while (fix) {
+
+            b2Shape* shape = fix->GetShape();
+            
+            if(shape->GetType() == b2Shape::e_polygon)
+            {
+                b2PolygonShape* polShape = (b2PolygonShape*)shape;
+                int32 count = polShape->GetVertexCount();
+                
+                b2Vec2* newVertices = new b2Vec2[count];
+                
+                for(int i = 0; i < count; ++i)
+                {
+                    b2Vec2 pt = polShape->GetVertex(i);
+                    
+                    b2Vec2 newPt = b2Vec2(pt.x/previousScale.x*scaleX, pt.y/previousScale.y*scaleY);
+                    newVertices[i] = newPt;
+                }
+
+                polShape->Set(newVertices, count);
+                
+                delete[] newVertices;
+            }
+            
+            if(shape->GetType() == b2Shape::e_circle)
+            {
+                b2CircleShape* circleShape = (b2CircleShape*)shape;
+                float radius = circleShape->m_radius;
+                
+                float newRadius = radius/previousScale.x*scaleX;
+                circleShape->m_radius = newRadius;
+            }
+            
+            
+            if(shape->GetType() == b2Shape::e_edge)
+            {
+                b2EdgeShape* edgeShape = (b2EdgeShape*)shape;
+                #pragma unused (edgeShape)
+                NSLog(@"EDGE SHAPE");
+            }
+
+            if(shape->GetType() == b2Shape::e_chain)
+            {
+                b2ChainShape* chainShape = (b2ChainShape*)shape;
+                
+                b2Vec2* vertices = chainShape->m_vertices;
+                int32 count = chainShape->m_count;
+
+                for(int i = 0; i < count; ++i)
+                {
+                    b2Vec2 pt = vertices[i];
+                    b2Vec2 newPt = b2Vec2(pt.x/previousScale.x*scaleX, pt.y/previousScale.y*scaleY);
+                    vertices[i] = newPt;
+                }
+            }
+
+            
+            fix = fix->GetNext();
+        }
+        
+        previousScale = CGPointMake(scaleX, scaleY);
+        
+        
+    }
     
 }
 

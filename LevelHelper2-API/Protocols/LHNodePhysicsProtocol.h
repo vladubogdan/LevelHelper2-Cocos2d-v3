@@ -32,6 +32,9 @@ class b2Body;
 -(CGAffineTransform)nodeTransform;
 -(CGAffineTransform)absoluteTransform;
 -(void)updateTransform;
+-(CGPoint)position;
+-(float)rotation;
+
 -(void)updateScale;
 #endif
 #endif //LH_USE_BOX2D
@@ -40,7 +43,7 @@ class b2Body;
 @end
 
 #define LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
-- (CGAffineTransform)nodeToParentTransform \
+- (CGAffineTransform)nodeToParentTransform\
 {\
     if([_physicsProtocolImp body])\
         _transform = [_physicsProtocolImp nodeTransform];\
@@ -54,10 +57,40 @@ class b2Body;
         [_physicsProtocolImp updateTransform];\
     }\
 }\
+-(CGPoint)position{\
+    if([_physicsProtocolImp body]){\
+        return [_physicsProtocolImp position];\
+    }\
+    return [super position];\
+}\
 -(void)setRotation:(float)rotation\
 {\
     [super setRotation:rotation];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
+    }\
+}\
+-(float)rotation{\
+    if([_physicsProtocolImp body]){\
+        return [_physicsProtocolImp rotation];\
+    }\
+    return [super rotation];\
+}\
+-(void)setScale:(float)scale{\
+    [super setScale:scale];\
+    if([_physicsProtocolImp body]){\
+        [_physicsProtocolImp updateScale];\
+    }\
+}\
+-(void)setScaleX:(float)scaleX{\
+    [super setScaleX:scaleX];\
+    if([_physicsProtocolImp body]){\
+        [_physicsProtocolImp updateScale];\
+    }\
+}\
+-(void)setScaleY:(float)scaleY{\
+    [super setScaleY:scaleY];\
+    if([_physicsProtocolImp body]){\
+        [_physicsProtocolImp updateScale];\
     }\
 }
