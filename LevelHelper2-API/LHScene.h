@@ -59,11 +59,6 @@
 #ifdef __cplusplus
 -(b2World*)box2dWorld;
 
-
-//subclass the following methods if you want special Box2d handling
--(void)step:(float)dt;
--(void)afterStep:(float)dt;
-
 -(float)ptm;
 
 -(b2Vec2)metersFromPoint:(CGPoint)point;

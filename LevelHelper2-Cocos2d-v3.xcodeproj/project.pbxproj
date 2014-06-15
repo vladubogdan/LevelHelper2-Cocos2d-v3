@@ -38,7 +38,7 @@
 		6E0D55E5194C32A30036E940 /* CCDirectorMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221231924BD87005E8532 /* CCDirectorMac.m */; };
 		6E0D55E6194C32A30036E940 /* ccDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1220571924BD86005E8532 /* ccDeprecated.m */; };
 		6E0D55E7194C32A30036E940 /* ALContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221861924BD87005E8532 /* ALContext.m */; };
-		6E0D55E8194C32A30036E940 /* LHBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF1192E23100040478F /* LHBezier.m */; };
+		6E0D55E8194C32A30036E940 /* LHBezier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF1192E23100040478F /* LHBezier.mm */; };
 		6E0D55E9194C32A30036E940 /* LHChildrenScalesProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDDA192E23100040478F /* LHChildrenScalesProperty.m */; };
 		6E0D55EA194C32A30036E940 /* CCDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1220621924BD86005E8532 /* CCDrawNode.m */; };
 		6E0D55EB194C32A30036E940 /* NSDictionary+LHDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDE9192E23100040478F /* NSDictionary+LHDictionary.m */; };
@@ -143,7 +143,7 @@
 		6E0D564E194C32A30036E940 /* CCParallaxNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1220901924BD86005E8532 /* CCParallaxNode.m */; };
 		6E0D564F194C32A30036E940 /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221F81924BD87005E8532 /* ray2.c */; };
 		6E0D5650194C32A30036E940 /* OALAudioTracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221741924BD87005E8532 /* OALAudioTracks.m */; };
-		6E0D5651194C32A30036E940 /* LHShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE03192E23100040478F /* LHShape.m */; };
+		6E0D5651194C32A30036E940 /* LHShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE03192E23100040478F /* LHShape.mm */; };
 		6E0D5652194C32A30036E940 /* OALAudioTrackNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221711924BD87005E8532 /* OALAudioTrackNotifications.m */; };
 		6E0D5653194C32A30036E940 /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E1221F61924BD87005E8532 /* quaternion.c */; };
 		6E0D5654194C32A30036E940 /* CCPhysicsNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1220AA1924BD86005E8532 /* CCPhysicsNode.m */; };
@@ -220,8 +220,6 @@
 		6E0D569E194C32A30036E940 /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 6E1221E71924BD87005E8532 /* ChangeLog */; };
 		6E0D569F194C32A30036E940 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220261924BD85005E8532 /* iTunesArtwork@2x */; };
 		6E0D573E194C339B0036E940 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FFA1924BD85005E8532 /* libObjectiveChipmunk.a */; };
-		6E0D57E3194C97D70036E940 /* LHBox2dDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D57E1194C97D70036E940 /* LHBox2dDebug.mm */; };
-		6E0D57E4194C97D70036E940 /* LHBox2dDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D57E1194C97D70036E940 /* LHBox2dDebug.mm */; };
 		6E0D58DE194CD6A40036E940 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */; };
 		6E0D58DF194CD6A40036E940 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D587C194CD6A30036E940 /* CMakeLists.txt */; };
 		6E0D58E0194CD6A40036E940 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D587E194CD6A30036E940 /* b2BroadPhase.cpp */; };
@@ -269,6 +267,10 @@
 		6E0D590A194CD6A40036E940 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D58D7194CD6A40036E940 /* b2WeldJoint.cpp */; };
 		6E0D590B194CD6A40036E940 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D58D9194CD6A40036E940 /* b2WheelJoint.cpp */; };
 		6E0D590C194CD6A40036E940 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D58DC194CD6A40036E940 /* b2Rope.cpp */; };
+		6E0D5913194D72F00036E940 /* LHBodyScaleTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5912194D72F00036E940 /* LHBodyScaleTestScene.m */; };
+		6E0D5914194D72F00036E940 /* LHBodyScaleTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5912194D72F00036E940 /* LHBodyScaleTestScene.m */; };
+		6E0D5917194D76130036E940 /* LHPhysicsNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5916194D76130036E940 /* LHPhysicsNode.mm */; };
+		6E0D5918194D76130036E940 /* LHPhysicsNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5916194D76130036E940 /* LHPhysicsNode.mm */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -494,7 +496,7 @@
 		6E89FE21192E23100040478F /* NSDictionary+LHDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDE9192E23100040478F /* NSDictionary+LHDictionary.m */; };
 		6E89FE22192E23100040478F /* LHScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDEC192E23100040478F /* LHScene.mm */; };
 		6E89FE23192E23100040478F /* LHAsset.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDEF192E23100040478F /* LHAsset.mm */; };
-		6E89FE24192E23100040478F /* LHBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF1192E23100040478F /* LHBezier.m */; };
+		6E89FE24192E23100040478F /* LHBezier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF1192E23100040478F /* LHBezier.mm */; };
 		6E89FE25192E23100040478F /* LHCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF3192E23100040478F /* LHCamera.m */; };
 		6E89FE26192E23100040478F /* LHDistanceJointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF5192E23100040478F /* LHDistanceJointNode.m */; };
 		6E89FE27192E23100040478F /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDF7192E23100040478F /* LHDrawNode.m */; };
@@ -503,7 +505,7 @@
 		6E89FE2A192E23100040478F /* LHParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDFD192E23100040478F /* LHParallax.m */; };
 		6E89FE2B192E23100040478F /* LHParallaxLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDFF192E23100040478F /* LHParallaxLayer.m */; };
 		6E89FE2C192E23100040478F /* LHRopeJointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE01192E23100040478F /* LHRopeJointNode.m */; };
-		6E89FE2D192E23100040478F /* LHShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE03192E23100040478F /* LHShape.m */; };
+		6E89FE2D192E23100040478F /* LHShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE03192E23100040478F /* LHShape.mm */; };
 		6E89FE2E192E23100040478F /* LHSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE05192E23100040478F /* LHSprite.mm */; };
 		6E89FE2F192E23100040478F /* LHWater.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE07192E23100040478F /* LHWater.m */; };
 		6E89FE30192E23100040478F /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE0E192E23100040478F /* LHUtils.m */; };
@@ -536,8 +538,6 @@
 		6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0D56A4194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LevelHelper2-Cocos2d-v3+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/LevelHelper2-Cocos2d-v3+Box2D.plist"; sourceTree = "<absolute>"; };
 		6E0D57D8194C355C0036E940 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
-		6E0D57E1194C97D70036E940 /* LHBox2dDebug.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBox2dDebug.mm; sourceTree = "<group>"; };
-		6E0D57E2194C97D70036E940 /* LHBox2dDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBox2dDebug.h; sourceTree = "<group>"; };
 		6E0D587A194CD6A30036E940 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
 		6E0D587C194CD6A30036E940 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -631,6 +631,10 @@
 		6E0D58DA194CD6A40036E940 /* b2WheelJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WheelJoint.h; sourceTree = "<group>"; };
 		6E0D58DC194CD6A40036E940 /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		6E0D58DD194CD6A40036E940 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
+		6E0D5911194D72F00036E940 /* LHBodyScaleTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHBodyScaleTestScene.h; path = Classes/LHBodyScaleTestScene.h; sourceTree = "<group>"; };
+		6E0D5912194D72F00036E940 /* LHBodyScaleTestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHBodyScaleTestScene.m; path = Classes/LHBodyScaleTestScene.m; sourceTree = "<group>"; };
+		6E0D5915194D76130036E940 /* LHPhysicsNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPhysicsNode.h; sourceTree = "<group>"; };
+		6E0D5916194D76130036E940 /* LHPhysicsNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHPhysicsNode.mm; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1100,7 +1104,7 @@
 		6E89FDEE192E23100040478F /* LHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHAsset.h; sourceTree = "<group>"; };
 		6E89FDEF192E23100040478F /* LHAsset.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHAsset.mm; sourceTree = "<group>"; };
 		6E89FDF0192E23100040478F /* LHBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBezier.h; sourceTree = "<group>"; };
-		6E89FDF1192E23100040478F /* LHBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBezier.m; sourceTree = "<group>"; };
+		6E89FDF1192E23100040478F /* LHBezier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBezier.mm; sourceTree = "<group>"; };
 		6E89FDF2192E23100040478F /* LHCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHCamera.h; sourceTree = "<group>"; };
 		6E89FDF3192E23100040478F /* LHCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHCamera.m; sourceTree = "<group>"; };
 		6E89FDF4192E23100040478F /* LHDistanceJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDistanceJointNode.h; sourceTree = "<group>"; };
@@ -1118,7 +1122,7 @@
 		6E89FE00192E23100040478F /* LHRopeJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRopeJointNode.h; sourceTree = "<group>"; };
 		6E89FE01192E23100040478F /* LHRopeJointNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHRopeJointNode.m; sourceTree = "<group>"; };
 		6E89FE02192E23100040478F /* LHShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHShape.h; sourceTree = "<group>"; };
-		6E89FE03192E23100040478F /* LHShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHShape.m; sourceTree = "<group>"; };
+		6E89FE03192E23100040478F /* LHShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHShape.mm; sourceTree = "<group>"; };
 		6E89FE04192E23100040478F /* LHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSprite.h; sourceTree = "<group>"; };
 		6E89FE05192E23100040478F /* LHSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSprite.mm; sourceTree = "<group>"; };
 		6E89FE06192E23100040478F /* LHWater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWater.h; sourceTree = "<group>"; };
@@ -2200,6 +2204,8 @@
 			children = (
 				6E89FE31192E261E0040478F /* LHSceneSubclass.h */,
 				6E89FE32192E261E0040478F /* LHSceneSubclass.m */,
+				6E0D5911194D72F00036E940 /* LHBodyScaleTestScene.h */,
+				6E0D5912194D72F00036E940 /* LHBodyScaleTestScene.m */,
 				6E12228E1924BD88005E8532 /* AppDelegate.h */,
 				6E12228F1924BD88005E8532 /* AppDelegate.m */,
 			);
@@ -2296,7 +2302,7 @@
 				6E89FDEE192E23100040478F /* LHAsset.h */,
 				6E89FDEF192E23100040478F /* LHAsset.mm */,
 				6E89FDF0192E23100040478F /* LHBezier.h */,
-				6E89FDF1192E23100040478F /* LHBezier.m */,
+				6E89FDF1192E23100040478F /* LHBezier.mm */,
 				6E89FDF2192E23100040478F /* LHCamera.h */,
 				6E89FDF3192E23100040478F /* LHCamera.m */,
 				6E89FDF4192E23100040478F /* LHDistanceJointNode.h */,
@@ -2314,7 +2320,7 @@
 				6E89FE00192E23100040478F /* LHRopeJointNode.h */,
 				6E89FE01192E23100040478F /* LHRopeJointNode.m */,
 				6E89FE02192E23100040478F /* LHShape.h */,
-				6E89FE03192E23100040478F /* LHShape.m */,
+				6E89FE03192E23100040478F /* LHShape.mm */,
 				6E89FE04192E23100040478F /* LHSprite.h */,
 				6E89FE05192E23100040478F /* LHSprite.mm */,
 				6E89FE06192E23100040478F /* LHWater.h */,
@@ -2342,8 +2348,8 @@
 			children = (
 				6E89FE0D192E23100040478F /* LHUtils.h */,
 				6E89FE0E192E23100040478F /* LHUtils.m */,
-				6E0D57E1194C97D70036E940 /* LHBox2dDebug.mm */,
-				6E0D57E2194C97D70036E940 /* LHBox2dDebug.h */,
+				6E0D5915194D76130036E940 /* LHPhysicsNode.h */,
+				6E0D5916194D76130036E940 /* LHPhysicsNode.mm */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2543,7 +2549,7 @@
 				6E0D55E5194C32A30036E940 /* CCDirectorMac.m in Sources */,
 				6E0D55E6194C32A30036E940 /* ccDeprecated.m in Sources */,
 				6E0D55E7194C32A30036E940 /* ALContext.m in Sources */,
-				6E0D55E8194C32A30036E940 /* LHBezier.m in Sources */,
+				6E0D55E8194C32A30036E940 /* LHBezier.mm in Sources */,
 				6E0D55E9194C32A30036E940 /* LHChildrenScalesProperty.m in Sources */,
 				6E0D55EA194C32A30036E940 /* CCDrawNode.m in Sources */,
 				6E0D55EB194C32A30036E940 /* NSDictionary+LHDictionary.m in Sources */,
@@ -2573,6 +2579,7 @@
 				6E0D55FB194C32A30036E940 /* CCTexturePVR.m in Sources */,
 				6E0D55FC194C32A30036E940 /* CCBAnimationManager.m in Sources */,
 				6E0D55FD194C32A30036E940 /* LHDistanceJointNode.m in Sources */,
+				6E0D5918194D76130036E940 /* LHPhysicsNode.mm in Sources */,
 				6E0D58F2194CD6A40036E940 /* b2Body.cpp in Sources */,
 				6E0D55FE194C32A30036E940 /* LHNode.mm in Sources */,
 				6E0D55FF194C32A30036E940 /* LHScaleFrame.m in Sources */,
@@ -2608,6 +2615,7 @@
 				6E0D5618194C32A30036E940 /* CCSprite.m in Sources */,
 				6E0D5619194C32A30036E940 /* CCActionInterval.m in Sources */,
 				6E0D561A194C32A30036E940 /* LHOpacityFrame.m in Sources */,
+				6E0D5914194D72F00036E940 /* LHBodyScaleTestScene.m in Sources */,
 				6E0D561B194C32A30036E940 /* CCPhysicsJoint.m in Sources */,
 				6E0D561C194C32A30036E940 /* CCMotionStreak.m in Sources */,
 				6E0D561D194C32A30036E940 /* LHNodePhysicsProtocol.mm in Sources */,
@@ -2672,7 +2680,7 @@
 				6E0D564E194C32A30036E940 /* CCParallaxNode.m in Sources */,
 				6E0D564F194C32A30036E940 /* ray2.c in Sources */,
 				6E0D5650194C32A30036E940 /* OALAudioTracks.m in Sources */,
-				6E0D5651194C32A30036E940 /* LHShape.m in Sources */,
+				6E0D5651194C32A30036E940 /* LHShape.mm in Sources */,
 				6E0D58EF194CD6A40036E940 /* b2Settings.cpp in Sources */,
 				6E0D5652194C32A30036E940 /* OALAudioTrackNotifications.m in Sources */,
 				6E0D5653194C32A30036E940 /* quaternion.c in Sources */,
@@ -2699,7 +2707,6 @@
 				6E0D58F7194CD6A40036E940 /* b2WorldCallbacks.cpp in Sources */,
 				6E0D5665194C32A30036E940 /* LHOpacityProperty.m in Sources */,
 				6E0D5666194C32A30036E940 /* TGAlib.m in Sources */,
-				6E0D57E4194C97D70036E940 /* LHBox2dDebug.mm in Sources */,
 				6E0D5667194C32A30036E940 /* UITouch+CC.m in Sources */,
 				6E0D5668194C32A30036E940 /* utility.c in Sources */,
 				6E0D5669194C32A30036E940 /* ZipUtils.m in Sources */,
@@ -2761,7 +2768,7 @@
 				6E1221241924BD87005E8532 /* CCDirectorMac.m in Sources */,
 				6E1220581924BD86005E8532 /* ccDeprecated.m in Sources */,
 				6E1221871924BD87005E8532 /* ALContext.m in Sources */,
-				6E89FE24192E23100040478F /* LHBezier.m in Sources */,
+				6E89FE24192E23100040478F /* LHBezier.mm in Sources */,
 				6E89FE1A192E23100040478F /* LHChildrenScalesProperty.m in Sources */,
 				6E1220631924BD86005E8532 /* CCDrawNode.m in Sources */,
 				6E89FE21192E23100040478F /* NSDictionary+LHDictionary.m in Sources */,
@@ -2802,6 +2809,7 @@
 				6E1221C01924BD87005E8532 /* CCControl.m in Sources */,
 				6E1221421924BD87005E8532 /* CCVertex.m in Sources */,
 				6E12217E1924BD87005E8532 /* ALBuffer.m in Sources */,
+				6E0D5917194D76130036E940 /* LHPhysicsNode.mm in Sources */,
 				6E12214B1924BD87005E8532 /* NSThread+performBlock.m in Sources */,
 				6E89FE33192E261E0040478F /* LHSceneSubclass.m in Sources */,
 				6E1220D61924BD86005E8532 /* CCShaderCache.m in Sources */,
@@ -2829,7 +2837,6 @@
 				6E12228C1924BD88005E8532 /* main.m in Sources */,
 				6E12219F1924BD87005E8532 /* OALAudioSession.m in Sources */,
 				6E1222161924BD88005E8532 /* CCBLocalizationManager.m in Sources */,
-				6E0D57E3194C97D70036E940 /* LHBox2dDebug.mm in Sources */,
 				6E1221021924BD86005E8532 /* CCTiledMapObjectGroup.m in Sources */,
 				6E1221FF1924BD87005E8532 /* vec3.c in Sources */,
 				6E1220821924BD86005E8532 /* CCLayoutBox.m in Sources */,
@@ -2867,7 +2874,7 @@
 				6E1220911924BD86005E8532 /* CCParallaxNode.m in Sources */,
 				6E1221F91924BD87005E8532 /* ray2.c in Sources */,
 				6E1221751924BD87005E8532 /* OALAudioTracks.m in Sources */,
-				6E89FE2D192E23100040478F /* LHShape.m in Sources */,
+				6E89FE2D192E23100040478F /* LHShape.mm in Sources */,
 				6E1221721924BD87005E8532 /* OALAudioTrackNotifications.m in Sources */,
 				6E1221F71924BD87005E8532 /* quaternion.c in Sources */,
 				6E1220AB1924BD86005E8532 /* CCPhysicsNode.m in Sources */,
@@ -2902,6 +2909,7 @@
 				6E1221941924BD87005E8532 /* ALSource.m in Sources */,
 				6E12209C1924BD86005E8532 /* CCParticleSystem.m in Sources */,
 				6E1220C11924BD86005E8532 /* CCScene.m in Sources */,
+				6E0D5913194D72F00036E940 /* LHBodyScaleTestScene.m in Sources */,
 				6E1220EF1924BD86005E8532 /* CCTexture.m in Sources */,
 				6E89FE23192E23100040478F /* LHAsset.mm in Sources */,
 				6E1221811924BD87005E8532 /* ALCaptureDevice.m in Sources */,

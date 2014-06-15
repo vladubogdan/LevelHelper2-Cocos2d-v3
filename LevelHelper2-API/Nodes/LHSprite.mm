@@ -105,10 +105,6 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
-        
         
         CGPoint anchor = [dict pointForKey:@"anchor"];
         anchor.y = 1.0f - anchor.y;
@@ -159,32 +155,51 @@
     [super visit];
 }
 
+#pragma mark - Box2D Support
 
 #if LH_USE_BOX2D
-- (CGAffineTransform)nodeToParentTransform
-{
-    if([_physicsProtocolImp body])
-        _transform = [_physicsProtocolImp nodeTransform];
-    
-    return [super nodeToParentTransform];
-}
--(void)setPosition:(CGPoint)position{
-    
-    [super setPosition:position];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
--(void)setRotation:(float)rotation
-{
-    [super setRotation:rotation];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
-
-
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 #endif //LH_USE_BOX2D
+
+//- (CGAffineTransform)nodeToParentTransform
+//{
+//    if([_physicsProtocolImp body])
+//        _transform = [_physicsProtocolImp nodeTransform];
+//    
+//    return [super nodeToParentTransform];
+//}
+//-(void)setPosition:(CGPoint)position
+//{
+//    [super setPosition:position];
+//    if([_physicsProtocolImp body]){
+//        [_physicsProtocolImp updateTransform];
+//    }
+//}
+//-(void)setRotation:(float)rotation
+//{
+//    [super setRotation:rotation];
+//    if([_physicsProtocolImp body]){
+//        [_physicsProtocolImp updateTransform];
+//    }
+//}
+//-(void)setScale:(float)scale{
+//    [super setScale:scale];
+//    if([_physicsProtocolImp body]){
+//        [_physicsProtocolImp updateScale];
+//    }
+//}
+//-(void)setScaleX:(float)scaleX{
+//    [super setScaleX:scaleX];
+//    if([_physicsProtocolImp body]){
+//        [_physicsProtocolImp updateScale];
+//    }
+//}
+//-(void)setScaleY:(float)scaleY{
+//    [super setScaleY:scaleY];
+//    if([_physicsProtocolImp body]){
+//        [_physicsProtocolImp updateScale];
+//    }
+//}
 
 
 #pragma mark - LHNodeProtocol Required

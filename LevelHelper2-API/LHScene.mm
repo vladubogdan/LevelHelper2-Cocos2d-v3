@@ -25,11 +25,12 @@
 #import "LHDistanceJointNode.h"
 //#import "LHPrismaticJointNode.h"
 
-#import "LHBox2dDebug.h"
+#import "LHPhysicsNode.h"
 
 @implementation LHScene
 {
-    CCPhysicsNode *__unsafe_unretained physicsNode;
+    LHPhysicsNode *__unsafe_unretained _physicsNode;
+    
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
@@ -59,18 +60,11 @@
     NSTimeInterval _lastTime;
     
     CGRect gameWorldRect;
-    
-
-#if LH_USE_BOX2D
-#ifdef __cplusplus
-    b2World* _box2dWorld;
-#endif
-#endif //LH_USE_BOX2D
 }
 
 
 -(void)dealloc{
-    physicsNode = nil;
+    _physicsNode = nil;
     
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
@@ -167,14 +161,13 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        CCPhysicsNode* pNode = [CCPhysicsNode node];
+        LHPhysicsNode* pNode = [LHPhysicsNode node];
         pNode.contentSize = self.contentSize;
         [pNode setDebugDraw:YES];
         [super addChild:pNode];
-        physicsNode = pNode;
-        
-        
-        
+        _physicsNode = pNode;
+
+
         if([dict boolForKey:@"useGlobalGravity"])
         {
             CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
@@ -182,12 +175,8 @@
             CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
                                           gravityVector.y*gravityForce);
 #if LH_USE_BOX2D
-            
-#ifdef __cplusplus
             [self setGlobalGravity:gravity];
-#endif  //__cplusplus
-            
-#else
+#else//chipmunk
             [self setGlobalGravity:CGPointMake(gravity.x, gravity.y*100)];
 #endif //LH_USE_BOX2D
         }
@@ -202,7 +191,7 @@
         for(NSDictionary* childInfo in childrenInfo)
         {
             CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                        parent:physicsNode];
+                                                        parent:_physicsNode];
             
             if(node){
 
@@ -292,8 +281,8 @@
     return self;
 }
 
--(CCPhysicsNode*)physicsNode{
-    return physicsNode;
+-(LHPhysicsNode*)physicsNode{
+    return _physicsNode;
 }
 
 -(void)createPhysicsBoundarySectionFrom:(CGPoint)from
@@ -356,10 +345,6 @@
     if([lateLoadingNodes count] == 0){
         LH_SAFE_RELEASE(lateLoadingNodes);
     }
-}
-
--(void)addChild:(CCNode *)node{
-    [physicsNode addChild:node];
 }
 
 //-(SKTextureAtlas*)textureAtlasWithImagePath:(NSString*)atlasPath
@@ -616,70 +601,16 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
 }
 
+
 #pragma mark - BOX2D INTEGRATION
 
 #if LH_USE_BOX2D
--(b2World*)box2dWorld
-{
-    if(!_box2dWorld){
-        
-        b2Vec2 gravity;
-        gravity.Set(0.f, 0.0f);
-        _box2dWorld = new b2World(gravity);
-        _box2dWorld->SetAllowSleeping(true);
-        _box2dWorld->SetContinuousPhysics(true);
-        
-        LHBox2dDrawNode* debugNode = [LHBox2dDrawNode node];
-        [debugNode setZOrder:9999];
-        [self addChild:debugNode];
-        
-        _box2dWorld->SetDebugDraw([debugNode box2dDebug]);
-        [debugNode box2dDebug]->setRatio([self ptm]);
-        uint32 flags = 0;
-        flags += b2Draw::e_shapeBit;
-        flags += b2Draw::e_jointBit;
-//        //        flags += b2Draw::e_aabbBit;
-//        //        flags += b2Draw::e_pairBit;
-//        //        flags += b2Draw::e_centerOfMassBit;
-        [debugNode box2dDebug]->SetFlags(flags);
-    }
-    return _box2dWorld;
+-(b2World*)box2dWorld{
+    return [_physicsNode box2dWorld];
 }
-
-const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
-const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 16;
-const int32 POSITION_ITERATIONS = 16;
-const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
-
--(void)step:(float)dt
-{
-    if(![self box2dWorld])return;
-    
-	float32 frameTime = dt;
-	int stepsPerformed = 0;
-	while ( (frameTime > 0.0) && (stepsPerformed < MAXIMUM_NUMBER_OF_STEPS) ){
-		float32 deltaTime = std::min( frameTime, FIXED_TIMESTEP );
-		frameTime -= deltaTime;
-		if (frameTime < MINIMUM_TIMESTEP) {
-			deltaTime += frameTime;
-			frameTime = 0.0f;
-		}
-		[self box2dWorld]->Step(deltaTime,VELOCITY_ITERATIONS,POSITION_ITERATIONS);
-		stepsPerformed++;
-		[self afterStep:dt]; // process collisions and result from callbacks called by the step
-	}
-	[self box2dWorld]->ClearForces ();
-}
-
--(void)afterStep:(float)dt {
-    
-}
-
 -(float)ptm{
     return 32.0f;
 }
-
 -(b2Vec2)metersFromPoint:(CGPoint)point{
     return b2Vec2(point.x/[self ptm], point.y/[self ptm]);
 }
@@ -692,48 +623,14 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 -(float)valueFromMeters:(float)meter{
     return meter*[self ptm];
 }
-
-
-
--(void)setGlobalGravity:(CGPoint)gravity
-{
-    b2Vec2 grv;
-    grv.Set(gravity.x, gravity.y);
-    [self box2dWorld]->SetGravity(grv);
-}
--(void)visit{
-    
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float delta = thisTime - _lastTime;
-    
-    [self step:delta];
-    
-    _lastTime = thisTime;
-    
-    [super visit];
-}
-#else //chipmunk
-
--(void)setGlobalGravity:(CGPoint)gravity
-{
-    [physicsNode setGravity:gravity];
-}
-
--(void)visit{
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float delta = thisTime - _lastTime;
-    
-#pragma unused (delta)
-    //do something with the delta here
-    
-    _lastTime = thisTime;
-    
-    [super visit];
-}
-
 #endif //LH_USE_BOX2D
 
+-(void)setGlobalGravity:(CGPoint)gravity{
+    [_physicsNode setGravity:gravity];
+}
+
 @end
+
 
 
 #pragma mark - PRIVATES

@@ -1692,10 +1692,10 @@
 				<key>2048x1536</key>
 				<string>{0.14583333333333334, 0.8454332151075773}</string>
 				<key>960x640</key>
-				<string>{0.54965657293796544, 0.62829574666389498}</string>
+				<string>{0.84400135800242426, 0.46350295245647433}</string>
 			</dict>
 			<key>generalPosition</key>
-			<string>{0.54965657293796544, 0.62829574666389498}</string>
+			<string>{0.84400135800242426, 0.46350295245647433}</string>
 			<key>name</key>
 			<string>Officer</string>
 			<key>nodePhysics</key>
@@ -1730,154 +1730,154 @@
 				<key>ovalShape</key>
 				<array>
 					<array>
-						<string>{18.898002621117339, 169.98309718967033}</string>
-						<string>{5.9314522066133951e-15, 173.31326293945312}</string>
-						<string>{-18.898002621117328, 169.98309718967033}</string>
+						<string>{-18.993825678986916, -154.86193411299456}</string>
+						<string>{-1.7884583597702323e-14, -157.89585876464844}</string>
+						<string>{18.993825678986877, -154.86193411299459}</string>
 					</array>
 					<array>
-						<string>{37.069765599627104, 160.12057634250766}</string>
-						<string>{18.898002621117339, 169.98309718967033}</string>
-						<string>{-18.898002621117328, 169.98309718967033}</string>
+						<string>{-18.993825678986916, -154.86193411299456}</string>
+						<string>{18.993825678986877, -154.86193411299459}</string>
+						<string>{37.257729288990468, -145.87675218095154}</string>
 					</array>
 					<array>
-						<string>{37.069765599627104, 160.12057634250766}</string>
-						<string>{-18.898002621117328, 169.98309718967033}</string>
-						<string>{-37.069765599627097, 160.12057634250766}</string>
+						<string>{-37.257729288990497, -145.87675218095151}</string>
+						<string>{-18.993825678986916, -154.86193411299456}</string>
+						<string>{37.257729288990468, -145.87675218095154}</string>
 					</array>
 					<array>
-						<string>{53.816958275107254, 144.10471154315616}</string>
-						<string>{37.069765599627104, 160.12057634250766}</string>
-						<string>{-37.069765599627097, 160.12057634250766}</string>
+						<string>{-37.257729288990497, -145.87675218095151}</string>
+						<string>{37.257729288990468, -145.87675218095154}</string>
+						<string>{54.089839256793375, -131.28560847121972}</string>
 					</array>
 					<array>
-						<string>{53.816958275107254, 144.10471154315616}</string>
-						<string>{-37.069765599627097, 160.12057634250766}</string>
-						<string>{-53.816958275107218, 144.10471154315621}</string>
+						<string>{-54.089839256793411, -131.28560847121969}</string>
+						<string>{-37.257729288990497, -145.87675218095151}</string>
+						<string>{54.089839256793375, -131.28560847121972}</string>
 					</array>
 					<array>
-						<string>{53.816958275107254, 144.10471154315616}</string>
-						<string>{-53.816958275107218, 144.10471154315621}</string>
-						<string>{-68.495995424972918, 122.55098349405446}</string>
+						<string>{-54.089839256793411, -131.28560847121969}</string>
+						<string>{54.089839256793375, -131.28560847121972}</string>
+						<string>{68.843307035889126, -111.6492324537563}</string>
 					</array>
 					<array>
-						<string>{68.495995424972932, 122.55098349405445}</string>
-						<string>{53.816958275107254, 144.10471154315616}</string>
-						<string>{-68.495995424972918, 122.55098349405446}</string>
+						<string>{-68.843307035889154, -111.64923245375627}</string>
+						<string>{-54.089839256793411, -131.28560847121969}</string>
+						<string>{68.843307035889126, -111.6492324537563}</string>
 					</array>
 					<array>
-						<string>{80.542769883653676, 96.287689876659556}</string>
-						<string>{68.495995424972932, 122.55098349405445}</string>
-						<string>{-68.495995424972918, 122.55098349405446}</string>
+						<string>{-80.951165133367027, -87.722239046705894}</string>
+						<string>{-68.843307035889154, -111.64923245375627}</string>
+						<string>{68.843307035889126, -111.6492324537563}</string>
 					</array>
 					<array>
-						<string>{80.542769883653676, 96.287689876659556}</string>
-						<string>{-68.495995424972918, 122.55098349405446}</string>
-						<string>{-80.54276988365369, 96.287689876659556}</string>
+						<string>{-80.951165133367027, -87.722239046705894}</string>
+						<string>{68.843307035889126, -111.6492324537563}</string>
+						<string>{80.951165133367013, -87.722239046705923}</string>
 					</array>
 					<array>
-						<string>{80.542769883653676, 96.287689876659556}</string>
-						<string>{-80.54276988365369, 96.287689876659556}</string>
-						<string>{-89.494330864611356, 66.324114336063246}</string>
+						<string>{-89.948115352706012, -60.424129188289093}</string>
+						<string>{-80.951165133367027, -87.722239046705894}</string>
+						<string>{80.951165133367013, -87.722239046705923}</string>
 					</array>
 					<array>
-						<string>{89.494330864611356, 66.324114336063232}</string>
-						<string>{80.542769883653676, 96.287689876659556}</string>
-						<string>{-89.494330864611356, 66.324114336063246}</string>
+						<string>{-89.948115352706012, -60.424129188289093}</string>
+						<string>{80.951165133367013, -87.722239046705923}</string>
+						<string>{89.948115352705997, -60.424129188289207}</string>
 					</array>
 					<array>
-						<string>{95.006674899440966, 33.811740276523814}</string>
-						<string>{89.494330864611356, 66.324114336063232}</string>
-						<string>{-89.494330864611356, 66.324114336063246}</string>
+						<string>{-89.948115352706012, -60.424129188289093}</string>
+						<string>{89.948115352705997, -60.424129188289207}</string>
+						<string>{95.488409942524754, -30.803953931408444}</string>
 					</array>
 					<array>
-						<string>{95.006674899440966, 33.811740276523814}</string>
-						<string>{-89.494330864611356, 66.324114336063246}</string>
-						<string>{-95.006674899440966, 33.811740276523871}</string>
+						<string>{-95.488409942524768, -30.803953931408387}</string>
+						<string>{-89.948115352706012, -60.424129188289093}</string>
+						<string>{95.488409942524754, -30.803953931408444}</string>
 					</array>
 					<array>
-						<string>{95.006674899440966, 33.811740276523814}</string>
-						<string>{-95.006674899440966, 33.811740276523871}</string>
-						<string>{-96.867965698242188, 2.1224753270858487e-14}</string>
+						<string>{-95.488409942524768, -30.803953931408387}</string>
+						<string>{95.488409942524754, -30.803953931408444}</string>
+						<string>{97.359138488769531, 0}</string>
 					</array>
 					<array>
-						<string>{96.867965698242188, 0}</string>
-						<string>{95.006674899440966, 33.811740276523814}</string>
-						<string>{-96.867965698242188, 2.1224753270858487e-14}</string>
+						<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
+						<string>{-95.488409942524768, -30.803953931408387}</string>
+						<string>{97.359138488769531, 0}</string>
 					</array>
 					<array>
-						<string>{96.867965698242188, 0}</string>
-						<string>{-96.867965698242188, 2.1224753270858487e-14}</string>
-						<string>{-95.006674899440966, -33.811740276523835}</string>
+						<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
+						<string>{97.359138488769531, 0}</string>
+						<string>{95.488409942524768, 30.803953931408369}</string>
 					</array>
 					<array>
-						<string>{95.006674899440966, -33.811740276523899}</string>
-						<string>{96.867965698242188, 0}</string>
-						<string>{-95.006674899440966, -33.811740276523835}</string>
+						<string>{-95.488409942524768, 30.803953931408422}</string>
+						<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
+						<string>{95.488409942524768, 30.803953931408369}</string>
 					</array>
 					<array>
-						<string>{95.006674899440966, -33.811740276523899}</string>
-						<string>{-95.006674899440966, -33.811740276523835}</string>
-						<string>{-89.494330864611356, -66.324114336063218}</string>
+						<string>{-95.488409942524768, 30.803953931408422}</string>
+						<string>{95.488409942524768, 30.803953931408369}</string>
+						<string>{89.948115352706012, 60.424129188289108}</string>
 					</array>
 					<array>
-						<string>{89.494330864611328, -66.324114336063332}</string>
-						<string>{95.006674899440966, -33.811740276523899}</string>
-						<string>{-89.494330864611356, -66.324114336063218}</string>
+						<string>{-89.948115352706012, 60.424129188289115}</string>
+						<string>{-95.488409942524768, 30.803953931408422}</string>
+						<string>{89.948115352706012, 60.424129188289108}</string>
 					</array>
 					<array>
-						<string>{89.494330864611328, -66.324114336063332}</string>
-						<string>{-89.494330864611356, -66.324114336063218}</string>
-						<string>{-80.542769883653705, -96.287689876659513}</string>
+						<string>{-89.948115352706012, 60.424129188289115}</string>
+						<string>{89.948115352706012, 60.424129188289108}</string>
+						<string>{80.951165133367013, 87.722239046705923}</string>
 					</array>
 					<array>
-						<string>{80.542769883653676, -96.287689876659556}</string>
-						<string>{89.494330864611328, -66.324114336063332}</string>
-						<string>{-80.542769883653705, -96.287689876659513}</string>
+						<string>{-80.951165133367027, 87.722239046705923}</string>
+						<string>{-89.948115352706012, 60.424129188289115}</string>
+						<string>{80.951165133367013, 87.722239046705923}</string>
 					</array>
 					<array>
-						<string>{80.542769883653676, -96.287689876659556}</string>
-						<string>{-80.542769883653705, -96.287689876659513}</string>
-						<string>{-68.495995424972946, -122.55098349405445}</string>
+						<string>{-68.843307035889126, 111.64923245375628}</string>
+						<string>{-80.951165133367027, 87.722239046705923}</string>
+						<string>{80.951165133367013, 87.722239046705923}</string>
 					</array>
 					<array>
-						<string>{68.495995424972918, -122.55098349405449}</string>
-						<string>{80.542769883653676, -96.287689876659556}</string>
-						<string>{-68.495995424972946, -122.55098349405445}</string>
+						<string>{-68.843307035889126, 111.64923245375628}</string>
+						<string>{80.951165133367013, 87.722239046705923}</string>
+						<string>{68.84330703588914, 111.64923245375627}</string>
 					</array>
 					<array>
-						<string>{68.495995424972918, -122.55098349405449}</string>
-						<string>{-68.495995424972946, -122.55098349405445}</string>
-						<string>{-53.81695827510724, -144.10471154315618}</string>
+						<string>{-68.843307035889126, 111.64923245375628}</string>
+						<string>{68.84330703588914, 111.64923245375627}</string>
+						<string>{54.089839256793418, 131.28560847121966}</string>
 					</array>
 					<array>
-						<string>{53.816958275107211, -144.10471154315624}</string>
-						<string>{68.495995424972918, -122.55098349405449}</string>
-						<string>{-53.81695827510724, -144.10471154315618}</string>
+						<string>{-54.089839256793383, 131.28560847121972}</string>
+						<string>{-68.843307035889126, 111.64923245375628}</string>
+						<string>{54.089839256793418, 131.28560847121966}</string>
 					</array>
 					<array>
-						<string>{53.816958275107211, -144.10471154315624}</string>
-						<string>{-53.81695827510724, -144.10471154315618}</string>
-						<string>{-37.069765599627154, -160.12057634250763}</string>
+						<string>{-37.25772928899044, 145.87675218095154}</string>
+						<string>{-54.089839256793383, 131.28560847121972}</string>
+						<string>{54.089839256793418, 131.28560847121966}</string>
 					</array>
 					<array>
-						<string>{37.069765599627125, -160.12057634250766}</string>
-						<string>{53.816958275107211, -144.10471154315624}</string>
-						<string>{-37.069765599627154, -160.12057634250763}</string>
+						<string>{-37.25772928899044, 145.87675218095154}</string>
+						<string>{54.089839256793418, 131.28560847121966}</string>
+						<string>{37.257729288990447, 145.87675218095154}</string>
 					</array>
 					<array>
-						<string>{18.898002621117335, -169.98309718967033}</string>
-						<string>{37.069765599627125, -160.12057634250766}</string>
-						<string>{-37.069765599627154, -160.12057634250763}</string>
+						<string>{-37.25772928899044, 145.87675218095154}</string>
+						<string>{37.257729288990447, 145.87675218095154}</string>
+						<string>{18.99382567898688, 154.86193411299459}</string>
 					</array>
 					<array>
-						<string>{18.898002621117335, -169.98309718967033}</string>
-						<string>{-37.069765599627154, -160.12057634250763}</string>
-						<string>{-18.898002621117374, -169.98309718967033}</string>
+						<string>{-18.99382567898687, 154.86193411299459}</string>
+						<string>{-37.25772928899044, 145.87675218095154}</string>
+						<string>{18.99382567898688, 154.86193411299459}</string>
 					</array>
 					<array>
-						<string>{18.898002621117335, -169.98309718967033}</string>
-						<string>{-18.898002621117374, -169.98309718967033}</string>
-						<string>{-1.7794356619840184e-14, -173.31326293945312}</string>
+						<string>{-18.99382567898687, 154.86193411299459}</string>
+						<string>{18.99382567898688, 154.86193411299459}</string>
+						<string>{5.9615278659007743e-15, 157.89585876464844}</string>
 					</array>
 				</array>
 				<key>shape</key>
@@ -1892,11 +1892,11 @@
 			<key>perDevicePosition</key>
 			<true/>
 			<key>rotation</key>
-			<real>330.7066650390625</real>
+			<real>352.94927978515625</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{0.98953640460968018, 1.3891732692718506}</string>
 			<key>size</key>
-			<string>{193.73593139648438, 346.62652587890625}</string>
+			<string>{194.71827697753906, 315.79171752929688}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -1964,7 +1964,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.44436124521210635, 0.15133787193335593}</string>
+			<string>{0.10288137155487978, 0.073312238836660978}</string>
 			<key>imageFileName</key>
 			<string>ropeAssets.png</string>
 			<key>name</key>
@@ -2108,7 +2108,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.34252409140268963, 0.85742800384759899}</string>
+			<string>{0.10630239645640055, 0.83589412122964857}</string>
 			<key>imageFileName</key>
 			<string>ropeAssets.png</string>
 			<key>name</key>
@@ -2174,13 +2174,366 @@
 		</dict>
 		<dict>
 			<key>alpha</key>
+			<real>24.932527542114258</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 0.22883410751819611}, {0.36416301131248474, 1}}</string>
+			<key>generalPosition</key>
+			<string>{1.3578730265299479, 0.01015574336051941}</string>
+			<key>name</key>
+			<string>UntitledTexturedShape</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>2</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHTexturedShape</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>points</key>
+			<array>
+				<dict>
+					<key>point</key>
+					<string>{75, -8.931854248046875}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{35.686049228534102, 95.534395938739181}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-74.999999999999972, 77.670686130397002}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-75.000000000000043, -95.534394626490709}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{-33.378626426681876, -23.59822197817266}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{7.7440942451357841, 21.965503171086311}</string>
+				</dict>
+				<dict>
+					<key>point</key>
+					<string>{28.305454719811678, -71.184892745688558}</string>
+				</dict>
+			</array>
+			<key>rotation</key>
+			<real>45</real>
+			<key>scale</key>
+			<string>{1.5742460489273071, 1.3685760498046875}</string>
+			<key>size</key>
+			<string>{150, 191.06878662109375}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>triangles</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-74.999999999999972, 77.670686130397002}</string>
+					<key>uv</key>
+					<string>{0.890625, 0.5}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-75.000000000000043, -95.534394626490709}</string>
+					<key>uv</key>
+					<string>{0.3046875, 0.83829116821289062}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-33.378626426681876, -23.59822197817266}</string>
+					<key>uv</key>
+					<string>{0.3046875, 0.16170883178710938}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{7.7440942451357841, 21.965503171086311}</string>
+					<key>uv</key>
+					<string>{-2.8421708795129297e-16, -7.5976052116288884e-09}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{28.305454719811678, -71.184892745688558}</string>
+					<key>uv</key>
+					<string>{1, 0.5}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{75, -8.931854248046875}</string>
+					<key>uv</key>
+					<string>{0.38757893443107605, 0.77638417482376099}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{7.7440942451357841, 21.965503171086311}</string>
+					<key>uv</key>
+					<string>{0.40759769082069397, 0.19543023407459259}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{75, -8.931854248046875}</string>
+					<key>uv</key>
+					<string>{1, 0.45325320959091187}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{35.686049228534102, 95.534395938739181}</string>
+					<key>uv</key>
+					<string>{0.73790699243545532, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{7.7440942451357841, 21.965503171086311}</string>
+					<key>uv</key>
+					<string>{0.61168354749679565, 0.41818198561668396}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{35.686049228534102, 95.534395938739181}</string>
+					<key>uv</key>
+					<string>{1.8947806745745518e-16, 0.90650641918182373}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-74.999999999999972, 77.670686130397002}</string>
+					<key>uv</key>
+					<string>{0.27747583389282227, 0.37649357318878174}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{7.7440942451357841, 21.965503171086311}</string>
+					<key>uv</key>
+					<string>{0.77878737449645996, 0.55722606182098389}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-74.999999999999972, 77.670686130397002}</string>
+					<key>uv</key>
+					<string>{0.73790699243545532, 1}</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>color</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>point</key>
+					<string>{-33.378626426681876, -23.59822197817266}</string>
+					<key>uv</key>
+					<string>{0.55162727832794189, 0.61496120691299438}</string>
+				</dict>
+			</array>
+			<key>uuid</key>
+			<string>1C111472-1361-4E07-B1CC-9D20E5CA3B45</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
 			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>closed</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{0.088915735483169556, 0.52284735441207886}, {0.25430199503898621, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.38261086541716621, 0.41160348594740981}</string>
+			<key>name</key>
+			<string>UntitledBezier</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>3</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHBezier</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>points</key>
+			<array>
+				<dict>
+					<key>ctrl1</key>
+					<string>{-191.60798645019531, -65.529132843017578}</string>
+					<key>ctrl2</key>
+					<string>{-191.60798645019531, -65.529132843017578}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{-191.60798645019531, -165.52913284301758}</string>
+				</dict>
+				<dict>
+					<key>ctrl1</key>
+					<string>{-197.36534644154264, -1.9817807996277566}</string>
+					<key>ctrl2</key>
+					<string>{44.942816014295261, 48.586750836250189}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{-112.69166602178585, 41.307842426219963}</string>
+				</dict>
+				<dict>
+					<key>ctrl1</key>
+					<string>{191.68998718261719, 236.25347518920898}</string>
+					<key>ctrl2</key>
+					<string>{191.68998718261719, 236.25347518920898}</string>
+					<key>hasCtrl1</key>
+					<true/>
+					<key>hasCtrl2</key>
+					<true/>
+					<key>mainPt</key>
+					<string>{191.68998718261719, 136.25347518920898}</string>
+				</dict>
+			</array>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.6932456493377686, 1.3265442848205566}</string>
+			<key>size</key>
+			<string>{383.37997436523438, 331.05828857421875}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>60965728-6F35-470C-AF98-7BD8AB5D3333</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>102.79385375976562</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.36913395972238283, 0.35896195524555452}</string>
+			<string>{0.1483543833096822, 0.17805365920066835}</string>
 			<key>imageFileName</key>
 			<string>officer.png</string>
 			<key>name</key>
@@ -2194,7 +2547,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>72933725-CCBC-4DAF-8748-FBA10C4D4CD6</string>
+				<string>A011A500-D080-4A78-A7CC-9AB7ADF3F0F3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -2243,6 +2596,294 @@
 			</array>
 			<key>uuid</key>
 			<string>1C1FCB25-914C-4D0A-9032-8396545628D5</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.61828988006520169, 0.67932647196736151}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_2_3</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>534C2372-119B-4744-9ADB-ADB3760570FB</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.5187987104429429, 0.8258098605043076}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_2_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>17B94BEB-0C3A-4C9F-8D98-9DA507E31FD7</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.35215908244410055, 0.81900908754069823}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_2_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>18A0389F-F27F-4B77-A058-19EBB446D767</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.2454966684118407, 0.67139223886353849}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>C36DDCE4-CCC5-4744-A260-8C2A1EC0B115</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{2.2000000476837158, 1.7999999523162842}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B77E54A1-2FEB-477B-8031-B1AC79EDE152</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -2309,7 +2950,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>72933725-CCBC-4DAF-8748-FBA10C4D4CD6</key>
+		<key>A011A500-D080-4A78-A7CC-9AB7ADF3F0F3</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>

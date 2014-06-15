@@ -46,9 +46,6 @@
                                                                                     node:self];
         
         
-        self.contentSize = [dict sizeForKey:@"size"];
-//        _size = [dict sizeForKey:@"size"];
-        
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
                                       fromUnit:unitPos];
@@ -73,16 +70,12 @@
             }
         }
         
-        [self setPosition:pos];
-        
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
-
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
         
+        [self setPosition:pos];
+
         LHScene* scene = (LHScene*)[self scene];
         
         NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
@@ -119,34 +112,14 @@
     [super visit];
 }
 
+#pragma mark - Box2D Support
+
 #if LH_USE_BOX2D
-- (CGAffineTransform)nodeToParentTransform
-{
-    if([_physicsProtocolImp body])
-        _transform = [_physicsProtocolImp nodeTransform];
-    
-    return [super nodeToParentTransform];
-}
--(void)setPosition:(CGPoint)position{
-    
-    [super setPosition:position];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
--(void)setRotation:(float)rotation
-{
-    [super setRotation:rotation];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
-
-
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 #endif //LH_USE_BOX2D
 
 
-#pragma mark LHNodeProtocol Required
+#pragma mark - LHNodeProtocol Required
 
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 

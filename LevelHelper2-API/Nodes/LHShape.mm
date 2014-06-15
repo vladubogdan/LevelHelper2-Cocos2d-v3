@@ -98,10 +98,9 @@
             }
         }
         
-        [self setPosition:pos];
         
         
-        self.contentSize = [dict sizeForKey:@"size"];
+        
         
         NSArray* triangles = [dict objectForKey:@"triangles"];
         [self ensureCapacity:[triangles count]];
@@ -181,14 +180,17 @@
 
         _dirty = YES;
     
+
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        //scale must be set after loading the physic info or else spritekit will not resize the body
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
         
+        CGPoint anchor = [dict pointForKey:@"anchor"];
+        anchor.y = 1.0f - anchor.y;
+        [self setAnchorPoint:anchor];
+        
+        [self setPosition:pos];
+
         
         NSArray* childrenInfo = [dict objectForKey:@"children"];
         if(childrenInfo)
@@ -213,7 +215,7 @@
 {
 	if(_bufferCount + count > _bufferCapacity){
 		_bufferCapacity += MAX(_bufferCapacity, count);
-		_buffer = realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
+		_buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
 		
         //		NSLog(@"Resized vertex buffer to %d", _bufferCapacity);
 	}
@@ -289,6 +291,13 @@
 
     [super visit];
 }
+
+#pragma mark - Box2D Support
+
+#if LH_USE_BOX2D
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
+#endif //LH_USE_BOX2D
+
 
 #pragma mark LHNodeProtocol Required
 

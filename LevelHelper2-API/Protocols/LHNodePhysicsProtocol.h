@@ -32,10 +32,32 @@ class b2Body;
 -(CGAffineTransform)nodeTransform;
 -(CGAffineTransform)absoluteTransform;
 -(void)updateTransform;
+-(void)updateScale;
 #endif
 #endif //LH_USE_BOX2D
 
 
 @end
 
-#define LH_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
+#define LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
+- (CGAffineTransform)nodeToParentTransform \
+{\
+    if([_physicsProtocolImp body])\
+        _transform = [_physicsProtocolImp nodeTransform];\
+        \
+        return [super nodeToParentTransform];\
+}\
+-(void)setPosition:(CGPoint)position\
+{\
+    [super setPosition:position];\
+    if([_physicsProtocolImp body]){\
+        [_physicsProtocolImp updateTransform];\
+    }\
+}\
+-(void)setRotation:(float)rotation\
+{\
+    [super setRotation:rotation];\
+    if([_physicsProtocolImp body]){\
+        [_physicsProtocolImp updateTransform];\
+    }\
+}

@@ -70,6 +70,10 @@
         
         [self setPosition:pos];
         
+        //we reset the scale back to 1 because the NodeProtocolImpl is setting the scale to wrong value
+        [self setScaleX:1];
+        [self setScaleY:1];
+        
         CGPoint scl = [dict pointForKey:@"scale"];
         CGSize size = [dict sizeForKey:@"size"];
         size.width *= scl.x;

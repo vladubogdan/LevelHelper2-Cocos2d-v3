@@ -196,8 +196,6 @@ typedef struct _LH_V2F_C4B_Triangle
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        self.contentSize = [dict sizeForKey:@"size"];
-        
         width = [dict floatForKey:@"width"];
         height = [dict floatForKey:@"height"];
         numLines = [dict floatForKey:@"numLines"];
@@ -216,10 +214,6 @@ typedef struct _LH_V2F_C4B_Triangle
         splashWidth     = [dict floatForKey:@"splashW"];
         splashTime      = [dict floatForKey:@"splashT"];
         
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
-
         bodySplashes = [[NSMutableDictionary alloc] init];
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];

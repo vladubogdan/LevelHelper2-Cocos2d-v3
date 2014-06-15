@@ -79,6 +79,27 @@
         
         if([dict objectForKey:@"zOrder"])
             [_node setZOrder:[dict floatForKey:@"zOrder"]];
+        
+        
+        if([dict objectForKey:@"scale"])
+        {
+            CGPoint scl = [dict pointForKey:@"scale"];
+            [_node setScaleX:scl.x];
+            [_node setScaleY:scl.y];
+        }
+
+        if([dict objectForKey:@"size"]){
+            [_node setContentSize:[dict sizeForKey:@"size"]];
+        }
+    }
+    return self;
+}
+
+- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd{
+    
+    if(self = [super init])
+    {
+        _node = nd;
     }
     return self;
 }
@@ -99,10 +120,17 @@
 //    return (LHScene*)[(CCNode*)_node scene];
 //}
 
--(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name
+-(CCNode*)childNodeWithName:(NSString*)name
 {
+    NSLog(@"NODE %@",_node);
+    if([[_node name] isEqualToString:name]){
+        return _node;
+    }
+    
     for(CCNode<LHNodeProtocol>* node in [_node children])
     {
+        NSLog(@"CHILD %@", node);
+        
         if([node respondsToSelector:@selector(childNodeWithName:)])
         {
             if([[node name] isEqualToString:name]){
@@ -117,8 +145,14 @@
     return nil;
 
 }
--(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
+-(CCNode*)childNodeWithUUID:(NSString*)uuid;
 {
+    if([_node respondsToSelector:@selector(uuid)]){
+        if([[(CCNode<LHNodeProtocol>*)_node uuid] isEqualToString:uuid]){
+            return _node;
+        }
+    }
+    
     for(CCNode<LHNodeProtocol>* node in [_node children])
     {
         if([node respondsToSelector:@selector(uuid)])

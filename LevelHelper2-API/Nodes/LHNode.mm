@@ -48,8 +48,6 @@
                                                                                     node:self];
         
         
-        self.contentSize = [dict sizeForKey:@"size"];
-        
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
                                       fromUnit:unitPos];
@@ -77,10 +75,6 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
 
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
-        
         CGPoint anchor = [dict pointForKey:@"anchor"];
         anchor.y = 1.0f - anchor.y;
         [self setAnchorPoint:anchor];
@@ -113,31 +107,12 @@
     [super visit];
 }
 
+#pragma mark - Box2D Support
+
 #if LH_USE_BOX2D
-- (CGAffineTransform)nodeToParentTransform
-{
-    if([_physicsProtocolImp body])
-        _transform = [_physicsProtocolImp nodeTransform];
-    
-    return [super nodeToParentTransform];
-}
--(void)setPosition:(CGPoint)position{
-    
-    [super setPosition:position];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
--(void)setRotation:(float)rotation
-{
-    [super setRotation:rotation];
-    if([_physicsProtocolImp body]){
-        [_physicsProtocolImp updateTransform];
-    }
-}
-
-
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 #endif //LH_USE_BOX2D
+
 
 #pragma mark LHNodeProtocol Required
 

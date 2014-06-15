@@ -89,7 +89,8 @@
 @interface LHNodeProtocolImpl : NSObject
 
 + (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
-- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)prnt;
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
+- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd;
 
 -(NSString*)uuid;
 -(NSArray*)tags;

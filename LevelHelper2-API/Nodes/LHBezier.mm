@@ -28,9 +28,9 @@ static float MAX_BEZIER_STEPS = 24.0f;
 {
     NSMutableArray* linePoints;
 
-    LHNodeProtocolImpl* _nodeProtocolImp;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
-    LHNodePhysicsProtocolImp* _physicsProtocolImp;
+    LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
 -(void)dealloc{
@@ -86,8 +86,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
         
-        [self setPosition:pos];
-
+        
         CCColor* colorOverlay = [dict colorForKey:@"colorOverlay"];
                 
         NSArray* points = [dict objectForKey:@"points"];
@@ -171,14 +170,15 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
 
+        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
         
-        //scale must be set after loading the physic info or else spritekit will not resize the body
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setScaleX:scl.x];
-        [self setScaleY:scl.y];
+        
+        
+        [self setPosition:pos];
+        
         
         
         NSArray* childrenInfo = [dict objectForKey:@"children"];
@@ -211,6 +211,12 @@ static float MAX_BEZIER_STEPS = 24.0f;
     
     [super visit];
 }
+
+#pragma mark - Box2D Support
+
+#if LH_USE_BOX2D
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
+#endif //LH_USE_BOX2D
 
 
 #pragma mark LHNodeProtocol Required
