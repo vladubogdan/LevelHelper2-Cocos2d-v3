@@ -95,13 +95,13 @@
         
         if(_radial)
         {
-            const float32 k_segments = 32.0f;
+            const float k_segments = 32.0f;
             int vertexCount=32;
-            const float32 k_increment = 2.0f * b2_pi / k_segments;
-            float32 theta = 0.0f;
+            const float k_increment = 2.0f * M_PI / k_segments;
+            float theta = 0.0f;
             
             CGPoint* vertices = new CGPoint[vertexCount];
-            for (int32 i = 0; i < k_segments; ++i){
+            for (int i = 0; i < k_segments; ++i){
                 vertices[i] = CGPointMake(size.width*0.5 *cosf(theta), size.width*0.5 *sinf(theta));
                 theta += k_increment;
             }
