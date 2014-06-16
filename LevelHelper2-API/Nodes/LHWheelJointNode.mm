@@ -1,12 +1,12 @@
 //
-//  LHPrismaticJointNode.m
+//  LHWheelJointNode.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 30/03/14.
 //  Copyright (c) 2014 GameDevHelper.com. All rights reserved.
 //
 
-#import "LHPrismaticJointNode.h"
+#import "LHWheelJointNode.h"
 #import "LHUtils.h"
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
@@ -31,19 +31,18 @@
 
 
 
-@implementation LHPrismaticJointNode
+@implementation LHWheelJointNode
 {
     LHNodeProtocolImpl*     _nodeProtocolImp;
     LHJointNodeProtocolImp* _jointProtocolImp;
     
-    BOOL _enableLimit;
     BOOL _enableMotor;
     
-    float _lowerTranslation;
-    float _upperTranslation;
-    
-    float _maxMotorForce;
+    float _maxMotorTorque;
     float _motorSpeed;
+    
+    float _frequency;
+    float _damping;
     
     CGPoint _axis;
 }
@@ -55,15 +54,15 @@
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
-                                         parent:(CCNode*)prnt{
++(instancetype)wheelJointNodeWithDictionary:(NSDictionary*)dict
+                                     parent:(CCNode*)prnt{
     
-    return LH_AUTORELEASED([[self alloc] initPrismaticJointNodeWithDictionary:dict
-                                                                       parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWheelJointNodeWithDictionary:dict
+                                                                   parent:prnt]);
 }
 
--(instancetype)initPrismaticJointNodeWithDictionary:(NSDictionary*)dict
-                                             parent:(CCNode*)prnt
+-(instancetype)initWheelJointNodeWithDictionary:(NSDictionary*)dict
+                                         parent:(CCNode*)prnt
 {
     if(self = [super init]){
         
@@ -75,14 +74,14 @@
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
         
-        _enableLimit = [dict boolForKey:@"enablePrismaticLimit"];
-        _enableMotor = [dict boolForKey:@"enablePrismaticMotor"];
         
-        _lowerTranslation = [dict floatForKey:@"lowerTranslation"];
-        _upperTranslation = [dict floatForKey:@"upperTranslation"];
+        _enableMotor = [dict boolForKey:@"enableWheelMotor"];
         
-        _maxMotorForce = [dict floatForKey:@"maxMotorForce"];
-        _motorSpeed = [dict floatForKey:@"prismaticMotorSpeed"];
+        _frequency  = [dict floatForKey:@"wheelFrequencyHz"];
+        _damping    = [dict floatForKey:@"wheelDampingRatio"];
+        
+        _maxMotorTorque = [dict floatForKey:@"wheelMaxMotorForce"];
+        _motorSpeed = -[dict floatForKey:@"wheelMotorSpeed"];
         
         _axis = [dict pointForKey:@"axis"];
     }
@@ -95,20 +94,17 @@
 }
 
 #pragma mark - Properties
--(BOOL)enableLimit{
-    return _enableLimit;
-}
 -(BOOL)enableMotor{
     return _enableMotor;
 }
--(CGFloat)lowerTranslation{
-    return _lowerTranslation;
+-(CGFloat)frequency{
+    return _frequency;
 }
--(CGFloat)upperTranslation{
-    return _upperTranslation;
+-(CGFloat)dampingRatio{
+    return _damping;
 }
--(CGFloat)maxMotorForce{
-    return _maxMotorForce;
+-(CGFloat)maxMotorTorque{
+    return _maxMotorTorque;
 }
 -(CGFloat)motorSpeed{
     return _motorSpeed;
@@ -123,8 +119,8 @@ LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
 
 #if LH_USE_BOX2D
 #pragma mark - LHJointNodeProtocol Box2d Support
--(b2PrismaticJoint*)joint{
-return (b2PrismaticJoint*)[_jointProtocolImp joint];
+-(b2WheelJoint*)joint{
+return (b2WheelJoint*)[_jointProtocolImp joint];
 }
 
 
@@ -172,18 +168,16 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
         
-        b2PrismaticJointDef jointDef;
+        b2WheelJointDef jointDef;
         
         jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,-_axis.y));
         
-        jointDef.enableLimit = _enableLimit;
         jointDef.enableMotor = _enableMotor;
-        jointDef.maxMotorForce = _maxMotorForce;
+        jointDef.maxMotorTorque = _maxMotorTorque;
         jointDef.motorSpeed = CC_DEGREES_TO_RADIANS(_motorSpeed);
-        jointDef.upperTranslation = [scene metersFromValue:_upperTranslation];
-        jointDef.lowerTranslation = [scene metersFromValue:_lowerTranslation];
+        jointDef.frequencyHz = _frequency;
+        jointDef.dampingRatio = _damping;
         
-                            
         jointDef.collideConnected = [_jointProtocolImp collideConnected];
 
         b2PrismaticJoint* joint = (b2PrismaticJoint*)world->CreateJoint(&jointDef);
@@ -195,7 +189,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         if(!nodeA.physicsBody || !nodeB.physicsBody)
             return NO;
 
-        NSLog(@"\n\nWARNING: Prismatic joint is not supported when using Chipmunk physics engine.\n\n");
+        NSLog(@"\n\nWARNING: Wheel joint is not supported when using Chipmunk physics engine.\n\n");
         
 #pragma unused (relativePosA)
 

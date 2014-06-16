@@ -27,6 +27,7 @@
 #import "LHPulleyJointNode.h"
 #import "LHWeldJointNode.h"
 #import "LHPrismaticJointNode.h"
+#import "LHWheelJointNode.h"
 
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"

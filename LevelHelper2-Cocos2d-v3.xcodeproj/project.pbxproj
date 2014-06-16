@@ -293,6 +293,8 @@
 		6E0D5960194F1A860036E940 /* LHWeldJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D595E194F1A860036E940 /* LHWeldJointNode.mm */; };
 		6E0D5963194F1DCF0036E940 /* LHPrismaticJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */; };
 		6E0D5964194F1DCF0036E940 /* LHPrismaticJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */; };
+		6E0D5967194F23E50036E940 /* LHWheelJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */; };
+		6E0D5968194F23E50036E940 /* LHWheelJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -680,6 +682,8 @@
 		6E0D595E194F1A860036E940 /* LHWeldJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHWeldJointNode.mm; sourceTree = "<group>"; };
 		6E0D5961194F1DCF0036E940 /* LHPrismaticJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPrismaticJointNode.h; sourceTree = "<group>"; };
 		6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHPrismaticJointNode.mm; sourceTree = "<group>"; };
+		6E0D5965194F23E50036E940 /* LHWheelJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWheelJointNode.h; sourceTree = "<group>"; };
+		6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHWheelJointNode.mm; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2383,6 +2387,8 @@
 				6E0D595E194F1A860036E940 /* LHWeldJointNode.mm */,
 				6E0D5961194F1DCF0036E940 /* LHPrismaticJointNode.h */,
 				6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */,
+				6E0D5965194F23E50036E940 /* LHWheelJointNode.h */,
+				6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */,
 				6E89FDF6192E23100040478F /* LHDrawNode.h */,
 				6E89FDF7192E23100040478F /* LHDrawNode.m */,
 				6E89FDF8192E23100040478F /* LHGravityArea.h */,
@@ -2750,6 +2756,7 @@
 				6E0D5900194CD6A40036E940 /* b2PolygonContact.cpp in Sources */,
 				6E0D5643194C32A30036E940 /* matrix.c in Sources */,
 				6E0D5644194C32A30036E940 /* CCTiledMapLayer.m in Sources */,
+				6E0D5968194F23E50036E940 /* LHWheelJointNode.mm in Sources */,
 				6E0D5645194C32A30036E940 /* neon_matrix_impl.c in Sources */,
 				6E0D5646194C32A30036E940 /* CCLabelTTF.m in Sources */,
 				6E0D5647194C32A30036E940 /* LHPositionFrame.m in Sources */,
@@ -2977,6 +2984,7 @@
 				6E1220A01924BD86005E8532 /* CCParticleSystemBase.m in Sources */,
 				6E1221371924BD87005E8532 /* CCColor.m in Sources */,
 				6E1221841924BD87005E8532 /* ALChannelSource.m in Sources */,
+				6E0D5967194F23E50036E940 /* LHWheelJointNode.mm in Sources */,
 				6E89FE20192E23100040478F /* LHAnimation.m in Sources */,
 				6E1220301924BD85005E8532 /* CCActionCatmullRom.m in Sources */,
 				6E1221481924BD87005E8532 /* NSAttributedString+CCAdditions.m in Sources */,
