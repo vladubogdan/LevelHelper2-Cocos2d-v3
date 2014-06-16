@@ -64,7 +64,16 @@
             rJointNode = NULL;
         }
     }
-    
+
+    {
+        LHPulleyJointNode* pJointNode = (LHPulleyJointNode*)[self childNodeWithName:@"PulleyJoint"];
+        if(pJointNode){
+            NSLog(@"REMOVING THE PULLEY JOINT %@", [pJointNode name]);
+            [pJointNode removeFromParent];
+            pJointNode = NULL;
+        }
+    }
+
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
 

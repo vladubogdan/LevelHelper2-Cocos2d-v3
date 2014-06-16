@@ -287,6 +287,8 @@
 		6E0D5954194F03080036E940 /* LHRevoluteJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */; };
 		6E0D5957194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E0D5958194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
+		6E0D595B194F12D10036E940 /* LHPulleyJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D595A194F12D10036E940 /* LHPulleyJointNode.mm */; };
+		6E0D595C194F12D10036E940 /* LHPulleyJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D595A194F12D10036E940 /* LHPulleyJointNode.mm */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -668,6 +670,8 @@
 		6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHRevoluteJointNode.mm; sourceTree = "<group>"; };
 		6E0D5955194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.h"; sourceTree = "<group>"; };
 		6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.mm"; sourceTree = "<group>"; };
+		6E0D5959194F12D10036E940 /* LHPulleyJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPulleyJointNode.h; sourceTree = "<group>"; };
+		6E0D595A194F12D10036E940 /* LHPulleyJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHPulleyJointNode.mm; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2365,6 +2369,8 @@
 				6E89FE01192E23100040478F /* LHRopeJointNode.mm */,
 				6E0D5951194F03080036E940 /* LHRevoluteJointNode.h */,
 				6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */,
+				6E0D5959194F12D10036E940 /* LHPulleyJointNode.h */,
+				6E0D595A194F12D10036E940 /* LHPulleyJointNode.mm */,
 				6E89FDF6192E23100040478F /* LHDrawNode.h */,
 				6E89FDF7192E23100040478F /* LHDrawNode.m */,
 				6E89FDF8192E23100040478F /* LHGravityArea.h */,
@@ -2735,6 +2741,7 @@
 				6E0D5647194C32A30036E940 /* LHPositionFrame.m in Sources */,
 				6E0D5901194CD6A40036E940 /* b2DistanceJoint.cpp in Sources */,
 				6E0D5648194C32A30036E940 /* NSEvent+CC.m in Sources */,
+				6E0D595C194F12D10036E940 /* LHPulleyJointNode.mm in Sources */,
 				6E0D5649194C32A30036E940 /* LHWater.mm in Sources */,
 				6E0D564A194C32A30036E940 /* ALDevice.m in Sources */,
 				6E0D564B194C32A30036E940 /* vec2.c in Sources */,
@@ -2971,6 +2978,7 @@
 				6E1221511924BD87005E8532 /* TGAlib.m in Sources */,
 				6E12211D1924BD87005E8532 /* UITouch+CC.m in Sources */,
 				6E1221FB1924BD87005E8532 /* utility.c in Sources */,
+				6E0D595B194F12D10036E940 /* LHPulleyJointNode.mm in Sources */,
 				6E0D592C194DCEF70036E940 /* LHb2BuoyancyController.cpp in Sources */,
 				6E12215A1924BD87005E8532 /* ZipUtils.m in Sources */,
 				6E12216B1924BD87005E8532 /* OALUtilityActions.m in Sources */,

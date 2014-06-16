@@ -22,6 +22,7 @@
 #import "LHRopeJointNode.h"
 #import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
+#import "LHPulleyJointNode.h"
 
 #import "LHPhysicsNode.h"
 
@@ -749,6 +750,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [scene addLateLoadingNode:jt];
 
     }
+    else if([nodeType isEqualToString:@"LHPulleyJoint"]){
+        
+        LHPulleyJointNode* jt = [LHPulleyJointNode pulleyJointNodeWithDictionary:childInfo
+                                                                          parent:prnt];
+        [scene addLateLoadingNode:jt];
+        
+    }
+
 //    else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
 //        
 //        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo

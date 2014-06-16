@@ -16,7 +16,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.21141534514802818, 0.29573842136596795}</string>
+			<string>{0.13876733648357914, 0.15890385954116937}</string>
 			<key>imageFileName</key>
 			<string>objects.png</string>
 			<key>name</key>
@@ -88,7 +88,7 @@
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.4125672169252842, 0.51219234394084201}</string>
+			<string>{0.3546564765497654, 0.31990803556691388}</string>
 			<key>imageFileName</key>
 			<string>objects.png</string>
 			<key>name</key>
@@ -102,7 +102,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>AFE60436-6571-4BA6-8141-B5FE47010E5A</string>
+				<string>FA77A4C7-809C-4565-9545-AC81768FAC25</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -310,7 +310,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>AFE60436-6571-4BA6-8141-B5FE47010E5A</string>
+				<string>FA77A4C7-809C-4565-9545-AC81768FAC25</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -362,6 +362,266 @@
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.14239056867188454, 0.55861557178921739}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>2754A138-EF2A-4BF1-8828-35DDE0505808</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.12679855866105699, 0.91138921973124165}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>BC590F3E-F4F1-4FA7-BD78-6F1AD4A393ED</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.28929282891771702, 0.55754857073699426}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.19999998807907104</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>7C3FF480-5D33-4D41-816A-CABAB93B17DF</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>collideConnected</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>groundAnchorA</key>
+			<string>{137.61358642578125, 359.75955200195312}</string>
+			<key>groundAnchorB</key>
+			<string>{275.7760409116745, 270.23591136932373}</string>
+			<key>lengthA</key>
+			<real>2</real>
+			<key>lengthB</key>
+			<real>2</real>
+			<key>name</key>
+			<string>PulleyJoint</string>
+			<key>nodeType</key>
+			<string>LHPulleyJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>ratio</key>
+			<real>1</real>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>relativePosB</key>
+			<string>{0, 0}</string>
+			<key>spriteAUUID</key>
+			<string>BC590F3E-F4F1-4FA7-BD78-6F1AD4A393ED</string>
+			<key>spriteBUUID</key>
+			<string>7C3FF480-5D33-4D41-816A-CABAB93B17DF</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>29ECDEFC-2EE3-4305-B161-76989BFBFE41</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.28659664367636045, 0.42222416102886201}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_1</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1.0433686971664429}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>A24C0182-EBA9-4B6D-9D37-7A70DC0101EC</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>designResolution</key>
 	<string>{960, 640}</string>
@@ -409,9 +669,9 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{0.0094739841297268867, 0.023672088980674744}, {0.98361510038375854, 0.94255781173706055}}</string>
+		<string>{{-0.01278382446616888, -0.016223829239606857}, {1.0058729648590088, 0.98245370388031006}}</string>
 		<key>general</key>
-		<string>{{0.0094739841297268867, 0.023672088980674744}, {0.98361510038375854, 0.94255781173706055}}</string>
+		<string>{{-0.01278382446616888, -0.016223829239606857}, {1.0058729648590088, 0.98245370388031006}}</string>
 	</dict>
 	<key>tags</key>
 	<array>
@@ -419,7 +679,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>AFE60436-6571-4BA6-8141-B5FE47010E5A</key>
+		<key>FA77A4C7-809C-4565-9545-AC81768FAC25</key>
 		<array>
 			<array>
 				<string>{2.75, -10}</string>
