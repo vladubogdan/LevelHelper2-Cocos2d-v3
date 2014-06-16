@@ -623,7 +623,7 @@ typedef struct _LH_V2F_C4B_Triangle
 #if LH_USE_BOX2D
     
     LHScene* scene = [self scene];
-    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene physicsNode];
+    LHPhysicsNode* pNode = [scene gameWorldNode];
     b2World* world = [pNode box2dWorld];
     
     if(NULL == buoyancyController && world){
@@ -722,7 +722,7 @@ typedef struct _LH_V2F_C4B_Triangle
     
 #else //chipmunk
     
-    CCPhysicsNode* world = [[self scene] physicsNode];
+    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
 
     for(CCNode* node in [world children])
     {

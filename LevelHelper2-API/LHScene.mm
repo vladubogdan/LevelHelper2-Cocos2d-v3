@@ -29,8 +29,8 @@
 
 @implementation LHScene
 {
-    LHPhysicsNode *__unsafe_unretained _physicsNode;
-    
+    __unsafe_unretained LHPhysicsNode * _physicsNode;
+    __unsafe_unretained LHNode * _uiNode;
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
@@ -64,8 +64,9 @@
 
 
 -(void)dealloc{
-    _physicsNode = nil;
     
+    [self removeAllChildren];
+
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(relativePath);
@@ -76,6 +77,8 @@
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
+    _physicsNode = nil;
+
     LH_SUPER_DEALLOC();
 }
 
@@ -164,7 +167,14 @@
         [pNode setDebugDraw:YES];
         [super addChild:pNode];
         _physicsNode = pNode;
+        [_physicsNode setName:@"Game World Node"];
 
+        LHNode* uiNode = [LHNode node];
+        uiNode.contentSize = self.contentSize;
+        [super addChild:uiNode];
+        _uiNode = uiNode;
+        [_uiNode setName:@"UI Node"];
+        
 
         if([dict boolForKey:@"useGlobalGravity"])
         {
@@ -280,6 +290,13 @@
 
 -(LHPhysicsNode*)physicsNode{
     return _physicsNode;
+}
+-(LHPhysicsNode*)gameWorldNode{
+    return _physicsNode;
+}
+
+-(LHNode*)uiNode{
+    return _uiNode;
 }
 
 -(void)createPhysicsBoundarySectionFrom:(CGPoint)from

@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.22932776808738708, 0}, {0.044523522257804871, 1}}</string>
+			<string>{{0.12681646645069122, 0}, {0.042493578046560287, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-iphone5</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078240275382995605, 1}}</string>
+			<string>{{1, 1}, {0.078243546187877655, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.19460552930831909, 0}, {0.88068699836730957, 1}}</string>
+			<string>{{0.098636820912361145, 0}, {0.81435257196426392, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.19460552930831909, 0}, {0.88068699836730957, 1}}</string>
+			<string>{{0.098636820912361145, 0}, {0.81435257196426392, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -94,6 +94,11 @@
 					<true/>
 				</dict>
 				<key>level04-waterArea.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level05-joints.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

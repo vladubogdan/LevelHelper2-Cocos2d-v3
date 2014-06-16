@@ -54,6 +54,17 @@ typedef enum
 */
 -(void)removeBody;
 
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+
+/**
+ Returns the Box2d body created on this sprite or NULL if sprite has no physics.
+ */
+-(b2Body*)box2dBody;
+#endif
+#endif //LH_USE_BOX2D
+
+
 @end
 
 
@@ -86,6 +97,10 @@ typedef enum
 @end
 
 #define LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(b2Body*)box2dBody\
+{\
+    return [_physicsProtocolImp body];\
+}\
 - (CGAffineTransform)nodeToParentTransform\
 {\
     if([_physicsProtocolImp body])\

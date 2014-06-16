@@ -14,7 +14,7 @@
 
 @implementation LHNodeProtocolImpl
 {
-    __weak CCNode* _node;
+    __unsafe_unretained CCNode* _node;
     
     NSString*           _uuid;
     NSMutableArray*     _tags;
@@ -116,9 +116,6 @@
 -(id<LHUserPropertyProtocol>)userProperty{
     return _userProperty;
 }
-//-(LHScene*)scene{
-//    return (LHScene*)[(CCNode*)_node scene];
-//}
 
 -(CCNode*)childNodeWithName:(NSString*)name
 {

@@ -168,7 +168,7 @@
 -(void)visit
 {
     LHScene* scene = (LHScene*)[self scene];
-    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene physicsNode];
+    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
 
     b2World* world =  [pNode box2dWorld];
     
@@ -225,7 +225,7 @@
 {
     CGRect rect = [self globalRect];
     
-    CCPhysicsNode* world = [[self scene] physicsNode];
+    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
     for(CCNode* node in [world children])
     {
         CCPhysicsBody* body = [node physicsBody];

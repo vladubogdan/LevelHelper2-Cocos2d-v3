@@ -38,7 +38,7 @@
     b2Body* _body;
     CGPoint previousScale;
 #endif
-    __weak CCNode* _node;
+    __unsafe_unretained CCNode* _node;
 }
 
 -(void)dealloc{

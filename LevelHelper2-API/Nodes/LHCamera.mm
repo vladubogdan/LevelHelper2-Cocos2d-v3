@@ -11,6 +11,8 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHAnimation.h"
+#import "LHPhysicsNode.h"
+
 
 @implementation LHCamera
 {
@@ -138,7 +140,7 @@
     if(_active)
     {
         CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
-        [[[self scene] physicsNode] setPosition:transPoint];
+        [[(LHScene*)[self scene] gameWorldNode] setPosition:transPoint];
     }
 }
 

@@ -26,7 +26,17 @@
     /*
      INIT YOUR CONTENT HERE
      */
+   
+
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Touch to change the gravity.\nThis text is added as a UI element (will not move with camera)."
+                                         fontName:@"Arial"
+                                         fontSize:24];
+    [ttf setColor:[CCColor blackColor]];
+    [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
+                                 self.contentSize.height*0.5 - ttf.contentSize.height)];
     
+    [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
+
     // done
 	return self;
 }

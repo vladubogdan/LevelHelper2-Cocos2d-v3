@@ -279,11 +279,21 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 -(void)dealloc{
+    NSLog(@"PHYSICS NODE DEALLOC BEGIN");
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
 
+    
 #if LH_USE_BOX2D
+    //we need to first destroy all children and then distroy box2d world
+    NSLog(@"REMOVING ALL CHILDREN");
+    [self removeAllChildren];
+
+    NSLog(@"DELETING BOX@D WORLD");
     LH_SAFE_DELETE(_box2dWorld);
 #endif
+    
+    NSLog(@"PHYSICS NODE DEALLOC END");
     
     LH_SUPER_DEALLOC();
 }
