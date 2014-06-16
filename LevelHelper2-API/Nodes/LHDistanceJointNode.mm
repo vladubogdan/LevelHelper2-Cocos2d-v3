@@ -177,6 +177,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                                                                             relativePosB.y + nodeB.contentSize.height*0.5)
                                                                     minDistance:_length
                                                                     maxDistance:_length];
+        joint.collideBodies = [_jointProtocolImp collideConnected];
+        
         [_jointProtocolImp setJoint:joint];
         
 #endif//LH_USE_BOX2D

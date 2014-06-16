@@ -47,13 +47,24 @@
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-    LHDistanceJointNode* dJointNode = (LHDistanceJointNode*)[self childNodeWithName:@"testDistanceJoint"];
-    if(dJointNode){
-        NSLog(@"REMOVING THE DISTANCE JOINT %@", [dJointNode name]);
-        [dJointNode removeFromParent];
-        dJointNode = NULL;
+    {
+        LHDistanceJointNode* dJointNode = (LHDistanceJointNode*)[self childNodeWithName:@"testDistanceJoint"];
+        if(dJointNode){
+            NSLog(@"REMOVING THE DISTANCE JOINT %@", [dJointNode name]);
+            [dJointNode removeFromParent];
+            dJointNode = NULL;
+        }
     }
-
+    
+    {
+        LHRevoluteJointNode* rJointNode = (LHRevoluteJointNode*)[self childNodeWithName:@"RevoluteJoint"];
+        if(rJointNode){
+            NSLog(@"REMOVING THE REVOLUTE JOINT %@", [rJointNode name]);
+            [rJointNode removeFromParent];
+            rJointNode = NULL;
+        }
+    }
+    
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
 

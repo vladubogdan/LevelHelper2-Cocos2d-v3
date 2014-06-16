@@ -283,6 +283,10 @@
 		6E0D5939194EC6930036E940 /* LHSceneJointsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5937194EC6930036E940 /* LHSceneJointsTest.m */; };
 		6E0D594F194F01500036E940 /* LHSceneRopeJointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D594E194F01500036E940 /* LHSceneRopeJointTest.m */; };
 		6E0D5950194F01500036E940 /* LHSceneRopeJointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D594E194F01500036E940 /* LHSceneRopeJointTest.m */; };
+		6E0D5953194F03080036E940 /* LHRevoluteJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */; };
+		6E0D5954194F03080036E940 /* LHRevoluteJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */; };
+		6E0D5957194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
+		6E0D5958194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -660,6 +664,10 @@
 		6E0D5937194EC6930036E940 /* LHSceneJointsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHSceneJointsTest.m; path = Classes/LHSceneJointsTest.m; sourceTree = "<group>"; };
 		6E0D594D194F01500036E940 /* LHSceneRopeJointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneRopeJointTest.h; path = Classes/LHSceneRopeJointTest.h; sourceTree = "<group>"; };
 		6E0D594E194F01500036E940 /* LHSceneRopeJointTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHSceneRopeJointTest.m; path = Classes/LHSceneRopeJointTest.m; sourceTree = "<group>"; };
+		6E0D5951194F03080036E940 /* LHRevoluteJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRevoluteJointNode.h; sourceTree = "<group>"; };
+		6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHRevoluteJointNode.mm; sourceTree = "<group>"; };
+		6E0D5955194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.h"; sourceTree = "<group>"; };
+		6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.mm"; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2336,6 +2344,8 @@
 			children = (
 				6E89FDE8192E23100040478F /* NSDictionary+LHDictionary.h */,
 				6E89FDE9192E23100040478F /* NSDictionary+LHDictionary.m */,
+				6E0D5955194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */,
+				6E0D5956194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -2353,6 +2363,8 @@
 				6E89FDF5192E23100040478F /* LHDistanceJointNode.mm */,
 				6E89FE00192E23100040478F /* LHRopeJointNode.h */,
 				6E89FE01192E23100040478F /* LHRopeJointNode.mm */,
+				6E0D5951194F03080036E940 /* LHRevoluteJointNode.h */,
+				6E0D5952194F03080036E940 /* LHRevoluteJointNode.mm */,
 				6E89FDF6192E23100040478F /* LHDrawNode.h */,
 				6E89FDF7192E23100040478F /* LHDrawNode.m */,
 				6E89FDF8192E23100040478F /* LHGravityArea.h */,
@@ -2576,6 +2588,7 @@
 				6E0D55D6194C32A30036E940 /* IOSVersion.m in Sources */,
 				6E0D55D7194C32A30036E940 /* CCDirector.m in Sources */,
 				6E0D55D8194C32A30036E940 /* CCScrollView.m in Sources */,
+				6E0D5954194F03080036E940 /* LHRevoluteJointNode.mm in Sources */,
 				6E0D5905194CD6A40036E940 /* b2MouseJoint.cpp in Sources */,
 				6E0D58F6194CD6A40036E940 /* b2World.cpp in Sources */,
 				6E0D58F9194CD6A40036E940 /* b2ChainAndPolygonContact.cpp in Sources */,
@@ -2756,6 +2769,7 @@
 				6E0D5663194C32A30036E940 /* LHUtils.m in Sources */,
 				6E0D5664194C32A30036E940 /* CCDrawingPrimitives.m in Sources */,
 				6E0D58F7194CD6A40036E940 /* b2WorldCallbacks.cpp in Sources */,
+				6E0D5958194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E0D5665194C32A30036E940 /* LHOpacityProperty.m in Sources */,
 				6E0D5666194C32A30036E940 /* TGAlib.m in Sources */,
 				6E0D5667194C32A30036E940 /* UITouch+CC.m in Sources */,
@@ -2846,6 +2860,7 @@
 				6E1220F81924BD86005E8532 /* CCTexturePVR.m in Sources */,
 				6E1222071924BD87005E8532 /* CCBAnimationManager.m in Sources */,
 				6E89FE26192E23100040478F /* LHDistanceJointNode.mm in Sources */,
+				6E0D5953194F03080036E940 /* LHRevoluteJointNode.mm in Sources */,
 				6E89FE29192E23100040478F /* LHNode.mm in Sources */,
 				6E89FE13192E23100040478F /* LHScaleFrame.m in Sources */,
 				6E89FE12192E23100040478F /* LHRotationFrame.m in Sources */,
@@ -2864,6 +2879,7 @@
 				6E1220FB1924BD86005E8532 /* CCTiledMap.m in Sources */,
 				6E1221C01924BD87005E8532 /* CCControl.m in Sources */,
 				6E1221421924BD87005E8532 /* CCVertex.m in Sources */,
+				6E0D5957194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E12217E1924BD87005E8532 /* ALBuffer.m in Sources */,
 				6E0D5917194D76130036E940 /* LHPhysicsNode.mm in Sources */,
 				6E12214B1924BD87005E8532 /* NSThread+performBlock.m in Sources */,

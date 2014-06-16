@@ -20,10 +20,8 @@
 #import "LHParallaxLayer.h"
 #import "LHCamera.h"
 #import "LHRopeJointNode.h"
-//#import "LHWeldJointNode.h"
-//#import "LHRevoluteJointNode.h"
+#import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
-//#import "LHPrismaticJointNode.h"
 
 #import "LHPhysicsNode.h"
 
@@ -50,10 +48,7 @@
     CCNode* touchedNode;
     BOOL touchedNodeWasDynamic;
     
-    NSMutableArray* debugJoints;//its only used when in debug mode;
     CGPoint ropeJointsCutStartPt;
-    
-    NSMutableArray* gravityNodes;
     
     NSMutableDictionary* _loadedAssetsInformations;
     
@@ -70,7 +65,6 @@
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(relativePath);
-    LH_SAFE_RELEASE(gravityNodes);
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
@@ -742,14 +736,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 //        [scene addDebugJointNode:jt];
 //        [scene addLateLoadingNode:jt];
 //    }
-//    else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
-//        
-//        LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo
-//                                                                                parent:prnt];
-//
-//        [scene addDebugJointNode:jt];
-//        [scene addLateLoadingNode:jt];
-//    }
+    else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
+        
+        LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo
+                                                                                parent:prnt];
+        [scene addLateLoadingNode:jt];
+    }
     else if([nodeType isEqualToString:@"LHDistanceJoint"]){
         
         LHDistanceJointNode* jt = [LHDistanceJointNode distanceJointNodeWithDictionary:childInfo

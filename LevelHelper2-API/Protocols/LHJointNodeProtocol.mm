@@ -77,7 +77,9 @@
         _node = nd;
         
         _relativePosA = [dict pointForKey:@"relativePosA"];
-        _relativePosB = [dict pointForKey:@"relativePosB"];
+
+        if([dict objectForKey:@"relativePosB"])//certain joints do not have a second anchor
+            _relativePosB = [dict pointForKey:@"relativePosB"];
         
         _nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
         _nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];

@@ -997,7 +997,7 @@ LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
                                                                                             relativePosB.y + nodeB.contentSize.height*0.5)
                                                                     minDistance:0
                                                                     maxDistance:_length];
-        
+        joint.collideBodies = [_jointProtocolImp collideConnected];
         
         [_jointProtocolImp setJoint:joint];
         
