@@ -26,6 +26,7 @@
 #import "LHWeldJointNode.h"
 #import "LHPrismaticJointNode.h"
 #import "LHWheelJointNode.h"
+#import "LHGearJointNode.h"
 
 #import "LHPhysicsNode.h"
 
@@ -769,6 +770,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         LHWheelJointNode* jt = [LHWheelJointNode wheelJointNodeWithDictionary:childInfo
                                                                        parent:prnt];
+        [scene addLateLoadingNode:jt];
+    }
+    else if([nodeType isEqualToString:@"LHGearJoint"]){
+        
+        LHGearJointNode* jt = [LHGearJointNode gearJointNodeWithDictionary:childInfo
+                                                                    parent:prnt];
         [scene addLateLoadingNode:jt];
     }
 

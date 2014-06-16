@@ -109,23 +109,8 @@
 
 #pragma mark - LHJointNodeProtocol Required
 LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 
-
-#if LH_USE_BOX2D
-#pragma mark - LHJointNodeProtocol Box2d Support
--(b2PulleyJoint*)joint{
-return (b2PulleyJoint*)[_jointProtocolImp joint];
-}
-
-
-#else
-
-#pragma mark - LHJointNodeProtocol Chipmunk Support
-//-(CCPhysicsPivotJoint*)joint{
-//    return (CCPhysicsPivotJoint*)[_jointProtocolImp joint];
-//}
-
-#endif
 
 
 #pragma mark LHNodeProtocol Required

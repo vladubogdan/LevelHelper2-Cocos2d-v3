@@ -37,6 +37,18 @@ class b2Joint;
  */
 -(CGPoint)anchorB;
 
+/**
+ Returns the actual Box2d or Cocos2d/Chipmunk joint object.
+ */
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+-(b2Joint*)joint;
+#endif
+
+#else//chipmunk
+-(CCPhysicsJoint*)joint;
+#endif//LH_USE_BOX2D
+
 @end
 
 
@@ -81,5 +93,22 @@ class b2Joint;
 -(CGPoint)anchorB{\
     return [_jointProtocolImp anchorB];\
 }
+
+#if LH_USE_BOX2D
+
+#define LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION  \
+-(b2Joint*)joint{\
+    return [_jointProtocolImp joint];\
+}
+
+#else//chipmunk
+
+#define LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION  \
+-(CCPhysicsJoint*)joint{\
+return [_jointProtocolImp joint];\
+}
+
+#endif
+
 
 @end

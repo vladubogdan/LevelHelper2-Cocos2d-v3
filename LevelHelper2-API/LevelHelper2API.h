@@ -28,6 +28,7 @@
 #import "LHWeldJointNode.h"
 #import "LHPrismaticJointNode.h"
 #import "LHWheelJointNode.h"
+#import "LHGearJointNode.h"
 
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"

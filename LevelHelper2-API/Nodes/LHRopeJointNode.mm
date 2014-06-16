@@ -533,23 +533,7 @@ double fcat(double x, void *data)
 
 #pragma mark - LHJointNodeProtocol Required
 LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
-
-
-#if LH_USE_BOX2D
-#pragma mark - LHJointNodeProtocol Box2d Support
--(b2RopeJoint*)joint{
-    return (b2RopeJoint*)[_jointProtocolImp joint];
-}
-
-
-#else
-
-#pragma mark - LHJointNodeProtocol Chipmunk Support
--(CCPhysicsSlideJoint*)joint{
-    return (CCPhysicsSlideJoint*)[_jointProtocolImp joint];
-}
-
-#endif
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 
 
 

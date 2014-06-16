@@ -20,8 +20,8 @@ class b2DistanceJoint;
 
 /**
  LHDistanceJointNode class is used to load a LevelHelper distance joint.
- When using Chipmunk it uses a Slide joint.
- When using Box2d it uses a b2Distance joint.
+ When using Cocos2d/Chipmunk it uses a CCPhysicsSlideJoint joint.
+ When using Box2d it uses a b2DistanceJoint object.
  */
 
 @interface LHDistanceJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
@@ -39,24 +39,5 @@ class b2DistanceJoint;
  Returns the frequency of the SpriteKit joint.
  */
 -(CGFloat)frequency;
-
-
-#pragma mark - Box2d Support
-#if LH_USE_BOX2D
-
-/**
- Returns the actual Box2D joint that connects the two bodies together.
- */
-#ifdef __cplusplus
--(b2DistanceJoint*)joint;
-#endif
-
-#else
-#pragma mark - Chipmunk Support
-/**
- Returns the actual Cocos2d/Chipmunk joint that connects the two bodies together.
- */
--(CCPhysicsSlideJoint*)joint;
-#endif//LH_USE_BOX2D
 
 @end

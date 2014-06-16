@@ -295,6 +295,10 @@
 		6E0D5964194F1DCF0036E940 /* LHPrismaticJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */; };
 		6E0D5967194F23E50036E940 /* LHWheelJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */; };
 		6E0D5968194F23E50036E940 /* LHWheelJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */; };
+		6E0D596B194F3A430036E940 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D596A194F3A430036E940 /* LHSceneGearJointsTest.mm */; };
+		6E0D596C194F3A430036E940 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D596A194F3A430036E940 /* LHSceneGearJointsTest.mm */; };
+		6E0D596F194F3AF50036E940 /* LHGearJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */; };
+		6E0D5970194F3AF50036E940 /* LHGearJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E121FE91924BD85005E8532 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE81924BD85005E8532 /* OpenGLES.framework */; };
 		6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
@@ -684,6 +688,10 @@
 		6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHPrismaticJointNode.mm; sourceTree = "<group>"; };
 		6E0D5965194F23E50036E940 /* LHWheelJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWheelJointNode.h; sourceTree = "<group>"; };
 		6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHWheelJointNode.mm; sourceTree = "<group>"; };
+		6E0D5969194F3A430036E940 /* LHSceneGearJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneGearJointsTest.h; path = Classes/LHSceneGearJointsTest.h; sourceTree = "<group>"; };
+		6E0D596A194F3A430036E940 /* LHSceneGearJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneGearJointsTest.mm; path = Classes/LHSceneGearJointsTest.mm; sourceTree = "<group>"; };
+		6E0D596D194F3AF50036E940 /* LHGearJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGearJointNode.h; sourceTree = "<group>"; };
+		6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGearJointNode.mm; sourceTree = "<group>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2273,6 +2281,8 @@
 				6E0D5937194EC6930036E940 /* LHSceneJointsTest.m */,
 				6E0D594D194F01500036E940 /* LHSceneRopeJointTest.h */,
 				6E0D594E194F01500036E940 /* LHSceneRopeJointTest.m */,
+				6E0D5969194F3A430036E940 /* LHSceneGearJointsTest.h */,
+				6E0D596A194F3A430036E940 /* LHSceneGearJointsTest.mm */,
 				6E12228E1924BD88005E8532 /* AppDelegate.h */,
 				6E12228F1924BD88005E8532 /* AppDelegate.m */,
 			);
@@ -2389,6 +2399,8 @@
 				6E0D5962194F1DCF0036E940 /* LHPrismaticJointNode.mm */,
 				6E0D5965194F23E50036E940 /* LHWheelJointNode.h */,
 				6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */,
+				6E0D596D194F3AF50036E940 /* LHGearJointNode.h */,
+				6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */,
 				6E89FDF6192E23100040478F /* LHDrawNode.h */,
 				6E89FDF7192E23100040478F /* LHDrawNode.m */,
 				6E89FDF8192E23100040478F /* LHGravityArea.h */,
@@ -2611,9 +2623,11 @@
 				6E0D55D5194C32A30036E940 /* OpenALManager.m in Sources */,
 				6E0D55D6194C32A30036E940 /* IOSVersion.m in Sources */,
 				6E0D55D7194C32A30036E940 /* CCDirector.m in Sources */,
+				6E0D5970194F3AF50036E940 /* LHGearJointNode.mm in Sources */,
 				6E0D55D8194C32A30036E940 /* CCScrollView.m in Sources */,
 				6E0D5954194F03080036E940 /* LHRevoluteJointNode.mm in Sources */,
 				6E0D5905194CD6A40036E940 /* b2MouseJoint.cpp in Sources */,
+				6E0D596C194F3A430036E940 /* LHSceneGearJointsTest.mm in Sources */,
 				6E0D58F6194CD6A40036E940 /* b2World.cpp in Sources */,
 				6E0D58F9194CD6A40036E940 /* b2ChainAndPolygonContact.cpp in Sources */,
 				6E0D55D9194C32A30036E940 /* CCResponder.m in Sources */,
@@ -2935,6 +2949,7 @@
 				6E1221781924BD87005E8532 /* OALSimpleAudio.m in Sources */,
 				6E12206A1924BD86005E8532 /* CCGLProgram.m in Sources */,
 				6E12228C1924BD88005E8532 /* main.m in Sources */,
+				6E0D596B194F3A430036E940 /* LHSceneGearJointsTest.mm in Sources */,
 				6E12219F1924BD87005E8532 /* OALAudioSession.m in Sources */,
 				6E1222161924BD88005E8532 /* CCBLocalizationManager.m in Sources */,
 				6E1221021924BD86005E8532 /* CCTiledMapObjectGroup.m in Sources */,
@@ -2980,6 +2995,7 @@
 				6E1220AB1924BD86005E8532 /* CCPhysicsNode.m in Sources */,
 				6E0D591B194D947E0036E940 /* LHBodyPhysicsTypeScene.m in Sources */,
 				6E1221911924BD87005E8532 /* ALSoundSourcePool.m in Sources */,
+				6E0D596F194F3AF50036E940 /* LHGearJointNode.mm in Sources */,
 				6E89FE0F192E23100040478F /* LHFrame.m in Sources */,
 				6E1220A01924BD86005E8532 /* CCParticleSystemBase.m in Sources */,
 				6E1221371924BD87005E8532 /* CCColor.m in Sources */,

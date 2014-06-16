@@ -65,19 +65,4 @@ class b2PrismaticJoint;
  */
 -(CGPoint)axis;
 
-#pragma mark - Box2d Support
-#if LH_USE_BOX2D
-
-/**
- Returns the actual Box2D joint that connects the two bodies together.
- */
-#ifdef __cplusplus
--(b2PrismaticJoint*)joint;
-#endif
-
-#else
-#pragma mark - Chipmunk Support
-//-(CCPhysicsPivotJoint*)joint;
-#endif//LH_USE_BOX2D
-
 @end

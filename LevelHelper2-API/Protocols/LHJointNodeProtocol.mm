@@ -76,7 +76,8 @@
         _joint = NULL;
         _node = nd;
         
-        _relativePosA = [dict pointForKey:@"relativePosA"];
+        if([dict objectForKey:@"relativePosA"])//certain joints do not have an anchor (e.g. gear joint)
+            _relativePosA = [dict pointForKey:@"relativePosA"];
 
         if([dict objectForKey:@"relativePosB"])//certain joints do not have a second anchor
             _relativePosB = [dict pointForKey:@"relativePosB"];

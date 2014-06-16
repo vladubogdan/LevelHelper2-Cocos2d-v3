@@ -1,12 +1,12 @@
 //
-//  LHRevoluteJointNode.m
+//  LHGearJointNode.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 30/03/14.
 //  Copyright (c) 2014 GameDevHelper.com. All rights reserved.
 //
 
-#import "LHRevoluteJointNode.h"
+#import "LHGearJointNode.h"
 #import "LHUtils.h"
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
@@ -31,37 +31,42 @@
 
 
 
-@implementation LHRevoluteJointNode
+@implementation LHGearJointNode
 {
     LHNodeProtocolImpl*     _nodeProtocolImp;
     LHJointNodeProtocolImp* _jointProtocolImp;
+ 
+    NSString* _jointAUUID;
+    NSString* _jointBUUID;
     
-    BOOL _enableLimit;
-    BOOL _enableMotor;
+    __unsafe_unretained CCNode<LHJointNodeProtocol>* _jointA;
+    __unsafe_unretained CCNode<LHJointNodeProtocol>* _jointB;
     
-    float _lowerAngle;
-    float _upperAngle;
-    
-    float _maxMotorTorque;
-    float _motorSpeed;
+    float   _ratio;
 }
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
+    _jointA = nil;
+    _jointB = nil;
+    
+    LH_SAFE_RELEASE(_jointAUUID);
+    LH_SAFE_RELEASE(_jointBUUID);
+    
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
++(instancetype)gearJointNodeWithDictionary:(NSDictionary*)dict
                                         parent:(CCNode*)prnt{
     
-    return LH_AUTORELEASED([[self alloc] initRevoluteJointNodeWithDictionary:dict
-                                                                      parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initGearJointNodeWithDictionary:dict
+                                                                  parent:prnt]);
 }
 
--(instancetype)initRevoluteJointNodeWithDictionary:(NSDictionary*)dict
-                                            parent:(CCNode*)prnt
+-(instancetype)initGearJointNodeWithDictionary:(NSDictionary*)dict
+                                        parent:(CCNode*)prnt
 {
     if(self = [super init]){
         
@@ -72,18 +77,11 @@
         
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
-        
-        
-        _enableLimit = [dict boolForKey:@"enableLimit"];
-        _enableMotor = [dict boolForKey:@"enableMotor"];
-        
-        
-        _lowerAngle = [dict floatForKey:@"lowerAngle"];
-        _upperAngle = [dict floatForKey:@"upperAngle"];
-        
-        _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
-        _motorSpeed = [dict floatForKey:@"motorSpeed"];
-        
+
+        _jointAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointAUUID"]];
+        _jointBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointBUUID"]];
+
+        _ratio = [dict floatForKey:@"gearRatio"];
     }
     return self;
 }
@@ -94,24 +92,7 @@
 }
 
 #pragma mark - Properties
--(BOOL)enableLimit{
-    return _enableLimit;
-}
--(BOOL)enableMotor{
-    return _enableMotor;
-}
--(CGFloat)lowerAngle{
-    return _lowerAngle;
-}
--(CGFloat)upperAngle{
-    return _upperAngle;
-}
--(CGFloat)maxMotorTorque{
-    return _maxMotorTorque;
-}
--(CGFloat)motorSpeed{
-    return _motorSpeed;
-}
+
 
 
 #pragma mark - LHJointNodeProtocol Required
@@ -125,16 +106,35 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark LHNodeProtocol Optional
+-(void)findConnectedJoints
+{
+    if(!_jointAUUID || !_jointBUUID)
+        return;
+    
+    LHScene* scene = (LHScene*)[self scene];
+    
+    if([[self parent] respondsToSelector:@selector(childNodeWithUUID:)])
+    {
+        _jointA = (CCNode<LHJointNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:_jointAUUID];
+        _jointB = (CCNode<LHJointNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:_jointBUUID];
+    }
+    else{
+        _jointA = (CCNode<LHJointNodeProtocol>*)[scene childNodeWithUUID:_jointAUUID];
+        _jointB = (CCNode<LHJointNodeProtocol>*)[scene childNodeWithUUID:_jointBUUID];
+    }
+}
+
+
 -(BOOL)lateLoading
 {
     [_jointProtocolImp findConnectedNodes];
     
+    [self findConnectedJoints];
+    
     CCNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
     CCNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
-    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
-    
-    if(nodeA && nodeB)
+    if(nodeA && nodeB && _jointA && _jointB)
     {
 #if LH_USE_BOX2D
         
@@ -150,28 +150,22 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         if(!bodyA || !bodyB)return NO;
         
-        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
-        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        b2Joint* jtA = [_jointA joint];
+        b2Joint* jtB = [_jointB joint];
         
-        b2RevoluteJointDef jointDef;
         
-        jointDef.Initialize(bodyA,
-                            bodyB,
-                            posA);
+        b2GearJointDef jointDef;
         
+        jointDef.joint1 = jtA;
+        jointDef.joint2 = jtB;
+        jointDef.bodyA = bodyA;
+        jointDef.bodyB = bodyB;
+        jointDef.ratio = _ratio;
+
         jointDef.collideConnected = [_jointProtocolImp collideConnected];
 
-        jointDef.enableLimit = _enableLimit;
-        jointDef.enableMotor = _enableMotor;
-        
-        jointDef.lowerAngle = _lowerAngle;
-        jointDef.upperAngle = _upperAngle;
-        
-        jointDef.maxMotorTorque = _maxMotorTorque;
-        jointDef.motorSpeed = _motorSpeed;
-        
-        b2RevoluteJoint* joint = (b2RevoluteJoint*)world->CreateJoint(&jointDef);
-        
+        b2GearJoint* joint = (b2GearJoint*)world->CreateJoint(&jointDef);
+
         [_jointProtocolImp setJoint:joint];
 
 #else//chipmunk
@@ -179,12 +173,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         if(!nodeA.physicsBody || !nodeB.physicsBody)
             return NO;
 
-        NSLog(@"\n\nWARNING: Revolute joint is not supported when using Chipmunk physics engine.\n\n");
+        NSLog(@"\n\nWARNING: Gear joint is not supported when using Chipmunk physics engine.\n\n");
         
-        CCPhysicsJoint* joint = [CCPhysicsJoint connectedPivotJointWithBodyA:nodeA.physicsBody
-                                                                       bodyB:nodeB.physicsBody
-                                                                     anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
-                                                                                         relativePosA.y + nodeA.contentSize.height*0.5)];
+        
+//        CCPhysicsJoint* joint = [CCPhysicsJoint connectedPivotJointWithBodyA:nodeA.physicsBody
+//                                                                       bodyB:nodeB.physicsBody
+//                                                                     anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
+//                                                                                         relativePosA.y + nodeA.contentSize.height*0.5)];
         
 //        CGPoint relativePosB = [nodeA convertToWorldSpaceAR:relativePosA];
 //        relativePosB = [nodeB convertToNodeSpaceAR:relativePosB];
@@ -206,9 +201,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 //                                                                    minDistance:0
 //                                                                    maxDistance:0.1];
 
-        joint.collideBodies = [_jointProtocolImp collideConnected];
+//        joint.collideBodies = [_jointProtocolImp collideConnected];
         
-        [_jointProtocolImp setJoint:joint];
+//        [_jointProtocolImp setJoint:joint];
         
 #endif//LH_USE_BOX2D
 
