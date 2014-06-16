@@ -1,5 +1,5 @@
 //
-//  LHSceneJointsTest.m
+//  LHSceneRopeJointTest.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,16 +8,16 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHSceneJointsTest.h"
+#import "LHSceneRopeJointTest.h"
 
-@implementation LHSceneJointsTest
+@implementation LHSceneRopeJointTest
 
-+ (LHSceneJointsTest *)scene
++ (LHSceneRopeJointTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level06-ropeJoint.plist"];
 }
 
-+(LHSceneJointsTest*)sceneWithFile:(NSString*)levelPlistFile
++(LHSceneRopeJointTest*)sceneWithFile:(NSString*)levelPlistFile
 {
     return [[self alloc] initWithContentOfFile:levelPlistFile];
 }
@@ -31,7 +31,7 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Click to remove joints.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Make a line to cut the rope joint."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
@@ -47,20 +47,9 @@
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-    LHDistanceJointNode* dJointNode = (LHDistanceJointNode*)[self childNodeWithName:@"testDistanceJoint"];
-    if(dJointNode){
-        NSLog(@"REMOVING THE DISTANCE JOINT %@", [dJointNode name]);
-        [dJointNode removeFromParent];
-        dJointNode = NULL;
-    }
-
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
 
-    
-//    [[CCDirector sharedDirector] replaceScene:[LHSceneJointsTest scene]];
-    
-    
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
 }

@@ -40,14 +40,10 @@
 }
 
 -(void)dealloc{
-
-    NSLog(@"DEALLOC JOINT NODE BEGIN prnt %@ scene %@", [self parent], [self scene]);
     LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SUPER_DEALLOC();
-    
-    NSLog(@"DEALLOC JOINT NODE END");
 }
 
 +(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
@@ -67,17 +63,16 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        _jointProtocolImp = [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
-                                                                                          node:self];
+        _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
+                                                                                         node:self];
         
-        _dampingRatio =[dict floatForKey:@"dampingRatio"];
-        _frequency = [dict floatForKey:@"frequency"];
+        _dampingRatio   = [dict floatForKey:@"dampingRatio"];
+        _frequency      = [dict floatForKey:@"frequency"];
     }
     return self;
 }
 
 -(void)removeFromParent{
-    NSLog(@"REMOVE FROM PARENT %@", self);
     LH_SAFE_RELEASE(_jointProtocolImp);
     [super removeFromParent];
 }

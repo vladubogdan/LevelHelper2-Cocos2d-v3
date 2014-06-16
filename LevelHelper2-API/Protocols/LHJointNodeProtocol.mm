@@ -52,33 +52,8 @@
 
 -(void)dealloc{
 
-    LHScene* scene = (LHScene*)[_node scene];
+    [self removeJoint];
     
-    if(scene)
-    {
-        //if we dont have the scene it means the scene was changed so the box2d world will be deleted, deleting the joints also - safe
-        //if we do have the scene it means the node was deleted so we need to delete the joint manually
-#if LH_USE_BOX2D
-        if(_joint){
-            LHPhysicsNode* pNode = [scene gameWorldNode];
-
-            //if we dont have the scene it means
-            b2World* world = [pNode box2dWorld];
-            
-            if(world){
-            
-                world->DestroyJoint(_joint);
-                _joint = NULL;
-            }
-        }
-#else
-        if(_joint){
-            [_joint tryRemoveFromPhysicsNode:[scene physicsNode]];
-            _joint = nil;
-        }
-#endif
-    }
-
     _node = nil;
     
     _nodeA = nil;
@@ -164,6 +139,36 @@
 
 -(BOOL)collideConnected{
     return _collideConnected;
+}
+
+-(void)removeJoint{
+    
+    LHScene* scene = (LHScene*)[_node scene];
+    
+    if(scene)
+    {
+        //if we dont have the scene it means the scene was changed so the box2d world will be deleted, deleting the joints also - safe
+        //if we do have the scene it means the node was deleted so we need to delete the joint manually
+#if LH_USE_BOX2D
+        if(_joint){
+            LHPhysicsNode* pNode = [scene gameWorldNode];
+            
+            //if we dont have the scene it means
+            b2World* world = [pNode box2dWorld];
+            
+            if(world){
+                
+                world->DestroyJoint(_joint);
+                _joint = NULL;
+            }
+        }
+#else
+        if(_joint){
+            [_joint tryRemoveFromPhysicsNode:[scene physicsNode]];
+            _joint = nil;
+        }
+#endif
+    }
 }
 
 #pragma mark - Box2d Support

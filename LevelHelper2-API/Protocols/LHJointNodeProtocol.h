@@ -58,6 +58,8 @@ class b2Joint;
 
 -(BOOL)collideConnected;
 
+-(void)removeJoint;
+
 #if LH_USE_BOX2D
 
 #ifdef __cplusplus
