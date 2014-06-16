@@ -23,6 +23,7 @@
 #import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
 #import "LHPulleyJointNode.h"
+#import "LHWeldJointNode.h"
 
 #import "LHPhysicsNode.h"
 
@@ -730,13 +731,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                                                     parent:prnt];
         [scene addLateLoadingNode:jt];
     }
-//    else if([nodeType isEqualToString:@"LHWeldJoint"])
-//    {
-//        LHWeldJointNode* jt = [LHWeldJointNode weldJointNodeWithDictionary:childInfo
-//                                                                    parent:prnt];
-//        [scene addDebugJointNode:jt];
-//        [scene addLateLoadingNode:jt];
-//    }
+    else if([nodeType isEqualToString:@"LHWeldJoint"])
+    {
+        LHWeldJointNode* jt = [LHWeldJointNode weldJointNodeWithDictionary:childInfo
+                                                                    parent:prnt];
+        [scene addLateLoadingNode:jt];
+    }
     else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
         
         LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo

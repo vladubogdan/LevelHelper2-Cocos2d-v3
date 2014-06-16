@@ -73,6 +73,15 @@
             pJointNode = NULL;
         }
     }
+    
+    {
+        LHWeldJointNode* wJointNode = (LHWeldJointNode*)[self childNodeWithName:@"WeldJoint1"];
+        if(wJointNode){
+            NSLog(@"REMOVING THE WELD JOINT %@", [wJointNode name]);
+            [wJointNode removeFromParent];
+            wJointNode = NULL;
+        }
+    }
 
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];

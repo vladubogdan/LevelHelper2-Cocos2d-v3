@@ -25,6 +25,7 @@
 #import "LHDistanceJointNode.h"
 #import "LHRevoluteJointNode.h"
 #import "LHPulleyJointNode.h"
+#import "LHWeldJointNode.h"
 
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
