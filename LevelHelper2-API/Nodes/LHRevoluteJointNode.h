@@ -31,12 +31,12 @@ class b2RevoluteJoint;
 
 #pragma mark - Properties
 /**
- Returns the whether or not the limit is enabled on the joint.
+ Returns whether or not the limit is enabled on the joint.
  */
 -(BOOL)enableLimit;
 
 /**
- Returns the whether or not the motor is enabled on the joint.
+ Returns whether or not the motor is enabled on the joint.
  */
 -(BOOL)enableMotor;
 

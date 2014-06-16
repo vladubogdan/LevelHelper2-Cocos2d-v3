@@ -24,6 +24,7 @@
 #import "LHDistanceJointNode.h"
 #import "LHPulleyJointNode.h"
 #import "LHWeldJointNode.h"
+#import "LHPrismaticJointNode.h"
 
 #import "LHPhysicsNode.h"
 
@@ -757,14 +758,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [scene addLateLoadingNode:jt];
         
     }
-
-//    else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
-//        
-//        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo
-//                                                                                   parent:prnt];
-//        [scene addDebugJointNode:jt];
-//        [scene addLateLoadingNode:jt];
-//    }
+    else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
+        
+        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo
+                                                                                   parent:prnt];
+        [scene addLateLoadingNode:jt];
+    }
 
 
     else{

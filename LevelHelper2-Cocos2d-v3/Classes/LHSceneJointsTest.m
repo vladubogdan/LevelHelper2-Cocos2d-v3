@@ -82,6 +82,15 @@
             wJointNode = NULL;
         }
     }
+    
+    {
+        LHPrismaticJointNode* pJointNode = (LHPrismaticJointNode*)[self childNodeWithName:@"PrismaticJoint"];
+        if(pJointNode){
+            NSLog(@"REMOVING THE PRISMATIC JOINT %@", [pJointNode name]);
+            [pJointNode removeFromParent];
+            pJointNode = NULL;
+        }
+    }
 
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];

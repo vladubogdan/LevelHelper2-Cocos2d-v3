@@ -102,7 +102,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>7CB894C8-7BB0-48E1-9A4A-7025CF54DA36</string>
+				<string>05077EC2-7C52-4DDC-8294-4BD3EDDF8089</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -310,7 +310,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>7CB894C8-7BB0-48E1-9A4A-7025CF54DA36</string>
+				<string>05077EC2-7C52-4DDC-8294-4BD3EDDF8089</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -644,7 +644,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>A33032CA-76B9-4C1B-8501-90C23CDA54D1</string>
+				<string>66914C67-D8A6-44CF-8F2D-392B3F81CA30</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -718,7 +718,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>A33032CA-76B9-4C1B-8501-90C23CDA54D1</string>
+				<string>66914C67-D8A6-44CF-8F2D-392B3F81CA30</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -818,7 +818,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>A33032CA-76B9-4C1B-8501-90C23CDA54D1</string>
+				<string>66914C67-D8A6-44CF-8F2D-392B3F81CA30</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -968,6 +968,190 @@
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>axis</key>
+			<string>{-0.70710678540262939, 0.70710677697046553}</string>
+			<key>collideConnected</key>
+			<false/>
+			<key>enablePrismaticLimit</key>
+			<true/>
+			<key>enablePrismaticMotor</key>
+			<false/>
+			<key>lowerTranslation</key>
+			<real>-60</real>
+			<key>maxMotorForce</key>
+			<real>9.1000003814697266</real>
+			<key>name</key>
+			<string>PrismaticJoint</string>
+			<key>nodeType</key>
+			<string>LHPrismaticJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>prismaticMotorSpeed</key>
+			<real>270</real>
+			<key>relativePosA</key>
+			<string>{-50.153531947046758, -0.34109070735453884}</string>
+			<key>spriteAUUID</key>
+			<string>B14A8180-F9D8-4A18-B6C2-46FE2556D4D7</string>
+			<key>spriteBUUID</key>
+			<string>CA47F5A4-BC43-4194-88EE-369151D29168</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>upperTranslation</key>
+			<real>170</real>
+			<key>uuid</key>
+			<string>C20D6DC0-C7AA-4413-B4E4-949633C1DA8B</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.76000572795465027, 0.44885289446080578}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>66914C67-D8A6-44CF-8F2D-392B3F81CA30</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>219.89654541015625</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B14A8180-F9D8-4A18-B6C2-46FE2556D4D7</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.85681892593314923, 0.51819546104427228}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1_1_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>66914C67-D8A6-44CF-8F2D-392B3F81CA30</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>26.704816818237305</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>CA47F5A4-BC43-4194-88EE-369151D29168</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>designResolution</key>
 	<string>{960, 640}</string>
@@ -1025,7 +1209,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>7CB894C8-7BB0-48E1-9A4A-7025CF54DA36</key>
+		<key>05077EC2-7C52-4DDC-8294-4BD3EDDF8089</key>
 		<array>
 			<array>
 				<string>{2.75, -10}</string>
@@ -1107,7 +1291,7 @@
 				<string>{2.75, -10}</string>
 			</array>
 		</array>
-		<key>A33032CA-76B9-4C1B-8501-90C23CDA54D1</key>
+		<key>66914C67-D8A6-44CF-8F2D-392B3F81CA30</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>
