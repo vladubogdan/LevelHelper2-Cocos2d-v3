@@ -8,31 +8,28 @@
 
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+class b2DistanceJoint;
+#endif
+#else//chipmunk
+@class CCPhysicsSlideJoint;
+#endif
+
 /**
  LHDistanceJointNode class is used to load a LevelHelper distance joint.
- The equivalent in Cocos2d-v3/Chipmunk is a Spring joint object.
+ When using Cocos2d/Chipmunk it uses a CCPhysicsSlideJoint joint.
+ When using Box2d it uses a b2DistanceJoint object.
  */
 
-@interface LHDistanceJointNode : CCNode <LHNodeProtocol>
+@interface LHDistanceJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
                                         parent:(CCNode*)prnt;
 
-/**
- Returns the point where the joint is connected with the first body. In scene coordinates.
- */
--(CGPoint)anchorA;
-
-/**
- Returns the point where the joint is connected with the second body. In scene coordinates.
- */
--(CGPoint)anchorB;
-
-/**
- Returns the actual Cocos2d/Chipmunk joint that connects the two bodies together.
- */
--(CCPhysicsJoint*)joint;
-
+#pragma mark - Properties
 /**
  Returns the damping ratio of the SpriteKit joint.
  */
@@ -42,4 +39,5 @@
  Returns the frequency of the SpriteKit joint.
  */
 -(CGFloat)frequency;
+
 @end

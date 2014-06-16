@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.84877961874008179, 0}, {0.058051276952028275, 1}}</string>
+			<string>{{0.039777018129825592, 0}, {0.040761556476354599, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-iphone5</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.076936163008213043, 1}}</string>
+			<string>{{1, 1}, {0.078244850039482117, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.83584898710250854, 0}, {0.98904424905776978, 1}}</string>
+			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.83584898710250854, 0}, {0.98904424905776978, 1}}</string>
+			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -79,6 +79,36 @@
 					<true/>
 				</dict>
 				<key>level02-assetTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level03-camera.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level03-gravityAreas.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level04-waterArea.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level05-joints.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level06-ropeJoint.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>level07-gearJoint.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

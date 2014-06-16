@@ -16,10 +16,10 @@
 {
     NSTimeInterval lastTime;
     
-    __weak id _node;
+    __unsafe_unretained CCNode* _node;
     
     NSMutableArray* _animations;
-    __weak LHAnimation* _activeAnimation;
+     __unsafe_unretained LHAnimation* _activeAnimation;
 }
 
 -(void)dealloc{
@@ -47,7 +47,7 @@
                 _animations = [[NSMutableArray alloc] init];
             }
             LHAnimation* animation = [LHAnimation animationWithDictionary:anim
-                                                                     node:_node];
+                                                                     node:(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)_node];
             if([animation isActive]){
                 _activeAnimation = animation;
             }

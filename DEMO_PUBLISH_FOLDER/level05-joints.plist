@@ -1,0 +1,1752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.13876733648357914, 0.15890385954116937}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_statue</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{105, 148}</string>
+			<key>spriteName</key>
+			<string>object_statue</string>
+			<key>spriteUUID</key>
+			<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>DE4C04CB-42B2-4EFE-826A-C4D9CDE0E1DE</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.3546564765497654, 0.31990803556691388}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_bananabunch</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{88, 65}</string>
+			<key>spriteName</key>
+			<string>object_bananabunch</string>
+			<key>spriteUUID</key>
+			<string>60F9EAC9-FDD1-4EAB-811D-7A0EF562B591</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>AA528B46-B4BA-4C05-8023-EF7E300544E2</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>dampingRatio</key>
+			<real>0.0</real>
+			<key>frequency</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>testDistanceJoint</string>
+			<key>nodeType</key>
+			<string>LHDistanceJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{35.508090972900391, 60.805126190185547}</string>
+			<key>relativePosB</key>
+			<string>{-29.568624496459961, -17.166803359985352}</string>
+			<key>spriteAUUID</key>
+			<string>DE4C04CB-42B2-4EFE-826A-C4D9CDE0E1DE</string>
+			<key>spriteBUUID</key>
+			<string>AA528B46-B4BA-4C05-8023-EF7E300544E2</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>0014A928-773A-4695-86A6-53EE5ACEE45C</string>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>enableLimit</key>
+			<false/>
+			<key>enableMotor</key>
+			<false/>
+			<key>lowerAngle</key>
+			<real>0.0</real>
+			<key>maxMotorTorque</key>
+			<real>0.0</real>
+			<key>motorSpeed</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>RevoluteJoint</string>
+			<key>nodeType</key>
+			<string>LHRevoluteJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{38.601219177246094, 60.455753326416016}</string>
+			<key>spriteAUUID</key>
+			<string>AFD33BE8-3F91-4081-B064-42FCB3844E1E</string>
+			<key>spriteBUUID</key>
+			<string>3E96898B-C764-4F11-80B3-0E7B9FCAE0CE</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>upperAngle</key>
+			<real>0.0</real>
+			<key>uuid</key>
+			<string>FB4407AD-029C-4364-9C33-CBE567E53778</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.65126072741613217, 0.19041083656590702}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_statue_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{105, 148}</string>
+			<key>spriteName</key>
+			<string>object_statue</string>
+			<key>spriteUUID</key>
+			<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>AFD33BE8-3F91-4081-B064-42FCB3844E1E</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.72287917421990033, 0.25522902887420995}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_bananabunch_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>294.49740600585938</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{88, 65}</string>
+			<key>spriteName</key>
+			<string>object_bananabunch</string>
+			<key>spriteUUID</key>
+			<string>60F9EAC9-FDD1-4EAB-811D-7A0EF562B591</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>3E96898B-C764-4F11-80B3-0E7B9FCAE0CE</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.14239056867188454, 0.55861557178921739}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>2754A138-EF2A-4BF1-8828-35DDE0505808</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.12679855866105699, 0.91138921973124165}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>BC590F3E-F4F1-4FA7-BD78-6F1AD4A393ED</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.28929282891771702, 0.55754857073699426}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.19999998807907104</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>7C3FF480-5D33-4D41-816A-CABAB93B17DF</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>collideConnected</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>groundAnchorA</key>
+			<string>{137.61358642578125, 359.75955200195312}</string>
+			<key>groundAnchorB</key>
+			<string>{275.7760409116745, 270.23591136932373}</string>
+			<key>lengthA</key>
+			<real>2</real>
+			<key>lengthB</key>
+			<real>2</real>
+			<key>name</key>
+			<string>PulleyJoint</string>
+			<key>nodeType</key>
+			<string>LHPulleyJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>ratio</key>
+			<real>1</real>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>relativePosB</key>
+			<string>{0, 0}</string>
+			<key>spriteAUUID</key>
+			<string>BC590F3E-F4F1-4FA7-BD78-6F1AD4A393ED</string>
+			<key>spriteBUUID</key>
+			<string>7C3FF480-5D33-4D41-816A-CABAB93B17DF</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>29ECDEFC-2EE3-4305-B161-76989BFBFE41</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.28659664367636045, 0.42222416102886201}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>thumb_tack_1</string>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1.0433686971664429}</string>
+			<key>size</key>
+			<string>{62, 72}</string>
+			<key>spriteName</key>
+			<string>thumb_tack</string>
+			<key>spriteUUID</key>
+			<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>A24C0182-EBA9-4B6D-9D37-7A70DC0101EC</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.4354665441067766, 0.51745850510001579}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>51.989101409912109</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>FB2CA5CD-57DD-4778-BE76-B7E283BA656F</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.51817076583565536, 0.54819522193088588}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>219.89654541015625</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>151C58E0-FD00-421E-93D8-DB3FA7073DDA</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>dampingRatio</key>
+			<real>0.0</real>
+			<key>frequency</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>WeldJoint1</string>
+			<key>nodeType</key>
+			<string>LHWeldJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{34.292409961660496, -21.569807620544907}</string>
+			<key>spriteAUUID</key>
+			<string>FB2CA5CD-57DD-4778-BE76-B7E283BA656F</string>
+			<key>spriteBUUID</key>
+			<string>151C58E0-FD00-421E-93D8-DB3FA7073DDA</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B9786E37-B8A9-4E44-8E9A-364DB0BBB799</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.57984271891094752, 0.61152129120037613}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>26.704816818237305</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>85B90F9C-FB45-4665-8412-3B7272090C82</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>dampingRatio</key>
+			<real>0.0</real>
+			<key>frequency</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>WeldJoint2</string>
+			<key>nodeType</key>
+			<string>LHWeldJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{-38.108291091345791, 2.2235763620266482}</string>
+			<key>spriteAUUID</key>
+			<string>151C58E0-FD00-421E-93D8-DB3FA7073DDA</string>
+			<key>spriteBUUID</key>
+			<string>85B90F9C-FB45-4665-8412-3B7272090C82</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>F418E71A-14D9-4957-93CF-FE82234A2449</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.51451558179725287, 0.27083072042379264}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>2</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>49163A52-9C63-4AF2-8CD8-0EAB10BF3C24</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>axis</key>
+			<string>{-0.70710678540262939, 0.70710677697046553}</string>
+			<key>collideConnected</key>
+			<false/>
+			<key>enablePrismaticLimit</key>
+			<true/>
+			<key>enablePrismaticMotor</key>
+			<false/>
+			<key>lowerTranslation</key>
+			<real>-60</real>
+			<key>maxMotorForce</key>
+			<real>9.1000003814697266</real>
+			<key>name</key>
+			<string>PrismaticJoint</string>
+			<key>nodeType</key>
+			<string>LHPrismaticJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>prismaticMotorSpeed</key>
+			<real>270</real>
+			<key>relativePosA</key>
+			<string>{-50.153531947046758, -0.34109070735453884}</string>
+			<key>spriteAUUID</key>
+			<string>B14A8180-F9D8-4A18-B6C2-46FE2556D4D7</string>
+			<key>spriteBUUID</key>
+			<string>CA47F5A4-BC43-4194-88EE-369151D29168</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>upperTranslation</key>
+			<real>170</real>
+			<key>uuid</key>
+			<string>C20D6DC0-C7AA-4413-B4E4-949633C1DA8B</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.76000572795465027, 0.44885289446080578}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>219.89654541015625</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B14A8180-F9D8-4A18-B6C2-46FE2556D4D7</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.85681892593314923, 0.51819546104427228}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_banana_1_1_1</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>26.704816818237305</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{92, 64}</string>
+			<key>spriteName</key>
+			<string>object_banana</string>
+			<key>spriteUUID</key>
+			<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>CA47F5A4-BC43-4194-88EE-369151D29168</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.38140758226315175, 0.82561932876706123}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_bananabunch_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>7.9189906120300293</real>
+			<key>scale</key>
+			<string>{2.7388367652893066, 1.475523829460144}</string>
+			<key>size</key>
+			<string>{88, 65}</string>
+			<key>spriteName</key>
+			<string>object_bananabunch</string>
+			<key>spriteUUID</key>
+			<string>60F9EAC9-FDD1-4EAB-811D-7A0EF562B591</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>B1A28B0C-32C1-4AA5-87DF-72089D300DE5</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.32916915338935648, 0.88336862659772597}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_3</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>DA044CD1-BFC4-41DC-A0CB-B0667FF34947</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.44685863709027956, 0.88475215453049372}</string>
+			<key>imageFileName</key>
+			<string>ropeAssets.png</string>
+			<key>name</key>
+			<string>candy_4</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{65, 61}</string>
+			<key>spriteName</key>
+			<string>candy</string>
+			<key>spriteUUID</key>
+			<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>461D32E6-FE04-44C9-A1D0-D627731D0358</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>axis</key>
+			<string>{0, 1}</string>
+			<key>collideConnected</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>enableWheelMotor</key>
+			<true/>
+			<key>name</key>
+			<string>backWheelJoint</string>
+			<key>nodeType</key>
+			<string>LHWheelJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>spriteAUUID</key>
+			<string>DA044CD1-BFC4-41DC-A0CB-B0667FF34947</string>
+			<key>spriteBUUID</key>
+			<string>B1A28B0C-32C1-4AA5-87DF-72089D300DE5</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>7ABDC19D-D266-4A49-8013-EFDC6E137762</string>
+			<key>wheelDampingRatio</key>
+			<real>0.69999998807907104</real>
+			<key>wheelFrequencyHz</key>
+			<real>4</real>
+			<key>wheelMaxMotorForce</key>
+			<real>40</real>
+			<key>wheelMotorSpeed</key>
+			<real>-45</real>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>axis</key>
+			<string>{0, 1}</string>
+			<key>collideConnected</key>
+			<false/>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>enableWheelMotor</key>
+			<false/>
+			<key>name</key>
+			<string>frontWheelJoint</string>
+			<key>nodeType</key>
+			<string>LHWheelJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>spriteAUUID</key>
+			<string>461D32E6-FE04-44C9-A1D0-D627731D0358</string>
+			<key>spriteBUUID</key>
+			<string>B1A28B0C-32C1-4AA5-87DF-72089D300DE5</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>F07FB36D-44DC-478C-8059-59E54DF830BB</string>
+			<key>wheelDampingRatio</key>
+			<real>0.69999998807907104</real>
+			<key>wheelFrequencyHz</key>
+			<real>4</real>
+			<key>wheelMaxMotorForce</key>
+			<real>20</real>
+			<key>wheelMotorSpeed</key>
+			<real>0.0</real>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0.38029179374376931, 0.67777742147445674}</string>
+			<key>imageFileName</key>
+			<string>objects.png</string>
+			<key>name</key>
+			<string>object_statue_2</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativeImagePath</key>
+			<string>DEMO_PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{0.61126452684402466, 0.58961290121078491}</string>
+			<key>size</key>
+			<string>{105, 148}</string>
+			<key>spriteName</key>
+			<string>object_statue</string>
+			<key>spriteUUID</key>
+			<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>29330A7A-33B0-423C-97FD-EFB8B18053D8</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>960x640</key>
+		<string>{{-0.01278382446616888, -0.016223829239606857}, {1.0058729648590088, 0.98245370388031006}}</string>
+		<key>general</key>
+		<string>{{-0.01278382446616888, -0.016223829239606857}, {1.0058729648590088, 0.98245370388031006}}</string>
+	</dict>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</key>
+		<array>
+			<array>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{31.25, -16.5}</string>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-36.75, -15}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+			</array>
+			<array>
+				<string>{-33.25, 10.5}</string>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-25.75, 19}</string>
+			</array>
+			<array>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-11.25, 26}</string>
+			</array>
+			<array>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-4.75, -8}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{6.25, 27}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
+			</array>
+		</array>
+		<key>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</key>
+		<array>
+			<array>
+				<string>{34.75, -27.75}</string>
+				<string>{35.25, -28.25}</string>
+				<string>{38.75, -26.75}</string>
+				<string>{40.25, -22.75}</string>
+			</array>
+			<array>
+				<string>{26.25, -19.75}</string>
+				<string>{32.75, -27.25}</string>
+				<string>{34.75, -27.75}</string>
+				<string>{40.25, -22.75}</string>
+				<string>{40.25, -17.75}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{27.25, -12.25}</string>
+			</array>
+			<array>
+				<string>{17.25, -1.75}</string>
+				<string>{27.25, -12.25}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{34.25, 12.25}</string>
+				<string>{27.75, 18.75}</string>
+			</array>
+			<array>
+				<string>{7.25, 3.25}</string>
+				<string>{17.25, -1.75}</string>
+				<string>{27.75, 18.75}</string>
+				<string>{22.25, 22.25}</string>
+				<string>{16.25, 24.75}</string>
+				<string>{6.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{1.75, 4.25}</string>
+				<string>{7.25, 3.25}</string>
+				<string>{6.25, 26.75}</string>
+				<string>{-4.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{-6.75, 3.75}</string>
+				<string>{1.75, 4.25}</string>
+				<string>{-4.25, 26.75}</string>
+				<string>{-15.25, 24.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-6.75, 3.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-23.75, 21.25}</string>
+				<string>{-29.75, 17.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-29.75, 17.25}</string>
+				<string>{-37.25, 8.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-37.25, 8.75}</string>
+				<string>{-40.75, 0.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, 0.25}</string>
+				<string>{-40.75, -3.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, -3.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+			<array>
+				<string>{-36.75, -7.75}</string>
+				<string>{-33.75, -7.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+</dict>
+</plist>

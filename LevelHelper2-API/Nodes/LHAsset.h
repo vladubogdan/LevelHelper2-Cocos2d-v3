@@ -22,6 +22,4 @@
 +(instancetype)assetWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt;
 
-
--(CGSize)size;
 @end

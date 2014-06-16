@@ -14,7 +14,7 @@
 
 @implementation LHNodeProtocolImpl
 {
-    __weak CCNode* _node;
+    __unsafe_unretained CCNode* _node;
     
     NSString*           _uuid;
     NSMutableArray*     _tags;
@@ -79,6 +79,27 @@
         
         if([dict objectForKey:@"zOrder"])
             [_node setZOrder:[dict floatForKey:@"zOrder"]];
+        
+        
+        if([dict objectForKey:@"scale"])
+        {
+            CGPoint scl = [dict pointForKey:@"scale"];
+            [_node setScaleX:scl.x];
+            [_node setScaleY:scl.y];
+        }
+
+        if([dict objectForKey:@"size"]){
+            [_node setContentSize:[dict sizeForKey:@"size"]];
+        }
+    }
+    return self;
+}
+
+- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd{
+    
+    if(self = [super init])
+    {
+        _node = nd;
     }
     return self;
 }
@@ -95,12 +116,13 @@
 -(id<LHUserPropertyProtocol>)userProperty{
     return _userProperty;
 }
-//-(LHScene*)scene{
-//    return (LHScene*)[(CCNode*)_node scene];
-//}
 
--(CCNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name
+-(CCNode*)childNodeWithName:(NSString*)name
 {
+    if([[_node name] isEqualToString:name]){
+        return _node;
+    }
+    
     for(CCNode<LHNodeProtocol>* node in [_node children])
     {
         if([node respondsToSelector:@selector(childNodeWithName:)])
@@ -117,8 +139,14 @@
     return nil;
 
 }
--(CCNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
+-(CCNode*)childNodeWithUUID:(NSString*)uuid;
 {
+    if([_node respondsToSelector:@selector(uuid)]){
+        if([[(CCNode<LHNodeProtocol>*)_node uuid] isEqualToString:uuid]){
+            return _node;
+        }
+    }
+    
     for(CCNode<LHNodeProtocol>* node in [_node children])
     {
         if([node respondsToSelector:@selector(uuid)])

@@ -8,25 +8,29 @@
 
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+class b2RopeJoint;
+#endif
+#else//chipmunk
+@class CCPhysicsSlideJoint;
+#endif
+
 /**
  LHRopeJointNode class is used to load a LevelHelper rope joint.
- The equivalent in Cocos2d/Chipmunk is a distance CCPhysicsJoint object with minimum distance of 0 and maximum equal with the rope length.
+ 
+ When using Chipmunk it uses a CCPhysicsSlideJoint joint with minimum distance of 0 and maximum equal with the rope length.
+ When using Box2d it uses a b2RopeJoint joint.
  */
 
-@interface LHRopeJointNode : CCNode <LHNodeProtocol>
+@interface LHRopeJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
                                     parent:(CCNode*)prnt;
 
-/**
- Returns the point where the joint is connected by the first body. In scene coordinates.
- */
--(CGPoint)anchorA;
-
-/**
- Returns the point where the joint is connected by the second body. In scene coordinates.
- */
--(CGPoint)anchorB;
 
 /**
  Returns whether or not this rope joint can be cut.
@@ -40,5 +44,6 @@
  */
 -(void)cutWithLineFromPointA:(CGPoint)ptA
                     toPointB:(CGPoint)ptB;
+
 
 @end

@@ -15,7 +15,9 @@
 + (LHSceneSubclass *)scene
 {
 //	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level02-assetTest.plist"];
+//    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level03-gravityAreas.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level04-waterArea.plist"];
+//    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level02-assetTest.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

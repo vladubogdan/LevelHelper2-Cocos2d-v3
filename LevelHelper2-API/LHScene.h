@@ -9,9 +9,21 @@
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
 
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+#include "Box2D.h"
+#endif
+#endif //LH_USE_BOX2D
+
+
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 #define LH_ARC_ENABLED 1
 #endif
+
+@class LHPhysicsNode;
+@class LHNode;
 
 /**
  LHScene class is used to load a level file into Cocos2d v3 engine.
@@ -30,7 +42,6 @@
  */
 -(CCTexture*)textureWithImagePath:(NSString*)imagePath;
 
-
 /**
  Returns the game world rectangle or CGRectZero if the game world rectangle is not set in the level file.
  */
@@ -45,5 +56,40 @@
  @return A dictionary containing the asset information or nil.
  */
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+
+/**
+ Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.
+ */
+-(LHPhysicsNode*)gameWorldNode;
+
+/**
+ Returns the UI node. All children of this node will NOT move with the camera.
+ */
+-(LHNode*)uiNode;
+
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+-(b2World*)box2dWorld;
+
+-(float)ptm;
+
+-(b2Vec2)metersFromPoint:(CGPoint)point;
+-(CGPoint)pointFromMeters:(b2Vec2)vec;
+
+-(float)metersFromValue:(float)val;
+-(float)valueFromMeters:(float)meter;
+
+#endif
+#endif //LH_USE_BOX2D
+
+
+/*Get the global gravity force.
+ */
+-(CGPoint)globalGravity;
+/*Sets the global gravity force
+@param gravity A point representing the gravity force in x and y direction.
+ */
+-(void)setGlobalGravity:(CGPoint)gravity;
 
 @end
