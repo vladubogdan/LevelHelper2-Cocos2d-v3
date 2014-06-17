@@ -102,7 +102,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<string>C939E188-DF59-40F9-AC35-8503B59C463A</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -310,7 +310,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<string>C939E188-DF59-40F9-AC35-8503B59C463A</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -644,7 +644,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<string>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -718,7 +718,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<string>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -818,7 +818,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<string>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -1026,7 +1026,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<string>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -1100,7 +1100,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</string>
+				<string>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -1174,7 +1174,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</string>
+				<string>C939E188-DF59-40F9-AC35-8503B59C463A</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -1522,6 +1522,28 @@
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>dampingRatio</key>
+			<real>0.0</real>
+			<key>frequency</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>dummyJoint</string>
+			<key>nodeType</key>
+			<string>LHWeldJoint</string>
+			<key>parentUUID</key>
+			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<key>relativePosA</key>
+			<string>{0, 0}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>A9E7956B-C9BD-479C-8148-4DB19D137363</string>
+		</dict>
 	</array>
 	<key>designResolution</key>
 	<string>{960, 640}</string>
@@ -1579,89 +1601,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>D7EFAE96-ECCA-46B1-BF5F-73F73BD0199C</key>
-		<array>
-			<array>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{31.25, -16.5}</string>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-36.75, -15}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-			</array>
-			<array>
-				<string>{-33.25, 10.5}</string>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-25.75, 19}</string>
-			</array>
-			<array>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-11.25, 26}</string>
-			</array>
-			<array>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-4.75, -8}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{6.25, 27}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
-			</array>
-		</array>
-		<key>FA47FDCD-6CEA-42C2-B334-B5F1A6B1C506</key>
+		<key>A62FC943-9A06-44CE-813C-A1A87B5BDFD3</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>
@@ -1741,6 +1681,88 @@
 				<string>{-36.75, -7.75}</string>
 				<string>{-33.75, -7.75}</string>
 				<string>{-38.75, -6.25}</string>
+			</array>
+		</array>
+		<key>C939E188-DF59-40F9-AC35-8503B59C463A</key>
+		<array>
+			<array>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{31.25, -16.5}</string>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-36.75, -15}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+			</array>
+			<array>
+				<string>{-33.25, 10.5}</string>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-25.75, 19}</string>
+			</array>
+			<array>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-11.25, 26}</string>
+			</array>
+			<array>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-4.75, -8}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{6.25, 27}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
 			</array>
 		</array>
 	</dict>

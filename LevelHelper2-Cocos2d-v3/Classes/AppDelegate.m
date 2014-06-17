@@ -55,8 +55,8 @@
 -(CCScene *)startScene
 {
 //    return [LHSceneRopeJointTest scene];
-//    return [LHSceneJointsTest sceneWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
-    return [LHSceneGearJointsTest scene];
+    return [LHSceneJointsTest sceneWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
+//    return [LHSceneGearJointsTest scene];
     
 //    return [LHSceneCameraTest scene];
 //    return [LHBodyPhysicsTypeScene scene];

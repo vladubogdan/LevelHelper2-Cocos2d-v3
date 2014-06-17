@@ -82,8 +82,19 @@
         if([dict objectForKey:@"relativePosB"])//certain joints do not have a second anchor
             _relativePosB = [dict pointForKey:@"relativePosB"];
         
-        _nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
-        _nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
+        if([dict objectForKey:@"spriteAUUID"]){//maybe its a dummy joint
+            _nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
+        }
+        else{
+            NSLog(@"WARNING: Joint %@ is not connected to a node", [dict objectForKey:@"name"]);
+        }
+        
+        if([dict objectForKey:@"spriteBUUID"]){//maybe its a dummy joint
+            _nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
+        }
+        else{
+            NSLog(@"WARNING: Joint %@ is not connected to a node", [dict objectForKey:@"name"]);
+        }
 
         _collideConnected = [dict boolForKey:@"collideConnected"];
     }
