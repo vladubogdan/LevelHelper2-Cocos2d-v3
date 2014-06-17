@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039777018129825592, 0}, {0.040761556476354599, 1}}</string>
+			<string>{{0.039531450718641281, 0}, {0.040753215551376343, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
+			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
+			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
