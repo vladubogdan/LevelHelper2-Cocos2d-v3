@@ -529,14 +529,17 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         //this will update the transform
         [_node position];
         [_node rotation];
-
+        
         float scaleX = [_node scaleX];
         float scaleY = [_node scaleY];
         
         b2Fixture* fix = _body->GetFixtureList();
         while (fix) {
-
+            
             b2Shape* shape = fix->GetShape();
+            
+            int flipx = previousScale.x*scaleX < 0 ? -1 : 1;
+            int flipy = previousScale.y*scaleY < 0 ? -1 : 1;
             
             if(shape->GetType() == b2Shape::e_polygon)
             {
@@ -547,12 +550,15 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                 
                 for(int i = 0; i < count; ++i)
                 {
-                    b2Vec2 pt = polShape->GetVertex(i);
+                    const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
                     
-                    b2Vec2 newPt = b2Vec2(pt.x/previousScale.x*scaleX, pt.y/previousScale.y*scaleY);
-                    newVertices[i] = newPt;
+                    b2Vec2 pt = polShape->GetVertex(i);
+                    pt.x /= previousScale.x*scaleX;
+                    pt.y /= previousScale.y*scaleY;
+                    
+                    newVertices[idx] = pt;
                 }
-
+                
                 polShape->Set(newVertices, count);
                 
                 delete[] newVertices;
@@ -571,17 +577,17 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
             if(shape->GetType() == b2Shape::e_edge)
             {
                 b2EdgeShape* edgeShape = (b2EdgeShape*)shape;
-                #pragma unused (edgeShape)
+#pragma unused (edgeShape)
                 NSLog(@"EDGE SHAPE");
             }
-
+            
             if(shape->GetType() == b2Shape::e_chain)
             {
                 b2ChainShape* chainShape = (b2ChainShape*)shape;
                 
                 b2Vec2* vertices = chainShape->m_vertices;
                 int32 count = chainShape->m_count;
-
+                
                 for(int i = 0; i < count; ++i)
                 {
                     b2Vec2 pt = vertices[i];
@@ -589,16 +595,13 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                     vertices[i] = newPt;
                 }
             }
-
+            
             
             fix = fix->GetNext();
         }
         
         previousScale = CGPointMake(scaleX, scaleY);
-        
-        
     }
-    
 }
 
 #pragma mark - CHIPMUNK SUPPORT

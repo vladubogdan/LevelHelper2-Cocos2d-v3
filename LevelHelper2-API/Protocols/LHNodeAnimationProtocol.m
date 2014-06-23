@@ -76,4 +76,13 @@
 -(LHAnimation*)activeAnimation{
     return _activeAnimation;
 }
+-(LHAnimation*)animationWithName:(NSString*)animName
+{
+    for(LHAnimation* anim in _animations){
+        if([[anim name] isEqualToString:animName]){
+            return anim;
+        }
+    }
+    return nil;
+}
 @end
