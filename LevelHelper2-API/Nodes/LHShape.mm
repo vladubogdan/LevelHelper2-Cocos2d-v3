@@ -12,6 +12,7 @@
 #import "LHScene.h"
 #import "LHAnimation.h"
 #import "CCTexture_Private.h"
+#import "LHConfig.h"
 
 @implementation LHShape
 {

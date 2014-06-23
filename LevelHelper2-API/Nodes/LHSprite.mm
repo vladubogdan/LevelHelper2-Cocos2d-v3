@@ -11,6 +11,7 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHAnimation.h"
+#import "LHConfig.h"
 
 @implementation LHSprite
 {
