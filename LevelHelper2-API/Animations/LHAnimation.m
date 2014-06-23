@@ -153,6 +153,7 @@
     [self resetOneShotFrames];
     animating = val;
     currentRepetition = 0;
+    currentTime = 0;
 }
 -(bool)animating{
     return animating;
