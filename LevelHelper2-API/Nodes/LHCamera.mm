@@ -152,6 +152,7 @@
 
         CGPoint anchor = [followed anchorPoint];
         CGSize content = [followed contentSize];
+
         
         position.x -= content.width*(anchor.x -0.5);
         position.y -= content.height*(anchor.y -0.5);
@@ -160,6 +161,7 @@
     CGSize winSize = [(LHScene*)[self scene] contentSize];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
 
+    CGPoint offset = [[(LHScene*)self scene] designOffset];
     
     float x = position.x;
     float y = position.y;
@@ -177,8 +179,9 @@
         y = MIN(y, worldRect.origin.y - winSize.height*0.5);
     }
     
-    CGPoint pt = CGPointMake(winSize.width*0.5-x,
-                             winSize.height*0.5-y);
+    
+    CGPoint pt = CGPointMake(winSize.width*0.5 - x + offset.x,
+                             winSize.height*0.5- y + offset.y);
     
     return pt;
 }

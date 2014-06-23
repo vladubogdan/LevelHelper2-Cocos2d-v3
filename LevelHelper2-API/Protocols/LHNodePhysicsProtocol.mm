@@ -522,6 +522,49 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     return 0.0f;
 }
 
+-(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
+{
+	b2Vec2 c; c.Set(0.0f, 0.0f);
+	float32 area = 0.0f;
+    
+	// pRef is the reference point for forming triangles.
+	// It's location doesn't change the result (except for rounding error).
+	b2Vec2 pRef(0.0f, 0.0f);
+#if 0
+	// This code would put the reference point inside the polygon.
+	for (int32 i = 0; i < count; ++i)
+	{
+		pRef += vs[i];
+	}
+	pRef *= 1.0f / count;
+#endif
+    
+	const float32 inv3 = 1.0f / 3.0f;
+    
+	for (int32 i = 0; i < count; ++i)
+	{
+		// Triangle vertices.
+		b2Vec2 p1 = pRef;
+		b2Vec2 p2 = vs[i];
+		b2Vec2 p3 = i + 1 < count ? vs[i+1] : vs[0];
+        
+		b2Vec2 e1 = p2 - p1;
+		b2Vec2 e2 = p3 - p1;
+        
+		float32 D = b2Cross(e1, e2);
+        
+		float32 triangleArea = 0.5f * D;
+		area += triangleArea;
+        
+		// Area weighted centroid
+		c += triangleArea * inv3 * (p1 + p2 + p3);
+	}
+    
+	// Centroid
+    return area > b2_epsilon;
+//	b2Assert(area > b2_epsilon);
+}
+
 -(void)updateScale{
     
     if(_body){
@@ -538,8 +581,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
             
             b2Shape* shape = fix->GetShape();
             
-            int flipx = previousScale.x*scaleX < 0 ? -1 : 1;
-            int flipy = previousScale.y*scaleY < 0 ? -1 : 1;
+            int flipx = scaleX < 0 ? -1 : 1;
+            int flipy = scaleY < 0 ? -1 : 1;
             
             if(shape->GetType() == b2Shape::e_polygon)
             {
@@ -553,14 +596,35 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                     const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
                     
                     b2Vec2 pt = polShape->GetVertex(i);
-                    pt.x /= previousScale.x*scaleX;
-                    pt.y /= previousScale.y*scaleY;
+                    
+                    if(scaleX - previousScale.x != 0)
+                    {
+                        pt.x /= previousScale.x;
+                        pt.x *= scaleX;
+                    }
+
+                    if(scaleY - previousScale.y)
+                    {
+                        pt.y /= previousScale.y;
+                        pt.y *= scaleY;
+                    }
                     
                     newVertices[idx] = pt;
                 }
                 
-                polShape->Set(newVertices, count);
+                BOOL valid = [self validCentroid:newVertices count:count];
+                if(!valid) {
+                    //flip
+                    b2Vec2* flippedVertices = new b2Vec2[count];
+                    for(int i = 0; i < count; ++i)
+                    {
+                        flippedVertices[i] = newVertices[count - i - 1];
+                    }
+                    delete[] newVertices;
+                    newVertices = flippedVertices;
+                }
                 
+                polShape->Set(newVertices, count);
                 delete[] newVertices;
             }
             

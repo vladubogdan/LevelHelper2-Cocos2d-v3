@@ -71,6 +71,7 @@
 
 -(void)setActiveAnimation:(LHAnimation*)anim{
     _activeAnimation = anim;
+    [_activeAnimation setAnimating:YES];
 }
 
 -(LHAnimation*)activeAnimation{
