@@ -153,9 +153,11 @@
         CGPoint anchor = [followed anchorPoint];
         CGSize content = [followed contentSize];
 
+        float scaleX = [followed scaleX];
+        float scaleY = [followed scaleY];
         
-        position.x -= content.width*(anchor.x -0.5);
-        position.y -= content.height*(anchor.y -0.5);
+        position.x -= content.width*scaleX*  (anchor.x -0.5);
+        position.y -= content.height*scaleY* (anchor.y -0.5);
     }
 
     CGSize winSize = [(LHScene*)[self scene] contentSize];
