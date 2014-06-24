@@ -22,8 +22,8 @@
 #define LH_ARC_ENABLED 1
 #endif
 
-@class LHPhysicsNode;
-@class LHNode;
+@class LHGameWorldNode;
+@class LHUINode;
 
 /**
  LHScene class is used to load a level file into Cocos2d v3 engine.
@@ -60,12 +60,12 @@
 /**
  Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.
  */
--(LHPhysicsNode*)gameWorldNode;
+-(LHGameWorldNode*)gameWorldNode;
 
 /**
  Returns the UI node. All children of this node will NOT move with the camera.
  */
--(LHNode*)uiNode;
+-(LHUINode*)uiNode;
 
 
 #if LH_USE_BOX2D

@@ -9,13 +9,7 @@
 
 #import "AppDelegate.h"
 
-#import "LHSceneSubclass.h"
-#import "LHBodyScaleTestScene.h"
-#import "LHBodyPhysicsTypeScene.h"
 #import "LHSceneCameraTest.h"
-#import "LHSceneJointsTest.h"
-#import "LHSceneRopeJointTest.h"
-#import "LHSceneGearJointsTest.h"
 
 @implementation AppDelegate
 
@@ -54,14 +48,7 @@
 
 -(CCScene *)startScene
 {
-//    return [LHSceneRopeJointTest scene];
-    return [LHSceneJointsTest sceneWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
-//    return [LHSceneGearJointsTest scene];
-    
-//    return [LHSceneCameraTest scene];
-//    return [LHBodyPhysicsTypeScene scene];
-//    return [LHBodyScaleTestScene scene];
-//    return [LHSceneSubclass scene];
+    return [LHSceneCameraTest scene];
 }
 
 @end

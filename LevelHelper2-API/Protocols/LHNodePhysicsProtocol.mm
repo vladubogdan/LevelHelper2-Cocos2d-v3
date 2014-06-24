@@ -16,7 +16,7 @@
 
 #import "LHConfig.h"
 
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 
@@ -415,13 +415,13 @@
     return _body;
 }
 
--(LH_PHYSICS_TYPE)bodyType{
+-(int)bodyType{
     if(_body){
-        return (LH_PHYSICS_TYPE)_body->GetType();
+        return (int)_body->GetType();
     }
-    return LH_NO_PHYSICS;
+    return (int)LH_NO_PHYSICS;
 }
--(void)setBodyType:(LH_PHYSICS_TYPE)type{
+-(void)setBodyType:(int)type{
     if(_body){
         if(type != LH_NO_PHYSICS)
         {
@@ -467,7 +467,7 @@ static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(CCNode *n = node; n && ![n isKindOfClass:[LHPhysicsNode class]]; n = n.parent){
+	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -576,6 +576,16 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         float scaleX = [_node scaleX];
         float scaleY = [_node scaleY];
         
+        if(scaleX < 0.01 && scaleX > -0.01){
+            NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
+            return;
+        }
+
+        if(scaleY < 0.01 && scaleY > -0.01){
+            NSLog(@"WARNING - SCALE X value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
+            return;
+        }
+
         b2Fixture* fix = _body->GetFixtureList();
         while (fix) {
             
@@ -672,18 +682,18 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 ////////////////////////////////////////////////////////////////////////////////
 #else //chipmunk
 
--(LH_PHYSICS_TYPE)bodyType{
+-(int)bodyType{
     if([_node physicsBody]){
         if([[_node physicsBody] type] == CCPhysicsBodyTypeDynamic){
-            return LH_DYNAMIC_BODY;
+            return (int)LH_DYNAMIC_BODY;
         }
         else{
-            return LH_STATIC_BODY;
+            return (int)LH_STATIC_BODY;
         }
     }
-    return LH_NO_PHYSICS;
+    return (int)LH_NO_PHYSICS;
 }
--(void)setBodyType:(LH_PHYSICS_TYPE)type{
+-(void)setBodyType:(int)type{
     if([_node physicsBody]){
         
 //        LHScene* scene = (LHScene*)[_node scene];

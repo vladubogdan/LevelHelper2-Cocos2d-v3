@@ -10,7 +10,7 @@
 #import "LHScene.h"
 #import "LHUtils.h"
 #import "NSDictionary+LHDictionary.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 #import "LHConfig.h"
 
 #if LH_USE_BOX2D
@@ -165,7 +165,7 @@
         //if we do have the scene it means the node was deleted so we need to delete the joint manually
 #if LH_USE_BOX2D
         if(_joint){
-            LHPhysicsNode* pNode = [scene gameWorldNode];
+            LHGameWorldNode* pNode = [scene gameWorldNode];
             
             //if we dont have the scene it means
             b2World* world = [pNode box2dWorld];

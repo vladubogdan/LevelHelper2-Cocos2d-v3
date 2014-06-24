@@ -1,5 +1,5 @@
 //
-//  LHBodyPhysicsTypeScene.h
+//  LHSceneDemo.h
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -13,12 +13,17 @@
 
 #import "LevelHelper2API.h"
 
-@interface LHBodyPhysicsTypeScene : LHScene
+@interface LHSceneDemo : LHScene
 
 // -----------------------------------------------------------------------
 
-+ (LHBodyPhysicsTypeScene *)scene;
++ (LHSceneDemo *)scene;
++ (LHSceneDemo *)sceneWithContentOfFile:(NSString*)plistFile;
 - (id)initWithContentOfFile:(NSString *)levelPlistFile;
 
 // -----------------------------------------------------------------------
+
+-(void)nextDemo;
+-(void)previousDemo;
+
 @end

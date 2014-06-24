@@ -1,12 +1,12 @@
 //
-//  LHBox2dDebug.m
+//  LHGameWorldNode.m
 //  LevelHelper2-API
 //
 //  Created by Bogdan Vladu on 10/16/13.
 //  Copyright (c) 2013 Bogdan Vladu. All rights reserved.
 //
 
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 #import "LHUtils.h"
 #import "LHScene.h"
 
@@ -19,8 +19,6 @@
 #include "Box2D.h"
 
 #else
-
-//#import "CCPhysics+ObjectiveChipmunk.h"
 
 #endif
 
@@ -244,7 +242,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 {
     [self clear];
     if(_drawState){
-        [(LHPhysicsNode*)[self parent] box2dWorld]->DrawDebugData();
+        [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
         [super draw];
     }
 }
@@ -266,7 +264,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 
 
-@implementation LHPhysicsNode
+@implementation LHGameWorldNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
@@ -279,37 +277,57 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 -(void)dealloc{
-    NSLog(@"PHYSICS NODE DEALLOC BEGIN");
-    
     LH_SAFE_RELEASE(_nodeProtocolImp);
-
     
 #if LH_USE_BOX2D
     //we need to first destroy all children and then distroy box2d world
-    NSLog(@"REMOVING ALL CHILDREN");
     [self removeAllChildren];
-
-    NSLog(@"DELETING BOX@D WORLD");
     LH_SAFE_DELETE(_box2dWorld);
 #endif
     
-    NSLog(@"PHYSICS NODE DEALLOC END");
     
     LH_SUPER_DEALLOC();
 }
 
-- (instancetype)init{
-    
+
+
++ (instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
+                                     parent:(CCNode*)prnt
+{
+    return LH_AUTORELEASED([[self alloc] initGameWorldNodeWithDictionary:dict
+                                                                  parent:prnt]);
+}
+
+- (instancetype)initGameWorldNodeWithDictionary:(NSDictionary*)dict
+                                         parent:(CCNode*)prnt
+{
     if(self = [super init]){
-        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
+        
+        [prnt addChild:self];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
 #if LH_USE_BOX2D
         _box2dWorld = NULL;
 #endif
 
+        
+        NSArray* childrenInfo = [dict objectForKey:@"children"];
+        if(childrenInfo)
+        {
+            for(NSDictionary* childInfo in childrenInfo)
+            {
+                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
+                                                            parent:self];
+#pragma unused (node)
+            }
+        }
+        
     }
     return self;
 }
+
 
 #pragma mark - BOX2D SUPPORT
 #if LH_USE_BOX2D

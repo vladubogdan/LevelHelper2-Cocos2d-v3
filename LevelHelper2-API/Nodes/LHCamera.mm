@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHAnimation.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 
 @implementation LHCamera

@@ -9,12 +9,13 @@
 
 // Import the interfaces
 #import "LHSceneCameraTest.h"
+#import "LHSceneJointsTest.h"
+#import "LHBodyScaleTestScene.h"
 
 @implementation LHSceneCameraTest
 
-+ (LHSceneCameraTest *)scene
-{
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level03-camera.plist"];
++ (LHSceneDemo *)scene{
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level03-camera.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -23,12 +24,8 @@
 
     if (!self) return(nil);
     
-    /*
-     INIT YOUR CONTENT HERE
-     */
-   
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Touch to change the gravity.\nThis text is added as a UI element (will not move with camera)."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA DEMO\nTouch to change the gravity.\nThis text is added as a UI element (will not move with camera)."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
@@ -51,5 +48,12 @@
     [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
     
     [super touchBegan:touch withEvent:event];
+}
+
+-(void)previousDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHBodyScaleTestScene scene]];
+}
+-(void)nextDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneJointsTest scene]];
 }
 @end

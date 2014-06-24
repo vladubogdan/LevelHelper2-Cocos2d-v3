@@ -11,7 +11,7 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -139,7 +139,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];
-        LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
         
         b2World* world = [pNode box2dWorld];
         

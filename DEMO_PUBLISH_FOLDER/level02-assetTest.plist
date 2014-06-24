@@ -13,32 +13,95 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
-			<key>assetFile</key>
-			<string>OfficerAsset.lhasset</string>
-			<key>assetUUID</key>
-			<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>assetFile</key>
+					<string>OfficerAsset.lhasset</string>
+					<key>assetUUID</key>
+					<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.43387393951416015, 0.64101476669311519}</string>
+					<key>name</key>
+					<string>UntitledAsset</string>
+					<key>nodeType</key>
+					<string>LHAsset</string>
+					<key>parentUUID</key>
+					<string>92890AED-64A9-475A-81CD-821B49469F5B</string>
+					<key>rotation</key>
+					<real>20.53118896484375</real>
+					<key>scale</key>
+					<string>{2.0414586067199707, 1}</string>
+					<key>size</key>
+					<string>{249.82267761230469, 442.64926147460938}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>9DE0F87B-85A6-4865-B078-79CCC0D8AF0B</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
-			<string>{0.43387393951416015, 0.64101476669311519}</string>
+			<string>{0, 0}</string>
 			<key>name</key>
-			<string>UntitledAsset</string>
+			<string>GAME WORLD</string>
 			<key>nodeType</key>
-			<string>LHAsset</string>
+			<string>LHGameWorldNode</string>
 			<key>parentUUID</key>
 			<string>1033031F-A3D6-4C32-B096-0D6253B456E9</string>
 			<key>rotation</key>
-			<real>20.53118896484375</real>
+			<real>0.0</real>
 			<key>scale</key>
-			<string>{2.0414586067199707, 1}</string>
+			<string>{1, 1}</string>
 			<key>size</key>
-			<string>{249.82267761230469, 442.64926147460938}</string>
+			<string>{128, 128}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>9DE0F87B-85A6-4865-B078-79CCC0D8AF0B</string>
+			<string>92890AED-64A9-475A-81CD-821B49469F5B</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>1033031F-A3D6-4C32-B096-0D6253B456E9</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>6D2EDF48-8FF5-47EC-BD59-63D6311CAC83</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -86,6 +149,8 @@
 	<real>8</real>
 	<key>nodeType</key>
 	<string>LHScene</string>
+	<key>sceneFormat</key>
+	<integer>1</integer>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>

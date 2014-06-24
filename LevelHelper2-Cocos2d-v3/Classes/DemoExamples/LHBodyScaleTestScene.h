@@ -12,13 +12,7 @@
 #import "cocos2d-ui.h"
 
 #import "LevelHelper2API.h"
+#import "LHSceneDemo.h"
+@interface LHBodyScaleTestScene : LHSceneDemo
 
-@interface LHBodyScaleTestScene : LHScene
-
-// -----------------------------------------------------------------------
-
-+ (LHBodyScaleTestScene *)scene;
-- (id)initWithContentOfFile:(NSString *)levelPlistFile;
-
-// -----------------------------------------------------------------------
 @end

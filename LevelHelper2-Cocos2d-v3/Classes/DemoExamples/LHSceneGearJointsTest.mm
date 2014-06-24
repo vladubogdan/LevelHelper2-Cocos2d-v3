@@ -11,6 +11,10 @@
 #import "LHSceneGearJointsTest.h"
 #import "LHConfig.h"
 #import "LHUtils.h"
+
+#import "LHSceneRopeJointTest.h"
+#import "LHBodyScaleTestScene.h"
+
 @implementation LHSceneGearJointsTest
 {
 #if LH_USE_BOX2D
@@ -22,16 +26,12 @@
 	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level07-gearJoint.plist"];
 }
 
-+(LHSceneGearJointsTest*)sceneWithFile:(NSString*)levelPlistFile
-{
-    return [[self alloc] initWithContentOfFile:levelPlistFile];
-}
-
 -(void)dealloc{
     [self destroyMouseJoint];
     
     LH_SUPER_DEALLOC();
 }
+
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {
     self = [super initWithContentOfFile:levelPlistFile];
@@ -188,6 +188,14 @@
     }
     mouseJoint = NULL;
 #endif
+}
+
+
+-(void)previousDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneRopeJointTest scene]];
+}
+-(void)nextDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHBodyScaleTestScene scene]];
 }
 
 @end

@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 @implementation LHGravityArea
 {
@@ -168,7 +168,7 @@
 -(void)visit
 {
     LHScene* scene = (LHScene*)[self scene];
-    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+    LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
 
     b2World* world =  [pNode box2dWorld];
     
@@ -225,7 +225,7 @@
 {
     CGRect rect = [self globalRect];
     
-    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
+    LHGameWorldNode* world = [(LHScene*)[self scene] gameWorldNode];
     for(CCNode* node in [world children])
     {
         CCPhysicsBody* body = [node physicsBody];

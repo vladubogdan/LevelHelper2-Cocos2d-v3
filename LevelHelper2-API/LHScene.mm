@@ -28,12 +28,15 @@
 #import "LHWheelJointNode.h"
 #import "LHGearJointNode.h"
 
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
+
 
 @implementation LHScene
 {
-    __unsafe_unretained LHPhysicsNode * _physicsNode;
-    __unsafe_unretained LHNode * _uiNode;
+    __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
+    __unsafe_unretained LHUINode*           _uiNode;
+    
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
@@ -76,7 +79,8 @@
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
-    _physicsNode = nil;
+    _gameWorldNode = nil;
+    _uiNode = nil;
 
     LH_SUPER_DEALLOC();
 }
@@ -161,19 +165,15 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        LHPhysicsNode* pNode = [LHPhysicsNode node];
-        pNode.contentSize = self.contentSize;
-        [pNode setDebugDraw:YES];
-        [super addChild:pNode];
-        _physicsNode = pNode;
-        [_physicsNode setName:@"Game World Node"];
-
-        LHNode* uiNode = [LHNode node];
-        uiNode.contentSize = self.contentSize;
-        [super addChild:uiNode];
-        _uiNode = uiNode;
-        [_uiNode setName:@"UI Node"];
-        
+        NSArray* childrenInfo = [dict objectForKey:@"children"];
+        for(NSDictionary* childInfo in childrenInfo)
+        {
+            CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
+                                                        parent:self];
+            if(node){
+                
+            }
+        }
 
         if([dict boolForKey:@"useGlobalGravity"])
         {
@@ -194,16 +194,6 @@
         glClearColor(backgroundClr.red, backgroundClr.green, backgroundClr.blue, 1.0f);
 
         
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        for(NSDictionary* childInfo in childrenInfo)
-        {
-            CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                        parent:_physicsNode];
-            
-            if(node){
-
-            }
-        }
         
         
         
@@ -287,14 +277,30 @@
     return self;
 }
 
--(LHPhysicsNode*)physicsNode{
-    return _physicsNode;
+-(LHGameWorldNode*)physicsNode{
+    return [self gameWorldNode];
 }
--(LHPhysicsNode*)gameWorldNode{
-    return _physicsNode;
+-(LHGameWorldNode*)gameWorldNode{
+    if(!_gameWorldNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHGameWorldNode class]]){
+                _gameWorldNode = (LHGameWorldNode*)n;
+                break;
+            }
+        }
+    }
+    return _gameWorldNode;
 }
 
--(LHNode*)uiNode{
+-(LHUINode*)uiNode{
+    if(!_uiNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHUINode class]]){
+                _uiNode = (LHUINode*)n;
+                break;
+            }
+        }
+    }
     return _uiNode;
 }
 
@@ -619,7 +625,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 #if LH_USE_BOX2D
 -(b2World*)box2dWorld{
-    return [_physicsNode box2dWorld];
+    return [[self gameWorldNode] box2dWorld];
 }
 -(float)ptm{
     return 32.0f;
@@ -639,10 +645,10 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #endif //LH_USE_BOX2D
 
 -(CGPoint)globalGravity{
-    return [_physicsNode gravity];
+    return [[self gameWorldNode] gravity];
 }
 -(void)setGlobalGravity:(CGPoint)gravity{
-    [_physicsNode setGravity:gravity];
+    [[self gameWorldNode] setGravity:gravity];
 }
 
 @end
@@ -667,8 +673,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         scene = (LHScene*)[prnt scene];
     }
 
-    
-    if([nodeType isEqualToString:@"LHSprite"])
+    if([nodeType isEqualToString:@"LHGameWorldNode"])
+    {
+        LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
+                                                                       parent:prnt];
+        pNode.contentSize = scene.contentSize;
+        [pNode setDebugDraw:YES];
+        return pNode;
+    }
+    else if([nodeType isEqualToString:@"LHUINode"])
+    {
+        LHUINode* pNode = [LHUINode uiNodeWithDictionary:childInfo
+                                                  parent:prnt];
+        return pNode;
+    }
+    else if([nodeType isEqualToString:@"LHSprite"])
     {
         LHSprite* spr = [LHSprite spriteNodeWithDictionary:childInfo
                                                     parent:prnt];

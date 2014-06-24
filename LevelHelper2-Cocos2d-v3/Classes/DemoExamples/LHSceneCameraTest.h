@@ -1,5 +1,5 @@
 //
-//  LHSceneRopeJointTest.h
+//  LHSceneCameraTest.h
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -12,13 +12,9 @@
 #import "cocos2d-ui.h"
 
 #import "LevelHelper2API.h"
+#import "LHSceneDemo.h"
 
-@interface LHSceneRopeJointTest : LHScene
+@interface LHSceneCameraTest : LHSceneDemo
 
-// -----------------------------------------------------------------------
 
-+ (LHSceneRopeJointTest *)scene;
-- (id)initWithContentOfFile:(NSString *)levelPlistFile;
-
-// -----------------------------------------------------------------------
 @end

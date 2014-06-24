@@ -9,17 +9,14 @@
 
 // Import the interfaces
 #import "LHSceneRopeJointTest.h"
+#import "LHSceneJointsTest.h"
+#import "LHSceneGearJointsTest.h"
 
 @implementation LHSceneRopeJointTest
 
 + (LHSceneRopeJointTest *)scene
 {
 	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level06-ropeJoint.plist"];
-}
-
-+(LHSceneRopeJointTest*)sceneWithFile:(NSString*)levelPlistFile
-{
-    return [[self alloc] initWithContentOfFile:levelPlistFile];
 }
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {
@@ -31,7 +28,7 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Make a line to cut the rope joint."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINT DEMO\nMake a line to cut the rope joint."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
@@ -52,5 +49,12 @@
 
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
+}
+
+-(void)previousDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneJointsTest scene]];
+}
+-(void)nextDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneGearJointsTest scene]];
 }
 @end

@@ -9,18 +9,16 @@
 
 // Import the interfaces
 #import "LHSceneJointsTest.h"
+#import "LHSceneCameraTest.h"
+#import "LHSceneRopeJointTest.h"
 
 @implementation LHSceneJointsTest
 
-+ (LHSceneJointsTest *)scene
-{
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
++ (LHSceneDemo *)scene{
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
 }
 
-+(LHSceneJointsTest*)sceneWithFile:(NSString*)levelPlistFile
-{
-    return [[self alloc] initWithContentOfFile:levelPlistFile];
-}
+
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {
     self = [super initWithContentOfFile:levelPlistFile];
@@ -31,9 +29,22 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Click to remove joints.\n"
+    
+    
+#if LH_USE_BOX2D
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"JOINTS DEMO\nClick to remove joints.\n"
                                          fontName:@"Arial"
                                          fontSize:24];
+    
+#else
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"JOINTS DEMO\nClick to remove joints.\nNot all joints are supported when using CHIPMUNK."
+                                         fontName:@"Arial"
+                                         fontSize:24];
+#endif
+
+    
+    
+    
     [ttf setColor:[CCColor blackColor]];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
                                  self.contentSize.height*0.5 - ttf.contentSize.height)];
@@ -101,5 +112,12 @@
     
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
+}
+
+-(void)previousDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneCameraTest scene]];
+}
+-(void)nextDemo{
+    [[CCDirector sharedDirector] replaceScene:[LHSceneRopeJointTest scene]];
 }
 @end

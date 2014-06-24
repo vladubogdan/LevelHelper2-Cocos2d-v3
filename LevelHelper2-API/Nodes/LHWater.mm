@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 #import "LHNodePhysicsProtocol.h"
 
 #if LH_USE_BOX2D
@@ -623,7 +623,7 @@ typedef struct _LH_V2F_C4B_Triangle
 #if LH_USE_BOX2D
     
     LHScene* scene = [self scene];
-    LHPhysicsNode* pNode = [scene gameWorldNode];
+    LHGameWorldNode* pNode = [scene gameWorldNode];
     b2World* world = [pNode box2dWorld];
     
     if(NULL == buoyancyController && world){
@@ -722,7 +722,7 @@ typedef struct _LH_V2F_C4B_Triangle
     
 #else //chipmunk
     
-    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
+    LHGameWorldNode* world = [(LHScene*)[self scene] gameWorldNode];
 
     for(CCNode* node in [world children])
     {

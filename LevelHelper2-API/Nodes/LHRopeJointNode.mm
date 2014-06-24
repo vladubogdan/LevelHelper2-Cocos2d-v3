@@ -15,7 +15,7 @@
 #import "CCTexture_Private.h"
 
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -212,7 +212,7 @@ double fcat(double x, void *data)
     LHScene* scene = (LHScene*)[self scene];
     if(scene)
     {
-        LHPhysicsNode* pNode = [scene gameWorldNode];
+        LHGameWorldNode* pNode = [scene gameWorldNode];
         if(pNode)
         {
 #if LH_USE_BOX2D
@@ -343,7 +343,7 @@ double fcat(double x, void *data)
                      
                     #if LH_USE_BOX2D
                      LHScene* scene = [self scene];
-                     LHPhysicsNode* pNode = [scene gameWorldNode];
+                     LHGameWorldNode* pNode = [scene gameWorldNode];
                      b2World* world = [pNode box2dWorld];
                      b2Vec2 bodyPos = [scene metersFromPoint:interPt];
                      
@@ -436,7 +436,7 @@ double fcat(double x, void *data)
                      
                     #if LH_USE_BOX2D
                      LHScene* scene = [self scene];
-                     LHPhysicsNode* pNode = [scene gameWorldNode];
+                     LHGameWorldNode* pNode = [scene gameWorldNode];
                      b2World* world = [pNode box2dWorld];
                      
                      b2Vec2 bodyPos = [scene metersFromPoint:interPt];
@@ -939,7 +939,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
 
         LHScene* scene = [self scene];
-        LHPhysicsNode* pNode = [scene gameWorldNode];
+        LHGameWorldNode* pNode = [scene gameWorldNode];
         b2World* world = [pNode box2dWorld];
         if(world == nil)return NO;
         

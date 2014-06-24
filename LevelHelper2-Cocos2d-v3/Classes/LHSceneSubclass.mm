@@ -10,14 +10,14 @@
 // Import the interfaces
 #import "LHSceneSubclass.h"
 
+//THIS CLASS SERVERS AS AN EXAMPLE ON HOW TO SUBCLASS LHSCENE
+//YOU CAN LOOK IN THE DemoExamples for more
+
 @implementation LHSceneSubclass
 
 + (LHSceneSubclass *)scene
 {
-//	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
-//    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level03-gravityAreas.plist"];
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level04-waterArea.plist"];
-//    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level02-assetTest.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -32,6 +32,13 @@
     
     // done
 	return self;
+}
+
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
 }
 
 @end
