@@ -236,47 +236,12 @@ typedef struct _LH_V2F_C4B_Triangle
         
         bodySplashes = [[NSMutableDictionary alloc] init];
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-
-        
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
         
         [self setColor:[dict colorForKey:@"colorOverlay"]];
-                
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-                #pragma unused (node)
-            }
-        }
+        
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
         [self createTurbulence];

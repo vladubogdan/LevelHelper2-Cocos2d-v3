@@ -14,6 +14,8 @@
 #import "LHBezier.h"
 #import "LHShape.h"
 
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
 
 @implementation LHUtils
 
@@ -48,20 +50,34 @@
 {
     LHScene* scene = (LHScene*)[node scene];
     
-    
     CGSize designSize = [scene designResolutionSize];
     CGPoint offset = [scene designOffset];
     
     CGPoint designPos = CGPointZero;
+
+    designPos = CGPointMake(designSize.width*unitPos.x,
+                            designSize.height*(-unitPos.y));
     
-    if([node parent] == [scene physicsNode]){
-        designPos = CGPointMake(designSize.width*unitPos.x,
-                                (designSize.height - designSize.height*unitPos.y));
+    
+    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode] || [node parent] == [scene uiNode])
+    {
+        designPos.y = designSize.height + designPos.y;
+        
         designPos.x += offset.x;
         designPos.y += offset.y;
-
     }
+
+    
+//    if([node parent] == [scene physicsNode]){
+//        NSLog(@"PARENT IS PHYSICS NODE");
+//        designPos = CGPointMake(designSize.width*unitPos.x,
+//                                (designSize.height - designSize.height*unitPos.y));
+//        designPos.x += offset.x;
+//        designPos.y += offset.y;
+//
+//    }
     else{
+
         designPos = CGPointMake(designSize.width*unitPos.x,
                                 ([node parent].contentSize.height - designSize.height*unitPos.y));
         

@@ -46,52 +46,16 @@
                                                                                     node:self];
         
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        
-        [self setPosition:pos];
-
         LHScene* scene = (LHScene*)[self scene];
         
         NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
         
         if(assetInfo)
         {
-            NSArray* childrenInfo = [assetInfo objectForKey:@"children"];
-            if(childrenInfo)
-            {
-                for(NSDictionary* childInfo in childrenInfo)
-                {
-                    CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                                parent:self];
-                    #pragma unused (node)
-                }
-            }
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];            
         }
         else{
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);

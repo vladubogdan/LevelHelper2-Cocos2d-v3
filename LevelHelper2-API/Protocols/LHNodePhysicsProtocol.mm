@@ -85,7 +85,7 @@
         b2BodyDef bodyDef;
         bodyDef.type = (b2BodyType)type;
         
-        CGPoint position = [_node convertToNodeSpaceAR:CGPointZero];
+        CGPoint position = [_node convertToWorldSpaceAR:CGPointZero];
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 

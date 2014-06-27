@@ -1669,7 +1669,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>E92E56AF-3F3B-4263-9879-DFDEB4347B1B</string>
+			<string>B3F16513-19DB-4258-9627-92555A6B47A5</string>
 			<key>perDevicePosition</key>
 			<true/>
 			<key>rotation</key>
@@ -1697,7 +1697,7 @@
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>B2A46654-AEB2-4833-96CD-723AB0187B7B</string>
+	<string>A98274C0-424B-48D8-9904-8AD631CFD184</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -1709,7 +1709,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>E92E56AF-3F3B-4263-9879-DFDEB4347B1B</string>
+	<string>B3F16513-19DB-4258-9627-92555A6B47A5</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

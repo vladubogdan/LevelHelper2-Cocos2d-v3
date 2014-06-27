@@ -31,7 +31,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_INDIVIDUAL_IMAGES_EXAMPLE/</string>
 					<key>rotation</key>
@@ -99,7 +99,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1773,209 +1773,22 @@
 						<key>2048x1536</key>
 						<string>{0.14583333333333334, 0.8454332151075773}</string>
 						<key>960x640</key>
-						<string>{0.85464739228288333, 0.17051286399364471}</string>
+						<string>{0.89961989546815557, 0.15591477155685424}</string>
 					</dict>
 					<key>generalPosition</key>
-					<string>{0.85464739228288333, 0.17051286399364471}</string>
+					<string>{0.89961989546815557, 0.15591477155685424}</string>
 					<key>name</key>
 					<string>Officer</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>ovalShape</key>
-						<array>
-							<array>
-								<string>{-18.993825678986916, -154.86193411299456}</string>
-								<string>{-1.7884583597702323e-14, -157.89585876464844}</string>
-								<string>{18.993825678986877, -154.86193411299459}</string>
-							</array>
-							<array>
-								<string>{-18.993825678986916, -154.86193411299456}</string>
-								<string>{18.993825678986877, -154.86193411299459}</string>
-								<string>{37.257729288990468, -145.87675218095154}</string>
-							</array>
-							<array>
-								<string>{-37.257729288990497, -145.87675218095151}</string>
-								<string>{-18.993825678986916, -154.86193411299456}</string>
-								<string>{37.257729288990468, -145.87675218095154}</string>
-							</array>
-							<array>
-								<string>{-37.257729288990497, -145.87675218095151}</string>
-								<string>{37.257729288990468, -145.87675218095154}</string>
-								<string>{54.089839256793375, -131.28560847121972}</string>
-							</array>
-							<array>
-								<string>{-54.089839256793411, -131.28560847121969}</string>
-								<string>{-37.257729288990497, -145.87675218095151}</string>
-								<string>{54.089839256793375, -131.28560847121972}</string>
-							</array>
-							<array>
-								<string>{-54.089839256793411, -131.28560847121969}</string>
-								<string>{54.089839256793375, -131.28560847121972}</string>
-								<string>{68.843307035889126, -111.6492324537563}</string>
-							</array>
-							<array>
-								<string>{-68.843307035889154, -111.64923245375627}</string>
-								<string>{-54.089839256793411, -131.28560847121969}</string>
-								<string>{68.843307035889126, -111.6492324537563}</string>
-							</array>
-							<array>
-								<string>{-80.951165133367027, -87.722239046705894}</string>
-								<string>{-68.843307035889154, -111.64923245375627}</string>
-								<string>{68.843307035889126, -111.6492324537563}</string>
-							</array>
-							<array>
-								<string>{-80.951165133367027, -87.722239046705894}</string>
-								<string>{68.843307035889126, -111.6492324537563}</string>
-								<string>{80.951165133367013, -87.722239046705923}</string>
-							</array>
-							<array>
-								<string>{-89.948115352706012, -60.424129188289093}</string>
-								<string>{-80.951165133367027, -87.722239046705894}</string>
-								<string>{80.951165133367013, -87.722239046705923}</string>
-							</array>
-							<array>
-								<string>{-89.948115352706012, -60.424129188289093}</string>
-								<string>{80.951165133367013, -87.722239046705923}</string>
-								<string>{89.948115352705997, -60.424129188289207}</string>
-							</array>
-							<array>
-								<string>{-89.948115352706012, -60.424129188289093}</string>
-								<string>{89.948115352705997, -60.424129188289207}</string>
-								<string>{95.488409942524754, -30.803953931408444}</string>
-							</array>
-							<array>
-								<string>{-95.488409942524768, -30.803953931408387}</string>
-								<string>{-89.948115352706012, -60.424129188289093}</string>
-								<string>{95.488409942524754, -30.803953931408444}</string>
-							</array>
-							<array>
-								<string>{-95.488409942524768, -30.803953931408387}</string>
-								<string>{95.488409942524754, -30.803953931408444}</string>
-								<string>{97.359138488769531, 0}</string>
-							</array>
-							<array>
-								<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
-								<string>{-95.488409942524768, -30.803953931408387}</string>
-								<string>{97.359138488769531, 0}</string>
-							</array>
-							<array>
-								<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
-								<string>{97.359138488769531, 0}</string>
-								<string>{95.488409942524768, 30.803953931408369}</string>
-							</array>
-							<array>
-								<string>{-95.488409942524768, 30.803953931408422}</string>
-								<string>{-97.359138488769531, 1.9336665803474926e-14}</string>
-								<string>{95.488409942524768, 30.803953931408369}</string>
-							</array>
-							<array>
-								<string>{-95.488409942524768, 30.803953931408422}</string>
-								<string>{95.488409942524768, 30.803953931408369}</string>
-								<string>{89.948115352706012, 60.424129188289108}</string>
-							</array>
-							<array>
-								<string>{-89.948115352706012, 60.424129188289115}</string>
-								<string>{-95.488409942524768, 30.803953931408422}</string>
-								<string>{89.948115352706012, 60.424129188289108}</string>
-							</array>
-							<array>
-								<string>{-89.948115352706012, 60.424129188289115}</string>
-								<string>{89.948115352706012, 60.424129188289108}</string>
-								<string>{80.951165133367013, 87.722239046705923}</string>
-							</array>
-							<array>
-								<string>{-80.951165133367027, 87.722239046705923}</string>
-								<string>{-89.948115352706012, 60.424129188289115}</string>
-								<string>{80.951165133367013, 87.722239046705923}</string>
-							</array>
-							<array>
-								<string>{-68.843307035889126, 111.64923245375628}</string>
-								<string>{-80.951165133367027, 87.722239046705923}</string>
-								<string>{80.951165133367013, 87.722239046705923}</string>
-							</array>
-							<array>
-								<string>{-68.843307035889126, 111.64923245375628}</string>
-								<string>{80.951165133367013, 87.722239046705923}</string>
-								<string>{68.84330703588914, 111.64923245375627}</string>
-							</array>
-							<array>
-								<string>{-68.843307035889126, 111.64923245375628}</string>
-								<string>{68.84330703588914, 111.64923245375627}</string>
-								<string>{54.089839256793418, 131.28560847121966}</string>
-							</array>
-							<array>
-								<string>{-54.089839256793383, 131.28560847121972}</string>
-								<string>{-68.843307035889126, 111.64923245375628}</string>
-								<string>{54.089839256793418, 131.28560847121966}</string>
-							</array>
-							<array>
-								<string>{-37.25772928899044, 145.87675218095154}</string>
-								<string>{-54.089839256793383, 131.28560847121972}</string>
-								<string>{54.089839256793418, 131.28560847121966}</string>
-							</array>
-							<array>
-								<string>{-37.25772928899044, 145.87675218095154}</string>
-								<string>{54.089839256793418, 131.28560847121966}</string>
-								<string>{37.257729288990447, 145.87675218095154}</string>
-							</array>
-							<array>
-								<string>{-37.25772928899044, 145.87675218095154}</string>
-								<string>{37.257729288990447, 145.87675218095154}</string>
-								<string>{18.99382567898688, 154.86193411299459}</string>
-							</array>
-							<array>
-								<string>{-18.99382567898687, 154.86193411299459}</string>
-								<string>{-37.25772928899044, 145.87675218095154}</string>
-								<string>{18.99382567898688, 154.86193411299459}</string>
-							</array>
-							<array>
-								<string>{-18.99382567898687, 154.86193411299459}</string>
-								<string>{18.99382567898688, 154.86193411299459}</string>
-								<string>{5.9615278659007743e-15, 157.89585876464844}</string>
-							</array>
-						</array>
-						<key>shape</key>
-						<integer>4</integer>
-						<key>type</key>
-						<integer>0</integer>
-					</dict>
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>perDevicePosition</key>
 					<true/>
 					<key>rotation</key>
 					<real>352.94927978515625</real>
 					<key>scale</key>
-					<string>{0.98953640460968018, 0.48917326331138611}</string>
+					<string>{0.5, 0.5}</string>
 					<key>size</key>
 					<string>{194.71827697753906, 315.79171752929688}</string>
 					<key>tags</key>
@@ -2005,7 +1818,7 @@
 					<key>nodeType</key>
 					<string>LHRopeJoint</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>/DEMO_INDIVIDUAL_IMAGES_EXAMPLE/cartoonRope.png</string>
 					<key>relativePosA</key>
@@ -2034,6 +1847,126 @@
 					<string>EB1A5736-5907-460F-9D38-9695CB4CEA28</string>
 					<key>uvRepetitions</key>
 					<string>{1, 22}</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.22857189178466797, 0.15189126133918762}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.13908813893795013, 0.28713369369506836}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.24079601466655731, 0.45777952671051025}</string>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{0.013528772415309713, -0.0012630087925814769}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>hand_L_outline_1.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>2F2CC3BE-9038-41F2-8F68-1C6D284E46A0</string>
+									<key>relativeImagePath</key>
+									<string>DEMO_PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>8.4649419784545898</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{31, 35}</string>
+									<key>spriteName</key>
+									<string>hand_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>00E7A15D-F08B-486E-89AA-F61CB3B01FC1</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>11035D96-46C0-440F-8868-8926F8C0DDC3</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.01336355538954089, 0.025298711109749839}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>forearm_L_outline_1.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>3DB8D51F-1A6A-43C1-892E-21F4FF3B23D4</string>
+							<key>relativeImagePath</key>
+							<string>DEMO_PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>7.1650009155273438</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{51, 29}</string>
+							<key>spriteName</key>
+							<string>forearm_L_outline.png</string>
+							<key>spriteUUID</key>
+							<string>3A565676-B217-4A03-8B4C-6778BB7AFF26</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>2F2CC3BE-9038-41F2-8F68-1C6D284E46A0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.73568055405240507, 0.097429317625767953}</string>
+					<key>imageFileName</key>
+					<string>officer.png</string>
+					<key>name</key>
+					<string>shoulder_L_outline_1.png</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>344.48492431640625</real>
+					<key>scale</key>
+					<string>{0.5, 0.5}</string>
+					<key>size</key>
+					<string>{44, 63}</string>
+					<key>spriteName</key>
+					<string>shoulder_L_outline.png</string>
+					<key>spriteUUID</key>
+					<string>E00DCC2C-D3BC-4A53-AC00-D698E2F0D7F2</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>3DB8D51F-1A6A-43C1-892E-21F4FF3B23D4</string>
 					<key>zOrder</key>
 					<integer>-1</integer>
 				</dict>
@@ -2087,7 +2020,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2159,7 +2092,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2231,7 +2164,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2301,7 +2234,7 @@
 					<key>nodeType</key>
 					<string>LHTexturedShape</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -2551,7 +2484,7 @@
 					<key>nodeType</key>
 					<string>LHBezier</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -2656,7 +2589,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2728,7 +2661,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2800,7 +2733,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -2844,7 +2777,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>F91C16A3-7F57-4D40-8914-679BE776E3CC</string>
+						<string>779480C4-A205-4BBB-813B-0707221E3EB4</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -2874,7 +2807,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>66F77B86-CD32-4082-BFBF-9D14B17D3572</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -3017,7 +2950,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>F91C16A3-7F57-4D40-8914-679BE776E3CC</key>
+		<key>779480C4-A205-4BBB-813B-0707221E3EB4</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>

@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.22857189178466797, 0.15189126133918762}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.13908813893795013, 0.28713369369506836}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.24079601466655731, 0.45777952671051025}</string>
+									<key>colorOverlay</key>
+									<string>{{1, 1}, {1, 1}}</string>
+									<key>generalPosition</key>
+									<string>{0.013528772415309713, -0.0012630087925814769}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>hand_L_outline_1.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>532CCA71-9C10-4660-875A-3A192CE91AB6</string>
+									<key>relativeImagePath</key>
+									<string>DEMO_PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>8.4649419784545898</real>
+									<key>scale</key>
+									<string>{1, 1}</string>
+									<key>size</key>
+									<string>{31, 35}</string>
+									<key>spriteName</key>
+									<string>hand_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>00E7A15D-F08B-486E-89AA-F61CB3B01FC1</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>62DAAEA8-2704-454E-B781-6A1294B8B82B</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1, 1}, {1, 1}}</string>
+							<key>generalPosition</key>
+							<string>{0.01336355538954089, 0.025298711109749839}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>forearm_L_outline_1.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>4951941A-E0FD-4CAD-A3C3-369A52C1F7BC</string>
+							<key>relativeImagePath</key>
+							<string>DEMO_PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>7.1650009155273438</real>
+							<key>scale</key>
+							<string>{1, 1}</string>
+							<key>size</key>
+							<string>{51, 29}</string>
+							<key>spriteName</key>
+							<string>forearm_L_outline.png</string>
+							<key>spriteUUID</key>
+							<string>3A565676-B217-4A03-8B4C-6778BB7AFF26</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>532CCA71-9C10-4660-875A-3A192CE91AB6</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.33600824701950288, 0.12365865743065094}</string>
+					<key>imageFileName</key>
+					<string>officer.png</string>
+					<key>name</key>
+					<string>shoulder_L_outline_1.png</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>344.48492431640625</real>
+					<key>scale</key>
+					<string>{0.5, 0.5}</string>
+					<key>size</key>
+					<string>{44, 63}</string>
+					<key>spriteName</key>
+					<string>shoulder_L_outline.png</string>
+					<key>spriteUUID</key>
+					<string>E00DCC2C-D3BC-4A53-AC00-D698E2F0D7F2</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>4951941A-E0FD-4CAD-A3C3-369A52C1F7BC</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.074471021581363553, 0.12630439249323899}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_statue</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{105, 148}</string>
+					<key>spriteName</key>
+					<string>object_statue</string>
+					<key>spriteUUID</key>
+					<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>A6584ED9-4C71-4C39-8855-440C8102122A</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.068849276753220084, 0.86461495578687386}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_statue_1</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{105, 148}</string>
+					<key>spriteName</key>
+					<string>object_statue</string>
+					<key>spriteUUID</key>
+					<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>669C244C-6316-4499-A994-C2E045A110BD</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.48847276718685556, 0.050000000000000003}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_banana</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>827B2D01-D231-4AB0-82BC-1E37F79AE7DD</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{92, 64}</string>
+					<key>spriteName</key>
+					<string>object_banana</string>
+					<key>spriteUUID</key>
+					<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>3F068FD1-2A0F-4927-BAD3-EFC9E87D5ACC</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.93116944412370983, 0.087471384199943714}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_hat</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{122, 75}</string>
+					<key>spriteName</key>
+					<string>object_hat</string>
+					<key>spriteUUID</key>
+					<string>A0CC7494-203E-4C79-A14A-ECA50F1FBA3D</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>048B44F8-92AC-4D49-B548-1FE3F5ED185E</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.3556415045849769, 0.050000000000000003}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_banana_1</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>827B2D01-D231-4AB0-82BC-1E37F79AE7DD</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{92, 64}</string>
+					<key>spriteName</key>
+					<string>object_banana</string>
+					<key>spriteUUID</key>
+					<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>CF049792-87D4-4098-B888-5915135EB0A0</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>assetFile</key>
+					<string>OfficerAsset.lhasset</string>
+					<key>assetUUID</key>
+					<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.2992650680364391, 0.71467928700826155}</string>
+					<key>name</key>
+					<string>OfficerAsset</string>
+					<key>nodeType</key>
+					<string>LHAsset</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{249.82267761230469, 442.64926147460938}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>4C628CD0-57AF-4015-8DCF-33ED5B3B0855</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>assetFile</key>
+					<string>OfficerAsset.lhasset</string>
+					<key>assetUUID</key>
+					<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.80533740617722649, 0.54963122966267286}</string>
+					<key>name</key>
+					<string>OfficerAsset_1</string>
+					<key>nodeType</key>
+					<string>LHAsset</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>270</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{249.82267761230469, 442.64926147460938}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>971F48EB-67C2-4B01-A19E-875AE941AC43</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>A98274C0-424B-48D8-9904-8AD631CFD184</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>85DF00B5-57D6-49C9-8B47-A204D7582855</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>A98274C0-424B-48D8-9904-8AD631CFD184</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>80A6E31A-D115-41D8-9695-732BFF23D848</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>960x640</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>general</key>
+		<string>{{0, 0}, {1, 1}}</string>
+	</dict>
+	<key>sceneFormat</key>
+	<integer>1</integer>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>827B2D01-D231-4AB0-82BC-1E37F79AE7DD</key>
+		<array>
+			<array>
+				<string>{34.75, -27.75}</string>
+				<string>{35.25, -28.25}</string>
+				<string>{38.75, -26.75}</string>
+				<string>{40.25, -22.75}</string>
+			</array>
+			<array>
+				<string>{26.25, -19.75}</string>
+				<string>{32.75, -27.25}</string>
+				<string>{34.75, -27.75}</string>
+				<string>{40.25, -22.75}</string>
+				<string>{40.25, -17.75}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{27.25, -12.25}</string>
+			</array>
+			<array>
+				<string>{17.25, -1.75}</string>
+				<string>{27.25, -12.25}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{34.25, 12.25}</string>
+				<string>{27.75, 18.75}</string>
+			</array>
+			<array>
+				<string>{7.25, 3.25}</string>
+				<string>{17.25, -1.75}</string>
+				<string>{27.75, 18.75}</string>
+				<string>{22.25, 22.25}</string>
+				<string>{16.25, 24.75}</string>
+				<string>{6.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{1.75, 4.25}</string>
+				<string>{7.25, 3.25}</string>
+				<string>{6.25, 26.75}</string>
+				<string>{-4.25, 26.75}</string>
+			</array>
+			<array>
+				<string>{-6.75, 3.75}</string>
+				<string>{1.75, 4.25}</string>
+				<string>{-4.25, 26.75}</string>
+				<string>{-15.25, 24.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-6.75, 3.75}</string>
+				<string>{-23.75, 21.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-23.75, 21.25}</string>
+				<string>{-29.75, 17.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-29.75, 17.25}</string>
+				<string>{-37.25, 8.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-37.25, 8.75}</string>
+				<string>{-40.75, 0.25}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, 0.25}</string>
+				<string>{-40.75, -3.75}</string>
+			</array>
+			<array>
+				<string>{-33.75, -7.75}</string>
+				<string>{-40.75, -3.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+			<array>
+				<string>{-36.75, -7.75}</string>
+				<string>{-33.75, -7.75}</string>
+				<string>{-38.75, -6.25}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>A98274C0-424B-48D8-9904-8AD631CFD184</string>
+</dict>
+</plist>

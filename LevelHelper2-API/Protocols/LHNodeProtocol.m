@@ -12,6 +12,9 @@
 #import "LHScene.h"
 #import "LHUserPropertyProtocol.h"
 
+#import "LHUINode.h"
+#import "LHGameWorldNode.h"
+
 @implementation LHNodeProtocolImpl
 {
     __unsafe_unretained CCNode* _node;
@@ -91,6 +94,49 @@
         if([dict objectForKey:@"size"]){
             [_node setContentSize:[dict sizeForKey:@"size"]];
         }
+        
+        if([dict objectForKey:@"generalPosition"]&&
+           ![_node isKindOfClass:[LHUINode class]] &&
+           ![_node isKindOfClass:[LHGameWorldNode class]])
+        {
+            
+            CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+            CGPoint pos = [LHUtils positionForNode:_node
+                                          fromUnit:unitPos];
+            
+            NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+            if(devPositions)
+            {
+                
+#if TARGET_OS_IPHONE
+                NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                       forSize:LH_SCREEN_RESOLUTION];
+#else
+                LHScene* scene = (LHScene*)[self scene];
+                NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                       forSize:scene.size];
+#endif
+                
+                if(unitPosStr){
+                    CGPoint unitPos = LHPointFromString(unitPosStr);
+                    pos = [LHUtils positionForNode:_node
+                                          fromUnit:unitPos];
+                }
+            }
+            
+            [_node setPosition:pos];
+        }
+        
+        if([dict objectForKey:@"anchor"] &&
+           ![_node isKindOfClass:[LHUINode class]] &&
+           ![_node isKindOfClass:[LHGameWorldNode class]])
+        {
+            CGPoint anchor = [dict pointForKey:@"anchor"];
+            anchor.y = 1.0f - anchor.y;
+            [_node setAnchorPoint:anchor];
+        }
+
+        
     }
     return self;
 }
@@ -103,6 +149,21 @@
     }
     return self;
 }
+
++(void)loadChildrenForNode:(CCNode*)prntNode fromDictionary:(NSDictionary*)dict
+{
+    NSArray* childrenInfo = [dict objectForKey:@"children"];
+    if(childrenInfo)
+    {
+        for(NSDictionary* childInfo in childrenInfo)
+        {
+            CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
+                                                        parent:prntNode];
+#pragma unused (node)
+        }
+    }
+}
+
 
 #pragma mark - PROPERTIES
 -(NSString*)uuid{

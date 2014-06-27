@@ -39,6 +39,8 @@
 
 #import "LHCameraActivateProperty.h"
 
+#import "LHGameWorldNode.h"
+
 
 @implementation LHAnimation
 {
@@ -351,11 +353,18 @@
     CGPoint offset = [scene designOffset];
 
     CCNode* p = [animNode parent];
-    if([p isKindOfClass:[CCPhysicsNode class]])
+//    if([p isKindOfClass:[CCPhysicsNode class]])
+//    {
+//        newPos.x += offset.x;
+//        newPos.y += offset.y;
+//
+//        newPos.y += p.contentSize.height;
+//    }
+    if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene gameWorldNode])
     {
         newPos.x += offset.x;
         newPos.y += offset.y;
-
+        
         newPos.y += p.contentSize.height;
     }
     else{
@@ -366,6 +375,7 @@
     }
     
     return newPos;
+    
 }
 
 -(void)animateNodeChildrenPositionsToTime:(float)time

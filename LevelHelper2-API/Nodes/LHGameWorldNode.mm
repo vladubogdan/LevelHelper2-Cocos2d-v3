@@ -304,7 +304,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     if(self = [super init]){
         
         [prnt addChild:self];
-        
+
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
@@ -312,18 +312,10 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         _box2dWorld = NULL;
 #endif
 
+        self.position = CGPointZero;
         
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-#pragma unused (node)
-            }
-        }
-        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+
     }
     return self;
 }

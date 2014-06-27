@@ -154,9 +154,12 @@
         designOffset         = childrenOffset;
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
         
+        [self setName:relativePath];
 
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
+        
+        self.position = CGPointZero;
         
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){
@@ -165,16 +168,12 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        for(NSDictionary* childInfo in childrenInfo)
-        {
-            CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                        parent:self];
-            if(node){
-                
-            }
-        }
-
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
+        
+        
+        
         if([dict boolForKey:@"useGlobalGravity"])
         {
             CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];

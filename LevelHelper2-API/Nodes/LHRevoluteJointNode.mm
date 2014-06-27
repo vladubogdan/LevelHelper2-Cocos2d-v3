@@ -78,9 +78,9 @@
         _enableMotor = [dict boolForKey:@"enableMotor"];
         
         
-        _lowerAngle = [dict floatForKey:@"lowerAngle"];
-        _upperAngle = [dict floatForKey:@"upperAngle"];
-        
+        _lowerAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"lowerAngle"] - 90.0f);
+        _upperAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"upperAngle"] - 90.0f);
+
         _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
         _motorSpeed = [dict floatForKey:@"motorSpeed"];
         

@@ -46,7 +46,7 @@
 		<key>object_bananabunch</key>
 		<dict>
 			<key>frame</key>
-			<string>{{304, 123}, {154, 109}}</string>
+			<string>{{302, 127}, {154, 109}}</string>
 			<key>offset</key>
 			<string>{3.5, -0.5}</string>
 			<key>rotated</key>
@@ -76,7 +76,7 @@
 		<key>object_hat</key>
 		<dict>
 			<key>frame</key>
-			<string>{{4, 288}, {217, 126}}</string>
+			<string>{{2, 292}, {217, 126}}</string>
 			<key>offset</key>
 			<string>{0.5, 1}</string>
 			<key>rotated</key>
