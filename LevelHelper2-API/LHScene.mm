@@ -28,12 +28,14 @@
 #import "LHWheelJointNode.h"
 #import "LHGearJointNode.h"
 
+#import "LHBackUINode.h"
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 
 
 @implementation LHScene
 {
+    __unsafe_unretained LHBackUINode*       _backUiNode;
     __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
     __unsafe_unretained LHUINode*           _uiNode;
     
@@ -74,6 +76,7 @@
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
+    _backUiNode = nil;
     _gameWorldNode = nil;
     _uiNode = nil;
 
@@ -154,6 +157,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
+        self.contentSize = curDev.size;
         self.position = CGPointZero;
         
         
@@ -341,6 +345,17 @@
 -(LHGameWorldNode*)physicsNode{
     return [self gameWorldNode];
 }
+-(LHBackUINode*)backUiNode{
+    if(!_backUiNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHBackUINode class]]){
+                _backUiNode = (LHBackUINode*)n;
+                break;
+            }
+        }
+    }
+    return _backUiNode;
+}
 -(LHGameWorldNode*)gameWorldNode{
     if(!_gameWorldNode){
         for(CCNode* n in [self children]){
@@ -412,11 +427,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     
     ropeJointsCutStartPt = touchLocation;
     
-    [super touchBegan:touch withEvent:event];
+    //dont call super - causes touchEnded to not get called
+//    [super touchBegan:touch withEvent:event];
 }
 
 -(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-    [super touchMoved:touch withEvent:event];
+//    [super touchMoved:touch withEvent:event];
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
@@ -432,7 +448,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                toPointB:touchLocation];
         }
     }
-    [super touchEnded:touch withEvent:event];
+//    [super touchEnded:touch withEvent:event];
 }
 
 

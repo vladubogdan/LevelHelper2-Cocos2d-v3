@@ -13,15 +13,45 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>6E74CDFA-85A9-4BB0-8B6D-42DAAC3D099A</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>42125301-E3D1-4FDE-A85B-89C79DD7CD46</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
 			<key>children</key>
 			<array>
 				<dict>
 					<key>activeCamera</key>
 					<true/>
 					<key>followedNodeUUID</key>
-					<string>B5CCEF23-5551-4E7A-9F5B-307F6CDF51F8</string>
+					<string>F0D3DCB5-C958-4CCA-A866-501C1ECB1BF0</string>
 					<key>generalPosition</key>
-					<string>{-0.074846307436625167, -0.035724115371704099}</string>
+					<string>{-0.21556563377380372, -0.29748239517211916}</string>
 					<key>name</key>
 					<string>UntitledCamera</string>
 					<key>nodeType</key>
@@ -35,7 +65,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>E74B0322-D008-4DBF-A7FE-039E4005F5BC</string>
+					<string>9090E134-E9A1-42D3-88FF-F4F985F16724</string>
 				</dict>
 				<dict>
 					<key>alpha</key>
@@ -60,7 +90,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -78,7 +108,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>779CDB1A-B204-4A06-BA3B-9C51AB86ABD5</string>
+							<string>6EB14BC3-B089-40C6-B6A4-D70FD3F49DD7</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -98,7 +128,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -116,7 +146,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>6DD78F70-3FBB-4125-92C7-058050466185</string>
+							<string>17592945-F36B-42FD-9362-F59DA80304FB</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -136,7 +166,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -154,7 +184,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F3EE4259-5572-4B04-ADB4-70EECCA3E4A1</string>
+							<string>F69671BC-5188-43B8-81C1-E89A5E1E3D82</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -174,7 +204,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -192,7 +222,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F771C0B4-69F2-44D8-B0D9-41A4D5BB5E28</string>
+							<string>1B4C9641-E926-49C9-A345-F84694271C3A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -212,7 +242,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -230,7 +260,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>1B3B141A-2A42-4F33-8273-1F2014036186</string>
+							<string>84471AE2-0D0C-4494-822A-16E4E2D53CC5</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -250,7 +280,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -268,7 +298,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>6741DB08-295C-47B7-AD4A-A3BDE493A19C</string>
+							<string>FA40F579-CFCA-4393-83C6-624BE90607B0</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -288,7 +318,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -306,7 +336,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>82FA9B2C-8B45-4116-AE62-833E6F0B5444</string>
+							<string>AD86828C-0A34-4168-B7DE-3A1AACEB40B6</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -326,7 +356,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -344,7 +374,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>603FEE36-06BA-4E7C-981B-B46E721E5930</string>
+							<string>29DB8775-C0CF-4F1B-B087-97917B8646E6</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -364,7 +394,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -382,7 +412,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>60117205-1737-41D1-810B-9FA574073B01</string>
+							<string>60C08660-605C-4BF8-8971-6E37A65B8AD4</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -402,7 +432,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -420,7 +450,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>AF04E60C-8D18-4C5A-8137-9D374F02D699</string>
+							<string>17B02E6F-AE94-48E5-B048-661283B66F66</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -440,7 +470,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -458,7 +488,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>36D324CC-BB09-4A11-847D-298B5CDFF2CE</string>
+							<string>5131E681-45A2-42E0-BF06-DBF4D348D6DA</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -478,7 +508,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -496,7 +526,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>05C688BD-F4B7-4919-A6C3-DC74FAB407D2</string>
+							<string>6C984EF9-AF12-4CBE-8D7E-910B7432770B</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -516,7 +546,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -534,7 +564,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>037A511F-05F3-452C-8A4D-9DCFCEC9397B</string>
+							<string>F539D078-B0B3-4823-9338-F347D631B7B3</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -554,7 +584,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -572,7 +602,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>1D7035C0-D2B0-4071-AA4D-FF902BCB888E</string>
+							<string>2ED6C1D3-558B-407D-B71E-6D76247A1344</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -592,7 +622,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -610,7 +640,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>91EF9F20-5CBB-476D-A4D7-B92409656D22</string>
+							<string>99BEF79D-558D-40AE-BF35-6F9A28888CAC</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -630,7 +660,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -648,7 +678,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>98A7F0D0-4009-40D5-BE0C-389558C347A4</string>
+							<string>9FD8953A-A765-4B65-B8DA-C801B90DF76E</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -668,7 +698,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -686,7 +716,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>CCA261EE-996B-444E-8A80-4F9ED16AA65F</string>
+							<string>5AFB6F63-01D6-4EDF-9077-3F1696E4D52E</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -706,7 +736,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -724,7 +754,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>23566F1B-286E-41BC-A4CA-EA5E83F0A026</string>
+							<string>CA956034-9171-4D31-9FA8-8CA6ACB48242</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -744,7 +774,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -762,7 +792,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>5C74B7A3-50BA-49E9-BB37-1B72ADC443F3</string>
+							<string>8FDB3226-5312-42B5-9EEC-409F67E9A200</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -782,7 +812,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -800,7 +830,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>3EB5848A-5126-47A8-BB5F-17E6A921F3D3</string>
+							<string>B4755206-803C-41EA-BEF8-65242809018D</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -820,7 +850,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -838,7 +868,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>14BF61AE-E2D1-4887-B601-6DF71CEEC604</string>
+							<string>E3986A52-6046-4DAF-869D-23DC813E78EC</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -858,7 +888,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -876,7 +906,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F55E7BDC-484A-48A5-970F-1796838EEC2A</string>
+							<string>DE33872B-A7C9-4F15-9637-09BD9B3CEC03</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -896,7 +926,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -914,7 +944,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>00293DFE-D0D3-4E5B-99D5-EFE23287835E</string>
+							<string>AB3F868C-526B-450D-9BFF-0F75BAFD4C0A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -934,7 +964,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -952,7 +982,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>B2AF510E-6BF9-4421-8C68-1CDF368C56D8</string>
+							<string>E03DEA63-6CC1-4267-8594-7D0F271DEE8C</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -972,7 +1002,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -990,7 +1020,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>919FBAA2-BF88-4C0A-B8E4-207B50730791</string>
+							<string>24AF3C73-DFF3-4963-BB0E-286B57F26952</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1010,7 +1040,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1028,7 +1058,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>72E73B0A-BFE1-4608-B2E4-164379F4068F</string>
+							<string>A99C0865-6872-45E8-B319-AB627468D165</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1048,7 +1078,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1066,7 +1096,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>99E58C51-1D1D-470C-9162-F92694C60AB7</string>
+							<string>63761373-FB8D-4FE0-B344-0FE67B7432CB</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1086,7 +1116,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1104,7 +1134,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D0078B08-5FB9-4EDF-8EC8-AED2DE2C06C8</string>
+							<string>CDE309AE-5B13-4C83-B3D8-FCBB2313BE81</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1158,7 +1188,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1176,7 +1206,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>45421AD1-C67C-4BD3-B247-FC575B5D2B2D</string>
+							<string>32FFB7E6-BF84-4587-9D4A-D35E0617D41E</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1196,7 +1226,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1214,7 +1244,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>1FBA602E-952D-45C7-8581-6A42DC49E4EC</string>
+							<string>7414090A-2182-4B51-858C-D11EA9DA62E2</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1234,7 +1264,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1252,7 +1282,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EBAD2B8E-AB33-462C-B83A-F836C75A496C</string>
+							<string>94C7728F-B5CB-47C3-9194-4CB5C0187191</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1272,7 +1302,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1290,7 +1320,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>E12C49F8-AA92-4593-B216-08AE69953B9A</string>
+							<string>0714CD62-375A-4AEA-9661-4688BD5A4ED3</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1310,7 +1340,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1328,7 +1358,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>0A42CEC7-DB85-431F-8B41-74D7CED383A1</string>
+							<string>9048625C-4BAF-4C2B-B78F-81AD24187D0B</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1348,7 +1378,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1366,7 +1396,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>77CABA6D-878B-42B8-9AFA-99CB275A6835</string>
+							<string>BC0A79EE-74A4-4BC3-9F2E-62475FE255B4</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1386,7 +1416,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1404,7 +1434,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>CA0480B2-8F22-4225-8E29-F33F40B18876</string>
+							<string>C1C64563-8922-402C-AAB7-BE4F59DBCAEF</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1424,7 +1454,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1442,7 +1472,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>2C1D27C6-67E7-4007-836E-CFFAC2BFB17E</string>
+							<string>FA232311-E715-43B5-9623-BAD743904C92</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1462,7 +1492,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1480,7 +1510,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>AEAFC52F-8DF6-4823-A168-2582CCDB83E6</string>
+							<string>DD27844F-DDAE-4667-8089-40DC3DC2C57D</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1500,7 +1530,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1518,7 +1548,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>43AA7135-6BF9-47A4-B823-EFF020242FDD</string>
+							<string>DD5BE30A-0062-4DDF-BED6-3ADD251E3B96</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1538,7 +1568,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1556,7 +1586,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>C138C986-FA8F-48B0-9DAA-2DDB3058AE3F</string>
+							<string>4072B785-0C40-4B2F-8668-92A424BB22BE</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1576,7 +1606,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1594,7 +1624,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>FB3AEA60-1C46-410C-8F12-E9B21EA7393B</string>
+							<string>FF2FC578-1087-4891-BB0B-B8DEB4194B90</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1614,7 +1644,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1632,7 +1662,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>01ABF3CC-9366-42FC-8A58-CCFE2A01025B</string>
+							<string>4F5265DA-7C9B-492C-8063-9E1D17616BD9</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1652,7 +1682,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1670,7 +1700,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>2EFA2519-664A-4987-A73E-DB89A69CB3E4</string>
+							<string>75D19FAA-6957-4B37-8AA0-5EF16D4CD238</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1690,7 +1720,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1708,7 +1738,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>0A2AFA9B-44BC-4562-8635-83ACCA72425E</string>
+							<string>64979D6F-EAFC-443C-AE9C-7B38B35A172A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1728,7 +1758,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1746,7 +1776,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>94D57B38-DAE0-483A-BB1B-24E45B300949</string>
+							<string>3A1C1AEB-2C2F-44D3-B784-39031DCF551D</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1766,7 +1796,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1784,7 +1814,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>FA3A40DA-577F-44F1-8CE6-E60D18D77836</string>
+							<string>3F765F40-918F-4E2C-BFE3-2BB2EE1B11D1</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1804,7 +1834,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1822,7 +1852,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>C57D84C5-ABB6-41AD-B10E-E0CA3ED191E8</string>
+							<string>46F1E43C-2716-4315-9DA6-7CA476EFB3EB</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1842,7 +1872,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1860,7 +1890,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>9228683B-9F83-432B-820E-280C4563C39E</string>
+							<string>7F713A43-BE38-4981-937C-8E95BC8270F4</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1880,7 +1910,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1898,7 +1928,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>3E76CD58-C8AB-4187-A660-3354C82F2067</string>
+							<string>3B62E20D-EE25-4D00-BAA6-05DE937F0B77</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1918,7 +1948,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1936,7 +1966,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>0F37884E-074B-4367-B06A-DF960C0BD6D1</string>
+							<string>96D161CC-9FCF-43C4-80EF-8AA117B9AEB9</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1956,7 +1986,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -1974,7 +2004,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>3F0F98DF-56C5-45CF-87AC-3E503F796AAD</string>
+							<string>D45F733A-FBFB-41D0-BBB8-84E7378BFA38</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -1994,7 +2024,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2012,7 +2042,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>15D21F10-C374-440E-B018-54AA69275A67</string>
+							<string>45D13640-C18F-4F50-9E7E-32DA1EEE4640</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2032,7 +2062,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2050,7 +2080,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>37DBF471-FA5D-423D-AB85-7777B8C2BB90</string>
+							<string>36338C90-C77D-4264-910A-349A6CCE397D</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2070,7 +2100,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2088,7 +2118,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>48B1838C-6DE7-4F36-872B-8CA1F99E374B</string>
+							<string>187FA310-57F7-4485-9801-6F6F2C616B55</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2108,7 +2138,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2126,7 +2156,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D231DD78-E269-4BB0-A68D-AAAAA36940E1</string>
+							<string>1446ADA1-905C-4273-9219-CEBE975B0ABA</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2146,7 +2176,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2164,7 +2194,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>555F866E-14A7-4F99-8C29-319259FAC2A6</string>
+							<string>27215B54-E7BE-449E-87A0-28AB25EDC6AD</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2184,7 +2214,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2202,7 +2232,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>4B1A5C9F-17AC-4ECC-AD6E-92DEE721B780</string>
+							<string>A3E3A67F-3613-482E-852B-9BA3F5215366</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2222,7 +2252,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2240,7 +2270,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>636CC1C4-67CF-405C-A6CA-0C216B283342</string>
+							<string>09B56866-57E7-40F9-A0A7-384384F48A1D</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2260,7 +2290,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2278,7 +2308,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D31BC202-2214-46A4-8DEC-7A7CC34D292F</string>
+							<string>1AAFF693-8D0C-4155-A31B-C139C74053AA</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2298,7 +2328,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2316,7 +2346,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F9F0F1ED-1E67-4403-A2CE-32991BEF2438</string>
+							<string>3AFDA480-3FB3-4959-A792-8B94E47FD19A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2336,7 +2366,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2354,7 +2384,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>746BB086-1DD4-40F3-837C-46BAA3F1D57A</string>
+							<string>A3204CF1-15F9-4ADB-88E2-3441F663D952</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2374,7 +2404,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2392,7 +2422,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EC13C2B1-C2D0-4096-9C18-C3382E92F680</string>
+							<string>C54F3F74-8450-46FC-BF1F-DECD2E4D209A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2412,7 +2442,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2430,7 +2460,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>2D95B403-043E-4BA5-B1B6-CDC3B625C099</string>
+							<string>3E6A0954-91E1-460B-B10E-68C27AE38057</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2450,7 +2480,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2468,7 +2498,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>4140F0F7-7253-4671-96EE-CAD70ECA0D5D</string>
+							<string>4110032A-7E52-4DD5-85E1-AFE5F68E61BE</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2488,7 +2518,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2506,7 +2536,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EF526D63-04A2-41F0-9DF4-8FB0D70128BD</string>
+							<string>31CD1BE5-190A-4283-8937-F175395BA7A5</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2560,7 +2590,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2578,7 +2608,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EEB82CEA-CF50-4725-AA56-D1E7E726BC70</string>
+							<string>78D3E33D-F8EC-4339-8640-019A26A16506</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2632,7 +2662,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2650,7 +2680,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>AC6D88B3-9DC8-492D-B902-DF7847325E40</string>
+							<string>E3C6E8F9-C497-4F80-B491-05A873B16297</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2704,7 +2734,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2722,7 +2752,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F94FB5AD-8B42-490A-AC88-D3090D086440</string>
+							<string>3CE0FAEB-B461-49B1-B1AC-B3CE66995063</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2742,7 +2772,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2760,7 +2790,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>ED8118AA-7759-4757-B5AC-D7DCCA3C02ED</string>
+							<string>7DCEC90D-F80D-4E47-B8A9-1A4C77407796</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2780,7 +2810,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2798,7 +2828,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>11A42F07-6166-4149-9B85-9FF8E6C2E261</string>
+							<string>CD745794-9036-4CF7-A1D6-3337EDBA2E3E</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2818,7 +2848,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2836,7 +2866,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>A5100B60-4E51-4CBC-A5D6-D7B8E918E634</string>
+							<string>3AEAA0A7-8A33-474E-9633-155E4E63C9C6</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2856,7 +2886,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2874,7 +2904,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>7D3B80C9-FC16-4681-B1C2-335B61F6F452</string>
+							<string>4C669CA5-2FE9-4A57-BB71-6A9013A96463</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2894,7 +2924,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2912,7 +2942,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>7290343D-2989-470B-9748-5089288EA6DA</string>
+							<string>97969879-7360-4D89-B859-CD3774988733</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2932,7 +2962,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2950,7 +2980,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>8B19E115-91EB-4A37-8A24-F5791E2C1AEF</string>
+							<string>2C5F3C53-5019-4F33-9FB3-54BB214C2FDB</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -2970,7 +3000,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -2988,7 +3018,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>37F57C00-812B-4091-8BA8-7C3F89F4F6DA</string>
+							<string>F972735A-F08C-4937-BF3D-22A3DD4993D3</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3008,7 +3038,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3026,7 +3056,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>F998EAE2-FB48-4D99-AE55-D21EE5CBEDD6</string>
+							<string>8CFB9FB5-9EBD-41E7-AA8A-36FD27D6A905</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3046,7 +3076,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3064,7 +3094,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D103F4AD-1BEC-4803-945B-4A7221B19D4C</string>
+							<string>AFAE4EEB-378F-4F8C-8729-95A571FF05DA</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3084,7 +3114,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3102,7 +3132,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EB0413F1-5D04-4DE5-A2AC-A9068A121BA9</string>
+							<string>16B094B9-6A90-41B6-9A62-C0CA5BA41C4B</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3122,7 +3152,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3140,7 +3170,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>EC224E92-8256-48F2-9638-29565DB1840D</string>
+							<string>9AC427CD-6ADF-4F49-B876-F6CEB5EF0D03</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3160,7 +3190,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3178,7 +3208,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D0B5D2B7-F363-47AC-8EDE-B8D261ABA4F3</string>
+							<string>AF43BE07-3323-4886-8FF2-BBA29833D86A</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3198,7 +3228,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3216,7 +3246,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>7DAE0542-E6AC-4031-B12B-677B5D25419C</string>
+							<string>FF7BBCE2-6F05-4DF5-9792-555BEAB60AF9</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3236,7 +3266,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3254,7 +3284,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>E68D5037-0D70-45FC-B051-F3FC391EB6B9</string>
+							<string>7717FE13-789F-43AE-80E9-A95C57A04E84</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3274,7 +3304,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3292,7 +3322,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>AD80C039-BDAE-42EF-976C-FA3CC1FCF461</string>
+							<string>FA5D88C0-0EC0-4946-BE3E-DD134C6FDA4F</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3312,7 +3342,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3330,7 +3360,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>8A3434F4-1A22-450E-B854-0803F90BD815</string>
+							<string>33317D37-62E8-4228-8326-581BDF4B8AFF</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3350,7 +3380,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3368,7 +3398,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>FF63828F-A685-4E54-9855-18485088415E</string>
+							<string>AF943741-7B37-442E-B060-E64460EF0149</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3388,7 +3418,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3406,7 +3436,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>61E78EB7-1F33-4F28-BB6E-E44D9D10A828</string>
+							<string>262D2DDC-1DC6-4587-A5FE-913884B7E13F</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3426,7 +3456,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3444,7 +3474,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>7F4DF1A5-B53B-4D31-B6AA-86343ECA37AE</string>
+							<string>A9279C9F-E38B-457E-AC19-F86B96432E64</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3464,7 +3494,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3482,7 +3512,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>50E96116-769B-4D38-BABB-670125E5B624</string>
+							<string>297D047C-A8A8-42EE-927E-83E90A9D3CBD</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3502,7 +3532,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3520,7 +3550,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>4DD93B65-70B1-4808-A304-01E33B27A3CF</string>
+							<string>BE24FD7B-6B50-4892-B090-FC10ECFC3307</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3540,7 +3570,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3558,7 +3588,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>D8855C53-B2CC-4EF2-828D-9FF10714E8CC</string>
+							<string>59C3C050-B133-43FD-A5DC-99D251D05F11</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3578,7 +3608,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3596,7 +3626,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>18B20D58-8387-44DF-8465-97A58A00A170</string>
+							<string>AA765228-6624-4A17-B409-0199F1933A1B</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3616,7 +3646,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3634,7 +3664,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>B67487AB-37BE-49BA-AC93-6DFFA750158E</string>
+							<string>E3D980BE-BE0F-4BED-B269-A3F421857E28</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3654,7 +3684,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3672,7 +3702,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>185B72C9-3559-4368-AA64-7FD0F2B4E539</string>
+							<string>49960EBA-94BD-452E-A5D1-DFA197C833E7</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3692,7 +3722,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3710,7 +3740,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>A303C142-6511-415C-915F-B44B4B71BA7F</string>
+							<string>AB773B28-90FD-442B-BA31-53EE68D8E127</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3730,7 +3760,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3748,7 +3778,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>644E2A4D-8B2B-4CC4-8363-084D399CE293</string>
+							<string>FD68E228-E9F1-4766-BE10-164612EFC7C5</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3768,7 +3798,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3786,7 +3816,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>AD9A39BD-6FA8-43C8-A5D7-6656D6FD2858</string>
+							<string>223C124D-95F2-4DF6-9C8D-3AD9E97C1C1F</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3806,7 +3836,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3824,7 +3854,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>3FE15185-C8B7-4977-942F-81B83A41B75C</string>
+							<string>5E8FBAE2-2753-4223-82E3-D1A14B64D487</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3844,7 +3874,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3862,7 +3892,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>7DDFDEC9-C2F6-4393-96AC-5A978EB04B3A</string>
+							<string>289A0B20-EE8A-454C-AD37-4E1FE69B7E80</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3882,7 +3912,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3900,7 +3930,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>9B1CA3D6-FB08-49C6-9F05-283E191BC32E</string>
+							<string>C4A72DF5-2358-4D4F-852C-14B8FE60AAE3</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3920,7 +3950,7 @@
 							<key>nodeType</key>
 							<string>LHSprite</string>
 							<key>parentUUID</key>
-							<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+							<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 							<key>relativeImagePath</key>
 							<string>DEMO_PUBLISH_FOLDER/</string>
 							<key>rotation</key>
@@ -3938,7 +3968,7 @@
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>3329BE6B-C8C5-4636-9BAF-2811F1D4785B</string>
+							<string>BCBB085A-16AF-4DCC-B76A-FFF56231E6B6</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -3946,7 +3976,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{-0.76683369981694771, 0.78419819489616227}</string>
+					<string>{-0.90755302673671823, 0.53689755243242898}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -3972,7 +4002,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>F7695A9F-2F8A-47DF-A08A-700D5B20DB55</string>
+					<string>5933B617-E826-4B93-8CD5-C67599AFBD61</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -3986,7 +4016,7 @@
 					<key>colorOverlay</key>
 					<string>{{0, 0}, {0, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.47622055639844868, -0.11337461018359481}</string>
+					<string>{0.33550122947867816, -0.36067525264732814}</string>
 					<key>name</key>
 					<string>UntitledBezier_1</string>
 					<key>nodePhysics</key>
@@ -4065,7 +4095,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>AF8B64E8-6918-4E3A-9865-65B99B6E18B4</string>
+					<string>D973B10A-969E-4FEA-A0E6-29343B7399C5</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -4079,7 +4109,7 @@
 					<key>colorOverlay</key>
 					<string>{{0, 0}, {0, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.45596184306858734, 1.0627294315323836}</string>
+					<string>{0.31524251614881676, 0.81542878906865046}</string>
 					<key>name</key>
 					<string>UntitledBezier</string>
 					<key>nodePhysics</key>
@@ -4158,7 +4188,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>83C6A29B-D973-429F-A387-F57002DB7390</string>
+					<string>EE21223B-165E-47DD-ACBE-D671DCBDE411</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -4170,7 +4200,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{-0.074846305167193108, -0.1333908119101764}</string>
+					<string>{-0.21556563208696364, -0.38069145437390972}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -4230,7 +4260,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>B5CCEF23-5551-4E7A-9F5B-307F6CDF51F8</string>
+					<string>F0D3DCB5-C958-4CCA-A866-501C1ECB1BF0</string>
 					<key>zOrder</key>
 					<integer>5</integer>
 				</dict>
@@ -4259,8 +4289,8 @@
 											<integer>0</integer>
 											<key>positions</key>
 											<dict>
-												<key>C1804314-06D7-4182-9A96-19554C01768A</key>
-												<string>{-0.53815734241788959, -0.29646179740024081}</string>
+												<key>A492B720-69BD-4F85-901E-803C5F149CCC</key>
+												<string>{-135.62871118539761, -158.56887297418956}</string>
 											</dict>
 										</dict>
 										<dict>
@@ -4268,8 +4298,8 @@
 											<integer>59</integer>
 											<key>positions</key>
 											<dict>
-												<key>C1804314-06D7-4182-9A96-19554C01768A</key>
-												<string>{-85.55097472523039, 1161.1256573432247}</string>
+												<key>A492B720-69BD-4F85-901E-803C5F149CCC</key>
+												<string>{-220.64152856821011, 1002.8532461664354}</string>
 											</dict>
 										</dict>
 										<dict>
@@ -4277,8 +4307,8 @@
 											<integer>139</integer>
 											<key>positions</key>
 											<dict>
-												<key>C1804314-06D7-4182-9A96-19554C01768A</key>
-												<string>{2050.2642108216446, 1304.4041760199825}</string>
+												<key>A492B720-69BD-4F85-901E-803C5F149CCC</key>
+												<string>{1915.1736569786649, 1146.1317648431932}</string>
 											</dict>
 										</dict>
 										<dict>
@@ -4286,8 +4316,8 @@
 											<integer>199</integer>
 											<key>positions</key>
 											<dict>
-												<key>C1804314-06D7-4182-9A96-19554C01768A</key>
-												<string>{1338.6166583314102, -55.228148198767485}</string>
+												<key>A492B720-69BD-4F85-901E-803C5F149CCC</key>
+												<string>{1203.5261044884305, -213.5005593755568}</string>
 											</dict>
 										</dict>
 										<dict>
@@ -4295,8 +4325,8 @@
 											<integer>239</integer>
 											<key>positions</key>
 											<dict>
-												<key>C1804314-06D7-4182-9A96-19554C01768A</key>
-												<string>{-0.53815734241788959, -0.29646179740024081}</string>
+												<key>A492B720-69BD-4F85-901E-803C5F149CCC</key>
+												<string>{-135.62871118539761, -158.56887297418956}</string>
 											</dict>
 										</dict>
 									</array>
@@ -4313,7 +4343,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{-0.53814628409691967, -0.29646940041433389}</string>
+					<string>{-0.14127990748478916, -0.24776386402217118}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -4339,7 +4369,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>C1804314-06D7-4182-9A96-19554C01768A</string>
+					<string>A492B720-69BD-4F85-901E-803C5F149CCC</string>
 					<key>zOrder</key>
 					<integer>5</integer>
 				</dict>
@@ -4353,7 +4383,7 @@
 			<key>nodeType</key>
 			<string>LHGameWorldNode</string>
 			<key>parentUUID</key>
-			<string>4BFEDD36-3AE0-4F0F-B429-A0762361C052</string>
+			<string>6E74CDFA-85A9-4BB0-8B6D-42DAAC3D099A</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -4365,7 +4395,7 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+			<string>3CA01DA2-8EB3-480E-ADBA-F9BEF29CFB7D</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -4379,11 +4409,11 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
-			<string>4BFEDD36-3AE0-4F0F-B429-A0762361C052</string>
+			<string>6E74CDFA-85A9-4BB0-8B6D-42DAAC3D099A</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -4395,9 +4425,9 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>6BB7369A-77F7-41A5-A844-1BA503B7D48E</string>
+			<string>D2685BED-884C-44E3-BFA2-A6B917CFC466</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -4440,9 +4470,9 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{-0.79855787754058838, -0.53572410345077515}, {2.515103816986084, 2.386807918548584}}</string>
+		<string>{{-0.91877961158752441, -0.79748237133026123}, {2.4900956153869629, 2.4125266075134277}}</string>
 		<key>general</key>
-		<string>{{-0.79855787754058838, -0.53572410345077515}, {2.515103816986084, 2.386807918548584}}</string>
+		<string>{{-0.91877961158752441, -0.79748237133026123}, {2.4900956153869629, 2.4125266075134277}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
 	<string>{0, -1}</string>
@@ -4453,12 +4483,12 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{-0.6800912618637085, -0.47872632741928101}, {2.3093748092651367, 2.1987018585205078}}</string>
+		<string>{{-0.90782809257507324, -0.74694830179214478}, {2.413827657699585, 2.2400031089782715}}</string>
 		<key>general</key>
-		<string>{{-0.6800912618637085, -0.47872632741928101}, {2.3093748092651367, 2.1987018585205078}}</string>
+		<string>{{-0.90782809257507324, -0.74694830179214478}, {2.413827657699585, 2.2400031089782715}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>
@@ -4466,6 +4496,6 @@
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>
-	<string>4BFEDD36-3AE0-4F0F-B429-A0762361C052</string>
+	<string>6E74CDFA-85A9-4BB0-8B6D-42DAAC3D099A</string>
 </dict>
 </plist>

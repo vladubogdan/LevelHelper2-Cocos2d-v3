@@ -541,6 +541,8 @@
 		6EBEA2C919596FC800726044 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
 		6EBEA2CC1959707400726044 /* LHBodyScaleTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */; };
 		6EBEA2CD1959707400726044 /* LHBodyScaleTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */; };
+		6ED5C547195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
+		6ED5C548195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1196,6 +1198,8 @@
 		6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGearJointsTest.mm; sourceTree = "<group>"; };
 		6EBEA2CA1959707400726044 /* LHBodyScaleTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyScaleTestScene.h; sourceTree = "<group>"; };
 		6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyScaleTestScene.mm; sourceTree = "<group>"; };
+		6ED5C545195ECBA300B6DF33 /* LHBackUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBackUINode.h; sourceTree = "<group>"; };
+		6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBackUINode.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2376,6 +2380,8 @@
 				6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */,
 				6EBEA2AF195963A900726044 /* LHUINode.h */,
 				6EBEA2B0195963A900726044 /* LHUINode.mm */,
+				6ED5C545195ECBA300B6DF33 /* LHBackUINode.h */,
+				6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */,
 				6E89FDEE192E23100040478F /* LHAsset.h */,
 				6E89FDEF192E23100040478F /* LHAsset.mm */,
 				6E89FDF0192E23100040478F /* LHBezier.h */,
@@ -2782,6 +2788,7 @@
 				6E0D5640194C32A30036E940 /* CCTextureAtlas.m in Sources */,
 				6E0D5641194C32A30036E940 /* OALAudioFile.m in Sources */,
 				6E0D5642194C32A30036E940 /* ccShaders.m in Sources */,
+				6ED5C548195ECBA300B6DF33 /* LHBackUINode.mm in Sources */,
 				6E0D5900194CD6A40036E940 /* b2PolygonContact.cpp in Sources */,
 				6E0D5643194C32A30036E940 /* matrix.c in Sources */,
 				6E0D5644194C32A30036E940 /* CCTiledMapLayer.m in Sources */,
@@ -2992,6 +2999,7 @@
 				6E1221B31924BD87005E8532 /* OALAudioFile.m in Sources */,
 				6E1220D91924BD86005E8532 /* ccShaders.m in Sources */,
 				6E1221ED1924BD87005E8532 /* matrix.c in Sources */,
+				6ED5C547195ECBA300B6DF33 /* LHBackUINode.mm in Sources */,
 				6E1220FF1924BD86005E8532 /* CCTiledMapLayer.m in Sources */,
 				6E1221F31924BD87005E8532 /* neon_matrix_impl.c in Sources */,
 				6E1220781924BD86005E8532 /* CCLabelTTF.m in Sources */,

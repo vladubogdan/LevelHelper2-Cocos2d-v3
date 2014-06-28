@@ -312,6 +312,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         _box2dWorld = NULL;
 #endif
 
+        self.zOrder = 0;
         self.position = CGPointZero;
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
@@ -437,6 +438,9 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
     [super setGravity:val];
 }
 
+-(BOOL)isPhysicsNode{
+    return YES;
+}
 #endif
 
 

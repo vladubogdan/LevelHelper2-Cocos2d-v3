@@ -22,6 +22,7 @@
 #define LH_ARC_ENABLED 1
 #endif
 
+@class LHBackUINode;
 @class LHGameWorldNode;
 @class LHUINode;
 
@@ -52,6 +53,10 @@
  */
 -(CGRect)gameWorldRect;
 
+/**
+ Returns the back UI node. All children of this node will NOT move with the camera.
+ */
+-(LHBackUINode*)backUiNode;
 
 /**
  Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.

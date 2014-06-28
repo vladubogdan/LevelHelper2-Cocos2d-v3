@@ -284,7 +284,7 @@ double fcat(double x, void *data)
      
     CGPoint relativePosA = [_jointProtocolImp localAnchorA];
     CGPoint relativePosB = [_jointProtocolImp localAnchorB];
-
+    
     BOOL flipped = NO;
     NSMutableArray* rPoints = [self ropePointsFromPointA:a
                                                 toPointB:b

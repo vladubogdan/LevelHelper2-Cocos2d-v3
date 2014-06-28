@@ -72,6 +72,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         NSValue* prevValue = nil;
         
+        CGPoint loadedPosition = self.position;
+        self.position = CGPointZero;
+        self.contentSize = CGSizeZero;//we reset the content size as it does problem in cocos2d
+        
         NSDictionary* previousPointDict = nil;
         for(NSDictionary* pointDict in points)
         {
@@ -149,6 +153,9 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
+        
+        
+        self.position = loadedPosition;
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         

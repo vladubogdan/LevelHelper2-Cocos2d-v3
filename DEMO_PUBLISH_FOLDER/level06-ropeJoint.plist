@@ -13,6 +13,36 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>9C6D97AA-CBC5-46C3-8643-7EE3EEECB357</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>81AF14DC-948A-4CAA-8D1E-2177AE0AA83C</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
 			<key>children</key>
 			<array>
 				<dict>
@@ -27,7 +57,7 @@
 					<key>fadeOutDelay</key>
 					<real>3</real>
 					<key>length</key>
-					<real>270.14938354492188</real>
+					<real>292.4228515625</real>
 					<key>name</key>
 					<string>UntitledRopeJoint</string>
 					<key>nodeType</key>
@@ -39,7 +69,7 @@
 					<key>relativePosA</key>
 					<string>{19.11871337890625, 20.466670989990234}</string>
 					<key>relativePosB</key>
-					<string>{-3.7235991954803467, 14.884407043457031}</string>
+					<string>{-3.7235991954803467, 11.618782043457031}</string>
 					<key>removeAfterCut</key>
 					<true/>
 					<key>segments</key>
@@ -47,9 +77,9 @@
 					<key>shouldDraw</key>
 					<true/>
 					<key>spriteAUUID</key>
-					<string>4FA46BCC-6A49-4711-B6C1-E7D242A7C5DF</string>
+					<string>CBD4A2D8-070C-41A7-9A54-16C066A47E57</string>
 					<key>spriteBUUID</key>
-					<string>AE993E40-07BB-43E4-9736-4FD0E5213EF3</string>
+					<string>CE89D38C-6606-408B-9C7D-3A749C15BA20</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -59,7 +89,7 @@
 					<key>useTexture</key>
 					<true/>
 					<key>uuid</key>
-					<string>7F742A5A-8B3D-47E6-97D9-1724EA015548</string>
+					<string>32AC1254-4CA4-43F4-AC74-36A3A22CFC20</string>
 					<key>uvRepetitions</key>
 					<string>{1, 20}</string>
 					<key>zOrder</key>
@@ -73,7 +103,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.43973257183423231, 0.25285896687644138}</string>
+					<string>{0.46068050996577792, 0.31174174504032975}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -133,7 +163,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>4FA46BCC-6A49-4711-B6C1-E7D242A7C5DF</string>
+					<string>CBD4A2D8-070C-41A7-9A54-16C066A47E57</string>
 					<key>zOrder</key>
 					<integer>-1</integer>
 				</dict>
@@ -145,7 +175,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.69482299002640224, 0.37117091656480056}</string>
+					<string>{0.67856715330837403, 0.40032469089694478}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -205,7 +235,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>AE993E40-07BB-43E4-9736-4FD0E5213EF3</string>
+					<string>CE89D38C-6606-408B-9C7D-3A749C15BA20</string>
 					<key>zOrder</key>
 					<integer>-1</integer>
 				</dict>
@@ -219,7 +249,7 @@
 			<key>nodeType</key>
 			<string>LHGameWorldNode</string>
 			<key>parentUUID</key>
-			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<string>9C6D97AA-CBC5-46C3-8643-7EE3EEECB357</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -231,7 +261,7 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>51610136-53E6-41C2-82F6-2EF4C203DB9D</string>
+			<string>3E412A79-A6C2-4CF1-A802-2ADA8D7A555B</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -245,11 +275,11 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
-			<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+			<string>9C6D97AA-CBC5-46C3-8643-7EE3EEECB357</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -261,9 +291,9 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>C8778C8B-2E15-44B3-824E-F18C12E01060</string>
+			<string>3C42BDF4-6D9A-4D8E-B6E2-02FDE6B7C8AD</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -312,12 +342,12 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{0.0094739841297268867, 0.023672088980674744}, {0.98361510038375854, 0.94255781173706055}}</string>
+		<string>{{0.026689266785979271, 0.024811279028654099}, {0.95874917507171631, 0.93121337890625}}</string>
 		<key>general</key>
-		<string>{{0.0094739841297268867, 0.023672088980674744}, {0.98361510038375854, 0.94255781173706055}}</string>
+		<string>{{0.026689266785979271, 0.024811279028654099}, {0.95874917507171631, 0.93121337890625}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>
@@ -325,6 +355,6 @@
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>
-	<string>5DFC62F1-0D69-48DC-8B67-CBE7A72C09E0</string>
+	<string>9C6D97AA-CBC5-46C3-8643-7EE3EEECB357</string>
 </dict>
 </plist>

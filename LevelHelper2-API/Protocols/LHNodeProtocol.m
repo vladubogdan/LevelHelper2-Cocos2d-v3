@@ -13,6 +13,7 @@
 #import "LHUserPropertyProtocol.h"
 
 #import "LHUINode.h"
+#import "LHBackUINode.h"
 #import "LHGameWorldNode.h"
 #import "LHScene.h"
 #import "LHAsset.h"
@@ -117,7 +118,7 @@
         }
 
         //for sprites the content size is set from the CCSpriteFrame
-        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[CCSprite class]]){
+        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[CCSprite class]] ){
             [_node setContentSize:[dict sizeForKey:@"size"]];
         }
         
@@ -210,6 +211,12 @@
                                                                        parent:prnt];
         pNode.contentSize = scene.contentSize;
         [pNode setDebugDraw:YES];
+        return pNode;
+    }
+    else if([nodeType isEqualToString:@"LHBackUINode"])
+    {
+        LHBackUINode* pNode = [LHBackUINode backUiNodeWithDictionary:childInfo
+                                                              parent:prnt];
         return pNode;
     }
     else if([nodeType isEqualToString:@"LHUINode"])

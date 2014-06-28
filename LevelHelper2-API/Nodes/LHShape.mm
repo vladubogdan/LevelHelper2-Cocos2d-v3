@@ -79,7 +79,6 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-
         
         NSArray* triangles = [dict objectForKey:@"triangles"];
         [self ensureCapacity:[triangles count]];

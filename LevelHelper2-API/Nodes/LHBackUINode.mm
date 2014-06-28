@@ -1,18 +1,18 @@
 //
-//  LHUINode.m
+//  LHBackUINode.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 31/03/14.
 //  Copyright (c) 2014 GameDevHelper.com. All rights reserved.
 //
 
-#import "LHUINode.h"
+#import "LHBackUINode.h"
 #import "LHUtils.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
 
-@implementation LHUINode
+@implementation LHBackUINode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
 }
@@ -24,14 +24,14 @@
 }
 
 
-+ (instancetype)uiNodeWithDictionary:(NSDictionary*)dict
++ (instancetype)backUiNodeWithDictionary:(NSDictionary*)dict
                                   parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initUINodeWithDictionary:dict
-                                                           parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initBackUINodeWithDictionary:dict
+                                                               parent:prnt]);
 }
 
-- (instancetype)initUINodeWithDictionary:(NSDictionary*)dict
-                                parent:(CCNode*)prnt{
+- (instancetype)initBackUINodeWithDictionary:(NSDictionary*)dict
+                                      parent:(CCNode*)prnt{
     
     
     if(self = [super init]){
@@ -41,7 +41,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        self.zOrder = 1;
+        self.zOrder = -1;
         [self setPosition:CGPointZero];
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
