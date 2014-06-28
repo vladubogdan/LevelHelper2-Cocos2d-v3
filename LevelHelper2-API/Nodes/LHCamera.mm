@@ -139,8 +139,8 @@
 
     CGPoint offset = [[(LHScene*)self scene] designOffset];
     
-    float x = position.x;
-    float y = position.y;
+    float x = position.x + offset.x;
+    float y = position.y + offset.y;
     
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
         
@@ -156,8 +156,8 @@
     }
     
     
-    CGPoint pt = CGPointMake(winSize.width*0.5 - x + offset.x,
-                             winSize.height*0.5- y + offset.y);
+    CGPoint pt = CGPointMake(winSize.width*0.5 - x,
+                             winSize.height*0.5- y);
     
     return pt;
 }
