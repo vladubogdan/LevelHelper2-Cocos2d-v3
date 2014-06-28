@@ -91,12 +91,12 @@
 
 
         float angle = [_node rotation];
-        bodyDef.angle = CC_DEGREES_TO_RADIANS(angle);
-
-        bodyDef.userData = LH_VOID_BRIDGE_CAST(self);
+        bodyDef.angle = CC_DEGREES_TO_RADIANS(-angle);
+        
+        bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
         
         _body = world->CreateBody(&bodyDef);
-        _body->SetUserData(LH_VOID_BRIDGE_CAST(self));
+        _body->SetUserData(LH_VOID_BRIDGE_CAST(_node));
 
         _body->SetFixedRotation([dict boolForKey:@"fixedRotation"]);
         _body->SetGravityScale([dict floatForKey:@"gravityScale"]);

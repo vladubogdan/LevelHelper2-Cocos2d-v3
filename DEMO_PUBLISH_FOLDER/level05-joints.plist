@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>aspect</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>backgroundColor</key>
 	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
 	<key>children</key>
@@ -65,7 +65,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -109,7 +109,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>29B81344-0E34-4C57-8848-D7F65787B12D</string>
+						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -139,7 +139,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -173,7 +173,7 @@
 					<key>nodeType</key>
 					<string>LHDistanceJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{35.508090972900391, 60.805126190185547}</string>
 					<key>relativePosB</key>
@@ -207,7 +207,7 @@
 					<key>nodeType</key>
 					<string>LHRevoluteJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{38.601219177246094, 60.455753326416016}</string>
 					<key>spriteAUUID</key>
@@ -273,7 +273,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -317,7 +317,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>29B81344-0E34-4C57-8848-D7F65787B12D</string>
+						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -347,7 +347,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -385,7 +385,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -457,7 +457,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -529,7 +529,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -571,7 +571,7 @@
 					<key>nodeType</key>
 					<string>LHPulleyJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>ratio</key>
 					<real>1</real>
 					<key>relativePosA</key>
@@ -607,7 +607,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -651,7 +651,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C152E5AE-E216-4932-87FE-354EC04AB58A</string>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -681,7 +681,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -725,7 +725,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C152E5AE-E216-4932-87FE-354EC04AB58A</string>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -755,7 +755,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -789,7 +789,7 @@
 					<key>nodeType</key>
 					<string>LHWeldJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{34.292409961660496, -21.569807620544907}</string>
 					<key>spriteAUUID</key>
@@ -825,7 +825,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C152E5AE-E216-4932-87FE-354EC04AB58A</string>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -855,7 +855,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -889,7 +889,7 @@
 					<key>nodeType</key>
 					<string>LHWeldJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{-38.108291091345791, 2.2235763620266482}</string>
 					<key>spriteAUUID</key>
@@ -953,7 +953,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -993,7 +993,7 @@
 					<key>nodeType</key>
 					<string>LHPrismaticJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>prismaticMotorSpeed</key>
 					<real>270</real>
 					<key>relativePosA</key>
@@ -1033,7 +1033,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C152E5AE-E216-4932-87FE-354EC04AB58A</string>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1063,7 +1063,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1107,7 +1107,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C152E5AE-E216-4932-87FE-354EC04AB58A</string>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1137,7 +1137,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1181,7 +1181,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>29B81344-0E34-4C57-8848-D7F65787B12D</string>
+						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1211,7 +1211,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1283,7 +1283,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1355,7 +1355,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1393,7 +1393,7 @@
 					<key>nodeType</key>
 					<string>LHWheelJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{0, 0}</string>
 					<key>spriteAUUID</key>
@@ -1433,7 +1433,7 @@
 					<key>nodeType</key>
 					<string>LHWheelJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{0, 0}</string>
 					<key>spriteAUUID</key>
@@ -1507,7 +1507,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -1541,7 +1541,7 @@
 					<key>nodeType</key>
 					<string>LHWeldJoint</string>
 					<key>parentUUID</key>
-					<string>8910B6B5-D5F1-459A-B383-8F8F62B831FB</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{0, 0}</string>
 					<key>tags</key>
@@ -1550,6 +1550,228 @@
 					</array>
 					<key>uuid</key>
 					<string>A9E7956B-C9BD-479C-8148-4DB19D137363</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.62379651553056648, 0.77549339578501575}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_banana_2</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>51.989101409912109</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{92, 64}</string>
+					<key>spriteName</key>
+					<string>object_banana</string>
+					<key>spriteUUID</key>
+					<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>10C7DDB5-18ED-4F69-8AD7-D0DD0089067D</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.70650073725944518, 0.80623011261588606}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_banana_1_3</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>219.89654541015625</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{92, 64}</string>
+					<key>spriteName</key>
+					<string>object_banana</string>
+					<key>spriteUUID</key>
+					<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>95DAB9E6-3C6E-4516-8669-1D62C88074B1</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.75978525585216294, 0.86010041163124118}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_banana_1_1_2</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>26.704816818237305</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{92, 64}</string>
+					<key>spriteName</key>
+					<string>object_banana</string>
+					<key>spriteUUID</key>
+					<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>1CEBCA41-5856-4310-9C6D-5AA25537B508</string>
+					<key>zOrder</key>
+					<integer>0</integer>
 				</dict>
 			</array>
 			<key>colorOverlay</key>
@@ -1666,89 +1888,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>29B81344-0E34-4C57-8848-D7F65787B12D</key>
-		<array>
-			<array>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{31.25, -16.5}</string>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-36.75, -15}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-			</array>
-			<array>
-				<string>{-33.25, 10.5}</string>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-25.75, 19}</string>
-			</array>
-			<array>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-11.25, 26}</string>
-			</array>
-			<array>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-4.75, -8}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{6.25, 27}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
-			</array>
-		</array>
-		<key>C152E5AE-E216-4932-87FE-354EC04AB58A</key>
+		<key>09DB0DC4-282F-411C-B07E-A267C86D792F</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>
@@ -1828,6 +1968,88 @@
 				<string>{-36.75, -7.75}</string>
 				<string>{-33.75, -7.75}</string>
 				<string>{-38.75, -6.25}</string>
+			</array>
+		</array>
+		<key>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</key>
+		<array>
+			<array>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{31.25, -16.5}</string>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-36.75, -15}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-24.25, -23}</string>
+				<string>{-36.75, -21}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-29.75, -27}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+			</array>
+			<array>
+				<string>{-33.25, 10.5}</string>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-25.75, 19}</string>
+			</array>
+			<array>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-11.25, 26}</string>
+			</array>
+			<array>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-4.75, -8}</string>
+				<string>{6.25, 27}</string>
+			</array>
+			<array>
+				<string>{6.25, 27}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
 			</array>
 		</array>
 	</dict>

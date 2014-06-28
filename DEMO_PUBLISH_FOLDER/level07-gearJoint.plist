@@ -37,7 +37,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>3545A393-6173-4BD4-9A81-29B681A9BCCE</string>
+						<string>44FE902F-B3A1-403A-933F-6FD62D2525BF</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -67,7 +67,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -139,7 +139,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -183,7 +183,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>28482DA4-ADF0-4CB1-A81A-C4F800C54DCA</string>
+						<string>0860ED66-747B-4E4B-880F-A720505C9AF0</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -213,7 +213,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -257,7 +257,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>549BAF6E-AE84-40E1-8C75-D1F9E3E0D58C</string>
+						<string>99A8EA57-C5BB-429B-8928-43E2D51096BA</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -287,7 +287,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -327,7 +327,7 @@
 					<key>nodeType</key>
 					<string>LHRevoluteJoint</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{0, 0}</string>
 					<key>spriteAUUID</key>
@@ -361,7 +361,7 @@
 					<key>nodeType</key>
 					<string>LHRevoluteJoint</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
 					<string>{0, 0}</string>
 					<key>spriteAUUID</key>
@@ -395,7 +395,7 @@
 					<key>nodeType</key>
 					<string>LHGearJoint</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>spriteAUUID</key>
 					<string>52E0E781-6A39-4A69-80CE-7E41178A9B41</string>
 					<key>spriteBUUID</key>
@@ -427,7 +427,7 @@
 					<key>nodeType</key>
 					<string>LHPrismaticJoint</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>prismaticMotorSpeed</key>
 					<real>0.0</real>
 					<key>relativePosA</key>
@@ -463,7 +463,7 @@
 					<key>nodeType</key>
 					<string>LHGearJoint</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>spriteAUUID</key>
 					<string>9371B577-FDC3-4059-9019-D8B0E24CEBD4</string>
 					<key>spriteBUUID</key>
@@ -527,7 +527,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>AD5847DC-2D15-4A49-931B-DEDD1DC82B6C</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -664,7 +664,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>28482DA4-ADF0-4CB1-A81A-C4F800C54DCA</key>
+		<key>0860ED66-747B-4E4B-880F-A720505C9AF0</key>
 		<array>
 			<array>
 				<string>{11.75, 24.25}</string>
@@ -782,7 +782,7 @@
 				<string>{23.75, 9.75}</string>
 			</array>
 		</array>
-		<key>3545A393-6173-4BD4-9A81-29B681A9BCCE</key>
+		<key>44FE902F-B3A1-403A-933F-6FD62D2525BF</key>
 		<array>
 			<array>
 				<string>{37, -36.75}</string>
@@ -848,7 +848,7 @@
 				<string>{4, -29.25}</string>
 			</array>
 		</array>
-		<key>549BAF6E-AE84-40E1-8C75-D1F9E3E0D58C</key>
+		<key>99A8EA57-C5BB-429B-8928-43E2D51096BA</key>
 		<array>
 			<array>
 				<string>{11.75, -17}</string>

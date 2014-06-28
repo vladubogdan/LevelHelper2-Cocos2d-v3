@@ -27,7 +27,7 @@
 					<key>nodeType</key>
 					<string>LHCamera</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>restrictToGameWorld</key>
 					<true/>
 					<key>tags</key>
@@ -3954,7 +3954,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -4026,7 +4026,7 @@
 					<key>nodeType</key>
 					<string>LHBezier</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -4119,7 +4119,7 @@
 					<key>nodeType</key>
 					<string>LHBezier</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -4212,7 +4212,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -4321,7 +4321,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>8B52034E-2F77-46E8-87F1-5712F18798FA</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>

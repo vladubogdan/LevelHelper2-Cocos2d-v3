@@ -33,7 +33,7 @@
 					<key>nodeType</key>
 					<string>LHRopeJoint</string>
 					<key>parentUUID</key>
-					<string>51610136-53E6-41C2-82F6-2EF4C203DB9D</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>/DEMO_INDIVIDUAL_IMAGES_EXAMPLE/cartoonRope.png</string>
 					<key>relativePosA</key>
@@ -115,7 +115,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>51610136-53E6-41C2-82F6-2EF4C203DB9D</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -187,7 +187,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>51610136-53E6-41C2-82F6-2EF4C203DB9D</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>

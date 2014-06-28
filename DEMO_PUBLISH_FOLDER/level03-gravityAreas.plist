@@ -37,7 +37,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>27E5F656-2169-42C1-836D-14F8D56D4F73</string>
+						<string>FA20673D-D133-48CA-9F49-355D47C0327D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -67,7 +67,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>9854F964-2D28-4597-9461-EA22138482DF</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -103,7 +103,7 @@
 					<key>nodeType</key>
 					<string>LHAreaGravity</string>
 					<key>parentUUID</key>
-					<string>9854F964-2D28-4597-9461-EA22138482DF</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
 					<string>{3.8051517009735107, 3.8051517009735107}</string>
 					<key>size</key>
@@ -131,7 +131,7 @@
 					<key>nodeType</key>
 					<string>LHAreaGravity</string>
 					<key>parentUUID</key>
-					<string>9854F964-2D28-4597-9461-EA22138482DF</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
 					<string>{2.9103047847747803, 2.388031005859375}</string>
 					<key>size</key>
@@ -159,7 +159,7 @@
 					<key>nodeType</key>
 					<string>LHAreaGravity</string>
 					<key>parentUUID</key>
-					<string>9854F964-2D28-4597-9461-EA22138482DF</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
 					<string>{3.6085448265075684, 2.1666076183319092}</string>
 					<key>size</key>
@@ -187,7 +187,7 @@
 					<key>nodeType</key>
 					<string>LHAreaGravity</string>
 					<key>parentUUID</key>
-					<string>9854F964-2D28-4597-9461-EA22138482DF</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
 					<string>{2.9152717590332031, 2.1307797431945801}</string>
 					<key>size</key>
@@ -322,7 +322,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>27E5F656-2169-42C1-836D-14F8D56D4F73</key>
+		<key>FA20673D-D133-48CA-9F49-355D47C0327D</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>

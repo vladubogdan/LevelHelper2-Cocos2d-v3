@@ -1854,126 +1854,6 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.22857189178466797, 0.15189126133918762}</string>
-					<key>children</key>
-					<array>
-						<dict>
-							<key>alpha</key>
-							<real>255</real>
-							<key>anchor</key>
-							<string>{0.13908813893795013, 0.28713369369506836}</string>
-							<key>children</key>
-							<array>
-								<dict>
-									<key>alpha</key>
-									<real>255</real>
-									<key>anchor</key>
-									<string>{0.24079601466655731, 0.45777952671051025}</string>
-									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
-									<key>generalPosition</key>
-									<string>{0.013528772415309713, -0.0012630087925814769}</string>
-									<key>imageFileName</key>
-									<string>officer.png</string>
-									<key>name</key>
-									<string>hand_L_outline_1.png</string>
-									<key>nodeType</key>
-									<string>LHSprite</string>
-									<key>parentUUID</key>
-									<string>2F2CC3BE-9038-41F2-8F68-1C6D284E46A0</string>
-									<key>relativeImagePath</key>
-									<string>DEMO_PUBLISH_FOLDER/</string>
-									<key>rotation</key>
-									<real>8.4649419784545898</real>
-									<key>scale</key>
-									<string>{1, 1}</string>
-									<key>size</key>
-									<string>{31, 35}</string>
-									<key>spriteName</key>
-									<string>hand_L_outline.png</string>
-									<key>spriteUUID</key>
-									<string>00E7A15D-F08B-486E-89AA-F61CB3B01FC1</string>
-									<key>tags</key>
-									<array>
-										<string>DEFAULT</string>
-									</array>
-									<key>uuid</key>
-									<string>11035D96-46C0-440F-8868-8926F8C0DDC3</string>
-									<key>zOrder</key>
-									<integer>0</integer>
-								</dict>
-							</array>
-							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
-							<key>generalPosition</key>
-							<string>{0.01336355538954089, 0.025298711109749839}</string>
-							<key>imageFileName</key>
-							<string>officer.png</string>
-							<key>name</key>
-							<string>forearm_L_outline_1.png</string>
-							<key>nodeType</key>
-							<string>LHSprite</string>
-							<key>parentUUID</key>
-							<string>3DB8D51F-1A6A-43C1-892E-21F4FF3B23D4</string>
-							<key>relativeImagePath</key>
-							<string>DEMO_PUBLISH_FOLDER/</string>
-							<key>rotation</key>
-							<real>7.1650009155273438</real>
-							<key>scale</key>
-							<string>{1, 1}</string>
-							<key>size</key>
-							<string>{51, 29}</string>
-							<key>spriteName</key>
-							<string>forearm_L_outline.png</string>
-							<key>spriteUUID</key>
-							<string>3A565676-B217-4A03-8B4C-6778BB7AFF26</string>
-							<key>tags</key>
-							<array>
-								<string>DEFAULT</string>
-							</array>
-							<key>uuid</key>
-							<string>2F2CC3BE-9038-41F2-8F68-1C6D284E46A0</string>
-							<key>zOrder</key>
-							<integer>0</integer>
-						</dict>
-					</array>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.73568055405240507, 0.097429317625767953}</string>
-					<key>imageFileName</key>
-					<string>officer.png</string>
-					<key>name</key>
-					<string>shoulder_L_outline_1.png</string>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>relativeImagePath</key>
-					<string>DEMO_PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>344.48492431640625</real>
-					<key>scale</key>
-					<string>{0.5, 0.5}</string>
-					<key>size</key>
-					<string>{44, 63}</string>
-					<key>spriteName</key>
-					<string>shoulder_L_outline.png</string>
-					<key>spriteUUID</key>
-					<string>E00DCC2C-D3BC-4A53-AC00-D698E2F0D7F2</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>3DB8D51F-1A6A-43C1-892E-21F4FF3B23D4</string>
-					<key>zOrder</key>
-					<integer>-1</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
 					<string>{0.5, 0.5}</string>
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
@@ -2777,7 +2657,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>779480C4-A205-4BBB-813B-0707221E3EB4</string>
+						<string>78A090D8-C42C-4738-8088-5C03F720FE60</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -2950,7 +2830,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>779480C4-A205-4BBB-813B-0707221E3EB4</key>
+		<key>78A090D8-C42C-4738-8088-5C03F720FE60</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>
