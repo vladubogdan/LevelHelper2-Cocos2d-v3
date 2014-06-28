@@ -327,6 +327,8 @@
     if([lateLoadingNodes count] == 0){
         LH_SAFE_RELEASE(lateLoadingNodes);
     }
+    
+    [self visit];//call this once so all objects updates themself and we dont have a weird snap
 }
 
 ////////////////////////////////////////////////////////////////////////////////
