@@ -156,6 +156,7 @@
         
         self.position = CGPointZero;
         
+        
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){
             tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFixInfo];
@@ -176,7 +177,9 @@
         
         [self setUserInteractionEnabled:YES];
         
-        [self visit];//call this once so all objects updates themself and we dont have a weird snap
+        [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
+        [self visit];//dont know why i need to call it 3 times
+        [self visit];
     }
     return self;
 }

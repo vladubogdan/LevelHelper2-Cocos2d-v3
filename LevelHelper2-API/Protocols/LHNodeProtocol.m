@@ -116,7 +116,8 @@
             [_node setScaleY:scl.y];
         }
 
-        if([dict objectForKey:@"size"]){
+        //for sprites the content size is set from the CCSpriteFrame
+        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[CCSprite class]]){
             [_node setContentSize:[dict sizeForKey:@"size"]];
         }
         

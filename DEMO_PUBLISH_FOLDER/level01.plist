@@ -2324,7 +2324,7 @@
 					<key>colorOverlay</key>
 					<string>{{0.088915735483169556, 0.52284735441207886}, {0.25430199503898621, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.38261086541716621, 0.41160348594740981}</string>
+					<string>{0.38261086541716621, 0.41160350176104998}</string>
 					<key>name</key>
 					<string>UntitledBezier</string>
 					<key>nodePhysics</key>
@@ -2369,39 +2369,39 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-191.60798645019531, -65.529132843017578}</string>
+							<string>{-191.60798645019531, -65.529140472412109}</string>
 							<key>ctrl2</key>
-							<string>{-191.60798645019531, -65.529132843017578}</string>
+							<string>{-191.60798645019531, -65.529140472412109}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-191.60798645019531, -165.52913284301758}</string>
+							<string>{-191.60798645019531, -165.52914047241211}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-197.36534644154264, -1.9817807996277566}</string>
+							<string>{-197.36534644154264, -1.9817884290222878}</string>
 							<key>ctrl2</key>
-							<string>{44.942816014295261, 48.586750836250189}</string>
+							<string>{44.942816014295261, 48.586743206855658}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-112.69166602178585, 41.307842426219963}</string>
+							<string>{-112.69166602178585, 41.307834796825432}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{191.68998718261719, 236.25347518920898}</string>
+							<string>{191.68998718261719, 236.25346755981445}</string>
 							<key>ctrl2</key>
-							<string>{191.68998718261719, 236.25347518920898}</string>
+							<string>{191.68998718261719, 236.25346755981445}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{191.68998718261719, 136.25347518920898}</string>
+							<string>{191.68998718261719, 136.25346755981445}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
@@ -2643,6 +2643,82 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
+					<string>{0.60989518502691265, 0.38978471276908266}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_bananabunch</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{88, 65}</string>
+					<key>spriteName</key>
+					<string>object_bananabunch</string>
+					<key>spriteUUID</key>
+					<string>60F9EAC9-FDD1-4EAB-811D-7A0EF562B591</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>32944CB9-94F2-4224-939B-13BAA8118B1D</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.35639854709243246, 0.39069744008847651}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>name</key>
+					<string>object_bananabunch_1</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{88, 65}</string>
+					<key>spriteName</key>
+					<string>object_bananabunch</string>
+					<key>spriteUUID</key>
+					<string>60F9EAC9-FDD1-4EAB-811D-7A0EF562B591</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>99FC57E3-D8D6-413A-8A96-A622EC66BBA6</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
 					<string>{0.19360003198186557, 0.23793760538101197}</string>
 					<key>imageFileName</key>
 					<string>officer.png</string>
@@ -2657,7 +2733,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>78A090D8-C42C-4738-8088-5C03F720FE60</string>
+						<string>38B00FED-9314-4DF0-9E6C-E8A6A8B9290C</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -2830,7 +2906,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>78A090D8-C42C-4738-8088-5C03F720FE60</key>
+		<key>38B00FED-9314-4DF0-9E6C-E8A6A8B9290C</key>
 		<array>
 			<array>
 				<string>{-23.75, 19.25}</string>

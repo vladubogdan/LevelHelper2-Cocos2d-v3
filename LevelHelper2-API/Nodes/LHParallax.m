@@ -13,6 +13,10 @@
 #import "LHParallaxLayer.h"
 #import "LHAnimation.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+@end
+
 @implementation LHParallax
 {
     CGPoint lastPosition;
@@ -51,8 +55,9 @@
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
-                
+        
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
         
         
         NSString* followedUUID = [dict objectForKey:@"followedNodeUUID"];
@@ -86,6 +91,7 @@
     CGPoint parallaxPos = [self position];
     CCNode* followed = [self followedNode];
     if(followed){
+        
         parallaxPos = [followed position];
         
         CGPoint anchor = [followed anchorPoint];
@@ -100,9 +106,11 @@
         parallaxPos.y = parallaxPos.y - winSize.height*0.5;
     }
     
+
     if(CGPointEqualToPoint(lastPosition, CGPointZero)){
         lastPosition = parallaxPos;
     }
+    
     
     if(!CGPointEqualToPoint(lastPosition, parallaxPos))
     {
@@ -118,10 +126,14 @@
                 
                 CGPoint pt = CGPointMake(curPos.x + deltaPos.x*(-nd.xRatio),
                                          curPos.y + deltaPos.y*(-nd.yRatio));
+                
+                
                 [nd setPosition:pt];
             }
         }
     }
+    
+    
     lastPosition = parallaxPos;
 }
 

@@ -17,6 +17,9 @@
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 
+#import "LHParallax.h"
+#import "LHParallaxLayer.h"
+
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGSize)designResolutionSize;
 -(CGPoint)designOffset;
@@ -73,7 +76,7 @@
         designPos.y += offset.y;
     }
     else{
-
+        
         designPos = CGPointMake(designSize.width*unitPos.x,
                                 ([node parent].contentSize.height - designSize.height*unitPos.y));
         

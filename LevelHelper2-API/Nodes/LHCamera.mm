@@ -127,13 +127,13 @@
     CCNode* followed = [self followedNode];
     if(followed){
         position = [followed position];
-
+        
         CGPoint anchor = [followed anchorPoint];
         CGSize content = [followed contentSize];
 
         float scaleX = [followed scaleX];
         float scaleY = [followed scaleY];
-        
+
         position.x -= content.width*scaleX*  (anchor.x -0.5);
         position.y -= content.height*scaleY* (anchor.y -0.5);
     }
@@ -143,9 +143,10 @@
 
     CGPoint offset = [[(LHScene*)self scene] designOffset];
     
-    float x = position.x + offset.x;
-    float y = position.y + offset.y;
-    
+    float x = position.x - offset.x;
+    float y = position.y - offset.y;
+
+
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
         
         if(x > (worldRect.origin.x + worldRect.size.width)*0.5){
