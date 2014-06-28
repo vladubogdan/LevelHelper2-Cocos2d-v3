@@ -73,6 +73,8 @@ typedef enum
 + (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 
+- (instancetype)initPhysicsProtocolWithNode:(CCNode*)nd;
+
 -(CCNode*)node;
 
 -(int)bodyType;

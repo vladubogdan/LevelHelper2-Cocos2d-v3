@@ -30,6 +30,11 @@
 #endif //LH_USE_BOX2D
 
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGSize)designResolutionSize;
+-(CGPoint)designOffset;
+@end
+
 
 @implementation LHPulleyJointNode
 {
@@ -68,9 +73,9 @@
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
                 
-        LHScene* scene = (LHScene*)[prnt scene];
-        CGSize designSize = [scene designResolutionSize];
-        CGPoint offset = [scene designOffset];
+        LHScene* scene      = (LHScene*)[prnt scene];
+        CGSize designSize   = [scene designResolutionSize];
+        CGPoint offset      = [scene designOffset];
         
         _groundAnchorA = [dict pointForKey:@"groundAnchorA"];
         {

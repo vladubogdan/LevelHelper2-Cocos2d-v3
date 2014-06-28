@@ -36,6 +36,11 @@
 -(instancetype)initWithContentOfFile:(NSString*)levelPlistFile;
 
 /**
+ Returns the relative plist path that was used to load this info information.
+ */
+-(NSString*)relativePath;
+
+/**
  Returns a CCTexture object that was previously loaded or a new one.
  @param imagePath The path of the image that needs to get returned as a texture.
  @return An initialized CCTexture Object.
@@ -47,15 +52,6 @@
  */
 -(CGRect)gameWorldRect;
 
-/**
- Returns the informations that can be used to create an asset dynamically by specifying the file name. 
- The asset file must be in the same folder as the scene file.
- If the asset file is not found it will return nil.
- 
- @param assetFileName The name of the asset that. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset"
- @return A dictionary containing the asset information or nil.
- */
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
 
 /**
  Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.
@@ -66,6 +62,7 @@
  Returns the UI node. All children of this node will NOT move with the camera.
  */
 -(LHUINode*)uiNode;
+
 
 
 #if LH_USE_BOX2D

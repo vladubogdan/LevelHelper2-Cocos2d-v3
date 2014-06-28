@@ -41,6 +41,9 @@
 
 #import "LHGameWorldNode.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+@end
 
 @implementation LHAnimation
 {

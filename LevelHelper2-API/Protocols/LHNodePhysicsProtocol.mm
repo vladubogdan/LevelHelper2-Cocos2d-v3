@@ -29,6 +29,12 @@
 
 #endif //LH_USE_BOX2D
 
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
+
+
 @implementation LHNodePhysicsProtocolImp
 {
     BOOL originallySensor;
@@ -56,6 +62,20 @@
 
 -(CCNode*)node{
     return _node;
+}
+
+- (instancetype)initPhysicsProtocolWithNode:(CCNode*)nd
+{
+    if(self = [super init])
+    {
+        _node = nd;
+        
+#if LH_USE_BOX2D
+        _body = NULL;
+#endif
+        
+    }
+    return self;
 }
 
 #if LH_USE_BOX2D

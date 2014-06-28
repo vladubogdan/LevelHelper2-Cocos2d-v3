@@ -31,6 +31,10 @@
 
 #endif //LH_USE_BOX2D
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSString*)currentDeviceSuffix:(BOOL)keep2x;
+@end
+
 
 double bisection(double g0, double g1, double epsilon,
                  double (*fp)(double, void *), void *data)

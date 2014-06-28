@@ -17,6 +17,12 @@
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGSize)designResolutionSize;
+-(CGPoint)designOffset;
+@end
+
+
 @implementation LHUtils
 
 
@@ -50,10 +56,10 @@
 {
     LHScene* scene = (LHScene*)[node scene];
     
-    CGSize designSize = [scene designResolutionSize];
-    CGPoint offset = [scene designOffset];
+    CGSize designSize   = [scene designResolutionSize];
+    CGPoint offset      = [scene designOffset];
     
-    CGPoint designPos = CGPointZero;
+    CGPoint designPos   = CGPointZero;
 
     designPos = CGPointMake(designSize.width*unitPos.x,
                             designSize.height*(-unitPos.y));
@@ -66,16 +72,6 @@
         designPos.x += offset.x;
         designPos.y += offset.y;
     }
-
-    
-//    if([node parent] == [scene physicsNode]){
-//        NSLog(@"PARENT IS PHYSICS NODE");
-//        designPos = CGPointMake(designSize.width*unitPos.x,
-//                                (designSize.height - designSize.height*unitPos.y));
-//        designPos.x += offset.x;
-//        designPos.y += offset.y;
-//
-//    }
     else{
 
         designPos = CGPointMake(designSize.width*unitPos.x,
@@ -85,7 +81,6 @@
         designPos.x += p.contentSize.width*0.5;
         designPos.y -= p.contentSize.height*0.5;
     }
-    
     
     return designPos;
 }

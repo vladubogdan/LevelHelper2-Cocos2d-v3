@@ -12,6 +12,10 @@
 #import "LHScene.h"
 #import "LHConfig.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+@end
+
 @implementation LHAsset
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -64,6 +68,48 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
+    }
+    
+    return self;
+}
+
++(instancetype)createWithName:(NSString*)assetName
+                assetFileName:(NSString*)fileName
+                       parent:(CCNode*)prnt
+{
+    return LH_AUTORELEASED([[self alloc] initWithName:assetName
+                                        assetFileName:fileName
+                                               parent:prnt]);
+}
+
+- (instancetype)initWithName:(NSString*)newName
+               assetFileName:(NSString*)fileName
+                      parent:(CCNode*)prnt{
+    
+    
+    if(self = [super init]){
+        
+        [prnt addChild:self];
+        [self setName:newName];
+        
+        LHScene* scene = (LHScene*)[prnt scene];
+        
+        NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
+        
+        if(assetInfo)
+        {
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        }
+        else{
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+        }
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+                                                                                                      node:self];
     }
     
     return self;

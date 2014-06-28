@@ -9,7 +9,6 @@
 #ifndef LevelHelper2_Cocos2dv3_LHUtils_h
 #define LevelHelper2_Cocos2dv3_LHUtils_h
 
-#import "LHScene.h"
 
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 
@@ -72,12 +71,6 @@
 
 #endif
 
-
-
-
-
-#define LH_DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
-#define LH_RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 
 
 NS_INLINE float LHPointLength(CGPoint pt)
@@ -162,33 +155,12 @@ NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
              r1.origin.y > r2.origin.y + r2.size.height);
 }
 
-@class LHRopeJointNode;
-@class LHWater;
-@class LHGravityArea;
-@class LHParallax;
-@class LHCamera;
-@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
-
-+(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
-                         parent:(CCNode*)prnt;
-
--(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
-
--(NSString*)currentDeviceSuffix:(BOOL)keep2x;
-
--(float)currentDeviceRatio;
-
--(CGSize)designResolutionSize;
--(CGPoint)designOffset;
-
--(NSString*)relativePath;
-
-@end
 
 
 @class CCNode;
 @class LHDevice;
-@class LHAnimation;
+
+
 @interface LHUtils : NSObject
 
 +(NSString*)imagePathWithFilename:(NSString*)filename
