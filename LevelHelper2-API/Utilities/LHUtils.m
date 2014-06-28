@@ -70,8 +70,8 @@
     
     if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode] || [node parent] == [scene uiNode])
     {
-        designPos.y = designSize.height + designPos.y;
         
+        designPos.y = designSize.height + designPos.y;
         designPos.x += offset.x;
         designPos.y += offset.y;
     }

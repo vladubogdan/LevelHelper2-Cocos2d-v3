@@ -314,7 +314,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
         self.zOrder = 0;
         self.position = CGPointZero;
-        
+                
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
     }
     return self;

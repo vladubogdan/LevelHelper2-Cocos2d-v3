@@ -39,6 +39,8 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(void)addLateLoadingNode:(CCNode*)node;
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
 @end
 
 @implementation LHNodeProtocolImpl
@@ -118,7 +120,7 @@
         }
 
         //for sprites the content size is set from the CCSpriteFrame
-        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[CCSprite class]] ){
+        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[LHSprite class]] ){
             [_node setContentSize:[dict sizeForKey:@"size"]];
         }
         
@@ -209,7 +211,7 @@
     {
         LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
                                                                        parent:prnt];
-        pNode.contentSize = scene.contentSize;
+        pNode.contentSize = scene.designResolutionSize;
         [pNode setDebugDraw:YES];
         return pNode;
     }

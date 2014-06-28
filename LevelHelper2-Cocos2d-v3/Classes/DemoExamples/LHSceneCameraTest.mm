@@ -15,6 +15,8 @@
 @implementation LHSceneCameraTest
 
 + (LHSceneDemo *)scene{
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/tst.plist"];
+
     return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level03-camera.plist"];
 }
 

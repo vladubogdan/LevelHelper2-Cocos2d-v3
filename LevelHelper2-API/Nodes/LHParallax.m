@@ -12,6 +12,8 @@
 #import "LHScene.h"
 #import "LHParallaxLayer.h"
 #import "LHAnimation.h"
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
@@ -100,8 +102,8 @@
         parallaxPos.x -= content.width*(anchor.x -0.5);
         parallaxPos.y -= content.height*(anchor.y -0.5);
 
-        CGSize winSize = [(LHScene*)[self scene] contentSize];
-        
+        CGSize winSize = [[(LHScene*)[self scene] gameWorldNode] contentSize];
+                
         parallaxPos.x = parallaxPos.x - winSize.width*0.5;
         parallaxPos.y = parallaxPos.y - winSize.height*0.5;
     }

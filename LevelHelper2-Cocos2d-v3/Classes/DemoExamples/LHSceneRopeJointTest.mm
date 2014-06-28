@@ -46,6 +46,12 @@
     
 //    CGPoint curGravity = [self globalGravity];
 //    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
+    CCDirector* dir = [CCDirector sharedDirector];
+    
+    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
+	touchLocation = [dir convertToGL: touchLocation];
+
+    NSLog(@"TOUCH LOC %f %f", touchLocation.x, touchLocation.y);
 
     //dont forget to call super
     [super touchBegan:touch withEvent:event];

@@ -4016,7 +4016,7 @@
 					<key>colorOverlay</key>
 					<string>{{0, 0}, {0, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.33550122947867816, -0.36067525264732814}</string>
+					<string>{0.33550116590039036, -0.36067525264732814}</string>
 					<key>name</key>
 					<string>UntitledBezier_1</string>
 					<key>nodePhysics</key>
@@ -4061,27 +4061,27 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-1163.2223510742188, 320.13630294799805}</string>
+							<string>{-1163.2222900390625, 320.13630294799805}</string>
 							<key>ctrl2</key>
-							<string>{-806.77101516723633, -668.44755935668934}</string>
+							<string>{-806.77095413208008, -668.44755935668934}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-1163.2223510742188, 220.13630294799805}</string>
+							<string>{-1163.2222900390625, 220.13630294799805}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{544.47404289245605, 59.944606781005859}</string>
+							<string>{544.4741039276123, 59.944606781005859}</string>
 							<key>ctrl2</key>
-							<string>{1163.2221202850342, 177.08645248413086}</string>
+							<string>{1163.2221813201904, 177.08645248413086}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{1163.2221202850342, 77.086452484130859}</string>
+							<string>{1163.2221813201904, 77.086452484130859}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
@@ -4109,7 +4109,7 @@
 					<key>colorOverlay</key>
 					<string>{{0, 0}, {0, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.31524251614881676, 0.81542878906865046}</string>
+					<string>{0.31524245276533897, 0.81542878906865046}</string>
 					<key>name</key>
 					<string>UntitledBezier</string>
 					<key>nodePhysics</key>
@@ -4154,27 +4154,27 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-570.16106378311122, -138.92582983839458}</string>
+							<string>{-570.16103326553309, -138.92582983839458}</string>
 							<key>ctrl2</key>
-							<string>{-464.35409052809774, 247.05064981756317}</string>
+							<string>{-464.35406001051962, 247.05064981756317}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-570.16106378311122, -238.92582983839458}</string>
+							<string>{-570.16103326553309, -238.92582983839458}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{221.94994755451896, 338.1906866552157}</string>
+							<string>{221.94997807209708, 338.1906866552157}</string>
 							<key>ctrl2</key>
-							<string>{570.16090666221817, 243.66641658748597}</string>
+							<string>{570.16093717979629, 243.66641658748597}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{570.16090666221828, 143.66641658748597}</string>
+							<string>{570.16093717979641, 143.66641658748597}</string>
 						</dict>
 					</array>
 					<key>rotation</key>

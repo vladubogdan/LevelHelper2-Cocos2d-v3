@@ -34,7 +34,7 @@
         button.position = CGPointMake(150, designSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
-        [button setColor:[CCColor redColor]];
+        [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(previousDemo)];
         button.exclusiveTouch = NO;
         [[self uiNode]  addChild:button];
@@ -45,7 +45,7 @@
         button.position = CGPointMake(designSize.width*0.5, designSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
-        [button setColor:[CCColor redColor]];
+        [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(restartDemo)];
         button.exclusiveTouch = NO;
         [[self uiNode]  addChild:button];
@@ -57,7 +57,7 @@
         button.position = CGPointMake(designSize.width - 120, designSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
-        [button setColor:[CCColor redColor]];
+        [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(nextDemo)];
         button.exclusiveTouch = NO;
         [[self uiNode]  addChild:button];

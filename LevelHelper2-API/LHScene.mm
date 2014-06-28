@@ -50,11 +50,10 @@
     NSArray* supportedDevices;
 
     CGSize  designResolutionSize;
+    CGSize  currentDeviceSize;
     CGPoint designOffset;
     
     NSString* relativePath;
-    
-    CGPoint ropeJointsCutStartPt;
     
     NSMutableDictionary* _loadedAssetsInformations;
     
@@ -150,6 +149,7 @@
         
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
+        currentDeviceSize    = curDev.size;
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
         
         [self setName:relativePath];
@@ -157,7 +157,8 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        self.contentSize = curDev.size;
+
+        self.contentSize = designResolutionSize;
         self.position = CGPointZero;
         
         
@@ -184,6 +185,7 @@
         [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
         [self visit];//dont know why i need to call it 3 times
         [self visit];
+        
     }
     return self;
 }
@@ -413,44 +415,6 @@
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 ////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
-#pragma mark - TOUCH SUPPORT
-////////////////////////////////////////////////////////////////////////////////
-
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-
-    //without this touch began is not called
-    CCDirector* dir = [CCDirector sharedDirector];
-    
-    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-    
-    ropeJointsCutStartPt = touchLocation;
-    
-    //dont call super - causes touchEnded to not get called
-//    [super touchBegan:touch withEvent:event];
-}
-
--(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-//    [super touchMoved:touch withEvent:event];
-}
-
--(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    CCDirector* dir = [CCDirector sharedDirector];
-    
-    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-
-    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
-        if([rope canBeCut]){
-            [rope cutWithLineFromPointA:ropeJointsCutStartPt
-                               toPointB:touchLocation];
-        }
-    }
-//    [super touchEnded:touch withEvent:event];
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - BOX2D INTEGRATION
@@ -534,6 +498,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(CGSize)designResolutionSize{
     return designResolutionSize;
+}
+-(CGSize)currentDeviceSize{
+    return currentDeviceSize;
 }
 -(CGPoint)designOffset{
     return designOffset;
