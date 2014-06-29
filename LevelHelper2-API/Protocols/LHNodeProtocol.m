@@ -126,6 +126,7 @@
         
         if([dict objectForKey:@"generalPosition"]&&
            ![_node isKindOfClass:[LHUINode class]] &&
+           ![_node isKindOfClass:[LHBackUINode class]] &&
            ![_node isKindOfClass:[LHGameWorldNode class]])
         {
             
@@ -158,6 +159,7 @@
         
         if([dict objectForKey:@"anchor"] &&
            ![_node isKindOfClass:[LHUINode class]] &&
+           ![_node isKindOfClass:[LHBackUINode class]] &&
            ![_node isKindOfClass:[LHGameWorldNode class]])
         {
             CGPoint anchor = [dict pointForKey:@"anchor"];

@@ -9,8 +9,25 @@
 
 // Import the interfaces
 #import "LHSceneDemo.h"
+#import "LHUtils.h"
+
+#import "LHSceneCameraTest.h"
+#import "LHSceneCameraFollowTest.h"
+#import "LHSceneParallaxTest.h"
+#import "LHSceneJointsTest.h"
+#import "LHSceneRopeJointTest.h"
+#import "LHSceneGearJointsTest.h"
+#import "LHSceneBodyScaleTest.h"
+
 
 @implementation LHSceneDemo
+{
+    NSMutableArray* availableScenes;
+}
+-(void)dealloc{
+    LH_SAFE_RELEASE(availableScenes);
+    LH_SUPER_DEALLOC();
+}
 
 + (LHSceneDemo *)scene{
     NSLog(@"DONT USE THIS CLASS DIRECTLY - SUBCLASS");
@@ -26,12 +43,21 @@
 
     if (!self) return(nil);
     
+    availableScenes = [[NSMutableArray alloc] init];
+    
+    [availableScenes addObject:[LHSceneCameraTest class]];
+    [availableScenes addObject:[LHSceneCameraFollowTest class]];
+    [availableScenes addObject:[LHSceneParallaxTest class]];
+    [availableScenes addObject:[LHSceneRopeJointTest class]];
+    [availableScenes addObject:[LHSceneJointsTest class]];
+    [availableScenes addObject:[LHSceneGearJointsTest class]];
+    [availableScenes addObject:[LHSceneBodyScaleTest class]];
+    
 
-    CGSize designSize = [[CCDirector sharedDirector] designSize];
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Previous Demo"];
-        button.position = CGPointMake(150, designSize.height - 50);
+        button.position = CGPointMake(self.contentSize.width*0.5 - 200, self.contentSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
@@ -42,7 +68,7 @@
 
     {
         CCButton *button = [CCButton buttonWithTitle:@"Restart"];
-        button.position = CGPointMake(designSize.width*0.5, designSize.height - 50);
+        button.position = CGPointMake(self.contentSize.width*0.5, self.contentSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
@@ -54,7 +80,7 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Next Demo"];
-        button.position = CGPointMake(designSize.width - 120, designSize.height - 50);
+        button.position = CGPointMake(self.contentSize.width*0.5 + 200, self.contentSize.height - 50);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
@@ -67,16 +93,52 @@
 	return self;
 }
 
--(void)nextDemo
-{
-    NSLog(@"DONT USE THIS CLASS DIRECTLY - SUBCLASS");
-}
 -(void)restartDemo{
     [[CCDirector sharedDirector] replaceScene:[[self class] scene]];
 }
--(void)previousDemo
-{
-    NSLog(@"DONT USE THIS CLASS DIRECTLY - SUBCLASS");
+
+-(void)previousDemo{
+    
+    int idx = 0;
+    for(Class cls in availableScenes)
+    {
+        if(cls == [self class])
+        {
+            int nextIdx = idx-1;
+            if(nextIdx < 0){
+                nextIdx = (int)[availableScenes count] -1;
+            }
+            
+            if(0 <= nextIdx && nextIdx < [availableScenes count] )
+            {
+                Class goTo = [availableScenes objectAtIndex:nextIdx];
+                [[CCDirector sharedDirector] replaceScene:[goTo scene]];
+            }
+        }
+        ++idx;
+    }
+}
+
+-(void)nextDemo{
+    
+    int idx = 0;
+    for(Class cls in availableScenes)
+    {
+        if(cls == [self class])
+        {
+            int nextIdx = idx+1;
+            if(nextIdx >= [availableScenes count]){
+                nextIdx = 0;
+            }
+            
+            if(0 <= nextIdx && nextIdx < [availableScenes count] )
+            {
+                Class goTo = [availableScenes objectAtIndex:nextIdx];
+                [[CCDirector sharedDirector] replaceScene:[goTo scene]];
+            }
+        }
+        ++idx;
+    }
 }
 
 @end

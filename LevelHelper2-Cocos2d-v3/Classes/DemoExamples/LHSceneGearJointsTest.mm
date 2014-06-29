@@ -12,9 +12,6 @@
 #import "LHConfig.h"
 #import "LHUtils.h"
 
-#import "LHSceneRopeJointTest.h"
-#import "LHBodyScaleTestScene.h"
-
 @implementation LHSceneGearJointsTest
 {
 #if LH_USE_BOX2D
@@ -190,12 +187,5 @@
 #endif
 }
 
-
--(void)previousDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneRopeJointTest scene]];
-}
--(void)nextDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHBodyScaleTestScene scene]];
-}
 
 @end

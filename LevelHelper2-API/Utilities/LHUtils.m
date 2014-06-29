@@ -16,9 +16,7 @@
 
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
-
-#import "LHParallax.h"
-#import "LHParallaxLayer.h"
+#import "LHBackUINode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGSize)designResolutionSize;
@@ -68,7 +66,11 @@
                             designSize.height*(-unitPos.y));
     
     
-    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode] || [node parent] == [scene uiNode])
+    if([node parent] == nil ||
+       [node parent] == scene ||
+       [node parent] == [scene gameWorldNode] ||
+       [node parent] == [scene uiNode]  ||
+       [node parent] == [scene backUiNode])
     {
         
         designPos.y = designSize.height + designPos.y;

@@ -16,7 +16,9 @@
 {
     if(self = [super init]){
         
-        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
+        
+        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+
         
     }
     return self;
@@ -98,6 +100,7 @@
     NSAssert( !texture || [texture isKindOfClass:[CCTexture class]], @"setTexture expects a CCTexture2D. Invalid argument");
 	if(_texture != texture ) {
 		_texture = texture;
+        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
 		[self updateBlendFunc];
 	}
 }

@@ -180,7 +180,7 @@ double fcat(double x, void *data)
             ropeShape = shape;
             
             NSString* imgRelPath = [dict objectForKey:@"relativeImagePath"];
-            if(imgRelPath){
+            if(imgRelPath && [dict boolForKey:@"useTexture"]){
                 LHScene* scene = (LHScene*)[prnt scene];
                 
                 NSString* filename = [imgRelPath lastPathComponent];

@@ -15,6 +15,7 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
 @end
 
 

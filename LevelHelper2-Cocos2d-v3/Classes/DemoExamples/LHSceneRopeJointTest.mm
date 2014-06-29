@@ -9,14 +9,12 @@
 
 // Import the interfaces
 #import "LHSceneRopeJointTest.h"
-#import "LHSceneJointsTest.h"
-#import "LHSceneGearJointsTest.h"
 
 @implementation LHSceneRopeJointTest
 
 + (LHSceneRopeJointTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level06-ropeJoint.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/ropeJointDemo.plist"];
 }
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {
@@ -28,12 +26,13 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINT DEMO\nMake a line to cut the rope joint."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINT DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
+    [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
-                                 self.contentSize.height*0.5 - ttf.contentSize.height)];
+                                 self.contentSize.height*0.5)];
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
@@ -57,10 +56,4 @@
     [super touchBegan:touch withEvent:event];
 }
 
--(void)previousDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneJointsTest scene]];
-}
--(void)nextDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneGearJointsTest scene]];
-}
 @end

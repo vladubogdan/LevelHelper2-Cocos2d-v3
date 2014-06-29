@@ -22,7 +22,6 @@
 @implementation LHUINode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
-    CGPoint touchBeganLocation;
 }
 
 -(void)dealloc{
@@ -52,10 +51,6 @@
         self.zOrder = 1;
         [self setPosition:CGPointZero];
 
-        LHScene* scene = (LHScene*)[prnt scene];
-        self.contentSize = [scene currentDeviceSize];
-        
-        self.userInteractionEnabled = YES;
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
     }
@@ -63,26 +58,6 @@
     return self;
 }
 
-////////////////////////////////////////////////////////////////////////////////
-#pragma mark - TOUCH SUPPORT
-////////////////////////////////////////////////////////////////////////////////
-
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
-    touchBeganLocation = [touch locationInNode:self];
-}
-
--(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    CGPoint touchLocation = [touch locationInNode:self];
-
-    for(LHRopeJointNode* rope in [[self scene] childrenOfType:[LHRopeJointNode class]]){
-        if([rope canBeCut]){
-            [rope cutWithLineFromPointA:touchBeganLocation
-                               toPointB:touchLocation];
-        }
-    }
-}
 
 
 #pragma mark LHNodeProtocol Required

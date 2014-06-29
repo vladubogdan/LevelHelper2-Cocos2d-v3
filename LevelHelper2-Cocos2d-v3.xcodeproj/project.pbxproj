@@ -488,6 +488,10 @@
 		6E1222881924BD88005E8532 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E1222871924BD88005E8532 /* LICENSE_Chipmunk.txt */; };
 		6E12228C1924BD88005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E1222901924BD88005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
+		6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
+		6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
+		6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
+		6E7EC244195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
 		6E89FDBD192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E89FE0F192E23100040478F /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDC3192E23100040478F /* LHFrame.m */; };
 		6E89FE10192E23100040478F /* LHOpacityFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDC5192E23100040478F /* LHOpacityFrame.m */; };
@@ -539,10 +543,10 @@
 		6EBEA2C519596F4900726044 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */; };
 		6EBEA2C819596FC800726044 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
 		6EBEA2C919596FC800726044 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
-		6EBEA2CC1959707400726044 /* LHBodyScaleTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */; };
-		6EBEA2CD1959707400726044 /* LHBodyScaleTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */; };
 		6ED5C547195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
 		6ED5C548195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
+		6ED5C561195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
+		6ED5C562195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -682,7 +686,7 @@
 		6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHWheelJointNode.mm; sourceTree = "<group>"; };
 		6E0D596D194F3AF50036E940 /* LHGearJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGearJointNode.h; sourceTree = "<group>"; };
 		6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGearJointNode.mm; sourceTree = "<group>"; };
-		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-Cocos2d-v3.app"; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6E121FEA1924BD85005E8532 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1106,6 +1110,10 @@
 		6E12228B1924BD88005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		6E12228E1924BD88005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		6E12228F1924BD88005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
+		6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowTest.mm; sourceTree = "<group>"; };
+		6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxTest.h; sourceTree = "<group>"; };
+		6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxTest.mm; sourceTree = "<group>"; };
 		6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DEMO_INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = "<group>"; };
 		6E89FDC2192E23100040478F /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E89FDC3192E23100040478F /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
@@ -1196,10 +1204,10 @@
 		6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRopeJointTest.mm; sourceTree = "<group>"; };
 		6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGearJointsTest.h; sourceTree = "<group>"; };
 		6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGearJointsTest.mm; sourceTree = "<group>"; };
-		6EBEA2CA1959707400726044 /* LHBodyScaleTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyScaleTestScene.h; sourceTree = "<group>"; };
-		6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyScaleTestScene.mm; sourceTree = "<group>"; };
 		6ED5C545195ECBA300B6DF33 /* LHBackUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBackUINode.h; sourceTree = "<group>"; };
 		6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBackUINode.mm; sourceTree = "<group>"; };
+		6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBodyScaleTest.h; sourceTree = "<group>"; };
+		6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBodyScaleTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1423,7 +1431,7 @@
 		6E121FE41924BD85005E8532 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */,
+				6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */,
 				6E121FFA1924BD85005E8532 /* libObjectiveChipmunk.a */,
 				6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */,
 			);
@@ -2456,14 +2464,18 @@
 				6EBEA2B719596B9800726044 /* LHSceneDemo.mm */,
 				6EBEA2BA19596CDF00726044 /* LHSceneCameraTest.h */,
 				6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */,
+				6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */,
+				6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */,
+				6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */,
+				6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */,
 				6EBEA2BE19596DAF00726044 /* LHSceneJointsTest.h */,
 				6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */,
 				6EBEA2C219596F4900726044 /* LHSceneRopeJointTest.h */,
 				6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */,
 				6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */,
 				6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */,
-				6EBEA2CA1959707400726044 /* LHBodyScaleTestScene.h */,
-				6EBEA2CB1959707400726044 /* LHBodyScaleTestScene.mm */,
+				6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */,
+				6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */,
 			);
 			name = DemoExamples;
 			path = Classes/DemoExamples;
@@ -2505,7 +2517,7 @@
 			);
 			name = "LevelHelper2-Cocos2d-v3+Chipmunk";
 			productName = "LevelHelper2-Cocos2d-v3";
-			productReference = 6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3.app */;
+			productReference = 6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6E121FF91924BD85005E8532 /* ObjectiveChipmunk */ = {
@@ -2663,6 +2675,7 @@
 				6E0D55E2194C32A30036E940 /* LHDrawNode.m in Sources */,
 				6E0D55E3194C32A30036E940 /* CCTextureCache.m in Sources */,
 				6E0D58FE194CD6A40036E940 /* b2EdgeAndPolygonContact.cpp in Sources */,
+				6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */,
 				6E0D55E4194C32A30036E940 /* CCAppDelegate.m in Sources */,
 				6E0D55E5194C32A30036E940 /* CCDirectorMac.m in Sources */,
 				6E0D55E6194C32A30036E940 /* ccDeprecated.m in Sources */,
@@ -2697,6 +2710,7 @@
 				6E0D58EB194CD6A40036E940 /* b2PolygonShape.cpp in Sources */,
 				6E0D58E4194CD6A40036E940 /* b2Collision.cpp in Sources */,
 				6E0D55FA194C32A30036E940 /* OALAction.m in Sources */,
+				6E7EC244195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
 				6E0D55FB194C32A30036E940 /* CCTexturePVR.m in Sources */,
 				6E0D55FC194C32A30036E940 /* CCBAnimationManager.m in Sources */,
 				6E0D55FD194C32A30036E940 /* LHDistanceJointNode.mm in Sources */,
@@ -2736,6 +2750,7 @@
 				6E0D5619194C32A30036E940 /* CCActionInterval.m in Sources */,
 				6E0D561A194C32A30036E940 /* LHOpacityFrame.m in Sources */,
 				6E0D561B194C32A30036E940 /* CCPhysicsJoint.m in Sources */,
+				6ED5C562195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */,
 				6E0D561C194C32A30036E940 /* CCMotionStreak.m in Sources */,
 				6E0D561D194C32A30036E940 /* LHNodePhysicsProtocol.mm in Sources */,
 				6E0D561E194C32A30036E940 /* CCActionInstant.m in Sources */,
@@ -2746,7 +2761,6 @@
 				6EBEA2B919596B9800726044 /* LHSceneDemo.mm in Sources */,
 				6E0D5621194C32A30036E940 /* OALAudioTrack.m in Sources */,
 				6E0D5622194C32A30036E940 /* CCProgressNode.m in Sources */,
-				6EBEA2CD1959707400726044 /* LHBodyScaleTestScene.mm in Sources */,
 				6E0D5623194C32A30036E940 /* CCPhysicsBody.m in Sources */,
 				6E0D5624194C32A30036E940 /* CCWindow.m in Sources */,
 				6E0D5625194C32A30036E940 /* CCActionProgressTimer.m in Sources */,
@@ -2926,11 +2940,13 @@
 				6E0D5953194F03080036E940 /* LHRevoluteJointNode.mm in Sources */,
 				6E89FE29192E23100040478F /* LHNode.mm in Sources */,
 				6E89FE13192E23100040478F /* LHScaleFrame.m in Sources */,
+				6ED5C561195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */,
 				6E89FE12192E23100040478F /* LHRotationFrame.m in Sources */,
 				6E1221EB1924BD87005E8532 /* mat4stack.c in Sources */,
 				6E12208A1924BD86005E8532 /* CCNode.m in Sources */,
 				6E1220751924BD86005E8532 /* CCLabelBMFont.m in Sources */,
 				6E1220331924BD85005E8532 /* CCActionEase.m in Sources */,
+				6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
 				6E1220421924BD86005E8532 /* CCActionTween.m in Sources */,
 				6E1221B01924BD87005E8532 /* NSMutableDictionary+WeakReferences.m in Sources */,
 				6E12208D1924BD86005E8532 /* CCNode+Debug.m in Sources */,
@@ -2977,7 +2993,6 @@
 				6E1221FF1924BD87005E8532 /* vec3.c in Sources */,
 				6E1220821924BD86005E8532 /* CCLayoutBox.m in Sources */,
 				6E12207F1924BD86005E8532 /* CCLayout.m in Sources */,
-				6EBEA2CC1959707400726044 /* LHBodyScaleTestScene.mm in Sources */,
 				6E1221A21924BD87005E8532 /* OALSuspendHandler.m in Sources */,
 				6E89FE2E192E23100040478F /* LHSprite.mm in Sources */,
 				6E89FE1D192E23100040478F /* LHRotationProperty.m in Sources */,
@@ -3059,6 +3074,7 @@
 				6E1220EF1924BD86005E8532 /* CCTexture.m in Sources */,
 				6E89FE23192E23100040478F /* LHAsset.mm in Sources */,
 				6E1221811924BD87005E8532 /* ALCaptureDevice.m in Sources */,
+				6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */,
 				6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */,
 				6E1220BD1924BD86005E8532 /* CCResponderManager.m in Sources */,
 				6E1220551924BD86005E8532 /* CCConfiguration.m in Sources */,

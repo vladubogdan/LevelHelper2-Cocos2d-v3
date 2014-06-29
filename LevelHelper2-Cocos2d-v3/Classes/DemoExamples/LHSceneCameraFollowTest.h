@@ -1,5 +1,5 @@
 //
-//  LHBodyScaleTestScene.h
+//  LHSceneCameraFollowTest.h
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -13,6 +13,8 @@
 
 #import "LevelHelper2API.h"
 #import "LHSceneDemo.h"
-@interface LHBodyScaleTestScene : LHSceneDemo
+
+@interface LHSceneCameraFollowTest : LHSceneDemo
+
 
 @end

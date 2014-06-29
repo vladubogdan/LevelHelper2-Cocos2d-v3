@@ -1,5 +1,5 @@
 //
-//  LHBodyScaleTestScene.m
+//  LHSceneBodyScaleTest.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,13 +8,11 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHBodyScaleTestScene.h"
-#import "LHSceneGearJointsTest.h"
-#import "LHSceneCameraTest.h"
+#import "LHSceneBodyScaleTest.h"
 
-@implementation LHBodyScaleTestScene
+@implementation LHSceneBodyScaleTest
 
-+ (LHBodyScaleTestScene *)scene
++ (LHSceneBodyScaleTest *)scene
 {
 	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
 }
@@ -93,10 +91,4 @@
 }
 
 
--(void)previousDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneGearJointsTest scene]];
-}
--(void)nextDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneCameraTest scene]];
-}
 @end

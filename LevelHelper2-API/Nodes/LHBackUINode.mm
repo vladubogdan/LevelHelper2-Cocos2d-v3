@@ -42,7 +42,7 @@
                                                                                     node:self];
         
         self.zOrder = -1;
-        [self setPosition:CGPointZero];
+        self.position = CGPointZero;
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         

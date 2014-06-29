@@ -74,7 +74,6 @@
     
     
     
-    
     if(self = [super initWithSpriteFrame:spriteFrame]){
         
         [prnt addChild:self];

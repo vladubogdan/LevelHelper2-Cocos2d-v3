@@ -17,6 +17,7 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
 @end
 
 @implementation LHParallax
@@ -102,7 +103,7 @@
         parallaxPos.x -= content.width*(anchor.x -0.5);
         parallaxPos.y -= content.height*(anchor.y -0.5);
 
-        CGSize winSize = [[(LHScene*)[self scene] gameWorldNode] contentSize];
+        CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
                 
         parallaxPos.x = parallaxPos.x - winSize.width*0.5;
         parallaxPos.y = parallaxPos.y - winSize.height*0.5;
@@ -126,8 +127,8 @@
 
                 CGPoint curPos = [nd position];
                 
-                CGPoint pt = CGPointMake(curPos.x + deltaPos.x*(-nd.xRatio),
-                                         curPos.y + deltaPos.y*(-nd.yRatio));
+                CGPoint pt = CGPointMake(curPos.x - deltaPos.x*(nd.xRatio),
+                                         curPos.y - deltaPos.y*(nd.yRatio));
                 
                 
                 [nd setPosition:pt];

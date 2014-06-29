@@ -60,6 +60,8 @@
     NSTimeInterval _lastTime;
     
     CGRect gameWorldRect;
+
+    CGPoint touchBeganLocation;
 }
 
 
@@ -158,8 +160,8 @@
                                                                                     node:self];
         
 
-        self.contentSize = designResolutionSize;
-        self.position = CGPointZero;
+        self.contentSize= CGSizeMake(curDev.size.width/curDev.ratio, curDev.size.height/curDev.ratio);
+        self.position   = CGPointZero;
         
         
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
@@ -211,7 +213,7 @@
             CGSize designSize = [self designResolutionSize];
             CGPoint offset = [self designOffset];
             CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-                                        self.contentSize.height - bRect.origin.y*designSize.height + offset.y,
+                                        designSize.height - bRect.origin.y*designSize.height + offset.y,
                                         bRect.size.width*designSize.width ,
                                         -bRect.size.height*designSize.height);
             
@@ -247,7 +249,7 @@
                                withName:(NSString*)sectionName
 {
     CCDrawNode* drawNode = [CCDrawNode node];
-    [self addChild:drawNode];
+    [[self gameWorldNode] addChild:drawNode];
     [drawNode setZOrder:100];
     [drawNode setName:sectionName];
     
@@ -319,6 +321,7 @@
                                        (1.0f - bRect.origin.y)*designSize.height + offset.y,
                                        bRect.size.width*designSize.width ,
                                        -(bRect.size.height)*designSize.height);
+            
         }
     }
 }
@@ -463,6 +466,28 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 -(void)setGlobalGravity:(CGPoint)gravity{
     [[self gameWorldNode] setGravity:gravity];
 }
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - TOUCH SUPPORT
+////////////////////////////////////////////////////////////////////////////////
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    
+    touchBeganLocation = [touch locationInNode:self];
+}
+
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
+        if([rope canBeCut]){
+            [rope cutWithLineFromPointA:touchBeganLocation
+                               toPointB:touchLocation];
+        }
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - PRIVATES

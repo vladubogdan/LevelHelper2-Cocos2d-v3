@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748734027147293, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748734027147293, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -73,6 +73,16 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>cameraDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>cameraFollowDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>level01.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -109,6 +119,16 @@
 					<true/>
 				</dict>
 				<key>level07-gearJoint.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>parallaxDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>ropeJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

@@ -9,8 +9,6 @@
 
 // Import the interfaces
 #import "LHSceneJointsTest.h"
-#import "LHSceneCameraTest.h"
-#import "LHSceneRopeJointTest.h"
 
 @implementation LHSceneJointsTest
 
@@ -114,10 +112,4 @@
     [super touchBegan:touch withEvent:event];
 }
 
--(void)previousDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneCameraTest scene]];
-}
--(void)nextDemo{
-    [[CCDirector sharedDirector] replaceScene:[LHSceneRopeJointTest scene]];
-}
 @end

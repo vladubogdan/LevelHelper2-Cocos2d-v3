@@ -1,5 +1,5 @@
 //
-//  LHSceneCameraTest.m
+//  LHSceneParallaxTest.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,12 +8,15 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHSceneCameraTest.h"
+#import "LHSceneParallaxTest.h"
 
-@implementation LHSceneCameraTest
+@implementation LHSceneParallaxTest
+{
+    
+}
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/cameraDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/parallaxDemo.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -23,9 +26,9 @@
     if (!self) return(nil);
     
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA DEMO\nDemonstrata a simple camera that moves in a game world by an animation.\nThe camera is not restricted and does not follow any object.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"PARALLAX DEMO\nDemonstrate using a parallax to give an illusion of depth.\nThe camera is following the candy sprite.\nThe parallax is following the camera.\nEach layer in the parallax has a different movement ratio making them move at different speeds.\nLayers in the back move slower then layer in the front.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen."
                                          fontName:@"Arial"
-                                         fontSize:22];
+                                         fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
@@ -36,6 +39,5 @@
     // done
 	return self;
 }
-
 
 @end
