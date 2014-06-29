@@ -9,7 +9,8 @@
 
 #import "AppDelegate.h"
 
-#import "LHSceneCameraTest.h"
+#import "LHSceneIntroduction.h"
+
 
 @implementation AppDelegate
 
@@ -48,7 +49,7 @@
 
 -(CCScene *)startScene
 {
-    return [LHSceneCameraTest scene];
+    return [LHSceneIntroduction scene];
 }
 
 @end

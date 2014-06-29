@@ -11,6 +11,7 @@
 #import "LHSceneDemo.h"
 #import "LHUtils.h"
 
+#import "LHSceneIntroduction.h"
 #import "LHSceneCameraTest.h"
 #import "LHSceneCameraFollowTest.h"
 #import "LHSceneParallaxTest.h"
@@ -45,14 +46,47 @@
     
     availableScenes = [[NSMutableArray alloc] init];
     
+    [availableScenes addObject:[LHSceneIntroduction class]];
     [availableScenes addObject:[LHSceneCameraTest class]];
     [availableScenes addObject:[LHSceneCameraFollowTest class]];
     [availableScenes addObject:[LHSceneParallaxTest class]];
+    //character animation test
     [availableScenes addObject:[LHSceneRopeJointTest class]];
     [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];
+    
+    //ASSETS TEST
+    //gravity areas
+    //shape and bezier nodes test
+    //sprite sheet animaton test
+    
+    //body scale
+    //body positioning
+    //body transformations
+    
+    //collision filtering test
+    
+    //collision handling test
+    //should collide test
+    
+    //animation delegate test
+    
     [availableScenes addObject:[LHSceneBodyScaleTest class]];
     
+
+    {
+        NSInteger demoIdx = [availableScenes indexOfObject:[self class]];
+        
+        CCLabelTTF* ttf = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"Demo %d/%d",(int)demoIdx+1, (int)[availableScenes count]]
+                                             fontName:@"Arial"
+                                             fontSize:22];
+        [ttf setColor:[CCColor blackColor]];
+        [ttf setHorizontalAlignment:CCTextAlignmentLeft];
+        [ttf setPosition:CGPointMake(60,
+                                     self.contentSize.height - 50)];
+
+        [[self uiNode]  addChild:ttf];
+    }
 
     
     {

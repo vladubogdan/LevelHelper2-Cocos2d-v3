@@ -26,7 +26,7 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINT DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];

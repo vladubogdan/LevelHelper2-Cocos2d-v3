@@ -529,6 +529,8 @@
 		6E89FE30192E23100040478F /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE0E192E23100040478F /* LHUtils.m */; };
 		6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
 		6E89FE35192E27FB0040478F /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */; };
+		6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
+		6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
 		6EBEA2B1195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B2195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B0195963A900726044 /* LHUINode.mm */; };
@@ -1190,6 +1192,8 @@
 		6E89FE31192E261E0040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSubclass.h; path = Classes/LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
 		6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DEMO_PUBLISH_FOLDER; sourceTree = "<group>"; };
+		6E9B2A0C195FFA150043336E /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
+		6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneIntroduction.mm; sourceTree = "<group>"; };
 		6EBEA2AD195963A900726044 /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGameWorldNode.mm; sourceTree = "<group>"; };
 		6EBEA2AF195963A900726044 /* LHUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUINode.h; sourceTree = "<group>"; };
@@ -2462,6 +2466,8 @@
 			children = (
 				6EBEA2B619596B9800726044 /* LHSceneDemo.h */,
 				6EBEA2B719596B9800726044 /* LHSceneDemo.mm */,
+				6E9B2A0C195FFA150043336E /* LHSceneIntroduction.h */,
+				6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */,
 				6EBEA2BA19596CDF00726044 /* LHSceneCameraTest.h */,
 				6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */,
 				6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */,
@@ -2865,6 +2871,7 @@
 				6EBEA2B2195963A900726044 /* LHGameWorldNode.mm in Sources */,
 				6E0D5670194C32A30036E940 /* cocos2d.m in Sources */,
 				6E0D5909194CD6A40036E940 /* b2RopeJoint.cpp in Sources */,
+				6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
 				6E0D5671194C32A30036E940 /* ALSource.m in Sources */,
 				6E0D58FB194CD6A40036E940 /* b2Contact.cpp in Sources */,
 				6E0D5672194C32A30036E940 /* CCParticleSystem.m in Sources */,
@@ -2946,6 +2953,7 @@
 				6E12208A1924BD86005E8532 /* CCNode.m in Sources */,
 				6E1220751924BD86005E8532 /* CCLabelBMFont.m in Sources */,
 				6E1220331924BD85005E8532 /* CCActionEase.m in Sources */,
+				6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
 				6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
 				6E1220421924BD86005E8532 /* CCActionTween.m in Sources */,
 				6E1221B01924BD87005E8532 /* NSMutableDictionary+WeakReferences.m in Sources */,

@@ -83,6 +83,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>introductionScene.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>level01.lhs</key>
 				<dict>
 					<key>publish</key>

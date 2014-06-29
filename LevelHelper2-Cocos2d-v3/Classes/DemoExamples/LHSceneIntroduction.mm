@@ -1,5 +1,5 @@
 //
-//  LHSceneCameraTest.m
+//  LHSceneIntroduction.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,24 +8,24 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHSceneCameraTest.h"
+#import "LHSceneIntroduction.h"
 
-@implementation LHSceneCameraTest
+@implementation LHSceneIntroduction
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/cameraDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/introductionScene.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {
     self = [super initWithContentOfFile:levelPlistFile];
-
+    
     if (!self) return(nil);
     
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA DEMO\nDemonstrate a simple camera that moves in a game world by an animation.\nThe camera is not restricted and does not follow any object.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"INTRODUCTION\nUse the Previous and Next buttons to toggle between demos.\nUse the Restart button to start the current demo again.\nInvestigate each demo source file and LevelHelper document file for more info on how it was done.\nYou can find all scene files in the DEMO_DOCUMENTS\\levels folder.\nYou can find all source files in the DemoExamples folder located under Classes in Xcode.\nFor acurate FPS count use a real device.\n\nGo to AppDelegate.m to set your own starting scene."
                                          fontName:@"Arial"
-                                         fontSize:22];
+                                         fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,

@@ -30,12 +30,12 @@
     
     
 #if LH_USE_BOX2D
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"JOINTS DEMO\nClick to remove joints.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS DEMO\nClick to remove joints.\n"
                                          fontName:@"Arial"
                                          fontSize:24];
     
 #else
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"JOINTS DEMO\nClick to remove joints.\nNot all joints are supported when using CHIPMUNK."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS DEMO\nClick to remove joints.\nNot all joints are supported when using CHIPMUNK."
                                          fontName:@"Arial"
                                          fontSize:24];
 #endif
