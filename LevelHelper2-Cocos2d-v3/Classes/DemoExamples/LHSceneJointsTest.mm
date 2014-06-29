@@ -30,12 +30,12 @@
     
     
 #if LH_USE_BOX2D
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS DEMO\nClick to remove joints.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS\nClick to remove joints.\n"
                                          fontName:@"Arial"
                                          fontSize:24];
     
 #else
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS DEMO\nClick to remove joints.\nNot all joints are supported when using CHIPMUNK."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS\nClick to remove joints.\n\nNot all joints are supported when using CHIPMUNK."
                                          fontName:@"Arial"
                                          fontSize:24];
 #endif
@@ -50,6 +50,7 @@
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
     
+   
     
     return self;
 }
@@ -101,15 +102,11 @@
         }
     }
 
-//    CGPoint curGravity = [self globalGravity];
-//    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
 
-    
-//    [[CCDirector sharedDirector] replaceScene:[LHSceneJointsTest scene]];
-    
-    
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
 }
+
+
 
 @end

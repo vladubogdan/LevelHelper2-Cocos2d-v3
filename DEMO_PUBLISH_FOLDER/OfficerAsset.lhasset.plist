@@ -1651,17 +1651,6 @@
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
-			<key>devicePositions</key>
-			<dict>
-				<key>1024x768</key>
-				<string>{0.14583333333333334, 0.84869899749755862}</string>
-				<key>1136x640</key>
-				<string>{0.14583333333333334, 0.74713648020693335}</string>
-				<key>2048x1536</key>
-				<string>{0.14583333333333334, 0.8454332151075773}</string>
-				<key>960x640</key>
-				<string>{0.0025614424511635056, 0.026051658336655237}</string>
-			</dict>
 			<key>generalPosition</key>
 			<string>{0.0025614424511635056, 0.026051658336655237}</string>
 			<key>name</key>
@@ -1669,9 +1658,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>BA0C3F0F-845F-4454-83AE-6DA758FE9C55</string>
-			<key>perDevicePosition</key>
-			<true/>
+			<string>7ABC1D01-82CA-44FF-9BA0-0EEC43945AC6</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -1697,7 +1684,7 @@
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>D4ADEE93-0D0E-4E3C-A087-59E6A0B1D192</string>
+	<string>9C6D97AA-CBC5-46C3-8643-7EE3EEECB357</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -1709,7 +1696,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>BA0C3F0F-845F-4454-83AE-6DA758FE9C55</string>
+	<string>7ABC1D01-82CA-44FF-9BA0-0EEC43945AC6</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

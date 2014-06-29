@@ -531,6 +531,10 @@
 		6E89FE35192E27FB0040478F /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */; };
 		6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
 		6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
+		6E9B2A16195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
+		6E9B2A17195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
+		6E9B2A1A195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
+		6E9B2A1B195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
 		6EBEA2B1195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B2195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B0195963A900726044 /* LHUINode.mm */; };
@@ -1194,6 +1198,10 @@
 		6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DEMO_PUBLISH_FOLDER; sourceTree = "<group>"; };
 		6E9B2A0C195FFA150043336E /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
 		6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneIntroduction.mm; sourceTree = "<group>"; };
+		6E9B2A14195FFDEF0043336E /* LHSceneCharacterAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCharacterAnimationTest.h; sourceTree = "<group>"; };
+		6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCharacterAnimationTest.mm; sourceTree = "<group>"; };
+		6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsTest.h; sourceTree = "<group>"; };
+		6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsTest.mm; sourceTree = "<group>"; };
 		6EBEA2AD195963A900726044 /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGameWorldNode.mm; sourceTree = "<group>"; };
 		6EBEA2AF195963A900726044 /* LHUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUINode.h; sourceTree = "<group>"; };
@@ -2472,6 +2480,10 @@
 				6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */,
 				6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */,
 				6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */,
+				6E9B2A14195FFDEF0043336E /* LHSceneCharacterAnimationTest.h */,
+				6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */,
+				6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */,
+				6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */,
 				6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */,
 				6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */,
 				6EBEA2BE19596DAF00726044 /* LHSceneJointsTest.h */,
@@ -2766,6 +2778,7 @@
 				6E0D5620194C32A30036E940 /* LHAnimationProperty.m in Sources */,
 				6EBEA2B919596B9800726044 /* LHSceneDemo.mm in Sources */,
 				6E0D5621194C32A30036E940 /* OALAudioTrack.m in Sources */,
+				6E9B2A1B195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */,
 				6E0D5622194C32A30036E940 /* CCProgressNode.m in Sources */,
 				6E0D5623194C32A30036E940 /* CCPhysicsBody.m in Sources */,
 				6E0D5624194C32A30036E940 /* CCWindow.m in Sources */,
@@ -2822,6 +2835,7 @@
 				6E0D5649194C32A30036E940 /* LHWater.mm in Sources */,
 				6E0D564A194C32A30036E940 /* ALDevice.m in Sources */,
 				6E0D564B194C32A30036E940 /* vec2.c in Sources */,
+				6E9B2A17195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E0D564C194C32A30036E940 /* LHNodeAnimationProtocol.m in Sources */,
 				6E0D564D194C32A30036E940 /* CCAction.m in Sources */,
 				6E0D58ED194CD6A40036E940 /* b2Draw.cpp in Sources */,
@@ -2900,6 +2914,7 @@
 				6E1221AD1924BD87005E8532 /* NSMutableArray+WeakReferences.m in Sources */,
 				6E1221271924BD87005E8532 /* CCGLView.m in Sources */,
 				6E1221F11924BD87005E8532 /* mat4.c in Sources */,
+				6E9B2A1A195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */,
 				6E12204D1924BD86005E8532 /* CCAtlasNode.m in Sources */,
 				6E12219B1924BD87005E8532 /* OpenALManager.m in Sources */,
 				6E1221A71924BD87005E8532 /* IOSVersion.m in Sources */,
@@ -3086,6 +3101,7 @@
 				6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */,
 				6E1220BD1924BD86005E8532 /* CCResponderManager.m in Sources */,
 				6E1220551924BD86005E8532 /* CCConfiguration.m in Sources */,
+				6E9B2A16195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E1221981924BD87005E8532 /* ALWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

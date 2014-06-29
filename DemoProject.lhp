@@ -73,12 +73,22 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>assetsDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>cameraDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
 				<key>cameraFollowDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>characterAnimation.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

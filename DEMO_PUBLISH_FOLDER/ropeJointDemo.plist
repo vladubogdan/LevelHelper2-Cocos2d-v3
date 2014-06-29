@@ -85,13 +85,13 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>thickness</key>
-					<real>6.4000000953674316</real>
+					<real>16.399999618530273</real>
 					<key>useTexture</key>
 					<true/>
 					<key>uuid</key>
 					<string>80728657-8448-46EE-9C1C-3B35073299FE</string>
 					<key>uvRepetitions</key>
-					<string>{1, 20}</string>
+					<string>{1, 16}</string>
 					<key>zOrder</key>
 					<integer>-2</integer>
 				</dict>

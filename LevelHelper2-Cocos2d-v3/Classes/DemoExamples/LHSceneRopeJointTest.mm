@@ -36,24 +36,7 @@
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
-    
-    
     return self;
-}
-
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
-//    CGPoint curGravity = [self globalGravity];
-//    [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
-    CCDirector* dir = [CCDirector sharedDirector];
-    
-    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-
-    NSLog(@"TOUCH LOC %f %f", touchLocation.x, touchLocation.y);
-
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
 
 @end

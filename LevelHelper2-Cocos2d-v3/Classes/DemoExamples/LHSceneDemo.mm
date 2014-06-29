@@ -19,7 +19,8 @@
 #import "LHSceneRopeJointTest.h"
 #import "LHSceneGearJointsTest.h"
 #import "LHSceneBodyScaleTest.h"
-
+#import "LHSceneCharacterAnimationTest.h"
+#import "LHSceneAssetsTest.h"
 
 @implementation LHSceneDemo
 {
@@ -50,12 +51,12 @@
     [availableScenes addObject:[LHSceneCameraTest class]];
     [availableScenes addObject:[LHSceneCameraFollowTest class]];
     [availableScenes addObject:[LHSceneParallaxTest class]];
-    //character animation test
+    [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
+    [availableScenes addObject:[LHSceneAssetsTest class]];
     [availableScenes addObject:[LHSceneRopeJointTest class]];
     [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];
     
-    //ASSETS TEST
     //gravity areas
     //shape and bezier nodes test
     //sprite sheet animaton test
@@ -71,7 +72,7 @@
     
     //animation delegate test
     
-    [availableScenes addObject:[LHSceneBodyScaleTest class]];
+//    [availableScenes addObject:[LHSceneBodyScaleTest class]];
     
 
     {
