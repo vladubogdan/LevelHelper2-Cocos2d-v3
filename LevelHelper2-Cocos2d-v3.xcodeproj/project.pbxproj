@@ -535,6 +535,8 @@
 		6E9B2A17195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
 		6E9B2A1A195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
 		6E9B2A1B195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
+		6E9B2A2219600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */; };
+		6E9B2A2319600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */; };
 		6EBEA2B1195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B2195963A900726044 /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */; };
 		6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B0195963A900726044 /* LHUINode.mm */; };
@@ -1202,6 +1204,8 @@
 		6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCharacterAnimationTest.mm; sourceTree = "<group>"; };
 		6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsTest.h; sourceTree = "<group>"; };
 		6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsTest.mm; sourceTree = "<group>"; };
+		6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneWaterAreaTest.h; sourceTree = "<group>"; };
+		6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneWaterAreaTest.mm; sourceTree = "<group>"; };
 		6EBEA2AD195963A900726044 /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6EBEA2AE195963A900726044 /* LHGameWorldNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGameWorldNode.mm; sourceTree = "<group>"; };
 		6EBEA2AF195963A900726044 /* LHUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUINode.h; sourceTree = "<group>"; };
@@ -2492,6 +2496,8 @@
 				6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */,
 				6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */,
 				6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */,
+				6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */,
+				6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */,
 				6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */,
 				6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */,
 			);
@@ -2884,6 +2890,7 @@
 				6E0D566F194C32A30036E940 /* LHCamera.mm in Sources */,
 				6EBEA2B2195963A900726044 /* LHGameWorldNode.mm in Sources */,
 				6E0D5670194C32A30036E940 /* cocos2d.m in Sources */,
+				6E9B2A2319600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */,
 				6E0D5909194CD6A40036E940 /* b2RopeJoint.cpp in Sources */,
 				6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
 				6E0D5671194C32A30036E940 /* ALSource.m in Sources */,
@@ -2989,6 +2996,7 @@
 				6E1220D61924BD86005E8532 /* CCShaderCache.m in Sources */,
 				6E89FE28192E23100040478F /* LHGravityArea.mm in Sources */,
 				6E89FE2C192E23100040478F /* LHRopeJointNode.mm in Sources */,
+				6E9B2A2219600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */,
 				6E1222131924BD88005E8532 /* CCBSequenceProperty.m in Sources */,
 				6E12211A1924BD87005E8532 /* CCGLView.m in Sources */,
 				6E1220DD1924BD86005E8532 /* CCSprite.m in Sources */,

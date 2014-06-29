@@ -145,16 +145,7 @@
             fixture.friction    = [fixInfo floatForKey:@"friction"];
             fixture.restitution = [fixInfo floatForKey:@"restitution"];
             fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-//            fixture.filter.maskBits = [fixInfo mask].intValue;
-//            fixture.filter.categoryBits = [fixInfo category].intValue;
 
-            
-//            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
-//            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
-//            if(!ignoreCats || [ignoreCats count] == 0){
-//                collisionCats = nil;
-//                ignoreCats = nil;
-//            }
         }
 
         
@@ -192,55 +183,6 @@
                 shape = new b2ChainShape();
                 ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
             }
-//            else if([_node isKindOfClass:[LHShape class]])
-//            {
-//                NSArray* points = [(LHShape*)_node outlinePoints];
-//                
-//                NSValue* firstValue = nil;
-//                NSValue* prevValue = nil;
-//                for(NSValue* val in points){
-//                    
-//                    if(prevValue)
-//                    {
-//                        CGPoint ptA = CGPointFromValue(prevValue);
-//                        CGPoint ptB = CGPointFromValue(val);
-//                        CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
-//                                                                           to:ptB
-//                                                                 cornerRadius:0];
-//                        [fixShapes addObject:shape];
-//                    }
-//                    
-//                    if(nil == firstValue){
-//                        firstValue = val;
-//                    }
-//                    prevValue = val;
-//                }
-//                
-//                //close the shape
-//                if(prevValue && firstValue){
-//                    CGPoint ptA = CGPointFromValue(prevValue);
-//                    CGPoint ptB = CGPointFromValue(firstValue);
-//                    CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
-//                                                                       to:ptB
-//                                                             cornerRadius:0];
-//                    [fixShapes addObject:shape];
-//                }
-//                
-//                _node.physicsBody =  [CCPhysicsBody bodyWithShapes:fixShapes];
-//            }
-//            else{
-//                type = 0;
-//                
-//                CGPoint offset = CGPointMake(0, 0);
-//                CGRect bodyRect = CGRectMake(offset.x,
-//                                             offset.y,
-//                                             _node.contentSize.width,
-//                                             _node.contentSize.height);
-//                
-//                _node.physicsBody = [CCPhysicsBody bodyWithPolylineFromRect:bodyRect
-//                                                               cornerRadius:0];
-//            }
-            
         }
         else if(shapeType == 4)//OVAL
         {
@@ -294,9 +236,6 @@
                     fixture.restitution = [fixInfo floatForKey:@"restitution"];
                     fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
                     
-                    //                    fixture.filter.maskBits = [fixInfo mask].intValue;
-                    //                    fixture.filter.categoryBits = [fixInfo category].intValue;
-                    
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
                     delete[] verts;
@@ -342,9 +281,6 @@
                     fixture.restitution = [fixInfo floatForKey:@"restitution"];
                     fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
                     
-//                    fixture.filter.maskBits = [fixInfo mask].intValue;
-//                    fixture.filter.categoryBits = [fixInfo category].intValue;
-                    
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
                     delete[] verts;
@@ -352,69 +288,6 @@
             }
             
         }
-//        if([fixShapes count] > 0){
-//            _node.physicsBody =  [CCPhysicsBody bodyWithShapes:fixShapes];
-//        }
-//        
-//        if(type == 0)//static
-//        {
-//            [_node.physicsBody setType:CCPhysicsBodyTypeStatic];
-//        }
-//        else if(type == 1)//kinematic
-//        {
-//        }
-//        else if(type == 2)//dynamic
-//        {
-//            [_node.physicsBody setType:CCPhysicsBodyTypeDynamic];
-//        }
-//        
-//        NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
-//        if(fixInfo && _node.physicsBody)
-//        {
-//            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
-//            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
-//            if(!ignoreCats || [ignoreCats count] == 0){
-//                collisionCats = nil;
-//                ignoreCats = nil;
-//            }
-//            
-//            if([fixShapes count] > 0)
-//            {
-//                for(CCPhysicsShape* shape in fixShapes)
-//                {
-//                    shape.density = [fixInfo floatForKey:@"density"];
-//                    shape.friction = [fixInfo floatForKey:@"friction"];
-//                    shape.elasticity = [fixInfo floatForKey:@"restitution"];
-//                    shape.sensor = [fixInfo boolForKey:@"sensor"];
-//                    
-//                    if(ignoreCats)
-//                        [shape setCollisionCategories:ignoreCats];//member of
-//                    if(collisionCats)
-//                        [shape setCollisionMask:collisionCats];//wants to collide with
-//                }
-//            }
-//            else{
-//                
-//                if(ignoreCats)
-//                    [_node.physicsBody setCollisionCategories:ignoreCats];//member of
-//                if(collisionCats)
-//                    [_node.physicsBody setCollisionMask:collisionCats];//wants to collide with
-//                
-//                if(shape != 3){
-//                    _node.physicsBody.density = [fixInfo floatForKey:@"density"];
-//                    _node.physicsBody.friction = [fixInfo floatForKey:@"friction"];
-//                    _node.physicsBody.elasticity = [fixInfo floatForKey:@"restitution"];
-//                    _node.physicsBody.sensor = [fixInfo boolForKey:@"sensor"];
-//                }
-//            }
-//            
-//            if(_node.physicsBody.type == CCPhysicsBodyTypeDynamic)
-//                _node.physicsBody.allowsRotation = ![dict boolForKey:@"fixedRotation"];
-//            
-//            if([dict intForKey:@"gravityScale"] == 0){
-//                _node.physicsBody.affectedByGravity = NO;
-//            }
-//        }
         
         if(shape){
             fixture.shape = shape;

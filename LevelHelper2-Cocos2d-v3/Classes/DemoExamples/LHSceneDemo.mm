@@ -21,6 +21,7 @@
 #import "LHSceneBodyScaleTest.h"
 #import "LHSceneCharacterAnimationTest.h"
 #import "LHSceneAssetsTest.h"
+#import "LHSceneWaterAreaTest.h"
 
 @implementation LHSceneDemo
 {
@@ -56,6 +57,7 @@
     [availableScenes addObject:[LHSceneRopeJointTest class]];
     [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];
+    [availableScenes addObject:[LHSceneWaterAreaTest class]];
     
     //gravity areas
     //shape and bezier nodes test

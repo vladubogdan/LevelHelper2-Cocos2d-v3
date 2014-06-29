@@ -73,11 +73,6 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
-				<key>Untitled.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
 				<key>assetsDemo.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -118,32 +113,12 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level03-camera.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
 				<key>level03-gravityAreas.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level04-waterArea.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
 				<key>level05-joints.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>level06-ropeJoint.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>level07-gearJoint.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -158,7 +133,7 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>tst.lhs</key>
+				<key>waterArea.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

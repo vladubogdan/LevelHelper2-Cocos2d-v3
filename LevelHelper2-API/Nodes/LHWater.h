@@ -20,4 +20,11 @@
 + (instancetype)waterNodeWithDictionary:(NSDictionary*)dict
                                  parent:(CCNode*)prnt;
 
+
+-(CGFloat)turbulenceAmplitude;
+-(void)setTurbulenceAmplitude:(CGFloat)val;
+
+-(CGFloat)waveLength;
+-(void)setWaveLength:(CGFloat)val;
+
 @end
