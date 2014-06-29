@@ -20,7 +20,7 @@
 }
 + (LHSceneGearJointsTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level07-gearJoint.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gearJointDemo.plist"];
 }
 
 -(void)dealloc{
@@ -40,9 +40,9 @@
      */
     
 #if LH_USE_BOX2D
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Gear Joints Example.\nDrag a wheel or the red handle to move the joints.\n"
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Gear Joints Example.\n\nIn order for gear joints to work, Box2d requires all objects involved to be dynamic.\n\nDrag a wheel or the red handle to move the joints."
                                          fontName:@"Arial"
-                                         fontSize:24];
+                                         fontSize:20];
     
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Gear Joints Example.\nSorry, this demo is not available using Chipmunk. Try Box2d instead.\n"
@@ -51,8 +51,9 @@
     
 #endif
     [ttf setColor:[CCColor blackColor]];
+    [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
-                                 self.contentSize.height*0.5 - ttf.contentSize.height)];
+                                 self.contentSize.height*0.5)];
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
@@ -63,24 +64,6 @@
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-//    {
-//        LHGearJointNode* gJointNode1 = (LHGearJointNode*)[self childNodeWithName:@"GearJoint1"];
-//        if(gJointNode1){
-//            NSLog(@"REMOVING THE GEAR JOINT %@", [gJointNode1 name]);
-//            [gJointNode1 removeFromParent];
-//            gJointNode1 = NULL;
-//        }
-//    }
-//
-//    {
-//        LHGearJointNode* gJointNode1 = (LHGearJointNode*)[self childNodeWithName:@"GearJoint2"];
-//        if(gJointNode1){
-//            NSLog(@"REMOVING THE GEAR JOINT %@", [gJointNode1 name]);
-//            [gJointNode1 removeFromParent];
-//            gJointNode1 = NULL;
-//        }
-//    }
-
     //without this touch began is not called
     CCDirector* dir = [CCDirector sharedDirector];
     CGPoint touchLocation = [touch locationInView: [touch view]];
@@ -137,8 +120,18 @@
             b2Fixture* stFix = b->GetFixtureList();
             while(stFix != 0){
                 if(stFix->TestPoint(pointToTest)){
-                    ourBody = b;
-                    break;//exit for loop
+                    if(ourBody == NULL)
+                    {
+                        ourBody = b;
+                    }
+                    else{
+                        LHNode* ourNode = (LHNode*)LH_ID_BRIDGE_CAST(ourBody->GetUserData());
+                        LHNode* bNode   = (LHNode*)LH_ID_BRIDGE_CAST(b->GetUserData());
+                        
+                        if(bNode.zOrder > ourNode.zOrder){
+                            ourBody = b;
+                        }
+                    }
                 }
                 stFix = stFix->GetNext();
             }

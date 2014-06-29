@@ -73,6 +73,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>Untitled.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>assetsDemo.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -89,6 +94,11 @@
 					<true/>
 				</dict>
 				<key>characterAnimation.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>gearJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
