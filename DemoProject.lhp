@@ -78,6 +78,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>beziersDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>cameraDemo.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -119,6 +124,11 @@
 					<true/>
 				</dict>
 				<key>ropeJointDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>shapesDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

@@ -55,6 +55,8 @@
         
         [prnt addChild:self];
         
+        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+        
         LHScene* scene = (LHScene*)[prnt scene];
         
         NSString* imgRelPath = [dict objectForKey:@"relativeImagePath"];
@@ -73,11 +75,14 @@
             ccTexParams texParams = { GL_NEAREST, GL_NEAREST, GL_REPEAT, GL_REPEAT };
             [self.texture setTexParameters: &texParams];
             
+            
             _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
         }
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
+        
+        self.contentSize = CGSizeZero;
         
         
         NSArray* triangles = [dict objectForKey:@"triangles"];
@@ -100,6 +105,9 @@
         
         
         trianglePoints = [[NSMutableArray alloc] init];
+        
+        int count = (int)[triangles count]/3;
+        [self ensureCapacity:count];
         
         for(int i = 0; i < [triangles count]; i+=3)
         {
