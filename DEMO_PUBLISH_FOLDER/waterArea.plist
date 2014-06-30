@@ -67,7 +67,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>2E0151CA-B255-4F5F-B0E2-36A9D99057B8</string>
+						<string>449F7DC7-F315-4831-8225-4BEF131DEC9D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -141,7 +141,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C1CD351A-8127-46D4-AF9F-DE4CFFD72EEC</string>
+						<string>8705E3CC-77CE-4A7E-8330-3360A1B12127</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -279,7 +279,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>91547360-0F4F-4D39-B02B-4B17DE12D35D</string>
+						<string>750E69A6-AD24-49F0-88A0-C09C2A51D42F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -353,7 +353,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>0BC658B0-49D0-4BB4-B941-001546CA5B37</string>
+						<string>2EB5AC4A-953A-47D9-AA90-C019E3F157F4</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -445,9 +445,9 @@
 					<key>turbulence</key>
 					<true/>
 					<key>turbulenceH</key>
-					<real>16.100000381469727</real>
+					<real>3.1000003814697266</real>
 					<key>turbulenceL</key>
-					<real>4.9000000953674316</real>
+					<real>2.2000000476837158</real>
 					<key>turbulenceV</key>
 					<real>0.10000000894069672</real>
 					<key>turbulenceVelocity</key>
@@ -2631,7 +2631,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>0BC658B0-49D0-4BB4-B941-001546CA5B37</key>
+		<key>2EB5AC4A-953A-47D9-AA90-C019E3F157F4</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>
@@ -2713,7 +2713,7 @@
 				<string>{-38.75, -6.25}</string>
 			</array>
 		</array>
-		<key>2E0151CA-B255-4F5F-B0E2-36A9D99057B8</key>
+		<key>449F7DC7-F315-4831-8225-4BEF131DEC9D</key>
 		<array>
 			<array>
 				<string>{-4.75, -31.5}</string>
@@ -2804,7 +2804,7 @@
 				<string>{-9.75, -19.5}</string>
 			</array>
 		</array>
-		<key>91547360-0F4F-4D39-B02B-4B17DE12D35D</key>
+		<key>750E69A6-AD24-49F0-88A0-C09C2A51D42F</key>
 		<array>
 			<array>
 				<string>{3.75, -47.5}</string>
@@ -2939,7 +2939,7 @@
 				<string>{-10.25, -41.5}</string>
 			</array>
 		</array>
-		<key>C1CD351A-8127-46D4-AF9F-DE4CFFD72EEC</key>
+		<key>8705E3CC-77CE-4A7E-8330-3360A1B12127</key>
 		<array>
 			<array>
 				<string>{13.5, 30.5}</string>

@@ -133,7 +133,17 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>tst.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>waterArea.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>wheelJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

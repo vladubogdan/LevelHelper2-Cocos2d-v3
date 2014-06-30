@@ -43,6 +43,7 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
 @end
 
 @implementation LHAnimation
@@ -346,7 +347,7 @@
                        forNode:(CCNode*)animNode
 {
     if([animNode isKindOfClass:[LHCamera class]]){
-        CGSize winSize = [[self scene] contentSize];
+        CGSize winSize = [[self scene] designResolutionSize];
         return CGPointMake(winSize.width*0.5  - newPos.x,
                            -winSize.height*0.5 - newPos.y);
     }
@@ -356,13 +357,6 @@
     CGPoint offset = [scene designOffset];
 
     CCNode* p = [animNode parent];
-//    if([p isKindOfClass:[CCPhysicsNode class]])
-//    {
-//        newPos.x += offset.x;
-//        newPos.y += offset.y;
-//
-//        newPos.y += p.contentSize.height;
-//    }
     if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene gameWorldNode])
     {
         newPos.x += offset.x;

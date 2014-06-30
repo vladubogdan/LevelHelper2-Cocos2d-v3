@@ -261,7 +261,6 @@ typedef struct _LH_V2F_C4B_Triangle
 }
 -(void)setTurbulenceAmplitude:(CGFloat)val
 {
-    NSLog(@"AMPL %f", val);
     turbulenceH = val;
     [self createTurbulence];
 }
@@ -272,7 +271,6 @@ typedef struct _LH_V2F_C4B_Triangle
 }
 -(void)setWaveLength:(CGFloat)val
 {
-    NSLog(@"VALE L %f", val);
     turbulenceL = val;
     [self createTurbulence];
 }
@@ -697,7 +695,7 @@ typedef struct _LH_V2F_C4B_Triangle
             float y = [self valueAt:[self globalXToWaveX:x]];
             y = [self waveYToGlobalY:y];
             
-            if(pos.y < self.position.y + [self contentSize].height*0.5 + y)
+            if(self.position.y + height*0.5 - y + node.contentSize.height > pos.y)
             {
                 
                 NSString* hadSplash = [bodySplashes objectForKey:[NSString stringWithFormat:@"%p", body]];
@@ -718,6 +716,7 @@ typedef struct _LH_V2F_C4B_Triangle
                     [bodySplashes setObject:[NSNumber numberWithBool:YES]
                                      forKey:[NSString stringWithFormat:@"%p", body]];
                 }
+                [body applyImpulse:CGPointMake(0, waterDensity*100.0)];
             }
             else{
                 [bodySplashes removeObjectForKey:[NSString stringWithFormat:@"%p", body]];

@@ -70,6 +70,9 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
+        [super setPosition:[self transformToRestrictivePosition:self.position]];
+        
+        
     }
     
     return self;
@@ -112,7 +115,12 @@
 }
 
 -(void)setPosition:(CGPoint)position{
-    [super setPosition:[self transformToRestrictivePosition:position]];
+    if(_active){
+        [super setPosition:[self transformToRestrictivePosition:position]];
+    }
+    else{
+        [super setPosition:position];
+    }
 }
 
 -(void)setSceneView{
@@ -142,10 +150,10 @@
     CGSize winSize = [(LHScene*)[self scene] contentSize];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
 
-    CGPoint offset = [[(LHScene*)self scene] designOffset];
+//    CGPoint offset = [[(LHScene*)self scene] designOffset];
     
-    float x = position.x - offset.x;
-    float y = position.y - offset.y;
+    float x = position.x;// - offset.x;
+    float y = position.y;// - offset.y;
 
 
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
@@ -171,7 +179,7 @@
 -(void)visit
 {
     if(![self isActive])return;
-    
+ 
     [_animationProtocolImp visit];
 
     if([self followedNode]){

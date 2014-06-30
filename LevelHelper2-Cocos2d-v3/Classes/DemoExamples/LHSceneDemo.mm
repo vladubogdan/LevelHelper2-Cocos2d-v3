@@ -56,9 +56,9 @@
     [availableScenes addObject:[LHSceneAssetsTest class]];
     [availableScenes addObject:[LHSceneRopeJointTest class]];
     [availableScenes addObject:[LHSceneJointsTest class]];
+    //car joint
     [availableScenes addObject:[LHSceneGearJointsTest class]];
     [availableScenes addObject:[LHSceneWaterAreaTest class]];
-    
     //gravity areas
     //shape and bezier nodes test
     //sprite sheet animaton test

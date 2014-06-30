@@ -184,9 +184,9 @@
         
         [self setUserInteractionEnabled:YES];
         
-        [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
-        [self visit];//dont know why i need to call it 3 times
-        [self visit];
+//        [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
+//        [self visit];//dont know why i need to call it 3 times
+//        [self visit];
         
     }
     return self;
@@ -321,6 +321,34 @@
                                        (1.0f - bRect.origin.y)*designSize.height + offset.y,
                                        bRect.size.width*designSize.width ,
                                        -(bRect.size.height)*designSize.height);
+            
+            
+            CCDrawNode* drawNode = [CCDrawNode node];
+            [[self gameWorldNode] addChild:drawNode];
+            [drawNode setZOrder:100];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y + gameWorldRect.size.height)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+
             
         }
     }

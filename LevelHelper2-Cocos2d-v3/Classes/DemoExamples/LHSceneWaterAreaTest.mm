@@ -64,14 +64,6 @@
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-    LHWater* water = (LHWater*)[self childNodeWithName:@"waterArea"];
-    if(water)
-    {
-//        NSLog(@"SET WATER TURBULENCE AMPLITUDE");
-//        [water setTurbulenceAmplitude:[water turbulenceAmplitude] + 0.1];
-//        [water setWaveLength:[water waveLength] + 0.5];
-    }
-    
     //without this touch began is not called
     CCDirector* dir = [CCDirector sharedDirector];
     CGPoint touchLocation = [touch locationInView: [touch view]];
