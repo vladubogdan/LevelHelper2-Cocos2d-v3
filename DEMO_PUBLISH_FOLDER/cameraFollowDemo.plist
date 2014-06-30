@@ -5109,9 +5109,9 @@
 					<key>activeCamera</key>
 					<true/>
 					<key>followedNodeUUID</key>
-					<string>4195ED2E-F71D-47F3-A6D9-1A401C020318</string>
+					<string>6A238A39-2E10-4EBB-95BE-ED541234429E</string>
 					<key>generalPosition</key>
-					<string>{0.56403369903564449, 0.30606997013092041}</string>
+					<string>{0.66666666666666663, 0.29999999999999999}</string>
 					<key>name</key>
 					<string>UntitledCamera</string>
 					<key>nodeType</key>
@@ -5135,11 +5135,11 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.56403370082836857, 0.30606997826350185}</string>
+					<string>{0.66666666666666663, 0.29999999999999999}</string>
 					<key>imageFileName</key>
-					<string>ropeAssets.png</string>
+					<string>carParts.png</string>
 					<key>name</key>
-					<string>candy</string>
+					<string>carTyre</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
@@ -5185,17 +5185,17 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{65, 61}</string>
+					<string>{47, 46}</string>
 					<key>spriteName</key>
-					<string>candy</string>
+					<string>carTyre</string>
 					<key>spriteUUID</key>
-					<string>554683CF-2615-41EF-956A-933D6F02D016</string>
+					<string>F2BF5807-ACFF-44E8-BAA8-94A87CAC4F40</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>4195ED2E-F71D-47F3-A6D9-1A401C020318</string>
+					<string>6A238A39-2E10-4EBB-95BE-ED541234429E</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -5295,6 +5295,12 @@
 	</array>
 	<key>gameWorld</key>
 	<dict>
+		<key>1024x768</key>
+		<string>{{-0.76666665077209473, -1.0499999523162842}, {2.9333333969116211, 3}}</string>
+		<key>1136x640</key>
+		<string>{{-0.76666665077209473, -1.0499999523162842}, {2.9333333969116211, 3}}</string>
+		<key>2048x1536</key>
+		<string>{{-0.76666665077209473, -1.0499999523162842}, {2.9333333969116211, 3}}</string>
 		<key>960x640</key>
 		<string>{{-0.76666665077209473, -1.0499999523162842}, {2.9333333969116211, 3}}</string>
 		<key>general</key>

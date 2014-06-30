@@ -109,7 +109,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
+						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -317,7 +317,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
+						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -651,7 +651,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -725,7 +725,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -825,7 +825,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1033,7 +1033,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1107,7 +1107,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1181,7 +1181,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</string>
+						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1573,7 +1573,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1647,7 +1647,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1721,7 +1721,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>09DB0DC4-282F-411C-B07E-A267C86D792F</string>
+						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1809,7 +1809,7 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
@@ -1827,7 +1827,7 @@
 			<key>uuid</key>
 			<string>24E528DB-7C78-4078-9D13-34460E0DDC87</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -1881,14 +1881,14 @@
 		<string>{{-0.01278382446616888, -0.016223829239606857}, {1.0058729648590088, 0.98245370388031006}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>09DB0DC4-282F-411C-B07E-A267C86D792F</key>
+		<key>11D57938-899B-4779-8803-F256CA5651BC</key>
 		<array>
 			<array>
 				<string>{34.75, -27.75}</string>
@@ -1970,7 +1970,7 @@
 				<string>{-38.75, -6.25}</string>
 			</array>
 		</array>
-		<key>DEE1553E-435E-4658-A78E-CB2CDB6C8E8F</key>
+		<key>F4D4B3A1-8CED-4075-8259-8699442FF310</key>
 		<array>
 			<array>
 				<string>{2.75, -10}</string>

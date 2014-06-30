@@ -17,6 +17,7 @@
 #import "LHConfig.h"
 
 #import "LHGameWorldNode.h"
+#import "CCNode+Transform.h"
 
 #if LH_USE_BOX2D
 
@@ -128,13 +129,12 @@
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
         
-        float scaleX = [_node scaleX];
-        float scaleY = [_node scaleY];
-
-        previousScale = CGPointMake(scaleX, scaleY);
+        CGPoint scale = CGPointMake(_node.scaleX, _node.scaleY);
         
-        sizet.width *= scaleX;
-        sizet.height*= scaleY;
+        previousScale = scale;
+        
+        sizet.width *= scale.x;
+        sizet.height*= scale.y;
         
         b2FixtureDef fixture;
         
@@ -174,8 +174,8 @@
                 
                 for(NSValue* val in points){
                     CGPoint pt = CGPointFromValue(val);
-                    pt.x *= scaleX;
-                    pt.y *= scaleY;
+                    pt.x *= scale.x;
+                    pt.y *= scale.y;
                     
                     verts.push_back([scene metersFromPoint:pt]);
                 }
@@ -210,14 +210,14 @@
                     CGPoint ptB = CGPointFromValue(valB);
                     CGPoint ptC = CGPointFromValue(valC);
                     
-                    ptA.x *= scaleX;
-                    ptA.y *= scaleY;
+                    ptA.x *= scale.x;
+                    ptA.y *= scale.y;
 
-                    ptB.x *= scaleX;
-                    ptB.y *= scaleY;
+                    ptB.x *= scale.x;
+                    ptB.y *= scale.y;
 
-                    ptC.x *= scaleX;
-                    ptC.y *= scaleY;
+                    ptC.x *= scale.x;
+                    ptC.y *= scale.y;
 
                     b2Vec2 *verts = new b2Vec2[3];
                     
@@ -245,8 +245,8 @@
         
         if(fixturesInfo)
         {
-            int flipx = [_node scaleX] < 0 ? -1 : 1;
-            int flipy = [_node scaleY] < 0 ? -1 : 1;
+            int flipx = scale.x < 0 ? -1 : 1;
+            int flipy = scale.y < 0 ? -1 : 1;
             
             for(NSArray* fixPoints in fixturesInfo)
             {
@@ -263,8 +263,8 @@
                         
                         NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
                         CGPoint point = LHPointFromString(pointStr);
-                        point.x *= scaleX;
-                        point.y *= scaleY;
+                        point.x *= scale.x;
+                        point.y *= scale.y;
                         
                         point.y = -point.y;
                         

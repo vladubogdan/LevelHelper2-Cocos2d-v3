@@ -1,5 +1,5 @@
 //
-//  LHSceneParallaxTest.m
+//  LHSceneGravityAreasTest.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,15 +8,13 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHSceneParallaxTest.h"
+#import "LHSceneGravityAreasTest.h"
 
-@implementation LHSceneParallaxTest
+@implementation LHSceneGravityAreasTest
+
++ (LHSceneDemo *)scene
 {
-    
-}
-
-+ (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/parallaxDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gravityAreasDemo.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -25,10 +23,16 @@
 
     if (!self) return(nil);
     
-
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"PARALLAX DEMO\nDemonstrate using a parallax to give an illusion of depth.\nThe camera is following the tire sprite.\nThe parallax is following the camera.\nEach layer in the parallax has a different movement ratio making them move at different speeds.\nLayers in the back move slower then layer in the front.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen."
+    /*
+     INIT YOUR CONTENT HERE
+     */
+    
+    
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"GRAVITY AREAS DEMO\nObjects inside the gravity areas will get a radial or directional velocity."
                                          fontName:@"Arial"
-                                         fontSize:20];
+                                         fontSize:24];
+    
+    
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
@@ -36,8 +40,11 @@
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
+    
+    
     // done
 	return self;
 }
+
 
 @end

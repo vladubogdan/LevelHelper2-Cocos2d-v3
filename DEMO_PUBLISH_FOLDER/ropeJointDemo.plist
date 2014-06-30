@@ -225,7 +225,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.23114616681494554, 0.42991778179623347}</string>
+					<string>{0.085865678482832899, 0.40657512917734839}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -369,7 +369,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.7571280834149392, 0.3481771462113058}</string>
+					<string>{0.88552200367759382, 0.3481771462113058}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>

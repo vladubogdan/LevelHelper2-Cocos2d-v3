@@ -25,7 +25,7 @@
     if (!self) return(nil);
     
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the candy sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick to change the gravity direction."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick to change the gravity direction."
                                          fontName:@"Arial"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];

@@ -22,6 +22,9 @@
 #import "LHSceneCharacterAnimationTest.h"
 #import "LHSceneAssetsTest.h"
 #import "LHSceneWaterAreaTest.h"
+#import "LHSceneCarTest.h"
+#import "LHSceneGravityAreasTest.h"
+#import "LHSceneSpriteSheetAnimationTest.h"
 
 @implementation LHSceneDemo
 {
@@ -55,14 +58,15 @@
     [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
     [availableScenes addObject:[LHSceneAssetsTest class]];
     [availableScenes addObject:[LHSceneRopeJointTest class]];
+//    [availableScenes addObject:[LHSceneCarTest class]];
     [availableScenes addObject:[LHSceneJointsTest class]];
-    //car joint
     [availableScenes addObject:[LHSceneGearJointsTest class]];
     [availableScenes addObject:[LHSceneWaterAreaTest class]];
-    //gravity areas
+    [availableScenes addObject:[LHSceneGravityAreasTest class]];
+
     //shape and bezier nodes test
-    //sprite sheet animaton test
-    
+    [availableScenes addObject:[LHSceneSpriteSheetAnimationTest class]];
+
     //body scale
     //body positioning
     //body transformations

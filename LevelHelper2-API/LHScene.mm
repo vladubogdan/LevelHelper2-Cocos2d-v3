@@ -227,7 +227,7 @@
                 [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
                                                     to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
                                               withName:@"LHPhysicsRightBoundary"];
-                
+
             }
             
             {

@@ -70,9 +70,6 @@
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
-
-        NSLog(@"DID LOAD PARALLAX");
-        
     }
     
     return self;

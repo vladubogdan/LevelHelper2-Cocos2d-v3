@@ -96,24 +96,11 @@
     return self;
 }
 
--(void)setSpriteFrameWithName:(NSString*)spriteFrame{
-//    if(atlas){
-//        SKTexture* texture = [atlas textureNamed:spriteFrame];
-//        if(texture){
-//            [self setTexture:texture];
-//            
-//            float xScale = [self xScale];
-//            float yScale = [self yScale];
-//            
-//            [self setXScale:1];
-//            [self setYScale:1];
-//            
-//            [self setSize:texture.size];
-//            
-//            [self setXScale:xScale];
-//            [self setYScale:yScale];
-//        }
-//    }
+-(void)setSpriteFrameWithName:(NSString*)spriteFrameName{
+    CCSpriteFrame* spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:spriteFrameName];
+    if(spriteFrame){
+        [self setSpriteFrame:spriteFrame];
+    }
 }
 
 - (void)visit

@@ -98,22 +98,12 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>gravityAreasDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>introductionScene.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>level01.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>level02-assetTest.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>level03-gravityAreas.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -133,7 +123,7 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>tst.lhs</key>
+				<key>spriteSheetAnimationDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
