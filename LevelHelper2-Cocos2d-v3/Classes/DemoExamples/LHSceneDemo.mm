@@ -27,6 +27,7 @@
 #import "LHSceneSpriteSheetAnimationTest.h"
 #import "LHSceneShapesTest.h"
 #import "LHSceneBeziersTest.h"
+#import "LHSceneCollisionFilteringTest.h"
 
 @implementation LHSceneDemo
 {
@@ -58,11 +59,13 @@
     [availableScenes addObject:[LHSceneCameraFollowTest class]];
     [availableScenes addObject:[LHSceneParallaxTest class]];
     [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
+    
     [availableScenes addObject:[LHSceneAssetsTest class]];
     [availableScenes addObject:[LHSceneRopeJointTest class]];
 //    [availableScenes addObject:[LHSceneCarTest class]];
 //    [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];
+    [availableScenes addObject:[LHSceneCollisionFilteringTest class]];
     [availableScenes addObject:[LHSceneWaterAreaTest class]];
     [availableScenes addObject:[LHSceneGravityAreasTest class]];
 

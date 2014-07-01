@@ -83,6 +83,17 @@
 
 #pragma mark - BOX2D SUPPORT
 
+-(void)setupFixture:(b2FixtureDef*)fixture withInfo:(NSDictionary*)fixInfo
+{
+    fixture->density     = [fixInfo floatForKey:@"density"];
+    fixture->friction    = [fixInfo floatForKey:@"friction"];
+    fixture->restitution = [fixInfo floatForKey:@"restitution"];
+    fixture->isSensor    = [fixInfo boolForKey:@"sensor"];
+    
+    fixture->filter.maskBits = [fixInfo intForKey:@"mask"];
+    fixture->filter.categoryBits = [fixInfo intForKey:@"category"];
+}
+
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
     
     if(self = [super init])
@@ -141,11 +152,7 @@
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
         if(fixInfo && _body)
         {
-            fixture.density     = [fixInfo floatForKey:@"density"];
-            fixture.friction    = [fixInfo floatForKey:@"friction"];
-            fixture.restitution = [fixInfo floatForKey:@"restitution"];
-            fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-
+            [self setupFixture:&fixture withInfo:fixInfo];
         }
 
         
@@ -231,10 +238,7 @@
                     
                     b2FixtureDef fixture;
                     
-                    fixture.density     = [fixInfo floatForKey:@"density"];
-                    fixture.friction    = [fixInfo floatForKey:@"friction"];
-                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
-                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
+                    [self setupFixture:&fixture withInfo:fixInfo];
                     
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
@@ -276,10 +280,7 @@
                     
                     b2FixtureDef fixture;
                     
-                    fixture.density     = [fixInfo floatForKey:@"density"];
-                    fixture.friction    = [fixInfo floatForKey:@"friction"];
-                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
-                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
+                    [self setupFixture:&fixture withInfo:fixInfo];
                     
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
@@ -838,10 +839,17 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
             
             NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
             NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
+
+//            NSLog(@"SPRITE %@", [_node name]);
+//            NSLog(@"COLLISION CAT %@", collisionCats);
+//            NSLog(@"IGNORE CAT %@", ignoreCats);
+
             if(!ignoreCats || [ignoreCats count] == 0){
                 collisionCats = nil;
                 ignoreCats = nil;
             }
+            
+            
             
             if([fixShapes count] > 0)
             {

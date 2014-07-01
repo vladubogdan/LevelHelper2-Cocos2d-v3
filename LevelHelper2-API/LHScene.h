@@ -37,7 +37,7 @@
 -(instancetype)initWithContentOfFile:(NSString*)levelPlistFile;
 
 /**
- Returns the relative plist path that was used to load this info information.
+ Returns the relative plist path that was used to load this scene information.
  */
 -(NSString*)relativePath;
 

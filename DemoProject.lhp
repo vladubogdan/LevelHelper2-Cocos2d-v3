@@ -98,6 +98,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>collisionFilteringDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>gearJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -134,6 +139,11 @@
 					<true/>
 				</dict>
 				<key>spriteSheetAnimationDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>tst.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

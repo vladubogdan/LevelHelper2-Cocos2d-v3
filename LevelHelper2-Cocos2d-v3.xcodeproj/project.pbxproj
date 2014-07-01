@@ -488,6 +488,8 @@
 		6E1222881924BD88005E8532 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E1222871924BD88005E8532 /* LICENSE_Chipmunk.txt */; };
 		6E12228C1924BD88005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E1222901924BD88005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
+		6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
+		6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
 		6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
 		6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
 		6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
@@ -1130,6 +1132,8 @@
 		6E12228B1924BD88005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		6E12228E1924BD88005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		6E12228F1924BD88005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringTest.h; sourceTree = "<group>"; };
+		6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringTest.mm; sourceTree = "<group>"; };
 		6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
 		6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowTest.mm; sourceTree = "<group>"; };
 		6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxTest.h; sourceTree = "<group>"; };
@@ -2522,6 +2526,8 @@
 				6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */,
 				6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */,
 				6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */,
+				6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */,
+				6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */,
 				6ECDF8FC19616E470007E7A0 /* LHSceneCarTest.h */,
 				6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */,
 				6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */,
@@ -2775,6 +2781,7 @@
 				6E7EC244195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
 				6ECDF90F1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */,
 				6E0D55FB194C32A30036E940 /* CCTexturePVR.m in Sources */,
+				6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */,
 				6E0D55FC194C32A30036E940 /* CCBAnimationManager.m in Sources */,
 				6E0D55FD194C32A30036E940 /* LHDistanceJointNode.mm in Sources */,
 				6E0D58F2194CD6A40036E940 /* b2Body.cpp in Sources */,
@@ -3001,6 +3008,7 @@
 				6E1221051924BD87005E8532 /* CCTMXXMLParser.m in Sources */,
 				6E1221451924BD87005E8532 /* CGPointExtension.m in Sources */,
 				6E1221D01924BD87005E8532 /* CCTextField.m in Sources */,
+				6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */,
 				6E89FE22192E23100040478F /* LHScene.mm in Sources */,
 				6E89FE17192E23100040478F /* LHChildrenOpacitiesProperty.m in Sources */,
 				6E12213B1924BD87005E8532 /* CCProfiling.m in Sources */,
