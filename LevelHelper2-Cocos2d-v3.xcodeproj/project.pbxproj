@@ -594,7 +594,7 @@
 		6E0D55C5194C2C4E0036E940 /* LHNodePhysicsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodePhysicsProtocol.h; sourceTree = "<group>"; };
 		6E0D55C6194C2C770036E940 /* LHNodePhysicsProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHNodePhysicsProtocol.mm; sourceTree = "<group>"; };
 		6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E0D56A4194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LevelHelper2-Cocos2d-v3+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/LevelHelper2-Cocos2d-v3+Box2D.plist"; sourceTree = "<absolute>"; };
+		6E0D56A4194C32A30036E940 /* Info+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2D.plist"; sourceTree = "<absolute>"; };
 		6E0D57D8194C355C0036E940 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
 		6E0D587A194CD6A30036E940 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
@@ -1468,7 +1468,7 @@
 				6E121FFE1924BD85005E8532 /* LevelHelper2-Cocos2d-v3 */,
 				6E121FE51924BD85005E8532 /* Frameworks */,
 				6E121FE41924BD85005E8532 /* Products */,
-				6E0D56A4194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.plist */,
+				6E0D56A4194C32A30036E940 /* Info+Box2D.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3246,7 +3246,7 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/\"",
 				);
-				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3+Box2D.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LevelHelper2-API",
@@ -3280,7 +3280,7 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/\"",
 				);
-				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3+Box2D.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LevelHelper2-API",
