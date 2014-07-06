@@ -12,6 +12,10 @@
 #import "LHScene.h"
 #import "LHConfig.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+@end
+
 @implementation LHAsset
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -46,52 +50,16 @@
                                                                                     node:self];
         
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        
-        [self setPosition:pos];
-
         LHScene* scene = (LHScene*)[self scene];
         
         NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
         
         if(assetInfo)
         {
-            NSArray* childrenInfo = [assetInfo objectForKey:@"children"];
-            if(childrenInfo)
-            {
-                for(NSDictionary* childInfo in childrenInfo)
-                {
-                    CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                                parent:self];
-                    #pragma unused (node)
-                }
-            }
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];            
         }
         else{
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
@@ -100,6 +68,48 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
+    }
+    
+    return self;
+}
+
++(instancetype)createWithName:(NSString*)assetName
+                assetFileName:(NSString*)fileName
+                       parent:(CCNode*)prnt
+{
+    return LH_AUTORELEASED([[self alloc] initWithName:assetName
+                                        assetFileName:fileName
+                                               parent:prnt]);
+}
+
+- (instancetype)initWithName:(NSString*)newName
+               assetFileName:(NSString*)fileName
+                      parent:(CCNode*)prnt{
+    
+    
+    if(self = [super init]){
+        
+        [prnt addChild:self];
+        [self setName:newName];
+        
+        LHScene* scene = (LHScene*)[prnt scene];
+        
+        NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
+        
+        if(assetInfo)
+        {
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        }
+        else{
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+        }
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+                                                                                                      node:self];
     }
     
     return self;

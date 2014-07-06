@@ -14,6 +14,15 @@
 #import "LHBezier.h"
 #import "LHShape.h"
 
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGSize)designResolutionSize;
+-(CGPoint)designOffset;
+@end
+
 
 @implementation LHUtils
 
@@ -48,20 +57,28 @@
 {
     LHScene* scene = (LHScene*)[node scene];
     
+    CGSize designSize   = [scene designResolutionSize];
+    CGPoint offset      = [scene designOffset];
     
-    CGSize designSize = [scene designResolutionSize];
-    CGPoint offset = [scene designOffset];
+    CGPoint designPos   = CGPointZero;
+
+    designPos = CGPointMake(designSize.width*unitPos.x,
+                            designSize.height*(-unitPos.y));
     
-    CGPoint designPos = CGPointZero;
     
-    if([node parent] == [scene physicsNode]){
-        designPos = CGPointMake(designSize.width*unitPos.x,
-                                (designSize.height - designSize.height*unitPos.y));
+    if([node parent] == nil ||
+       [node parent] == scene ||
+       [node parent] == [scene gameWorldNode] ||
+       [node parent] == [scene uiNode]  ||
+       [node parent] == [scene backUiNode])
+    {
+        
+        designPos.y = designSize.height + designPos.y;
         designPos.x += offset.x;
         designPos.y += offset.y;
-
     }
     else{
+        
         designPos = CGPointMake(designSize.width*unitPos.x,
                                 ([node parent].contentSize.height - designSize.height*unitPos.y));
         
@@ -69,7 +86,6 @@
         designPos.x += p.contentSize.width*0.5;
         designPos.y -= p.contentSize.height*0.5;
     }
-    
     
     return designPos;
 }
@@ -87,6 +103,9 @@
 {
     for(LHDevice* dev in arrayOfDevs){
         if(CGSizeEqualToSize([dev size], size)){
+            return dev;
+        }
+        if(CGSizeEqualToSize([dev size], CGSizeMake(size.height, size.width))){
             return dev;
         }
     }

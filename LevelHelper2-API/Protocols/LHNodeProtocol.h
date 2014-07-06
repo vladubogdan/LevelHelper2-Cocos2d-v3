@@ -36,6 +36,7 @@
  Returns all tag values of the node.
  */
 -(NSArray*)tags;
+
 /**
  Returns the user property object assigned to this object or nil.
  */
@@ -91,6 +92,8 @@
 + (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd;
+
++(void)loadChildrenForNode:(CCNode*)prntNode fromDictionary:(NSDictionary*)dict;
 
 -(NSString*)uuid;
 -(NSArray*)tags;

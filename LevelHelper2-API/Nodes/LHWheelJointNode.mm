@@ -11,7 +11,7 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -138,7 +138,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];
-        LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
         
         b2World* world = [pNode box2dWorld];
         
@@ -151,17 +151,17 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
         
-        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        b2Vec2 posA =  bodyA->GetWorldPoint(relativeA);
         
         b2WheelJointDef jointDef;
         
         jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,-_axis.y));
         
-        jointDef.enableMotor = _enableMotor;
+        jointDef.enableMotor    = _enableMotor;
         jointDef.maxMotorTorque = _maxMotorTorque;
-        jointDef.motorSpeed = CC_DEGREES_TO_RADIANS(_motorSpeed);
-        jointDef.frequencyHz = _frequency;
-        jointDef.dampingRatio = _damping;
+        jointDef.motorSpeed     = CC_DEGREES_TO_RADIANS(_motorSpeed);
+        jointDef.frequencyHz    = _frequency;
+        jointDef.dampingRatio   = _damping;
         
         jointDef.collideConnected = [_jointProtocolImp collideConnected];
 

@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039531450718641281, 0}, {0.040753215551376343, 1}}</string>
+			<string>{{0.039420325309038162, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -73,27 +73,47 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
-				<key>level01.lhs</key>
+				<key>assetsDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level02-assetTest.lhs</key>
+				<key>beziersDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level03-camera.lhs</key>
+				<key>cameraDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level03-gravityAreas.lhs</key>
+				<key>cameraFollowDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level04-waterArea.lhs</key>
+				<key>characterAnimation.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>collisionFilteringDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>gearJointDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>gravityAreasDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>introductionScene.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -103,12 +123,37 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level06-ropeJoint.lhs</key>
+				<key>parallaxDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>level07-gearJoint.lhs</key>
+				<key>ropeJointDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>shapesDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>spriteSheetAnimationDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>tst.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>waterArea.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>wheelJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

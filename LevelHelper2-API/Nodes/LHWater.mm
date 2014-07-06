@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 #import "LHNodePhysicsProtocol.h"
 
 #if LH_USE_BOX2D
@@ -173,7 +173,7 @@ typedef struct _LH_V2F_C4B_Triangle
     float splashTime;
     NSMutableDictionary* bodySplashes;
     
-    BOOL test;
+    CGRect boundingRect;
     
     #if LH_USE_BOX2D
     LH_b2BuoyancyController* buoyancyController;
@@ -216,6 +216,9 @@ typedef struct _LH_V2F_C4B_Triangle
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
+        //reset size set by node protocol
+        self.contentSize = CGSizeZero;
+
         width = [dict floatForKey:@"width"];
         height = [dict floatForKey:@"height"];
         numLines = [dict floatForKey:@"numLines"];
@@ -236,47 +239,12 @@ typedef struct _LH_V2F_C4B_Triangle
         
         bodySplashes = [[NSMutableDictionary alloc] init];
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-
-        
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
         
         [self setColor:[dict colorForKey:@"colorOverlay"]];
-                
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-                #pragma unused (node)
-            }
-        }
+        
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
         [self createTurbulence];
@@ -285,8 +253,32 @@ typedef struct _LH_V2F_C4B_Triangle
     return self;
 }
 
+#pragma mark - PROPERTIES
+
+-(CGFloat)turbulenceAmplitude
+{
+    return turbulenceH;
+}
+-(void)setTurbulenceAmplitude:(CGFloat)val
+{
+    turbulenceH = val;
+    [self createTurbulence];
+}
+
+-(CGFloat)waveLength
+{
+    return turbulenceL;
+}
+-(void)setWaveLength:(CGFloat)val
+{
+    turbulenceL = val;
+    [self createTurbulence];
+}
+
+
+
 -(void)createTurbulence{
-    [self clearWaves];
+//    [self clearWaves];
     if(turbulence)
         [self createTurbulance:turbulenceH v:turbulenceV l:turbulenceL];
 }
@@ -323,27 +315,11 @@ typedef struct _LH_V2F_C4B_Triangle
     return y;
 }
 
-
-//-(float)globalXToWaveX:(float)pointX{
-//    
-//    CGSize sizet = [self contentSize];
-//    CGPoint pos = [self position];
-//    
-//    float fullWidth = sizet.width*self.scaleX;
-//    float halfWidth = fullWidth*0.5;
-//    
-//    float val = (pointX - pos.x) + halfWidth;
-//    float percent = val/fullWidth;
-//    
-//    return width*percent;
-//}
-
 -(float)globalXToWaveX:(float)pointX{
     
-    CGSize sizet = self.contentSize;
     CGPoint pos  = [self position];
     
-    float fullWidth = sizet.width*[self scaleX];
+    float fullWidth = width*[self scaleX];
     float halfWidth = fullWidth*0.5;
     
     float val = (pointX - pos.x) + halfWidth;
@@ -352,30 +328,15 @@ typedef struct _LH_V2F_C4B_Triangle
     return width*percent;
 }
 
-//-(float)waveYToGlobalY:(float)waveY{
-//    
-//    CGSize sizet = [self contentSize];
-//    CGPoint pos = [self position];
-//    
-//    float waveHeight = sizet.height-waveY;
-//    float percent = waveHeight/sizet.height;
-//    
-//    float fullHeight = sizet.height;
-//    float halfHeight = fullHeight*0.5;
-//    
-//    return pos.y - fullHeight*percent + halfHeight;
-//}
-
 -(float)waveYToGlobalY:(float)waveY{
     
-    CGSize sizet = self.contentSize;
+
     CGPoint pos  = [self position];
     
-    float waveHeight = height+waveY;
-    
+    float waveHeight = height-waveY;
     float percent = waveHeight/height;
 
-    float fullHeight = sizet.height*[self scaleY];
+    float fullHeight = height*[self scaleY];
     float halfHeight = fullHeight*0.5;
     
     float result = pos.y - fullHeight*percent + halfHeight;
@@ -427,13 +388,12 @@ typedef struct _LH_V2F_C4B_Triangle
 
 -(CGRect)waveRect{
     
-    CGPoint pos = [self convertToWorldSpaceAR:CGPointZero];
+    CGPoint pos = [self convertToWorldSpace:CGPointZero];
     
-//    CGSize size = self.contentSize;
-    return CGRectMake(pos.x - width* self.scaleX *0.5,
-                      pos.y - height* self.scaleY *0.5,
-                      width * self.scaleX,
-                      height* self.scaleY);
+    return CGRectMake(-width *self.scaleX *0.5 + pos.x,
+                      -height*self.scaleY*0.5  + pos.y,
+                      width  * self.scaleX,
+                      height * self.scaleY);
 }
 
 
@@ -616,19 +576,18 @@ typedef struct _LH_V2F_C4B_Triangle
         }
     }
 
-    
     [super visit];
 
     
 #if LH_USE_BOX2D
     
     LHScene* scene = [self scene];
-    LHPhysicsNode* pNode = [scene gameWorldNode];
+    LHGameWorldNode* pNode = [scene gameWorldNode];
     b2World* world = [pNode box2dWorld];
     
     if(NULL == buoyancyController && world){
         buoyancyController = new LH_b2BuoyancyController(world);
-        buoyancyController->offset = 27;
+        buoyancyController->offset = -1127;
     }
     
     buoyancyController->density = -waterDensity;
@@ -638,31 +597,29 @@ typedef struct _LH_V2F_C4B_Triangle
             
             if(b->GetType() == b2_dynamicBody){
                 
-                CGRect rect = [self waveRect];
-
-                rect.origin.y -= 100;
-                
-                CGRect bodyRect = [self  boundingRectForBody:b];
-                
-                LHNodePhysicsProtocolImp* nodePhy = LH_ID_BRIDGE_CAST(b->GetUserData());
-                CCNode* node = [nodePhy node];
-                
+                CCNode* node = LH_ID_BRIDGE_CAST(b->GetUserData());
                 if(node){
-                
-                    float scaleX = [node scaleX];
-                    float scaleY = [node scaleY];
+
+                    CGRect rect = [self waveRect];
                     
-                    CGPoint bodyPt = [scene pointFromMeters:b->GetPosition()];
-                    
-                    float x = bodyPt.x;
-                    float y = [self valueAt:[self globalXToWaveX:x]];
-                    
-                    y = [self waveYToGlobalY:y];
-                    
-                    rect.origin.y = y - bodyRect.size.height*0.5;
+                    CGRect bodyRect = [self  boundingRectForBody:b];
                     
                     if(LHRectOverlapsRect(rect,  bodyRect))
                     {
+                        CGPoint bodyPt = [scene pointFromMeters:b->GetPosition()];
+                        
+                        float scaleX = [node scaleX];
+                        float scaleY = [node scaleY];
+                        
+                        float x = bodyPt.x;
+                        float y = [self valueAt:[self globalXToWaveX:x]];
+                        y = [self waveYToGlobalY:y];
+  
+                        float globalY = y;
+                        
+                        y = [scene metersFromValue:y];
+
+                        float splashX = [self globalXToWaveX:x];
                         
                         BOOL addedSplash = false;
                         float previousX = -1000000;
@@ -671,49 +628,52 @@ typedef struct _LH_V2F_C4B_Triangle
                             
                             if(!f->IsSensor())
                             {
-                                {
-                                    y = [scene metersFromValue:y];
-
-                                    buoyancyController->offset = y;
-                                    buoyancyController->useDensity = NO;
-                                    buoyancyController->velocity = b2Vec2(0,0);
-                                    if(turbulence){
-                                        float vdirection = 1.0f;
-                                        if(turbulenceV > 0)
-                                            vdirection = -1.0f;
-                                        buoyancyController->velocity = b2Vec2(vdirection*turbulenceVelocity, 0);
-                                    }
+                                buoyancyController->offset = -y;
+                                buoyancyController->useDensity = NO;
+                                buoyancyController->velocity = b2Vec2(0,0);
+                                if(turbulence){
+                                    float vdirection = 1.0f;
+                                    if(turbulenceV > 0)
+                                        vdirection = -1.0f;
+                                    buoyancyController->velocity = b2Vec2(vdirection*turbulenceVelocity, 0);
+                                }
+                                
+                                NSString* hadSplash = [bodySplashes objectForKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
+                                
+                                bool after = buoyancyController->ApplyToFixture(f);
+                                if(after && hadSplash == nil && splashCollision){
                                     
-                                    NSString* hadSplash = [bodySplashes objectForKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
                                     
-                                    bool after = buoyancyController->ApplyToFixture(f);
-                                    if(after && hadSplash == nil && splashCollision){
-                                        
-                                        float splashX = [self globalXToWaveX:x];
-                                        if(previousX != splashX && !addedSplash){
-                                            NSArray* splashes = [self createSplash:splashX h:splashHeight*scaleY w:splashWidth*scaleX t:splashTime];
-                                            previousX = splashX;
-                                            addedSplash = true;
-                                            int i = 0;
-                                            for(LHWave* wave in splashes){
-                                                [wave step];
-                                                ++i;
-                                                // if(i > 2)break;
-                                            }
-                                            
-                                            [bodySplashes setObject:[NSNumber numberWithBool:YES] forKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
+                                    if(previousX != splashX && !addedSplash){
+                                        NSArray* splashes = [self createSplash:splashX
+                                                                             h:splashHeight*scaleY
+                                                                             w:splashWidth*scaleX
+                                                                             t:splashTime];
+                                        previousX = splashX;
+                                        addedSplash = true;
+                                        int i = 0;
+                                        for(LHWave* wave in splashes){
+                                            [wave step];
+                                            ++i;
+                                            // if(i > 2)break;
                                         }
+                                        
+                                        [bodySplashes setObject:[NSNumber numberWithBool:YES]
+                                                         forKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
                                     }
+                                }
+                                
+                                if(self.position.y + height*0.5 - globalY + bodyRect.size.height > bodyPt.y)
+                                {
                                     buoyancyController->ApplyToFixture(f);
                                 }
                             }
                             f = f->GetNext();
                         }
-                        
                     }
-    //                else{
-    //                    [bodySplashes removeObjectForKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
-    //                }
+                    else{
+                        [bodySplashes removeObjectForKey:[NSString stringWithFormat:@"%p", b->GetUserData()]];
+                    }
                 }
             }
         }
@@ -722,7 +682,7 @@ typedef struct _LH_V2F_C4B_Triangle
     
 #else //chipmunk
     
-    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
+    LHGameWorldNode* world = [(LHScene*)[self scene] gameWorldNode];
 
     for(CCNode* node in [world children])
     {
@@ -735,7 +695,7 @@ typedef struct _LH_V2F_C4B_Triangle
             float y = [self valueAt:[self globalXToWaveX:x]];
             y = [self waveYToGlobalY:y];
             
-            if(pos.y < self.position.y + [self contentSize].height*0.5 + y)
+            if(self.position.y + height*0.5 - y + node.contentSize.height > pos.y)
             {
                 
                 NSString* hadSplash = [bodySplashes objectForKey:[NSString stringWithFormat:@"%p", body]];
@@ -756,6 +716,7 @@ typedef struct _LH_V2F_C4B_Triangle
                     [bodySplashes setObject:[NSNumber numberWithBool:YES]
                                      forKey:[NSString stringWithFormat:@"%p", body]];
                 }
+                [body applyImpulse:CGPointMake(0, waterDensity*100.0)];
             }
             else{
                 [bodySplashes removeObjectForKey:[NSString stringWithFormat:@"%p", body]];

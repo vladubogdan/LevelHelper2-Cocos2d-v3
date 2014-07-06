@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 @implementation LHGravityArea
 {
@@ -45,32 +45,6 @@
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
-        
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
         
         //we reset the scale back to 1 because the NodeProtocolImpl is setting the scale to wrong value
         [self setScaleX:1];
@@ -168,7 +142,7 @@
 -(void)visit
 {
     LHScene* scene = (LHScene*)[self scene];
-    LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+    LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
 
     b2World* world =  [pNode box2dWorld];
     
@@ -225,7 +199,7 @@
 {
     CGRect rect = [self globalRect];
     
-    LHPhysicsNode* world = [(LHScene*)[self scene] gameWorldNode];
+    LHGameWorldNode* world = [(LHScene*)[self scene] gameWorldNode];
     for(CCNode* node in [world children])
     {
         CCPhysicsBody* body = [node physicsBody];

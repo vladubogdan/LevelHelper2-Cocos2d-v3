@@ -30,6 +30,14 @@
  Returns the active animation on a node or nil if no active animation.
  */
 -(LHAnimation*)activeAnimation;
+
+
+/**
+ Returns the animation with a given name or nil if no animation with the specified name is found on the node.
+ */
+-(LHAnimation*)animationWithName:(NSString*)animName;
+
+
 /**
  Set position on the node controlled by the animation.
  @param point A point value.
@@ -71,14 +79,18 @@
 -(void)visit;
 -(void)setActiveAnimation:(LHAnimation*)anim;
 -(LHAnimation*)activeAnimation;
+
+-(LHAnimation*)animationWithName:(NSString*)animName;
 @end
 
 #define LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION  \
 -(void)setActiveAnimation:(LHAnimation*)anim{\
 [_animationProtocolImp setActiveAnimation:anim];\
 }\
-\
 -(LHAnimation*)activeAnimation{\
 return [_animationProtocolImp activeAnimation];\
 }\
+-(LHAnimation*)animationWithName:(NSString*)animName{\
+return [_animationProtocolImp animationWithName:animName];\
+}
 

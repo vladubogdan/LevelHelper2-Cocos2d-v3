@@ -12,6 +12,11 @@
 #import "LHScene.h"
 #import "LHAnimation.h"
 #import "CCTexture_Private.h"
+#import "LHConfig.h"
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSString*)currentDeviceSuffix:(BOOL)keep2x;
+@end
 
 @implementation LHShape
 {
@@ -50,6 +55,8 @@
         
         [prnt addChild:self];
         
+        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+        
         LHScene* scene = (LHScene*)[prnt scene];
         
         NSString* imgRelPath = [dict objectForKey:@"relativeImagePath"];
@@ -68,38 +75,14 @@
             ccTexParams texParams = { GL_NEAREST, GL_NEAREST, GL_REPEAT, GL_REPEAT };
             [self.texture setTexParameters: &texParams];
             
+            
             _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
         }
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        
-        
+        self.contentSize = CGSizeZero;
         
         
         NSArray* triangles = [dict objectForKey:@"triangles"];
@@ -122,6 +105,9 @@
         
         
         trianglePoints = [[NSMutableArray alloc] init];
+        
+        int count = (int)[triangles count]/3;
+        [self ensureCapacity:count];
         
         for(int i = 0; i < [triangles count]; i+=3)
         {
@@ -184,24 +170,9 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
+                
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
-        CGPoint anchor = [dict pointForKey:@"anchor"];
-        anchor.y = 1.0f - anchor.y;
-        [self setAnchorPoint:anchor];
-        
-        [self setPosition:pos];
-
-        
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-#pragma unused (node)
-            }
-        }
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];

@@ -28,38 +28,40 @@
 #import "LHWheelJointNode.h"
 #import "LHGearJointNode.h"
 
-#import "LHPhysicsNode.h"
+#import "LHBackUINode.h"
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
+
 
 @implementation LHScene
 {
-    __unsafe_unretained LHPhysicsNode * _physicsNode;
-    __unsafe_unretained LHNode * _uiNode;
+    __unsafe_unretained LHBackUINode*       _backUiNode;
+    __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
+    __unsafe_unretained LHUINode*           _uiNode;
+    
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
     LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableDictionary* loadedTextures;
-    NSMutableDictionary* loadedTextureAtlases;
     NSDictionary* tracedFixtures;
     
     NSArray* supportedDevices;
 
     CGSize  designResolutionSize;
+    CGSize  currentDeviceSize;
     CGPoint designOffset;
     
     NSString* relativePath;
-    
-    CCNode* touchedNode;
-    BOOL touchedNodeWasDynamic;
-    
-    CGPoint ropeJointsCutStartPt;
     
     NSMutableDictionary* _loadedAssetsInformations;
     
     NSTimeInterval _lastTime;
     
     CGRect gameWorldRect;
+
+    CGPoint touchBeganLocation;
 }
 
 
@@ -71,12 +73,13 @@
     
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
-    LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
-    _physicsNode = nil;
+    _backUiNode = nil;
+    _gameWorldNode = nil;
+    _uiNode = nil;
 
     LH_SUPER_DEALLOC();
 }
@@ -148,11 +151,18 @@
         
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
+        currentDeviceSize    = curDev.size;
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
         
+        [self setName:relativePath];
 
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
+        
+
+        self.contentSize= CGSizeMake(curDev.size.width/curDev.ratio, curDev.size.height/curDev.ratio);
+        self.position   = CGPointZero;
+        
         
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){
@@ -161,149 +171,85 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        LHPhysicsNode* pNode = [LHPhysicsNode node];
-        pNode.contentSize = self.contentSize;
-        [pNode setDebugDraw:YES];
-        [super addChild:pNode];
-        _physicsNode = pNode;
-        [_physicsNode setName:@"Game World Node"];
-
-        LHNode* uiNode = [LHNode node];
-        uiNode.contentSize = self.contentSize;
-        [super addChild:uiNode];
-        _uiNode = uiNode;
-        [_uiNode setName:@"UI Node"];
         
-
-        if([dict boolForKey:@"useGlobalGravity"])
-        {
-            CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
-            float gravityForce    = [dict floatForKey:@"globalGravityForce"];
-            CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
-                                          gravityVector.y*gravityForce);
-#if LH_USE_BOX2D
-            [self setGlobalGravity:gravity];
-#else//chipmunk
-            [self setGlobalGravity:CGPointMake(gravity.x, gravity.y*100)];
-#endif //LH_USE_BOX2D
-        }
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
+        [self loadGlobalGravityFromDictionary:dict];
+        [self loadBackgroundColorFromDictionary:dict];
+        [self loadPhysicsBoundariesFromDictionary:dict];
+        [self loadGameWorldInfoFromDictionary:dict];
         
-        //load background color
-        CCColor* backgroundClr = [dict colorForKey:@"backgroundColor"];
-        glClearColor(backgroundClr.red, backgroundClr.green, backgroundClr.blue, 1.0f);
-
-        
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        for(NSDictionary* childInfo in childrenInfo)
-        {
-            CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                        parent:_physicsNode];
-            
-            if(node){
-
-            }
-        }
-        
-        
-        
-        NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
-        if(phyBoundInfo)
-        {
-            CGSize scr = LH_SCREEN_RESOLUTION;
-
-            NSString* rectInf = [phyBoundInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
-            if(!rectInf){
-                rectInf = [phyBoundInfo objectForKey:@"general"];
-            }
-            
-            if(rectInf){
-                CGRect bRect = LHRectFromString(rectInf);
-                CGSize designSize = [self designResolutionSize];
-                CGPoint offset = [self designOffset];
-                CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-                                            self.contentSize.height - bRect.origin.y*designSize.height + offset.y,
-                                            bRect.size.width*designSize.width ,
-                                            -bRect.size.height*designSize.height);
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
-                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
-                                                  withName:@"LHPhysicsBottomBoundary"];
-                }
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
-                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
-                                                  withName:@"LHPhysicsRightBoundary"];
-
-                }
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
-                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
-                                                  withName:@"LHPhysicsTopBoundary"];
-                }
-
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
-                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
-                                                  withName:@"LHPhysicsLeftBoundary"];
-                }
-            }
-        }
-
-        NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
-        if(gameWorldInfo)
-        {
-#if TARGET_OS_IPHONE
-            CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-            CGSize scr = self.size;
-#endif
-
-            NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
-            if(!rectInf){
-                rectInf = [gameWorldInfo objectForKey:@"general"];
-            }
-            
-            if(rectInf){
-                CGRect bRect = LHRectFromString(rectInf);
-                CGSize designSize = [self designResolutionSize];
-                CGPoint offset = [self designOffset];
-
-                gameWorldRect = CGRectMake(bRect.origin.x*designSize.width+ offset.x,
-                                           (1.0f - bRect.origin.y)*designSize.height + offset.y,
-                                           bRect.size.width*designSize.width ,
-                                           -(bRect.size.height)*designSize.height);
-            }
-        }
         
         [self performLateLoading];
         
         [self setUserInteractionEnabled:YES];
-
+        
+//        [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
+//        [self visit];//dont know why i need to call it 3 times
+//        [self visit];
+        
     }
     return self;
 }
 
--(LHPhysicsNode*)physicsNode{
-    return _physicsNode;
-}
--(LHPhysicsNode*)gameWorldNode{
-    return _physicsNode;
-}
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - LOADING
+////////////////////////////////////////////////////////////////////////////////
 
--(LHNode*)uiNode{
-    return _uiNode;
-}
+-(void)loadPhysicsBoundariesFromDictionary:(NSDictionary*)dict
+{
+    NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
+    if(phyBoundInfo)
+    {
+        CGSize scr = LH_SCREEN_RESOLUTION;
+        
+        NSString* rectInf = [phyBoundInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
+        if(!rectInf){
+            rectInf = [phyBoundInfo objectForKey:@"general"];
+        }
+        
+        if(rectInf){
+            CGRect bRect = LHRectFromString(rectInf);
+            CGSize designSize = [self designResolutionSize];
+            CGPoint offset = [self designOffset];
+            CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
+                                        designSize.height - bRect.origin.y*designSize.height + offset.y,
+                                        bRect.size.width*designSize.width ,
+                                        -bRect.size.height*designSize.height);
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                                    to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                              withName:@"LHPhysicsBottomBoundary"];
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                                    to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                              withName:@"LHPhysicsRightBoundary"];
 
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                                    to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                              withName:@"LHPhysicsTopBoundary"];
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                                    to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                              withName:@"LHPhysicsLeftBoundary"];
+            }
+        }
+    }
+}
 -(void)createPhysicsBoundarySectionFrom:(CGPoint)from
                                      to:(CGPoint)to
                                withName:(NSString*)sectionName
 {
     CCDrawNode* drawNode = [CCDrawNode node];
-    [self addChild:drawNode];
+    [[self gameWorldNode] addChild:drawNode];
     [drawNode setZOrder:100];
     [drawNode setName:sectionName];
     
@@ -315,7 +261,7 @@
 #endif
     
 #if LH_USE_BOX2D
-
+    
     float PTM_RATIO = [self ptm];
     
     // Define the ground body.
@@ -333,7 +279,7 @@
                   b2Vec2(to.x/PTM_RATIO,
                          to.y/PTM_RATIO));
     physicsBoundariesBody->CreateFixture(&groundBox,0);
-
+    
     
 #else //chipmunk
     CCPhysicsBody* boundariesBody = [CCPhysicsBody bodyWithPillFrom:from to:to cornerRadius:0];
@@ -341,6 +287,71 @@
     [drawNode setPhysicsBody:boundariesBody];
 #endif
     
+}
+
+-(void)loadBackgroundColorFromDictionary:(NSDictionary*)dict
+{
+    //load background color
+    CCColor* backgroundClr = [dict colorForKey:@"backgroundColor"];
+    glClearColor(backgroundClr.red, backgroundClr.green, backgroundClr.blue, 1.0f);
+}
+
+-(void)loadGameWorldInfoFromDictionary:(NSDictionary*)dict
+{
+    NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
+    if(gameWorldInfo)
+    {
+#if TARGET_OS_IPHONE
+        CGSize scr = LH_SCREEN_RESOLUTION;
+#else
+        CGSize scr = self.size;
+#endif
+        
+        NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
+        if(!rectInf){
+            rectInf = [gameWorldInfo objectForKey:@"general"];
+        }
+        
+        if(rectInf){
+            CGRect bRect = LHRectFromString(rectInf);
+            CGSize designSize = [self designResolutionSize];
+            CGPoint offset = [self designOffset];
+            
+            gameWorldRect = CGRectMake(bRect.origin.x*designSize.width+ offset.x,
+                                       (1.0f - bRect.origin.y)*designSize.height + offset.y,
+                                       bRect.size.width*designSize.width ,
+                                       -(bRect.size.height)*designSize.height);
+            
+            
+            CCDrawNode* drawNode = [CCDrawNode node];
+            [[self gameWorldNode] addChild:drawNode];
+            [drawNode setZOrder:100];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y + gameWorldRect.size.height)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+            
+            [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y)
+                                   to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y + gameWorldRect.size.height)
+                               radius:1
+                                color:[CCColor magentaColor]];
+
+
+            
+        }
+    }
 }
 
 -(void)performLateLoading{
@@ -360,25 +371,47 @@
     }
 }
 
-//-(SKTextureAtlas*)textureAtlasWithImagePath:(NSString*)atlasPath
-//{
-//    if(!loadedTextureAtlases){
-//        loadedTextureAtlases = [[NSMutableDictionary alloc] init];
-//    }
-// 
-//    SKTextureAtlas* textureAtlas = nil;
-//    if(atlasPath){
-//        textureAtlas = [loadedTextureAtlases objectForKey:atlasPath];
-//        if(!textureAtlas){
-//            textureAtlas = [SKTextureAtlas atlasNamed:atlasPath];
-//            if(textureAtlas){
-//                [loadedTextureAtlases setObject:textureAtlas forKey:atlasPath];
-//            }
-//        }
-//    }
-//    
-//    return textureAtlas;
-//}
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - PROPERTIES
+////////////////////////////////////////////////////////////////////////////////
+
+-(LHGameWorldNode*)physicsNode{
+    return [self gameWorldNode];
+}
+-(LHBackUINode*)backUiNode{
+    if(!_backUiNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHBackUINode class]]){
+                _backUiNode = (LHBackUINode*)n;
+                break;
+            }
+        }
+    }
+    return _backUiNode;
+}
+-(LHGameWorldNode*)gameWorldNode{
+    if(!_gameWorldNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHGameWorldNode class]]){
+                _gameWorldNode = (LHGameWorldNode*)n;
+                break;
+            }
+        }
+    }
+    return _gameWorldNode;
+}
+
+-(LHUINode*)uiNode{
+    if(!_uiNode){
+        for(CCNode* n in [self children]){
+            if([n isKindOfClass:[LHUINode class]]){
+                _uiNode = (LHUINode*)n;
+                break;
+            }
+        }
+    }
+    return _uiNode;
+}
 
 -(CCTexture*)textureWithImagePath:(NSString*)imagePath
 {
@@ -404,222 +437,23 @@
     return gameWorldRect;
 }
 
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
-    if(!_loadedAssetsInformations){
-        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
-    }
-    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
-    if(!info){
-        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
-                                                         ofType:@"plist"
-                                                    inDirectory:[self relativePath]];
-        if(path){
-            info = [NSDictionary dictionaryWithContentsOfFile:path];
-            if(info){
-                [_loadedAssetsInformations setObject:info forKey:assetFileName];
-            }
-        }
-    }
-    return info;
+-(NSString*)relativePath{
+    return relativePath;
 }
 
-//#if TARGET_OS_IPHONE
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    
-//    CGVector grv = self.physicsWorld.gravity;
-//    
-//    [self.physicsWorld setGravity:CGVectorMake(grv.dx,
-//                                              -grv.dy)];
-//    
-//    return;
-//    
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//        
-//        ropeJointsCutStartPt = location;
-//        
-//        NSArray* foundNodes = [self nodesAtPoint:location];
-//        for(SKNode* foundNode in foundNodes)
-//        {
-//            if(foundNode.physicsBody){
-//                touchedNode = foundNode;
-//                touchedNodeWasDynamic = touchedNode.physicsBody.affectedByGravity;
-//                [touchedNode.physicsBody setAffectedByGravity:NO];                
-//                return;
-//            }
-//        }
-//    }
-//}
-//
-//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//
-//        if(touchedNode && touchedNode.physicsBody){
-//            [touchedNode setPosition:location];
-//        }
-//    }
-//}
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-//    
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//        
-//        for(LHRopeJointNode* rope in ropeJoints){
-//            if([rope canBeCut]){
-//                [rope cutWithLineFromPointA:ropeJointsCutStartPt
-//                                   toPointB:location];
-//            }
-//        }
-//    }
-//    
-//    
-//
-//    if(touchedNode){
-//    [touchedNode.physicsBody setAffectedByGravity:touchedNodeWasDynamic];
-//    touchedNode = nil;
-//    }
-//}
-//- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
-//    if(touchedNode){
-//    touchedNode.physicsBody.affectedByGravity = touchedNodeWasDynamic;
-//    touchedNode = nil;
-//    }
-//}
-//#else
-//-(void)mouseDown:(NSEvent *)theEvent{
-//    
-//    CGPoint location = [theEvent locationInNode:self];
-//    
-//    ropeJointsCutStartPt = location;
-//    NSArray* foundNodes = [self nodesAtPoint:location];
-//    for(SKNode* foundNode in foundNodes)
-//    {
-//        if(foundNode.physicsBody){
-//            touchedNode = foundNode;
-//            touchedNodeWasDynamic = touchedNode.physicsBody.affectedByGravity;
-//            [touchedNode.physicsBody setAffectedByGravity:NO];
-//            break;
-//        }
-//    }
-//    
-//    BOOL                dragActive = YES;
-//    NSEvent*            event = NULL;
-//    NSWindow            *targetWindow = [[NSApplication sharedApplication] mainWindow];
-//    
-//    while (dragActive) {
-//        event = [targetWindow nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)
-//                                          untilDate:[NSDate distantFuture]
-//                                             inMode:NSEventTrackingRunLoopMode
-//                                            dequeue:YES];
-//        if(!event){
-//            continue;
-//        }
-//        switch ([event type])
-//        {
-//            case NSLeftMouseDragged:
-//            {
-//                CGPoint curLocation = [event locationInNode:self];
-//                
-//                if(touchedNode && touchedNode.physicsBody){
-//                    [touchedNode setPosition:curLocation];
-//                }
-//            }
-//                break;
-//                
-//                
-//            case NSLeftMouseUp:
-//                dragActive = NO;
-//                
-//                CGPoint curLocation = [event locationInNode:self];
-//                for(LHRopeJointNode* rope in ropeJoints){
-//                    if([rope canBeCut]){
-//                        [rope cutWithLineFromPointA:ropeJointsCutStartPt
-//                                           toPointB:curLocation];
-//                    }
-//                }
-//                
-//                if(touchedNode){
-//                    [touchedNode.physicsBody setAffectedByGravity:touchedNodeWasDynamic];
-//                    touchedNode = nil;
-//                }
-//                
-//                break;
-//                
-//            default:
-//                break;
-//        }
-//    }
-//}
-//#endif
-
-#pragma mark LHNodeProtocol Required
-
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
+////////////////////////////////////////////////////////////////////////////////
 
 
-#pragma mark - TOUCH SUPPORT
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-
-    //without this touch began is not called
-    CCDirector* dir = [CCDirector sharedDirector];
-    
-    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-    
-    ropeJointsCutStartPt = touchLocation;
-    
-    
-}
-
--(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-    
-//    NSLog(@"TOUCH MOVED");
-//    
-////    NSLog(@"SELF CHILDREN %@", [self children]);
-//    
-//    CGPoint touchLoc = [touch locationInNode:self];
-//    
-//    CCDirector* dir = [CCDirector sharedDirector];
-//    
-//    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-//	touchLocation = [dir convertToGL: touchLocation];
-//    CGPoint previousLoc = [self convertToNodeSpace:touchLocation];
-//    
-//
-//    CGPoint delta = CGPointMake(touchLoc.x - previousLoc.x,
-//                                touchLoc.y - previousLoc.y);
-//    
-//    CGPoint curPos = [self position];
-//    
-//    [self setPosition:CGPointMake(curPos.x + delta.x, curPos.y + delta.y)];
-//    
-//    NSLog(@"NEW POS %f %f", self.position.x, self.position.y);
-}
-
--(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    CCDirector* dir = [CCDirector sharedDirector];
-    
-    CGPoint touchLocation = [touch previousLocationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-
-    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
-        if([rope canBeCut]){
-            [rope cutWithLineFromPointA:ropeJointsCutStartPt
-                               toPointB:touchLocation];
-        }
-    }
-}
-
-
+////////////////////////////////////////////////////////////////////////////////
 #pragma mark - BOX2D INTEGRATION
+////////////////////////////////////////////////////////////////////////////////
 
 #if LH_USE_BOX2D
 -(b2World*)box2dWorld{
-    return [_physicsNode box2dWorld];
+    return [[self gameWorldNode] box2dWorld];
 }
 -(float)ptm{
     return 32.0f;
@@ -638,154 +472,54 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 }
 #endif //LH_USE_BOX2D
 
+-(void)loadGlobalGravityFromDictionary:(NSDictionary*)dict
+{
+    if([dict boolForKey:@"useGlobalGravity"])
+    {
+        CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
+        float gravityForce    = [dict floatForKey:@"globalGravityForce"];
+        CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
+                                      gravityVector.y*gravityForce);
+#if LH_USE_BOX2D
+        [self setGlobalGravity:gravity];
+#else//chipmunk
+        [self setGlobalGravity:CGPointMake(gravity.x, gravity.y*100)];
+#endif //LH_USE_BOX2D
+    }
+}
+
 -(CGPoint)globalGravity{
-    return [_physicsNode gravity];
+    return [[self gameWorldNode] gravity];
 }
 -(void)setGlobalGravity:(CGPoint)gravity{
-    [_physicsNode setGravity:gravity];
+    [[self gameWorldNode] setGravity:gravity];
 }
 
-@end
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - TOUCH SUPPORT
+////////////////////////////////////////////////////////////////////////////////
 
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    
+    touchBeganLocation = [touch locationInNode:self];
+}
 
-
-#pragma mark - PRIVATES
-
-@implementation LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
-
-+(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
-                         parent:(CCNode*)prnt
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    CGPoint touchLocation = [touch locationInNode:self];
     
-    NSString* nodeType = [childInfo objectForKey:@"nodeType"];
-    
-    LHScene* scene = nil;
-    if([prnt isKindOfClass:[LHScene class]]){
-        scene = (LHScene*)prnt;
+    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
+        if([rope canBeCut]){
+            [rope cutWithLineFromPointA:touchBeganLocation
+                               toPointB:touchLocation];
+        }
     }
-    else if([[prnt scene] isKindOfClass:[LHScene class]]){
-        scene = (LHScene*)[prnt scene];
-    }
-
-    
-    if([nodeType isEqualToString:@"LHSprite"])
-    {
-        LHSprite* spr = [LHSprite spriteNodeWithDictionary:childInfo
-                                                    parent:prnt];
-        return spr;
-    }
-    else if([nodeType isEqualToString:@"LHNode"])
-    {
-        LHNode* nd = [LHNode nodeWithDictionary:childInfo
-                                         parent:prnt];
-        return nd;
-    }
-    else if([nodeType isEqualToString:@"LHBezier"])
-    {
-        LHBezier* bez = [LHBezier bezierNodeWithDictionary:childInfo
-                                                    parent:prnt];
-        return bez;
-    }
-    else if([nodeType isEqualToString:@"LHTexturedShape"])
-    {
-        LHShape* sp = [LHShape shapeNodeWithDictionary:childInfo
-                                                parent:prnt];
-        return sp;
-    }
-    else if([nodeType isEqualToString:@"LHWaves"])
-    {
-        LHWater* wt = [LHWater waterNodeWithDictionary:childInfo
-                                                parent:prnt];
-        return wt;
-    }
-    else if([nodeType isEqualToString:@"LHAreaGravity"])
-    {
-        LHGravityArea* gv = [LHGravityArea gravityAreaWithDictionary:childInfo
-                                                              parent:prnt];
-        return gv;
-    }
-    else if([nodeType isEqualToString:@"LHParallax"])
-    {
-        LHParallax* pr = [LHParallax parallaxWithDictionary:childInfo
-                                                     parent:prnt];
-        return pr;
-    }
-    else if([nodeType isEqualToString:@"LHParallaxLayer"])
-    {
-        LHParallaxLayer* lh = [LHParallaxLayer parallaxLayerWithDictionary:childInfo
-                                                                    parent:prnt];
-        return lh;
-    }
-    else if([nodeType isEqualToString:@"LHAsset"])
-    {
-        LHAsset* as = [LHAsset assetWithDictionary:childInfo
-                                            parent:prnt];
-        return as;
-    }
-    else if([nodeType isEqualToString:@"LHCamera"])
-    {
-        LHCamera* cm = [LHCamera cameraWithDictionary:childInfo
-                                                parent:prnt];
-        return cm;
-    }
-    else if([nodeType isEqualToString:@"LHRopeJoint"])
-    {
-        LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
-                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHWeldJoint"])
-    {
-        LHWeldJointNode* jt = [LHWeldJointNode weldJointNodeWithDictionary:childInfo
-                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
-        
-        LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHDistanceJoint"]){
-        
-        LHDistanceJointNode* jt = [LHDistanceJointNode distanceJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
-        [scene addLateLoadingNode:jt];
-
-    }
-    else if([nodeType isEqualToString:@"LHPulleyJoint"]){
-        
-        LHPulleyJointNode* jt = [LHPulleyJointNode pulleyJointNodeWithDictionary:childInfo
-                                                                          parent:prnt];
-        [scene addLateLoadingNode:jt];
-        
-    }
-    else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
-        
-        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo
-                                                                                   parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHWheelJoint"]){
-        
-        LHWheelJointNode* jt = [LHWheelJointNode wheelJointNodeWithDictionary:childInfo
-                                                                       parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHGearJoint"]){
-        
-        LHGearJointNode* jt = [LHGearJointNode gearJointNodeWithDictionary:childInfo
-                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-
-
-    else{
-        NSLog(@"UNKNOWN NODE TYPE %@", nodeType);
-    }
-    
-    return nil;
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - PRIVATES
+////////////////////////////////////////////////////////////////////////////////
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
@@ -796,10 +530,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         lateLoadingNodes = [[NSMutableArray alloc] init];
     }
     [lateLoadingNodes addObject:node];
-}
-
--(NSString*)relativePath{
-    return relativePath;
 }
 
 -(float)currentDeviceRatio{
@@ -821,6 +551,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(CGSize)designResolutionSize{
     return designResolutionSize;
+}
+-(CGSize)currentDeviceSize{
+    return currentDeviceSize;
 }
 -(CGPoint)designOffset{
     return designOffset;
@@ -847,5 +580,25 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
     return @"";
 }
+
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
+    if(!_loadedAssetsInformations){
+        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
+    }
+    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
+    if(!info){
+        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
+                                                         ofType:@"plist"
+                                                    inDirectory:[self relativePath]];
+        if(path){
+            info = [NSDictionary dictionaryWithContentsOfFile:path];
+            if(info){
+                [_loadedAssetsInformations setObject:info forKey:assetFileName];
+            }
+        }
+    }
+    return info;
+}
+
 @end
 

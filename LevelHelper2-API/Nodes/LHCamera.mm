@@ -11,7 +11,12 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHAnimation.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
+@end
 
 
 @implementation LHCamera
@@ -54,43 +59,20 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-        
         NSString* followedUUID = [dict objectForKey:@"followedNodeUUID"];
         if(followedUUID){
             _followedNodeUUID = [[NSString alloc] initWithString:followedUUID];
         }
         
-        _active = [dict boolForKey:@"activeCamera"];
+        _active     = [dict boolForKey:@"activeCamera"];
         _restricted = [dict boolForKey:@"restrictToGameWorld"];
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
+        [super setPosition:[self transformToRestrictivePosition:self.position]];
+        
+        
     }
     
     return self;
@@ -133,7 +115,12 @@
 }
 
 -(void)setPosition:(CGPoint)position{
-    [super setPosition:[self transformToRestrictivePosition:position]];
+    if(_active){
+        [super setPosition:[self transformToRestrictivePosition:position]];
+    }
+    else{
+        [super setPosition:position];
+    }
 }
 
 -(void)setSceneView{
@@ -149,21 +136,26 @@
     CCNode* followed = [self followedNode];
     if(followed){
         position = [followed position];
-
+        
         CGPoint anchor = [followed anchorPoint];
         CGSize content = [followed contentSize];
-        
-        position.x -= content.width*(anchor.x -0.5);
-        position.y -= content.height*(anchor.y -0.5);
+
+        float scaleX = [followed scaleX];
+        float scaleY = [followed scaleY];
+
+        position.x -= content.width*scaleX*  (anchor.x -0.5);
+        position.y -= content.height*scaleY* (anchor.y -0.5);
     }
 
     CGSize winSize = [(LHScene*)[self scene] contentSize];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
 
+//    CGPoint offset = [[(LHScene*)self scene] designOffset];
     
-    float x = position.x;
-    float y = position.y;
-    
+    float x = position.x;// - offset.x;
+    float y = position.y;// - offset.y;
+
+
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
         
         if(x > (worldRect.origin.x + worldRect.size.width)*0.5){
@@ -177,8 +169,9 @@
         y = MIN(y, worldRect.origin.y - winSize.height*0.5);
     }
     
-    CGPoint pt = CGPointMake(winSize.width*0.5-x,
-                             winSize.height*0.5-y);
+    
+    CGPoint pt = CGPointMake(winSize.width*0.5 - x,
+                             winSize.height*0.5- y);
     
     return pt;
 }
@@ -186,7 +179,7 @@
 -(void)visit
 {
     if(![self isActive])return;
-    
+ 
     [_animationProtocolImp visit];
 
     if([self followedNode]){

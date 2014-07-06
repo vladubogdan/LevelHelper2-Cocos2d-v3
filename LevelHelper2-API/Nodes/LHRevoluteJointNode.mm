@@ -11,7 +11,7 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -78,9 +78,9 @@
         _enableMotor = [dict boolForKey:@"enableMotor"];
         
         
-        _lowerAngle = [dict floatForKey:@"lowerAngle"];
-        _upperAngle = [dict floatForKey:@"upperAngle"];
-        
+        _lowerAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"lowerAngle"] - 90.0f);
+        _upperAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"upperAngle"] - 90.0f);
+
         _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
         _motorSpeed = [dict floatForKey:@"motorSpeed"];
         
@@ -139,7 +139,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];
-        LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
         
         b2World* world = [pNode box2dWorld];
         

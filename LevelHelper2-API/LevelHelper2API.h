@@ -34,3 +34,7 @@
 #import "LHNodeAnimationProtocol.h"
 #import "LHUserPropertyProtocol.h"
 #import "LHJointNodeProtocol.h"
+
+#import "LHBackUINode.h"
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"

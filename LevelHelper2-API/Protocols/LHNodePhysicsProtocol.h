@@ -34,7 +34,7 @@ typedef enum
  Returns the type of the physics body.
  @return A LH_PHYSICS_TYPE enum value; 0 = static, 1 = Kinematic (not available in Chipmunk), 2 = Dynamic, 3 = No Physics
  */
--(LH_PHYSICS_TYPE)physicsType;
+-(int)physicsType;
 
 /**
  Set the physics body type; 
@@ -45,10 +45,10 @@ typedef enum
  
  @param type A LH_PHYSICS_TYPE enum value. 0 = static, 1 = Kinematic (not available in Chipmunk), 2 = Dynamic, 3 = No Physics
  */
--(void)setPhysicsType:(LH_PHYSICS_TYPE)type;
+-(void)setPhysicsType:(int)type;
 
 /**
- Removed the physics body from the node. The Cocos2d node will still be alive. If you want to remove the node also call "removeFromParent" instead.
+ Removed the physics body from the node. The Cocos2d node will still be alive. If you want to remove the node call "removeFromParent" instead.
  Note that you won't be able to recreate the body after removal without recreating the entire Cocos2d node. If you need the physics body at a later time you may want
  to change the physics type to No Physics.
 */
@@ -73,10 +73,12 @@ typedef enum
 + (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
 
+- (instancetype)initPhysicsProtocolWithNode:(CCNode*)nd;
+
 -(CCNode*)node;
 
--(LH_PHYSICS_TYPE)bodyType;
--(void)setBodyType:(LH_PHYSICS_TYPE)type;
+-(int)bodyType;
+-(void)setBodyType:(int)type;
 
 -(void)removeBody;
 
@@ -154,11 +156,11 @@ typedef enum
 }
 
 #define LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
--(LH_PHYSICS_TYPE)physicsType{\
+-(int)physicsType{\
     return [_physicsProtocolImp bodyType];\
 }\
--(void)setPhysicsType:(LH_PHYSICS_TYPE)type{\
-    return [_physicsProtocolImp setBodyType:type];\
+-(void)setPhysicsType:(int)type{\
+    [_physicsProtocolImp setBodyType:type];\
 }\
 -(void)removeBody{\
     [_physicsProtocolImp removeBody];\

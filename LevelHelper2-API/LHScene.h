@@ -22,8 +22,9 @@
 #define LH_ARC_ENABLED 1
 #endif
 
-@class LHPhysicsNode;
-@class LHNode;
+@class LHBackUINode;
+@class LHGameWorldNode;
+@class LHUINode;
 
 /**
  LHScene class is used to load a level file into Cocos2d v3 engine.
@@ -34,6 +35,11 @@
 
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile;
 -(instancetype)initWithContentOfFile:(NSString*)levelPlistFile;
+
+/**
+ Returns the relative plist path that was used to load this scene information.
+ */
+-(NSString*)relativePath;
 
 /**
  Returns a CCTexture object that was previously loaded or a new one.
@@ -48,24 +54,20 @@
 -(CGRect)gameWorldRect;
 
 /**
- Returns the informations that can be used to create an asset dynamically by specifying the file name. 
- The asset file must be in the same folder as the scene file.
- If the asset file is not found it will return nil.
- 
- @param assetFileName The name of the asset that. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset"
- @return A dictionary containing the asset information or nil.
+ Returns the back UI node. All children of this node will NOT move with the camera.
  */
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+-(LHBackUINode*)backUiNode;
 
 /**
  Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.
  */
--(LHPhysicsNode*)gameWorldNode;
+-(LHGameWorldNode*)gameWorldNode;
 
 /**
  Returns the UI node. All children of this node will NOT move with the camera.
  */
--(LHNode*)uiNode;
+-(LHUINode*)uiNode;
+
 
 
 #if LH_USE_BOX2D

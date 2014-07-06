@@ -15,7 +15,7 @@
 #import "CCTexture_Private.h"
 
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -30,6 +30,10 @@
 #pragma clang diagnostic pop
 
 #endif //LH_USE_BOX2D
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSString*)currentDeviceSuffix:(BOOL)keep2x;
+@end
 
 
 double bisection(double g0, double g1, double epsilon,
@@ -176,7 +180,7 @@ double fcat(double x, void *data)
             ropeShape = shape;
             
             NSString* imgRelPath = [dict objectForKey:@"relativeImagePath"];
-            if(imgRelPath){
+            if(imgRelPath && [dict boolForKey:@"useTexture"]){
                 LHScene* scene = (LHScene*)[prnt scene];
                 
                 NSString* filename = [imgRelPath lastPathComponent];
@@ -212,7 +216,7 @@ double fcat(double x, void *data)
     LHScene* scene = (LHScene*)[self scene];
     if(scene)
     {
-        LHPhysicsNode* pNode = [scene gameWorldNode];
+        LHGameWorldNode* pNode = [scene gameWorldNode];
         if(pNode)
         {
 #if LH_USE_BOX2D
@@ -280,7 +284,7 @@ double fcat(double x, void *data)
      
     CGPoint relativePosA = [_jointProtocolImp localAnchorA];
     CGPoint relativePosB = [_jointProtocolImp localAnchorB];
-
+    
     BOOL flipped = NO;
     NSMutableArray* rPoints = [self ropePointsFromPointA:a
                                                 toPointB:b
@@ -343,7 +347,7 @@ double fcat(double x, void *data)
                      
                     #if LH_USE_BOX2D
                      LHScene* scene = [self scene];
-                     LHPhysicsNode* pNode = [scene gameWorldNode];
+                     LHGameWorldNode* pNode = [scene gameWorldNode];
                      b2World* world = [pNode box2dWorld];
                      b2Vec2 bodyPos = [scene metersFromPoint:interPt];
                      
@@ -436,7 +440,7 @@ double fcat(double x, void *data)
                      
                     #if LH_USE_BOX2D
                      LHScene* scene = [self scene];
-                     LHPhysicsNode* pNode = [scene gameWorldNode];
+                     LHGameWorldNode* pNode = [scene gameWorldNode];
                      b2World* world = [pNode box2dWorld];
                      
                      b2Vec2 bodyPos = [scene metersFromPoint:interPt];
@@ -939,7 +943,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
 
         LHScene* scene = [self scene];
-        LHPhysicsNode* pNode = [scene gameWorldNode];
+        LHGameWorldNode* pNode = [scene gameWorldNode];
         b2World* world = [pNode box2dWorld];
         if(world == nil)return NO;
         

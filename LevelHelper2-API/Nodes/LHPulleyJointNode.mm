@@ -11,7 +11,7 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
-#import "LHPhysicsNode.h"
+#import "LHGameWorldNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -29,6 +29,11 @@
 
 #endif //LH_USE_BOX2D
 
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGSize)designResolutionSize;
+-(CGPoint)designOffset;
+@end
 
 
 @implementation LHPulleyJointNode
@@ -68,9 +73,9 @@
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
                 
-        LHScene* scene = (LHScene*)[prnt scene];
-        CGSize designSize = [scene designResolutionSize];
-        CGPoint offset = [scene designOffset];
+        LHScene* scene      = (LHScene*)[prnt scene];
+        CGSize designSize   = [scene designResolutionSize];
+        CGPoint offset      = [scene designOffset];
         
         _groundAnchorA = [dict pointForKey:@"groundAnchorA"];
         {
@@ -133,7 +138,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];
-        LHPhysicsNode* pNode = (LHPhysicsNode*)[scene gameWorldNode];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
         
         b2World* world = [pNode box2dWorld];
         

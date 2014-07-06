@@ -11,6 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHAnimation.h"
+#import "LHConfig.h"
 
 //! a Point with a vertex point, a tex coord point and a color 4B
 typedef struct _LH_V2F_C4B
@@ -62,31 +63,6 @@ static float MAX_BEZIER_STEPS = 24.0f;
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        
         CCColor* colorOverlay = [dict colorForKey:@"colorOverlay"];
                 
         NSArray* points = [dict objectForKey:@"points"];
@@ -95,6 +71,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
         linePoints = [[NSMutableArray alloc] init];
         
         NSValue* prevValue = nil;
+        
+        CGPoint loadedPosition = self.position;
+        self.position = CGPointZero;
+        self.contentSize = CGSizeZero;//we reset the content size as it does problem in cocos2d
         
         NSDictionary* previousPointDict = nil;
         for(NSDictionary* pointDict in points)
@@ -175,22 +155,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
                                                                                                 node:self];
         
         
+        self.position = loadedPosition;
         
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
-        [self setPosition:pos];
-        
-        
-        
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                CCNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-#pragma unused (node)
-            }
-        }
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];

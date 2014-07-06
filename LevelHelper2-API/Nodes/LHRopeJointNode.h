@@ -11,14 +11,6 @@
 #import "LHJointNodeProtocol.h"
 #import "LHConfig.h"
 
-#if LH_USE_BOX2D
-#ifdef __cplusplus
-class b2RopeJoint;
-#endif
-#else//chipmunk
-@class CCPhysicsSlideJoint;
-#endif
-
 /**
  LHRopeJointNode class is used to load a LevelHelper rope joint.
  
