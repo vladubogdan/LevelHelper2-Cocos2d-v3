@@ -73,6 +73,8 @@
     [availableScenes addObject:[LHSceneShapesTest class]];
     [availableScenes addObject:[LHSceneBeziersTest class]];
     
+    //CUSTOM PROPERTIES EXAMPLE
+    
     //body scale
     //body positioning
     //body transformations

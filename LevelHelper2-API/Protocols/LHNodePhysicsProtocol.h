@@ -48,7 +48,7 @@ typedef enum
 -(void)setPhysicsType:(int)type;
 
 /**
- Removed the physics body from the node. The Cocos2d node will still be alive. If you want to remove the node also call "removeFromParent" instead.
+ Removed the physics body from the node. The Cocos2d node will still be alive. If you want to remove the node call "removeFromParent" instead.
  Note that you won't be able to recreate the body after removal without recreating the entire Cocos2d node. If you need the physics body at a later time you may want
  to change the physics type to No Physics.
 */
