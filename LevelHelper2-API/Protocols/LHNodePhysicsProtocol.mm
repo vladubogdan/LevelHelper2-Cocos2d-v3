@@ -299,9 +299,8 @@
             delete shape;
             shape = NULL;
         }
-        
-        
     }
+    
     return self;
 }
 
@@ -888,6 +887,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                 _node.physicsBody.affectedByGravity = NO;
             }
         }
+        
+        _node.physicsBody.collisionType = @"Default";
         
         
     }

@@ -565,6 +565,10 @@
 		6ECDF90F1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */; };
 		6ECDF912196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */; };
 		6ECDF913196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */; };
+		6ED55BDC196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */; };
+		6ED55BDD196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */; };
+		6ED55BE0196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDF196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm */; };
+		6ED55BE1196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDF196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm */; };
 		6ED5C547195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
 		6ED5C548195ECBA300B6DF33 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */; };
 		6ED5C561195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
@@ -1248,6 +1252,10 @@
 		6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneShapesTest.mm; sourceTree = "<group>"; };
 		6ECDF910196195820007E7A0 /* LHSceneBeziersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBeziersTest.h; sourceTree = "<group>"; };
 		6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBeziersTest.mm; sourceTree = "<group>"; };
+		6ED55BDA196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionHandlingTest.h; sourceTree = "<group>"; };
+		6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionHandlingTest.mm; sourceTree = "<group>"; };
+		6ED55BDE196AA55B00F6C4B4 /* LHBox2dCollisionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBox2dCollisionHandling.h; sourceTree = "<group>"; };
+		6ED55BDF196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBox2dCollisionHandling.mm; sourceTree = "<group>"; };
 		6ED5C545195ECBA300B6DF33 /* LHBackUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBackUINode.h; sourceTree = "<group>"; };
 		6ED5C546195ECBA300B6DF33 /* LHBackUINode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBackUINode.mm; sourceTree = "<group>"; };
 		6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBodyScaleTest.h; sourceTree = "<group>"; };
@@ -2499,6 +2507,8 @@
 			children = (
 				6E89FE0D192E23100040478F /* LHUtils.h */,
 				6E89FE0E192E23100040478F /* LHUtils.m */,
+				6ED55BDE196AA55B00F6C4B4 /* LHBox2dCollisionHandling.h */,
+				6ED55BDF196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2528,6 +2538,8 @@
 				6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */,
 				6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */,
 				6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */,
+				6ED55BDA196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.h */,
+				6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */,
 				6ECDF8FC19616E470007E7A0 /* LHSceneCarTest.h */,
 				6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */,
 				6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */,
@@ -2923,6 +2935,7 @@
 				6E0D58F7194CD6A40036E940 /* b2WorldCallbacks.cpp in Sources */,
 				6E0D5958194F08BA0036E940 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E0D5665194C32A30036E940 /* LHOpacityProperty.m in Sources */,
+				6ED55BDD196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
 				6E0D5666194C32A30036E940 /* TGAlib.m in Sources */,
 				6E0D5667194C32A30036E940 /* UITouch+CC.m in Sources */,
 				6E0D5668194C32A30036E940 /* utility.c in Sources */,
@@ -2951,6 +2964,7 @@
 				6E0D5676194C32A30036E940 /* ALCaptureDevice.m in Sources */,
 				6E0D5903194CD6A40036E940 /* b2GearJoint.cpp in Sources */,
 				6E0D5677194C32A30036E940 /* CCResponderManager.m in Sources */,
+				6ED55BE1196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm in Sources */,
 				6E0D5678194C32A30036E940 /* CCConfiguration.m in Sources */,
 				6E0D58F4194CD6A40036E940 /* b2Fixture.cpp in Sources */,
 				6E0D58F3194CD6A40036E940 /* b2ContactManager.cpp in Sources */,
@@ -3026,6 +3040,7 @@
 				6E12208A1924BD86005E8532 /* CCNode.m in Sources */,
 				6E1220751924BD86005E8532 /* CCLabelBMFont.m in Sources */,
 				6ECDF90A196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6ED55BDC196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
 				6E1220331924BD85005E8532 /* CCActionEase.m in Sources */,
 				6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
 				6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
@@ -3154,6 +3169,7 @@
 				6ECDF90E1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */,
 				6E0D595F194F1A860036E940 /* LHWeldJointNode.mm in Sources */,
 				6E12210C1924BD87005E8532 /* cocos2d.m in Sources */,
+				6ED55BE0196AA55B00F6C4B4 /* LHBox2dCollisionHandling.mm in Sources */,
 				6E1221941924BD87005E8532 /* ALSource.m in Sources */,
 				6E12209C1924BD86005E8532 /* CCParticleSystem.m in Sources */,
 				6E1220C11924BD86005E8532 /* CCScene.m in Sources */,
@@ -3381,6 +3397,11 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LevelHelper2-Cocos2d-v3/Supporting Files/Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"COCOS2D_DEBUG=1",
+					"LH_USE_BOX2D=0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/kazmath/include\"",
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/chipmunk/include\"",
@@ -3409,6 +3430,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LevelHelper2-Cocos2d-v3/Supporting Files/Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					"NS_BLOCK_ASSERTIONS=1",
+					"LH_USE_BOX2D=0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/kazmath/include\"",
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/chipmunk/include\"",
