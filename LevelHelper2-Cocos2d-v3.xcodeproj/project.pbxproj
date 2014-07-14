@@ -488,6 +488,10 @@
 		6E1222881924BD88005E8532 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E1222871924BD88005E8532 /* LICENSE_Chipmunk.txt */; };
 		6E12228C1924BD88005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E1222901924BD88005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
+		6E1AAB731973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */; };
+		6E1AAB741973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */; };
+		6E1AAB771973BA4000E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB761973BA4000E8ECCE /* LHUserProperties.mm */; };
+		6E1AAB781973BA4000E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB761973BA4000E8ECCE /* LHUserProperties.mm */; };
 		6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
 		6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
 		6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
@@ -1136,6 +1140,10 @@
 		6E12228B1924BD88005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		6E12228E1924BD88005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		6E12228F1924BD88005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		6E1AAB711973B52B00E8ECCE /* LHSceneUserPropertiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUserPropertiesTest.h; sourceTree = "<group>"; };
+		6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesTest.mm; sourceTree = "<group>"; };
+		6E1AAB751973B57D00E8ECCE /* LHUserProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserProperties.h; sourceTree = "<group>"; };
+		6E1AAB761973BA4000E8ECCE /* LHUserProperties.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHUserProperties.mm; sourceTree = "<group>"; };
 		6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringTest.h; sourceTree = "<group>"; };
 		6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringTest.mm; sourceTree = "<group>"; };
 		6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
@@ -2498,6 +2506,8 @@
 				6E89FE0B192E23100040478F /* LHUserPropertyProtocol.h */,
 				6E0D5932194EAE9A0036E940 /* LHJointNodeProtocol.h */,
 				6E0D5933194EB0410036E940 /* LHJointNodeProtocol.mm */,
+				6E1AAB751973B57D00E8ECCE /* LHUserProperties.h */,
+				6E1AAB761973BA4000E8ECCE /* LHUserProperties.mm */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2554,6 +2564,8 @@
 				6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */,
 				6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */,
 				6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */,
+				6E1AAB711973B52B00E8ECCE /* LHSceneUserPropertiesTest.h */,
+				6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */,
 			);
 			name = DemoExamples;
 			path = Classes/DemoExamples;
@@ -2772,6 +2784,7 @@
 				6E0D55EE194C32A30036E940 /* ccGLStateCache.m in Sources */,
 				6E0D55EF194C32A30036E940 /* OALActionManager.m in Sources */,
 				6E0D55F0194C32A30036E940 /* CCScheduler.m in Sources */,
+				6E1AAB741973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E0D58E6194CD6A40036E940 /* b2DynamicTree.cpp in Sources */,
 				6E0D55F1194C32A30036E940 /* LHScaleProperty.m in Sources */,
 				6E0D55F2194C32A30036E940 /* CCParticleExamples.m in Sources */,
@@ -2939,6 +2952,7 @@
 				6E0D5666194C32A30036E940 /* TGAlib.m in Sources */,
 				6E0D5667194C32A30036E940 /* UITouch+CC.m in Sources */,
 				6E0D5668194C32A30036E940 /* utility.c in Sources */,
+				6E1AAB781973BA4000E8ECCE /* LHUserProperties.mm in Sources */,
 				6E0D5669194C32A30036E940 /* ZipUtils.m in Sources */,
 				6E0D566A194C32A30036E940 /* OALUtilityActions.m in Sources */,
 				6E0D58F0194CD6A40036E940 /* b2StackAllocator.cpp in Sources */,
@@ -3154,6 +3168,7 @@
 				6E89FE1B192E23100040478F /* LHOpacityProperty.m in Sources */,
 				6E1221511924BD87005E8532 /* TGAlib.m in Sources */,
 				6E12211D1924BD87005E8532 /* UITouch+CC.m in Sources */,
+				6E1AAB731973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E1221FB1924BD87005E8532 /* utility.c in Sources */,
 				6E0D595B194F12D10036E940 /* LHPulleyJointNode.mm in Sources */,
 				6E0D5963194F1DCF0036E940 /* LHPrismaticJointNode.mm in Sources */,
@@ -3180,6 +3195,7 @@
 				6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */,
 				6EBEA2B3195963A900726044 /* LHUINode.mm in Sources */,
 				6E1220BD1924BD86005E8532 /* CCResponderManager.m in Sources */,
+				6E1AAB771973BA4000E8ECCE /* LHUserProperties.mm in Sources */,
 				6E1220551924BD86005E8532 /* CCConfiguration.m in Sources */,
 				6E9B2A16195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E1221981924BD87005E8532 /* ALWrapper.m in Sources */,

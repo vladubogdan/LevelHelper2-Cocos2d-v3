@@ -29,6 +29,7 @@
 #import "LHSceneBeziersTest.h"
 #import "LHSceneCollisionFilteringTest.h"
 #import "LHSceneCollisionHandlingTest.h"
+#import "LHSceneUserPropertiesTest.h"
 
 @implementation LHSceneDemo
 {
@@ -74,8 +75,7 @@
     [availableScenes addObject:[LHSceneShapesTest class]];
     [availableScenes addObject:[LHSceneBeziersTest class]];
     [availableScenes addObject:[LHSceneCollisionHandlingTest class]];
-    
-    //CUSTOM PROPERTIES EXAMPLE
+    [availableScenes addObject:[LHSceneUserPropertiesTest class]];
     
     //body scale
     //body positioning
