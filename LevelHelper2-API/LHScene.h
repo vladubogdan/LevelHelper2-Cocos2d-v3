@@ -69,6 +69,27 @@
 -(LHUINode*)uiNode;
 
 
+#pragma mark- COLLISION HANDLING
+
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
+                               andNodeB:(CCNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(CCNode*)a
+                          andNodeB:(CCNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(CCNode*)a
+                        andNodeB:(CCNode*)b;
+
+#else //Chipmunk (Cocos2d)
+//users of chipmunk should use the implementation provided by Cocos2d.
+#endif
+
+
+
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus

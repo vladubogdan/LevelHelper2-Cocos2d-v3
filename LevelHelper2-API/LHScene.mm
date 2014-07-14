@@ -31,7 +31,7 @@
 #import "LHBackUINode.h"
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
-
+#import "LHBox2dCollisionHandling.h"
 
 @implementation LHScene
 {
@@ -39,6 +39,9 @@
     __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
     __unsafe_unretained LHUINode*           _uiNode;
     
+#if LH_USE_BOX2D
+    LHBox2dCollisionHandling* _box2dCollision;
+#endif
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
@@ -66,6 +69,10 @@
 
 
 -(void)dealloc{
+    
+#if LH_USE_BOX2D
+    LH_SAFE_RELEASE(_box2dCollision);
+#endif
     
     [self removeAllChildren];
 
@@ -184,9 +191,12 @@
         
         [self setUserInteractionEnabled:YES];
         
-//        [self visit];//call this 3 times to update parallaxes and cameras and remove that weird initial snap
-//        [self visit];//dont know why i need to call it 3 times
-//        [self visit];
+
+#if LH_USE_BOX2D
+        _box2dCollision = [[LHBox2dCollisionHandling alloc] initWithScene:self];
+#else//cocos2d
+        
+#endif
         
     }
     return self;
@@ -412,6 +422,33 @@
     }
     return _uiNode;
 }
+
+#pragma mark- COLLISION HANDLING
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
+                               andNodeB:(CCNode*)b{
+    return NO;
+}
+
+-(void)didBeginContactBetweenNodeA:(CCNode*)a
+                          andNodeB:(CCNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse
+{
+    //nothing to do - users should overwrite this method
+}
+
+-(void)didEndContactBetweenNodeA:(CCNode*)a
+                        andNodeB:(CCNode*)b
+{
+    //nothing to do - users should overwrite this method
+}
+
+#else
+#endif
+
+
 
 -(CCTexture*)textureWithImagePath:(NSString*)imagePath
 {

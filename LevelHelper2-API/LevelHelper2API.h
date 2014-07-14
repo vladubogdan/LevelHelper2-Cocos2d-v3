@@ -33,6 +33,7 @@
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
 #import "LHUserPropertyProtocol.h"
+#import "LHUserProperties.h"
 #import "LHJointNodeProtocol.h"
 
 #import "LHBackUINode.h"
