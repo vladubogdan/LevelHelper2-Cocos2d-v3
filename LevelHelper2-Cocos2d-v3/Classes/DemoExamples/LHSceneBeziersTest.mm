@@ -13,7 +13,7 @@
 @implementation LHSceneBeziersTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/beziersDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/beziersDemo.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

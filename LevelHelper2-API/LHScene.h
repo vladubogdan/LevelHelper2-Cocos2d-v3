@@ -11,6 +11,11 @@
 
 #import "LHConfig.h"
 
+@class LHAnimation;
+@class LHBackUINode;
+@class LHGameWorldNode;
+@class LHUINode;
+
 #if LH_USE_BOX2D
 #ifdef __cplusplus
 #include "Box2D.h"
@@ -18,13 +23,43 @@
 #endif //LH_USE_BOX2D
 
 
+@protocol LHCollisionHandlingProtocol <NSObject>
+
+@required
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
+                               andNodeB:(CCNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(CCNode*)a
+                          andNodeB:(CCNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(CCNode*)a
+                        andNodeB:(CCNode*)b;
+
+#endif
+
+@end
+
+
+@protocol LHAnimationNotificationsProtocol <NSObject>
+
+@required
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+@end
+
+
+
+
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 #define LH_ARC_ENABLED 1
 #endif
 
-@class LHBackUINode;
-@class LHGameWorldNode;
-@class LHUINode;
+
 
 /**
  LHScene class is used to load a level file into Cocos2d v3 engine.
@@ -69,9 +104,31 @@
 -(LHUINode*)uiNode;
 
 
+#pragma mark- ANIMATION HANDLING
+
+/**
+ Set a animation notifications delegate for the cases where you don't need to subclass LHScene.
+ When subclassing LHScene, if you overwrite the animation notifications methods make sure you call super if you also need the delegate support.
+ If you delete the delegate object make sure you null-ify the animation notifications delegate.
+ @param del The object that implements the LHAnimationNotificationsProtocol methods.
+ */
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del;
+
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+
 #pragma mark- COLLISION HANDLING
 
 #if LH_USE_BOX2D
+
+/**
+ Set a collision handling delegate for the cases where you dont need to subclass LHScene.
+ When subclassing LHScene, if you overwrite the collision handling methods make sure you call super if you also need the delegate support.
+ If you delete the delegate object make sure you null-ify the collision handling delegate.
+ @param del The object that implements the LHCollisionHandlingProtocol methods.
+ */
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del;
 
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
                                andNodeB:(CCNode*)b;

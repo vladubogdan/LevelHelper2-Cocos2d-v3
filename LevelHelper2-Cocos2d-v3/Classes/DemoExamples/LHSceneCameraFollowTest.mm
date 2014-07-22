@@ -15,7 +15,7 @@
     BOOL didChangeX;
 }
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/cameraFollowDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/cameraFollowDemo.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

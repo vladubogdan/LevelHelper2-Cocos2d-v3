@@ -26,7 +26,7 @@
 }
 + (LHSceneDemo *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionFilteringDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionFilteringDemo.lhplist"];
 }
 
 -(void)dealloc{

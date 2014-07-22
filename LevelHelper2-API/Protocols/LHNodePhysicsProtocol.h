@@ -65,6 +65,9 @@ typedef enum
 #endif //LH_USE_BOX2D
 
 
+-(void)updatePosition:(CGPoint)pos;
+-(void)updateRotation:(float)rotation;
+
 @end
 
 
@@ -90,8 +93,6 @@ typedef enum
 -(CGAffineTransform)nodeTransform;
 -(CGAffineTransform)absoluteTransform;
 -(void)updateTransform;
--(CGPoint)position;
--(float)rotation;
 -(void)updateScale;
 #endif
 #endif //LH_USE_BOX2D
@@ -103,25 +104,15 @@ typedef enum
 {\
     return [_physicsProtocolImp body];\
 }\
-- (CGAffineTransform)nodeToParentTransform\
-{\
-    if([_physicsProtocolImp body])\
-        _transform = [_physicsProtocolImp nodeTransform];\
-        \
-        return [super nodeToParentTransform];\
-}\
 -(void)setPosition:(CGPoint)position\
 {\
     [super setPosition:position];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
-}\
--(CGPoint)position{\
-    if([_physicsProtocolImp body]){\
-        return [_physicsProtocolImp position];\
+    for(CCNode* child in [self children]){\
+        [child setPosition:[child position]];\
     }\
-    return [super position];\
 }\
 -(void)setRotation:(float)rotation\
 {\
@@ -129,17 +120,17 @@ typedef enum
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
-}\
--(float)rotation{\
-    if([_physicsProtocolImp body]){\
-        return [_physicsProtocolImp rotation];\
+    for(CCNode* child in [self children]){\
+        [child setRotation:[child rotation]];\
     }\
-    return [super rotation];\
 }\
 -(void)setScale:(float)scale{\
     [super setScale:scale];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
+    }\
+    for(CCNode* child in [self children]){\
+        [child setScaleX:[child scaleX]];\
     }\
 }\
 -(void)setScaleX:(float)scaleX{\
@@ -147,11 +138,17 @@ typedef enum
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
     }\
+    for(CCNode* child in [self children]){\
+        [child setScaleX:[child scaleX]];\
+    }\
 }\
 -(void)setScaleY:(float)scaleY{\
     [super setScaleY:scaleY];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
+    }\
+    for(CCNode* child in [self children]){\
+        [child setScaleY:[child scaleY]];\
     }\
 }
 
@@ -164,6 +161,12 @@ typedef enum
 }\
 -(void)removeBody{\
     [_physicsProtocolImp removeBody];\
+}\
+-(void)updatePosition:(CGPoint)position\
+{\
+    [super setPosition:position];\
+}\
+-(void)updateRotation:(float)rotation\
+{\
+    [super setRotation:rotation];\
 }
-
-

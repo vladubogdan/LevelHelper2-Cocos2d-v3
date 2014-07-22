@@ -26,7 +26,7 @@
 }
 + (LHSceneDemo *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/wheelJointDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/wheelJointDemo.lhplist"];
 }
 
 -(void)dealloc{

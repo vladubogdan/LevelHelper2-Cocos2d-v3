@@ -14,7 +14,7 @@
 
 + (LHSceneRopeJointTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/ropeJointDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/ropeJointDemo.lhplist"];
 }
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
 {

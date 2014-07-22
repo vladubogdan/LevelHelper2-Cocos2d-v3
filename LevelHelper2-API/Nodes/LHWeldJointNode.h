@@ -20,7 +20,9 @@ class b2WeldJoint;
 
 /**
  LHWeldJointNode class is used to load a LevelHelper weld joint.
+ 
  WARNING - Weld joint is not supported in Chipmunk.
+ 
  When using Box2d it uses a b2WeldJoint.
  */
 

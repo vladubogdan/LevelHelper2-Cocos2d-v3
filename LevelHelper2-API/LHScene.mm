@@ -39,7 +39,10 @@
     __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
     __unsafe_unretained LHUINode*           _uiNode;
     
+    __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
+
 #if LH_USE_BOX2D
+    __unsafe_unretained id<LHCollisionHandlingProtocol> _collisionsDelegate;
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
@@ -70,7 +73,9 @@
 
 -(void)dealloc{
     
+    _animationsDelegate = nil;
 #if LH_USE_BOX2D
+    _collisionsDelegate = nil;
     LH_SAFE_RELEASE(_box2dCollision);
 #endif
     
@@ -423,8 +428,30 @@
     return _uiNode;
 }
 
+#pragma mark- ANIMATION HANDLING
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del{
+    _animationsDelegate = del;
+}
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedPlayingAnimation:anim];
+    }
+}
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedRepetitionOnAnimation:anim];
+    }
+}
+
+
 #pragma mark- COLLISION HANDLING
 #if LH_USE_BOX2D
+
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del{
+    _collisionsDelegate = del;
+}
 
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
                                andNodeB:(CCNode*)b{

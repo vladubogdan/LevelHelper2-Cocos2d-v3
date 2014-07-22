@@ -20,7 +20,9 @@ class b2DistanceJoint;
 
 /**
  LHDistanceJointNode class is used to load a LevelHelper distance joint.
+
  When using Cocos2d/Chipmunk it uses a CCPhysicsSlideJoint joint.
+ 
  When using Box2d it uses a b2DistanceJoint object.
  */
 

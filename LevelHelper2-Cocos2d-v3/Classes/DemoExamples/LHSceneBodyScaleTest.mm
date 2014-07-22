@@ -14,7 +14,7 @@
 
 + (LHSceneBodyScaleTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

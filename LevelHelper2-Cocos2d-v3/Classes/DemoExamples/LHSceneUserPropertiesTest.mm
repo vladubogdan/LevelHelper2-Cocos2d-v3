@@ -13,7 +13,7 @@
 @implementation LHSceneUserPropertiesTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/userPropertiesDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/userPropertiesDemo.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -63,7 +63,9 @@
      */
     
     
-    
+#ifdef __LH_USER_PROPERTY_ROBOTUSERPROPERTY__
+    //we test for this define here as the user might have this class inside its own project which may have
+    //different properties or no properties defined. We dont want a compilation error if that happens.
     
     LHSprite* pinkRobot = (LHSprite*)[self childNodeWithName:@"pinkRobot"];
     if(pinkRobot){
@@ -119,6 +121,7 @@
         }
     }
     
+#endif
     
     
     

@@ -14,7 +14,7 @@
 @implementation LHSceneCollisionHandlingTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionHandling.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionHandling.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

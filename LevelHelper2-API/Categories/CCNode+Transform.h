@@ -13,4 +13,7 @@
 -(CGPoint)convertToWorldScale:(CGPoint)nodeScale;
 -(CGPoint)convertToNodeScale:(CGPoint)worldScale;
 
+-(float)globalAngleFromLocalAngle:(float)la;
+-(float)localAngleFromGlobalAngle:(float)ga;
+
 @end

@@ -105,8 +105,8 @@
 
 - (void)visit
 {
-    [_animationProtocolImp visit];
     [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
     
     [super visit];
 }

@@ -13,7 +13,6 @@
 
 /**
  LHBezier class is used to load and display a bezier from a level file.
- Users can retrieve a bezier objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 

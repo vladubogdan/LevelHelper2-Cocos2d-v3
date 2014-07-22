@@ -13,7 +13,7 @@
 @implementation LHSceneCharacterAnimationTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/characterAnimation.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/characterAnimation.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

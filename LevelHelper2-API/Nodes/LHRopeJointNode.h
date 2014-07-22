@@ -15,6 +15,7 @@
  LHRopeJointNode class is used to load a LevelHelper rope joint.
  
  When using Chipmunk it uses a CCPhysicsSlideJoint joint with minimum distance of 0 and maximum equal with the rope length.
+
  When using Box2d it uses a b2RopeJoint joint.
  */
 

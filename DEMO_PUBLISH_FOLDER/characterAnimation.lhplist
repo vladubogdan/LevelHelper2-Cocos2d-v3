@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -1689,16 +1689,16 @@
 					<key>devicePositions</key>
 					<dict>
 						<key>1024x768</key>
-						<string>{0.85300051371256513, 0.84792018886655574}</string>
+						<string>{0.90114339192708337, 0.84614772796630855}</string>
 						<key>1136x640</key>
-						<string>{0.028850905100504556, 0.74890894110718043}</string>
+						<string>{0.11174478928248087, 0.74713648020693335}</string>
 						<key>2048x1536</key>
-						<string>{0.14583333333333334, 0.8454332151075773}</string>
+						<string>{0.22805582682291667, 0.8454332151075773}</string>
 						<key>960x640</key>
-						<string>{0.48624715220745807, 0.74660464798362225}</string>
+						<string>{0.50098186273632261, 0.74590849918463387}</string>
 					</dict>
 					<key>generalPosition</key>
-					<string>{0.85300051371256513, 0.84792018886655574}</string>
+					<string>{0.22805582682291667, 0.8454332151075773}</string>
 					<key>name</key>
 					<string>Officer</string>
 					<key>nodeType</key>

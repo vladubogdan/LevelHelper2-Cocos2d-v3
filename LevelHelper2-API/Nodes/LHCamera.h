@@ -11,7 +11,6 @@
 #import "LHNodeAnimationProtocol.h"
 /**
  LHCamera class is used to load a camera object from a level file.
- Users can retrieve camera objects by calling the scene (LHScene) cameraWithName: method.
  */
 
 @class LHScene;

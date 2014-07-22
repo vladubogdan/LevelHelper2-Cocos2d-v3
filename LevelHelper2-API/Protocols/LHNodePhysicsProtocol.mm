@@ -13,11 +13,14 @@
 
 #import "LHBezier.h"
 #import "LHShape.h"
+#import "LHNode.h"
 
 #import "LHConfig.h"
 
 #import "LHGameWorldNode.h"
 #import "CCNode+Transform.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
 
 #if LH_USE_BOX2D
 
@@ -350,6 +353,13 @@
     if(_body && scheduledForRemoval){
         [self removeBody];
     }
+    
+    if(_body){
+        CGAffineTransform trans = b2BodyToParentTransform(_node, self);
+        CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
+        [((LHNode*)_node) updatePosition:localPos];
+        [((LHNode*)_node) updateRotation:[_node localAngleFromGlobalAngle:CC_RADIANS_TO_DEGREES(-_body->GetAngle())]];
+    }
 }
 
 
@@ -360,7 +370,10 @@ static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
+	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]
+                            && ![n isKindOfClass:[LHBackUINode class]]
+                            && ![n isKindOfClass:[LHUINode class]];
+        n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -384,8 +397,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
 
-    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
-        transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5*_node.scaleX, - _node.contentSize.height*0.5*_node.scaleY);
+//    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
+    transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5, - _node.contentSize.height*0.5);
 
 	return transform;
 }
@@ -394,27 +407,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpaceAR:CGPointZero];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node rotation]));
+        _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node globalAngleFromLocalAngle:[_node rotation]]));
+        _body->SetAwake(true);
     }
 }
-
--(CGPoint)position
-{
-	if(_body){
-        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
-		return [_node convertPositionFromPoints:pt type:[_node positionType]];
-	}
-	return CGPointZero;
-}
--(float)rotation{
-    if([self body]){
-        return CC_RADIANS_TO_DEGREES([self body]->GetAngle());
-    }
-    return 0.0f;
-}
-
 -(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
 {
 	b2Vec2 c; c.Set(0.0f, 0.0f);
@@ -462,12 +460,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     
     if(_body){
         
-        //this will update the transform
-        [_node position];
-        [_node rotation];
-        
         float scaleX = [_node scaleX];
         float scaleY = [_node scaleY];
+        
+        CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = globalScale.x;
+        scaleY = globalScale.y;
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
@@ -711,6 +709,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                     {
                         CGPoint ptA = CGPointFromValue(prevValue);
                         CGPoint ptB = CGPointFromValue(val);
+                        
                         CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
                                                                            to:ptB
                                                                  cornerRadius:0];
@@ -727,6 +726,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                 if(prevValue && firstValue){
                     CGPoint ptA = CGPointFromValue(prevValue);
                     CGPoint ptB = CGPointFromValue(firstValue);
+
                     CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
                                                                        to:ptB
                                                              cornerRadius:0];

@@ -20,7 +20,9 @@ class b2PulleyJoint;
 
 /**
  LHPulleyJointNode class is used to load a LevelHelper pulley joint.
+
  WARNING - Pulley joint is not supported in Chipmunk.
+ 
  When using Box2d it uses a b2PulleyJoint.
  */
 

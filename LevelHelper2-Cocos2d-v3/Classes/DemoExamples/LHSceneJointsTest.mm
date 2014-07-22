@@ -13,7 +13,7 @@
 @implementation LHSceneJointsTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level05-joints.lhplist"];
 }
 
 

@@ -96,19 +96,23 @@
         
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
         
-        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
-        
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
-        
-        if(assetInfo)
+        if(!assetInfo)
         {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            return self;
         }
         
-        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
+                                                                                    node:self];
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+                                                                                                node:self];
+
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
     }
     
@@ -117,8 +121,8 @@
 
 - (void)visit
 {
-    [_animationProtocolImp visit];
     [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
     
     [super visit];
 }

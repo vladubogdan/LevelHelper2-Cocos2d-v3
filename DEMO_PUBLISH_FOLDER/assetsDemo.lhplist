@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -57,7 +57,7 @@
 					<key>colorOverlay</key>
 					<string>{{1, 1}, {1, 1}}</string>
 					<key>generalPosition</key>
-					<string>{0.49427254994710285, 0.83751354217529295}</string>
+					<string>{0.47505615334666801, 0.38009444753934074}</string>
 					<key>name</key>
 					<string>OfficerAsset</string>
 					<key>nodeType</key>
@@ -67,7 +67,7 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{0.66324478387832642, 0.57259136438369751}</string>
+					<string>{1, 1}</string>
 					<key>size</key>
 					<string>{249.82267761230469, 442.64926147460938}</string>
 					<key>tags</key>
@@ -75,7 +75,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>CC20C3F7-CBA9-4DF6-8962-7305068F3E06</string>
+					<string>AB4A06F0-2788-4FA0-A418-F8F0F43D3F84</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -179,6 +179,19 @@
 	<real>8</real>
 	<key>nodeType</key>
 	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>1024x768</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>1136x640</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>2048x1536</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>960x640</key>
+		<string>{{0, 0}, {1, 1}}</string>
+		<key>general</key>
+		<string>{{0, 0}, {1, 1}}</string>
+	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
 	<key>tags</key>

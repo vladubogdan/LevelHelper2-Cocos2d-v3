@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{0.25925758481025696, 0.25878912210464478}, {0.25920552015304565, 1}}</string>
+	<string>{{0.32832309599999998, 0.32782346010000002}, {0.32825616000000002, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>

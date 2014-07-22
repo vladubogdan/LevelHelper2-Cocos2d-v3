@@ -20,7 +20,7 @@
 }
 + (LHSceneGearJointsTest *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gearJointDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gearJointDemo.lhplist"];
 }
 
 -(void)dealloc{

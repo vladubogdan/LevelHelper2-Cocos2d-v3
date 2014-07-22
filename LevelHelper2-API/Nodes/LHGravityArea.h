@@ -11,7 +11,6 @@
 
 /**
  LHGravityArea class is used to load a gravity area object from a level file.
- Users can retrieve node objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 

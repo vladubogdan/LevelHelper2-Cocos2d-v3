@@ -34,6 +34,7 @@
 
 /**
  Returns the animation with a given name or nil if no animation with the specified name is found on the node.
+ @param animName The name of the animation that you want returned.
  */
 -(LHAnimation*)animationWithName:(NSString*)animName;
 
