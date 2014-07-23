@@ -207,6 +207,16 @@
     return self;
 }
 
+-(void)onEnter{
+    
+    NSLog(@"ON ENTER");
+    
+    [[self gameWorldNode] setPaused:NO];
+    
+    [super onEnter];
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
 ////////////////////////////////////////////////////////////////////////////////
@@ -284,6 +294,7 @@
     groundBodyDef.position.Set(0, 0); // bottom-left corner
     
     b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
     
     // Define the ground box shape.
     b2EdgeShape groundBox;

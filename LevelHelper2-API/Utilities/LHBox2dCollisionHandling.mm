@@ -64,20 +64,24 @@ public:
     
 };
 void LHContactListenerPimpl::BeginContact(b2Contact* contact){
+//    NSLog(@"BEGIN CONTANCT %p %p", contact->GetFixtureA(), contact->GetFixtureB() );
     if(contact->GetFixtureA() != NULL && contact->GetFixtureB() != NULL)
         (*beginSolveSelector)(nodeObject,contact);
 }
 void LHContactListenerPimpl::EndContact(b2Contact* contact){
+//    NSLog(@"END CONTACT %p %p", contact->GetFixtureA(), contact->GetFixtureB());
     if(contact->GetFixtureA() != NULL && contact->GetFixtureB() != NULL)
         (*endSolveSelector)(nodeObject,contact);
 }
 void LHContactListenerPimpl::PreSolve(b2Contact* contact,
                                       const b2Manifold* oldManifold){
+//    NSLog(@"PRE SOLVE");
     if(contact->GetFixtureA() != NULL && contact->GetFixtureB() != NULL)
         (*preSolveSelector)( nodeObject, contact, oldManifold);
 }
 void LHContactListenerPimpl::PostSolve(b2Contact* contact,
                                        const b2ContactImpulse* impulse){
+//    NSLog(@"POST SOLVE");
     if(contact->GetFixtureA() != NULL && contact->GetFixtureB() != NULL)
         (*postSolveSelector)(nodeObject, contact, impulse);
 }
@@ -262,6 +266,13 @@ void lhContactEndContactCaller(void* object,
     CCNode* nodeA = [self getNodeAFromContact:contact];
     CCNode* nodeB = [self getNodeBFromContact:contact];
     if(!nodeA || !nodeB)return;
+    
+    //in case of sensors - call begin contact with 0 impulse
+    [_scene didBeginContactBetweenNodeA:nodeA
+                               andNodeB:nodeB
+                             atLocation:[self getPointFromContact:contact]
+                            withImpulse:0];
+
 //    [_activeContacts addObject:[LHActiveContact activeContactWithA:nodeA
 //                                                                 b:nodeB
 //                                                          disabled:NO
