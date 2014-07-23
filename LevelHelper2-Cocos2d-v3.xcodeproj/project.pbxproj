@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E02B9BF197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */; };
+		6E02B9C0197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */; };
 		6E0D55C2194C16590036E940 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C1194C16590036E940 /* LHNodeProtocol.m */; };
 		6E0D55C4194C22130036E940 /* LHNodeAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C3194C22130036E940 /* LHNodeAnimationProtocol.m */; };
 		6E0D55C7194C2C770036E940 /* LHNodePhysicsProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D55C6194C2C770036E940 /* LHNodePhysicsProtocol.mm */; };
@@ -597,6 +599,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E02B9BD197FD3D70077349C /* LHSceneAssetsWithJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsWithJointsTest.h; sourceTree = "<group>"; };
+		6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsWithJointsTest.mm; sourceTree = "<group>"; };
 		6E0D55C1194C16590036E940 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
 		6E0D55C3194C22130036E940 /* LHNodeAnimationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeAnimationProtocol.m; sourceTree = "<group>"; };
 		6E0D55C5194C2C4E0036E940 /* LHNodePhysicsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodePhysicsProtocol.h; sourceTree = "<group>"; };
@@ -2538,6 +2542,8 @@
 				6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */,
 				6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */,
 				6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */,
+				6E02B9BD197FD3D70077349C /* LHSceneAssetsWithJointsTest.h */,
+				6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */,
 				6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */,
 				6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */,
 				6EBEA2BE19596DAF00726044 /* LHSceneJointsTest.h */,
@@ -2646,8 +2652,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E121FE21924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk */,
 				6E0D55C8194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2d */,
+				6E121FE21924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk */,
 				6E121FF91924BD85005E8532 /* ObjectiveChipmunk */,
 			);
 		};
@@ -2830,6 +2836,7 @@
 				6E0D560D194C32A30036E940 /* CCTiledMap.m in Sources */,
 				6E0D560E194C32A30036E940 /* CCControl.m in Sources */,
 				6E0D560F194C32A30036E940 /* CCVertex.m in Sources */,
+				6E02B9C0197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */,
 				6E0D58E8194CD6A40036E940 /* b2ChainShape.cpp in Sources */,
 				6E0D5610194C32A30036E940 /* ALBuffer.m in Sources */,
 				6ECDF90B196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
@@ -3076,6 +3083,7 @@
 				6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */,
 				6E1220D61924BD86005E8532 /* CCShaderCache.m in Sources */,
 				6E89FE28192E23100040478F /* LHGravityArea.mm in Sources */,
+				6E02B9BF197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */,
 				6E89FE2C192E23100040478F /* LHRopeJointNode.mm in Sources */,
 				6E9B2A2219600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */,
 				6E1222131924BD88005E8532 /* CCBSequenceProperty.m in Sources */,

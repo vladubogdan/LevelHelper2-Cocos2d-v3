@@ -12,6 +12,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
 #import "LHGameWorldNode.h"
+#import "CCNode+Transform.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -125,6 +126,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark LHNodeProtocol Optional
+- (void)visit
+{
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
+       
+    [super visit];
+}
 -(BOOL)lateLoading
 {
     [_jointProtocolImp findConnectedNodes];
@@ -133,9 +142,15 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     CCNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
     CGPoint relativePosA = [_jointProtocolImp localAnchorA];
-    
+        
     if(nodeA && nodeB)
     {
+        [nodeA setPosition:[nodeA position]];
+        [nodeB setPosition:[nodeB position]];
+
+        [nodeA setRotation:[nodeA rotation]];
+        [nodeB setRotation:[nodeB rotation]];
+
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];
@@ -185,27 +200,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                                                        bodyB:nodeB.physicsBody
                                                                      anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
                                                                                          relativePosA.y + nodeA.contentSize.height*0.5)];
-        
-//        CGPoint relativePosB = [nodeA convertToWorldSpaceAR:relativePosA];
-//        relativePosB = [nodeB convertToNodeSpaceAR:relativePosB];
-//        
-//        
-//        
-//        CCPhysicsJoint* joint = [CCPhysicsJoint LHPinJointWithBodyA:nodeA.physicsBody
-//                                                              bodyB:nodeB.physicsBody
-//                                                            anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
-//                                                                                relativePosA.y + nodeA.contentSize.height*0.5)
-//                                                            anchorB:relativePosB];
-        
-//        CCPhysicsJoint* joint = [CCPhysicsJoint connectedDistanceJointWithBodyA:nodeA.physicsBody
-//                                                                          bodyB:nodeB.physicsBody
-//                                                                        anchorA:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
-//                                                                                            relativePosA.y + nodeA.contentSize.height*0.5)
-//                                                                        anchorB:CGPointMake(relativePosA.x + nodeA.contentSize.width*0.5,
-//                                                                                            relativePosA.y + nodeA.contentSize.height*0.5)
-//                                                                    minDistance:0
-//                                                                    maxDistance:0.1];
-
         joint.collideBodies = [_jointProtocolImp collideConnected];
         
         [_jointProtocolImp setJoint:joint];

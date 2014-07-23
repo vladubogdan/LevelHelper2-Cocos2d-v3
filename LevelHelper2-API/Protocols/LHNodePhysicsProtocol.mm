@@ -21,6 +21,8 @@
 #import "CCNode+Transform.h"
 #import "LHUINode.h"
 #import "LHBackUINode.h"
+#import "LHAsset.h"
+
 
 #if LH_USE_BOX2D
 
@@ -35,6 +37,10 @@
 
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
+
+@interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
 
@@ -66,6 +72,16 @@
 
 -(CCNode*)node{
     return _node;
+}
+
+-(LHAsset*)assetParent{
+    CCNode* p = _node;
+    while(p && [p parent]){
+        if([p isKindOfClass:[LHAsset class]])
+            return (LHAsset*)p;
+        p = [p parent];
+    }
+    return nil;
 }
 
 - (instancetype)initPhysicsProtocolWithNode:(CCNode*)nd
@@ -116,7 +132,6 @@
         LHScene* scene = (LHScene*)[_node scene];
         b2World* world = [scene box2dWorld];
         
-
         b2BodyDef bodyDef;
         bodyDef.type = (b2BodyType)type;
         
@@ -124,8 +139,8 @@
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 
-
-        float angle = [_node rotation];
+        float angle = [_node globalAngleFromLocalAngle:[_node rotation]];
+        
         bodyDef.angle = CC_DEGREES_TO_RADIANS(-angle);
         
         bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
@@ -144,6 +159,7 @@
         sizet.height = [scene metersFromValue:sizet.height];
         
         CGPoint scale = CGPointMake(_node.scaleX, _node.scaleY);
+        scale = [_node convertToWorldScale:scale];
         
         previousScale = scale;
         
@@ -203,6 +219,12 @@
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shapeType == 2)//POLYGON
         {
@@ -287,6 +309,7 @@
                     
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
+                    
                     delete[] verts;
                 }
             }
@@ -407,7 +430,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [[_node parent] convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node globalAngleFromLocalAngle:[_node rotation]]));
         _body->SetAwake(true);
@@ -466,6 +489,10 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
         scaleX = globalScale.x;
         scaleY = globalScale.y;
+        
+        if(previousScale.x == scaleX && previousScale.y == scaleY){
+            return;
+        }
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
@@ -635,8 +662,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     //nothing to do for chipmunk
 }
 
-
-
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
     
     if(self = [super init])
@@ -758,6 +783,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shape == 2)//POLYGON
         {

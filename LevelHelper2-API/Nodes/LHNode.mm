@@ -63,6 +63,7 @@
 //        [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
 //        CGPoint* vertices = new CGPoint[4];
 //        vertices[0] = CGPointMake(0, 0);
+//        CGSize size = self.contentSize;
 //        vertices[1] = CGPointMake(size.width, 0);
 //        vertices[2] = CGPointMake(size.width, size.height);
 //        vertices[3] = CGPointMake(0, size.height);

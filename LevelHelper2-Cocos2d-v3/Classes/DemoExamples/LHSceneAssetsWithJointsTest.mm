@@ -1,5 +1,5 @@
 //
-//  LHSceneAssetsTest.m
+//  LHSceneAssetsWithJointsTest.m
 //  LevelHelper2-Cocos2d-v3
 //
 //  Created by Bogdan Vladu on 15/05/14.
@@ -8,11 +8,12 @@
 // -----------------------------------------------------------------------
 
 // Import the interfaces
-#import "LHSceneAssetsTest.h"
+#import "LHSceneAssetsWithJointsTest.h"
 
-@implementation LHSceneAssetsTest
+@implementation LHSceneAssetsWithJointsTest
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/assetsDemo.lhplist"];
+//        return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/introductionScene.lhplist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/simpleCar.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -23,17 +24,18 @@
     
     
 #if LH_USE_BOX2D
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ASSETS DEMO\nAssets are special objects that when edited they will change\nto the new edited state everywhere they are used in your project.\n\nClick to create a new officer (asset) of a random scale and rotation."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR ASSETS DEMO\nAnother asset demo. This time demonstrating an asset containing joints.\n\nClick to create a new car of a random rotation."
                                          fontName:@"Arial"
                                          fontSize:20];
+    [ttf setColor:[CCColor blackColor]];
 #else
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ASSETS DEMO\nAssets are special objects that when edited they will change\nto the new edited state everywhere they are used in your project.\n\nClick to create a new officer (asset) of a random scale and rotation.\n\nChipmunk detected:\nSorry but currently Cocos2d has a bug where it does not update children physics body position.\nWhen using Chipmunk and having physics bodies on children of node transformations will not work correctly.\nSwitch to the Box2d target for correct physics transformations."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR ASSETS DEMO\nSorry this demo is not available when using Chipmunk.\nPlease switch to the Box2d target inside Xcode."
                                          fontName:@"Arial"
                                          fontSize:20];
+    [ttf setColor:[CCColor redColor]];
 #endif
 
     
-    [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
     [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
                                  self.contentSize.height*0.5+60)];
@@ -55,17 +57,18 @@
     
     
     LHAsset* asset = [LHAsset createWithName:@"myNewAsset"
-                               assetFileName:@"DEMO_PUBLISH_FOLDER/OfficerAsset.lhasset"
+                               assetFileName:@"DEMO_PUBLISH_FOLDER/carAsset.lhasset"
                                       parent:[self gameWorldNode]];
     asset.position = location;
+
+    //NOTE: you should not scale nodes containig joints or nodes that are connected to joints.
+    //The joints will break or will have strange behaviour..
+    //The only way to use scale is to scale the node prior creating the joint - so from inside LevelHelper 2 app.
     
-    float randomScale = [self randomFloat:0.15 max:0.8f];
-    asset.scaleX = randomScale;
-    asset.scaleY = randomScale;
-    
-    float zRot = [self randomFloat:-45 max:45.0f];
+    float zRot = [self randomFloat:-60 max:60.0f];
     asset.rotation = zRot;
-        
+    
+    
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
 }
