@@ -12,7 +12,6 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
 #import "LHGameWorldNode.h"
-#import "CCNode+Transform.h"
 
 #if LH_USE_BOX2D
 #include "Box2D.h"
@@ -145,12 +144,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
     if(nodeA && nodeB)
     {
-        [nodeA setPosition:[nodeA position]];
-        [nodeB setPosition:[nodeB position]];
-
-        [nodeA setRotation:[nodeA rotation]];
-        [nodeB setRotation:[nodeB rotation]];
-
 #if LH_USE_BOX2D
         
         LHScene* scene = (LHScene*)[self scene];

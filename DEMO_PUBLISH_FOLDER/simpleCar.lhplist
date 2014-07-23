@@ -201,7 +201,7 @@
 								<key>fixedRotation</key>
 								<false/>
 								<key>fixtureUUID</key>
-								<string>BE569382-F904-483A-AB9A-5368F4743DD2</string>
+								<string>2D4646C6-BCE0-487F-968C-2B64024C038C</string>
 								<key>genericFixture</key>
 								<dict>
 									<key>category</key>
@@ -594,15 +594,15 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{-0.12274660915136337, -0.10179375112056732}, {1.9923174381256104, 1.101793646812439}}</string>
 		<key>1136x640</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{-0.1241401806473732, -0.0041873292066156864}, {1.9917556047439575, 1.0041873455047607}}</string>
 		<key>2048x1536</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{-0.12998420000076294, -0.097343310713768005}, {1.9924073219299316, 1.1754747629165649}}</string>
 		<key>960x640</key>
-		<string>{{0, -5.7178094721166417e-05}, {1.8883054256439209, 1.0000572204589844}}</string>
+		<string>{{-0.12748925387859344, 0.010984653607010841}, {2.0157945156097412, 0.98901540040969849}}</string>
 		<key>general</key>
-		<string>{{0, -5.7178094721166417e-05}, {1.8883054256439209, 1.0000572204589844}}</string>
+		<string>{{-0.12274660915136337, -0.10179375112056732}, {1.9923174381256104, 1.101793646812439}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -612,7 +612,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>BE569382-F904-483A-AB9A-5368F4743DD2</key>
+		<key>2D4646C6-BCE0-487F-968C-2B64024C038C</key>
 		<array>
 			<array>
 				<string>{-40.75, -37.5}</string>

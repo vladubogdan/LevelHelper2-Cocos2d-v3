@@ -845,6 +845,9 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 
 - (void)visit
 {
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
     
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];

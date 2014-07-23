@@ -168,7 +168,7 @@
 //    delete[] vertices;
 //#endif//LH_DEBUG
     
-    [self visit];
+    [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
     
     return self;
 }

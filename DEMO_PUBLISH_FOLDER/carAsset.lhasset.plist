@@ -32,7 +32,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>BE569382-F904-483A-AB9A-5368F4743DD2</string>
+				<string>2D4646C6-BCE0-487F-968C-2B64024C038C</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -62,7 +62,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+			<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 			<key>relativeImagePath</key>
 			<string>DEMO_PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -102,7 +102,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+			<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 			<key>relativePosA</key>
 			<string>{0, 0}</string>
 			<key>spriteAUUID</key>
@@ -136,7 +136,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+			<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 			<key>relativePosA</key>
 			<string>{0, 0}</string>
 			<key>spriteAUUID</key>
@@ -202,7 +202,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+			<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 			<key>relativeImagePath</key>
 			<string>DEMO_PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -274,7 +274,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+			<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 			<key>relativeImagePath</key>
 			<string>DEMO_PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -319,7 +319,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>BE569382-F904-483A-AB9A-5368F4743DD2</key>
+		<key>2D4646C6-BCE0-487F-968C-2B64024C038C</key>
 		<array>
 			<array>
 				<string>{-40.75, -37.5}</string>
@@ -379,7 +379,7 @@
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>8E182F4D-0FC4-476B-B55A-F008636C4DE1</string>
+	<string>4B5B3C24-10B5-4886-A9E9-0C8D0A9ADB46</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>
