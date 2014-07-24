@@ -48,11 +48,6 @@
         
         [prnt addChild:self];
         
-        NSDictionary* tracedFix = [dict objectForKey:@"tracedFixtures"];
-        if(tracedFix){
-            tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
-        }
-        
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
@@ -70,6 +65,10 @@
         }
         
         if(assetInfo){
+            NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+            if(tracedFix){
+                tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+            }
             [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
         }
         else{

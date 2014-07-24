@@ -33,12 +33,12 @@ class b2PulleyJoint;
 
 #pragma mark - Properties
 /**
- Returns the first ground anchor in scene coordinats.
+ Returns the first ground anchor in scene coordinates.
  */
 -(CGPoint)groundAnchorA;
 
 /**
- Returns the first ground anchor in scene coordinats.
+ Returns the first ground anchor in scene coordinates.
  */
 -(CGPoint)groundAnchorB;
 

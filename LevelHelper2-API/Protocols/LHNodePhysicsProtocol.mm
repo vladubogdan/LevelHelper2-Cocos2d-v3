@@ -60,7 +60,7 @@
 -(void)dealloc{
     _node = nil;
 #if LH_USE_BOX2D
-    //XXXX we need to delete the body
+    //XXXX we need to delete the body - deleted automatically - do nothing
 #endif
     
     LH_SUPER_DEALLOC();
@@ -140,7 +140,6 @@
         bodyDef.position = bodyPos;
 
         float angle = [_node globalAngleFromLocalAngle:[_node rotation]];
-        
         bodyDef.angle = CC_DEGREES_TO_RADIANS(-angle);
         
         bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);

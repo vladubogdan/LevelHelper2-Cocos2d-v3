@@ -33,12 +33,12 @@ class b2DistanceJoint;
 
 #pragma mark - Properties
 /**
- Returns the damping ratio of the SpriteKit joint.
+ Returns the damping ratio of the joint.
  */
 -(CGFloat)damping;
 
 /**
- Returns the frequency of the SpriteKit joint.
+ Returns the frequency of the joint.
  */
 -(CGFloat)frequency;
 

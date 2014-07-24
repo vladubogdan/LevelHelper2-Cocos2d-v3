@@ -162,7 +162,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         if(!bodyA || !bodyB)return NO;
         
         b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
-        
         b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
         
         b2PrismaticJointDef jointDef;
