@@ -208,11 +208,7 @@
 }
 
 -(void)onEnter{
-    
-    NSLog(@"ON ENTER");
-    
     [[self gameWorldNode] setPaused:NO];
-    
     [super onEnter];
 }
 
