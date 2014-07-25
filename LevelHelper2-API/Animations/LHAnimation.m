@@ -101,6 +101,7 @@
         }
         
         if(_active){
+            [self restart];
             [self setAnimating:YES];
         }
         
