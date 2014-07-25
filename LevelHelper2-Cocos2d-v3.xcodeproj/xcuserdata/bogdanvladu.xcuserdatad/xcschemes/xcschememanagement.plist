@@ -4,22 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LevelHelper2-Cocos2d-v3+Box2d.xcscheme</key>
+		<key>LevelHelper2-Cocos2d-v3+Box2d-MacOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>LevelHelper2-Cocos2d-v3+Box2d-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>LevelHelper2-Cocos2d-v3+Chipmunk.xcscheme</key>
+		<key>LevelHelper2-Cocos2d-v3+Chipmunk-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
+		</dict>
+		<key>ObjectiveChipmunk-MAC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>ObjectiveChipmunk.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -35,6 +47,21 @@
 			<true/>
 		</dict>
 		<key>6E121FF91924BD85005E8532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E216BCC1982B8FA00C1F7CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E2170401982BA8600C1F7CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E40269E1982C4BF002B4D32</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E121FE21924BD85005E8532"
-               BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
-               BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
+               BlueprintIdentifier = "6E40269E1982C4BF002B4D32"
+               BuildableName = "libObjectiveChipmunk.a"
+               BlueprintName = "ObjectiveChipmunk-MAC"
                ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,34 +29,16 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -66,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

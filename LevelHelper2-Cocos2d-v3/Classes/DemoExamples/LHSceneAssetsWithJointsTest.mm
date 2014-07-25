@@ -51,26 +51,38 @@
     return ((arc4random()%RAND_MAX)/(RAND_MAX*1.0))*(Max-Min)+Min;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-    CGPoint location = [touch locationInNode:self];
+    [self createAssetAtLocation:[touch locationInNode:self]];
     
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
     
+    [self createAssetAtLocation:[theEvent locationInNode:self]];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)createAssetAtLocation:(CGPoint)location
+{
     LHAsset* asset = [LHAsset createWithName:@"myNewAsset"
                                assetFileName:@"DEMO_PUBLISH_FOLDER/carAsset.lhasset"
                                       parent:[self gameWorldNode]];
     asset.position = location;
-
+    
     //NOTE: you should not scale nodes containig joints or nodes that are connected to joints.
     //The joints will break or will have strange behaviour..
     //The only way to use scale is to scale the node prior creating the joint - so from inside LevelHelper 2 app.
     
     float zRot = [self randomFloat:-60 max:60.0f];
     asset.rotation = zRot;
-    
-    
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
 
 @end

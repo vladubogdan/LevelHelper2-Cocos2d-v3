@@ -52,17 +52,37 @@
 	return self;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
-    CGPoint pt = [[CCDirector sharedDirector] convertTouchToGL:touch];
+    CGPoint pt = [touch locationInNode:self];
+    [self scaleSpritesAtPoint:pt];
     
-    CGSize size = [[CCDirector sharedDirector] designSize];
+    [super touchBegan:touch withEvent:event];
+}
 
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint pt = [theEvent locationInNode:self];
+    [self scaleSpritesAtPoint:pt];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)scaleSpritesAtPoint:(CGPoint)pt
+{
+    CGSize size = [[CCDirector sharedDirector] designSize];
+    
     float scale = 0.2;
     
     if(pt.x < size.width*0.5)
         scale = -0.2;
-
+    
     
     {
         LHSprite* spr = (LHSprite*)[self childNodeWithName:@"hat"];
@@ -71,14 +91,14 @@
         [spr setScaleX:[spr scaleX]+scale];
         [spr setScaleY:[spr scaleY]+scale];
     }
-
+    
     {
         LHSprite* candy = (LHSprite*)[self childNodeWithName:@"candy"];
         NSLog(@"CIRCLE NODE %@ %f X %f", candy, [candy scale], [candy scaleX]);
         [candy setScale:[candy scale]+scale];
     }
-
-
+    
+    
     {
         LHSprite* rectSpr = (LHSprite*)[self childNodeWithName:@"thumb_tack_2"];
         
@@ -87,8 +107,6 @@
         [rectSpr setScaleY:[rectSpr scaleY]+scale];
     }
     
-    [super touchBegan:touch withEvent:event];
 }
-
 
 @end

@@ -120,10 +120,10 @@
         [devices addObject:dev];
     }
 
-    #if TARGET_OS_IPHONE
+    #if __CC_PLATFORM_IOS
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
     #else
-    LHDevice* curDev = [LHUtils deviceFromArray:devices withSize:size];
+    LHDevice* curDev = [LHUtils deviceFromArray:devices withSize:LH_SCREEN_RESOLUTION];
     #endif
 
     CGPoint childrenOffset = CGPointZero;
@@ -323,11 +323,7 @@
     NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
     if(gameWorldInfo)
     {
-#if TARGET_OS_IPHONE
         CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-        CGSize scr = self.size;
-#endif
         
         NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
         if(!rectInf){
@@ -570,15 +566,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #pragma mark - TOUCH SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 
+#ifdef __CC_PLATFORM_IOS
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
     touchBeganLocation = [touch locationInNode:self];
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:self];
-    
     for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
         if([rope canBeCut]){
             [rope cutWithLineFromPointA:touchBeganLocation
@@ -586,6 +581,20 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         }
     }
 }
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
+    touchBeganLocation = [theEvent locationInNode:self];
+}
+-(void)mouseUp:(NSEvent *)theEvent{
+    CGPoint touchLocation = [theEvent locationInNode:self];
+    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
+        if([rope canBeCut]){
+            [rope cutWithLineFromPointA:touchBeganLocation
+                               toPointB:touchLocation];
+        }
+    }
+}
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -605,11 +614,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(float)currentDeviceRatio{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];
@@ -632,11 +637,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(NSString*)currentDeviceSuffix:(BOOL)keep2x{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];

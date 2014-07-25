@@ -49,11 +49,32 @@
     return ((arc4random()%RAND_MAX)/(RAND_MAX*1.0))*(Max-Min)+Min;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
     CGPoint location = [touch locationInNode:self];
     
+    [self createAssetAtLocation:location];
+        
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
     
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self createAssetAtLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)createAssetAtLocation:(CGPoint)location
+{
     LHAsset* asset = [LHAsset createWithName:@"myNewAsset"
                                assetFileName:@"DEMO_PUBLISH_FOLDER/OfficerAsset.lhasset"
                                       parent:[self gameWorldNode]];
@@ -65,9 +86,6 @@
     
     float zRot = [self randomFloat:-45 max:45.0f];
     asset.rotation = zRot;
-        
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
 
 @end

@@ -37,19 +37,33 @@
 	return self;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
+    [self tougleAnimation];
+    
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    [self tougleAnimation];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)tougleAnimation{
     LHNode* officerNode = (LHNode*)[self childNodeWithName:@"Officer"];
     if(officerNode){
         LHAnimation* anim = [officerNode activeAnimation];
         [anim setAnimating:![anim animating]];
         NSLog(@"ANIMATION: %@ %@.", [anim animating] ? @"Playing" : @"Pausing", [anim name]);
     }
- 
-    
-    
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
 
 

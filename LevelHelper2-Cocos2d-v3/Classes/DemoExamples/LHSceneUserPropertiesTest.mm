@@ -34,11 +34,6 @@
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
     
-    
-    
-    
-    
-    
     /*HELP
      
      //Creating the property class

@@ -55,8 +55,27 @@
     return self;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
+    [self handleJoints];
+
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    [self handleJoints];
+    [super mouseDown:theEvent];
+}
+#endif
+
+-(void)handleJoints
+{
     {
         LHDistanceJointNode* dJointNode = (LHDistanceJointNode*)[self childNodeWithName:@"testDistanceJoint"];
         if(dJointNode){
@@ -74,7 +93,7 @@
             rJointNode = NULL;
         }
     }
-
+    
     {
         LHPulleyJointNode* pJointNode = (LHPulleyJointNode*)[self childNodeWithName:@"PulleyJoint"];
         if(pJointNode){
@@ -101,12 +120,6 @@
             pJointNode = NULL;
         }
     }
-
-
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
-
-
 
 @end

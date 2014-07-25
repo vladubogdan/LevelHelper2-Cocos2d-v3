@@ -62,12 +62,12 @@
     return self;
 }
 
+#ifdef __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
     //without this touch began is not called
-    CCDirector* dir = [CCDirector sharedDirector];
-    CGPoint touchLocation = [touch locationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
+    CGPoint touchLocation = [touch locationInNode:self];
     
     [self createMouseJointForTouchLocation:touchLocation];
 
@@ -78,10 +78,7 @@
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CCDirector* dir = [CCDirector sharedDirector];
-    CGPoint touchLocation = [touch locationInView: [touch view]];
-	touchLocation = [dir convertToGL: touchLocation];
-    
+    CGPoint touchLocation = [touch locationInNode:self];
     
     [self setTargetOnMouseJoint:touchLocation];
 
@@ -100,6 +97,30 @@
     
     [super touchEnded:touch withEvent:event];
 }
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint touchLocation = [theEvent locationInNode:self];
+    [self createMouseJointForTouchLocation:touchLocation];
+    [super mouseDown:theEvent];
+}
+-(void)mouseDragged:(NSEvent *)theEvent{
+    
+    CGPoint touchLocation = [theEvent locationInNode:self];
+    [self setTargetOnMouseJoint:touchLocation];
+    
+    [super mouseDragged:theEvent];
+}
+-(void)mouseUp:(NSEvent *)theEvent{
+    
+    [self destroyMouseJoint];
+    [super mouseUp:theEvent];
+}
+
+#endif
+
+
 
 -(void)createMouseJointForTouchLocation:(CGPoint)point
 {
