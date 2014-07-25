@@ -9,7 +9,7 @@
 #import "LHGameWorldNode.h"
 #import "LHUtils.h"
 #import "LHScene.h"
-
+#import "LHConfig.h"
 
 #if LH_USE_BOX2D
 
@@ -241,10 +241,14 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 -(void)draw
 {
     [self clear];
+    
+#if LH_DEBUG
     if(_drawState){
         [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
         [super draw];
     }
+#endif
+    
 }
 -(BOOL)drawState{
     return _drawState;

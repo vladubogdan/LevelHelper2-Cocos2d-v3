@@ -63,6 +63,8 @@
     
     __weak LHScene* _scene;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* node;
+    
+    int     beginFrameIdx;
 }
 
 -(void)dealloc{
@@ -157,16 +159,23 @@
     }
 }
 -(void)setAnimating:(bool)val{
-    [self resetOneShotFrames];
     animating = val;
-    currentRepetition = 0;
-    currentTime = 0;
 }
+
 -(bool)animating{
     return animating;
 }
+
+-(void)restart{
+    [self resetOneShotFrames];
+    currentRepetition = 0;
+    currentTime = 0;
+    beginFrameIdx = 0;
+}
+
 -(void)updateTimeWithDelta:(float)delta{
-    [self setCurrentTime:[self currentTime] + delta];
+    if(animating)
+        [self setCurrentTime:[self currentTime] + delta];
 }
 -(void)updateTimeWithValue:(float)val{
     [self setCurrentTime:val];
@@ -255,6 +264,59 @@
             break;//exit for
         }
     }
+
+    
+    //possible optimisation - needs more testing
+//    LHFrame* beginFrm = nil;
+//    LHFrame* endFrm = nil;
+//    
+//    if(beginFrameIdx >= [frames count]-1){
+//        beginFrameIdx = 0;
+//    }
+//    
+//    for(int i = beginFrameIdx; i < [frames count];++i)
+//    {
+//        LHFrame* frm = [frames objectAtIndex:i];
+//        
+//        LHFrame* endFrame = nil;
+//        if(i+1 < [frames count]){
+//            endFrame = [frames objectAtIndex:i+1];
+//        }
+//        
+//        if([frm frameNumber]*(1.0f/_fps) <= time){
+//            beginFrm = frm;
+//            beginFrameIdx = i;
+//        }
+//        
+//        if(endFrame && [endFrame frameNumber]*(1.0f/_fps) > time){
+//            endFrm = endFrame;
+//            break;//exit for
+//        }
+//        
+//        if([frm frameNumber]*(1.0f/_fps) > time){
+//            endFrm = frm;
+//            break;//exit for
+//        }
+//    }
+//    
+//    if(!beginFrm)
+//    {
+//        int i = 0;
+//        for(LHFrame* frm in frames)
+//        {
+//            if([frm frameNumber]*(1.0f/_fps) <= time){
+//                beginFrm = frm;
+//                beginFrameIdx = i;
+//            }
+//            
+//            if([frm frameNumber]*(1.0f/_fps) > time){
+//                endFrm = frm;
+//                break;//exit for
+//            }
+//            ++i;
+//        }
+//    }
+    
     
     
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* animNode = node;
@@ -262,12 +324,6 @@
         animNode = [prop subpropertyNode];
     }
     
-//    NSLog(@"UPDATE ANIMATION with node %@", animNode);
-//    
-//    NSLog(@"BEGIN FRAME %@", beginFrm);
-//    NSLog(@"END FRAME %@", endFrm);
-//    NSLog(@"TIME %f", time);
-//    
 
     if([prop isKindOfClass:[LHChildrenPositionsProperty class]])
     {

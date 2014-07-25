@@ -37,5 +37,20 @@
 	return self;
 }
 
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    
+    LHNode* officerNode = (LHNode*)[self childNodeWithName:@"Officer"];
+    if(officerNode){
+        LHAnimation* anim = [officerNode activeAnimation];
+        [anim setAnimating:![anim animating]];
+        NSLog(@"ANIMATION: %@ %@.", [anim animating] ? @"Playing" : @"Pausing", [anim name]);
+    }
+ 
+    
+    
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+
 
 @end
