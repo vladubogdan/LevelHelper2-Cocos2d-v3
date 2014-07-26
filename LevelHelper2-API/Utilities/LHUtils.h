@@ -178,9 +178,7 @@ NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
 +(CGPoint)positionForNode:(CCNode*)node
                  fromUnit:(CGPoint)unitPos;
 
-#if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs;
-#endif
 
 +(LHDevice*)deviceFromArray:(NSArray*)arrayOfDevs
                    withSize:(CGSize)size;

@@ -120,11 +120,7 @@
         [devices addObject:dev];
     }
 
-    #if __CC_PLATFORM_IOS
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
-    #else
-    LHDevice* curDev = [LHUtils deviceFromArray:devices withSize:LH_SCREEN_RESOLUTION];
-    #endif
 
     CGPoint childrenOffset = CGPointZero;
     

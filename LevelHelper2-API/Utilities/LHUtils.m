@@ -89,12 +89,10 @@
 }
 
 
-#if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs{
     return [LHUtils deviceFromArray:arrayOfDevs
                            withSize:LH_SCREEN_RESOLUTION];
 }
-#endif
 
 +(LHDevice*)deviceFromArray:(NSArray*)arrayOfDevs
                    withSize:(CGSize)size

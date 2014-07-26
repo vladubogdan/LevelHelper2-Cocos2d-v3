@@ -150,10 +150,8 @@
     CGSize winSize = [(LHScene*)[self scene] contentSize];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
 
-//    CGPoint offset = [[(LHScene*)self scene] designOffset];
-    
-    float x = position.x;// - offset.x;
-    float y = position.y;// - offset.y;
+    float x = position.x;
+    float y = position.y;
 
 
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){

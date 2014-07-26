@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E121FE21924BD85005E8532"
-               BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+               BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"
                BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS"
                ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"
             BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"
             BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E121FE21924BD85005E8532"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk.app"
+            BuildableName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"
             BlueprintName = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS"
             ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
          </BuildableReference>
