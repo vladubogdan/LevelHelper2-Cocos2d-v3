@@ -9,6 +9,7 @@
 #import "LHAnimation.h"
 
 //#import "LHNode.h"
+#import "LHScene.h"
 #import "LHSprite.h"
 #import "LHCamera.h"
 #import "LHUtils.h"
@@ -62,6 +63,8 @@
     
     __weak LHScene* _scene;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* node;
+    
+    int     beginFrameIdx;
 }
 
 -(void)dealloc{
@@ -98,6 +101,7 @@
         }
         
         if(_active){
+            [self restart];
             [self setAnimating:YES];
         }
         
@@ -156,16 +160,23 @@
     }
 }
 -(void)setAnimating:(bool)val{
-    [self resetOneShotFrames];
     animating = val;
-    currentRepetition = 0;
-    currentTime = 0;
 }
+
 -(bool)animating{
     return animating;
 }
+
+-(void)restart{
+    [self resetOneShotFrames];
+    currentRepetition = 0;
+    currentTime = 0;
+    beginFrameIdx = 0;
+}
+
 -(void)updateTimeWithDelta:(float)delta{
-    [self setCurrentTime:[self currentTime] + delta];
+    if(animating)
+        [self setCurrentTime:[self currentTime] + delta];
 }
 -(void)updateTimeWithValue:(float)val{
     [self setCurrentTime:val];
@@ -190,6 +201,11 @@
         if(![self didFinishAllRepetitions]){
             currentTime = 0.0f;
             [self resetOneShotFrames];
+            [(LHScene*)[node scene] didFinishedRepetitionOnAnimation:self];
+        }
+        else{
+            [node setActiveAnimation:nil];
+            [(LHScene*)[node scene] didFinishedPlayingAnimation:self];
         }
     }
     previousTime = currentTime;
@@ -249,6 +265,59 @@
             break;//exit for
         }
     }
+
+    
+    //possible optimisation - needs more testing
+//    LHFrame* beginFrm = nil;
+//    LHFrame* endFrm = nil;
+//    
+//    if(beginFrameIdx >= [frames count]-1){
+//        beginFrameIdx = 0;
+//    }
+//    
+//    for(int i = beginFrameIdx; i < [frames count];++i)
+//    {
+//        LHFrame* frm = [frames objectAtIndex:i];
+//        
+//        LHFrame* endFrame = nil;
+//        if(i+1 < [frames count]){
+//            endFrame = [frames objectAtIndex:i+1];
+//        }
+//        
+//        if([frm frameNumber]*(1.0f/_fps) <= time){
+//            beginFrm = frm;
+//            beginFrameIdx = i;
+//        }
+//        
+//        if(endFrame && [endFrame frameNumber]*(1.0f/_fps) > time){
+//            endFrm = endFrame;
+//            break;//exit for
+//        }
+//        
+//        if([frm frameNumber]*(1.0f/_fps) > time){
+//            endFrm = frm;
+//            break;//exit for
+//        }
+//    }
+//    
+//    if(!beginFrm)
+//    {
+//        int i = 0;
+//        for(LHFrame* frm in frames)
+//        {
+//            if([frm frameNumber]*(1.0f/_fps) <= time){
+//                beginFrm = frm;
+//                beginFrameIdx = i;
+//            }
+//            
+//            if([frm frameNumber]*(1.0f/_fps) > time){
+//                endFrm = frm;
+//                break;//exit for
+//            }
+//            ++i;
+//        }
+//    }
+    
     
     
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* animNode = node;
@@ -256,12 +325,6 @@
         animNode = [prop subpropertyNode];
     }
     
-//    NSLog(@"UPDATE ANIMATION with node %@", animNode);
-//    
-//    NSLog(@"BEGIN FRAME %@", beginFrm);
-//    NSLog(@"END FRAME %@", endFrm);
-//    NSLog(@"TIME %f", time);
-//    
 
     if([prop isKindOfClass:[LHChildrenPositionsProperty class]])
     {
@@ -497,7 +560,8 @@
         
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 float beginRotation = [beginFrame rotationForUUID:[child uuid]];
                 float endRotation   = [endFrame rotationForUUID:[child uuid]];
@@ -514,7 +578,8 @@
     else if(beginFrame)
     {
         for(CCNode<LHNodeProtocol, LHNodeAnimationProtocol>* child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginRotation = [beginFrame rotationForUUID:[child uuid]];
@@ -581,7 +646,8 @@
         float timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGSize beginScale = [beginFrame scaleForUUID:[child uuid]];
                 CGSize endScale = [endFrame scaleForUUID:[child uuid]];
@@ -599,7 +665,8 @@
     else if(beginFrame)
     {
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGSize beginScale = [beginFrame scaleForUUID:[child uuid]];
                 [child setScaleX:beginScale.width];
@@ -666,7 +733,8 @@
         float timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 float beginValue = [beginFrame opacityForUUID:[child uuid]];
                 float endValue = [endFrame opacityForUUID:[child uuid]];
@@ -681,7 +749,8 @@
     else if(beginFrame)
     {
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginValue = [beginFrame opacityForUUID:[child uuid]];

@@ -8,9 +8,9 @@
 
 #import "cocos2d.h"
 #import "LHNodeProtocol.h"
+
 /**
  LHUINode class is used to load the UI elements.
- Users can retrieve node objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 

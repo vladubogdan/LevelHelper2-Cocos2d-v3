@@ -30,6 +30,7 @@
 #import "LHSceneCollisionFilteringTest.h"
 #import "LHSceneCollisionHandlingTest.h"
 #import "LHSceneUserPropertiesTest.h"
+#import "LHSceneAssetsWithJointsTest.h"
 
 @implementation LHSceneDemo
 {
@@ -57,13 +58,17 @@
     availableScenes = [[NSMutableArray alloc] init];
     
     [availableScenes addObject:[LHSceneIntroduction class]];
+    
     [availableScenes addObject:[LHSceneCameraTest class]];
     [availableScenes addObject:[LHSceneCameraFollowTest class]];
     [availableScenes addObject:[LHSceneParallaxTest class]];
     [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
+
+    [availableScenes addObject:[LHSceneRopeJointTest class]];
     
     [availableScenes addObject:[LHSceneAssetsTest class]];
-    [availableScenes addObject:[LHSceneRopeJointTest class]];
+    [availableScenes addObject:[LHSceneAssetsWithJointsTest class]];
+
 //    [availableScenes addObject:[LHSceneCarTest class]];
 //    [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];

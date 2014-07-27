@@ -13,11 +13,16 @@
 
 #import "LHBezier.h"
 #import "LHShape.h"
+#import "LHNode.h"
 
 #import "LHConfig.h"
 
 #import "LHGameWorldNode.h"
 #import "CCNode+Transform.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
+#import "LHAsset.h"
+
 
 #if LH_USE_BOX2D
 
@@ -32,6 +37,10 @@
 
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
+
+@interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
 
@@ -51,7 +60,7 @@
 -(void)dealloc{
     _node = nil;
 #if LH_USE_BOX2D
-    //XXXX we need to delete the body
+    //XXXX we need to delete the body - deleted automatically - do nothing
 #endif
     
     LH_SUPER_DEALLOC();
@@ -63,6 +72,16 @@
 
 -(CCNode*)node{
     return _node;
+}
+
+-(LHAsset*)assetParent{
+    CCNode* p = _node;
+    while(p && [p parent]){
+        if([p isKindOfClass:[LHAsset class]])
+            return (LHAsset*)p;
+        p = [p parent];
+    }
+    return nil;
 }
 
 - (instancetype)initPhysicsProtocolWithNode:(CCNode*)nd
@@ -113,7 +132,6 @@
         LHScene* scene = (LHScene*)[_node scene];
         b2World* world = [scene box2dWorld];
         
-
         b2BodyDef bodyDef;
         bodyDef.type = (b2BodyType)type;
         
@@ -121,8 +139,7 @@
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 
-
-        float angle = [_node rotation];
+        float angle = [_node globalAngleFromLocalAngle:[_node rotation]];
         bodyDef.angle = CC_DEGREES_TO_RADIANS(-angle);
         
         bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
@@ -141,6 +158,7 @@
         sizet.height = [scene metersFromValue:sizet.height];
         
         CGPoint scale = CGPointMake(_node.scaleX, _node.scaleY);
+        scale = [_node convertToWorldScale:scale];
         
         previousScale = scale;
         
@@ -200,6 +218,12 @@
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shapeType == 2)//POLYGON
         {
@@ -284,6 +308,7 @@
                     
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
+                    
                     delete[] verts;
                 }
             }
@@ -350,6 +375,13 @@
     if(_body && scheduledForRemoval){
         [self removeBody];
     }
+    
+    if(_body){
+        CGAffineTransform trans = b2BodyToParentTransform(_node, self);
+        CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
+        [((LHNode*)_node) updatePosition:localPos];
+        [((LHNode*)_node) updateRotation:[_node localAngleFromGlobalAngle:CC_RADIANS_TO_DEGREES(-_body->GetAngle())]];
+    }
 }
 
 
@@ -360,7 +392,10 @@ static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
+	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]
+                            && ![n isKindOfClass:[LHBackUINode class]]
+                            && ![n isKindOfClass:[LHUINode class]];
+        n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -384,8 +419,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
 
-    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
-        transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5*_node.scaleX, - _node.contentSize.height*0.5*_node.scaleY);
+//    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
+    transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5, - _node.contentSize.height*0.5);
 
 	return transform;
 }
@@ -394,27 +429,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node rotation]));
+        _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node globalAngleFromLocalAngle:[_node rotation]]));
+        _body->SetAwake(true);
     }
 }
-
--(CGPoint)position
-{
-	if(_body){
-        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
-		return [_node convertPositionFromPoints:pt type:[_node positionType]];
-	}
-	return CGPointZero;
-}
--(float)rotation{
-    if([self body]){
-        return CC_RADIANS_TO_DEGREES([self body]->GetAngle());
-    }
-    return 0.0f;
-}
-
 -(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
 {
 	b2Vec2 c; c.Set(0.0f, 0.0f);
@@ -462,12 +482,16 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     
     if(_body){
         
-        //this will update the transform
-        [_node position];
-        [_node rotation];
-        
         float scaleX = [_node scaleX];
         float scaleY = [_node scaleY];
+        
+        CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = globalScale.x;
+        scaleY = globalScale.y;
+        
+        if(previousScale.x == scaleX && previousScale.y == scaleY){
+            return;
+        }
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
@@ -637,8 +661,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     //nothing to do for chipmunk
 }
 
-
-
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
     
     if(self = [super init])
@@ -711,6 +733,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                     {
                         CGPoint ptA = CGPointFromValue(prevValue);
                         CGPoint ptB = CGPointFromValue(val);
+                        
                         CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
                                                                            to:ptB
                                                                  cornerRadius:0];
@@ -727,6 +750,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
                 if(prevValue && firstValue){
                     CGPoint ptA = CGPointFromValue(prevValue);
                     CGPoint ptB = CGPointFromValue(firstValue);
+
                     CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
                                                                        to:ptB
                                                              cornerRadius:0];
@@ -758,6 +782,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shape == 2)//POLYGON
         {

@@ -39,7 +39,10 @@
     __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
     __unsafe_unretained LHUINode*           _uiNode;
     
+    __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
+
 #if LH_USE_BOX2D
+    __unsafe_unretained id<LHCollisionHandlingProtocol> _collisionsDelegate;
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
@@ -70,7 +73,9 @@
 
 -(void)dealloc{
     
+    _animationsDelegate = nil;
 #if LH_USE_BOX2D
+    _collisionsDelegate = nil;
     LH_SAFE_RELEASE(_box2dCollision);
 #endif
     
@@ -115,11 +120,7 @@
         [devices addObject:dev];
     }
 
-    #if TARGET_OS_IPHONE
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
-    #else
-    LHDevice* curDev = [LHUtils deviceFromArray:devices withSize:size];
-    #endif
 
     CGPoint childrenOffset = CGPointZero;
     
@@ -202,6 +203,12 @@
     return self;
 }
 
+-(void)onEnter{
+    [[self gameWorldNode] setPaused:NO];
+    [super onEnter];
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
 ////////////////////////////////////////////////////////////////////////////////
@@ -279,6 +286,7 @@
     groundBodyDef.position.Set(0, 0); // bottom-left corner
     
     b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
     
     // Define the ground box shape.
     b2EdgeShape groundBox;
@@ -311,11 +319,7 @@
     NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
     if(gameWorldInfo)
     {
-#if TARGET_OS_IPHONE
         CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-        CGSize scr = self.size;
-#endif
         
         NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
         if(!rectInf){
@@ -423,8 +427,30 @@
     return _uiNode;
 }
 
+#pragma mark- ANIMATION HANDLING
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del{
+    _animationsDelegate = del;
+}
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedPlayingAnimation:anim];
+    }
+}
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedRepetitionOnAnimation:anim];
+    }
+}
+
+
 #pragma mark- COLLISION HANDLING
 #if LH_USE_BOX2D
+
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del{
+    _collisionsDelegate = del;
+}
 
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
                                andNodeB:(CCNode*)b{
@@ -536,15 +562,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #pragma mark - TOUCH SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 
+#ifdef __CC_PLATFORM_IOS
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
     touchBeganLocation = [touch locationInNode:self];
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:self];
-    
     for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
         if([rope canBeCut]){
             [rope cutWithLineFromPointA:touchBeganLocation
@@ -552,6 +577,20 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         }
     }
 }
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
+    touchBeganLocation = [theEvent locationInNode:self];
+}
+-(void)mouseUp:(NSEvent *)theEvent{
+    CGPoint touchLocation = [theEvent locationInNode:self];
+    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
+        if([rope canBeCut]){
+            [rope cutWithLineFromPointA:touchBeganLocation
+                               toPointB:touchLocation];
+        }
+    }
+}
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -571,11 +610,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(float)currentDeviceRatio{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];
@@ -598,11 +633,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(NSString*)currentDeviceSuffix:(BOOL)keep2x{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];

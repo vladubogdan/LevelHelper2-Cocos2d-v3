@@ -128,6 +128,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark LHNodeProtocol Optional
+- (void)visit
+{
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
+    
+    [super visit];
+}
 -(BOOL)lateLoading
 {
     [_jointProtocolImp findConnectedNodes];
@@ -154,7 +162,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         if(!bodyA || !bodyB)return NO;
         
         b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
-        
         b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
         
         b2PrismaticJointDef jointDef;

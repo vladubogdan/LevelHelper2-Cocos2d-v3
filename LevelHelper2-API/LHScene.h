@@ -11,6 +11,11 @@
 
 #import "LHConfig.h"
 
+@class LHAnimation;
+@class LHBackUINode;
+@class LHGameWorldNode;
+@class LHUINode;
+
 #if LH_USE_BOX2D
 #ifdef __cplusplus
 #include "Box2D.h"
@@ -18,13 +23,43 @@
 #endif //LH_USE_BOX2D
 
 
+@protocol LHCollisionHandlingProtocol <NSObject>
+
+@required
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
+                               andNodeB:(CCNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(CCNode*)a
+                          andNodeB:(CCNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(CCNode*)a
+                        andNodeB:(CCNode*)b;
+
+#endif
+
+@end
+
+
+@protocol LHAnimationNotificationsProtocol <NSObject>
+
+@required
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+@end
+
+
+
+
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 #define LH_ARC_ENABLED 1
 #endif
 
-@class LHBackUINode;
-@class LHGameWorldNode;
-@class LHUINode;
+
 
 /**
  LHScene class is used to load a level file into Cocos2d v3 engine.
@@ -69,18 +104,72 @@
 -(LHUINode*)uiNode;
 
 
+#pragma mark- ANIMATION HANDLING
+
+/**
+ Set a animation notifications delegate for the cases where you don't need to subclass LHScene.
+ When subclassing LHScene, if you overwrite the animation notifications methods make sure you call super if you also need the delegate support.
+ If you delete the delegate object make sure you null-ify the animation notifications delegate.
+ @param del The object that implements the LHAnimationNotificationsProtocol methods.
+ */
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del;
+
+/**
+ Overwrite this method to receive notifications when an animation has finished playing. This method is called once, after all repetitions have finished playing.
+ */
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+
+/**
+ Overwrite this method to receive notifications when an animation has finished playing a repetition.
+ */
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+
 #pragma mark- COLLISION HANDLING
 
 #if LH_USE_BOX2D
 
+/**
+ Set a collision handling delegate for the cases where you dont need to subclass LHScene.
+ When subclassing LHScene, if you overwrite the collision handling methods make sure you call super if you also need the delegate support.
+ If you delete the delegate object make sure you null-ify the collision handling delegate.
+ @param del The object that implements the LHCollisionHandlingProtocol methods.
+ */
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del;
+
+/**
+ Overwrite this methods to receive collision informations when using Box2d.
+ This method is called prior the collision happening and lets the user decide whether or not the collision should happen.
+ @param a First node that participates in the collision.
+ @param b Second node that participates in the collision.
+ @return A boolean value telling whether or not the 2 nodes should collide.
+ @discussion Available only when using Box2d.
+ @discussion Useful when you have a character that jumps from platform to platform. When the character is under the platform you want to disable collision, but once the character is on top of the platform you want the collision to be triggers in order for the character to stay on top of the platform.
+ */
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
                                andNodeB:(CCNode*)b;
 
+/**
+ Overwrite this methods to receive collision informations when using Box2d.
+ Called when the collision begins. Called with every new contact point between two nodes. May be called multiple times for same two nodes, because the point at which the nodes are touching has changed.
+ @param a First node that participates in the collision.
+ @param b Second node that participates in the collision.
+ @param scenePt The location where the two nodes collided in scene coordinates.
+ @param impulse The impulse of the collision.
+ @discussion Available only when using Box2d.
+ */
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
                           andNodeB:(CCNode*)b
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse;
 
+/**
+ Overwrite this methods to receive collision informations when using Box2d.
+ Called when the collision ends. Called when two nodes no longer collide at a specific point. May be called multiple times for same two nodes, because the point at which the nodes are touching has changed.
+ @param a First node that participates in the collision.
+ @param b Second node that participates in the collision.
+ @discussion Available only when using Box2d.
+ */
 -(void)didEndContactBetweenNodeA:(CCNode*)a
                         andNodeB:(CCNode*)b;
 

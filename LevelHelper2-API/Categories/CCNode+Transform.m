@@ -31,4 +31,23 @@
 }
 
 
+-(float)globalAngleFromLocalAngle:(float)la{
+    CCNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[CCScene class]]){
+        la += [prnt rotation];
+        prnt = [prnt parent];
+    }
+    return la;
+}
+
+-(float)localAngleFromGlobalAngle:(float)ga{
+    CCNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[CCScene class]]){
+        ga -= [prnt rotation];
+        prnt = [prnt parent];
+    }
+    return ga;
+}
+
+
 @end

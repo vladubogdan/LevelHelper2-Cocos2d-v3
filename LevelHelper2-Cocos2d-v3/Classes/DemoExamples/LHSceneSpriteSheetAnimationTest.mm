@@ -14,7 +14,7 @@
 
 + (LHSceneDemo *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/spriteSheetAnimationDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/spriteSheetAnimationDemo.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

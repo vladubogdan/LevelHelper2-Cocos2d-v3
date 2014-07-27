@@ -53,6 +53,7 @@
 
 #define LH_SCREEN_RESOLUTION ( UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) ? CGSizeMake([UIScreen mainScreen].bounds.size.height*[[UIScreen mainScreen] scale], [UIScreen mainScreen].bounds.size.width*[[UIScreen mainScreen] scale]) : CGSizeMake([UIScreen mainScreen].bounds.size.width*[[UIScreen mainScreen] scale], [UIScreen mainScreen].bounds.size.height*[[UIScreen mainScreen] scale]) )
 
+#define LHStringFromPoint NSStringFromCGPoint
 
 #else
 //////////////////MAC OS PLATFORM///////////////////////////////////////////////
@@ -68,6 +69,10 @@
 #define CGSizeFromValue(_value_) [_value_ sizeValue]
 
 #define LH_IS_WIDESCREEN ( NO )
+
+#define LH_SCREEN_RESOLUTION CGSizeMake(1024, 768)
+
+#define LHStringFromPoint NSStringFromPoint
 
 #endif
 
@@ -173,9 +178,7 @@ NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
 +(CGPoint)positionForNode:(CCNode*)node
                  fromUnit:(CGPoint)unitPos;
 
-#if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs;
-#endif
 
 +(LHDevice*)deviceFromArray:(NSArray*)arrayOfDevs
                    withSize:(CGSize)size;

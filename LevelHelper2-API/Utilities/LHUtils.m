@@ -35,10 +35,8 @@
     NSString* fileNoExt = [filename stringByDeletingPathExtension];
 #if TARGET_OS_IPHONE
     return [[folder stringByAppendingPathComponent:fileNoExt] stringByAppendingPathExtension:ext];
-//    return [[[folder stringByAppendingPathComponent:fileNoExt] stringByAppendingString:suffix] stringByAppendingPathExtension:ext];
 #else
     NSString* fileName = [fileNoExt stringByAppendingString:suffix];
-
     NSString* val = [[NSBundle mainBundle] pathForResource:fileName ofType:ext inDirectory:folder];
     
     if(!val){
@@ -91,12 +89,10 @@
 }
 
 
-#if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs{
     return [LHUtils deviceFromArray:arrayOfDevs
                            withSize:LH_SCREEN_RESOLUTION];
 }
-#endif
 
 +(LHDevice*)deviceFromArray:(NSArray*)arrayOfDevs
                    withSize:(CGSize)size

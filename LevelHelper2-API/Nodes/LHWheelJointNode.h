@@ -20,7 +20,9 @@ class b2WheelJoint;
 
 /**
  LHWheelJointNode class is used to load a LevelHelper wheel joint.
+
  WARNING - Prismatic joint is not supported in Chipmunk.
+ 
  When using Box2d it uses a b2WheelJoint.
  */
 

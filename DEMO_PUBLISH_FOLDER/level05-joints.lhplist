@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -109,7 +109,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
+						<string>2A2DFAD1-22E9-4C25-B358-E84CB60B198D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -317,7 +317,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
+						<string>2A2DFAD1-22E9-4C25-B358-E84CB60B198D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -651,7 +651,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -725,7 +725,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -825,7 +825,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1033,7 +1033,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1107,7 +1107,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1181,7 +1181,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>F4D4B3A1-8CED-4075-8259-8699442FF310</string>
+						<string>2A2DFAD1-22E9-4C25-B358-E84CB60B198D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1573,7 +1573,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1647,7 +1647,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1721,7 +1721,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>11D57938-899B-4779-8803-F256CA5651BC</string>
+						<string>13816D11-E135-457F-AECD-CC5CD458D9F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1888,168 +1888,128 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>11D57938-899B-4779-8803-F256CA5651BC</key>
+		<key>13816D11-E135-457F-AECD-CC5CD458D9F1</key>
 		<array>
 			<array>
-				<string>{34.75, -27.75}</string>
-				<string>{35.25, -28.25}</string>
 				<string>{38.75, -26.75}</string>
 				<string>{40.25, -22.75}</string>
+				<string>{40.25, -17.75}</string>
+				<string>{37.25, -14.25}</string>
+				<string>{27.25, -12.25}</string>
+				<string>{34.75, -27.75}</string>
+				<string>{35.25, -28.25}</string>
 			</array>
 			<array>
 				<string>{26.25, -19.75}</string>
 				<string>{32.75, -27.25}</string>
 				<string>{34.75, -27.75}</string>
-				<string>{40.25, -22.75}</string>
-				<string>{40.25, -17.75}</string>
-				<string>{37.25, -14.25}</string>
 				<string>{27.25, -12.25}</string>
 			</array>
 			<array>
-				<string>{17.25, -1.75}</string>
-				<string>{27.25, -12.25}</string>
-				<string>{37.25, -14.25}</string>
-				<string>{38.25, 5.25}</string>
-				<string>{34.25, 12.25}</string>
-				<string>{27.75, 18.75}</string>
-			</array>
-			<array>
-				<string>{7.25, 3.25}</string>
-				<string>{17.25, -1.75}</string>
-				<string>{27.75, 18.75}</string>
-				<string>{22.25, 22.25}</string>
-				<string>{16.25, 24.75}</string>
-				<string>{6.25, 26.75}</string>
-			</array>
-			<array>
-				<string>{1.75, 4.25}</string>
-				<string>{7.25, 3.25}</string>
-				<string>{6.25, 26.75}</string>
-				<string>{-4.25, 26.75}</string>
-			</array>
-			<array>
-				<string>{-6.75, 3.75}</string>
-				<string>{1.75, 4.25}</string>
-				<string>{-4.25, 26.75}</string>
-				<string>{-15.25, 24.75}</string>
-				<string>{-23.75, 21.25}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
-				<string>{-6.75, 3.75}</string>
-				<string>{-23.75, 21.25}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
-				<string>{-23.75, 21.25}</string>
-				<string>{-29.75, 17.25}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
-				<string>{-29.75, 17.25}</string>
-				<string>{-37.25, 8.75}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
-				<string>{-37.25, 8.75}</string>
-				<string>{-40.75, 0.25}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
-				<string>{-40.75, 0.25}</string>
-				<string>{-40.75, -3.75}</string>
-			</array>
-			<array>
-				<string>{-33.75, -7.75}</string>
 				<string>{-40.75, -3.75}</string>
 				<string>{-38.75, -6.25}</string>
+				<string>{-33.75, -7.75}</string>
+				<string>{-6.75, 3.75}</string>
+				<string>{-23.75, 21.25}</string>
+				<string>{-29.75, 17.25}</string>
+				<string>{-37.25, 8.75}</string>
+				<string>{-40.75, 0.25}</string>
 			</array>
 			<array>
 				<string>{-36.75, -7.75}</string>
 				<string>{-33.75, -7.75}</string>
 				<string>{-38.75, -6.25}</string>
 			</array>
-		</array>
-		<key>F4D4B3A1-8CED-4075-8259-8699442FF310</key>
-		<array>
 			<array>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
+				<string>{-23.75, 21.25}</string>
+				<string>{-6.75, 3.75}</string>
+				<string>{1.75, 4.25}</string>
+				<string>{22.25, 22.25}</string>
+				<string>{16.25, 24.75}</string>
+				<string>{6.25, 26.75}</string>
+				<string>{-4.25, 26.75}</string>
+				<string>{-15.25, 24.75}</string>
 			</array>
 			<array>
+				<string>{22.25, 22.25}</string>
+				<string>{1.75, 4.25}</string>
+				<string>{7.25, 3.25}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{34.25, 12.25}</string>
+				<string>{27.75, 18.75}</string>
+			</array>
+			<array>
+				<string>{37.25, -14.25}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{17.25, -1.75}</string>
+				<string>{27.25, -12.25}</string>
+			</array>
+			<array>
+				<string>{17.25, -1.75}</string>
+				<string>{38.25, 5.25}</string>
+				<string>{7.25, 3.25}</string>
+			</array>
+		</array>
+		<key>2A2DFAD1-22E9-4C25-B358-E84CB60B198D</key>
+		<array>
+			<array>
+				<string>{30.75, -25.5}</string>
 				<string>{31.25, -16.5}</string>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+				<string>{-29.75, -27}</string>
+			</array>
+			<array>
 				<string>{36.75, -15}</string>
 				<string>{38.25, -11.5}</string>
 				<string>{39.75, 3}</string>
 				<string>{37.25, 9}</string>
 				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{2.75, -10}</string>
+				<string>{31.25, -16.5}</string>
 			</array>
 			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
 				<string>{-33.75, -11}</string>
 			</array>
 			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-36.75, -15}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -21}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-			</array>
-			<array>
-				<string>{-33.25, 10.5}</string>
 				<string>{-36.25, 2.5}</string>
 				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
 				<string>{-16.25, -9.5}</string>
-				<string>{-25.75, 19}</string>
-			</array>
-			<array>
+				<string>{-10.75, -8}</string>
 				<string>{-17.25, 24}</string>
 				<string>{-25.75, 19}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-11.25, 26}</string>
+				<string>{-33.25, 10.5}</string>
 			</array>
 			<array>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
 				<string>{-5.25, 27}</string>
 				<string>{-11.25, 26}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-4.75, -8}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{6.25, 27}</string>
+				<string>{-17.25, 24}</string>
 				<string>{-4.75, -8}</string>
 				<string>{2.75, -10}</string>
+			</array>
+			<array>
+				<string>{-4.75, -8}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-10.75, -8}</string>
+			</array>
+			<array>
+				<string>{-16.25, -9.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
 			</array>
 		</array>
 	</dict>

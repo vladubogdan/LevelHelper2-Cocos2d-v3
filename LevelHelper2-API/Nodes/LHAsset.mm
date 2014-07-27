@@ -18,12 +18,14 @@
 
 @implementation LHAsset
 {
+    NSDictionary* tracedFixtures;
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
 -(void)dealloc{
+    LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);
@@ -55,19 +57,49 @@
         
         LHScene* scene = (LHScene*)[self scene];
         
-        NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
-        
-        if(assetInfo)
+        NSDictionary* assetInfo = nil;
+        NSString* assetFile = [dict objectForKey:@"assetFile"];
+        if(assetFile)
         {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];            
+            assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
+        }
+        
+        if(assetInfo){
+            NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+            if(tracedFix){
+                tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+            }
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
         }
         else{
-            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@. This usually means that the asset was created but not saved. Check your level and in the Scene Navigator, click on the lock icon next to the asset name.", [self name]);
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         }
+        
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
-
+        
+//#if LH_DEBUG
+//        CCDrawNode* debug = [CCDrawNode node];
+//        [self addChild:debug];
+//        [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
+//        CGPoint* vertices = new CGPoint[4];
+//        vertices[0] = CGPointMake(0, 0);
+//        CGSize size = self.contentSize;
+//        vertices[1] = CGPointMake(size.width, 0);
+//        vertices[2] = CGPointMake(size.width, size.height);
+//        vertices[3] = CGPointMake(0, size.height);
+//        CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
+//        CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
+//        
+//        [debug drawPolyWithVerts:vertices
+//                           count:4
+//                       fillColor:fillColor
+//                     borderWidth:1 borderColor:borderColor];
+//        
+//        delete[] vertices;
+//#endif//LH_DEBUG        
     }
     
     return self;
@@ -96,29 +128,64 @@
         
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
         
-        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
-        
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
-        
-        if(assetInfo)
+        if(!assetInfo)
         {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            return self;
         }
         
-        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+        NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+        if(tracedFix){
+            tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+        }        
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
+                                                                                    node:self];
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+                                                                                                node:self];
+
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
     }
+    
+//#if LH_DEBUG
+//    CCDrawNode* debug = [CCDrawNode node];
+//    [self addChild:debug];
+//    [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
+//    CGPoint* vertices = new CGPoint[4];
+//    vertices[0] = CGPointMake(0, 0);
+//    CGSize size = self.contentSize;
+//    vertices[1] = CGPointMake(size.width, 0);
+//    vertices[2] = CGPointMake(size.width, size.height);
+//    vertices[3] = CGPointMake(0, size.height);
+//    CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
+//    CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
+//    
+//    [debug drawPolyWithVerts:vertices
+//                       count:4
+//                   fillColor:fillColor
+//                 borderWidth:1 borderColor:borderColor];
+//    
+//    delete[] vertices;
+//#endif//LH_DEBUG
+    
+    [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
     
     return self;
 }
 
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
+    return [tracedFixtures objectForKey:uuid];
+}
+
 - (void)visit
 {
-    [_animationProtocolImp visit];
     [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
     
     [super visit];
 }

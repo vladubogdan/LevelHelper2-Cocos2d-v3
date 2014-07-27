@@ -124,7 +124,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
 }
 
-
+- (void)visit
+{
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
+    
+    [super visit];
+}
 -(BOOL)lateLoading
 {
     [_jointProtocolImp findConnectedNodes];

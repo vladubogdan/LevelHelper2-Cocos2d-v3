@@ -14,7 +14,7 @@
 @implementation LHSceneCollisionHandlingTest
 
 + (LHSceneDemo *)scene{
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionHandling.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionHandling.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -88,7 +88,7 @@
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse
 {
-    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], NSStringFromCGPoint(scenePt), impulse);
+    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], LHStringFromPoint(scenePt), impulse);
 }
 
 -(void)didEndContactBetweenNodeA:(CCNode*)a

@@ -14,7 +14,7 @@
 
 + (LHSceneDemo *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gravityAreasDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/gravityAreasDemo.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

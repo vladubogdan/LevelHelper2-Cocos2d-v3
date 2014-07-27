@@ -26,7 +26,7 @@
 }
 + (LHSceneDemo *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/wheelJointDemo.plist"];
+	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/wheelJointDemo.lhplist"];
 }
 
 -(void)dealloc{
@@ -70,10 +70,11 @@
     return self;
 }
 
+#if __CC_PLATFORM_IOS
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
     touching = true;
-    
     touchLocation = [touch locationInNode:self];
     
     //dont forget to call super
@@ -93,6 +94,24 @@
     
     [super touchEnded:touch withEvent:event];
 }
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    touching = true;
+    touchLocation = [theEvent locationInNode:self];
+    
+    //dont forget to call super
+    [super mouseDown:theEvent];
+}
+-(void)mouseUp:(NSEvent *)theEvent{
+    touching = false;
+    [super mouseUp:theEvent];
+}
+
+#endif
+
+
 
 -(void)visit{
     

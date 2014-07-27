@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E0D55C8194C32A30036E940"
-               BuildableName = "LevelHelper2-Cocos2d-v3+Box2D.app"
-               BlueprintName = "LevelHelper2-Cocos2d-v3+Box2d"
+               BlueprintIdentifier = "6E40269E1982C4BF002B4D32"
+               BuildableName = "libObjectiveChipmunk.a"
+               BlueprintName = "ObjectiveChipmunk-MAC"
                ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E0D55C8194C32A30036E940"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Box2D.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Box2d"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -48,26 +39,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E0D55C8194C32A30036E940"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Box2D.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Box2d"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "OBJC_PRINT_EXCEPTIONS"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -76,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E0D55C8194C32A30036E940"
-            BuildableName = "LevelHelper2-Cocos2d-v3+Box2D.app"
-            BlueprintName = "LevelHelper2-Cocos2d-v3+Box2d"
-            ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

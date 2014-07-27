@@ -12,16 +12,7 @@
 #import "LHScene.h"
 #import "LHAnimation.h"
 #import "LHConfig.h"
-
-//! a Point with a vertex point, a tex coord point and a color 4B
-typedef struct _LH_V2F_C4B
-{
-	//! vertices (2F)
-	ccVertex2F		vertices;
-	//! colors (4B)
-	ccColor4B		colors;
-} lhV2F_C4B;
-
+#import "LHDrawNode.h"
 
 static float MAX_BEZIER_STEPS = 24.0f;
 
@@ -71,10 +62,13 @@ static float MAX_BEZIER_STEPS = 24.0f;
         linePoints = [[NSMutableArray alloc] init];
         
         NSValue* prevValue = nil;
-        
+
+        //strange behaviour when using chipmunk - looks like some transformation bug inside cocos2d
+#if LH_USE_BOX2D == 0
         CGPoint loadedPosition = self.position;
         self.position = CGPointZero;
         self.contentSize = CGSizeZero;//we reset the content size as it does problem in cocos2d
+#endif
         
         NSDictionary* previousPointDict = nil;
         for(NSDictionary* pointDict in points)
@@ -105,7 +99,16 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
                     if(prevValue){
                         CGPoint prevPt = CGPointFromValue(prevValue);
-                        [self drawSegmentFrom:prevPt to:pt radius:1 color:colorOverlay];
+                        CGPoint curPt = pt;
+                        
+#if LH_USE_BOX2D
+                        prevPt.x += self.contentSize.width*0.5;
+                        prevPt.y += self.contentSize.height*0.5;
+                        curPt.x += self.contentSize.width*0.5;
+                        curPt.y += self.contentSize.height*0.5;
+#endif
+
+                        [self drawSegmentFrom:prevPt to:curPt radius:1 color:colorOverlay];
                     }
                     prevValue = LHValueWithCGPoint(pt);
                     
@@ -141,7 +144,16 @@ static float MAX_BEZIER_STEPS = 24.0f;
                     CGPoint pt = CGPointMake(vPoint.x, -vPoint.y);
                     if(prevValue){
                         CGPoint prevPt = CGPointFromValue(prevValue);
-                        [self drawSegmentFrom:prevPt to:pt radius:1 color:colorOverlay];
+                        CGPoint curPt = pt;
+#if LH_USE_BOX2D
+                        prevPt.x += self.contentSize.width*0.5;
+                        prevPt.y += self.contentSize.height*0.5;
+                        curPt.x += self.contentSize.width*0.5;
+                        curPt.y += self.contentSize.height*0.5;
+#endif
+                        
+                        
+                        [self drawSegmentFrom:prevPt to:curPt radius:1 color:colorOverlay];
                     }
                     prevValue = LHValueWithCGPoint(pt);
                     
@@ -150,19 +162,18 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
 
-        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
-        
-        
+#if LH_USE_BOX2D == 0
         self.position = loadedPosition;
+#endif
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-        
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
+        
     }
     
     return self;
@@ -175,8 +186,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 -(void)visit
 {
-    [_animationProtocolImp visit];
     [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
     
     [super visit];
 }

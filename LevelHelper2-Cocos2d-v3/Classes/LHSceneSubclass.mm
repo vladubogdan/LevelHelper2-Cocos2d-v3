@@ -34,11 +34,15 @@
 	return self;
 }
 
+#ifdef __CC_PLATFORM_IOS
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     
     //dont forget to call super
     [super touchBegan:touch withEvent:event];
 }
+
+#endif
+
 
 @end

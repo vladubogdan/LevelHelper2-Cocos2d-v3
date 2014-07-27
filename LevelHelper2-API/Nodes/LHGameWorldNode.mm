@@ -9,7 +9,7 @@
 #import "LHGameWorldNode.h"
 #import "LHUtils.h"
 #import "LHScene.h"
-
+#import "LHConfig.h"
 
 #if LH_USE_BOX2D
 
@@ -241,10 +241,14 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 -(void)draw
 {
     [self clear];
+    
+#if LH_DEBUG
     if(_drawState){
         [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
         [super draw];
     }
+#endif
+    
 }
 -(BOOL)drawState{
     return _drawState;
@@ -269,6 +273,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
 #if LH_USE_BOX2D
+    BOOL _paused;
     NSTimeInterval  _lastTime;
     LHBox2dDebugDrawNode* __unsafe_unretained _debugNode;
     b2World*        _box2dWorld;
@@ -290,7 +295,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 
-
 + (instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
                                      parent:(CCNode*)prnt
 {
@@ -309,6 +313,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
                                                                                     node:self];
         
 #if LH_USE_BOX2D
+        [self setPaused:YES];
         _box2dWorld = NULL;
 #endif
 
@@ -323,7 +328,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 #pragma mark - BOX2D SUPPORT
 #if LH_USE_BOX2D
-
 -(b2World*)box2dWorld
 {
     if(!_box2dWorld){
@@ -332,7 +336,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         gravity.Set(0.f, 0.0f);
         _box2dWorld = new b2World(gravity);
         _box2dWorld->SetAllowSleeping(true);
-        _box2dWorld->SetContinuousPhysics(true);
+        _box2dWorld->SetContinuousPhysics(false);
         
         LHBox2dDebugDrawNode* drawNode = [LHBox2dDebugDrawNode node];
         [drawNode setZOrder:9999];
@@ -379,7 +383,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
     float delta = thisTime - _lastTime;
     
-    [self step:delta];
+    if(![self paused])
+        [self step:delta];
     
     _lastTime = thisTime;
     
@@ -389,8 +394,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
 const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 16;
-const int32 POSITION_ITERATIONS = 16;
+const int32 VELOCITY_ITERATIONS = 8;
+const int32 POSITION_ITERATIONS = 8;
 const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)step:(float)dt

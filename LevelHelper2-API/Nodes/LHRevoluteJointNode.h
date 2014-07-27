@@ -20,7 +20,9 @@ class b2RevoluteJoint;
 
 /**
  LHRevoluteJointNode class is used to load a LevelHelper revolute joint.
+
  WARNING - Revolute joint is not supported in Chipmunk.
+ 
  When using Box2d it uses a b2RevoluteJoint.
  */
 

@@ -736,7 +736,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
         x += step;
     }
     
-    CGPoint lastPt = [[rPoints lastObject] CGPointValue];
+    CGPoint lastPt = CGPointFromValue([rPoints lastObject]);
     
     if(!CGPointEqualToPoint(CGPointMake((int)b.x, (int)b.y),
                             CGPointMake((int)lastPt.x, (int)lastPt.y)))
@@ -745,7 +745,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     }
     
     if(!ropeIsFlipped && [rPoints count] > 0){
-        CGPoint firstPt = [[rPoints objectAtIndex:0] CGPointValue];
+        CGPoint firstPt = CGPointFromValue([rPoints objectAtIndex:0]);
         
         if(!CGPointEqualToPoint(CGPointMake((int)a.x, (int)a.y),
                                 CGPointMake((int)firstPt.x, (int)firstPt.y)))
@@ -845,6 +845,9 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 
 - (void)visit
 {
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
     
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
