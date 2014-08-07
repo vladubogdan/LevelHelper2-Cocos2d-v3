@@ -378,25 +378,20 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 
--(void)visit{
-    
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float delta = thisTime - _lastTime;
-    
+-(void)update:(CCTime)delta
+{
     if(![self paused])
         [self step:delta];
     
-    _lastTime = thisTime;
-    
-    [super visit];
+    [super visit];//required for smooth scrolling
 }
 
 
 const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
 const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 8;
-const int32 POSITION_ITERATIONS = 8;
-const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
+const int32 VELOCITY_ITERATIONS = 12;
+const int32 POSITION_ITERATIONS = 12;
+const int32 MAXIMUM_NUMBER_OF_STEPS = 30;
 
 -(void)step:(float)dt
 {
