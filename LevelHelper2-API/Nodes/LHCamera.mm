@@ -135,16 +135,9 @@
 {
     CCNode* followed = [self followedNode];
     if(followed){
-        position = [followed position];
-        
-        CGPoint anchor = [followed anchorPoint];
-        CGSize content = [followed contentSize];
 
-        float scaleX = [followed scaleX];
-        float scaleY = [followed scaleY];
-
-        position.x -= content.width*scaleX*  (anchor.x -0.5);
-        position.y -= content.height*scaleY* (anchor.y -0.5);
+        position = [followed convertToWorldSpaceAR:CGPointZero];
+        position = [[[self scene] gameWorldNode] convertToNodeSpaceAR:position];
     }
 
     CGSize winSize = [(LHScene*)[self scene] contentSize];
