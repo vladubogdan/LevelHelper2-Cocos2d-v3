@@ -273,6 +273,14 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
 #if LH_USE_BOX2D
+    
+    float32 FIXED_TIMESTEP;
+    float32 MINIMUM_TIMESTEP;
+    int32 VELOCITY_ITERATIONS;
+    int32 POSITION_ITERATIONS;
+    int32 MAXIMUM_NUMBER_OF_STEPS;
+
+    
     BOOL _paused;
     NSTimeInterval  _lastTime;
     LHBox2dDebugDrawNode* __unsafe_unretained _debugNode;
@@ -313,6 +321,27 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
                                                                                     node:self];
         
 #if LH_USE_BOX2D
+        
+//        FIXED_TIMESTEP = 1.0f / 24.0f;
+//        MINIMUM_TIMESTEP = 1.0f / 600.0f;
+//        VELOCITY_ITERATIONS = 12;
+//        POSITION_ITERATIONS = 12;
+//        MAXIMUM_NUMBER_OF_STEPS = 30;
+
+        FIXED_TIMESTEP = 1.0f / 120.0f;
+        MINIMUM_TIMESTEP = 1.0f / 600.0f;
+        VELOCITY_ITERATIONS = 8;
+        POSITION_ITERATIONS = 8;
+        MAXIMUM_NUMBER_OF_STEPS = 2;
+
+        
+//        [self setbox2d_fixedtimestep:1.0/120.0];
+//        [self setbox2d_mintimestep:1.0/600.0];
+//        [self setbox2d_velocityiterations:8];
+//        [self setbox2d_position_iterations:8];
+//        [self setbox2d_max_steps:2.0];
+        
+        
         [self setPaused:YES];
         _box2dWorld = NULL;
 #endif
@@ -387,11 +416,21 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 
-const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
-const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 12;
-const int32 POSITION_ITERATIONS = 12;
-const int32 MAXIMUM_NUMBER_OF_STEPS = 30;
+-(void)setBox2dFixedTimeStep:(float)val{
+    FIXED_TIMESTEP = val;
+}
+-(void)setBox2dMinimumTimeStep:(float)val{
+    MINIMUM_TIMESTEP = val;
+}
+-(void)setBox2dVelocityIterations:(int)val{
+    VELOCITY_ITERATIONS = val;
+}
+-(void)setBox2dPositionIterations:(int)val{
+    POSITION_ITERATIONS = val;
+}
+-(void)setBox2dMaxSteps:(int)val{
+    MAXIMUM_NUMBER_OF_STEPS = val;
+}
 
 -(void)step:(float)dt
 {
