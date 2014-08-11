@@ -333,14 +333,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         VELOCITY_ITERATIONS = 8;
         POSITION_ITERATIONS = 8;
         MAXIMUM_NUMBER_OF_STEPS = 2;
-
-        
-//        [self setbox2d_fixedtimestep:1.0/120.0];
-//        [self setbox2d_mintimestep:1.0/600.0];
-//        [self setbox2d_velocityiterations:8];
-//        [self setbox2d_position_iterations:8];
-//        [self setbox2d_max_steps:2.0];
-        
         
         [self setPaused:YES];
         _box2dWorld = NULL;
