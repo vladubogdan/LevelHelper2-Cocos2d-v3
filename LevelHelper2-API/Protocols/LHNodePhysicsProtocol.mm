@@ -58,10 +58,20 @@
 }
 
 -(void)dealloc{
-    _node = nil;
+
 #if LH_USE_BOX2D
-    //XXXX we need to delete the body - deleted automatically - do nothing
+    if(_body &&
+       _body->GetWorld() &&
+       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the body if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeBody];
+    }
 #endif
+    _node = nil;
+    
     
     LH_SUPER_DEALLOC();
 }
@@ -197,12 +207,32 @@
                 
                 std::vector< b2Vec2 > verts;
                 
+                NSValue* lastPt = nil;
+                
                 for(NSValue* val in points){
                     CGPoint pt = CGPointFromValue(val);
                     pt.x *= scale.x;
                     pt.y *= scale.y;
                     
-                    verts.push_back([scene metersFromPoint:pt]);
+
+                    b2Vec2 v2 = [scene metersFromPoint:pt];
+                    
+                    if(lastPt != nil)
+                    {
+                        CGPoint oldPt = CGPointFromValue(lastPt);
+                        b2Vec2 v1 = b2Vec2(oldPt.x, oldPt.y);
+                        
+                        if(b2DistanceSquared(v1, v2) > b2_linearSlop * b2_linearSlop)
+                        {
+                            verts.push_back(v2);
+                        }
+                    }
+                    else{
+                        verts.push_back(v2);
+                    }
+                    
+                    lastPt = LHValueWithCGPoint(CGPointMake(v2.x, v2.y));
+                    
                 }
                 
                 shape = new b2ChainShape();
@@ -354,12 +384,42 @@
     }
 }
 
+-(NSArray*) jointList{
+    NSMutableArray* array = [NSMutableArray array];
+    if(_body != NULL){
+        b2JointEdge* jtList = _body->GetJointList();
+        while (jtList) {
+            if(jtList->joint && jtList->joint->GetUserData())
+            {
+                CCNode* ourNode = (LHNode*)LH_ID_BRIDGE_CAST(jtList->joint->GetUserData());
+                if(ourNode != NULL)
+                    [array addObject:ourNode];
+                }
+            jtList = jtList->next;
+        }
+    }
+    return array;
+}
+-(bool) removeAllAttachedJoints{
+    NSArray* list = [self jointList];
+    if(list){
+        for(CCNode* jt in list){
+            [jt removeFromParent];
+        }
+        return true;
+    }
+    return false;
+}
+
+
 -(void)removeBody{
     
     if(_body){
         b2World* world = _body->GetWorld();
         if(world){
+            _body->SetUserData(NULL);
             if(!world->IsLocked()){
+                [self removeAllAttachedJoints];
                 world->DestroyBody(_body);
                 _body = NULL;
                 scheduledForRemoval = false;
@@ -419,7 +479,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
 
-//    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
     transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5, - _node.contentSize.height*0.5);
 
 	return transform;

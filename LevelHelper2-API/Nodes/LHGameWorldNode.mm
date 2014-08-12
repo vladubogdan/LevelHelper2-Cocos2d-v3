@@ -262,10 +262,51 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 #endif//LH_USE_BOX2D
 
+@interface LHScheduledContactInfo : NSObject
 
++(instancetype)scheduledContactWithNodeA:(CCNode*)a
+                                   nodeB:(CCNode*)b
+                                   point:(CGPoint)pt
+                                 impulse:(float)i;
 
+-(CCNode*)nodeA;
+-(CCNode*)nodeB;
+-(CGPoint)contactPoint;
+-(float)impulse;
 
+@end
 
+@implementation LHScheduledContactInfo
+{
+    __unsafe_unretained CCNode* _nodeA;
+    __unsafe_unretained CCNode* _nodeB;
+    CGPoint contactPoint;
+    float impulse;
+}
+
+-(instancetype)initWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    if(self = [super init])
+    {
+        _nodeA = a;
+        _nodeB = b;
+        contactPoint = pt;
+        impulse = i;
+    }
+    return self;
+}
+
+-(CCNode*)nodeA{return _nodeA;}
+-(CCNode*)nodeB{return _nodeB;}
+-(CGPoint)contactPoint{return contactPoint;}
+-(float)impulse{return impulse;}
+
++(instancetype)scheduledContactWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    return LH_AUTORELEASED([[LHScheduledContactInfo alloc] initWithNodeA:a nodeB:b point:pt impulse:i]);
+}
+
+@end
 
 
 @implementation LHGameWorldNode
@@ -280,6 +321,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     int32 POSITION_ITERATIONS;
     int32 MAXIMUM_NUMBER_OF_STEPS;
 
+    NSMutableArray* _scheduledBeginContact;
+    NSMutableArray* _scheduledEndContact;
     
     BOOL _paused;
     NSTimeInterval  _lastTime;
@@ -293,8 +336,13 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
 #if LH_USE_BOX2D
+    
+    LH_SAFE_RELEASE(_scheduledBeginContact);
+    LH_SAFE_RELEASE(_scheduledEndContact);
+    
     //we need to first destroy all children and then distroy box2d world
     [self removeAllChildren];
+    
     LH_SAFE_DELETE(_box2dWorld);
 #endif
     
@@ -322,12 +370,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         
 #if LH_USE_BOX2D
         
-//        FIXED_TIMESTEP = 1.0f / 24.0f;
-//        MINIMUM_TIMESTEP = 1.0f / 600.0f;
-//        VELOCITY_ITERATIONS = 12;
-//        POSITION_ITERATIONS = 12;
-//        MAXIMUM_NUMBER_OF_STEPS = 30;
-
         FIXED_TIMESTEP = 1.0f / 120.0f;
         MINIMUM_TIMESTEP = 1.0f / 600.0f;
         VELOCITY_ITERATIONS = 8;
@@ -446,14 +488,58 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 -(void)afterStep:(float)dt {
     
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    {
+        [[self scene] didBeginContactBetweenNodeA:[info nodeA]
+                                         andNodeB:[info nodeB]
+                                       atLocation:[info contactPoint]
+                                      withImpulse:[info impulse]];
+    }
+    [_scheduledBeginContact removeAllObjects];
+    
+    
+    
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    {
+        [[self scene] didEndContactBetweenNodeA:[info nodeA]
+                                       andNodeB:[info nodeB]];
+    }
+    [_scheduledEndContact removeAllObjects];
+}
+
+-(void)scheduleDidBeginContactBetweenNodeA:(CCNode*)nodeA
+                                  andNodeB:(CCNode*)nodeB
+                                atLocation:(CGPoint)contactPoint
+                               withImpulse:(float)impulse
+{
+    if(!_scheduledBeginContact){
+        _scheduledBeginContact = [[NSMutableArray alloc] init];
+    }
+    
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:contactPoint
+                                                                             impulse:impulse];
+    [_scheduledBeginContact addObject:info];
+}
+
+-(void)scheduleDidEndContactBetweenNodeA:(CCNode*)nodeA
+                                andNodeB:(CCNode*)nodeB
+{
+    
+    if(!_scheduledEndContact){
+        _scheduledEndContact = [[NSMutableArray alloc] init];
+    }
+    
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:CGPointZero
+                                                                             impulse:0];
+    [_scheduledEndContact addObject:info];
 }
 
 #pragma mark - CHIPMUNK SUPPORT
 #else //CHIPMUNK
-
-//-(cpSpace*)chipmunkSpace{
-//    return [[super space] space];
-//}
 
 -(void)setDebugDraw:(BOOL)val{
     //something

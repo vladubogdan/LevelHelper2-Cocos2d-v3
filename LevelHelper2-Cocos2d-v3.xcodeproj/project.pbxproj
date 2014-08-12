@@ -222,8 +222,6 @@
 		6E0D569E194C32A30036E940 /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 6E1221E71924BD87005E8532 /* ChangeLog */; };
 		6E0D569F194C32A30036E940 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220261924BD85005E8532 /* iTunesArtwork@2x */; };
 		6E0D573E194C339B0036E940 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FFA1924BD85005E8532 /* libObjectiveChipmunk.a */; };
-		6E0D58DE194CD6A40036E940 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */; };
-		6E0D58DF194CD6A40036E940 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D587C194CD6A30036E940 /* CMakeLists.txt */; };
 		6E0D58E0194CD6A40036E940 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D587E194CD6A30036E940 /* b2BroadPhase.cpp */; };
 		6E0D58E1194CD6A40036E940 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5880194CD6A30036E940 /* b2CollideCircle.cpp */; };
 		6E0D58E2194CD6A40036E940 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D5881194CD6A30036E940 /* b2CollideEdge.cpp */; };
@@ -795,6 +793,11 @@
 		6E4026C61982C547002B4D32 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4026C41982C4BF002B4D32 /* libObjectiveChipmunk.a */; };
 		6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
 		6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
+		6E6F6E401999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E6F6E411999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E6F6E421999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E6F6E451999EDCB00987EA6 /* b2MotorJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E431999EDCB00987EA6 /* b2MotorJoint.cpp */; };
+		6E6F6E461999EDCB00987EA6 /* b2MotorJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E431999EDCB00987EA6 /* b2MotorJoint.cpp */; };
 		6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
 		6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
 		6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
@@ -915,8 +918,6 @@
 		6E0D56A4194C32A30036E940 /* Info+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2D.plist"; sourceTree = "<absolute>"; };
 		6E0D57D8194C355C0036E940 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
 		6E0D587A194CD6A30036E940 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
-		6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
-		6E0D587C194CD6A30036E940 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		6E0D587E194CD6A30036E940 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
 		6E0D587F194CD6A30036E940 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
 		6E0D5880194CD6A30036E940 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollideCircle.cpp; sourceTree = "<group>"; };
@@ -1026,7 +1027,7 @@
 		6E0D5966194F23E50036E940 /* LHWheelJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHWheelJointNode.mm; sourceTree = "<group>"; };
 		6E0D596D194F3AF50036E940 /* LHGearJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGearJointNode.h; sourceTree = "<group>"; };
 		6E0D596E194F3AF50036E940 /* LHGearJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGearJointNode.mm; sourceTree = "<group>"; };
-		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Chipmunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E121FE61924BD85005E8532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E121FE81924BD85005E8532 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6E121FEA1924BD85005E8532 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1466,6 +1467,10 @@
 		6E4026C41982C4BF002B4D32 /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveChipmunk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringTest.h; sourceTree = "<group>"; };
 		6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringTest.mm; sourceTree = "<group>"; };
+		6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRemoveOnCollisionTest.mm; sourceTree = "<group>"; };
+		6E6F6E3F1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRemoveOnCollisionTest.h; sourceTree = "<group>"; };
+		6E6F6E431999EDCB00987EA6 /* b2MotorJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2MotorJoint.cpp; sourceTree = "<group>"; };
+		6E6F6E441999EDCB00987EA6 /* b2MotorJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2MotorJoint.h; sourceTree = "<group>"; };
 		6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
 		6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowTest.mm; sourceTree = "<group>"; };
 		6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxTest.h; sourceTree = "<group>"; };
@@ -1647,8 +1652,6 @@
 			isa = PBXGroup;
 			children = (
 				6E0D587A194CD6A30036E940 /* Box2D.h */,
-				6E0D587B194CD6A30036E940 /* Box2DConfig.cmake */,
-				6E0D587C194CD6A30036E940 /* CMakeLists.txt */,
 				6E0D587D194CD6A30036E940 /* Collision */,
 				6E0D5895194CD6A30036E940 /* Common */,
 				6E0D58A3194CD6A40036E940 /* Dynamics */,
@@ -1765,6 +1768,8 @@
 		6E0D58C4194CD6A40036E940 /* Joints */ = {
 			isa = PBXGroup;
 			children = (
+				6E6F6E431999EDCB00987EA6 /* b2MotorJoint.cpp */,
+				6E6F6E441999EDCB00987EA6 /* b2MotorJoint.h */,
 				6E0D58C5194CD6A40036E940 /* b2DistanceJoint.cpp */,
 				6E0D58C6194CD6A40036E940 /* b2DistanceJoint.h */,
 				6E0D58C7194CD6A40036E940 /* b2FrictionJoint.cpp */,
@@ -1827,7 +1832,7 @@
 		6E121FE41924BD85005E8532 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */,
+				6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app */,
 				6E121FFA1924BD85005E8532 /* libObjectiveChipmunk.a */,
 				6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */,
 				6E21716E1982BA8600C1F7CF /* LevelHelper2-Cocos2d-v3+Box2d MAC OS.app */,
@@ -2906,6 +2911,8 @@
 				6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */,
 				6ED55BDA196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.h */,
 				6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */,
+				6E6F6E3F1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.h */,
+				6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */,
 				6ECDF8FC19616E470007E7A0 /* LHSceneCarTest.h */,
 				6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */,
 				6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */,
@@ -2963,7 +2970,7 @@
 			);
 			name = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS";
 			productName = "LevelHelper2-Cocos2d-v3";
-			productReference = 6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk.app */;
+			productReference = 6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6E121FF91924BD85005E8532 /* ObjectiveChipmunk */ = {
@@ -3051,9 +3058,7 @@
 			files = (
 				6E0D5686194C32A30036E940 /* Default@2x.png in Resources */,
 				6E0D5687194C32A30036E940 /* Icon-120.png in Resources */,
-				6E0D58DE194CD6A40036E940 /* Box2DConfig.cmake in Resources */,
 				6E0D5688194C32A30036E940 /* LICENSE_CCBReader.txt in Resources */,
-				6E0D58DF194CD6A40036E940 /* CMakeLists.txt in Resources */,
 				6E0D5689194C32A30036E940 /* DEMO_PUBLISH_FOLDER in Resources */,
 				6E0D568A194C32A30036E940 /* Icon@2x.png in Resources */,
 				6E0D568B194C32A30036E940 /* Icon-Small@2x.png in Resources */,
@@ -3162,6 +3167,7 @@
 				6E0D55DE194C32A30036E940 /* LHChildrenPositionsProperty.m in Sources */,
 				6E0D55DF194C32A30036E940 /* LHParallaxLayer.m in Sources */,
 				6E0D55E0194C32A30036E940 /* CCNodeColor.m in Sources */,
+				6E6F6E401999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E0D55E1194C32A30036E940 /* TransformUtils.m in Sources */,
 				6E0D58E2194CD6A40036E940 /* b2CollideEdge.cpp in Sources */,
 				6E0D55E2194C32A30036E940 /* LHDrawNode.m in Sources */,
@@ -3182,6 +3188,7 @@
 				6E0D55EC194C32A30036E940 /* CCFileUtils.m in Sources */,
 				6E0D5907194CD6A40036E940 /* b2PulleyJoint.cpp in Sources */,
 				6E0D55ED194C32A30036E940 /* OALTools.m in Sources */,
+				6E6F6E451999EDCB00987EA6 /* b2MotorJoint.cpp in Sources */,
 				6E0D55EE194C32A30036E940 /* ccGLStateCache.m in Sources */,
 				6E0D55EF194C32A30036E940 /* OALActionManager.m in Sources */,
 				6E0D55F0194C32A30036E940 /* CCScheduler.m in Sources */,
@@ -3582,6 +3589,7 @@
 				6E1221161924BD87005E8532 /* CCES2Renderer.m in Sources */,
 				6E1221E61924BD87005E8532 /* aabb.c in Sources */,
 				6E1222101924BD88005E8532 /* CCBsequence.m in Sources */,
+				6E6F6E421999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E1220711924BD86005E8532 /* CCLabelAtlas.m in Sources */,
 				6E89FE25192E23100040478F /* LHCamera.mm in Sources */,
 				6ECDF90E1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */,
@@ -3681,6 +3689,7 @@
 				6E2170611982BA8600C1F7CF /* LHChildrenPositionsProperty.m in Sources */,
 				6E2170621982BA8600C1F7CF /* LHParallaxLayer.m in Sources */,
 				6E2170631982BA8600C1F7CF /* CCNodeColor.m in Sources */,
+				6E6F6E411999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E2170641982BA8600C1F7CF /* TransformUtils.m in Sources */,
 				6E2170651982BA8600C1F7CF /* b2CollideEdge.cpp in Sources */,
 				6E2170661982BA8600C1F7CF /* LHDrawNode.m in Sources */,
@@ -3701,6 +3710,7 @@
 				6E2170751982BA8600C1F7CF /* CCFileUtils.m in Sources */,
 				6E2170761982BA8600C1F7CF /* b2PulleyJoint.cpp in Sources */,
 				6E2170771982BA8600C1F7CF /* OALTools.m in Sources */,
+				6E6F6E461999EDCB00987EA6 /* b2MotorJoint.cpp in Sources */,
 				6E2170781982BA8600C1F7CF /* ccGLStateCache.m in Sources */,
 				6E2170791982BA8600C1F7CF /* OALActionManager.m in Sources */,
 				6E21707A1982BA8600C1F7CF /* CCScheduler.m in Sources */,

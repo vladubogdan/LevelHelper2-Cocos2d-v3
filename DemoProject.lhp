@@ -133,6 +133,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>removalOnCollisionDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>ropeJointDemo.lhs</key>
 				<dict>
 					<key>publish</key>

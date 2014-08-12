@@ -852,16 +852,9 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
     
-    
-#if LH_USE_BOX2D
-    if(std::isnan(anchorA.x) || std::isnan(anchorA.y) || std::isnan(anchorB.x) || std::isnan(anchorB.y)){
-        return;
-    }
-#else
     if(isnan(anchorA.x) || isnan(anchorA.y) || isnan(anchorB.x) || isnan(anchorB.y)){
         return;
     }
-#endif
     
     if(ropeShape){
         [self drawRopeShape:ropeShape
