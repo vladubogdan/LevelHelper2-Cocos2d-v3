@@ -399,7 +399,7 @@ double fcat(double x, void *data)
                      jointDef.collideConnected = [_jointProtocolImp collideConnected];
                      
                      cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
-                     
+                     cutJointA->SetUserData(LH_VOID_BRIDGE_CAST(self));
                      
                      
                     #else //chipmunk
@@ -493,6 +493,7 @@ double fcat(double x, void *data)
                      jointDef.collideConnected = [_jointProtocolImp collideConnected];
                      
                      cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                     cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
                      
                     #else //chipmunk
                         CCNode* cutNodeB = [CCNode node];
