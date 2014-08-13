@@ -12,6 +12,13 @@ class b2World;
 
 #ifdef __cplusplus
 -(b2World*)box2dWorld;
+
+-(void)setBox2dFixedTimeStep:(float)val;
+-(void)setBox2dMinimumTimeStep:(float)val;
+-(void)setBox2dVelocityIterations:(int)val;
+-(void)setBox2dPositionIterations:(int)val;
+-(void)setBox2dMaxSteps:(int)val;
+
 #endif
 
 #else//CHIPMUNK

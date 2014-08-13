@@ -31,6 +31,7 @@
 #import "LHSceneCollisionHandlingTest.h"
 #import "LHSceneUserPropertiesTest.h"
 #import "LHSceneAssetsWithJointsTest.h"
+#import "LHSceneRemoveOnCollisionTest.h"
 
 @implementation LHSceneDemo
 {
@@ -80,6 +81,7 @@
     [availableScenes addObject:[LHSceneShapesTest class]];
     [availableScenes addObject:[LHSceneBeziersTest class]];
     [availableScenes addObject:[LHSceneCollisionHandlingTest class]];
+    [availableScenes addObject:[LHSceneRemoveOnCollisionTest class]];    
     [availableScenes addObject:[LHSceneUserPropertiesTest class]];
     
     //body scale
@@ -118,7 +120,7 @@
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(previousDemo)];
-        button.exclusiveTouch = NO;
+        button.exclusiveTouch = YES;
         [[self uiNode]  addChild:button];
     }
 
@@ -129,7 +131,7 @@
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(restartDemo)];
-        button.exclusiveTouch = NO;
+        button.exclusiveTouch = YES;
         [[self uiNode]  addChild:button];
     }
 
@@ -141,7 +143,7 @@
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(nextDemo)];
-        button.exclusiveTouch = NO;
+        button.exclusiveTouch = YES;
         [[self uiNode]  addChild:button];
     }
     

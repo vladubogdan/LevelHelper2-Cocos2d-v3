@@ -25,8 +25,8 @@
     LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
--(void)dealloc{
 
+-(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);

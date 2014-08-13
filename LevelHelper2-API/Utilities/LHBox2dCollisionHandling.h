@@ -15,6 +15,8 @@
 
 - (instancetype)initWithScene:(LHScene*)scene;
 
+@property BOOL sceneIsDeallocing;
+
 @end
 
 #endif

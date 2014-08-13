@@ -262,10 +262,51 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 #endif//LH_USE_BOX2D
 
+@interface LHScheduledContactInfo : NSObject
 
++(instancetype)scheduledContactWithNodeA:(CCNode*)a
+                                   nodeB:(CCNode*)b
+                                   point:(CGPoint)pt
+                                 impulse:(float)i;
 
+-(CCNode*)nodeA;
+-(CCNode*)nodeB;
+-(CGPoint)contactPoint;
+-(float)impulse;
 
+@end
 
+@implementation LHScheduledContactInfo
+{
+    __unsafe_unretained CCNode* _nodeA;
+    __unsafe_unretained CCNode* _nodeB;
+    CGPoint contactPoint;
+    float impulse;
+}
+
+-(instancetype)initWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    if(self = [super init])
+    {
+        _nodeA = a;
+        _nodeB = b;
+        contactPoint = pt;
+        impulse = i;
+    }
+    return self;
+}
+
+-(CCNode*)nodeA{return _nodeA;}
+-(CCNode*)nodeB{return _nodeB;}
+-(CGPoint)contactPoint{return contactPoint;}
+-(float)impulse{return impulse;}
+
++(instancetype)scheduledContactWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    return LH_AUTORELEASED([[LHScheduledContactInfo alloc] initWithNodeA:a nodeB:b point:pt impulse:i]);
+}
+
+@end
 
 
 @implementation LHGameWorldNode
@@ -273,6 +314,16 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
 #if LH_USE_BOX2D
+    
+    float32 FIXED_TIMESTEP;
+    float32 MINIMUM_TIMESTEP;
+    int32 VELOCITY_ITERATIONS;
+    int32 POSITION_ITERATIONS;
+    int32 MAXIMUM_NUMBER_OF_STEPS;
+
+    NSMutableArray* _scheduledBeginContact;
+    NSMutableArray* _scheduledEndContact;
+    
     BOOL _paused;
     NSTimeInterval  _lastTime;
     LHBox2dDebugDrawNode* __unsafe_unretained _debugNode;
@@ -285,8 +336,13 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
 #if LH_USE_BOX2D
+    
+    LH_SAFE_RELEASE(_scheduledBeginContact);
+    LH_SAFE_RELEASE(_scheduledEndContact);
+    
     //we need to first destroy all children and then distroy box2d world
     [self removeAllChildren];
+    
     LH_SAFE_DELETE(_box2dWorld);
 #endif
     
@@ -313,6 +369,13 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
                                                                                     node:self];
         
 #if LH_USE_BOX2D
+        
+        FIXED_TIMESTEP = 1.0f / 120.0f;
+        MINIMUM_TIMESTEP = 1.0f / 600.0f;
+        VELOCITY_ITERATIONS = 8;
+        POSITION_ITERATIONS = 8;
+        MAXIMUM_NUMBER_OF_STEPS = 2;
+        
         [self setPaused:YES];
         _box2dWorld = NULL;
 #endif
@@ -378,25 +441,30 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 
--(void)visit{
-    
-    NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
-    float delta = thisTime - _lastTime;
-    
+-(void)update:(CCTime)delta
+{
     if(![self paused])
         [self step:delta];
     
-    _lastTime = thisTime;
-    
-    [super visit];
+    [super visit];//required for smooth scrolling
 }
 
 
-const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
-const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 8;
-const int32 POSITION_ITERATIONS = 8;
-const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
+-(void)setBox2dFixedTimeStep:(float)val{
+    FIXED_TIMESTEP = val;
+}
+-(void)setBox2dMinimumTimeStep:(float)val{
+    MINIMUM_TIMESTEP = val;
+}
+-(void)setBox2dVelocityIterations:(int)val{
+    VELOCITY_ITERATIONS = val;
+}
+-(void)setBox2dPositionIterations:(int)val{
+    POSITION_ITERATIONS = val;
+}
+-(void)setBox2dMaxSteps:(int)val{
+    MAXIMUM_NUMBER_OF_STEPS = val;
+}
 
 -(void)step:(float)dt
 {
@@ -420,14 +488,77 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)afterStep:(float)dt {
     
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    {
+        [[self scene] didBeginContactBetweenNodeA:[info nodeA]
+                                         andNodeB:[info nodeB]
+                                       atLocation:[info contactPoint]
+                                      withImpulse:[info impulse]];
+    }
+    [_scheduledBeginContact removeAllObjects];
+    
+    
+    
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    {
+        [[self scene] didEndContactBetweenNodeA:[info nodeA]
+                                       andNodeB:[info nodeB]];
+    }
+    [_scheduledEndContact removeAllObjects];
+}
+
+-(void)scheduleDidBeginContactBetweenNodeA:(CCNode*)nodeA
+                                  andNodeB:(CCNode*)nodeB
+                                atLocation:(CGPoint)contactPoint
+                               withImpulse:(float)impulse
+{
+    if(!_scheduledBeginContact){
+        _scheduledBeginContact = [[NSMutableArray alloc] init];
+    }
+    
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
+    }
+    
+    
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:contactPoint
+                                                                             impulse:impulse];
+    [_scheduledBeginContact addObject:info];
+}
+
+-(void)scheduleDidEndContactBetweenNodeA:(CCNode*)nodeA
+                                andNodeB:(CCNode*)nodeB
+{
+    
+    if(!_scheduledEndContact){
+        _scheduledEndContact = [[NSMutableArray alloc] init];
+    }
+    
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
+    }
+    
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:CGPointZero
+                                                                             impulse:0];
+    [_scheduledEndContact addObject:info];
 }
 
 #pragma mark - CHIPMUNK SUPPORT
 #else //CHIPMUNK
-
-//-(cpSpace*)chipmunkSpace{
-//    return [[super space] space];
-//}
 
 -(void)setDebugDraw:(BOOL)val{
     //something

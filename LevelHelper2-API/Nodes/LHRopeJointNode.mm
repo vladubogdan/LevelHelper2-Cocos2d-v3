@@ -285,6 +285,11 @@ double fcat(double x, void *data)
     CGPoint relativePosA = [_jointProtocolImp localAnchorA];
     CGPoint relativePosB = [_jointProtocolImp localAnchorB];
     
+    
+    ptA = [self convertToNodeSpace:ptA];
+    ptB = [self convertToNodeSpace:ptB];
+    
+    
     BOOL flipped = NO;
     NSMutableArray* rPoints = [self ropePointsFromPointA:a
                                                 toPointB:b
@@ -349,6 +354,7 @@ double fcat(double x, void *data)
                      LHScene* scene = [self scene];
                      LHGameWorldNode* pNode = [scene gameWorldNode];
                      b2World* world = [pNode box2dWorld];
+                     interPt = [self convertToWorldSpace:interPt];
                      b2Vec2 bodyPos = [scene metersFromPoint:interPt];
                      
                      b2BodyDef bodyDef;
@@ -383,7 +389,7 @@ double fcat(double x, void *data)
                      //create joint
                      b2RopeJointDef jointDef;
                      
-                     jointDef.localAnchorA = [scene metersFromPoint:relativePosA];// jointALocalAnchor;
+                     jointDef.localAnchorA = [scene metersFromPoint:relativePosA];
                      jointDef.localAnchorB = b2Vec2(0,0);
                      
                      jointDef.bodyA = [nodeA box2dBody];// bodyA;
@@ -399,7 +405,7 @@ double fcat(double x, void *data)
                      jointDef.collideConnected = [_jointProtocolImp collideConnected];
                      
                      cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
-                     
+                     cutJointA->SetUserData(LH_VOID_BRIDGE_CAST(self));
                      
                      
                     #else //chipmunk
@@ -493,6 +499,7 @@ double fcat(double x, void *data)
                      jointDef.collideConnected = [_jointProtocolImp collideConnected];
                      
                      cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                     cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
                      
                     #else //chipmunk
                         CCNode* cutNodeB = [CCNode node];
@@ -852,16 +859,9 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
     
-    
-#if LH_USE_BOX2D
-    if(std::isnan(anchorA.x) || std::isnan(anchorA.y) || std::isnan(anchorB.x) || std::isnan(anchorB.y)){
-        return;
-    }
-#else
     if(isnan(anchorA.x) || isnan(anchorA.y) || isnan(anchorB.x) || isnan(anchorB.y)){
         return;
     }
-#endif
     
     if(ropeShape){
         [self drawRopeShape:ropeShape
@@ -886,17 +886,15 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     }
 
     if(cutAShapeNode){
-        CCNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
 
 #if LH_USE_BOX2D
-        b2Vec2 pos = cutBodyA->GetPosition();
-        LHScene* scene = [self scene];
-
-        CGPoint worldPos = [scene pointFromMeters:pos];
-        CGPoint B = [nodeA.parent convertToNodeSpaceAR:worldPos];
+        b2Vec2 pos      = cutBodyA->GetPosition();
+        LHScene* scene  = [self scene];
+        CGPoint worldPos= [scene pointFromMeters:pos];
+        CGPoint B       =  [self convertToNodeSpaceAR:worldPos];
 #else
         CGPoint pt = [cutJointA.bodyB.node convertToWorldSpaceAR:CGPointZero];
-        CGPoint B = [nodeA.parent convertToNodeSpaceAR:pt];
+        CGPoint B  = [self convertToNodeSpaceAR:pt];
 #endif
         [self drawRopeShape:cutAShapeNode
                     anchorA:anchorA
@@ -906,17 +904,14 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     }
     
     if(cutBShapeNode){
-        CCNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
-
 #if LH_USE_BOX2D
-        b2Vec2 pos = cutBodyB->GetPosition();
-        LHScene* scene = [self scene];
-        
-        CGPoint worldPos = [scene pointFromMeters:pos];
-        CGPoint A = [nodeB.parent convertToNodeSpaceAR:worldPos];
+        b2Vec2 pos      = cutBodyB->GetPosition();
+        LHScene* scene  = [self scene];
+        CGPoint worldPos= [scene pointFromMeters:pos];
+        CGPoint A       =  [self convertToNodeSpaceAR:worldPos];
 #else
         CGPoint pt = [cutJointB.bodyA.node convertToWorldSpaceAR:CGPointZero];
-        CGPoint A = [nodeB.parent convertToNodeSpaceAR:pt];
+        CGPoint A  = [self convertToNodeSpaceAR:pt];
 #endif
         
         [self drawRopeShape:cutBShapeNode

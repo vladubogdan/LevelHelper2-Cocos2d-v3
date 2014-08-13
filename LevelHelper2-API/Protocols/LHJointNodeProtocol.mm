@@ -52,7 +52,20 @@
 
 -(void)dealloc{
 
+#if LH_USE_BOX2D
+    if(_joint &&
+       _joint->GetBodyA() &&
+       _joint->GetBodyA()->GetWorld() &&
+       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the joint if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeJoint];
+    }
+#else
     [self removeJoint];
+#endif
     
     _node = nil;
     
@@ -109,14 +122,18 @@
         return;
     
     LHScene* scene = (LHScene*)[_node scene];
-    
+
     if([[_node parent] respondsToSelector:@selector(childNodeWithUUID:)])
     {
         _nodeA = (CCNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeAUUID];
         _nodeB = (CCNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeBUUID];
     }
-    else{
+
+    if(!_nodeA){
         _nodeA = (CCNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeAUUID];
+    }
+    
+    if(!_nodeB){
         _nodeB = (CCNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeBUUID];
     }
 }
@@ -141,14 +158,14 @@
     CGPoint pt = [_nodeA convertToWorldSpaceAR:CGPointMake(_relativePosA.x,
                                                           -_relativePosA.y)];
     
-    return [_nodeA.parent convertToNodeSpaceAR:pt];
+    return [_node convertToNodeSpaceAR:pt];
 }
 
 -(CGPoint)anchorB{
     CGPoint pt = [_nodeB convertToWorldSpaceAR:CGPointMake(_relativePosB.x,
                                                           -_relativePosB.y)];
     
-    return [_nodeB.parent convertToNodeSpaceAR:pt];
+    return [_node convertToNodeSpaceAR:pt];
 }
 
 -(BOOL)collideConnected{
@@ -158,7 +175,6 @@
 -(void)removeJoint{
     
     LHScene* scene = (LHScene*)[_node scene];
-    
     if(scene)
     {
         //if we dont have the scene it means the scene was changed so the box2d world will be deleted, deleting the joints also - safe
@@ -166,12 +182,13 @@
 #if LH_USE_BOX2D
         if(_joint){
             LHGameWorldNode* pNode = [scene gameWorldNode];
-            
+        
             //if we dont have the scene it means
             b2World* world = [pNode box2dWorld];
             
             if(world){
-                
+
+                _joint->SetUserData(NULL);
                 world->DestroyJoint(_joint);
                 _joint = NULL;
             }
@@ -189,6 +206,7 @@
 #if LH_USE_BOX2D
 -(void)setJoint:(b2Joint*)val{
     _joint = val;
+    _joint->SetUserData(LH_VOID_BRIDGE_CAST(_node));
 }
 -(b2Joint*)joint{
     return _joint;

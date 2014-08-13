@@ -79,9 +79,9 @@
         
         _groundAnchorA = [dict pointForKey:@"groundAnchorA"];
         {
-        _groundAnchorA = CGPointMake(_groundAnchorA.x, designSize.height - _groundAnchorA.y);
-        _groundAnchorA.x += offset.x;
-        _groundAnchorA.y += offset.y;
+            _groundAnchorA = CGPointMake(_groundAnchorA.x, designSize.height - _groundAnchorA.y);
+            _groundAnchorA.x += offset.x;
+            _groundAnchorA.y += offset.y;
         }
         
         _groundAnchorB = [dict pointForKey:@"groundAnchorB"];

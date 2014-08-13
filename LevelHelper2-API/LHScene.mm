@@ -533,6 +533,24 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 -(float)valueFromMeters:(float)meter{
     return meter*[self ptm];
 }
+
+-(void)setBox2dFixedTimeStep:(float)val{
+    [[self gameWorldNode] setBox2dFixedTimeStep:val];
+}
+-(void)setBox2dMinimumTimeStep:(float)val{
+    [[self gameWorldNode] setBox2dMinimumTimeStep:val];
+}
+-(void)setBox2dVelocityIterations:(int)val{
+    [[self gameWorldNode] setBox2dVelocityIterations:val];
+}
+-(void)setBox2dPositionIterations:(int)val{
+    [[self gameWorldNode] setBox2dPositionIterations:val];
+}
+-(void)setBox2dMaxSteps:(int)val{
+    [[self gameWorldNode] setBox2dMaxSteps:val];
+}
+
+
 #endif //LH_USE_BOX2D
 
 -(void)loadGlobalGravityFromDictionary:(NSDictionary*)dict
