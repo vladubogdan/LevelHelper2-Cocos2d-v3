@@ -122,14 +122,18 @@
         return;
     
     LHScene* scene = (LHScene*)[_node scene];
-    
+
     if([[_node parent] respondsToSelector:@selector(childNodeWithUUID:)])
     {
         _nodeA = (CCNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeAUUID];
         _nodeB = (CCNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeBUUID];
     }
-    else{
+
+    if(!_nodeA){
         _nodeA = (CCNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeAUUID];
+    }
+    
+    if(!_nodeB){
         _nodeB = (CCNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeBUUID];
     }
 }
@@ -154,14 +158,14 @@
     CGPoint pt = [_nodeA convertToWorldSpaceAR:CGPointMake(_relativePosA.x,
                                                           -_relativePosA.y)];
     
-    return [_nodeA.parent convertToNodeSpaceAR:pt];
+    return [_node convertToNodeSpaceAR:pt];
 }
 
 -(CGPoint)anchorB{
     CGPoint pt = [_nodeB convertToWorldSpaceAR:CGPointMake(_relativePosB.x,
                                                           -_relativePosB.y)];
     
-    return [_nodeB.parent convertToNodeSpaceAR:pt];
+    return [_node convertToNodeSpaceAR:pt];
 }
 
 -(BOOL)collideConnected{

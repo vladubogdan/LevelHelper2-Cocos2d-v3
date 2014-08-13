@@ -516,6 +516,16 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         _scheduledBeginContact = [[NSMutableArray alloc] init];
     }
     
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
+    }
+    
+    
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
                                                                                point:contactPoint
@@ -529,6 +539,15 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     
     if(!_scheduledEndContact){
         _scheduledEndContact = [[NSMutableArray alloc] init];
+    }
+    
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
     }
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA

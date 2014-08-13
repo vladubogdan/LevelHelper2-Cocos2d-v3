@@ -78,8 +78,11 @@
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
 
-        _jointAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointAUUID"]];
-        _jointBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointBUUID"]];
+        if([dict objectForKey:@"jointAUUID"])
+            _jointAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointAUUID"]];
+        
+        if([dict objectForKey:@"jointBUUID"])
+            _jointBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"jointBUUID"]];
 
         _ratio = [dict floatForKey:@"gearRatio"];
     }
