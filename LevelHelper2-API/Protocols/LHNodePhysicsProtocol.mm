@@ -330,14 +330,15 @@
                         ++i;
                     }
                     
-                    shapeDef.Set(verts, count);
                     
-                    b2FixtureDef fixture;
-                    
-                    [self setupFixture:&fixture withInfo:fixInfo];
-                    
-                    fixture.shape = &shapeDef;
-                    _body->CreateFixture(&fixture);
+                    if([self validCentroid:verts count:count])
+                    {
+                        shapeDef.Set(verts, count);
+                        b2FixtureDef fixture;
+                        [self setupFixture:&fixture withInfo:fixInfo];                        
+                        fixture.shape = &shapeDef;
+                        _body->CreateFixture(&fixture);
+                    }
                     
                     delete[] verts;
                 }

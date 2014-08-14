@@ -270,7 +270,7 @@
     [drawNode setZOrder:100];
     [drawNode setName:sectionName];
     
-#ifndef NDEBUG
+#if LH_DEBUG
     [drawNode drawSegmentFrom:from
                            to:to
                        radius:1
@@ -341,6 +341,8 @@
             [[self gameWorldNode] addChild:drawNode];
             [drawNode setZOrder:100];
 
+#if LH_DEBUG
+            
             [drawNode drawSegmentFrom:CGPointMake(gameWorldRect.origin.x, gameWorldRect.origin.y)
                                    to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y)
                                radius:1
@@ -361,7 +363,7 @@
                                    to:CGPointMake(gameWorldRect.origin.x + gameWorldRect.size.width, gameWorldRect.origin.y + gameWorldRect.size.height)
                                radius:1
                                 color:[CCColor magentaColor]];
-
+#endif
 
             
         }

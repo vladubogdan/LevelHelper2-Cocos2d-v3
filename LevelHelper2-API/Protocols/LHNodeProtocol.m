@@ -208,7 +208,10 @@
         LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
                                                                        parent:prnt];
         pNode.contentSize = scene.designResolutionSize;
+#if LH_DEBUG
         [pNode setDebugDraw:YES];
+#endif
+        
         return pNode;
     }
     else if([nodeType isEqualToString:@"LHBackUINode"])

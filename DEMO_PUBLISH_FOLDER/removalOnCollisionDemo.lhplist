@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<string>{{0.519098, 0.519066}, {0.519086, 1.000000}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -259,7 +259,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>350EAFB2-645B-4E2F-8CA8-E146C7848F1E</string>
+						<string>E5347239-6DA6-4D40-AD1A-13F88B85BCEF</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -334,7 +334,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>350EAFB2-645B-4E2F-8CA8-E146C7848F1E</string>
+						<string>E5347239-6DA6-4D40-AD1A-13F88B85BCEF</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -409,7 +409,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>350EAFB2-645B-4E2F-8CA8-E146C7848F1E</string>
+						<string>E5347239-6DA6-4D40-AD1A-13F88B85BCEF</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -583,7 +583,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>223464D2-AA92-45A5-9410-DC952E764CA5</key>
+		<key>7EF31B54-E7F8-4D93-8D6F-06533472196F</key>
 		<array>
 			<array>
 				<string>{-40.75, -37.5}</string>
@@ -641,7 +641,7 @@
 				<string>{-46.75, -22.5}</string>
 			</array>
 		</array>
-		<key>350EAFB2-645B-4E2F-8CA8-E146C7848F1E</key>
+		<key>E5347239-6DA6-4D40-AD1A-13F88B85BCEF</key>
 		<array>
 			<array>
 				<string>{30.75, -25.5}</string>

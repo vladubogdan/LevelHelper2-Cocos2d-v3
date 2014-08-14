@@ -1745,7 +1745,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>DDF0D9DB-8B27-4538-980B-2C310E38EA4C</string>
+			<string>617DCB0B-23FE-41D1-BCD7-99D8F0E29D26</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -1783,7 +1783,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>DDF0D9DB-8B27-4538-980B-2C310E38EA4C</string>
+	<string>617DCB0B-23FE-41D1-BCD7-99D8F0E29D26</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>
