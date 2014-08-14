@@ -50,6 +50,8 @@
 
 -(void)mouseDown:(NSEvent *)theEvent{
     
+//    [self gameWorldNode].paused = ![self gameWorldNode].paused;
+    
     [self tougleAnimation];
     
     [super mouseDown:theEvent];

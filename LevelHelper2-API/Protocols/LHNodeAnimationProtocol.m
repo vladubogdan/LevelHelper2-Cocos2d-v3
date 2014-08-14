@@ -58,12 +58,15 @@
 }
 
 -(void)visit{
-
+    
     NSTimeInterval thisTime = [NSDate timeIntervalSinceReferenceDate];
     float dt = thisTime - lastTime;
     
     if(_activeAnimation){
-        [_activeAnimation updateTimeWithDelta:dt];
+        if(![_node paused] && [_node isRunningInActiveScene])
+        {
+            [_activeAnimation updateTimeWithDelta:dt];
+        }
     }
     
     lastTime = thisTime;
