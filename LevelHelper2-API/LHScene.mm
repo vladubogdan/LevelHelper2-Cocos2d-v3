@@ -105,11 +105,23 @@
     NSString* path = [[NSBundle mainBundle] pathForResource:[levelPlistFile stringByDeletingPathExtension]
                                                      ofType:[levelPlistFile pathExtension]];
     
+    if(!path){
+        NSLog(@"ERROR: Could not find level file %@. Make sure the name is correct and the file is located inside a folder added in Xcode as Reference (blue icon).", levelPlistFile);
+    }
+    NSAssert(path, @" ");
     if(!path)return nil;
     
+    
     NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
+
+    
+    if(!dict){
+        NSLog(@"ERROR: Could not load level file %@. The file located at %@ does not appear to be valid.", levelPlistFile, path);
+    }
+    NSAssert(dict, @" ");
     if(!dict)return nil;
 
+    
     int aspect = [dict intForKey:@"aspect"];
     CGSize designResolution = [dict sizeForKey:@"designResolution"];
 
@@ -446,6 +458,9 @@
     }
 }
 
+-(void)didCutRopeJoint:(LHRopeJointNode*)joint{
+    //nothing to do - users should overwrite this method
+}
 
 #pragma mark- COLLISION HANDLING
 #if LH_USE_BOX2D

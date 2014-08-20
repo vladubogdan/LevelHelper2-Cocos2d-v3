@@ -41,6 +41,8 @@
 #import "LHCameraActivateProperty.h"
 
 #import "LHGameWorldNode.h"
+#import "LHBackUINode.h"
+#import "LHUINode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
@@ -420,7 +422,11 @@
     CGPoint offset = [scene designOffset];
 
     CCNode* p = [animNode parent];
-    if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene gameWorldNode])
+    if([animNode parent] == nil ||
+       [animNode parent] == scene ||
+       [animNode parent] == [scene gameWorldNode]||
+       [animNode parent] == [scene backUiNode]||
+       [animNode parent] == [scene uiNode])
     {
         newPos.x += offset.x;
         newPos.y += offset.y;
@@ -435,7 +441,6 @@
     }
     
     return newPos;
-    
 }
 
 -(void)animateNodeChildrenPositionsToTime:(float)time

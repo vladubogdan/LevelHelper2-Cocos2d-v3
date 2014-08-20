@@ -15,6 +15,7 @@
 @class LHBackUINode;
 @class LHGameWorldNode;
 @class LHUINode;
+@class LHRopeJointNode;
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus
@@ -125,6 +126,13 @@
  @param anim The animation object that just finished a repetition.
  */
 -(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+#pragma mark- ROPE CUTTING
+
+/**
+ Overwrite this method to receive notifications when a rope joint is cut.
+ */
+-(void)didCutRopeJoint:(LHRopeJointNode*)joint;
 
 
 #pragma mark- COLLISION HANDLING

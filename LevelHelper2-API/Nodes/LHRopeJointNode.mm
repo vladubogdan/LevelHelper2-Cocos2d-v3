@@ -535,6 +535,7 @@ double fcat(double x, void *data)
                  }
             }
      
+            [[self scene] didCutRopeJoint:self];
             return;
          }
      }

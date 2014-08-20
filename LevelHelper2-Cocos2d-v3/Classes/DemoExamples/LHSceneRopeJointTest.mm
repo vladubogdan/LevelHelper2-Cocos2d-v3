@@ -26,7 +26,7 @@
      INIT YOUR CONTENT HERE
      */
     
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it.\nWatch the console for didCutRopeJoint notification."
                                          fontName:@"Arial"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
@@ -37,6 +37,10 @@
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
     return self;
+}
+-(void)didCutRopeJoint:(LHRopeJointNode *)joint
+{
+    NSLog(@"DID CUT ROPE JOINT %@", [joint name]);
 }
 
 @end
