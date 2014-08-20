@@ -9,8 +9,8 @@
 
 // Import the interfaces
 #import "LHSceneShapesTest.h"
-#import "LHConfig.h"
-#import "LHUtils.h"
+#import "LevelHelper2-API/LHConfig.h"
+#import "LevelHelper2-API/LHUtils.h"
 
 @implementation LHSceneShapesTest
 {

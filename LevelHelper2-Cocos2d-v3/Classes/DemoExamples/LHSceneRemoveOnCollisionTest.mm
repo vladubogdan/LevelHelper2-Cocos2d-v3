@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "LHSceneRemoveOnCollisionTest.h"
-#import "LHConfig.h"
+#import "LevelHelper2-API/LHConfig.h"
 
 @implementation LHSceneRemoveOnCollisionTest
 

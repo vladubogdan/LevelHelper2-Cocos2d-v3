@@ -11,7 +11,6 @@
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
 
-#import "LevelHelper2API.h"
 #import "LHSceneDemo.h"
 
 @interface LHSceneUserPropertiesTest : LHSceneDemo
