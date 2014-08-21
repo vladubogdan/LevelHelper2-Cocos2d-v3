@@ -12,6 +12,9 @@
 #import "LHScene.h"
 #import "LHConfig.h"
 
+#import "LHNode.h"
+
+
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
 @end
@@ -80,29 +83,34 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
         
-//#if LH_DEBUG
-//        CCDrawNode* debug = [CCDrawNode node];
-//        [self addChild:debug];
-//        [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
-//        CGPoint* vertices = new CGPoint[4];
-//        vertices[0] = CGPointMake(0, 0);
-//        CGSize size = self.contentSize;
-//        vertices[1] = CGPointMake(size.width, 0);
-//        vertices[2] = CGPointMake(size.width, size.height);
-//        vertices[3] = CGPointMake(0, size.height);
-//        CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
-//        CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
-//        
-//        [debug drawPolyWithVerts:vertices
-//                           count:4
-//                       fillColor:fillColor
-//                     borderWidth:1 borderColor:borderColor];
-//        
-//        delete[] vertices;
-//#endif//LH_DEBUG        
+#if LH_DEBUG
+        [self createDebugNode];
+#endif//LH_DEBUG        
     }
     
     return self;
+}
+
+-(void)createDebugNode
+{
+    CCDrawNode* debug = [CCDrawNode node];
+    [self addChild:debug];
+    [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
+    CGPoint* vertices = new CGPoint[4];
+    vertices[0] = CGPointMake(0, 0);
+    CGSize size = self.contentSize;
+    vertices[1] = CGPointMake(size.width, 0);
+    vertices[2] = CGPointMake(size.width, size.height);
+    vertices[3] = CGPointMake(0, size.height);
+    CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
+    CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
+    
+    [debug drawPolyWithVerts:vertices
+                       count:4
+                   fillColor:fillColor
+                 borderWidth:1 borderColor:borderColor];
+    
+    delete[] vertices;
 }
 
 +(instancetype)createWithName:(NSString*)assetName
@@ -134,6 +142,7 @@
             return self;
         }
         
+        
         NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
         if(tracedFix){
             tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
@@ -147,31 +156,16 @@
 
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
+    
     }
     
-//#if LH_DEBUG
-//    CCDrawNode* debug = [CCDrawNode node];
-//    [self addChild:debug];
-//    [debug setAnchorPoint:CGPointMake(0.5, 0.5)];
-//    CGPoint* vertices = new CGPoint[4];
-//    vertices[0] = CGPointMake(0, 0);
-//    CGSize size = self.contentSize;
-//    vertices[1] = CGPointMake(size.width, 0);
-//    vertices[2] = CGPointMake(size.width, size.height);
-//    vertices[3] = CGPointMake(0, size.height);
-//    CCColor* borderColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 1)];
-//    CCColor* fillColor = [CCColor colorWithCcColor4f:ccc4f(0, 1, 0, 0.3)];
-//    
-//    [debug drawPolyWithVerts:vertices
-//                       count:4
-//                   fillColor:fillColor
-//                 borderWidth:1 borderColor:borderColor];
-//    
-//    delete[] vertices;
-//#endif//LH_DEBUG
+#if LH_DEBUG
+    [self createDebugNode];
+#endif//LH_DEBUG
     
     [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
     

@@ -38,6 +38,8 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
 @end
 
 @interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
@@ -490,6 +492,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     if([self body])
     {
         CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
+        worldPos = [[(LHScene*)[_node scene] gameWorldNode] convertToNodeSpace:worldPos];
+        CGPoint gWPos = [[(LHScene*)[_node scene] gameWorldNode] position];
+        
+        worldPos = CGPointMake(worldPos.x - gWPos.x,
+                               worldPos.y - gWPos.y);
+        
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node globalAngleFromLocalAngle:[_node rotation]]));
         _body->SetAwake(true);
