@@ -17,7 +17,7 @@
 
 + (LHSceneSubclass *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/level01.plist"];
+	return [[self alloc] initWithContentOfFile:@"PUBLISH_FOLDER/level01.plist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
