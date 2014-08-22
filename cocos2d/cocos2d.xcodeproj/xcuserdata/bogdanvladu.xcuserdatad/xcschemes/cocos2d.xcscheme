@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E40269E1982C4BF002B4D32"
-               BuildableName = "libObjectiveChipmunk.a"
-               BlueprintName = "ObjectiveChipmunk-MAC"
-               ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
+               BlueprintIdentifier = "6E3412F719A710A100B73620"
+               BuildableName = "libcocos2d.a"
+               BlueprintName = "cocos2d"
+               ReferencedContainer = "container:cocos2d.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E34130719A710A100B73620"
+               BuildableName = "cocos2dTests.xctest"
+               BlueprintName = "cocos2dTests"
+               ReferencedContainer = "container:cocos2d.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E121FF91924BD85005E8532"
+               BlueprintIdentifier = "6E3419D519A7508000B73620"
                BuildableName = "libObjectiveChipmunk.a"
-               BlueprintName = "ObjectiveChipmunk"
-               ReferencedContainer = "container:LevelHelper2-Cocos2d-v3.xcodeproj">
+               BlueprintName = "ObjectiveChipmunk-MAC"
+               ReferencedContainer = "container:cocos2d.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

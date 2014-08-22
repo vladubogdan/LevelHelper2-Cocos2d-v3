@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:LevelHelper2-API/LevelHelper2-API"
+      name = "LevelHelper2-API">
+      <Group
+         location = "group:Animations"
+         name = "Animations">
+         <Group
+            location = "group:AnimationFrames"
+            name = "AnimationFrames">
+            <FileRef
+               location = "group:LHFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHFrame.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHOpacityFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHOpacityFrame.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHPositionFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHPositionFrame.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHRotationFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHRotationFrame.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHScaleFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHScaleFrame.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHSpriteFrame.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHSpriteFrame.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:AnimationProperties"
+            name = "AnimationProperties">
+            <FileRef
+               location = "group:LHAnimationProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHAnimationProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHCameraActivateProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHCameraActivateProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenOpacitiesProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenOpacitiesProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenPositionsProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenPositionsProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenRotationsProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenRotationsProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenScalesProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHChildrenScalesProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHOpacityProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHOpacityProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHPositionProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHPositionProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHRotationProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHRotationProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHScaleProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHScaleProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:LHSpriteFrameProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:LHSpriteFrameProperty.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:LHAnimation.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHAnimation.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Box2dControllers"
+         name = "Box2dControllers">
+         <FileRef
+            location = "group:b2Controller.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHb2BuoyancyController.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:LHb2BuoyancyController.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Categories"
+         name = "Categories">
+         <FileRef
+            location = "group:CCNode+Transform.h">
+         </FileRef>
+         <FileRef
+            location = "group:CCNode+Transform.m">
+         </FileRef>
+         <FileRef
+            location = "group:CCPhysicsJoint+LHAdditionalChipmunkJoints.h">
+         </FileRef>
+         <FileRef
+            location = "group:CCPhysicsJoint+LHAdditionalChipmunkJoints.mm">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+LHDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+LHDictionary.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:LevelHelper2-API"
+         name = "LevelHelper2-API">
+         <Group
+            location = "group:Utilities"
+            name = "Utilities">
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:LevelHelper2API.h">
+      </FileRef>
+      <FileRef
+         location = "group:LHConfig.h">
+      </FileRef>
+      <FileRef
+         location = "group:LHScene.h">
+      </FileRef>
+      <FileRef
+         location = "group:LHScene.mm">
+      </FileRef>
+      <Group
+         location = "group:Nodes"
+         name = "Nodes">
+         <FileRef
+            location = "group:LHAsset.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHAsset.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHBackUINode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHBackUINode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHBezier.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHBezier.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHCamera.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHCamera.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHDistanceJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHDistanceJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHDrawNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHDrawNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:LHGameWorldNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHGameWorldNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHGearJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHGearJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHGravityArea.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHGravityArea.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHParallax.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHParallax.m">
+         </FileRef>
+         <FileRef
+            location = "group:LHParallaxLayer.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHParallaxLayer.m">
+         </FileRef>
+         <FileRef
+            location = "group:LHPrismaticJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHPrismaticJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHPulleyJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHPulleyJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHRevoluteJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHRevoluteJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHRopeJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHRopeJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHShape.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHShape.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHSprite.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHSprite.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHUINode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHUINode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHWater.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHWater.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHWeldJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHWeldJointNode.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHWheelJointNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHWheelJointNode.mm">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Protocols"
+         name = "Protocols">
+         <FileRef
+            location = "group:LHJointNodeProtocol.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHJointNodeProtocol.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodeAnimationProtocol.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodeAnimationProtocol.m">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodePhysicsProtocol.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodePhysicsProtocol.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodeProtocol.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHNodeProtocol.m">
+         </FileRef>
+         <FileRef
+            location = "group:LHUserProperties.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHUserProperties.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHUserPropertyProtocol.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Utilities"
+         name = "Utilities">
+         <FileRef
+            location = "group:LHBox2dCollisionHandling.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHBox2dCollisionHandling.mm">
+         </FileRef>
+         <FileRef
+            location = "group:LHUtils.h">
+         </FileRef>
+         <FileRef
+            location = "group:LHUtils.m">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
