@@ -779,6 +779,7 @@
 		6E34198C19A74F5300B73620 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E3419FE19A7508000B73620 /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveChipmunk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E341A9319A7525B00B73620 /* libcocos2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocos2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E80C4B619A75A74002EEA12 /* LH_COCOS2D_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_COCOS2D_VERSION.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -818,6 +819,7 @@
 		6E3412EF19A710A100B73620 = {
 			isa = PBXGroup;
 			children = (
+				6E80C4B619A75A74002EEA12 /* LH_COCOS2D_VERSION.plist */,
 				6E34192719A74B5100B73620 /* Chipmunk */,
 				6E34174B19A74B4A00B73620 /* CCBReader */,
 				6E34175A19A74B4A00B73620 /* cocos2d */,
@@ -2217,6 +2219,7 @@
 				6E3419AC19A74F5400B73620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E3419FB19A7508000B73620 /* Build configuration list for PBXNativeTarget "ObjectiveChipmunk-MAC" */ = {
 			isa = XCConfigurationList;

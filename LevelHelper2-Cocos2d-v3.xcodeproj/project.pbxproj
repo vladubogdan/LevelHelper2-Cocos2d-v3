@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E02B9BF197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */; };
-		6E02B9C0197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */; };
 		6E0D5612194C32A30036E940 /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
 		6E0D5629194C32A30036E940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E0D5662194C32A30036E940 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
@@ -23,7 +21,6 @@
 		6E0D5684194C32A30036E940 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEC1924BD85005E8532 /* AudioToolbox.framework */; };
 		6E0D5686194C32A30036E940 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220021924BD85005E8532 /* Default@2x.png */; };
 		6E0D5687194C32A30036E940 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220151924BD85005E8532 /* Icon-120.png */; };
-		6E0D5689194C32A30036E940 /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */; };
 		6E0D568A194C32A30036E940 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E12200B1924BD85005E8532 /* Icon@2x.png */; };
 		6E0D568B194C32A30036E940 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E12201D1924BD85005E8532 /* Icon-Small@2x.png */; };
 		6E0D568C194C32A30036E940 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E12200F1924BD85005E8532 /* Icon-72@2x.png */; };
@@ -39,7 +36,6 @@
 		6E0D5698194C32A30036E940 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E12201F1924BD85005E8532 /* Icon-Spotlight-iOS7.png */; };
 		6E0D5699194C32A30036E940 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220131924BD85005E8532 /* Icon-76@2x.png */; };
 		6E0D569B194C32A30036E940 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220211924BD85005E8532 /* Icon-Spotlight-iOS7@2x.png */; };
-		6E0D569C194C32A30036E940 /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E0D569D194C32A30036E940 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220111924BD85005E8532 /* Icon-76.png */; };
 		6E0D569F194C32A30036E940 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220261924BD85005E8532 /* iTunesArtwork@2x */; };
 		6E121FE71924BD85005E8532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
@@ -72,94 +68,98 @@
 		6E1220271924BD85005E8532 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 6E1220261924BD85005E8532 /* iTunesArtwork@2x */; };
 		6E12228C1924BD88005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E1222901924BD88005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
-		6E1AAB731973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */; };
-		6E1AAB741973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */; };
-		6E2170491982BA8600C1F7CF /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */; };
-		6E2170691982BA8600C1F7CF /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
-		6E21706E1982BA8600C1F7CF /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */; };
-		6E21706F1982BA8600C1F7CF /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */; };
-		6E21707B1982BA8600C1F7CF /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */; };
-		6E21708B1982BA8600C1F7CF /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF905196186580007E7A0 /* LHSceneGravityAreasTest.mm */; };
-		6E21708E1982BA8600C1F7CF /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
-		6E21708F1982BA8600C1F7CF /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */; };
-		6E2170911982BA8600C1F7CF /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
-		6E2170A91982BA8600C1F7CF /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */; };
-		6E2170AC1982BA8600C1F7CF /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF909196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm */; };
 		6E2170AE1982BA8600C1F7CF /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
-		6E2170BA1982BA8600C1F7CF /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
-		6E2170C31982BA8600C1F7CF /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B719596B9800726044 /* LHSceneDemo.mm */; };
-		6E2170C51982BA8600C1F7CF /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
-		6E2170CD1982BA8600C1F7CF /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
-		6E2170FE1982BA8600C1F7CF /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
-		6E2171201982BA8600C1F7CF /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */; };
-		6E21712A1982BA8600C1F7CF /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */; };
-		6E21712C1982BA8600C1F7CF /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */; };
-		6E2171321982BA8600C1F7CF /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */; };
-		6E2171341982BA8600C1F7CF /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
 		6E2171451982BA8600C1F7CF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEA1924BD85005E8532 /* OpenAL.framework */; };
 		6E2171471982BA8600C1F7CF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FE61924BD85005E8532 /* QuartzCore.framework */; };
 		6E2171481982BA8600C1F7CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEE1924BD85005E8532 /* AVFoundation.framework */; };
 		6E21714C1982BA8600C1F7CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FF21924BD85005E8532 /* Foundation.framework */; };
 		6E21714D1982BA8600C1F7CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEC1924BD85005E8532 /* AudioToolbox.framework */; };
-		6E2171541982BA8600C1F7CF /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */; };
-		6E2171671982BA8600C1F7CF /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E34197419A74BC800B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E34132619A710CB00B73620 /* libcocos2d.a */; };
 		6E3419D419A7503000B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */; };
 		6E341A0419A751E500B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E34132619A710CB00B73620 /* libcocos2d.a */; };
 		6E341A0519A751EC00B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */; };
 		6E341A9919A752A600B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E341A9619A7529300B73620 /* libcocos2d.a */; };
 		6E341A9A19A752AD00B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E341A0319A751DF00B73620 /* libObjectiveChipmunk.a */; };
+		6E341AA819A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
+		6E341AA919A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
+		6E341AAA19A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
+		6E341AAC19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AAB19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E341AAD19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AAB19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E341AAE19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AAB19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E341ADC19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */; };
+		6E341ADD19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */; };
+		6E341ADE19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */; };
+		6E341ADF19A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */; };
+		6E341AE019A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */; };
+		6E341AE119A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */; };
+		6E341AE219A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB519A7562C00B73620 /* LHSceneBeziersTest.mm */; };
+		6E341AE319A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB519A7562C00B73620 /* LHSceneBeziersTest.mm */; };
+		6E341AE419A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB519A7562C00B73620 /* LHSceneBeziersTest.mm */; };
+		6E341AE519A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB719A7562C00B73620 /* LHSceneBodyScaleTest.mm */; };
+		6E341AE619A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB719A7562C00B73620 /* LHSceneBodyScaleTest.mm */; };
+		6E341AE719A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB719A7562C00B73620 /* LHSceneBodyScaleTest.mm */; };
+		6E341AE819A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB919A7562C00B73620 /* LHSceneCameraFollowTest.mm */; };
+		6E341AE919A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB919A7562C00B73620 /* LHSceneCameraFollowTest.mm */; };
+		6E341AEA19A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AB919A7562C00B73620 /* LHSceneCameraFollowTest.mm */; };
+		6E341AEB19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABB19A7562C00B73620 /* LHSceneCameraTest.mm */; };
+		6E341AEC19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABB19A7562C00B73620 /* LHSceneCameraTest.mm */; };
+		6E341AED19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABB19A7562C00B73620 /* LHSceneCameraTest.mm */; };
+		6E341AEE19A7562C00B73620 /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABD19A7562C00B73620 /* LHSceneCarTest.mm */; };
+		6E341AEF19A7562C00B73620 /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABD19A7562C00B73620 /* LHSceneCarTest.mm */; };
+		6E341AF019A7562C00B73620 /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABD19A7562C00B73620 /* LHSceneCarTest.mm */; };
+		6E341AF119A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABF19A7562C00B73620 /* LHSceneCharacterAnimationTest.mm */; };
+		6E341AF219A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABF19A7562C00B73620 /* LHSceneCharacterAnimationTest.mm */; };
+		6E341AF319A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ABF19A7562C00B73620 /* LHSceneCharacterAnimationTest.mm */; };
+		6E341AF419A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */; };
+		6E341AF519A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */; };
+		6E341AF619A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */; };
+		6E341AF719A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */; };
+		6E341AF819A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */; };
+		6E341AF919A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */; };
+		6E341AFA19A7562C00B73620 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC519A7562C00B73620 /* LHSceneDemo.mm */; };
+		6E341AFB19A7562C00B73620 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC519A7562C00B73620 /* LHSceneDemo.mm */; };
+		6E341AFC19A7562C00B73620 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC519A7562C00B73620 /* LHSceneDemo.mm */; };
+		6E341AFD19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */; };
+		6E341AFE19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */; };
+		6E341AFF19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */; };
+		6E341B0019A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC919A7562C00B73620 /* LHSceneGravityAreasTest.mm */; };
+		6E341B0119A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC919A7562C00B73620 /* LHSceneGravityAreasTest.mm */; };
+		6E341B0219A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AC919A7562C00B73620 /* LHSceneGravityAreasTest.mm */; };
+		6E341B0319A7562C00B73620 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACB19A7562C00B73620 /* LHSceneIntroduction.mm */; };
+		6E341B0419A7562C00B73620 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACB19A7562C00B73620 /* LHSceneIntroduction.mm */; };
+		6E341B0519A7562C00B73620 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACB19A7562C00B73620 /* LHSceneIntroduction.mm */; };
+		6E341B0619A7562C00B73620 /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACD19A7562C00B73620 /* LHSceneJointsTest.mm */; };
+		6E341B0719A7562C00B73620 /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACD19A7562C00B73620 /* LHSceneJointsTest.mm */; };
+		6E341B0819A7562C00B73620 /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACD19A7562C00B73620 /* LHSceneJointsTest.mm */; };
+		6E341B0919A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACF19A7562C00B73620 /* LHSceneParallaxTest.mm */; };
+		6E341B0A19A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACF19A7562C00B73620 /* LHSceneParallaxTest.mm */; };
+		6E341B0B19A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ACF19A7562C00B73620 /* LHSceneParallaxTest.mm */; };
+		6E341B0C19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD119A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E341B0D19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD119A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E341B0E19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD119A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm */; };
+		6E341B0F19A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD319A7562C00B73620 /* LHSceneRopeJointTest.mm */; };
+		6E341B1019A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD319A7562C00B73620 /* LHSceneRopeJointTest.mm */; };
+		6E341B1119A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD319A7562C00B73620 /* LHSceneRopeJointTest.mm */; };
+		6E341B1219A7562C00B73620 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD519A7562C00B73620 /* LHSceneShapesTest.mm */; };
+		6E341B1319A7562C00B73620 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD519A7562C00B73620 /* LHSceneShapesTest.mm */; };
+		6E341B1419A7562C00B73620 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD519A7562C00B73620 /* LHSceneShapesTest.mm */; };
+		6E341B1519A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm */; };
+		6E341B1619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm */; };
+		6E341B1719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm */; };
+		6E341B1819A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD919A7562C00B73620 /* LHSceneUserPropertiesTest.mm */; };
+		6E341B1919A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD919A7562C00B73620 /* LHSceneUserPropertiesTest.mm */; };
+		6E341B1A19A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341AD919A7562C00B73620 /* LHSceneUserPropertiesTest.mm */; };
+		6E341B1B19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ADB19A7562C00B73620 /* LHSceneWaterAreaTest.mm */; };
+		6E341B1C19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ADB19A7562C00B73620 /* LHSceneWaterAreaTest.mm */; };
+		6E341B1D19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E341ADB19A7562C00B73620 /* LHSceneWaterAreaTest.mm */; };
 		6E4026921982BC32002B4D32 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4026911982BC32002B4D32 /* OpenGL.framework */; };
 		6E4026941982BC50002B4D32 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4026931982BC50002B4D32 /* AppKit.framework */; };
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
-		6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
-		6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */; };
-		6E6F6E401999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
-		6E6F6E411999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
-		6E6F6E421999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */; };
-		6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
-		6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */; };
-		6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
-		6E7EC244195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */; };
-		6E89FDBD192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
-		6E89FE35192E27FB0040478F /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */; };
-		6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
-		6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */; };
-		6E9B2A16195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
-		6E9B2A17195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */; };
-		6E9B2A1A195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
-		6E9B2A1B195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */; };
-		6E9B2A2219600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */; };
-		6E9B2A2319600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */; };
 		6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74619A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 		6E9FD2D119A5044F0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74819A4F1E50046CDBD /* libLevelHelper2-API.a */; };
-		6EBEA2B819596B9800726044 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B719596B9800726044 /* LHSceneDemo.mm */; };
-		6EBEA2B919596B9800726044 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2B719596B9800726044 /* LHSceneDemo.mm */; };
-		6EBEA2BC19596CDF00726044 /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */; };
-		6EBEA2BD19596CDF00726044 /* LHSceneCameraTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */; };
-		6EBEA2C019596DAF00726044 /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */; };
-		6EBEA2C119596DAF00726044 /* LHSceneJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */; };
-		6EBEA2C419596F4900726044 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */; };
-		6EBEA2C519596F4900726044 /* LHSceneRopeJointTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */; };
-		6EBEA2C819596FC800726044 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
-		6EBEA2C919596FC800726044 /* LHSceneGearJointsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */; };
-		6ECDF8FE19616E470007E7A0 /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */; };
-		6ECDF8FF19616E470007E7A0 /* LHSceneCarTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */; };
-		6ECDF906196186580007E7A0 /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF905196186580007E7A0 /* LHSceneGravityAreasTest.mm */; };
-		6ECDF907196186580007E7A0 /* LHSceneGravityAreasTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF905196186580007E7A0 /* LHSceneGravityAreasTest.mm */; };
-		6ECDF90A196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF909196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm */; };
-		6ECDF90B196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF909196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm */; };
-		6ECDF90E1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */; };
-		6ECDF90F1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */; };
-		6ECDF912196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */; };
-		6ECDF913196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */; };
-		6ED55BDC196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */; };
-		6ED55BDD196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */; };
-		6ED5C561195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
-		6ED5C562195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */; };
 		6EF5DD2419A50DBB00D5D289 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74A19A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 /* End PBXBuildFile section */
 
@@ -272,8 +272,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E02B9BD197FD3D70077349C /* LHSceneAssetsWithJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsWithJointsTest.h; sourceTree = "<group>"; };
-		6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsWithJointsTest.mm; sourceTree = "<group>"; };
 		6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0D56A4194C32A30036E940 /* Info+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2D.plist"; sourceTree = "<absolute>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,11 +308,55 @@
 		6E12228B1924BD88005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		6E12228E1924BD88005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		6E12228F1924BD88005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		6E1AAB711973B52B00E8ECCE /* LHSceneUserPropertiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUserPropertiesTest.h; sourceTree = "<group>"; };
-		6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesTest.mm; sourceTree = "<group>"; };
 		6E21716E1982BA8600C1F7CF /* LevelHelper2-Cocos2d-v3+Box2d MAC OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2d MAC OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E21716F1982BA8600C1F7CF /* Info+Box2dMacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2dMacOS.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2dMacOS.plist"; sourceTree = "<absolute>"; };
 		6E34132119A710CB00B73620 /* cocos2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d.xcodeproj; path = cocos2d/cocos2d.xcodeproj; sourceTree = "<group>"; };
+		6E341AA719A755F100B73620 /* PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PUBLISH_FOLDER; path = DEMO/PUBLISH_FOLDER; sourceTree = "<group>"; };
+		6E341AAB19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; name = INDIVIDUAL_IMAGES_EXAMPLE; path = DEMO/INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = "<group>"; };
+		6E341AB019A7562C00B73620 /* LHSceneAssetsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsTest.h; sourceTree = "<group>"; };
+		6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsTest.mm; sourceTree = "<group>"; };
+		6E341AB219A7562C00B73620 /* LHSceneAssetsWithJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsWithJointsTest.h; sourceTree = "<group>"; };
+		6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsWithJointsTest.mm; sourceTree = "<group>"; };
+		6E341AB419A7562C00B73620 /* LHSceneBeziersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBeziersTest.h; sourceTree = "<group>"; };
+		6E341AB519A7562C00B73620 /* LHSceneBeziersTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBeziersTest.mm; sourceTree = "<group>"; };
+		6E341AB619A7562C00B73620 /* LHSceneBodyScaleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBodyScaleTest.h; sourceTree = "<group>"; };
+		6E341AB719A7562C00B73620 /* LHSceneBodyScaleTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBodyScaleTest.mm; sourceTree = "<group>"; };
+		6E341AB819A7562C00B73620 /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
+		6E341AB919A7562C00B73620 /* LHSceneCameraFollowTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowTest.mm; sourceTree = "<group>"; };
+		6E341ABA19A7562C00B73620 /* LHSceneCameraTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraTest.h; sourceTree = "<group>"; };
+		6E341ABB19A7562C00B73620 /* LHSceneCameraTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraTest.mm; sourceTree = "<group>"; };
+		6E341ABC19A7562C00B73620 /* LHSceneCarTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCarTest.h; sourceTree = "<group>"; };
+		6E341ABD19A7562C00B73620 /* LHSceneCarTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCarTest.mm; sourceTree = "<group>"; };
+		6E341ABE19A7562C00B73620 /* LHSceneCharacterAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCharacterAnimationTest.h; sourceTree = "<group>"; };
+		6E341ABF19A7562C00B73620 /* LHSceneCharacterAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCharacterAnimationTest.mm; sourceTree = "<group>"; };
+		6E341AC019A7562C00B73620 /* LHSceneCollisionFilteringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringTest.h; sourceTree = "<group>"; };
+		6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringTest.mm; sourceTree = "<group>"; };
+		6E341AC219A7562C00B73620 /* LHSceneCollisionHandlingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionHandlingTest.h; sourceTree = "<group>"; };
+		6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionHandlingTest.mm; sourceTree = "<group>"; };
+		6E341AC419A7562C00B73620 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneDemo.h; sourceTree = "<group>"; };
+		6E341AC519A7562C00B73620 /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneDemo.mm; sourceTree = "<group>"; };
+		6E341AC619A7562C00B73620 /* LHSceneGearJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGearJointsTest.h; sourceTree = "<group>"; };
+		6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGearJointsTest.mm; sourceTree = "<group>"; };
+		6E341AC819A7562C00B73620 /* LHSceneGravityAreasTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGravityAreasTest.h; sourceTree = "<group>"; };
+		6E341AC919A7562C00B73620 /* LHSceneGravityAreasTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGravityAreasTest.mm; sourceTree = "<group>"; };
+		6E341ACA19A7562C00B73620 /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
+		6E341ACB19A7562C00B73620 /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneIntroduction.mm; sourceTree = "<group>"; };
+		6E341ACC19A7562C00B73620 /* LHSceneJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneJointsTest.h; sourceTree = "<group>"; };
+		6E341ACD19A7562C00B73620 /* LHSceneJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneJointsTest.mm; sourceTree = "<group>"; };
+		6E341ACE19A7562C00B73620 /* LHSceneParallaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxTest.h; sourceTree = "<group>"; };
+		6E341ACF19A7562C00B73620 /* LHSceneParallaxTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxTest.mm; sourceTree = "<group>"; };
+		6E341AD019A7562C00B73620 /* LHSceneRemoveOnCollisionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRemoveOnCollisionTest.h; sourceTree = "<group>"; };
+		6E341AD119A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRemoveOnCollisionTest.mm; sourceTree = "<group>"; };
+		6E341AD219A7562C00B73620 /* LHSceneRopeJointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRopeJointTest.h; sourceTree = "<group>"; };
+		6E341AD319A7562C00B73620 /* LHSceneRopeJointTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRopeJointTest.mm; sourceTree = "<group>"; };
+		6E341AD419A7562C00B73620 /* LHSceneShapesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneShapesTest.h; sourceTree = "<group>"; };
+		6E341AD519A7562C00B73620 /* LHSceneShapesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneShapesTest.mm; sourceTree = "<group>"; };
+		6E341AD619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSpriteSheetAnimationTest.h; sourceTree = "<group>"; };
+		6E341AD719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneSpriteSheetAnimationTest.mm; sourceTree = "<group>"; };
+		6E341AD819A7562C00B73620 /* LHSceneUserPropertiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUserPropertiesTest.h; sourceTree = "<group>"; };
+		6E341AD919A7562C00B73620 /* LHSceneUserPropertiesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesTest.mm; sourceTree = "<group>"; };
+		6E341ADA19A7562C00B73620 /* LHSceneWaterAreaTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneWaterAreaTest.h; sourceTree = "<group>"; };
+		6E341ADB19A7562C00B73620 /* LHSceneWaterAreaTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneWaterAreaTest.mm; sourceTree = "<group>"; };
 		6E4026911982BC32002B4D32 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		6E4026931982BC50002B4D32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		6E4026961982BD55002B4D32 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -322,52 +364,10 @@
 		6E4026991982BDE4002B4D32 /* AppDelegateMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMacOS.h; path = Classes/AppDelegateMacOS.h; sourceTree = "<group>"; };
 		6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateMacOS.m; path = Classes/AppDelegateMacOS.m; sourceTree = "<group>"; };
 		6E40269C1982BE30002B4D32 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
-		6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringTest.h; sourceTree = "<group>"; };
-		6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringTest.mm; sourceTree = "<group>"; };
-		6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRemoveOnCollisionTest.mm; sourceTree = "<group>"; };
-		6E6F6E3F1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRemoveOnCollisionTest.h; sourceTree = "<group>"; };
-		6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowTest.h; sourceTree = "<group>"; };
-		6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowTest.mm; sourceTree = "<group>"; };
-		6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxTest.h; sourceTree = "<group>"; };
-		6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxTest.mm; sourceTree = "<group>"; };
-		6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DEMO_INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = "<group>"; };
 		6E89FE31192E261E0040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSubclass.h; path = Classes/LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
-		6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DEMO_PUBLISH_FOLDER; sourceTree = "<group>"; };
-		6E9B2A0C195FFA150043336E /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
-		6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneIntroduction.mm; sourceTree = "<group>"; };
-		6E9B2A14195FFDEF0043336E /* LHSceneCharacterAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCharacterAnimationTest.h; sourceTree = "<group>"; };
-		6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCharacterAnimationTest.mm; sourceTree = "<group>"; };
-		6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsTest.h; sourceTree = "<group>"; };
-		6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsTest.mm; sourceTree = "<group>"; };
-		6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneWaterAreaTest.h; sourceTree = "<group>"; };
-		6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneWaterAreaTest.mm; sourceTree = "<group>"; };
 		6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
 		6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
-		6EBEA2B619596B9800726044 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneDemo.h; sourceTree = "<group>"; };
-		6EBEA2B719596B9800726044 /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneDemo.mm; sourceTree = "<group>"; };
-		6EBEA2BA19596CDF00726044 /* LHSceneCameraTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraTest.h; sourceTree = "<group>"; };
-		6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraTest.mm; sourceTree = "<group>"; };
-		6EBEA2BE19596DAF00726044 /* LHSceneJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneJointsTest.h; sourceTree = "<group>"; };
-		6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneJointsTest.mm; sourceTree = "<group>"; };
-		6EBEA2C219596F4900726044 /* LHSceneRopeJointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRopeJointTest.h; sourceTree = "<group>"; };
-		6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRopeJointTest.mm; sourceTree = "<group>"; };
-		6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGearJointsTest.h; sourceTree = "<group>"; };
-		6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGearJointsTest.mm; sourceTree = "<group>"; };
-		6ECDF8FC19616E470007E7A0 /* LHSceneCarTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCarTest.h; sourceTree = "<group>"; };
-		6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCarTest.mm; sourceTree = "<group>"; };
-		6ECDF904196186580007E7A0 /* LHSceneGravityAreasTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGravityAreasTest.h; sourceTree = "<group>"; };
-		6ECDF905196186580007E7A0 /* LHSceneGravityAreasTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGravityAreasTest.mm; sourceTree = "<group>"; };
-		6ECDF908196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSpriteSheetAnimationTest.h; sourceTree = "<group>"; };
-		6ECDF909196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneSpriteSheetAnimationTest.mm; sourceTree = "<group>"; };
-		6ECDF90C1961923D0007E7A0 /* LHSceneShapesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneShapesTest.h; sourceTree = "<group>"; };
-		6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneShapesTest.mm; sourceTree = "<group>"; };
-		6ECDF910196195820007E7A0 /* LHSceneBeziersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBeziersTest.h; sourceTree = "<group>"; };
-		6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBeziersTest.mm; sourceTree = "<group>"; };
-		6ED55BDA196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionHandlingTest.h; sourceTree = "<group>"; };
-		6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionHandlingTest.mm; sourceTree = "<group>"; };
-		6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBodyScaleTest.h; sourceTree = "<group>"; };
-		6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBodyScaleTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,13 +435,10 @@
 				6E34132119A710CB00B73620 /* cocos2d.xcodeproj */,
 				6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */,
 				6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */,
-				6E89FDBB192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE */,
-				6E89FE34192E27FB0040478F /* DEMO_PUBLISH_FOLDER */,
+				6E341AA619A755DC00B73620 /* Demo */,
 				6E121FFE1924BD85005E8532 /* LevelHelper2-Cocos2d-v3 */,
 				6E121FE51924BD85005E8532 /* Frameworks */,
 				6E121FE41924BD85005E8532 /* Products */,
-				6E0D56A4194C32A30036E940 /* Info+Box2D.plist */,
-				6E21716F1982BA8600C1F7CF /* Info+Box2dMacOS.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,8 +473,8 @@
 		6E121FFE1924BD85005E8532 /* LevelHelper2-Cocos2d-v3 */ = {
 			isa = PBXGroup;
 			children = (
-				6E121FFF1924BD85005E8532 /* Resources */,
 				6E12228D1924BD88005E8532 /* Classes */,
+				6E121FFF1924BD85005E8532 /* Resources */,
 				6E1222891924BD88005E8532 /* Supporting Files */,
 			);
 			path = "LevelHelper2-Cocos2d-v3";
@@ -492,6 +489,8 @@
 				6E1220041924BD85005E8532 /* Default-568h@2x.png */,
 				6E1220061924BD85005E8532 /* Default-Landscape~ipad.png */,
 				6E1220231924BD85005E8532 /* Info.plist */,
+				6E0D56A4194C32A30036E940 /* Info+Box2D.plist */,
+				6E21716F1982BA8600C1F7CF /* Info+Box2dMacOS.plist */,
 				6E1220241924BD85005E8532 /* iTunesArtwork */,
 				6E1220261924BD85005E8532 /* iTunesArtwork@2x */,
 				6E1220081924BD85005E8532 /* Icons */,
@@ -522,9 +521,9 @@
 		6E1222891924BD88005E8532 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E4026951982BD55002B4D32 /* MacOS */,
 				6E12228A1924BD88005E8532 /* Prefix.pch */,
 				6E12228B1924BD88005E8532 /* main.m */,
-				6E4026951982BD55002B4D32 /* MacOS */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -532,7 +531,6 @@
 		6E12228D1924BD88005E8532 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6EBEA2B519596B9800726044 /* DemoExamples */,
 				6E89FE31192E261E0040478F /* LHSceneSubclass.h */,
 				6E89FE32192E261E0040478F /* LHSceneSubclass.mm */,
 				6E12228E1924BD88005E8532 /* AppDelegate.h */,
@@ -552,6 +550,68 @@
 				6E341A0319A751DF00B73620 /* libObjectiveChipmunk.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6E341AA619A755DC00B73620 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				6E341AAF19A7562C00B73620 /* Source */,
+				6E341AAB19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE */,
+				6E341AA719A755F100B73620 /* PUBLISH_FOLDER */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		6E341AAF19A7562C00B73620 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6E341AB019A7562C00B73620 /* LHSceneAssetsTest.h */,
+				6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */,
+				6E341AB219A7562C00B73620 /* LHSceneAssetsWithJointsTest.h */,
+				6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */,
+				6E341AB419A7562C00B73620 /* LHSceneBeziersTest.h */,
+				6E341AB519A7562C00B73620 /* LHSceneBeziersTest.mm */,
+				6E341AB619A7562C00B73620 /* LHSceneBodyScaleTest.h */,
+				6E341AB719A7562C00B73620 /* LHSceneBodyScaleTest.mm */,
+				6E341AB819A7562C00B73620 /* LHSceneCameraFollowTest.h */,
+				6E341AB919A7562C00B73620 /* LHSceneCameraFollowTest.mm */,
+				6E341ABA19A7562C00B73620 /* LHSceneCameraTest.h */,
+				6E341ABB19A7562C00B73620 /* LHSceneCameraTest.mm */,
+				6E341ABC19A7562C00B73620 /* LHSceneCarTest.h */,
+				6E341ABD19A7562C00B73620 /* LHSceneCarTest.mm */,
+				6E341ABE19A7562C00B73620 /* LHSceneCharacterAnimationTest.h */,
+				6E341ABF19A7562C00B73620 /* LHSceneCharacterAnimationTest.mm */,
+				6E341AC019A7562C00B73620 /* LHSceneCollisionFilteringTest.h */,
+				6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */,
+				6E341AC219A7562C00B73620 /* LHSceneCollisionHandlingTest.h */,
+				6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */,
+				6E341AC419A7562C00B73620 /* LHSceneDemo.h */,
+				6E341AC519A7562C00B73620 /* LHSceneDemo.mm */,
+				6E341AC619A7562C00B73620 /* LHSceneGearJointsTest.h */,
+				6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */,
+				6E341AC819A7562C00B73620 /* LHSceneGravityAreasTest.h */,
+				6E341AC919A7562C00B73620 /* LHSceneGravityAreasTest.mm */,
+				6E341ACA19A7562C00B73620 /* LHSceneIntroduction.h */,
+				6E341ACB19A7562C00B73620 /* LHSceneIntroduction.mm */,
+				6E341ACC19A7562C00B73620 /* LHSceneJointsTest.h */,
+				6E341ACD19A7562C00B73620 /* LHSceneJointsTest.mm */,
+				6E341ACE19A7562C00B73620 /* LHSceneParallaxTest.h */,
+				6E341ACF19A7562C00B73620 /* LHSceneParallaxTest.mm */,
+				6E341AD019A7562C00B73620 /* LHSceneRemoveOnCollisionTest.h */,
+				6E341AD119A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm */,
+				6E341AD219A7562C00B73620 /* LHSceneRopeJointTest.h */,
+				6E341AD319A7562C00B73620 /* LHSceneRopeJointTest.mm */,
+				6E341AD419A7562C00B73620 /* LHSceneShapesTest.h */,
+				6E341AD519A7562C00B73620 /* LHSceneShapesTest.mm */,
+				6E341AD619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.h */,
+				6E341AD719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm */,
+				6E341AD819A7562C00B73620 /* LHSceneUserPropertiesTest.h */,
+				6E341AD919A7562C00B73620 /* LHSceneUserPropertiesTest.mm */,
+				6E341ADA19A7562C00B73620 /* LHSceneWaterAreaTest.h */,
+				6E341ADB19A7562C00B73620 /* LHSceneWaterAreaTest.mm */,
+			);
+			name = Source;
+			path = DEMO/Source;
 			sourceTree = "<group>";
 		};
 		6E4026951982BD55002B4D32 /* MacOS */ = {
@@ -581,58 +641,6 @@
 				6E9FC74A19A4F1E50046CDBD /* libLevelHelper2-API.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6EBEA2B519596B9800726044 /* DemoExamples */ = {
-			isa = PBXGroup;
-			children = (
-				6EBEA2B619596B9800726044 /* LHSceneDemo.h */,
-				6EBEA2B719596B9800726044 /* LHSceneDemo.mm */,
-				6E9B2A0C195FFA150043336E /* LHSceneIntroduction.h */,
-				6E9B2A0D195FFA150043336E /* LHSceneIntroduction.mm */,
-				6EBEA2BA19596CDF00726044 /* LHSceneCameraTest.h */,
-				6EBEA2BB19596CDF00726044 /* LHSceneCameraTest.mm */,
-				6E7EC23D195FDD9B006D5FEE /* LHSceneCameraFollowTest.h */,
-				6E7EC23E195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm */,
-				6E9B2A14195FFDEF0043336E /* LHSceneCharacterAnimationTest.h */,
-				6E9B2A15195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm */,
-				6E9B2A18195FFFE60043336E /* LHSceneAssetsTest.h */,
-				6E9B2A19195FFFE60043336E /* LHSceneAssetsTest.mm */,
-				6E02B9BD197FD3D70077349C /* LHSceneAssetsWithJointsTest.h */,
-				6E02B9BE197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm */,
-				6E7EC241195FE21D006D5FEE /* LHSceneParallaxTest.h */,
-				6E7EC242195FE21D006D5FEE /* LHSceneParallaxTest.mm */,
-				6EBEA2BE19596DAF00726044 /* LHSceneJointsTest.h */,
-				6EBEA2BF19596DAF00726044 /* LHSceneJointsTest.mm */,
-				6EBEA2C219596F4900726044 /* LHSceneRopeJointTest.h */,
-				6EBEA2C319596F4900726044 /* LHSceneRopeJointTest.mm */,
-				6EBEA2C619596FC800726044 /* LHSceneGearJointsTest.h */,
-				6EBEA2C719596FC800726044 /* LHSceneGearJointsTest.mm */,
-				6E60BBC71962D8A7001D3906 /* LHSceneCollisionFilteringTest.h */,
-				6E60BBC81962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm */,
-				6ED55BDA196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.h */,
-				6ED55BDB196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm */,
-				6E6F6E3F1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.h */,
-				6E6F6E3E1999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm */,
-				6ECDF8FC19616E470007E7A0 /* LHSceneCarTest.h */,
-				6ECDF8FD19616E470007E7A0 /* LHSceneCarTest.mm */,
-				6E9B2A2019600DF50043336E /* LHSceneWaterAreaTest.h */,
-				6E9B2A2119600DF50043336E /* LHSceneWaterAreaTest.mm */,
-				6ECDF904196186580007E7A0 /* LHSceneGravityAreasTest.h */,
-				6ECDF905196186580007E7A0 /* LHSceneGravityAreasTest.mm */,
-				6ECDF908196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.h */,
-				6ECDF909196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm */,
-				6ECDF90C1961923D0007E7A0 /* LHSceneShapesTest.h */,
-				6ECDF90D1961923D0007E7A0 /* LHSceneShapesTest.mm */,
-				6ECDF910196195820007E7A0 /* LHSceneBeziersTest.h */,
-				6ECDF911196195820007E7A0 /* LHSceneBeziersTest.mm */,
-				6ED5C55F195FCD0600B6DF33 /* LHSceneBodyScaleTest.h */,
-				6ED5C560195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm */,
-				6E1AAB711973B52B00E8ECCE /* LHSceneUserPropertiesTest.h */,
-				6E1AAB721973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm */,
-			);
-			name = DemoExamples;
-			path = Classes/DemoExamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,14 +818,15 @@
 			files = (
 				6E0D5686194C32A30036E940 /* Default@2x.png in Resources */,
 				6E0D5687194C32A30036E940 /* Icon-120.png in Resources */,
-				6E0D5689194C32A30036E940 /* DEMO_PUBLISH_FOLDER in Resources */,
 				6E0D568A194C32A30036E940 /* Icon@2x.png in Resources */,
 				6E0D568B194C32A30036E940 /* Icon-Small@2x.png in Resources */,
 				6E0D568C194C32A30036E940 /* Icon-72@2x.png in Resources */,
 				6E0D568D194C32A30036E940 /* Default.png in Resources */,
 				6E0D568E194C32A30036E940 /* Icon.png in Resources */,
 				6E0D568F194C32A30036E940 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				6E341AA819A755F100B73620 /* PUBLISH_FOLDER in Resources */,
 				6E0D5690194C32A30036E940 /* Default-Landscape~ipad.png in Resources */,
+				6E341AAC19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E0D5691194C32A30036E940 /* Icon-Small.png in Resources */,
 				6E0D5692194C32A30036E940 /* Icon-Small-50.png in Resources */,
 				6E0D5694194C32A30036E940 /* Icon-72.png in Resources */,
@@ -826,7 +835,6 @@
 				6E0D5698194C32A30036E940 /* Icon-Spotlight-iOS7.png in Resources */,
 				6E0D5699194C32A30036E940 /* Icon-76@2x.png in Resources */,
 				6E0D569B194C32A30036E940 /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				6E0D569C194C32A30036E940 /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E0D569D194C32A30036E940 /* Icon-76.png in Resources */,
 				6E0D569F194C32A30036E940 /* iTunesArtwork@2x in Resources */,
 			);
@@ -838,14 +846,15 @@
 			files = (
 				6E1220031924BD85005E8532 /* Default@2x.png in Resources */,
 				6E1220161924BD85005E8532 /* Icon-120.png in Resources */,
-				6E89FE35192E27FB0040478F /* DEMO_PUBLISH_FOLDER in Resources */,
 				6E12200C1924BD85005E8532 /* Icon@2x.png in Resources */,
 				6E12201E1924BD85005E8532 /* Icon-Small@2x.png in Resources */,
 				6E1220101924BD85005E8532 /* Icon-72@2x.png in Resources */,
 				6E1220011924BD85005E8532 /* Default.png in Resources */,
 				6E12200A1924BD85005E8532 /* Icon.png in Resources */,
 				6E1220181924BD85005E8532 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				6E341AAA19A755F100B73620 /* PUBLISH_FOLDER in Resources */,
 				6E1220071924BD85005E8532 /* Default-Landscape~ipad.png in Resources */,
+				6E341AAE19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E12201C1924BD85005E8532 /* Icon-Small.png in Resources */,
 				6E12201A1924BD85005E8532 /* Icon-Small-50.png in Resources */,
 				6E12200E1924BD85005E8532 /* Icon-72.png in Resources */,
@@ -854,7 +863,6 @@
 				6E1220201924BD85005E8532 /* Icon-Spotlight-iOS7.png in Resources */,
 				6E1220141924BD85005E8532 /* Icon-76@2x.png in Resources */,
 				6E1220221924BD85005E8532 /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				6E89FDBD192E23010040478F /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E1220121924BD85005E8532 /* Icon-76.png in Resources */,
 				6E1220271924BD85005E8532 /* iTunesArtwork@2x in Resources */,
 			);
@@ -864,8 +872,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E2171541982BA8600C1F7CF /* DEMO_PUBLISH_FOLDER in Resources */,
-				6E2171671982BA8600C1F7CF /* DEMO_INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E341AA919A755F100B73620 /* PUBLISH_FOLDER in Resources */,
+				6E341AAD19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -877,31 +885,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ECDF8FF19616E470007E7A0 /* LHSceneCarTest.mm in Sources */,
-				6E6F6E401999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
-				6E7EC240195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */,
-				6EBEA2BD19596CDF00726044 /* LHSceneCameraTest.mm in Sources */,
-				6EBEA2C519596F4900726044 /* LHSceneRopeJointTest.mm in Sources */,
-				6E1AAB741973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */,
-				6ECDF907196186580007E7A0 /* LHSceneGravityAreasTest.mm in Sources */,
-				6E7EC244195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
-				6ECDF90F1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */,
-				6E60BBCA1962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */,
-				6E02B9C0197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */,
-				6ECDF90B196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6E341B1B19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
+				6E341AF419A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E341B1519A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6E341AF119A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
+				6E341AE819A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
+				6E341AEE19A7562C00B73620 /* LHSceneCarTest.mm in Sources */,
+				6E341B0C19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
+				6E341AF719A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E341AFA19A7562C00B73620 /* LHSceneDemo.mm in Sources */,
+				6E341B0019A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */,
 				6E0D5612194C32A30036E940 /* LHSceneSubclass.mm in Sources */,
-				6ED5C562195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */,
-				6EBEA2B919596B9800726044 /* LHSceneDemo.mm in Sources */,
-				6E9B2A1B195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */,
-				6EBEA2C919596FC800726044 /* LHSceneGearJointsTest.mm in Sources */,
+				6E341AFD19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */,
+				6E341B0619A7562C00B73620 /* LHSceneJointsTest.mm in Sources */,
+				6E341ADF19A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */,
+				6E341B1219A7562C00B73620 /* LHSceneShapesTest.mm in Sources */,
+				6E341AE519A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */,
+				6E341ADC19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */,
+				6E341B0919A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */,
+				6E341B0F19A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */,
+				6E341B1819A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */,
+				6E341AEB19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E0D5629194C32A30036E940 /* main.m in Sources */,
-				6E9B2A17195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E0D5662194C32A30036E940 /* AppDelegate.m in Sources */,
-				6ED55BDD196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
-				6EBEA2C119596DAF00726044 /* LHSceneJointsTest.mm in Sources */,
-				6ECDF913196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */,
-				6E9B2A2319600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */,
-				6E9B2A0F195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
+				6E341B0319A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
+				6E341AE219A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,31 +917,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ECDF8FE19616E470007E7A0 /* LHSceneCarTest.mm in Sources */,
-				6E9B2A1A195FFFE60043336E /* LHSceneAssetsTest.mm in Sources */,
-				6EBEA2C419596F4900726044 /* LHSceneRopeJointTest.mm in Sources */,
-				6E60BBC91962D8A7001D3906 /* LHSceneCollisionFilteringTest.mm in Sources */,
-				6ED5C561195FCD0600B6DF33 /* LHSceneBodyScaleTest.mm in Sources */,
-				6ECDF90A196189970007E7A0 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
-				6ED55BDC196A9F0B00F6C4B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
-				6E9B2A0E195FFA150043336E /* LHSceneIntroduction.mm in Sources */,
-				6E7EC243195FE21D006D5FEE /* LHSceneParallaxTest.mm in Sources */,
-				6EBEA2BC19596CDF00726044 /* LHSceneCameraTest.mm in Sources */,
+				6E341B1D19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
+				6E341AF619A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E341B1719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6E341AF319A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
+				6E341AEA19A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
+				6E341AF019A7562C00B73620 /* LHSceneCarTest.mm in Sources */,
+				6E341B0E19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
+				6E341AF919A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E341AFC19A7562C00B73620 /* LHSceneDemo.mm in Sources */,
+				6E341B0219A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */,
 				6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */,
-				6E02B9BF197FD3D70077349C /* LHSceneAssetsWithJointsTest.mm in Sources */,
-				6E9B2A2219600DF50043336E /* LHSceneWaterAreaTest.mm in Sources */,
-				6EBEA2B819596B9800726044 /* LHSceneDemo.mm in Sources */,
+				6E341AFF19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */,
+				6E341B0819A7562C00B73620 /* LHSceneJointsTest.mm in Sources */,
+				6E341AE119A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */,
+				6E341B1419A7562C00B73620 /* LHSceneShapesTest.mm in Sources */,
+				6E341AE719A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */,
+				6E341ADE19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */,
+				6E341B0B19A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */,
+				6E341B1119A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */,
+				6E341B1A19A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */,
+				6E341AED19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E12228C1924BD88005E8532 /* main.m in Sources */,
-				6EBEA2C019596DAF00726044 /* LHSceneJointsTest.mm in Sources */,
-				6ECDF906196186580007E7A0 /* LHSceneGravityAreasTest.mm in Sources */,
 				6E1222901924BD88005E8532 /* AppDelegate.m in Sources */,
-				6E1AAB731973B52B00E8ECCE /* LHSceneUserPropertiesTest.mm in Sources */,
-				6ECDF912196195820007E7A0 /* LHSceneBeziersTest.mm in Sources */,
-				6E6F6E421999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
-				6ECDF90E1961923D0007E7A0 /* LHSceneShapesTest.mm in Sources */,
-				6EBEA2C819596FC800726044 /* LHSceneGearJointsTest.mm in Sources */,
-				6E7EC23F195FDD9B006D5FEE /* LHSceneCameraFollowTest.mm in Sources */,
-				6E9B2A16195FFDEF0043336E /* LHSceneCharacterAnimationTest.mm in Sources */,
+				6E341B0519A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
+				6E341AE419A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,31 +949,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E2170491982BA8600C1F7CF /* LHSceneCarTest.mm in Sources */,
-				6E6F6E411999EC7300987EA6 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
-				6E2170691982BA8600C1F7CF /* LHSceneCameraFollowTest.mm in Sources */,
-				6E21706E1982BA8600C1F7CF /* LHSceneCameraTest.mm in Sources */,
-				6E21706F1982BA8600C1F7CF /* LHSceneRopeJointTest.mm in Sources */,
-				6E21707B1982BA8600C1F7CF /* LHSceneUserPropertiesTest.mm in Sources */,
-				6E21708B1982BA8600C1F7CF /* LHSceneGravityAreasTest.mm in Sources */,
-				6E21708E1982BA8600C1F7CF /* LHSceneParallaxTest.mm in Sources */,
-				6E21708F1982BA8600C1F7CF /* LHSceneShapesTest.mm in Sources */,
-				6E2170911982BA8600C1F7CF /* LHSceneCollisionFilteringTest.mm in Sources */,
-				6E2170A91982BA8600C1F7CF /* LHSceneAssetsWithJointsTest.mm in Sources */,
-				6E2170AC1982BA8600C1F7CF /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6E341B1C19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
+				6E341AF519A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E341B1619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
+				6E341AF219A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
+				6E341AE919A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
+				6E341AEF19A7562C00B73620 /* LHSceneCarTest.mm in Sources */,
+				6E341B0D19A7562C00B73620 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
+				6E341AF819A7562C00B73620 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E341AFB19A7562C00B73620 /* LHSceneDemo.mm in Sources */,
+				6E341B0119A7562C00B73620 /* LHSceneGravityAreasTest.mm in Sources */,
 				6E2170AE1982BA8600C1F7CF /* LHSceneSubclass.mm in Sources */,
+				6E341AFE19A7562C00B73620 /* LHSceneGearJointsTest.mm in Sources */,
+				6E341B0719A7562C00B73620 /* LHSceneJointsTest.mm in Sources */,
+				6E341AE019A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm in Sources */,
+				6E341B1319A7562C00B73620 /* LHSceneShapesTest.mm in Sources */,
+				6E341AE619A7562C00B73620 /* LHSceneBodyScaleTest.mm in Sources */,
+				6E341ADD19A7562C00B73620 /* LHSceneAssetsTest.mm in Sources */,
+				6E341B0A19A7562C00B73620 /* LHSceneParallaxTest.mm in Sources */,
+				6E341B1019A7562C00B73620 /* LHSceneRopeJointTest.mm in Sources */,
+				6E341B1919A7562C00B73620 /* LHSceneUserPropertiesTest.mm in Sources */,
+				6E341AEC19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */,
-				6E2170BA1982BA8600C1F7CF /* LHSceneBodyScaleTest.mm in Sources */,
-				6E2170C31982BA8600C1F7CF /* LHSceneDemo.mm in Sources */,
-				6E2170C51982BA8600C1F7CF /* LHSceneAssetsTest.mm in Sources */,
-				6E2170CD1982BA8600C1F7CF /* LHSceneGearJointsTest.mm in Sources */,
-				6E2170FE1982BA8600C1F7CF /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E4026981982BD55002B4D32 /* main.m in Sources */,
-				6E2171201982BA8600C1F7CF /* LHSceneCollisionHandlingTest.mm in Sources */,
-				6E21712A1982BA8600C1F7CF /* LHSceneJointsTest.mm in Sources */,
-				6E21712C1982BA8600C1F7CF /* LHSceneBeziersTest.mm in Sources */,
-				6E2171321982BA8600C1F7CF /* LHSceneWaterAreaTest.mm in Sources */,
-				6E2171341982BA8600C1F7CF /* LHSceneIntroduction.mm in Sources */,
+				6E341B0419A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
+				6E341AE319A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

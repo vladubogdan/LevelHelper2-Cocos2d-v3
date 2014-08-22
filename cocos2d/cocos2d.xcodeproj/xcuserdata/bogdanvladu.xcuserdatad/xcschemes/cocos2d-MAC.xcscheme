@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E341A0619A7525B00B73620"
-               BuildableName = "libcocos2d copy.a"
+               BuildableName = "libcocos2d.a"
                BlueprintName = "cocos2d-MAC"
                ReferencedContainer = "container:cocos2d.xcodeproj">
             </BuildableReference>

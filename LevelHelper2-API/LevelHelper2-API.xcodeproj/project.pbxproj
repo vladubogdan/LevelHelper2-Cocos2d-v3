@@ -542,6 +542,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E9FC74E19A4F2330046CDBD /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
 		6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHOpacityFrame.h; sourceTree = "<group>"; };
@@ -883,6 +884,7 @@
 		6EDE843019A483A200599C48 = {
 			isa = PBXGroup;
 			children = (
+				6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */,
 				6EDE843E19A483A200599C48 /* LevelHelper2-API */,
 				6EDE843B19A483A200599C48 /* Frameworks */,
 				6EDE843A19A483A200599C48 /* Products */,
