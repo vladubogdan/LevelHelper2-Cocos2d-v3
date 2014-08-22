@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E80C4D319A7683B002EEA12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C4D219A7683B002EEA12 /* Foundation.framework */; };
 		6E9FC7C119A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C219A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C319A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
@@ -215,20 +216,12 @@
 		6E9FC89219A4F2630046CDBD /* LHUserPropertyProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */; };
 		6E9FC89319A4F2630046CDBD /* LHBox2dCollisionHandling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BD19A4F2330046CDBD /* LHBox2dCollisionHandling.h */; };
 		6E9FC89419A4F2630046CDBD /* LHUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BF19A4F2330046CDBD /* LHUtils.h */; };
-		6E9FD24F19A4F77E0046CDBD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD24E19A4F77E0046CDBD /* OpenGLES.framework */; };
-		6E9FD25119A4F7A60046CDBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD25019A4F7A60046CDBD /* UIKit.framework */; };
-		6E9FD25319A4F7AB0046CDBD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD25219A4F7AB0046CDBD /* OpenAL.framework */; };
 		6E9FD2CC19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E9FD2CD19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E9FD2CE19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
-		6E9FD2D219A5083B0046CDBD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD24E19A4F77E0046CDBD /* OpenGLES.framework */; };
-		6E9FD2D319A508400046CDBD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD25219A4F7AB0046CDBD /* OpenAL.framework */; };
-		6E9FD2D419A5084F0046CDBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FD25019A4F7A60046CDBD /* UIKit.framework */; };
 		6EDE843D19A483A200599C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE843C19A483A200599C48 /* Foundation.framework */; };
 		6EDE86DD19A4898100599C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE843C19A483A200599C48 /* Foundation.framework */; };
 		6EDE89D419A48F9E00599C48 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE89D319A48F9E00599C48 /* libBox2D.a */; };
-		6EDE8B4319A4986C00599C48 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE846B19A4840600599C48 /* SpriteKit.framework */; };
-		6EDE8B4419A4986C00599C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE843C19A483A200599C48 /* Foundation.framework */; };
 		6EDE8B8A19A499E200599C48 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE8B8919A499E200599C48 /* libBox2D.a */; };
 		6EF5DD2519A50FCD00D5D289 /* LHFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74D19A4F2330046CDBD /* LHFrame.h */; };
 		6EF5DD2619A50FCD00D5D289 /* LHOpacityFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */; };
@@ -543,6 +536,7 @@
 
 /* Begin PBXFileReference section */
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
+		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E9FC74E19A4F2330046CDBD /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
 		6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHOpacityFrame.h; sourceTree = "<group>"; };
@@ -673,9 +667,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDE843D19A483A200599C48 /* Foundation.framework in Frameworks */,
-				6E9FD25319A4F7AB0046CDBD /* OpenAL.framework in Frameworks */,
-				6E9FD25119A4F7A60046CDBD /* UIKit.framework in Frameworks */,
-				6E9FD24F19A4F77E0046CDBD /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,9 +675,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDE89D419A48F9E00599C48 /* libBox2D.a in Frameworks */,
-				6E9FD2D419A5084F0046CDBD /* UIKit.framework in Frameworks */,
-				6E9FD2D319A508400046CDBD /* OpenAL.framework in Frameworks */,
-				6E9FD2D219A5083B0046CDBD /* OpenGLES.framework in Frameworks */,
 				6EDE86DD19A4898100599C48 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,8 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDE8B8A19A499E200599C48 /* libBox2D.a in Frameworks */,
-				6EDE8B4319A4986C00599C48 /* SpriteKit.framework in Frameworks */,
-				6EDE8B4419A4986C00599C48 /* Foundation.framework in Frameworks */,
+				6E80C4D319A7683B002EEA12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +891,7 @@
 		6EDE843B19A483A200599C48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E80C4D219A7683B002EEA12 /* Foundation.framework */,
 				6E9FD2BF19A4FEBF0046CDBD /* libObjectiveChipmunk.a */,
 				6E9FD25219A4F7AB0046CDBD /* OpenAL.framework */,
 				6E9FD25019A4F7A60046CDBD /* UIKit.framework */,
