@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<string>2.0.0</string>
+	<string>2.3.0</string>
 	<key>Name</key>
 	<string>Box2d</string>
 	<key>RelativePath</key>
