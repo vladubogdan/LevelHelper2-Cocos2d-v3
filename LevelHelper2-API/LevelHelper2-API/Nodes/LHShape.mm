@@ -41,14 +41,14 @@
 }
 
 
-+ (instancetype)shapeNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initShapeNodeWithDictionary:dict
-                                                              parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initShapeNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     
     if(self = [super init]){

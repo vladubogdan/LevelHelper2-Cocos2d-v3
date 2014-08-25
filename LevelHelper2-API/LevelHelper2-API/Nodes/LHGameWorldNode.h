@@ -26,9 +26,11 @@ class b2World;
 #endif
 
 
-+ (instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
 
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 -(void)setDebugDraw:(BOOL)val;
 -(BOOL)debugDraw;

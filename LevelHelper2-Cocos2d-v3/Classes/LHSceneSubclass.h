@@ -11,7 +11,7 @@
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
 
-#import "LevelHelper2-API/LevelHelper2API.h"
+#import "LevelHelper2API.h"
 
 @interface LHSceneSubclass : LHScene
 

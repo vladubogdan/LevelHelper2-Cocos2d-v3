@@ -37,14 +37,14 @@ static float MAX_BEZIER_STEPS = 24.0f;
 }
 
 
-+ (instancetype)bezierNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initBezierNodeWithDictionary:dict
-                                                               parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initBezierNodeWithDictionary:(NSDictionary*)dict
-                                      parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     
     if(self = [super init]){

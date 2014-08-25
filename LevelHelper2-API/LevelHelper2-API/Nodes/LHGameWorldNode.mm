@@ -351,15 +351,15 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 
-+ (instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(CCNode*)prnt
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt
 {
-    return LH_AUTORELEASED([[self alloc] initGameWorldNodeWithDictionary:dict
-                                                                  parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initGameWorldNodeWithDictionary:(NSDictionary*)dict
-                                         parent:(CCNode*)prnt
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt
 {
     if(self = [super init]){
         

@@ -160,6 +160,15 @@
 		6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
 		6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74619A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 		6E9FD2D119A5044F0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74819A4F1E50046CDBD /* libLevelHelper2-API.a */; };
+		6EC5550719AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */; };
+		6EC5550819AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */; };
+		6EC5550919AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */; };
+		6EC5551019AB553900CF0760 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */; };
+		6EC5551119AB553900CF0760 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */; };
+		6EC5551219AB553900CF0760 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */; };
+		6EC5552B19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
+		6EC5552C19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
+		6EC5552D19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
 		6EF5DD2419A50DBB00D5D289 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74A19A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 /* End PBXBuildFile section */
 
@@ -368,6 +377,12 @@
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
 		6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
 		6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
+		6EC5550519AB4F4200CF0760 /* LHSceneNodesSubclassingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneNodesSubclassingTest.h; sourceTree = "<group>"; };
+		6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodesSubclassingTest.mm; sourceTree = "<group>"; };
+		6EC5550E19AB553900CF0760 /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueRobotSprite.h; sourceTree = "<group>"; };
+		6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueRobotSprite.m; sourceTree = "<group>"; };
+		6EC5552919AB5FF800CF0760 /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomNode.h; sourceTree = "<group>"; };
+		6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,8 +580,16 @@
 		6E341AAF19A7562C00B73620 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E341AC419A7562C00B73620 /* LHSceneDemo.h */,
+				6E341AC519A7562C00B73620 /* LHSceneDemo.mm */,
 				6E341AB019A7562C00B73620 /* LHSceneAssetsTest.h */,
 				6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */,
+				6EC5550519AB4F4200CF0760 /* LHSceneNodesSubclassingTest.h */,
+				6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */,
+				6EC5550E19AB553900CF0760 /* BlueRobotSprite.h */,
+				6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */,
+				6EC5552919AB5FF800CF0760 /* MyCustomNode.h */,
+				6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */,
 				6E341AB219A7562C00B73620 /* LHSceneAssetsWithJointsTest.h */,
 				6E341AB319A7562C00B73620 /* LHSceneAssetsWithJointsTest.mm */,
 				6E341AB419A7562C00B73620 /* LHSceneBeziersTest.h */,
@@ -585,8 +608,6 @@
 				6E341AC119A7562C00B73620 /* LHSceneCollisionFilteringTest.mm */,
 				6E341AC219A7562C00B73620 /* LHSceneCollisionHandlingTest.h */,
 				6E341AC319A7562C00B73620 /* LHSceneCollisionHandlingTest.mm */,
-				6E341AC419A7562C00B73620 /* LHSceneDemo.h */,
-				6E341AC519A7562C00B73620 /* LHSceneDemo.mm */,
 				6E341AC619A7562C00B73620 /* LHSceneGearJointsTest.h */,
 				6E341AC719A7562C00B73620 /* LHSceneGearJointsTest.mm */,
 				6E341AC819A7562C00B73620 /* LHSceneGravityAreasTest.h */,
@@ -887,6 +908,7 @@
 			files = (
 				6E341B1B19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF419A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6EC5551019AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1519A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF119A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E341AE819A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
@@ -908,8 +930,10 @@
 				6E341AEB19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E0D5629194C32A30036E940 /* main.m in Sources */,
 				6E0D5662194C32A30036E940 /* AppDelegate.m in Sources */,
+				6EC5552B19AB5FF800CF0760 /* MyCustomNode.m in Sources */,
 				6E341B0319A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
 				6E341AE219A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
+				6EC5550719AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +943,7 @@
 			files = (
 				6E341B1D19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF619A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6EC5551219AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF319A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E341AEA19A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
@@ -940,8 +965,10 @@
 				6E341AED19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E12228C1924BD88005E8532 /* main.m in Sources */,
 				6E1222901924BD88005E8532 /* AppDelegate.m in Sources */,
+				6EC5552D19AB5FF800CF0760 /* MyCustomNode.m in Sources */,
 				6E341B0519A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
 				6E341AE419A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
+				6EC5550919AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,6 +978,7 @@
 			files = (
 				6E341B1C19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF519A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6EC5551119AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF219A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E341AE919A7562C00B73620 /* LHSceneCameraFollowTest.mm in Sources */,
@@ -972,8 +1000,10 @@
 				6E341AEC19A7562C00B73620 /* LHSceneCameraTest.mm in Sources */,
 				6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */,
 				6E4026981982BD55002B4D32 /* main.m in Sources */,
+				6EC5552C19AB5FF800CF0760 /* MyCustomNode.m in Sources */,
 				6E341B0419A7562C00B73620 /* LHSceneIntroduction.mm in Sources */,
 				6E341AE319A7562C00B73620 /* LHSceneBeziersTest.mm in Sources */,
+				6EC5550819AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1077,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1094,6 +1125,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1180,6 +1212,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1221,6 +1254,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1269,6 +1303,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1319,6 +1354,7 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
+					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";
 				LIBRARY_SEARCH_PATHS = "";

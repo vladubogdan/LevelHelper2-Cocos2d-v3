@@ -17,8 +17,11 @@
 
 @interface LHSprite : CCSprite <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+ (instancetype)spriteNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 -(void)setSpriteFrameWithName:(NSString*)spriteFrame;

@@ -161,61 +161,6 @@
 		6E9FC85A19A4F2330046CDBD /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC7C019A4F2330046CDBD /* LHUtils.m */; };
 		6E9FC85B19A4F2330046CDBD /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC7C019A4F2330046CDBD /* LHUtils.m */; };
 		6E9FC85C19A4F2330046CDBD /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC7C019A4F2330046CDBD /* LHUtils.m */; };
-		6E9FC85D19A4F2630046CDBD /* LHFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74D19A4F2330046CDBD /* LHFrame.h */; };
-		6E9FC85E19A4F2630046CDBD /* LHOpacityFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */; };
-		6E9FC85F19A4F2630046CDBD /* LHPositionFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75119A4F2330046CDBD /* LHPositionFrame.h */; };
-		6E9FC86019A4F2630046CDBD /* LHRotationFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75319A4F2330046CDBD /* LHRotationFrame.h */; };
-		6E9FC86119A4F2630046CDBD /* LHScaleFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75519A4F2330046CDBD /* LHScaleFrame.h */; };
-		6E9FC86219A4F2630046CDBD /* LHSpriteFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75719A4F2330046CDBD /* LHSpriteFrame.h */; };
-		6E9FC86319A4F2630046CDBD /* LHAnimationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75A19A4F2330046CDBD /* LHAnimationProperty.h */; };
-		6E9FC86419A4F2630046CDBD /* LHCameraActivateProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75C19A4F2330046CDBD /* LHCameraActivateProperty.h */; };
-		6E9FC86519A4F2630046CDBD /* LHChildrenOpacitiesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75E19A4F2330046CDBD /* LHChildrenOpacitiesProperty.h */; };
-		6E9FC86619A4F2630046CDBD /* LHChildrenPositionsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76019A4F2330046CDBD /* LHChildrenPositionsProperty.h */; };
-		6E9FC86719A4F2630046CDBD /* LHChildrenRotationsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76219A4F2330046CDBD /* LHChildrenRotationsProperty.h */; };
-		6E9FC86819A4F2630046CDBD /* LHChildrenScalesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76419A4F2330046CDBD /* LHChildrenScalesProperty.h */; };
-		6E9FC86919A4F2630046CDBD /* LHOpacityProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76619A4F2330046CDBD /* LHOpacityProperty.h */; };
-		6E9FC86A19A4F2630046CDBD /* LHPositionProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76819A4F2330046CDBD /* LHPositionProperty.h */; };
-		6E9FC86B19A4F2630046CDBD /* LHRotationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76A19A4F2330046CDBD /* LHRotationProperty.h */; };
-		6E9FC86C19A4F2630046CDBD /* LHScaleProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76C19A4F2330046CDBD /* LHScaleProperty.h */; };
-		6E9FC86D19A4F2630046CDBD /* LHSpriteFrameProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76E19A4F2330046CDBD /* LHSpriteFrameProperty.h */; };
-		6E9FC86E19A4F2630046CDBD /* LHAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77019A4F2330046CDBD /* LHAnimation.h */; };
-		6E9FC86F19A4F2630046CDBD /* b2Controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77319A4F2330046CDBD /* b2Controller.h */; };
-		6E9FC87019A4F2630046CDBD /* LHb2BuoyancyController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77519A4F2330046CDBD /* LHb2BuoyancyController.h */; };
-		6E9FC87119A4F2630046CDBD /* CCNode+Transform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77719A4F2330046CDBD /* CCNode+Transform.h */; };
-		6E9FC87319A4F2630046CDBD /* NSDictionary+LHDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77B19A4F2330046CDBD /* NSDictionary+LHDictionary.h */; };
-		6E9FC87419A4F2630046CDBD /* LevelHelper2API.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77F19A4F2330046CDBD /* LevelHelper2API.h */; };
-		6E9FC87519A4F2630046CDBD /* LHConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78019A4F2330046CDBD /* LHConfig.h */; };
-		6E9FC87619A4F2630046CDBD /* LHScene.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78119A4F2330046CDBD /* LHScene.h */; };
-		6E9FC87719A4F2630046CDBD /* LHAsset.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78419A4F2330046CDBD /* LHAsset.h */; };
-		6E9FC87819A4F2630046CDBD /* LHBackUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78619A4F2330046CDBD /* LHBackUINode.h */; };
-		6E9FC87919A4F2630046CDBD /* LHBezier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78819A4F2330046CDBD /* LHBezier.h */; };
-		6E9FC87A19A4F2630046CDBD /* LHCamera.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78A19A4F2330046CDBD /* LHCamera.h */; };
-		6E9FC87B19A4F2630046CDBD /* LHDistanceJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */; };
-		6E9FC87C19A4F2630046CDBD /* LHDrawNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */; };
-		6E9FC87D19A4F2630046CDBD /* LHGameWorldNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */; };
-		6E9FC87E19A4F2630046CDBD /* LHGearJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */; };
-		6E9FC87F19A4F2630046CDBD /* LHGravityArea.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79419A4F2330046CDBD /* LHGravityArea.h */; };
-		6E9FC88019A4F2630046CDBD /* LHNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79619A4F2330046CDBD /* LHNode.h */; };
-		6E9FC88119A4F2630046CDBD /* LHParallax.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79819A4F2330046CDBD /* LHParallax.h */; };
-		6E9FC88219A4F2630046CDBD /* LHParallaxLayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79A19A4F2330046CDBD /* LHParallaxLayer.h */; };
-		6E9FC88319A4F2630046CDBD /* LHPrismaticJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79C19A4F2330046CDBD /* LHPrismaticJointNode.h */; };
-		6E9FC88419A4F2630046CDBD /* LHPulleyJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79E19A4F2330046CDBD /* LHPulleyJointNode.h */; };
-		6E9FC88519A4F2630046CDBD /* LHRevoluteJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A019A4F2330046CDBD /* LHRevoluteJointNode.h */; };
-		6E9FC88619A4F2630046CDBD /* LHRopeJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A219A4F2330046CDBD /* LHRopeJointNode.h */; };
-		6E9FC88719A4F2630046CDBD /* LHShape.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A419A4F2330046CDBD /* LHShape.h */; };
-		6E9FC88819A4F2630046CDBD /* LHSprite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A619A4F2330046CDBD /* LHSprite.h */; };
-		6E9FC88919A4F2630046CDBD /* LHUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A819A4F2330046CDBD /* LHUINode.h */; };
-		6E9FC88A19A4F2630046CDBD /* LHWater.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AA19A4F2330046CDBD /* LHWater.h */; };
-		6E9FC88B19A4F2630046CDBD /* LHWeldJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AC19A4F2330046CDBD /* LHWeldJointNode.h */; };
-		6E9FC88C19A4F2630046CDBD /* LHWheelJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AE19A4F2330046CDBD /* LHWheelJointNode.h */; };
-		6E9FC88D19A4F2630046CDBD /* LHJointNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B119A4F2330046CDBD /* LHJointNodeProtocol.h */; };
-		6E9FC88E19A4F2630046CDBD /* LHNodeAnimationProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B319A4F2330046CDBD /* LHNodeAnimationProtocol.h */; };
-		6E9FC88F19A4F2630046CDBD /* LHNodePhysicsProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B519A4F2330046CDBD /* LHNodePhysicsProtocol.h */; };
-		6E9FC89019A4F2630046CDBD /* LHNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B719A4F2330046CDBD /* LHNodeProtocol.h */; };
-		6E9FC89119A4F2630046CDBD /* LHUserProperties.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B919A4F2330046CDBD /* LHUserProperties.h */; };
-		6E9FC89219A4F2630046CDBD /* LHUserPropertyProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */; };
-		6E9FC89319A4F2630046CDBD /* LHBox2dCollisionHandling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BD19A4F2330046CDBD /* LHBox2dCollisionHandling.h */; };
-		6E9FC89419A4F2630046CDBD /* LHUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BF19A4F2330046CDBD /* LHUtils.h */; };
 		6E9FD2CC19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E9FD2CD19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
 		6E9FD2CE19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */; };
@@ -223,316 +168,7 @@
 		6EDE86DD19A4898100599C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE843C19A483A200599C48 /* Foundation.framework */; };
 		6EDE89D419A48F9E00599C48 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE89D319A48F9E00599C48 /* libBox2D.a */; };
 		6EDE8B8A19A499E200599C48 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE8B8919A499E200599C48 /* libBox2D.a */; };
-		6EF5DD2519A50FCD00D5D289 /* LHFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74D19A4F2330046CDBD /* LHFrame.h */; };
-		6EF5DD2619A50FCD00D5D289 /* LHOpacityFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */; };
-		6EF5DD2719A50FCD00D5D289 /* LHPositionFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75119A4F2330046CDBD /* LHPositionFrame.h */; };
-		6EF5DD2819A50FCD00D5D289 /* LHRotationFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75319A4F2330046CDBD /* LHRotationFrame.h */; };
-		6EF5DD2919A50FCD00D5D289 /* LHScaleFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75519A4F2330046CDBD /* LHScaleFrame.h */; };
-		6EF5DD2A19A50FCD00D5D289 /* LHSpriteFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75719A4F2330046CDBD /* LHSpriteFrame.h */; };
-		6EF5DD2B19A50FCD00D5D289 /* LHAnimationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75A19A4F2330046CDBD /* LHAnimationProperty.h */; };
-		6EF5DD2C19A50FCD00D5D289 /* LHCameraActivateProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75C19A4F2330046CDBD /* LHCameraActivateProperty.h */; };
-		6EF5DD2D19A50FCD00D5D289 /* LHChildrenOpacitiesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75E19A4F2330046CDBD /* LHChildrenOpacitiesProperty.h */; };
-		6EF5DD2E19A50FCD00D5D289 /* LHChildrenPositionsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76019A4F2330046CDBD /* LHChildrenPositionsProperty.h */; };
-		6EF5DD2F19A50FCD00D5D289 /* LHChildrenRotationsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76219A4F2330046CDBD /* LHChildrenRotationsProperty.h */; };
-		6EF5DD3019A50FCD00D5D289 /* LHChildrenScalesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76419A4F2330046CDBD /* LHChildrenScalesProperty.h */; };
-		6EF5DD3119A50FCD00D5D289 /* LHOpacityProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76619A4F2330046CDBD /* LHOpacityProperty.h */; };
-		6EF5DD3219A50FCD00D5D289 /* LHPositionProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76819A4F2330046CDBD /* LHPositionProperty.h */; };
-		6EF5DD3319A50FCD00D5D289 /* LHRotationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76A19A4F2330046CDBD /* LHRotationProperty.h */; };
-		6EF5DD3419A50FCD00D5D289 /* LHScaleProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76C19A4F2330046CDBD /* LHScaleProperty.h */; };
-		6EF5DD3519A50FCD00D5D289 /* LHSpriteFrameProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76E19A4F2330046CDBD /* LHSpriteFrameProperty.h */; };
-		6EF5DD3619A50FCD00D5D289 /* LHAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77019A4F2330046CDBD /* LHAnimation.h */; };
-		6EF5DD3719A50FCD00D5D289 /* b2Controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77319A4F2330046CDBD /* b2Controller.h */; };
-		6EF5DD3819A50FCD00D5D289 /* LHb2BuoyancyController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77519A4F2330046CDBD /* LHb2BuoyancyController.h */; };
-		6EF5DD3919A50FCD00D5D289 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FD2CA19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */; };
-		6EF5DD3A19A50FCD00D5D289 /* CCNode+Transform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77719A4F2330046CDBD /* CCNode+Transform.h */; };
-		6EF5DD3B19A50FCD00D5D289 /* NSDictionary+LHDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77B19A4F2330046CDBD /* NSDictionary+LHDictionary.h */; };
-		6EF5DD3C19A50FCD00D5D289 /* LevelHelper2API.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77F19A4F2330046CDBD /* LevelHelper2API.h */; };
-		6EF5DD3D19A50FCD00D5D289 /* LHConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78019A4F2330046CDBD /* LHConfig.h */; };
-		6EF5DD3E19A50FCD00D5D289 /* LHScene.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78119A4F2330046CDBD /* LHScene.h */; };
-		6EF5DD3F19A50FCD00D5D289 /* LHAsset.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78419A4F2330046CDBD /* LHAsset.h */; };
-		6EF5DD4019A50FCD00D5D289 /* LHBackUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78619A4F2330046CDBD /* LHBackUINode.h */; };
-		6EF5DD4119A50FCD00D5D289 /* LHBezier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78819A4F2330046CDBD /* LHBezier.h */; };
-		6EF5DD4219A50FCD00D5D289 /* LHCamera.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78A19A4F2330046CDBD /* LHCamera.h */; };
-		6EF5DD4319A50FCD00D5D289 /* LHDistanceJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */; };
-		6EF5DD4419A50FCD00D5D289 /* LHDrawNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */; };
-		6EF5DD4519A50FCD00D5D289 /* LHGameWorldNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */; };
-		6EF5DD4619A50FCD00D5D289 /* LHGearJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */; };
-		6EF5DD4719A50FCD00D5D289 /* LHGravityArea.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79419A4F2330046CDBD /* LHGravityArea.h */; };
-		6EF5DD4819A50FCD00D5D289 /* LHNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79619A4F2330046CDBD /* LHNode.h */; };
-		6EF5DD4919A50FCD00D5D289 /* LHParallax.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79819A4F2330046CDBD /* LHParallax.h */; };
-		6EF5DD4A19A50FCD00D5D289 /* LHParallaxLayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79A19A4F2330046CDBD /* LHParallaxLayer.h */; };
-		6EF5DD4B19A50FCD00D5D289 /* LHPrismaticJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79C19A4F2330046CDBD /* LHPrismaticJointNode.h */; };
-		6EF5DD4C19A50FCD00D5D289 /* LHPulleyJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79E19A4F2330046CDBD /* LHPulleyJointNode.h */; };
-		6EF5DD4D19A50FCD00D5D289 /* LHRevoluteJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A019A4F2330046CDBD /* LHRevoluteJointNode.h */; };
-		6EF5DD4E19A50FCD00D5D289 /* LHRopeJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A219A4F2330046CDBD /* LHRopeJointNode.h */; };
-		6EF5DD4F19A50FCD00D5D289 /* LHShape.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A419A4F2330046CDBD /* LHShape.h */; };
-		6EF5DD5019A50FCD00D5D289 /* LHSprite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A619A4F2330046CDBD /* LHSprite.h */; };
-		6EF5DD5119A50FCD00D5D289 /* LHUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A819A4F2330046CDBD /* LHUINode.h */; };
-		6EF5DD5219A50FCD00D5D289 /* LHWater.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AA19A4F2330046CDBD /* LHWater.h */; };
-		6EF5DD5319A50FCD00D5D289 /* LHWeldJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AC19A4F2330046CDBD /* LHWeldJointNode.h */; };
-		6EF5DD5419A50FCD00D5D289 /* LHWheelJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AE19A4F2330046CDBD /* LHWheelJointNode.h */; };
-		6EF5DD5519A50FCD00D5D289 /* LHJointNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B119A4F2330046CDBD /* LHJointNodeProtocol.h */; };
-		6EF5DD5619A50FCD00D5D289 /* LHNodeAnimationProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B319A4F2330046CDBD /* LHNodeAnimationProtocol.h */; };
-		6EF5DD5719A50FCD00D5D289 /* LHNodePhysicsProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B519A4F2330046CDBD /* LHNodePhysicsProtocol.h */; };
-		6EF5DD5819A50FCD00D5D289 /* LHNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B719A4F2330046CDBD /* LHNodeProtocol.h */; };
-		6EF5DD5919A50FCD00D5D289 /* LHUserProperties.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B919A4F2330046CDBD /* LHUserProperties.h */; };
-		6EF5DD5A19A50FCD00D5D289 /* LHUserPropertyProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */; };
-		6EF5DD5B19A50FCD00D5D289 /* LHBox2dCollisionHandling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BD19A4F2330046CDBD /* LHBox2dCollisionHandling.h */; };
-		6EF5DD5C19A50FCD00D5D289 /* LHUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BF19A4F2330046CDBD /* LHUtils.h */; };
-		6EF5DD5D19A50FFE00D5D289 /* LHFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74D19A4F2330046CDBD /* LHFrame.h */; };
-		6EF5DD5E19A50FFE00D5D289 /* LHOpacityFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */; };
-		6EF5DD5F19A50FFE00D5D289 /* LHPositionFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75119A4F2330046CDBD /* LHPositionFrame.h */; };
-		6EF5DD6019A50FFE00D5D289 /* LHRotationFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75319A4F2330046CDBD /* LHRotationFrame.h */; };
-		6EF5DD6119A50FFE00D5D289 /* LHScaleFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75519A4F2330046CDBD /* LHScaleFrame.h */; };
-		6EF5DD6219A50FFE00D5D289 /* LHSpriteFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75719A4F2330046CDBD /* LHSpriteFrame.h */; };
-		6EF5DD6319A50FFE00D5D289 /* LHAnimationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75A19A4F2330046CDBD /* LHAnimationProperty.h */; };
-		6EF5DD6419A50FFE00D5D289 /* LHCameraActivateProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75C19A4F2330046CDBD /* LHCameraActivateProperty.h */; };
-		6EF5DD6519A50FFE00D5D289 /* LHChildrenOpacitiesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC75E19A4F2330046CDBD /* LHChildrenOpacitiesProperty.h */; };
-		6EF5DD6619A50FFE00D5D289 /* LHChildrenPositionsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76019A4F2330046CDBD /* LHChildrenPositionsProperty.h */; };
-		6EF5DD6719A50FFE00D5D289 /* LHChildrenRotationsProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76219A4F2330046CDBD /* LHChildrenRotationsProperty.h */; };
-		6EF5DD6819A50FFE00D5D289 /* LHChildrenScalesProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76419A4F2330046CDBD /* LHChildrenScalesProperty.h */; };
-		6EF5DD6919A50FFE00D5D289 /* LHOpacityProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76619A4F2330046CDBD /* LHOpacityProperty.h */; };
-		6EF5DD6A19A50FFE00D5D289 /* LHPositionProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76819A4F2330046CDBD /* LHPositionProperty.h */; };
-		6EF5DD6B19A50FFE00D5D289 /* LHRotationProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76A19A4F2330046CDBD /* LHRotationProperty.h */; };
-		6EF5DD6C19A50FFE00D5D289 /* LHScaleProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76C19A4F2330046CDBD /* LHScaleProperty.h */; };
-		6EF5DD6D19A50FFE00D5D289 /* LHSpriteFrameProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC76E19A4F2330046CDBD /* LHSpriteFrameProperty.h */; };
-		6EF5DD6E19A50FFE00D5D289 /* LHAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77019A4F2330046CDBD /* LHAnimation.h */; };
-		6EF5DD6F19A50FFE00D5D289 /* b2Controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77319A4F2330046CDBD /* b2Controller.h */; };
-		6EF5DD7019A50FFE00D5D289 /* LHb2BuoyancyController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77519A4F2330046CDBD /* LHb2BuoyancyController.h */; };
-		6EF5DD7119A50FFE00D5D289 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FD2CA19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */; };
-		6EF5DD7219A50FFE00D5D289 /* CCNode+Transform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77719A4F2330046CDBD /* CCNode+Transform.h */; };
-		6EF5DD7319A50FFE00D5D289 /* NSDictionary+LHDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77B19A4F2330046CDBD /* NSDictionary+LHDictionary.h */; };
-		6EF5DD7419A50FFE00D5D289 /* LevelHelper2API.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC77F19A4F2330046CDBD /* LevelHelper2API.h */; };
-		6EF5DD7519A50FFE00D5D289 /* LHConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78019A4F2330046CDBD /* LHConfig.h */; };
-		6EF5DD7619A50FFE00D5D289 /* LHScene.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78119A4F2330046CDBD /* LHScene.h */; };
-		6EF5DD7719A50FFE00D5D289 /* LHAsset.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78419A4F2330046CDBD /* LHAsset.h */; };
-		6EF5DD7819A50FFE00D5D289 /* LHBackUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78619A4F2330046CDBD /* LHBackUINode.h */; };
-		6EF5DD7919A50FFE00D5D289 /* LHBezier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78819A4F2330046CDBD /* LHBezier.h */; };
-		6EF5DD7A19A50FFE00D5D289 /* LHCamera.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78A19A4F2330046CDBD /* LHCamera.h */; };
-		6EF5DD7B19A50FFE00D5D289 /* LHDistanceJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */; };
-		6EF5DD7C19A50FFE00D5D289 /* LHDrawNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */; };
-		6EF5DD7D19A50FFE00D5D289 /* LHGameWorldNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */; };
-		6EF5DD7E19A50FFE00D5D289 /* LHGearJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */; };
-		6EF5DD7F19A50FFE00D5D289 /* LHGravityArea.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79419A4F2330046CDBD /* LHGravityArea.h */; };
-		6EF5DD8019A50FFE00D5D289 /* LHNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79619A4F2330046CDBD /* LHNode.h */; };
-		6EF5DD8119A50FFE00D5D289 /* LHParallax.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79819A4F2330046CDBD /* LHParallax.h */; };
-		6EF5DD8219A50FFE00D5D289 /* LHParallaxLayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79A19A4F2330046CDBD /* LHParallaxLayer.h */; };
-		6EF5DD8319A50FFE00D5D289 /* LHPrismaticJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79C19A4F2330046CDBD /* LHPrismaticJointNode.h */; };
-		6EF5DD8419A50FFE00D5D289 /* LHPulleyJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC79E19A4F2330046CDBD /* LHPulleyJointNode.h */; };
-		6EF5DD8519A50FFE00D5D289 /* LHRevoluteJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A019A4F2330046CDBD /* LHRevoluteJointNode.h */; };
-		6EF5DD8619A50FFE00D5D289 /* LHRopeJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A219A4F2330046CDBD /* LHRopeJointNode.h */; };
-		6EF5DD8719A50FFE00D5D289 /* LHShape.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A419A4F2330046CDBD /* LHShape.h */; };
-		6EF5DD8819A50FFE00D5D289 /* LHSprite.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A619A4F2330046CDBD /* LHSprite.h */; };
-		6EF5DD8919A50FFE00D5D289 /* LHUINode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7A819A4F2330046CDBD /* LHUINode.h */; };
-		6EF5DD8A19A50FFE00D5D289 /* LHWater.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AA19A4F2330046CDBD /* LHWater.h */; };
-		6EF5DD8B19A50FFE00D5D289 /* LHWeldJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AC19A4F2330046CDBD /* LHWeldJointNode.h */; };
-		6EF5DD8C19A50FFE00D5D289 /* LHWheelJointNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7AE19A4F2330046CDBD /* LHWheelJointNode.h */; };
-		6EF5DD8D19A50FFE00D5D289 /* LHJointNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B119A4F2330046CDBD /* LHJointNodeProtocol.h */; };
-		6EF5DD8E19A50FFE00D5D289 /* LHNodeAnimationProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B319A4F2330046CDBD /* LHNodeAnimationProtocol.h */; };
-		6EF5DD8F19A50FFE00D5D289 /* LHNodePhysicsProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B519A4F2330046CDBD /* LHNodePhysicsProtocol.h */; };
-		6EF5DD9019A50FFE00D5D289 /* LHNodeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B719A4F2330046CDBD /* LHNodeProtocol.h */; };
-		6EF5DD9119A50FFE00D5D289 /* LHUserProperties.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7B919A4F2330046CDBD /* LHUserProperties.h */; };
-		6EF5DD9219A50FFE00D5D289 /* LHUserPropertyProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */; };
-		6EF5DD9319A50FFE00D5D289 /* LHBox2dCollisionHandling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BD19A4F2330046CDBD /* LHBox2dCollisionHandling.h */; };
-		6EF5DD9419A50FFE00D5D289 /* LHUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E9FC7BF19A4F2330046CDBD /* LHUtils.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6EDE85DA19A486D900599C48 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				6E9FC85D19A4F2630046CDBD /* LHFrame.h in CopyFiles */,
-				6E9FC85E19A4F2630046CDBD /* LHOpacityFrame.h in CopyFiles */,
-				6E9FC85F19A4F2630046CDBD /* LHPositionFrame.h in CopyFiles */,
-				6E9FC86019A4F2630046CDBD /* LHRotationFrame.h in CopyFiles */,
-				6E9FC86119A4F2630046CDBD /* LHScaleFrame.h in CopyFiles */,
-				6E9FC86219A4F2630046CDBD /* LHSpriteFrame.h in CopyFiles */,
-				6E9FC86319A4F2630046CDBD /* LHAnimationProperty.h in CopyFiles */,
-				6E9FC86419A4F2630046CDBD /* LHCameraActivateProperty.h in CopyFiles */,
-				6E9FC86519A4F2630046CDBD /* LHChildrenOpacitiesProperty.h in CopyFiles */,
-				6E9FC86619A4F2630046CDBD /* LHChildrenPositionsProperty.h in CopyFiles */,
-				6E9FC86719A4F2630046CDBD /* LHChildrenRotationsProperty.h in CopyFiles */,
-				6E9FC86819A4F2630046CDBD /* LHChildrenScalesProperty.h in CopyFiles */,
-				6E9FC86919A4F2630046CDBD /* LHOpacityProperty.h in CopyFiles */,
-				6E9FC86A19A4F2630046CDBD /* LHPositionProperty.h in CopyFiles */,
-				6E9FC86B19A4F2630046CDBD /* LHRotationProperty.h in CopyFiles */,
-				6E9FC86C19A4F2630046CDBD /* LHScaleProperty.h in CopyFiles */,
-				6E9FC86D19A4F2630046CDBD /* LHSpriteFrameProperty.h in CopyFiles */,
-				6E9FC86E19A4F2630046CDBD /* LHAnimation.h in CopyFiles */,
-				6E9FC86F19A4F2630046CDBD /* b2Controller.h in CopyFiles */,
-				6E9FC87019A4F2630046CDBD /* LHb2BuoyancyController.h in CopyFiles */,
-				6E9FC87119A4F2630046CDBD /* CCNode+Transform.h in CopyFiles */,
-				6E9FC87319A4F2630046CDBD /* NSDictionary+LHDictionary.h in CopyFiles */,
-				6E9FC87419A4F2630046CDBD /* LevelHelper2API.h in CopyFiles */,
-				6E9FC87519A4F2630046CDBD /* LHConfig.h in CopyFiles */,
-				6E9FC87619A4F2630046CDBD /* LHScene.h in CopyFiles */,
-				6E9FC87719A4F2630046CDBD /* LHAsset.h in CopyFiles */,
-				6E9FC87819A4F2630046CDBD /* LHBackUINode.h in CopyFiles */,
-				6E9FC87919A4F2630046CDBD /* LHBezier.h in CopyFiles */,
-				6E9FC87A19A4F2630046CDBD /* LHCamera.h in CopyFiles */,
-				6E9FC87B19A4F2630046CDBD /* LHDistanceJointNode.h in CopyFiles */,
-				6E9FC87C19A4F2630046CDBD /* LHDrawNode.h in CopyFiles */,
-				6E9FC87D19A4F2630046CDBD /* LHGameWorldNode.h in CopyFiles */,
-				6E9FC87E19A4F2630046CDBD /* LHGearJointNode.h in CopyFiles */,
-				6E9FC87F19A4F2630046CDBD /* LHGravityArea.h in CopyFiles */,
-				6E9FC88019A4F2630046CDBD /* LHNode.h in CopyFiles */,
-				6E9FC88119A4F2630046CDBD /* LHParallax.h in CopyFiles */,
-				6E9FC88219A4F2630046CDBD /* LHParallaxLayer.h in CopyFiles */,
-				6E9FC88319A4F2630046CDBD /* LHPrismaticJointNode.h in CopyFiles */,
-				6E9FC88419A4F2630046CDBD /* LHPulleyJointNode.h in CopyFiles */,
-				6E9FC88519A4F2630046CDBD /* LHRevoluteJointNode.h in CopyFiles */,
-				6E9FC88619A4F2630046CDBD /* LHRopeJointNode.h in CopyFiles */,
-				6E9FC88719A4F2630046CDBD /* LHShape.h in CopyFiles */,
-				6E9FC88819A4F2630046CDBD /* LHSprite.h in CopyFiles */,
-				6E9FC88919A4F2630046CDBD /* LHUINode.h in CopyFiles */,
-				6E9FC88A19A4F2630046CDBD /* LHWater.h in CopyFiles */,
-				6E9FC88B19A4F2630046CDBD /* LHWeldJointNode.h in CopyFiles */,
-				6E9FC88C19A4F2630046CDBD /* LHWheelJointNode.h in CopyFiles */,
-				6E9FC88D19A4F2630046CDBD /* LHJointNodeProtocol.h in CopyFiles */,
-				6E9FC88E19A4F2630046CDBD /* LHNodeAnimationProtocol.h in CopyFiles */,
-				6E9FC88F19A4F2630046CDBD /* LHNodePhysicsProtocol.h in CopyFiles */,
-				6E9FC89019A4F2630046CDBD /* LHNodeProtocol.h in CopyFiles */,
-				6E9FC89119A4F2630046CDBD /* LHUserProperties.h in CopyFiles */,
-				6E9FC89219A4F2630046CDBD /* LHUserPropertyProtocol.h in CopyFiles */,
-				6E9FC89319A4F2630046CDBD /* LHBox2dCollisionHandling.h in CopyFiles */,
-				6E9FC89419A4F2630046CDBD /* LHUtils.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EDE86DE19A4898100599C48 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				6EF5DD2519A50FCD00D5D289 /* LHFrame.h in CopyFiles */,
-				6EF5DD2619A50FCD00D5D289 /* LHOpacityFrame.h in CopyFiles */,
-				6EF5DD2719A50FCD00D5D289 /* LHPositionFrame.h in CopyFiles */,
-				6EF5DD2819A50FCD00D5D289 /* LHRotationFrame.h in CopyFiles */,
-				6EF5DD2919A50FCD00D5D289 /* LHScaleFrame.h in CopyFiles */,
-				6EF5DD2A19A50FCD00D5D289 /* LHSpriteFrame.h in CopyFiles */,
-				6EF5DD2B19A50FCD00D5D289 /* LHAnimationProperty.h in CopyFiles */,
-				6EF5DD2C19A50FCD00D5D289 /* LHCameraActivateProperty.h in CopyFiles */,
-				6EF5DD2D19A50FCD00D5D289 /* LHChildrenOpacitiesProperty.h in CopyFiles */,
-				6EF5DD2E19A50FCD00D5D289 /* LHChildrenPositionsProperty.h in CopyFiles */,
-				6EF5DD2F19A50FCD00D5D289 /* LHChildrenRotationsProperty.h in CopyFiles */,
-				6EF5DD3019A50FCD00D5D289 /* LHChildrenScalesProperty.h in CopyFiles */,
-				6EF5DD3119A50FCD00D5D289 /* LHOpacityProperty.h in CopyFiles */,
-				6EF5DD3219A50FCD00D5D289 /* LHPositionProperty.h in CopyFiles */,
-				6EF5DD3319A50FCD00D5D289 /* LHRotationProperty.h in CopyFiles */,
-				6EF5DD3419A50FCD00D5D289 /* LHScaleProperty.h in CopyFiles */,
-				6EF5DD3519A50FCD00D5D289 /* LHSpriteFrameProperty.h in CopyFiles */,
-				6EF5DD3619A50FCD00D5D289 /* LHAnimation.h in CopyFiles */,
-				6EF5DD3719A50FCD00D5D289 /* b2Controller.h in CopyFiles */,
-				6EF5DD3819A50FCD00D5D289 /* LHb2BuoyancyController.h in CopyFiles */,
-				6EF5DD3919A50FCD00D5D289 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h in CopyFiles */,
-				6EF5DD3A19A50FCD00D5D289 /* CCNode+Transform.h in CopyFiles */,
-				6EF5DD3B19A50FCD00D5D289 /* NSDictionary+LHDictionary.h in CopyFiles */,
-				6EF5DD3C19A50FCD00D5D289 /* LevelHelper2API.h in CopyFiles */,
-				6EF5DD3D19A50FCD00D5D289 /* LHConfig.h in CopyFiles */,
-				6EF5DD3E19A50FCD00D5D289 /* LHScene.h in CopyFiles */,
-				6EF5DD3F19A50FCD00D5D289 /* LHAsset.h in CopyFiles */,
-				6EF5DD4019A50FCD00D5D289 /* LHBackUINode.h in CopyFiles */,
-				6EF5DD4119A50FCD00D5D289 /* LHBezier.h in CopyFiles */,
-				6EF5DD4219A50FCD00D5D289 /* LHCamera.h in CopyFiles */,
-				6EF5DD4319A50FCD00D5D289 /* LHDistanceJointNode.h in CopyFiles */,
-				6EF5DD4419A50FCD00D5D289 /* LHDrawNode.h in CopyFiles */,
-				6EF5DD4519A50FCD00D5D289 /* LHGameWorldNode.h in CopyFiles */,
-				6EF5DD4619A50FCD00D5D289 /* LHGearJointNode.h in CopyFiles */,
-				6EF5DD4719A50FCD00D5D289 /* LHGravityArea.h in CopyFiles */,
-				6EF5DD4819A50FCD00D5D289 /* LHNode.h in CopyFiles */,
-				6EF5DD4919A50FCD00D5D289 /* LHParallax.h in CopyFiles */,
-				6EF5DD4A19A50FCD00D5D289 /* LHParallaxLayer.h in CopyFiles */,
-				6EF5DD4B19A50FCD00D5D289 /* LHPrismaticJointNode.h in CopyFiles */,
-				6EF5DD4C19A50FCD00D5D289 /* LHPulleyJointNode.h in CopyFiles */,
-				6EF5DD4D19A50FCD00D5D289 /* LHRevoluteJointNode.h in CopyFiles */,
-				6EF5DD4E19A50FCD00D5D289 /* LHRopeJointNode.h in CopyFiles */,
-				6EF5DD4F19A50FCD00D5D289 /* LHShape.h in CopyFiles */,
-				6EF5DD5019A50FCD00D5D289 /* LHSprite.h in CopyFiles */,
-				6EF5DD5119A50FCD00D5D289 /* LHUINode.h in CopyFiles */,
-				6EF5DD5219A50FCD00D5D289 /* LHWater.h in CopyFiles */,
-				6EF5DD5319A50FCD00D5D289 /* LHWeldJointNode.h in CopyFiles */,
-				6EF5DD5419A50FCD00D5D289 /* LHWheelJointNode.h in CopyFiles */,
-				6EF5DD5519A50FCD00D5D289 /* LHJointNodeProtocol.h in CopyFiles */,
-				6EF5DD5619A50FCD00D5D289 /* LHNodeAnimationProtocol.h in CopyFiles */,
-				6EF5DD5719A50FCD00D5D289 /* LHNodePhysicsProtocol.h in CopyFiles */,
-				6EF5DD5819A50FCD00D5D289 /* LHNodeProtocol.h in CopyFiles */,
-				6EF5DD5919A50FCD00D5D289 /* LHUserProperties.h in CopyFiles */,
-				6EF5DD5A19A50FCD00D5D289 /* LHUserPropertyProtocol.h in CopyFiles */,
-				6EF5DD5B19A50FCD00D5D289 /* LHBox2dCollisionHandling.h in CopyFiles */,
-				6EF5DD5C19A50FCD00D5D289 /* LHUtils.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EDE8B4519A4986C00599C48 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				6EF5DD5D19A50FFE00D5D289 /* LHFrame.h in CopyFiles */,
-				6EF5DD5E19A50FFE00D5D289 /* LHOpacityFrame.h in CopyFiles */,
-				6EF5DD5F19A50FFE00D5D289 /* LHPositionFrame.h in CopyFiles */,
-				6EF5DD6019A50FFE00D5D289 /* LHRotationFrame.h in CopyFiles */,
-				6EF5DD6119A50FFE00D5D289 /* LHScaleFrame.h in CopyFiles */,
-				6EF5DD6219A50FFE00D5D289 /* LHSpriteFrame.h in CopyFiles */,
-				6EF5DD6319A50FFE00D5D289 /* LHAnimationProperty.h in CopyFiles */,
-				6EF5DD6419A50FFE00D5D289 /* LHCameraActivateProperty.h in CopyFiles */,
-				6EF5DD6519A50FFE00D5D289 /* LHChildrenOpacitiesProperty.h in CopyFiles */,
-				6EF5DD6619A50FFE00D5D289 /* LHChildrenPositionsProperty.h in CopyFiles */,
-				6EF5DD6719A50FFE00D5D289 /* LHChildrenRotationsProperty.h in CopyFiles */,
-				6EF5DD6819A50FFE00D5D289 /* LHChildrenScalesProperty.h in CopyFiles */,
-				6EF5DD6919A50FFE00D5D289 /* LHOpacityProperty.h in CopyFiles */,
-				6EF5DD6A19A50FFE00D5D289 /* LHPositionProperty.h in CopyFiles */,
-				6EF5DD6B19A50FFE00D5D289 /* LHRotationProperty.h in CopyFiles */,
-				6EF5DD6C19A50FFE00D5D289 /* LHScaleProperty.h in CopyFiles */,
-				6EF5DD6D19A50FFE00D5D289 /* LHSpriteFrameProperty.h in CopyFiles */,
-				6EF5DD6E19A50FFE00D5D289 /* LHAnimation.h in CopyFiles */,
-				6EF5DD6F19A50FFE00D5D289 /* b2Controller.h in CopyFiles */,
-				6EF5DD7019A50FFE00D5D289 /* LHb2BuoyancyController.h in CopyFiles */,
-				6EF5DD7119A50FFE00D5D289 /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h in CopyFiles */,
-				6EF5DD7219A50FFE00D5D289 /* CCNode+Transform.h in CopyFiles */,
-				6EF5DD7319A50FFE00D5D289 /* NSDictionary+LHDictionary.h in CopyFiles */,
-				6EF5DD7419A50FFE00D5D289 /* LevelHelper2API.h in CopyFiles */,
-				6EF5DD7519A50FFE00D5D289 /* LHConfig.h in CopyFiles */,
-				6EF5DD7619A50FFE00D5D289 /* LHScene.h in CopyFiles */,
-				6EF5DD7719A50FFE00D5D289 /* LHAsset.h in CopyFiles */,
-				6EF5DD7819A50FFE00D5D289 /* LHBackUINode.h in CopyFiles */,
-				6EF5DD7919A50FFE00D5D289 /* LHBezier.h in CopyFiles */,
-				6EF5DD7A19A50FFE00D5D289 /* LHCamera.h in CopyFiles */,
-				6EF5DD7B19A50FFE00D5D289 /* LHDistanceJointNode.h in CopyFiles */,
-				6EF5DD7C19A50FFE00D5D289 /* LHDrawNode.h in CopyFiles */,
-				6EF5DD7D19A50FFE00D5D289 /* LHGameWorldNode.h in CopyFiles */,
-				6EF5DD7E19A50FFE00D5D289 /* LHGearJointNode.h in CopyFiles */,
-				6EF5DD7F19A50FFE00D5D289 /* LHGravityArea.h in CopyFiles */,
-				6EF5DD8019A50FFE00D5D289 /* LHNode.h in CopyFiles */,
-				6EF5DD8119A50FFE00D5D289 /* LHParallax.h in CopyFiles */,
-				6EF5DD8219A50FFE00D5D289 /* LHParallaxLayer.h in CopyFiles */,
-				6EF5DD8319A50FFE00D5D289 /* LHPrismaticJointNode.h in CopyFiles */,
-				6EF5DD8419A50FFE00D5D289 /* LHPulleyJointNode.h in CopyFiles */,
-				6EF5DD8519A50FFE00D5D289 /* LHRevoluteJointNode.h in CopyFiles */,
-				6EF5DD8619A50FFE00D5D289 /* LHRopeJointNode.h in CopyFiles */,
-				6EF5DD8719A50FFE00D5D289 /* LHShape.h in CopyFiles */,
-				6EF5DD8819A50FFE00D5D289 /* LHSprite.h in CopyFiles */,
-				6EF5DD8919A50FFE00D5D289 /* LHUINode.h in CopyFiles */,
-				6EF5DD8A19A50FFE00D5D289 /* LHWater.h in CopyFiles */,
-				6EF5DD8B19A50FFE00D5D289 /* LHWeldJointNode.h in CopyFiles */,
-				6EF5DD8C19A50FFE00D5D289 /* LHWheelJointNode.h in CopyFiles */,
-				6EF5DD8D19A50FFE00D5D289 /* LHJointNodeProtocol.h in CopyFiles */,
-				6EF5DD8E19A50FFE00D5D289 /* LHNodeAnimationProtocol.h in CopyFiles */,
-				6EF5DD8F19A50FFE00D5D289 /* LHNodePhysicsProtocol.h in CopyFiles */,
-				6EF5DD9019A50FFE00D5D289 /* LHNodeProtocol.h in CopyFiles */,
-				6EF5DD9119A50FFE00D5D289 /* LHUserProperties.h in CopyFiles */,
-				6EF5DD9219A50FFE00D5D289 /* LHUserPropertyProtocol.h in CopyFiles */,
-				6EF5DD9319A50FFE00D5D289 /* LHBox2dCollisionHandling.h in CopyFiles */,
-				6EF5DD9419A50FFE00D5D289 /* LHUtils.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
@@ -934,7 +570,7 @@
 			buildPhases = (
 				6EDE843519A483A200599C48 /* Sources */,
 				6EDE843619A483A200599C48 /* Frameworks */,
-				6EDE85DA19A486D900599C48 /* CopyFiles */,
+				6EC5551519AB565900CF0760 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -951,7 +587,7 @@
 			buildPhases = (
 				6EDE86AB19A4898100599C48 /* Sources */,
 				6EDE86DB19A4898100599C48 /* Frameworks */,
-				6EDE86DE19A4898100599C48 /* CopyFiles */,
+				6EC5551419AB565100CF0760 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -968,7 +604,7 @@
 			buildPhases = (
 				6EDE8B1119A4986C00599C48 /* Sources */,
 				6EDE8B4119A4986C00599C48 /* Frameworks */,
-				6EDE8B4519A4986C00599C48 /* CopyFiles */,
+				6EC5551319AB563F00CF0760 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1006,6 +642,48 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EC5551319AB563F00CF0760 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+		};
+		6EC5551419AB565100CF0760 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+		};
+		6EC5551519AB565900CF0760 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EDE843519A483A200599C48 /* Sources */ = {

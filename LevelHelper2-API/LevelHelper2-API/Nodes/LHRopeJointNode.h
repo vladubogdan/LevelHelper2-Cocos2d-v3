@@ -21,8 +21,11 @@
 
 @interface LHRopeJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt;
 
 
 /**

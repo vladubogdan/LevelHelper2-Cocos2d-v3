@@ -34,15 +34,15 @@
     LH_SUPER_DEALLOC();
 }
 
-+ (instancetype)spriteNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initSpriteNodeWithDictionary:dict
-                                                               parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
 
-- (instancetype)initSpriteNodeWithDictionary:(NSDictionary*)dict
-                                      parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
 
     LHScene* scene = (LHScene*)[prnt scene];
     

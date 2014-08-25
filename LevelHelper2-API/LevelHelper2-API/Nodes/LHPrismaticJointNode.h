@@ -28,8 +28,12 @@ class b2PrismaticJoint;
 
 @interface LHPrismaticJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
-                                         parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
+
 
 #pragma mark - Properties
 /**

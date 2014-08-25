@@ -16,8 +16,11 @@
 
 @interface LHWater : CCDrawNode <LHNodeProtocol>
 
-+ (instancetype)waterNodeWithDictionary:(NSDictionary*)dict
-                                 parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 -(CGFloat)turbulenceAmplitude;

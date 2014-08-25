@@ -42,14 +42,14 @@
 }
 
 
-+ (instancetype)cameraWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
                               parent:(CCNode *)prnt{
-    return LH_AUTORELEASED([[self alloc] initCameraWithDictionary:dict
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
                                                            parent:prnt]);
 }
 
-- (instancetype)initCameraWithDictionary:(NSDictionary*)dict
-                                   parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     
     if(self = [super init]){

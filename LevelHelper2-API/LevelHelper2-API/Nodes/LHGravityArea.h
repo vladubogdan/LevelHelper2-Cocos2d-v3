@@ -16,8 +16,11 @@
 
 @interface LHGravityArea : CCNode <LHNodeProtocol>
 
-+(instancetype)gravityAreaWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 /**
  Returns whether or not this gravity area is a radial.
