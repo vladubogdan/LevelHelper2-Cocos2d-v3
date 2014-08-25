@@ -147,13 +147,13 @@ double fcat(double x, void *data)
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(CCNode*)prnt{
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt{
     return LH_AUTORELEASED([[self alloc] initWithDictionary:dict parent:prnt]);
 }
 
 -(instancetype)initWithDictionary:(NSDictionary*)dict
-                           parent:(CCNode*)prnt
+                               parent:(CCNode*)prnt
 {
     if(self = [super init]){
      

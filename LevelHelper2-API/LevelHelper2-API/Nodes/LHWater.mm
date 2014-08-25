@@ -195,14 +195,14 @@ typedef struct _LH_V2F_C4B_Triangle
 }
 
 
-+ (instancetype)waterNodeWithDictionary:(NSDictionary*)dict
-                                 parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initWaterNodeWithDictionary:dict
-                                                               parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initWaterNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     
     if(self = [super init]){

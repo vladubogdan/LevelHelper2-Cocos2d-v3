@@ -29,14 +29,14 @@
 }
 
 
-+ (instancetype)gravityAreaWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
                                    parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initGravityAreaWithDictionary:dict
-                                                                parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initGravityAreaWithDictionary:(NSDictionary*)dict
-                                       parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     
     if(self = [super init]){

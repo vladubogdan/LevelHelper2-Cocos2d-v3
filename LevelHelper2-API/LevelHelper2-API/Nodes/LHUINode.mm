@@ -31,13 +31,13 @@
 }
 
 
-+ (instancetype)uiNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initUINodeWithDictionary:dict
-                                                           parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initUINodeWithDictionary:(NSDictionary*)dict
+- (instancetype)initWithDictionary:(NSDictionary*)dict
                                 parent:(CCNode*)prnt{
     
     

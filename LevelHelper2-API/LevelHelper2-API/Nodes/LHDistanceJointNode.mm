@@ -46,15 +46,15 @@
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(CCNode*)prnt{
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt{
     
-    return LH_AUTORELEASED([[self alloc] initDistanceJointNodeWithDictionary:dict
-                                                                      parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
--(instancetype)initDistanceJointNodeWithDictionary:(NSDictionary*)dict
-                                            parent:(CCNode*)prnt
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt
 {
     if(self = [super init]){
         

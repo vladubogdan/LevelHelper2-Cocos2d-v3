@@ -28,8 +28,12 @@ class b2WheelJoint;
 
 @interface LHWheelJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)wheelJointNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
+
 
 #pragma mark - Properties
 /**

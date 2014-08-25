@@ -28,7 +28,10 @@ class b2GearJoint;
 
 @interface LHGearJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)gearJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt;
 
 @end

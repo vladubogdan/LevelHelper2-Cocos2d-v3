@@ -26,14 +26,14 @@
 }
 
 
-+ (instancetype)parallaxLayerWithDictionary:(NSDictionary*)dict
-                                parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initParallaxLayerWithDictionary:dict
-                                                                  parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                         parent:prnt]);
 }
 
-- (instancetype)initParallaxLayerWithDictionary:(NSDictionary*)dict
-                                         parent:(CCNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt{
     
     if(self = [super init]){
                 

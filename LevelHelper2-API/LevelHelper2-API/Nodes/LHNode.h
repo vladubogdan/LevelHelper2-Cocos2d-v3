@@ -17,8 +17,11 @@
 
 @interface LHNode : CCNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+(instancetype)nodeWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 @end

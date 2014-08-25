@@ -18,7 +18,10 @@
 
 @interface LHAsset : CCNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+(instancetype)assetWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt;
 
 

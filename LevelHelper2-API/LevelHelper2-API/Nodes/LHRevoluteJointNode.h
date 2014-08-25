@@ -28,8 +28,13 @@ class b2RevoluteJoint;
 
 @interface LHRevoluteJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
-                                        parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt;
+
+
 
 #pragma mark - Properties
 /**

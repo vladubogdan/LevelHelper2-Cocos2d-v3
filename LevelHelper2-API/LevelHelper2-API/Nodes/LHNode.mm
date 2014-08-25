@@ -31,11 +31,11 @@
 
 + (instancetype)nodeWithDictionary:(NSDictionary*)dict
                                   parent:(CCNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initNodeWithDictionary:dict
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
                                                          parent:prnt]);
 }
 
-- (instancetype)initNodeWithDictionary:(NSDictionary*)dict
+- (instancetype)initWithDictionary:(NSDictionary*)dict
                                 parent:(CCNode*)prnt{
     
     

@@ -28,8 +28,12 @@ class b2PulleyJoint;
 
 @interface LHPulleyJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)pulleyJointNodeWithDictionary:(NSDictionary*)dict
-                                      parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
+
 
 #pragma mark - Properties
 /**

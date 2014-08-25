@@ -28,8 +28,12 @@ class b2WeldJoint;
 
 @interface LHWeldJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)weldJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt;
+
 
 #pragma mark - Properties
 /**

@@ -18,8 +18,11 @@
 
 @interface LHBezier : CCDrawNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+ (instancetype)bezierNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 /**

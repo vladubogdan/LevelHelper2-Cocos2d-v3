@@ -28,8 +28,12 @@ class b2DistanceJoint;
 
 @interface LHDistanceJointNode : CCNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
-                                        parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                               parent:(CCNode*)prnt;
+
 
 #pragma mark - Properties
 /**

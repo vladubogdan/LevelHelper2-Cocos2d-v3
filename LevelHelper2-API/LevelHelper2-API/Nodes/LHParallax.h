@@ -16,8 +16,11 @@
 
 @interface LHParallax : CCNode <LHNodeProtocol, LHNodeAnimationProtocol>
 
-+(instancetype)parallaxWithDictionary:(NSDictionary*)dict
-                               parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 /**

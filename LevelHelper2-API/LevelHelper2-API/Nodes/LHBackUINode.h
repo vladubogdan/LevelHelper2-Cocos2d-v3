@@ -15,8 +15,10 @@
 
 @interface LHBackUINode : CCNode <LHNodeProtocol>
 
-+(instancetype)backUiNodeWithDictionary:(NSDictionary*)dict
-                                 parent:(CCNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(CCNode*)prnt;
 
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
 
 @end

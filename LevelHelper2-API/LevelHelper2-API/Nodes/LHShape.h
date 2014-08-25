@@ -21,8 +21,11 @@
     CCTexture *_texture; // Texture used to render the shape
     
 }
-+ (instancetype)shapeNodeWithDictionary:(NSDictionary*)dict
-                                 parent:(CCNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(CCNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                                parent:(CCNode*)prnt;
 
 
 /**
