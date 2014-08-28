@@ -35,14 +35,14 @@
 
 @implementation LHScene
 {
-    __unsafe_unretained LHBackUINode*       _backUiNode;
-    __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
-    __unsafe_unretained LHUINode*           _uiNode;
+    __weak LHBackUINode*       _backUiNode;
+    __weak LHGameWorldNode*    _gameWorldNode;
+    __weak LHUINode*           _uiNode;
     
-    __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
+    __weak id<LHAnimationNotificationsProtocol> _animationsDelegate;
 
 #if LH_USE_BOX2D
-    __unsafe_unretained id<LHCollisionHandlingProtocol> _collisionsDelegate;
+    __weak id<LHCollisionHandlingProtocol> _collisionsDelegate;
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
@@ -93,7 +93,7 @@
     _gameWorldNode = nil;
     _uiNode = nil;
 
-    LH_SUPER_DEALLOC();
+    LH_SUPER_DEALLOC();    
 }
 
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile{
@@ -210,6 +210,9 @@
 #else//cocos2d
         
 #endif
+        
+        //call this to update the views when using camera/parallax
+        [self visit];
         
     }
     return self;

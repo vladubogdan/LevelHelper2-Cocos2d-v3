@@ -28,7 +28,7 @@
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     
     NSString* _followedNodeUUID;
-    CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
+    __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
 }
 
 -(void)dealloc{

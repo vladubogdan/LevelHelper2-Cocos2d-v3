@@ -27,9 +27,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 -(void)dealloc{
 
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
-    LH_SAFE_RELEASE(_physicsProtocolImp);
+    
     
     LH_SAFE_RELEASE(linePoints);
 

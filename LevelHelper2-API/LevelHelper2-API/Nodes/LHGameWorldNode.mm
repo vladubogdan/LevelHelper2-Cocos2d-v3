@@ -10,6 +10,8 @@
 #import "LHUtils.h"
 #import "LHScene.h"
 #import "LHConfig.h"
+#import "LHNodeProtocol.h"
+#import "LHNode.h"
 
 #if LH_USE_BOX2D
 
@@ -43,12 +45,12 @@ class LHBox2dDebug : public b2Draw
 {
 private:
     float mRatio;
-    LHBox2dDebugDrawNode* drawNode;
+    __weak LHBox2dDebugDrawNode* drawNode;
 public:
     
     
 	LHBox2dDebug( float ratio, LHBox2dDebugDrawNode* drawNode );
-    virtual ~LHBox2dDebug(){};
+    virtual ~LHBox2dDebug(){drawNode = nil;};
     
     void setRatio(float ratio);
     
@@ -278,8 +280,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 @implementation LHScheduledContactInfo
 {
-    __unsafe_unretained CCNode* _nodeA;
-    __unsafe_unretained CCNode* _nodeB;
+    __weak CCNode* _nodeA;
+    __weak CCNode* _nodeB;
     CGPoint contactPoint;
     float impulse;
 }
@@ -326,13 +328,14 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     
     BOOL _paused;
     NSTimeInterval  _lastTime;
-    LHBox2dDebugDrawNode* __unsafe_unretained _debugNode;
+    LHBox2dDebugDrawNode* __weak _debugNode;
     b2World*        _box2dWorld;
 #endif
     
 }
 
 -(void)dealloc{
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
 #if LH_USE_BOX2D
@@ -340,12 +343,17 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LH_SAFE_RELEASE(_scheduledBeginContact);
     LH_SAFE_RELEASE(_scheduledEndContact);
     
+    for(LHNode* child in [self children]){
+        if([child conformsToProtocol:@protocol(LHNodeProtocol)]){
+            [child markAsB2WorldDirty];
+        }
+    }
+    
     //we need to first destroy all children and then distroy box2d world
     [self removeAllChildren];
     
     LH_SAFE_DELETE(_box2dWorld);
 #endif
-    
     
     LH_SUPER_DEALLOC();
 }

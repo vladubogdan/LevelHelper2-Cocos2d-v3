@@ -45,7 +45,8 @@
 
 @implementation LHNodeProtocolImpl
 {
-    __unsafe_unretained CCNode* _node;
+    BOOL b2WorldDirty;
+    __weak CCNode* _node;
     
     NSString*           _uuid;
     NSMutableArray*     _tags;
@@ -69,6 +70,7 @@
     
     if(self = [super init])
     {
+        b2WorldDirty = false;
         _node = nd;
         
         [_node setName:[dict objectForKey:@"name"]];
@@ -500,6 +502,22 @@
         }
     }
     return temp;
+}
+
+-(BOOL)isB2WorldDirty{
+    return b2WorldDirty;
+}
+-(void)markAsB2WorldDirty
+{
+    b2WorldDirty = true;
+    
+    for(LHNode* child in [_node children])
+    {
+        if([child conformsToProtocol:@protocol(LHNodeProtocol)])
+        {
+            [child markAsB2WorldDirty];
+        }
+    }
 }
 
 @end

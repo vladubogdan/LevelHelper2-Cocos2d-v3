@@ -80,6 +80,9 @@
 
 -(BOOL)lateLoading;
 
+-(BOOL)isB2WorldDirty;
+-(void)markAsB2WorldDirty;
+
 @end
 
 
@@ -103,10 +106,18 @@
 -(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
 -(NSMutableArray*)childrenOfType:(Class)type;
 
+-(BOOL)isB2WorldDirty;
+-(void)markAsB2WorldDirty;
 @end
 
 
 #define LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(BOOL)isB2WorldDirty{\
+    return [_nodeProtocolImp isB2WorldDirty];\
+}\
+-(void)markAsB2WorldDirty{\
+    [_nodeProtocolImp markAsB2WorldDirty];\
+}\
 -(NSString*)uuid{\
 return [_nodeProtocolImp uuid];\
 }\

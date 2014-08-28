@@ -118,7 +118,7 @@ void lhContactEndContactCaller(void* object,
 
 @implementation LHBox2dCollisionHandling
 {
-    __unsafe_unretained LHScene* _scene;
+    __weak LHScene* _scene;
     LHContactListenerPimpl* _b2Listener;
 }
 
@@ -126,7 +126,9 @@ void lhContactEndContactCaller(void* object,
 
 
 -(void)dealloc{
-    [_scene box2dWorld]->SetContactListener(NULL);
+    if(_scene){
+        [_scene box2dWorld]->SetContactListener(NULL);
+    }
     _scene = nil;
     LH_SAFE_DELETE(_b2Listener);
     LH_SUPER_DEALLOC();

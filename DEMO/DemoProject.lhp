@@ -158,6 +158,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>subclassingDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>userPropertiesDemo.lhs</key>
 				<dict>
 					<key>publish</key>

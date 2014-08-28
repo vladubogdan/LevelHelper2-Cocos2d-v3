@@ -39,8 +39,8 @@
     NSString* _jointAUUID;
     NSString* _jointBUUID;
     
-    __unsafe_unretained CCNode<LHJointNodeProtocol>* _jointA;
-    __unsafe_unretained CCNode<LHJointNodeProtocol>* _jointB;
+    __weak CCNode<LHJointNodeProtocol>* _jointA;
+    __weak CCNode<LHJointNodeProtocol>* _jointB;
     
     float   _ratio;
 }

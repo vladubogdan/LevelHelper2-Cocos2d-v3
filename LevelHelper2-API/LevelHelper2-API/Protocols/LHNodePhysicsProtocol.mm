@@ -15,6 +15,8 @@
 #import "LHShape.h"
 #import "LHNode.h"
 
+#import "LHNodeProtocol.h"
+
 #import "LHConfig.h"
 
 #import "LHGameWorldNode.h"
@@ -56,15 +58,17 @@
     b2Body* _body;
     CGPoint previousScale;
 #endif
-    __unsafe_unretained CCNode* _node;
+    __weak CCNode* _node;
 }
 
 -(void)dealloc{
 
+    
 #if LH_USE_BOX2D
-    if(_body &&
-       _body->GetWorld() &&
-       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
+    if(_body && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
+//    if(_body &&
+//       _body->GetWorld() &&
+//       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
     {
         //do not remove the body if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy
@@ -73,8 +77,7 @@
     }
 #endif
     _node = nil;
-    
-    
+        
     LH_SUPER_DEALLOC();
 }
 

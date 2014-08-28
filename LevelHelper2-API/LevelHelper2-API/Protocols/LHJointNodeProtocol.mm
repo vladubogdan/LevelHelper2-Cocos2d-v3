@@ -29,13 +29,13 @@
 
 @implementation LHJointNodeProtocolImp
 {
-    __unsafe_unretained CCNode<LHJointNodeProtocol>* _node;
+    __weak CCNode<LHJointNodeProtocol>* _node;
     
     
 #if LH_USE_BOX2D
     b2Joint* _joint;
 #else
-    __unsafe_unretained CCPhysicsJoint* _joint;
+    __weak CCPhysicsJoint* _joint;
 #endif
     
     CGPoint _relativePosA;
@@ -44,8 +44,8 @@
     NSString* _nodeAUUID;
     NSString* _nodeBUUID;
     
-    __unsafe_unretained CCNode<LHNodePhysicsProtocol>* _nodeA;
-    __unsafe_unretained CCNode<LHNodePhysicsProtocol>* _nodeB;
+    __weak CCNode<LHNodePhysicsProtocol>* _nodeA;
+    __weak CCNode<LHNodePhysicsProtocol>* _nodeB;
 
     BOOL _collideConnected;
 }

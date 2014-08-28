@@ -171,6 +171,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_COCOS2D_PROJECT_TEMPLATE.plist; path = ../LH_COCOS2D_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
@@ -427,10 +428,16 @@
 		6E9FC78319A4F2330046CDBD /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				6E9FC78419A4F2330046CDBD /* LHAsset.h */,
-				6E9FC78519A4F2330046CDBD /* LHAsset.mm */,
+				6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */,
+				6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */,
+				6E9FC7A819A4F2330046CDBD /* LHUINode.h */,
+				6E9FC7A919A4F2330046CDBD /* LHUINode.mm */,
 				6E9FC78619A4F2330046CDBD /* LHBackUINode.h */,
 				6E9FC78719A4F2330046CDBD /* LHBackUINode.mm */,
+				6E9FC7A619A4F2330046CDBD /* LHSprite.h */,
+				6E9FC7A719A4F2330046CDBD /* LHSprite.mm */,
+				6E9FC78419A4F2330046CDBD /* LHAsset.h */,
+				6E9FC78519A4F2330046CDBD /* LHAsset.mm */,
 				6E9FC78819A4F2330046CDBD /* LHBezier.h */,
 				6E9FC78919A4F2330046CDBD /* LHBezier.mm */,
 				6E9FC78A19A4F2330046CDBD /* LHCamera.h */,
@@ -439,8 +446,6 @@
 				6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */,
 				6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */,
 				6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */,
-				6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */,
-				6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */,
 				6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */,
 				6E9FC79319A4F2330046CDBD /* LHGearJointNode.mm */,
 				6E9FC79419A4F2330046CDBD /* LHGravityArea.h */,
@@ -461,10 +466,6 @@
 				6E9FC7A319A4F2330046CDBD /* LHRopeJointNode.mm */,
 				6E9FC7A419A4F2330046CDBD /* LHShape.h */,
 				6E9FC7A519A4F2330046CDBD /* LHShape.mm */,
-				6E9FC7A619A4F2330046CDBD /* LHSprite.h */,
-				6E9FC7A719A4F2330046CDBD /* LHSprite.mm */,
-				6E9FC7A819A4F2330046CDBD /* LHUINode.h */,
-				6E9FC7A919A4F2330046CDBD /* LHUINode.mm */,
 				6E9FC7AA19A4F2330046CDBD /* LHWater.h */,
 				6E9FC7AB19A4F2330046CDBD /* LHWater.mm */,
 				6E9FC7AC19A4F2330046CDBD /* LHWeldJointNode.h */,
@@ -507,6 +508,7 @@
 		6EDE843019A483A200599C48 = {
 			isa = PBXGroup;
 			children = (
+				6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */,
 				6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */,
 				6EDE843E19A483A200599C48 /* LevelHelper2-API */,
 				6EDE843B19A483A200599C48 /* Frameworks */,

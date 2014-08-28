@@ -105,10 +105,10 @@ double fcat(double x, void *data)
     float   _vRepetitions;
     float   _uRepetitions;
     
-    LHDrawNode* __unsafe_unretained ropeShape; //nil if rope is not draw
+    LHDrawNode* __weak ropeShape; //nil if rope is not draw
     
-    LHDrawNode* __unsafe_unretained cutAShapeNode;
-    LHDrawNode* __unsafe_unretained cutBShapeNode;
+    LHDrawNode* __weak cutAShapeNode;
+    LHDrawNode* __weak cutBShapeNode;
     
 #if LH_USE_BOX2D
     b2RopeJoint* cutJointA;
@@ -117,8 +117,8 @@ double fcat(double x, void *data)
     b2Body* cutBodyB;
     
 #else//chipmunk
-    CCPhysicsJoint* __unsafe_unretained cutJointA;
-    CCPhysicsJoint* __unsafe_unretained cutJointB;
+    CCPhysicsJoint* __weak cutJointA;
+    CCPhysicsJoint* __weak cutJointB;
 #endif
     
     float cutJointALength;

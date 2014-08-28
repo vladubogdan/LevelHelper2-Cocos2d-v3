@@ -16,10 +16,10 @@
 {
     NSTimeInterval lastTime;
     
-    __unsafe_unretained CCNode* _node;
+    __weak CCNode* _node;
     
     NSMutableArray* _animations;
-     __unsafe_unretained LHAnimation* _activeAnimation;
+     __weak LHAnimation* _activeAnimation;
 }
 
 -(void)dealloc{

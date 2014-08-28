@@ -30,9 +30,10 @@
 
 
 -(void)dealloc{
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
-    LH_SAFE_RELEASE(_physicsProtocolImp);
+    
     
     LH_SAFE_RELEASE(outlinePoints);
     LH_SAFE_RELEASE(trianglePoints);

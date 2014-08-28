@@ -98,12 +98,15 @@
 }
 
 -(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)followedNode{
+    
+    
     if(_followedNodeUUID && _followedNode == nil){
         _followedNode = (CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(LHScene*)[self scene] childNodeWithUUID:_followedNodeUUID];
         if(_followedNode){
             LH_SAFE_RELEASE(_followedNodeUUID);
         }
     }
+    
     return _followedNode;
 }
 -(void)followNode:(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)node{
