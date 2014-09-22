@@ -18,7 +18,7 @@
 #include <cstdio>
 #include <cstdarg>
 #include <cstring>
-#include "Box2d/Box2D.h"
+
 
 #else
 
@@ -329,7 +329,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     BOOL _paused;
     NSTimeInterval  _lastTime;
     LHBox2dDebugDrawNode* __weak _debugNode;
-    b2World*        _box2dWorld;
+    LHBox2dWorld*        _box2dWorld;
 #endif
     
 }
@@ -407,7 +407,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         
         b2Vec2 gravity;
         gravity.Set(0.f, 0.0f);
-        _box2dWorld = new b2World(gravity);
+        _box2dWorld = new LHBox2dWorld(gravity, LH_VOID_BRIDGE_CAST([self scene]));
         _box2dWorld->SetAllowSleeping(true);
         _box2dWorld->SetContinuousPhysics(false);
         
@@ -525,16 +525,19 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     if(!_scheduledBeginContact){
         _scheduledBeginContact = [[NSMutableArray alloc] init];
     }
-    
-    for(LHScheduledContactInfo* info in _scheduledBeginContact)
-    {
-        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
-           ([info nodeA] == nodeB && [info nodeB] == nodeA)
-           ){
-            return;
-        }
-    }
-    
+
+    //this causes losing contacts when same nodes are in contact but at different points
+//    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+//    {
+//        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+//           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+//           ){
+//            return;
+//        }
+//    }
+    //if this happens the objects have been removed but box2d still calls the box2d body
+    if([nodeA parent] == nil)return;
+    if([nodeB parent] == nil)return;
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
@@ -551,20 +554,46 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         _scheduledEndContact = [[NSMutableArray alloc] init];
     }
     
-    for(LHScheduledContactInfo* info in _scheduledEndContact)
-    {
-        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
-           ([info nodeA] == nodeB && [info nodeB] == nodeA)
-           ){
-            return;
-        }
-    }
+    //this causes losing contacts when same nodes are in contact but at different points
+//    for(LHScheduledContactInfo* info in _scheduledEndContact)
+//    {
+//        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+//           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+//           ){
+//            return;
+//        }
+//    }
+
+    //if this happens the objects have been removed but box2d still calls the box2d body
+    if([nodeA parent] == nil)return;
+    if([nodeB parent] == nil)return;
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
                                                                                point:CGPointZero
                                                                              impulse:0];
     [_scheduledEndContact addObject:info];
+}
+
+-(void)removeScheduledContactsWithNode:(CCNode*)node
+{
+    NSMutableArray* toRemoveBegin = [NSMutableArray array];
+    for(LHScheduledContactInfo* info in _scheduledBeginContact){
+        if([info nodeA] == node || [info nodeB] == node)
+        {
+            [toRemoveBegin addObject:info];
+        }
+    }
+    [_scheduledBeginContact removeObjectsInArray:toRemoveBegin];
+    
+    NSMutableArray* toRemoveEnd = [NSMutableArray array];
+    for(LHScheduledContactInfo* info in _scheduledEndContact){
+        if([info nodeA] == node || [info nodeB] == node)
+        {
+            [toRemoveEnd addObject:info];
+        }
+    }
+    [_scheduledEndContact removeObjectsInArray:toRemoveEnd];
 }
 
 #pragma mark - CHIPMUNK SUPPORT

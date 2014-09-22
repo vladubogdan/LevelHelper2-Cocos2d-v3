@@ -54,7 +54,15 @@
 #define LH_SCALE_FACTOR ([UIScreen mainScreen].scale)
 
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+
+#define LH_SCREEN_RESOLUTION ( CGSizeMake([UIScreen mainScreen].bounds.size.width*[[UIScreen mainScreen] scale], [UIScreen mainScreen].bounds.size.height*[[UIScreen mainScreen] scale]))
+#else
+
 #define LH_SCREEN_RESOLUTION ( UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) ? CGSizeMake([UIScreen mainScreen].bounds.size.height*[[UIScreen mainScreen] scale], [UIScreen mainScreen].bounds.size.width*[[UIScreen mainScreen] scale]) : CGSizeMake([UIScreen mainScreen].bounds.size.width*[[UIScreen mainScreen] scale], [UIScreen mainScreen].bounds.size.height*[[UIScreen mainScreen] scale]) )
+
+#endif
+
 
 #define LHStringFromPoint NSStringFromCGPoint
 

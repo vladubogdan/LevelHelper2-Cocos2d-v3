@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -693,6 +695,8 @@
 									<string>{-0.001909, -0.082381}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>pelvis.png</string>
 									<key>nodeType</key>
@@ -745,6 +749,8 @@
 													<string>{-0.004018, 0.034892}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>foot_LEFT.png</string>
 													<key>nodeType</key>
@@ -779,6 +785,8 @@
 											<string>{0.000978, 0.036626}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
+											<key>invisibleInEditor</key>
+											<false/>
 											<key>name</key>
 											<string>leg_lower_L_outline.png</string>
 											<key>nodeType</key>
@@ -813,6 +821,8 @@
 									<string>{0.015046, -0.065425}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>leg_upper_L_outline.png</string>
 									<key>nodeType</key>
@@ -865,6 +875,8 @@
 													<string>{-0.007858, 0.037690}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>foot_RIGHT.png</string>
 													<key>nodeType</key>
@@ -899,6 +911,8 @@
 											<string>{0.002209, 0.038417}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
+											<key>invisibleInEditor</key>
+											<false/>
 											<key>name</key>
 											<string>leg_lower_R_outline.png</string>
 											<key>nodeType</key>
@@ -933,6 +947,8 @@
 									<string>{-0.016650, -0.059109}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>leg_upper_R_outline.png</string>
 									<key>nodeType</key>
@@ -965,6 +981,8 @@
 							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
 							<string>{-0.015198, 0.032704}</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>lowerBody</string>
 							<key>nodeType</key>
@@ -1018,6 +1036,8 @@
 													<string>{0.013529, -0.001263}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>hand_L_outline.png</string>
 													<key>nodeType</key>
@@ -1052,6 +1072,8 @@
 											<string>{0.013364, 0.025299}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
+											<key>invisibleInEditor</key>
+											<false/>
 											<key>name</key>
 											<string>forearm_L_outline.png</string>
 											<key>nodeType</key>
@@ -1086,6 +1108,8 @@
 									<string>{0.013814, 0.033720}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>shoulder_L_outline.png</string>
 									<key>nodeType</key>
@@ -1138,6 +1162,8 @@
 													<string>{0.020681, 0.032150}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>mouth.png</string>
 													<key>nodeType</key>
@@ -1176,6 +1202,8 @@
 													<string>{0.006474, -0.004453}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>eyes_OPEN.png</string>
 													<key>nodeType</key>
@@ -1214,6 +1242,8 @@
 													<string>{-0.000743, -0.013594}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>hair.png</string>
 													<key>nodeType</key>
@@ -1252,6 +1282,8 @@
 													<string>{0.003890, -0.063198}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>hat.png</string>
 													<key>nodeType</key>
@@ -1286,6 +1318,8 @@
 											<string>{-0.002749, 0.001569}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
+											<key>invisibleInEditor</key>
+											<false/>
 											<key>name</key>
 											<string>head.png</string>
 											<key>nodeType</key>
@@ -1320,6 +1354,8 @@
 									<string>{-0.004947, 0.001097}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>neck_outline.png</string>
 									<key>nodeType</key>
@@ -1358,6 +1394,8 @@
 									<string>{0.003342, 0.139860}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>gun-belt.png</string>
 									<key>nodeType</key>
@@ -1396,6 +1434,8 @@
 									<string>{-0.002655, 0.117897}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>torso_outline.png</string>
 									<key>nodeType</key>
@@ -1434,6 +1474,8 @@
 									<string>{0.002791, 0.065768}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>vest_outline.png</string>
 									<key>nodeType</key>
@@ -1472,6 +1514,8 @@
 									<string>{-0.044731, 0.117151}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>gun.png</string>
 									<key>nodeType</key>
@@ -1510,6 +1554,8 @@
 									<string>{-0.027461, 0.139890}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>gun-holster.png</string>
 									<key>nodeType</key>
@@ -1562,6 +1608,8 @@
 													<string>{-0.003542, 0.030970}</string>
 													<key>imageFileName</key>
 													<string>officer.png</string>
+													<key>invisibleInEditor</key>
+													<false/>
 													<key>name</key>
 													<string>hand_R_outline.png</string>
 													<key>nodeType</key>
@@ -1596,6 +1644,8 @@
 											<string>{-0.012984, 0.025107}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
+											<key>invisibleInEditor</key>
+											<false/>
 											<key>name</key>
 											<string>forearm_R_outline.png</string>
 											<key>nodeType</key>
@@ -1630,6 +1680,8 @@
 									<string>{-0.022170, 0.026568}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>shoulder_R_outline.png</string>
 									<key>nodeType</key>
@@ -1662,6 +1714,8 @@
 							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
 							<string>{-0.023221, 0.025155}</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>upperBody</string>
 							<key>nodeType</key>
@@ -1692,13 +1746,19 @@
 						<string>{0.901143, 0.846148}</string>
 						<key>1136x640</key>
 						<string>{0.111745, 0.747136}</string>
+						<key>1334x750</key>
+						<string>{0.103724, 0.733431}</string>
 						<key>2048x1536</key>
 						<string>{0.228056, 0.845433}</string>
+						<key>2208x1242</key>
+						<string>{0.103724, 0.733431}</string>
 						<key>960x640</key>
 						<string>{0.500982, 0.745908}</string>
 					</dict>
 					<key>generalPosition</key>
-					<string>{0.228056, 0.845433}</string>
+					<string>{0.103724, 0.733431}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>Officer</string>
 					<key>nodeType</key>
@@ -1727,6 +1787,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -1753,230 +1815,12 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.500000, 0.500000}</string>
-			<key>children</key>
-			<array>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.500000, 0.500000}</string>
-					<key>children</key>
-					<array>
-						<dict>
-							<key>alpha</key>
-							<real>255</real>
-							<key>anchor</key>
-							<string>{0.500000, 0.500000}</string>
-							<key>animations</key>
-							<array>
-								<dict>
-									<key>active</key>
-									<true/>
-									<key>fps</key>
-									<integer>12</integer>
-									<key>name</key>
-									<string>testAnim</string>
-									<key>properties</key>
-									<dict>
-										<key>Children Positions</key>
-										<dict>
-											<key>Frames</key>
-											<array>
-												<dict>
-													<key>frameIndex</key>
-													<integer>0</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236343, -61.461403}</string>
-														<key>C411BCC6-5713-412A-A43B-F2F4165B9AF3</key>
-														<string>{76.642759, 139.828353}</string>
-													</dict>
-												</dict>
-												<dict>
-													<key>frameIndex</key>
-													<integer>9</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236343, -61.461403}</string>
-														<key>C411BCC6-5713-412A-A43B-F2F4165B9AF3</key>
-														<string>{301.458890, 501.108535}</string>
-													</dict>
-												</dict>
-												<dict>
-													<key>frameIndex</key>
-													<integer>19</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236343, -61.461403}</string>
-														<key>C411BCC6-5713-412A-A43B-F2F4165B9AF3</key>
-														<string>{-546.769615, 510.340612}</string>
-													</dict>
-												</dict>
-												<dict>
-													<key>frameIndex</key>
-													<integer>29</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236343, -61.461403}</string>
-														<key>C411BCC6-5713-412A-A43B-F2F4165B9AF3</key>
-														<string>{76.642759, 139.828353}</string>
-													</dict>
-												</dict>
-											</array>
-											<key>type</key>
-											<string>LHChildrenPositionsProperty</string>
-										</dict>
-										<key>Position</key>
-										<dict>
-											<key>Frames</key>
-											<array>
-												<dict>
-													<key>frameIndex</key>
-													<integer>0</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236340, -61.461404}</string>
-													</dict>
-												</dict>
-												<dict>
-													<key>frameIndex</key>
-													<integer>14</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{359.521839, -91.424623}</string>
-													</dict>
-												</dict>
-												<dict>
-													<key>frameIndex</key>
-													<integer>29</integer>
-													<key>positions</key>
-													<dict>
-														<key>B1515C12-4622-4513-A014-7D2DC27060CF</key>
-														<string>{-341.236340, -61.461404}</string>
-													</dict>
-												</dict>
-											</array>
-											<key>type</key>
-											<string>LHPositionProperty</string>
-										</dict>
-									</dict>
-									<key>repetitions</key>
-									<integer>0</integer>
-									<key>totalFrames</key>
-									<integer>30</integer>
-								</dict>
-							</array>
-							<key>children</key>
-							<array>
-								<dict>
-									<key>alpha</key>
-									<real>255</real>
-									<key>anchor</key>
-									<string>{0.500000, 0.500000}</string>
-									<key>colorOverlay</key>
-									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
-									<key>generalPosition</key>
-									<string>{0.079836, 0.218482}</string>
-									<key>imageFileName</key>
-									<string>objects.png</string>
-									<key>name</key>
-									<string>object_banana</string>
-									<key>nodeType</key>
-									<string>LHSprite</string>
-									<key>parentUUID</key>
-									<string>B1515C12-4622-4513-A014-7D2DC27060CF</string>
-									<key>relativeImagePath</key>
-									<string>PUBLISH_FOLDER/</string>
-									<key>rotation</key>
-									<real>0.0</real>
-									<key>scale</key>
-									<string>{1.000000, 1.000000}</string>
-									<key>size</key>
-									<string>{92.000000, 64.000000}</string>
-									<key>spriteName</key>
-									<string>object_banana</string>
-									<key>spriteUUID</key>
-									<string>FAE55543-0B9F-4B04-A86D-BAB025D0B01C</string>
-									<key>tags</key>
-									<array>
-										<string>DEFAULT</string>
-									</array>
-									<key>uuid</key>
-									<string>C411BCC6-5713-412A-A43B-F2F4165B9AF3</string>
-									<key>zOrder</key>
-									<integer>0</integer>
-								</dict>
-							</array>
-							<key>colorOverlay</key>
-							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
-							<key>generalPosition</key>
-							<string>{-0.355455, -0.096033}</string>
-							<key>imageFileName</key>
-							<string>objects.png</string>
-							<key>name</key>
-							<string>object_hat</string>
-							<key>nodeType</key>
-							<string>LHSprite</string>
-							<key>parentUUID</key>
-							<string>C0A00D68-7313-47A9-94B9-BDFA3DE9700D</string>
-							<key>relativeImagePath</key>
-							<string>PUBLISH_FOLDER/</string>
-							<key>rotation</key>
-							<real>0.0</real>
-							<key>scale</key>
-							<string>{1.000000, 1.000000}</string>
-							<key>size</key>
-							<string>{122.000000, 75.000000}</string>
-							<key>spriteName</key>
-							<string>object_hat</string>
-							<key>spriteUUID</key>
-							<string>A0CC7494-203E-4C79-A14A-ECA50F1FBA3D</string>
-							<key>tags</key>
-							<array>
-								<string>DEFAULT</string>
-							</array>
-							<key>uuid</key>
-							<string>B1515C12-4622-4513-A014-7D2DC27060CF</string>
-							<key>zOrder</key>
-							<integer>0</integer>
-						</dict>
-					</array>
-					<key>colorOverlay</key>
-					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
-					<key>generalPosition</key>
-					<string>{0.497090, 0.244601}</string>
-					<key>name</key>
-					<string>UntitledNode</string>
-					<key>nodeType</key>
-					<string>LHNode</string>
-					<key>parentUUID</key>
-					<string>_USER_INTERFACE_NODE_UUID_</string>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{1.000000, 1.000000}</string>
-					<key>size</key>
-					<string>{918.745972, 240.630920}</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>C0A00D68-7313-47A9-94B9-BDFA3DE9700D</string>
-					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-			</array>
 			<key>colorOverlay</key>
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -2021,6 +1865,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -2040,6 +1900,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>sceneFormat</key>

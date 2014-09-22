@@ -104,6 +104,8 @@
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse
 {
+    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], LHStringFromPoint(scenePt), impulse);
+
     if([[a name] isEqualToString:@"candy"])
     {
         [self handleCandy:a collisionWithNode:b];
@@ -112,8 +114,6 @@
     {
         [self handleCandy:b collisionWithNode:a];
     }
-    
-    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], LHStringFromPoint(scenePt), impulse);
 }
 
 

@@ -24,11 +24,17 @@
     LHNodeProtocolImpl* _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     
+    BOOL wasUpdated;
+    
     BOOL _active;
     BOOL _restricted;
     
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
+}
+
+-(BOOL)wasUpdated{
+    return wasUpdated;
 }
 
 -(void)dealloc{
@@ -53,6 +59,8 @@
     
     
     if(self = [super init]){
+        
+        wasUpdated = false;
         
         [prnt addChild:self];
         
@@ -184,6 +192,8 @@
         [self setPosition:pt];
     }
     [self setSceneView];
+    
+     wasUpdated = true;
 }
 
 #pragma mark LHNodeProtocol Required

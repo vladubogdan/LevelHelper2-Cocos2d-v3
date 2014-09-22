@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>app</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>frames</key>
+	<dict>
+		<key>para_man0001</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 953.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>C9052053-4B7A-4A0A-A6FC-CDD4742B8AC6</string>
+		</dict>
+		<key>para_man0002</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 763.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>4D5C7040-243F-4401-A1FD-8E8721CDF03C</string>
+		</dict>
+		<key>para_man0003</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 953.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>C4142AF7-2CFD-4EB9-ADC4-4789E49EA546</string>
+		</dict>
+		<key>para_man0004</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 573.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>ED3BEB0C-9686-45AA-9DF2-EC5A88E46AC5</string>
+		</dict>
+		<key>para_man0005</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 763.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>12E7C9A6-4270-4565-AAC6-C0A36361CEEB</string>
+		</dict>
+		<key>para_man0006</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 383.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>A2355DF9-EE02-4B4A-89CF-6D8479569A29</string>
+		</dict>
+		<key>para_man0007</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 573.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>37085B76-848F-4A00-BE73-9829C2D770FD</string>
+		</dict>
+		<key>para_man0008</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 193.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>B31F7DD7-E78C-43AB-B80F-F101C5AD46AF</string>
+		</dict>
+		<key>para_man0009</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 383.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>4234397E-555A-4EC4-BABD-8A74CFC8D083</string>
+		</dict>
+		<key>para_man0010</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149.000000, 2.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>F7FF21BA-4981-4C26-8516-C5AC29C13A0E</string>
+		</dict>
+		<key>para_man0011</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 193.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>A8E29A8E-A161-4DCE-BDB6-645651A6632A</string>
+		</dict>
+		<key>para_man0012</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2.000000, 2.000000}, {142.000000, 185.000000}}</string>
+			<key>offset</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0.000000, 0.000000}, {142.000000, 185.000000}}</string>
+			<key>sourceSize</key>
+			<string>{142.000000, 185.000000}</string>
+			<key>uuid</key>
+			<string>91036227-E94F-44AB-BFE3-43194C0BDDDA</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>ratio</key>
+		<real>1.2</real>
+		<key>size</key>
+		<string>{294.000000, 1141.000000}</string>
+		<key>textureFileName</key>
+		<string>spritesheetAnim.png</string>
+	</dict>
+</dict>
+</plist>

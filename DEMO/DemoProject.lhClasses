@@ -70,6 +70,14 @@
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
+			<dict>
+				<key>arrayType</key>
+				<integer>0</integer>
+				<key>name</key>
+				<string>memberD</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
 		</array>
 	</dict>
 </array>

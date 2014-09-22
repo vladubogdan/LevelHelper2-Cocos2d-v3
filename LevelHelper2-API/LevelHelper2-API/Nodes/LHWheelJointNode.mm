@@ -81,7 +81,7 @@
         _damping    = [dict floatForKey:@"wheelDampingRatio"];
         
         _maxMotorTorque = [dict floatForKey:@"wheelMaxMotorForce"];
-        _motorSpeed = -[dict floatForKey:@"wheelMotorSpeed"];
+        _motorSpeed = [dict floatForKey:@"wheelMotorSpeed"];
         
         _axis = [dict pointForKey:@"axis"];
     }
@@ -163,11 +163,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2WheelJointDef jointDef;
         
-        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,-_axis.y));
+        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(-_axis.x,-_axis.y));
         
         jointDef.enableMotor    = _enableMotor;
         jointDef.maxMotorTorque = _maxMotorTorque;
-        jointDef.motorSpeed     = CC_DEGREES_TO_RADIANS(_motorSpeed);
+        jointDef.motorSpeed     = CC_DEGREES_TO_RADIANS(_motorSpeed*360.0f);
         jointDef.frequencyHz    = _frequency;
         jointDef.dampingRatio   = _damping;
         

@@ -31,10 +31,14 @@
                            folder:(NSString*)folder
                            suffix:(NSString*)suffix
 {
+
     NSString* ext = [filename pathExtension];
     NSString* fileNoExt = [filename stringByDeletingPathExtension];
-#if TARGET_OS_IPHONE
-    return [[folder stringByAppendingPathComponent:fileNoExt] stringByAppendingPathExtension:ext];
+#if TARGET_OS_IPHONE    
+    return [[[folder stringByAppendingPathComponent:fileNoExt] stringByAppendingString:suffix] stringByAppendingPathExtension:ext];
+    
+    //no longer using this as cocos2d and iphone 6,6+ not friendly
+//    return [[folder stringByAppendingPathComponent:fileNoExt] stringByAppendingPathExtension:ext];
 #else
     NSString* fileName = [fileNoExt stringByAppendingString:suffix];
     NSString* val = [[NSBundle mainBundle] pathForResource:fileName ofType:ext inDirectory:folder];

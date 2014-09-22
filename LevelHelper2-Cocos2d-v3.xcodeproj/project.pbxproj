@@ -157,6 +157,15 @@
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
+		6E7009E619C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */; };
+		6E7009E719C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */; };
+		6E7009E819C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */; };
+		6E7009EC19C1B43B00E75764 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E7009EB19C1B43B00E75764 /* Default@3x.png */; };
+		6E7009ED19C1B43B00E75764 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E7009EB19C1B43B00E75764 /* Default@3x.png */; };
+		6E7009EE19C1B43B00E75764 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E7009EB19C1B43B00E75764 /* Default@3x.png */; };
+		6E7A848219D041A700E2E52F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7A848119D041A600E2E52F /* Images.xcassets */; };
+		6E7A848719D041AD00E2E52F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7A848119D041A600E2E52F /* Images.xcassets */; };
+		6E7A848819D041AE00E2E52F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7A848119D041A600E2E52F /* Images.xcassets */; };
 		6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
 		6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74619A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 		6E9FD2D119A5044F0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74819A4F1E50046CDBD /* libLevelHelper2-API.a */; };
@@ -373,6 +382,10 @@
 		6E4026991982BDE4002B4D32 /* AppDelegateMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMacOS.h; path = Classes/AppDelegateMacOS.h; sourceTree = "<group>"; };
 		6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateMacOS.m; path = Classes/AppDelegateMacOS.m; sourceTree = "<group>"; };
 		6E40269C1982BE30002B4D32 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
+		6E7009E419C1B0EC00E75764 /* LHSceneUniversalDevicesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUniversalDevicesTest.h; sourceTree = "<group>"; };
+		6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUniversalDevicesTest.mm; sourceTree = "<group>"; };
+		6E7009EB19C1B43B00E75764 /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@3x.png"; path = "Resources/Default@3x.png"; sourceTree = "<group>"; };
+		6E7A848119D041A600E2E52F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "LevelHelper2-Cocos2d-v3+Box2d-iOS/Images.xcassets"; sourceTree = "<group>"; };
 		6E89FE31192E261E0040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSubclass.h; path = Classes/LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
 		6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
@@ -447,6 +460,7 @@
 		6E121FDA1924BD85005E8532 = {
 			isa = PBXGroup;
 			children = (
+				6E7A848119D041A600E2E52F /* Images.xcassets */,
 				6E34132119A710CB00B73620 /* cocos2d.xcodeproj */,
 				6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */,
 				6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */,
@@ -498,6 +512,7 @@
 		6E121FFF1924BD85005E8532 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E7009EB19C1B43B00E75764 /* Default@3x.png */,
 				6E40269C1982BE30002B4D32 /* MainMenu.xib */,
 				6E1220001924BD85005E8532 /* Default.png */,
 				6E1220021924BD85005E8532 /* Default@2x.png */,
@@ -584,6 +599,8 @@
 				6E341AC519A7562C00B73620 /* LHSceneDemo.mm */,
 				6E341AB019A7562C00B73620 /* LHSceneAssetsTest.h */,
 				6E341AB119A7562C00B73620 /* LHSceneAssetsTest.mm */,
+				6E7009E419C1B0EC00E75764 /* LHSceneUniversalDevicesTest.h */,
+				6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */,
 				6EC5550519AB4F4200CF0760 /* LHSceneNodesSubclassingTest.h */,
 				6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */,
 				6EC5550E19AB553900CF0760 /* BlueRobotSprite.h */,
@@ -838,6 +855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0D5686194C32A30036E940 /* Default@2x.png in Resources */,
+				6E7A848219D041A700E2E52F /* Images.xcassets in Resources */,
 				6E0D5687194C32A30036E940 /* Icon-120.png in Resources */,
 				6E0D568A194C32A30036E940 /* Icon@2x.png in Resources */,
 				6E0D568B194C32A30036E940 /* Icon-Small@2x.png in Resources */,
@@ -848,6 +866,7 @@
 				6E341AA819A755F100B73620 /* PUBLISH_FOLDER in Resources */,
 				6E0D5690194C32A30036E940 /* Default-Landscape~ipad.png in Resources */,
 				6E341AAC19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E7009EC19C1B43B00E75764 /* Default@3x.png in Resources */,
 				6E0D5691194C32A30036E940 /* Icon-Small.png in Resources */,
 				6E0D5692194C32A30036E940 /* Icon-Small-50.png in Resources */,
 				6E0D5694194C32A30036E940 /* Icon-72.png in Resources */,
@@ -866,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1220031924BD85005E8532 /* Default@2x.png in Resources */,
+				6E7A848719D041AD00E2E52F /* Images.xcassets in Resources */,
 				6E1220161924BD85005E8532 /* Icon-120.png in Resources */,
 				6E12200C1924BD85005E8532 /* Icon@2x.png in Resources */,
 				6E12201E1924BD85005E8532 /* Icon-Small@2x.png in Resources */,
@@ -876,6 +896,7 @@
 				6E341AAA19A755F100B73620 /* PUBLISH_FOLDER in Resources */,
 				6E1220071924BD85005E8532 /* Default-Landscape~ipad.png in Resources */,
 				6E341AAE19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E7009EE19C1B43B00E75764 /* Default@3x.png in Resources */,
 				6E12201C1924BD85005E8532 /* Icon-Small.png in Resources */,
 				6E12201A1924BD85005E8532 /* Icon-Small-50.png in Resources */,
 				6E12200E1924BD85005E8532 /* Icon-72.png in Resources */,
@@ -894,6 +915,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E341AA919A755F100B73620 /* PUBLISH_FOLDER in Resources */,
+				6E7A848819D041AE00E2E52F /* Images.xcassets in Resources */,
+				6E7009ED19C1B43B00E75764 /* Default@3x.png in Resources */,
 				6E341AAD19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */,
 			);
@@ -908,6 +931,7 @@
 			files = (
 				6E341B1B19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF419A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E7009E619C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6EC5551019AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1519A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF119A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
@@ -943,6 +967,7 @@
 			files = (
 				6E341B1D19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF619A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E7009E819C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6EC5551219AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1719A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF319A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
@@ -978,6 +1003,7 @@
 			files = (
 				6E341B1C19A7562C00B73620 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E341AF519A7562C00B73620 /* LHSceneCollisionFilteringTest.mm in Sources */,
+				6E7009E719C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6EC5551119AB553900CF0760 /* BlueRobotSprite.m in Sources */,
 				6E341B1619A7562C00B73620 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E341AF219A7562C00B73620 /* LHSceneCharacterAnimationTest.mm in Sources */,
@@ -1048,6 +1074,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "";
@@ -1098,6 +1126,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "";
@@ -1190,6 +1220,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1234,6 +1266,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
