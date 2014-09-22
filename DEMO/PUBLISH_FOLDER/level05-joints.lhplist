@@ -26,12 +26,18 @@
 					<string>{0.138767, 0.158904}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_statue</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -57,6 +63,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -98,18 +108,24 @@
 					<string>{0.354656, 0.319908}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_bananabunch</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>A3E96E09-136A-4050-AAC9-C725F7A10E0B</string>
+						<string>5BC3088E-B1E8-4A07-8EF4-22B5CDE338C7</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -131,6 +147,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -168,6 +188,8 @@
 					<real>0.0</real>
 					<key>frequency</key>
 					<real>0.0</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>testDistanceJoint</string>
 					<key>nodeType</key>
@@ -195,6 +217,8 @@
 					<key>enableLimit</key>
 					<false/>
 					<key>enableMotor</key>
+					<false/>
+					<key>invisibleInEditor</key>
 					<false/>
 					<key>lowerAngle</key>
 					<real>0.0</real>
@@ -234,12 +258,18 @@
 					<string>{0.651261, 0.190411}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_statue_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -265,6 +295,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -306,18 +340,24 @@
 					<string>{0.722879, 0.255229}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_bananabunch_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>A3E96E09-136A-4050-AAC9-C725F7A10E0B</string>
+						<string>5BC3088E-B1E8-4A07-8EF4-22B5CDE338C7</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -339,6 +379,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -380,6 +424,8 @@
 					<string>{0.142391, 0.558616}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>nodeType</key>
@@ -418,12 +464,18 @@
 					<string>{0.126799, 0.911389}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -449,6 +501,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -490,12 +546,18 @@
 					<string>{0.289293, 0.557549}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -521,6 +583,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -562,6 +628,8 @@
 					<string>{137.613586, 359.759552}</string>
 					<key>groundAnchorB</key>
 					<string>{275.776041, 270.235911}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>lengthA</key>
 					<real>2</real>
 					<key>lengthB</key>
@@ -602,6 +670,8 @@
 					<string>{0.286597, 0.422224}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>thumb_tack_1</string>
 					<key>nodeType</key>
@@ -640,18 +710,24 @@
 					<string>{0.435467, 0.517459}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -673,6 +749,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -714,18 +794,24 @@
 					<string>{0.518171, 0.548195}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -747,6 +833,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -784,6 +874,8 @@
 					<real>0.0</real>
 					<key>frequency</key>
 					<real>0.0</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>WeldJoint1</string>
 					<key>nodeType</key>
@@ -814,18 +906,24 @@
 					<string>{0.579843, 0.611521}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -847,6 +945,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -884,6 +986,8 @@
 					<real>0.0</real>
 					<key>frequency</key>
 					<real>0.0</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>WeldJoint2</string>
 					<key>nodeType</key>
@@ -914,12 +1018,18 @@
 					<string>{0.514516, 0.270831}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -945,6 +1055,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -984,6 +1098,8 @@
 					<true/>
 					<key>enablePrismaticMotor</key>
 					<false/>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>lowerTranslation</key>
 					<real>-60</real>
 					<key>maxMotorForce</key>
@@ -1022,18 +1138,24 @@
 					<string>{0.760006, 0.448853}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1055,6 +1177,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1096,18 +1222,24 @@
 					<string>{0.856819, 0.518195}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1_1_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1129,6 +1261,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1170,18 +1306,24 @@
 					<string>{0.381408, 0.825619}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_bananabunch_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>A3E96E09-136A-4050-AAC9-C725F7A10E0B</string>
+						<string>5BC3088E-B1E8-4A07-8EF4-22B5CDE338C7</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1203,6 +1345,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1244,12 +1390,18 @@
 					<string>{0.329169, 0.883369}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy_3</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -1275,6 +1427,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -1316,12 +1472,18 @@
 					<string>{0.446859, 0.884752}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy_4</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -1347,6 +1509,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -1388,6 +1554,8 @@
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>enableWheelMotor</key>
 					<true/>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>backWheelJoint</string>
 					<key>nodeType</key>
@@ -1427,6 +1595,8 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>enableWheelMotor</key>
+					<false/>
+					<key>invisibleInEditor</key>
 					<false/>
 					<key>name</key>
 					<string>frontWheelJoint</string>
@@ -1468,12 +1638,18 @@
 					<string>{0.380292, 0.677777}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_statue_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -1499,6 +1675,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -1536,6 +1716,8 @@
 					<real>0.0</real>
 					<key>frequency</key>
 					<real>0.0</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>dummyJoint</string>
 					<key>nodeType</key>
@@ -1562,18 +1744,24 @@
 					<string>{0.623797, 0.775493}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1595,6 +1783,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1636,18 +1828,24 @@
 					<string>{0.706501, 0.806230}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1_3</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1669,6 +1867,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1710,18 +1912,24 @@
 					<string>{0.759785, 0.860100}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana_1_1_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</string>
+						<string>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1743,6 +1951,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -1778,6 +1990,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -1808,6 +2022,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -1852,6 +2068,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -1871,6 +2103,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -1888,69 +2122,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>A3E96E09-136A-4050-AAC9-C725F7A10E0B</key>
-		<array>
-			<array>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-				<string>{-29.75, -27}</string>
-			</array>
-			<array>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{2.75, -10}</string>
-				<string>{31.25, -16.5}</string>
-			</array>
-			<array>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.75, -11}</string>
-			</array>
-			<array>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-33.25, 10.5}</string>
-			</array>
-			<array>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
-			</array>
-			<array>
-				<string>{-4.75, -8}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-10.75, -8}</string>
-			</array>
-			<array>
-				<string>{-16.25, -9.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-			</array>
-		</array>
-		<key>D9E3CB3A-9F8E-47C1-805D-92E2EAA988F0</key>
+		<key>25B5FC84-FC77-43FC-9D7A-25E0842B56EC</key>
 		<array>
 			<array>
 				<string>{38.75, -26.75}</string>
@@ -2010,6 +2182,68 @@
 				<string>{17.25, -1.75}</string>
 				<string>{38.25, 5.25}</string>
 				<string>{7.25, 3.25}</string>
+			</array>
+		</array>
+		<key>5BC3088E-B1E8-4A07-8EF4-22B5CDE338C7</key>
+		<array>
+			<array>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+				<string>{-29.75, -27}</string>
+			</array>
+			<array>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{2.75, -10}</string>
+				<string>{31.25, -16.5}</string>
+			</array>
+			<array>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-33.25, 10.5}</string>
+			</array>
+			<array>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
+			</array>
+			<array>
+				<string>{-4.75, -8}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-10.75, -8}</string>
+			</array>
+			<array>
+				<string>{-16.25, -9.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
 			</array>
 		</array>
 	</dict>

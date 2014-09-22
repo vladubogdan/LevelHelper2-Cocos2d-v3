@@ -34,6 +34,8 @@
 #import "LHSceneRemoveOnCollisionTest.h"
 #import "LHSceneNodesSubclassingTest.h"
 
+#import "LHSceneUniversalDevicesTest.h"
+
 @implementation LHSceneDemo
 {
     NSMutableArray* availableScenes;
@@ -61,6 +63,8 @@
     
     [availableScenes addObject:[LHSceneIntroduction class]];
 
+    [availableScenes addObject:[LHSceneUniversalDevicesTest class]];
+    
     [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
     
     [availableScenes addObject:[LHSceneCameraTest class]];

@@ -80,16 +80,19 @@
 	NSString* memberA;
 	float memberB;
 	NSString* memberC;
+	NSString* memberD;
 }
 
 @synthesize memberA;
 @synthesize memberB;
 @synthesize memberC;
+@synthesize memberD;
 
 
 -(void) dealloc{
 	LH_SAFE_RELEASE(memberA);
 	LH_SAFE_RELEASE(memberC);
+	LH_SAFE_RELEASE(memberD);
 
 	LH_SUPER_DEALLOC();
 }
@@ -122,6 +125,9 @@
 
 	if([dictionary objectForKey:@"memberC"])
 		[self setMemberC:[dictionary objectForKey:@"memberC"]];
+
+	if([dictionary objectForKey:@"memberD"])
+		[self setMemberD:[dictionary objectForKey:@"memberD"]];
 
 }
 

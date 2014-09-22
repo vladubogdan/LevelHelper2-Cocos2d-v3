@@ -44,6 +44,10 @@
 -(CGSize)designResolutionSize;
 @end
 
+@interface LHGameWorldNode (LH_PHYSICS_PROTOCOL_CONTACT_REMOVAL)
+-(void)removeScheduledContactsWithNode:(CCNode*)node;
+@end
+
 @interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
@@ -58,18 +62,28 @@
     b2Body* _body;
     CGPoint previousScale;
 #endif
-    __weak CCNode* _node;
+    __unsafe_unretained CCNode* _node;
 }
 
 -(void)dealloc{
 
     
 #if LH_USE_BOX2D
+    
     if(_body && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
-//    if(_body &&
-//       _body->GetWorld() &&
-//       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
     {
+        //node at this point may not have parent so no scene also
+        LHBox2dWorld* world = (LHBox2dWorld*)_body->GetWorld();
+        if(world){
+            LHScene* scene = (LHScene*)LH_ID_BRIDGE_CAST(world->_scene);
+            if(scene){
+                LHGameWorldNode* gw = [scene gameWorldNode];
+                if(gw){
+                    [gw removeScheduledContactsWithNode:_node];
+                }
+            }
+        }
+        
         //do not remove the body if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy
         //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
@@ -167,6 +181,18 @@
 
         _body->SetSleepingAllowed([dict boolForKey:@"allowSleep"]);
         _body->SetBullet([dict boolForKey:@"bullet"]);
+        
+        if([dict objectForKey:@"angularDamping"])//all this properties were added in the same moment
+        {
+            _body->SetAngularDamping([dict floatForKey:@"angularDamping"]);
+            
+            _body->SetAngularVelocity([dict floatForKey:@"angularVelocity" ]);//radians/second.
+            
+            _body->SetLinearDamping([dict floatForKey:@"linearDamping"]);
+            
+            CGPoint linearVel = [dict pointForKey:@"linearVelocity"];
+            _body->SetLinearVelocity(b2Vec2(linearVel.x,linearVel.y));
+        }
         
         CGSize sizet = [_node contentSize];
         sizet.width  = [scene metersFromValue:sizet.width];
@@ -931,6 +957,19 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
         if(fixInfo && _node.physicsBody)
         {
+            
+            if([dict objectForKey:@"angularDamping"])//all this properties were added in the same moment
+            {
+                [_node.physicsBody setAngularVelocity:[dict floatForKey:@"angularVelocity" ]];
+                
+                //_body->SetAngularDamping([dict floatForKey:@"angularDamping"]);
+                //_body->SetLinearDamping([dict floatForKey:@"linearDamping"]);
+                
+                CGPoint linearVel = [dict pointForKey:@"linearVelocity"];
+                [_node.physicsBody setVelocity:linearVel];
+            }
+            
+            
             originallySensor = [fixInfo boolForKey:@"sensor"];
             
             NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];

@@ -26,6 +26,9 @@
     
     NSMutableArray* outlinePoints;
     NSMutableArray* trianglePoints;
+    
+    BOOL _tile;
+    CGSize _tileScale;
 }
 
 
@@ -57,6 +60,9 @@
         [prnt addChild:self];
         
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+        
+        _tile = [dict boolForKey:@"tileTexture"];
+        _tileScale = [dict sizeForKey:@"tileScale"];
         
         LHScene* scene = (LHScene*)[prnt scene];
         
@@ -110,6 +116,10 @@
         int count = (int)[triangles count]/3;
         [self ensureCapacity:count];
         
+        CGSize imageSize;
+        if(self.texture)
+            imageSize = CGSizeMake([self.texture pixelWidth], [self.texture pixelHeight]);
+        
         for(int i = 0; i < [triangles count]; i+=3)
         {
             NSDictionary* dictA = [triangles objectAtIndex:i];
@@ -150,6 +160,18 @@
             CGPoint posC = [dictC pointForKey:@"point"];
             posC.y = -posC.y;
             CGPoint uvC = [dictC pointForKey:@"uv"];
+            
+            if(_tile && self.texture){
+                
+                uvA.x = (posA.x/imageSize.width)*(_tileScale.width);
+                uvA.y = -(posA.y/imageSize.height)*(_tileScale.height);
+                
+                uvB.x = (posB.x/imageSize.width)*(_tileScale.width);
+                uvB.y = -(posB.y/imageSize.height)*(_tileScale.height);
+                
+                uvC.x = (posC.x/imageSize.width)*(_tileScale.width);
+                uvC.y = -(posC.y/imageSize.height)*(_tileScale.height);
+            }
 
             [trianglePoints addObject:LHValueWithCGPoint(posA)];
             [trianglePoints addObject:LHValueWithCGPoint(posB)];

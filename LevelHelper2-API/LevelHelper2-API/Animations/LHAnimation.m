@@ -107,7 +107,7 @@
             [self setAnimating:YES];
         }
         
-        currentRepetition = -1;
+        currentRepetition = 0;
     }
     return self;
 }

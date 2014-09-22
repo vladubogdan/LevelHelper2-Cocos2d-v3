@@ -14,10 +14,15 @@
 #import "LHAnimation.h"
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
+#import "LHCamera.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
 -(CGSize)designResolutionSize;
+@end
+
+@interface LHCamera (LH_PARALLAX_FOLLOW_CAMERA_CHECK)
+-(BOOL)wasUpdated;
 @end
 
 @implementation LHParallax
@@ -93,6 +98,11 @@
     CGPoint parallaxPos = [self position];
     CCNode* followed = [self followedNode];
     if(followed){
+        
+        if([followed isKindOfClass:[LHCamera class]]){
+            if(![(LHCamera*)followed wasUpdated])return;
+        }
+
         
         parallaxPos = [followed position];
         

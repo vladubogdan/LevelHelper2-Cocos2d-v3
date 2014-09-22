@@ -12,6 +12,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHGameWorldNode.h"
 #import "LHConfig.h"
+#import "LHNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2d/Box2D.h"
@@ -44,8 +45,8 @@
     NSString* _nodeAUUID;
     NSString* _nodeBUUID;
     
-    __weak CCNode<LHNodePhysicsProtocol>* _nodeA;
-    __weak CCNode<LHNodePhysicsProtocol>* _nodeB;
+    __unsafe_unretained CCNode<LHNodePhysicsProtocol>* _nodeA;
+    __unsafe_unretained CCNode<LHNodePhysicsProtocol>* _nodeB;
 
     BOOL _collideConnected;
 }
@@ -53,10 +54,7 @@
 -(void)dealloc{
 
 #if LH_USE_BOX2D
-    if(_joint &&
-       _joint->GetBodyA() &&
-       _joint->GetBodyA()->GetWorld() &&
-       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
+    if(_joint && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
     {
         //do not remove the joint if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy
@@ -146,12 +144,12 @@
 }
 
 -(CGPoint)localAnchorA{
-    return CGPointMake( _relativePosA.x,
-                       -_relativePosA.y);
+    return CGPointMake( _relativePosA.x*[_nodeA scaleX],
+                       -_relativePosA.y*[_nodeA scaleY]);
 }
 -(CGPoint)localAnchorB{
-    return CGPointMake( _relativePosB.x,
-                       -_relativePosB.y);
+    return CGPointMake( _relativePosB.x*[_nodeB scaleX],
+                       -_relativePosB.y*[_nodeB scaleY]);
 }
 
 -(CGPoint)anchorA{

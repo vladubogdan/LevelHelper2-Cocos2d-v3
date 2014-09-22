@@ -53,7 +53,7 @@
     NSString* plistPath = [LHUtils imagePathWithFilename:[dict objectForKey:@"imageFileName"]
                                                   folder:[dict objectForKey:@"relativeImagePath"]
                                                   suffix:[scene currentDeviceSuffix:YES]];
-    
+        
     CCTexture* texture = [scene textureWithImagePath:imagePath];
     
     CCSpriteFrame* spriteFrame = nil;

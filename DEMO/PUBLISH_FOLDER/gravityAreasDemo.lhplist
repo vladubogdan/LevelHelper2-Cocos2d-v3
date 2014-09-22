@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -54,6 +56,8 @@
 					<real>10</real>
 					<key>generalPosition</key>
 					<string>{0.816443, 0.761431}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledGravityArea</string>
 					<key>nodeType</key>
@@ -82,6 +86,8 @@
 					<real>10</real>
 					<key>generalPosition</key>
 					<string>{0.842247, 0.295658}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledGravityArea_2</string>
 					<key>nodeType</key>
@@ -110,6 +116,8 @@
 					<real>10</real>
 					<key>generalPosition</key>
 					<string>{0.315512, 0.770959}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledGravityArea_1</string>
 					<key>nodeType</key>
@@ -140,18 +148,24 @@
 					<string>{0.069852, 0.113766}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<true/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>2313E4A6-E2E3-49BC-A104-77060DAFFE97</string>
+						<string>4B93949E-261B-4CA7-8C56-8D2BE802216A</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -173,6 +187,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -214,18 +232,24 @@
 					<string>{0.585719, 0.141937}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_bananabunch</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<true/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>4A712060-543E-423B-A149-7730CE4A5FE7</string>
+						<string>594B377E-7035-4515-B56D-96A6C2AFB0E6</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -247,6 +271,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -288,18 +316,24 @@
 					<string>{0.596514, 0.415017}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_canteen</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<true/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>84D5928E-B185-4EA1-A74E-E9DC632C24FD</string>
+						<string>6718F5B0-B7E2-4F83-BDE3-47020E20668E</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -321,6 +355,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -362,18 +400,24 @@
 					<string>{0.064159, 0.400596}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_pineapple</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<true/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>3BB9824C-AC6C-4076-B003-68E569D200FE</string>
+						<string>5B5D5D2D-468A-4696-8E9F-E85E684D7CD2</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -395,6 +439,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -434,6 +482,8 @@
 					<real>14</real>
 					<key>generalPosition</key>
 					<string>{0.334230, 0.327393}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledGravityArea_3</string>
 					<key>nodeType</key>
@@ -458,6 +508,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -488,6 +540,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -532,6 +586,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -551,6 +621,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -559,7 +631,11 @@
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>1136x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>1334x750</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>2048x1536</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>2208x1242</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
@@ -574,7 +650,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>2313E4A6-E2E3-49BC-A104-77060DAFFE97</key>
+		<key>4B93949E-261B-4CA7-8C56-8D2BE802216A</key>
 		<array>
 			<array>
 				<string>{38.75, -26.75}</string>
@@ -636,7 +712,69 @@
 				<string>{7.25, 3.25}</string>
 			</array>
 		</array>
-		<key>3BB9824C-AC6C-4076-B003-68E569D200FE</key>
+		<key>594B377E-7035-4515-B56D-96A6C2AFB0E6</key>
+		<array>
+			<array>
+				<string>{30.75, -25.5}</string>
+				<string>{31.25, -16.5}</string>
+				<string>{2.75, -10}</string>
+				<string>{25.75, -26.5}</string>
+			</array>
+			<array>
+				<string>{-24.25, -23}</string>
+				<string>{-23.75, -14}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.25, -27}</string>
+				<string>{-29.75, -27}</string>
+			</array>
+			<array>
+				<string>{36.75, -15}</string>
+				<string>{38.25, -11.5}</string>
+				<string>{39.75, 3}</string>
+				<string>{37.25, 9}</string>
+				<string>{30.25, 17.5}</string>
+				<string>{19.25, 24}</string>
+				<string>{2.75, -10}</string>
+				<string>{31.25, -16.5}</string>
+			</array>
+			<array>
+				<string>{-36.75, -15}</string>
+				<string>{-36.75, -21}</string>
+				<string>{-35.75, -24}</string>
+				<string>{-33.75, -26.5}</string>
+				<string>{-33.75, -11}</string>
+			</array>
+			<array>
+				<string>{-36.25, 2.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-16.25, -9.5}</string>
+				<string>{-10.75, -8}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-25.75, 19}</string>
+				<string>{-33.25, 10.5}</string>
+			</array>
+			<array>
+				<string>{19.25, 24}</string>
+				<string>{6.25, 27}</string>
+				<string>{-5.25, 27}</string>
+				<string>{-11.25, 26}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-4.75, -8}</string>
+				<string>{2.75, -10}</string>
+			</array>
+			<array>
+				<string>{-4.75, -8}</string>
+				<string>{-17.25, 24}</string>
+				<string>{-10.75, -8}</string>
+			</array>
+			<array>
+				<string>{-16.25, -9.5}</string>
+				<string>{-33.75, -11}</string>
+				<string>{-23.75, -14}</string>
+			</array>
+		</array>
+		<key>5B5D5D2D-468A-4696-8E9F-E85E684D7CD2</key>
 		<array>
 			<array>
 				<string>{-17.75, -33.75}</string>
@@ -739,69 +877,7 @@
 				<string>{-5.25, -30.75}</string>
 			</array>
 		</array>
-		<key>4A712060-543E-423B-A149-7730CE4A5FE7</key>
-		<array>
-			<array>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-				<string>{-29.75, -27}</string>
-			</array>
-			<array>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{2.75, -10}</string>
-				<string>{31.25, -16.5}</string>
-			</array>
-			<array>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.75, -11}</string>
-			</array>
-			<array>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-33.25, 10.5}</string>
-			</array>
-			<array>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
-			</array>
-			<array>
-				<string>{-4.75, -8}</string>
-				<string>{-17.25, 24}</string>
-				<string>{-10.75, -8}</string>
-			</array>
-			<array>
-				<string>{-16.25, -9.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-			</array>
-		</array>
-		<key>84D5928E-B185-4EA1-A74E-E9DC632C24FD</key>
+		<key>6718F5B0-B7E2-4F83-BDE3-47020E20668E</key>
 		<array>
 			<array>
 				<string>{-14.75, -19}</string>

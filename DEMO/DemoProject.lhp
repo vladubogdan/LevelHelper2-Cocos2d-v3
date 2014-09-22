@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>DeviceName</key>
-			<string>iPhones 3.5 inch Retina</string>
+			<string>iPhones 4 &amp; 4S</string>
 			<key>ScaleRatio</key>
 			<real>1</real>
 			<key>ScreenHeight</key>
@@ -18,11 +18,11 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039420325309038162, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.04056277871131897, 0}, {0.040784932672977448, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
-			<string>iPhone 4 inch Retina</string>
+			<string>iPhone 5 &amp; 5S</string>
 			<key>ScaleRatio</key>
 			<real>1</real>
 			<key>ScreenHeight</key>
@@ -36,6 +36,34 @@
 		</dict>
 		<dict>
 			<key>DeviceName</key>
+			<string>iPhones 6</string>
+			<key>ScaleRatio</key>
+			<real>1.2000000476837158</real>
+			<key>ScreenHeight</key>
+			<integer>750</integer>
+			<key>ScreenWidth</key>
+			<integer>1334</integer>
+			<key>SuffixName</key>
+			<string>-iphone6</string>
+			<key>color</key>
+			<string>{{0.04056277871131897, 0}, {0.040784932672977448, 1}}</string>
+		</dict>
+		<dict>
+			<key>DeviceName</key>
+			<string>iPhones 6 Plus</string>
+			<key>ScaleRatio</key>
+			<real>2</real>
+			<key>ScreenHeight</key>
+			<integer>1242</integer>
+			<key>ScreenWidth</key>
+			<integer>2208</integer>
+			<key>SuffixName</key>
+			<string>-iphone6plus</string>
+			<key>color</key>
+			<string>{{0.04056277871131897, 0}, {0.040784932672977448, 1}}</string>
+		</dict>
+		<dict>
+			<key>DeviceName</key>
 			<string>iPad &amp; iPad Mini</string>
 			<key>ScaleRatio</key>
 			<real>1</real>
@@ -46,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.025950860232114792, 0}, {0.30018883943557739, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,13 +88,19 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.025950860232114792, 0}, {0.30018883943557739, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
 	<string>Cocos2d</string>
 	<key>options</key>
 	<dict>
+		<key>UserPropertiesGenerationFilePath</key>
+		<string>../LevelHelper2-API/LevelHelper2-API/Protocols/LHUserProperties.h</string>
+		<key>ignoredFolders</key>
+		<array>
+			<string>Source</string>
+		</array>
 		<key>name</key>
 		<string>DemoProject</string>
 		<key>publishOptions</key>
@@ -104,6 +138,11 @@
 					<true/>
 				</dict>
 				<key>collisionHandling.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>devices.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -182,7 +221,7 @@
 			<key>publisherPluginName</key>
 			<string>Cocos2d</string>
 			<key>selectedPublishTypeName</key>
-			<string>Current Scene Only</string>
+			<string>All Selected Scenes</string>
 		</dict>
 	</dict>
 	<key>uuid</key>

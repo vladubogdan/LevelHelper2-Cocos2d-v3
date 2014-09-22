@@ -121,6 +121,7 @@
     NSAssert(dict, @" ");
     if(!dict)return nil;
 
+
     
     int aspect = [dict intForKey:@"aspect"];
     CGSize designResolution = [dict sizeForKey:@"designResolution"];
@@ -134,6 +135,7 @@
 
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
 
+    
     CGPoint childrenOffset = CGPointZero;
     
     CGSize sceneSize = curDev.size;
@@ -142,6 +144,8 @@
     sceneSize.height = sceneSize.height/ratio;
     
     aspect = 2;//HARD CODED UNTIL I FIGURE OUT HOW TO DO IT IN v3
+    
+    
     
     if(aspect == 0)//exact fit
     {
@@ -172,7 +176,11 @@
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
         currentDeviceSize    = curDev.size;
+        
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
+#ifdef __CC_PLATFORM_IOS
+        [[CCFileUtils sharedFileUtils] setiPhoneContentScaleFactor:curDev.ratio];
+#endif
         
         [self setName:relativePath];
 
@@ -181,6 +189,7 @@
         
 
         self.contentSize= CGSizeMake(curDev.size.width/curDev.ratio, curDev.size.height/curDev.ratio);
+        
         self.position   = CGPointZero;
         
         
@@ -699,7 +708,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
     NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
     if(!info){
-        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
+        NSString* path = [[NSBundle mainBundle] pathForResource:[assetFileName lastPathComponent]
                                                          ofType:@"plist"
                                                     inDirectory:[self relativePath]];
         if(path){

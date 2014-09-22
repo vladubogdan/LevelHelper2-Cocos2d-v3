@@ -36,6 +36,7 @@
 @property (nonatomic, retain) NSString* memberA;
 @property float memberB;
 @property (nonatomic, retain) NSString* memberC;
+@property (nonatomic, retain) NSString* memberD;
 
 +(id) customClassInstanceWithNode:(id<LHNodeProtocol>)node;
 
