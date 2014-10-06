@@ -77,9 +77,9 @@
         _enableLimit = [dict boolForKey:@"enableLimit"];
         _enableMotor = [dict boolForKey:@"enableMotor"];
         
-        
-        _lowerAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"lowerAngle"] - 180.0f);
-        _upperAngle = CC_DEGREES_TO_RADIANS([dict floatForKey:@"upperAngle"] - 180.0f);
+
+        _lowerAngle = -[dict floatForKey:@"lowerAngle"];
+        _upperAngle = -[dict floatForKey:@"upperAngle"];
         
         _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
         _motorSpeed = CC_DEGREES_TO_RADIANS(-360.0*[dict floatForKey:@"motorSpeed"]);
@@ -172,13 +172,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         jointDef.enableLimit = _enableLimit;
         jointDef.enableMotor = _enableMotor;
         
+        
         if(_lowerAngle < _upperAngle){
-            jointDef.lowerAngle = _lowerAngle;
-            jointDef.upperAngle = _upperAngle;
+            jointDef.lowerAngle = CC_DEGREES_TO_RADIANS(_lowerAngle);
+            jointDef.upperAngle = CC_DEGREES_TO_RADIANS(_upperAngle);
         }
         else{
-            jointDef.lowerAngle = _upperAngle;
-            jointDef.upperAngle = _lowerAngle;
+            jointDef.lowerAngle = CC_DEGREES_TO_RADIANS(_upperAngle);
+            jointDef.upperAngle = CC_DEGREES_TO_RADIANS(_lowerAngle);
         }
 
         

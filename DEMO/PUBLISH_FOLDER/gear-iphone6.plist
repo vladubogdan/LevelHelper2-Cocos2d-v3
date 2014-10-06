@@ -18,13 +18,13 @@
 			<key>frame</key>
 			<string>{{2.000000, 94.000000}, {77.000000, 76.000000}}</string>
 			<key>offset</key>
-			<string>{-1.000000, -1.500000}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{4.000000, 7.000000}, {77.000000, 76.000000}}</string>
+			<string>{{0.000000, 0.000000}, {77.000000, 76.000000}}</string>
 			<key>sourceSize</key>
-			<string>{87.000000, 87.000000}</string>
+			<string>{77.000000, 76.000000}</string>
 			<key>uuid</key>
 			<string>CC404270-8DA7-4855-B204-C39A329408AB</string>
 		</dict>
@@ -33,13 +33,13 @@
 			<key>frame</key>
 			<string>{{84.000000, 94.000000}, {58.000000, 58.000000}}</string>
 			<key>offset</key>
-			<string>{1.000000, 0.500000}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{4.000000, 1.000000}, {58.000000, 58.000000}}</string>
+			<string>{{0.000000, 0.000000}, {58.000000, 58.000000}}</string>
 			<key>sourceSize</key>
-			<string>{64.000000, 61.000000}</string>
+			<string>{58.000000, 58.000000}</string>
 			<key>uuid</key>
 			<string>8E586493-92CD-46C0-A9E1-797BA077A9D8</string>
 		</dict>
@@ -48,28 +48,28 @@
 			<key>frame</key>
 			<string>{{84.000000, 156.000000}, {11.000000, 11.000000}}</string>
 			<key>offset</key>
-			<string>{0.500000, 0.000000}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{2.000000, 2.000000}, {11.000000, 11.000000}}</string>
+			<string>{{0.000000, 0.000000}, {11.000000, 11.000000}}</string>
 			<key>sourceSize</key>
-			<string>{14.000000, 15.000000}</string>
+			<string>{11.000000, 11.000000}</string>
 			<key>uuid</key>
 			<string>2C67A46B-7636-4F5F-934D-710C5101E53B</string>
 		</dict>
 		<key>gear-04</key>
 		<dict>
 			<key>frame</key>
-			<string>{{3.000000, 2.000000}, {143.000000, 86.000000}}</string>
+			<string>{{2.000000, 2.000000}, {143.000000, 86.000000}}</string>
 			<key>offset</key>
-			<string>{-2.000000, 2.000000}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{4.000000, 4.000000}, {143.000000, 86.000000}}</string>
+			<string>{{0.000000, 0.000000}, {143.000000, 86.000000}}</string>
 			<key>sourceSize</key>
-			<string>{155.000000, 98.000000}</string>
+			<string>{143.000000, 86.000000}</string>
 			<key>uuid</key>
 			<string>2C8DC458-D888-4A75-B1BC-52015F9DD79A</string>
 		</dict>

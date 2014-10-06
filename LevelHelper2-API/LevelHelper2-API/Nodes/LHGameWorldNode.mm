@@ -275,7 +275,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 -(CCNode*)nodeB;
 -(CGPoint)contactPoint;
 -(float)impulse;
-
+-(void)setMarked;
+-(BOOL)marked;
 @end
 
 @implementation LHScheduledContactInfo
@@ -284,6 +285,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     __weak CCNode* _nodeB;
     CGPoint contactPoint;
     float impulse;
+    BOOL marked;
 }
 
 -(instancetype)initWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
@@ -297,7 +299,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     }
     return self;
 }
-
+-(void)setMarked{marked = true;}
+-(BOOL)marked{return marked;}
 -(CCNode*)nodeA{return _nodeA;}
 -(CCNode*)nodeB{return _nodeB;}
 -(CGPoint)contactPoint{return contactPoint;}
@@ -491,8 +494,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 		}
 		[self box2dWorld]->Step(deltaTime,VELOCITY_ITERATIONS,POSITION_ITERATIONS);
 		stepsPerformed++;
-		[self afterStep:dt]; // process collisions and result from callbacks called by the step
 	}
+    [self afterStep:dt]; // process collisions and result from callbacks called by the step
 	[self box2dWorld]->ClearForces ();
 }
 
@@ -500,19 +503,24 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     
     for(LHScheduledContactInfo* info in _scheduledBeginContact)
     {
-        [[self scene] didBeginContactBetweenNodeA:[info nodeA]
-                                         andNodeB:[info nodeB]
-                                       atLocation:[info contactPoint]
-                                      withImpulse:[info impulse]];
+        if(![info marked] && [info nodeA] && [info nodeB])
+        {
+            [[self scene] didBeginContactBetweenNodeA:[info nodeA]
+                                             andNodeB:[info nodeB]
+                                           atLocation:[info contactPoint]
+                                          withImpulse:[info impulse]];
+        }
     }
     [_scheduledBeginContact removeAllObjects];
     
     
-    
     for(LHScheduledContactInfo* info in _scheduledEndContact)
     {
-        [[self scene] didEndContactBetweenNodeA:[info nodeA]
-                                       andNodeB:[info nodeB]];
+        if(![info marked] && [info nodeA] && [info nodeB])
+        {
+            [[self scene] didEndContactBetweenNodeA:[info nodeA]
+                                           andNodeB:[info nodeB]];
+        }
     }
     [_scheduledEndContact removeAllObjects];
 }
@@ -536,8 +544,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 //        }
 //    }
     //if this happens the objects have been removed but box2d still calls the box2d body
-    if([nodeA parent] == nil)return;
-    if([nodeB parent] == nil)return;
+    if(!nodeA || ![nodeA parent])return;
+    if(!nodeB || ![nodeB parent])return;
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
@@ -565,8 +573,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 //    }
 
     //if this happens the objects have been removed but box2d still calls the box2d body
-    if([nodeA parent] == nil)return;
-    if([nodeB parent] == nil)return;
+    if(!nodeA || ![nodeA parent])return;
+    if(!nodeB || ![nodeB parent])return;
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
@@ -577,23 +585,19 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 -(void)removeScheduledContactsWithNode:(CCNode*)node
 {
-    NSMutableArray* toRemoveBegin = [NSMutableArray array];
     for(LHScheduledContactInfo* info in _scheduledBeginContact){
         if([info nodeA] == node || [info nodeB] == node)
         {
-            [toRemoveBegin addObject:info];
+            [info setMarked];
         }
     }
-    [_scheduledBeginContact removeObjectsInArray:toRemoveBegin];
     
-    NSMutableArray* toRemoveEnd = [NSMutableArray array];
     for(LHScheduledContactInfo* info in _scheduledEndContact){
         if([info nodeA] == node || [info nodeB] == node)
         {
-            [toRemoveEnd addObject:info];
+            [info setMarked];
         }
     }
-    [_scheduledEndContact removeObjectsInArray:toRemoveEnd];
 }
 
 #pragma mark - CHIPMUNK SUPPORT

@@ -166,7 +166,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2PrismaticJointDef jointDef;
         
-        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(-_axis.x,-_axis.y));
+        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,-_axis.y));
         
         jointDef.enableLimit = _enableLimit;
         jointDef.enableMotor = _enableMotor;

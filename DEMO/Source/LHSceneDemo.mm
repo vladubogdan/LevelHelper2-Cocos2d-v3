@@ -62,7 +62,7 @@
     availableScenes = [[NSMutableArray alloc] init];
     
     [availableScenes addObject:[LHSceneIntroduction class]];
-
+    
     [availableScenes addObject:[LHSceneUniversalDevicesTest class]];
     
     [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
@@ -80,6 +80,7 @@
 //    [availableScenes addObject:[LHSceneCarTest class]];
 //    [availableScenes addObject:[LHSceneJointsTest class]];
     [availableScenes addObject:[LHSceneGearJointsTest class]];
+
     [availableScenes addObject:[LHSceneCollisionFilteringTest class]];
     [availableScenes addObject:[LHSceneWaterAreaTest class]];
     [availableScenes addObject:[LHSceneGravityAreasTest class]];

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>DD4FF133-F72E-4076-823D-77818D9E3E39</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>91498E53-D90E-45F5-AD6B-B65A6573978B</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>anim</string>
+							<key>properties</key>
+							<dict>
+								<key>Opacity</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>opacities</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<real>255</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>opacities</key>
+											<dict/>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>opacities</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<real>255</real>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHOpacityProperty</string>
+								</dict>
+								<key>Position</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{118.397065, 259.785302}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>positions</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{808.612061, 343.836884}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>positions</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{118.397065, 259.785302}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+								<key>Rotation</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>rotations</key>
+											<dict/>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>rotations</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<real>68.01605224609375</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>rotations</key>
+											<dict/>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHRotationProperty</string>
+								</dict>
+								<key>Scale</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>scales</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{1.000000, 1.000000}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>scales</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{2.154837, 2.004670}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>scales</key>
+											<dict>
+												<key>7EF579AF-D57D-4771-A480-BB106E3DA3B0</key>
+												<string>{1.000000, 1.000000}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHScaleProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>30</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.123330, 0.405915}</string>
+					<key>imageFileName</key>
+					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>object_statue</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>fixtureUUID</key>
+						<string>69A11FAB-C7B5-4385-A714-C85833238E52</string>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>5</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{105.000000, 148.000000}</string>
+					<key>spriteName</key>
+					<string>object_statue</string>
+					<key>spriteUUID</key>
+					<string>0DB4639A-8D34-4D83-8FBD-20753577F85A</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>7EF579AF-D57D-4771-A480-BB106E3DA3B0</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>DD4FF133-F72E-4076-823D-77818D9E3E39</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>8EC45848-368F-42A0-8BE7-0BA0CD4C94C4</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>DD4FF133-F72E-4076-823D-77818D9E3E39</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>8570F059-382F-4229-92D0-459FF848A0FE</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960.000000, 640.000000}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024.000000, 768.000000}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048.000000, 1536.000000}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0.000000, -1.000000}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>69A11FAB-C7B5-4385-A714-C85833238E52</key>
+		<array>
+			<array>
+				<string>{-41.5, 65.75}</string>
+				<string>{-44.5, 59.75}</string>
+				<string>{-45, -21.25}</string>
+				<string>{-3, -68.25}</string>
+				<string>{-2.5, -68.75}</string>
+				<string>{28.5, -66.25}</string>
+				<string>{34, -64.25}</string>
+				<string>{-37, 68.75}</string>
+			</array>
+			<array>
+				<string>{-39.5, -58.75}</string>
+				<string>{-35, -62.75}</string>
+				<string>{-3, -68.25}</string>
+				<string>{-45, -21.25}</string>
+				<string>{-44, -43.75}</string>
+				<string>{-42.5, -51.75}</string>
+			</array>
+			<array>
+				<string>{41.5, 66.75}</string>
+				<string>{38, 68.75}</string>
+				<string>{-37, 68.75}</string>
+				<string>{45, 36.75}</string>
+				<string>{45, 60.25}</string>
+				<string>{43.5, 64.25}</string>
+			</array>
+			<array>
+				<string>{45, 36.75}</string>
+				<string>{-37, 68.75}</string>
+				<string>{34, -64.25}</string>
+				<string>{39, -61.25}</string>
+				<string>{46, -43.25}</string>
+				<string>{46.5, -5.75}</string>
+			</array>
+			<array>
+				<string>{43, -57.25}</string>
+				<string>{45, -53.25}</string>
+				<string>{46, -43.25}</string>
+				<string>{39, -61.25}</string>
+			</array>
+			<array>
+				<string>{12.5, -68.75}</string>
+				<string>{28.5, -66.25}</string>
+				<string>{-2.5, -68.75}</string>
+			</array>
+		</array>
+		<key>DD65756F-033E-46A7-AF72-E5319F03DFC0</key>
+		<array>
+			<array>
+				<string>{-40.75, -37.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-41.25, -34.5}</string>
+			</array>
+			<array>
+				<string>{10.25, -37}</string>
+				<string>{10.25, -35}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{5.75, -40.5}</string>
+				<string>{8.75, -39}</string>
+			</array>
+			<array>
+				<string>{82.25, 4.5}</string>
+				<string>{82.25, 22}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{42.25, -19.5}</string>
+				<string>{52.25, -16.5}</string>
+				<string>{63.75, -11}</string>
+				<string>{75.25, -2.5}</string>
+			</array>
+			<array>
+				<string>{-83.75, 24}</string>
+				<string>{-84.75, 21}</string>
+				<string>{-84.75, -7.5}</string>
+				<string>{-83.75, -10}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-80.25, 26.5}</string>
+				<string>{-81.75, 26}</string>
+			</array>
+			<array>
+				<string>{81.75, 23.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{82.25, 22}</string>
+			</array>
+			<array>
+				<string>{10.25, -35}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{-36.75, -40.5}</string>
+			</array>
+			<array>
+				<string>{-54.75, -22.5}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-83.75, -10}</string>
+			</array>
+			<array>
+				<string>{-41.25, -34.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-46.75, -22.5}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>DD4FF133-F72E-4076-823D-77818D9E3E39</string>
+</dict>
+</plist>
