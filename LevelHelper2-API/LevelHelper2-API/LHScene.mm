@@ -200,15 +200,14 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        
-        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-        
-        [self loadGlobalGravityFromDictionary:dict];
         [self loadBackgroundColorFromDictionary:dict];
-        [self loadPhysicsBoundariesFromDictionary:dict];
         [self loadGameWorldInfoFromDictionary:dict];
         
-        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+
+        [self loadGlobalGravityFromDictionary:dict];
+        [self loadPhysicsBoundariesFromDictionary:dict];
+
         [self performLateLoading];
         
         [self setUserInteractionEnabled:YES];

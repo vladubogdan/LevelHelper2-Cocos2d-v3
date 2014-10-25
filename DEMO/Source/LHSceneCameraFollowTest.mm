@@ -13,6 +13,7 @@
 @implementation LHSceneCameraFollowTest
 {
     BOOL didChangeX;
+    CCLabelTTF* ttfZoomLevel;
 }
 + (LHSceneDemo *)scene{
     return [[self alloc] initWithContentOfFile:@"PUBLISH_FOLDER/cameraFollowDemo.lhplist"];
@@ -35,6 +36,15 @@
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
+    ttfZoomLevel = [CCLabelTTF labelWithString:@"Zoom 1.0"
+                                         fontName:@"Arial"
+                                         fontSize:20];
+    [ttfZoomLevel setColor:[CCColor blackColor]];
+    [ttfZoomLevel setHorizontalAlignment:CCTextAlignmentCenter];
+    [ttfZoomLevel setPosition:CGPointMake(self.contentSize.width*0.5,
+                                          100)];
+    
+    [[self uiNode] addChild:ttfZoomLevel];//add the text to the ui element as we dont want it to move with the camera
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Zoom In"];
@@ -74,17 +84,30 @@
 	return self;
 }
 
+-(void)update:(CCTime)delta
+{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        //this are equivalent way of getting the current camera zoom level
+        //[ttfZoomLevel setString:[NSString stringWithFormat:@"Zoom %f", [[self gameWorldNode] scale]]];
+        //or
+        [ttfZoomLevel setString:[NSString stringWithFormat:@"Zoom %f", [camera zoomValue]]];
+    }
+}
+
 -(void)zoomOut{
     LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
     if(camera){
-        [camera zoomByValue:-2 inSeconds:1];
+        [camera zoomByValue:-0.5 inSeconds:1];
+//        [camera zoomToValue:1 inSeconds:1];
     }
 }
 
 -(void)zoomIn{
     LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
     if(camera){
-        [camera zoomByValue:2 inSeconds:1];
+        [camera zoomByValue:0.5 inSeconds:1];
+//        [camera zoomToValue:3 inSeconds:1];
     }
 }
 

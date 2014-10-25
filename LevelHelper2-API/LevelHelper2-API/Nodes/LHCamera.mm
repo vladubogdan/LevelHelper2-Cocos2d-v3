@@ -33,6 +33,8 @@
     float startZoomValue;
     float reachZoomValue;
     float reachZoomTime;
+    float minZoomValue;
+    
     NSTimeInterval zoomStartTime;
     
     
@@ -91,6 +93,27 @@
                              winSize.height*0.5 - newPos.y);
 
         [super setPosition:[self transformToRestrictivePosition:newPos]];
+        
+        CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
+        
+        CGSize worldSize = worldRect.size;
+        if(worldSize.width < 0)
+            worldSize.width = -worldSize.width;
+        
+        if(worldSize.height < 0)
+            worldSize.height = -worldSize.height;
+        
+        minZoomValue = 0.1;
+        if([self restrictedToGameWorld]){
+            if(winSize.width < worldSize.width || winSize.height < worldSize.height){
+                if(worldSize.width > worldSize.height){
+                    minZoomValue = winSize.height/worldSize.height;
+                }
+                else{
+                    minZoomValue = winSize.width/worldSize.width;
+                }
+            }
+        }
     }
     
     return self;
@@ -147,60 +170,26 @@
 -(void)setSceneView{
     if(_active)
     {
-        CGPoint originalTransformed = [self transformToRestrictivePosition:[self position]];
-        CGPoint transPoint = originalTransformed;
-        
+        CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
         LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
         
-        CGSize winSize = [(LHScene*)[self scene] contentSize];
-
         if(zooming)
         {
             NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
             float zoomUnit = (currentTimer - zoomStartTime)/reachZoomTime;
             float deltaZoom = startZoomValue + (reachZoomValue - startZoomValue)*zoomUnit;
+            
+            if(reachZoomValue < minZoomValue){
+                reachZoomValue = minZoomValue;
+            }
+            
             [[(LHScene*)[self scene] gameWorldNode] setScale:deltaZoom];
             
             if(zoomUnit >= 1.0f){
+                [[(LHScene*)[self scene] gameWorldNode] setScale:reachZoomValue];
                 zooming = false;
             }
         }
-        
-        
-        CCNode* followed = [self followedNode];
-        if(followed){
-            
-            CGPoint halfWinSize = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
-            
-            CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
-            CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
-
-            CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
-            transPoint = ccpSub(halfWinSize, scaledMidpoint);
-        }
-        
-        float x = transPoint.x;
-        float y = transPoint.y;
-        
-        CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
-        
-        worldRect.origin.x *= gwNode.scale;
-        worldRect.origin.y *= gwNode.scale;
-        worldRect.size.width *= gwNode.scale;
-        worldRect.size.height *= gwNode.scale;
-
-        if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
-            
-            x = MAX(x, winSize.width*0.5 - (worldRect.origin.x + worldRect.size.width - winSize.width *0.5));
-            x = MIN(x, winSize.width*0.5 - (worldRect.origin.x + winSize.width *0.5));
-            
-            y = MIN(y, winSize.height*0.5 - (worldRect.origin.y + worldRect.size.height + (winSize.height*0.5)));
-            y = MAX(y, winSize.height*0.5 - (worldRect.origin.y - winSize.height*0.5));
-        }
-        
-        transPoint.x = x;
-        transPoint.y = y;
-
 
         [gwNode setPosition:transPoint];
     }
@@ -209,45 +198,46 @@
 -(CGPoint)transformToRestrictivePosition:(CGPoint)position
 {
     LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
-    float scale = [gwNode scale];
+
+    CGPoint transPoint = position;
+    
+    CGSize winSize = [(LHScene*)[self scene] contentSize];
 
     CCNode* followed = [self followedNode];
     if(followed){
-        position = [followed convertToWorldSpaceAR:CGPointZero];
-        gwNode.scale = 1.0f;
-        position = [[[self scene] gameWorldNode] convertToNodeSpaceAR:position];
-        gwNode.scale = scale;
+        
+        CGPoint halfWinSize = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
+        
+        CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
+        CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
+        
+        CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
+        transPoint = ccpSub(halfWinSize, scaledMidpoint);
     }
-
-    CGSize winSize = [(LHScene*)[self scene] contentSize];
+    
+    float x = transPoint.x;
+    float y = transPoint.y;
+    
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
-
-    float x = position.x;
-    float y = position.y;
-
-//    worldRect.origin.x *= scale;
-//    worldRect.origin.y *= scale;
-//    worldRect.size.width *= scale;
-//    worldRect.size.height *= scale;
-
+    
+    worldRect.origin.x *= gwNode.scale;
+    worldRect.origin.y *= gwNode.scale;
+    worldRect.size.width *= gwNode.scale;
+    worldRect.size.height *= gwNode.scale;
+    
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
         
-        if(x > (worldRect.origin.x + worldRect.size.width)*0.5){
-            x = MIN(x, worldRect.origin.x + worldRect.size.width - winSize.width *0.5);
-        }
-        else{
-            x = MAX(x, worldRect.origin.x + winSize.width *0.5);
-        }
+        x = MAX(x, winSize.width*0.5 - (worldRect.origin.x + worldRect.size.width - winSize.width *0.5));
+        x = MIN(x, winSize.width*0.5 - (worldRect.origin.x + winSize.width *0.5));
         
-        y = MAX(y, worldRect.origin.y + worldRect.size.height + winSize.height*0.5);
-        y = MIN(y, worldRect.origin.y - winSize.height*0.5);
+        y = MIN(y, winSize.height*0.5 - (worldRect.origin.y + worldRect.size.height + (winSize.height*0.5)));
+        y = MAX(y, winSize.height*0.5 - (worldRect.origin.y - winSize.height*0.5));
     }
     
+    transPoint.x = x;
+    transPoint.y = y;
     
-    CGPoint pt = CGPointMake(winSize.width*0.5 - x,
-                             winSize.height*0.5- y);
-    
-    return pt;
+    return transPoint;
 }
 
 -(void)visit
@@ -273,8 +263,33 @@
         reachZoomTime = second;
         startZoomValue = [[[self scene] gameWorldNode] scale];
         reachZoomValue = value + startZoomValue;
+        
+        if(reachZoomValue < minZoomValue){
+            reachZoomValue = minZoomValue;
+        }
         zoomStartTime = [NSDate timeIntervalSinceReferenceDate];
     }
+}
+
+-(void)zoomToValue:(float)value inSeconds:(float)second
+{
+    if(_active)
+    {
+        zooming = true;
+        reachZoomTime = second;
+        startZoomValue = [[[self scene] gameWorldNode] scale];
+        reachZoomValue = value;
+        
+        if(reachZoomValue < minZoomValue){
+            reachZoomValue = minZoomValue;
+        }
+        zoomStartTime = [NSDate timeIntervalSinceReferenceDate];
+    }
+}
+
+-(float)zoomValue
+{
+    return [[[self scene] gameWorldNode] scale];
 }
 
 #pragma mark LHNodeProtocol Required

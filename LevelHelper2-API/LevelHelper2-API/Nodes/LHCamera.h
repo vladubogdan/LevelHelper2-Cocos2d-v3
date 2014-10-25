@@ -56,7 +56,20 @@
  */
 -(void)setRestrictedToGameWorld:(BOOL)value;
 
-
+/**
+ Set the camera zoom level by adding the value to the current zoom level.
+ @param value Set zoom value that will be added/substracted from the currect camera zoom level.
+ */
 -(void)zoomByValue:(float)value inSeconds:(float)second;
 
+/**
+ Set the camera zoom level.
+ @param value Set new zoom value of the camera.
+ */
+-(void)zoomToValue:(float)value inSeconds:(float)second;
+
+/**
+ Get the current camera zoom value.
+ */
+-(float)zoomValue;
 @end
