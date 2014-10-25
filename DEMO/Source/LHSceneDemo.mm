@@ -62,13 +62,15 @@
     availableScenes = [[NSMutableArray alloc] init];
     
     [availableScenes addObject:[LHSceneIntroduction class]];
+
+    [availableScenes addObject:[LHSceneCameraFollowTest class]];
     
     [availableScenes addObject:[LHSceneUniversalDevicesTest class]];
     
     [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
     
     [availableScenes addObject:[LHSceneCameraTest class]];
-    [availableScenes addObject:[LHSceneCameraFollowTest class]];
+
     [availableScenes addObject:[LHSceneParallaxTest class]];
     [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
 

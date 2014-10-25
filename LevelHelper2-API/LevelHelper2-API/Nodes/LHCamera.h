@@ -56,4 +56,7 @@
  */
 -(void)setRestrictedToGameWorld:(BOOL)value;
 
+
+-(void)zoomByValue:(float)value inSeconds:(float)second;
+
 @end

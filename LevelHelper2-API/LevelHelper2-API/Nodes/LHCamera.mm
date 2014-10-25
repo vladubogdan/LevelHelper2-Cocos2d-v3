@@ -29,6 +29,13 @@
     BOOL _active;
     BOOL _restricted;
     
+    BOOL zooming;
+    float startZoomValue;
+    float reachZoomValue;
+    float reachZoomTime;
+    NSTimeInterval zoomStartTime;
+    
+    
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
 }
@@ -140,18 +147,76 @@
 -(void)setSceneView{
     if(_active)
     {
-        CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
-        [[(LHScene*)[self scene] gameWorldNode] setPosition:transPoint];
+        CGPoint originalTransformed = [self transformToRestrictivePosition:[self position]];
+        CGPoint transPoint = originalTransformed;
+        
+        LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+        
+        CGSize winSize = [(LHScene*)[self scene] contentSize];
+
+        if(zooming)
+        {
+            NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
+            float zoomUnit = (currentTimer - zoomStartTime)/reachZoomTime;
+            float deltaZoom = startZoomValue + (reachZoomValue - startZoomValue)*zoomUnit;
+            [[(LHScene*)[self scene] gameWorldNode] setScale:deltaZoom];
+            
+            if(zoomUnit >= 1.0f){
+                zooming = false;
+            }
+        }
+        
+        
+        CCNode* followed = [self followedNode];
+        if(followed){
+            
+            CGPoint halfWinSize = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
+            
+            CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
+            CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
+
+            CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
+            transPoint = ccpSub(halfWinSize, scaledMidpoint);
+        }
+        
+        float x = transPoint.x;
+        float y = transPoint.y;
+        
+        CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
+        
+        worldRect.origin.x *= gwNode.scale;
+        worldRect.origin.y *= gwNode.scale;
+        worldRect.size.width *= gwNode.scale;
+        worldRect.size.height *= gwNode.scale;
+
+        if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
+            
+            x = MAX(x, winSize.width*0.5 - (worldRect.origin.x + worldRect.size.width - winSize.width *0.5));
+            x = MIN(x, winSize.width*0.5 - (worldRect.origin.x + winSize.width *0.5));
+            
+            y = MIN(y, winSize.height*0.5 - (worldRect.origin.y + worldRect.size.height + (winSize.height*0.5)));
+            y = MAX(y, winSize.height*0.5 - (worldRect.origin.y - winSize.height*0.5));
+        }
+        
+        transPoint.x = x;
+        transPoint.y = y;
+
+
+        [gwNode setPosition:transPoint];
     }
 }
 
 -(CGPoint)transformToRestrictivePosition:(CGPoint)position
 {
+    LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+    float scale = [gwNode scale];
+
     CCNode* followed = [self followedNode];
     if(followed){
-
         position = [followed convertToWorldSpaceAR:CGPointZero];
+        gwNode.scale = 1.0f;
         position = [[[self scene] gameWorldNode] convertToNodeSpaceAR:position];
+        gwNode.scale = scale;
     }
 
     CGSize winSize = [(LHScene*)[self scene] contentSize];
@@ -160,6 +225,10 @@
     float x = position.x;
     float y = position.y;
 
+//    worldRect.origin.x *= scale;
+//    worldRect.origin.y *= scale;
+//    worldRect.size.width *= scale;
+//    worldRect.size.height *= scale;
 
     if(!CGRectEqualToRect(CGRectZero, worldRect) && [self restrictedToGameWorld]){
         
@@ -194,6 +263,18 @@
     [self setSceneView];
     
      wasUpdated = true;
+}
+
+-(void)zoomByValue:(float)value inSeconds:(float)second
+{
+    if(_active)
+    {
+        zooming = true;
+        reachZoomTime = second;
+        startZoomValue = [[[self scene] gameWorldNode] scale];
+        reachZoomValue = value + startZoomValue;
+        zoomStartTime = [NSDate timeIntervalSinceReferenceDate];
+    }
 }
 
 #pragma mark LHNodeProtocol Required

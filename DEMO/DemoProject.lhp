@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039531450718641281, 0}, {0.040753215551376343, 1}}</string>
+			<string>{{0.039482332766056061, 0}, {0.040751367807388306, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-iphone6</string>
 			<key>color</key>
-			<string>{{0.039531450718641281, 0}, {0.040753215551376343, 1}}</string>
+			<string>{{0.039482332766056061, 0}, {0.040751367807388306, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-iphone6plus</string>
 			<key>color</key>
-			<string>{{0.039531450718641281, 0}, {0.040753215551376343, 1}}</string>
+			<string>{{0.039482332766056061, 0}, {0.040751367807388306, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -74,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
+			<string>{{0.03773229569196701, 0}, {0.077398493885993958, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -88,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>-ipadhd</string>
 			<key>color</key>
-			<string>{{0.036627717316150665, 0}, {0.099990770220756531, 1}}</string>
+			<string>{{0.03773229569196701, 0}, {0.077398493885993958, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -225,6 +225,8 @@
 			</dict>
 			<key>publisherPluginName</key>
 			<string>Cocos2d</string>
+			<key>relativePublishLocation</key>
+			<string>PUBLISH_FOLDER</string>
 			<key>selectedPublishTypeName</key>
 			<string>Current Scene Only</string>
 		</dict>

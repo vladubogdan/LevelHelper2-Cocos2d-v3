@@ -35,44 +35,71 @@
     
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Zoom In"];
+        button.position = CGPointMake(100, self.contentSize.height - 200);
+        button.preferredSize = CGSizeMake(90, 90);
+        button.label.fontSize = 32;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(zoomIn)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Zoom Out"];
+        button.position = CGPointMake(100, self.contentSize.height - 300);
+        button.preferredSize = CGSizeMake(90, 90);
+        button.label.fontSize = 32;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(zoomOut)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Flip Gravity"];
+        button.position = CGPointMake(100, self.contentSize.height - 400);
+        button.preferredSize = CGSizeMake(90, 90);
+        button.label.fontSize = 32;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(flipGravity)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
     // done
 	return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
-    CGPoint curGravity = [self globalGravity];
-    if(didChangeX){
-        [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
-        didChangeX = false;
+-(void)zoomOut{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        [camera zoomByValue:-2 inSeconds:1];
     }
-    else{
-        didChangeX = true;
-        [self setGlobalGravity:CGPointMake(-curGravity.x, curGravity.y)];
-    }
-
-
-    //dont forget to call super
-    [super touchBegan:touch withEvent:event];
 }
-#else
--(void)mouseDown:(NSEvent *)theEvent{
 
-    CGPoint curGravity = [self globalGravity];
-    if(didChangeX){
-        [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
-        didChangeX = false;
+-(void)zoomIn{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        [camera zoomByValue:2 inSeconds:1];
     }
-    else{
-        didChangeX = true;
-        [self setGlobalGravity:CGPointMake(-curGravity.x, curGravity.y)];
-    }
-    
-    
-    //dont forget to call super
-    [super mouseDown:theEvent];
 }
-#endif
+
+-(void)flipGravity
+{
+    CGPoint curGravity = [self globalGravity];
+//    if(didChangeX){
+        [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
+//        didChangeX = false;
+//    }
+//    else{
+//        didChangeX = true;
+//        [self setGlobalGravity:CGPointMake(-curGravity.x, curGravity.y)];
+//    }
+}
+
 
 @end
