@@ -1073,8 +1073,16 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",				
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1124,8 +1132,16 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1157,6 +1173,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1177,6 +1197,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1214,8 +1238,16 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1259,8 +1291,16 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "LevelHelper2-Cocos2d-v3/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1309,7 +1349,15 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1360,7 +1408,15 @@
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
-					"\"${BUILT_PRODUCTS_DIR}/include/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Box2dControllers\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Nodes\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";
 				LIBRARY_SEARCH_PATHS = "";

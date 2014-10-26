@@ -410,21 +410,6 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		6E9FC77D19A4F2330046CDBD /* LevelHelper2-API */ = {
-			isa = PBXGroup;
-			children = (
-				6E9FC77E19A4F2330046CDBD /* Utilities */,
-			);
-			path = "LevelHelper2-API";
-			sourceTree = "<group>";
-		};
-		6E9FC77E19A4F2330046CDBD /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		6E9FC78319A4F2330046CDBD /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,7 +536,6 @@
 				6E9FC74B19A4F2330046CDBD /* Animations */,
 				6E9FC77219A4F2330046CDBD /* Box2dControllers */,
 				6E9FC77619A4F2330046CDBD /* Categories */,
-				6E9FC77D19A4F2330046CDBD /* LevelHelper2-API */,
 				6E9FC77F19A4F2330046CDBD /* LevelHelper2API.h */,
 				6E9FC78019A4F2330046CDBD /* LHConfig.h */,
 				6E9FC78119A4F2330046CDBD /* LHScene.h */,
@@ -657,7 +641,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
 		};
 		6EC5551419AB565100CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -670,7 +654,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
 		};
 		6EC5551519AB565900CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -683,7 +667,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
 		};
 /* End PBXShellScriptBuildPhase section */
 

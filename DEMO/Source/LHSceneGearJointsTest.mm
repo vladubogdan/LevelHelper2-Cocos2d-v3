@@ -9,8 +9,8 @@
 
 // Import the interfaces
 #import "LHSceneGearJointsTest.h"
-#import "LevelHelper2-API/LHConfig.h"
-#import "LevelHelper2-API/LHUtils.h"
+#import "LHConfig.h"
+#import "LHUtils.h"
 
 @implementation LHSceneGearJointsTest
 {

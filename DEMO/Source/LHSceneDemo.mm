@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "LHSceneDemo.h"
-#import "LevelHelper2-API/LHUtils.h"
+#import "LHUtils.h"
 
 #import "LHSceneIntroduction.h"
 #import "LHSceneCameraTest.h"

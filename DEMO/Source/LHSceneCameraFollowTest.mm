@@ -26,7 +26,7 @@
     if (!self) return(nil);
     
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick to change the gravity direction."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick to look at a different node.\nUse left buttons for more actions."
                                          fontName:@"Arial"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
@@ -68,14 +68,36 @@
         [[self uiNode]  addChild:button];
     }
     
-    
     {
-        CCButton *button = [CCButton buttonWithTitle:@"Flip Gravity"];
+        CCButton *button = [CCButton buttonWithTitle:@"Reset Zoom"];
         button.position = CGPointMake(100, self.contentSize.height - 400);
         button.preferredSize = CGSizeMake(90, 90);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(resetZoom)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Flip Gravity"];
+        button.position = CGPointMake(100, self.contentSize.height - 500);
+        button.preferredSize = CGSizeMake(90, 90);
+        button.label.fontSize = 32;
+        [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(flipGravity)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Reset Look At"];
+        button.position = CGPointMake(100, self.contentSize.height - 600);
+        button.preferredSize = CGSizeMake(90, 90);
+        button.label.fontSize = 32;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(resetLookAt)];
         button.exclusiveTouch = YES;
         [[self uiNode]  addChild:button];
     }
@@ -111,6 +133,13 @@
     }
 }
 
+-(void)resetZoom{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        [camera zoomToValue:1 inSeconds:1];
+    }
+}
+
 -(void)flipGravity
 {
     CGPoint curGravity = [self globalGravity];
@@ -122,6 +151,59 @@
 //        didChangeX = true;
 //        [self setGlobalGravity:CGPointMake(-curGravity.x, curGravity.y)];
 //    }
+}
+
+-(void)resetLookAt
+{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        if([camera isLookingAt])
+        {
+            [camera resetLookAtInSeconds:4];
+            [camera zoomByValue:-0.5 inSeconds:4];
+        }
+    }
+}
+
+
+#ifdef __CC_PLATFORM_IOS
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    
+    CGPoint touchLocation = [touch locationInNode:self];
+    CGPoint touchLocationInGWCoordinates = [[self gameWorldNode] convertToNodeSpaceAR:touchLocation];
+    
+    [self doLookAtWithGameWorldNodeCoordinate:touchLocationInGWCoordinates];
+    
+    //dont forget to call super
+    [super touchBegan:touch withEvent:event];
+}
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint touchLocation = [theEvent locationInNode:self];
+    CGPoint touchLocationInGWCoordinates = [[self gameWorldNode] convertToNodeSpaceAR:touchLocation];
+    
+    [self doLookAtWithGameWorldNodeCoordinate:touchLocationInGWCoordinates];
+    
+    //dont forget to call super
+    [super mouseDown:theEvent];
+}
+#endif
+
+-(void)doLookAtWithGameWorldNodeCoordinate:(CGPoint)touchLocationInGWCoordinates
+{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        if(false == [camera isLookingAt])
+        {
+            //        [camera lookAtPosition:touchLocationInGWCoordinates inSeconds:4];
+            
+            CCNode* lookAtNode = [[self scene] childNodeWithName:@"lookAtTire"];
+            [camera lookAtNode:lookAtNode inSeconds:4];
+            
+            [camera zoomByValue:0.5 inSeconds:4];
+        }
+    }
 }
 
 

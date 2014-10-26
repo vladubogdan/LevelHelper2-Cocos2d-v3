@@ -34,9 +34,19 @@
     float reachZoomValue;
     float reachZoomTime;
     float minZoomValue;
-    
     NSTimeInterval zoomStartTime;
     
+    BOOL lookingAt;
+    BOOL resetingLookAt;
+    CGPoint lookAtPosition;
+    __weak CCNode* _lookAtNode;
+    
+    CGPoint startLookAtPosition;
+    float lookAtTime;
+    NSTimeInterval lookAtStartTime;
+
+    CGPoint _centerPosition;//camera pos or followed node position (used by resetLookAt)
+    CGPoint _viewPosition;//actual camera view position
     
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
@@ -48,6 +58,8 @@
 
 -(void)dealloc{
     _followedNode = nil;
+    _lookAtNode = nil;
+    
     LH_SAFE_RELEASE(_followedNodeUUID);
 
     LH_SAFE_RELEASE(_nodeProtocolImp);
@@ -201,19 +213,78 @@
 
     CGPoint transPoint = position;
     
+    _viewPosition = transPoint;
+    _centerPosition = transPoint;
+    
     CGSize winSize = [(LHScene*)[self scene] contentSize];
+    CGPoint halfWinSize = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
 
     CCNode* followed = [self followedNode];
     if(followed){
-        
-        CGPoint halfWinSize = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
-        
+
         CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
         CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
+        
+        _viewPosition = gwNodePos;
+        _centerPosition = transPoint;
         
         CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
         transPoint = ccpSub(halfWinSize, scaledMidpoint);
     }
+    
+    
+    
+    if(lookingAt)
+    {
+        NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
+        float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
+
+        if(_lookAtNode)
+        {
+            LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+            CGPoint worldPoint = [_lookAtNode convertToWorldSpaceAR:CGPointZero];
+            lookAtPosition = [gwNode convertToNodeSpaceAR:worldPoint];
+        }
+        
+        float newX = startLookAtPosition.x + (lookAtPosition.x - startLookAtPosition.x)*lookAtUnit;
+        float newY = startLookAtPosition.y + (lookAtPosition.y - startLookAtPosition.y)*lookAtUnit;
+        CGPoint gwNodePos = CGPointMake(newX, newY);
+        
+        if(lookAtUnit >= 1.0f){
+            gwNodePos = lookAtPosition;
+        }
+        
+        _viewPosition = gwNodePos;
+        
+        CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
+        transPoint = ccpSub(halfWinSize, scaledMidpoint);
+        
+    }
+    
+    if(resetingLookAt)
+    {
+        NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
+        float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
+        
+        float newX = startLookAtPosition.x + (_centerPosition.x - startLookAtPosition.x)*lookAtUnit;
+        float newY = startLookAtPosition.y + (_centerPosition.y - startLookAtPosition.y)*lookAtUnit;
+        CGPoint gwNodePos = CGPointMake(newX, newY);
+        
+        if(lookAtUnit >= 1.0f){
+            gwNodePos = lookAtPosition;
+            resetingLookAt = false;
+            lookingAt = false;
+            _lookAtNode = nil;
+        }
+        
+        _viewPosition = gwNodePos;
+        
+        CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
+        transPoint = ccpSub(halfWinSize, scaledMidpoint);
+    }
+    
+    
+    
     
     float x = transPoint.x;
     float y = transPoint.y;
@@ -290,6 +361,71 @@
 -(float)zoomValue
 {
     return [[[self scene] gameWorldNode] scale];
+}
+
+-(void)lookAtPosition:(CGPoint)gwPosition inSeconds:(float)seconds
+{
+    if(lookingAt == true){
+        NSLog(@"Camera is already looking somewhere. Please first reset lookAt by calling resetLookAt");
+        return;
+    }
+    
+    lookAtPosition = gwPosition;
+    startLookAtPosition = _viewPosition;
+    
+    lookAtStartTime = [NSDate timeIntervalSinceReferenceDate];
+    lookAtTime = seconds;
+    lookingAt = true;
+}
+
+-(void)lookAtNode:(CCNode*)node inSeconds:(float)seconds
+{
+    if(lookingAt == true){
+        NSLog(@"Camera is already looking somewhere. Please first reset lookAt by calling resetLookAt");
+        return;
+    }
+
+    _lookAtNode = node;
+    
+    startLookAtPosition = _viewPosition;
+    
+    lookAtStartTime = [NSDate timeIntervalSinceReferenceDate];
+    lookAtTime = seconds;
+    lookingAt = true;
+}
+
+-(void)resetLookAt
+{
+    [self resetLookAtInSeconds:0];
+}
+
+-(void)resetLookAtInSeconds:(float)seconds
+{
+    if(lookingAt != true){
+        NSLog(@"[ lookAtPosition: inSeconds:] must be used first. Cannot reset camera look.");
+        return;
+    }
+    
+    startLookAtPosition = lookAtPosition;
+    
+    if(_lookAtNode)
+    {
+        LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+        CGPoint worldPoint = [_lookAtNode convertToWorldSpaceAR:CGPointZero];
+        startLookAtPosition = [gwNode convertToNodeSpaceAR:worldPoint];
+        _lookAtNode = nil;
+    }
+    
+    lookAtPosition = _centerPosition;
+
+    lookAtStartTime = [NSDate timeIntervalSinceReferenceDate];
+    lookAtTime = seconds;
+    lookingAt = true;
+    resetingLookAt = true;
+}
+
+-(BOOL)isLookingAt{
+    return lookingAt;
 }
 
 #pragma mark LHNodeProtocol Required
