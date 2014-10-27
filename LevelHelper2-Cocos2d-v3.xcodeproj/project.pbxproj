@@ -1046,8 +1046,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1073,7 +1073,7 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
@@ -1082,7 +1082,7 @@
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Protocols\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Utilities\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationProperties\"",
-					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",				
+					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations/AnimationFrames\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1106,8 +1106,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1132,7 +1132,7 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
@@ -1238,7 +1238,7 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",
@@ -1291,7 +1291,7 @@
 					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
-					"\"$(SRCROOT)/cocos2d/CCBReader\"",					
+					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Categories\"",

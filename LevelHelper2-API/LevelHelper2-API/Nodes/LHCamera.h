@@ -62,6 +62,8 @@
  */
 -(void)setPosition:(CGPoint)position;
 
+#pragma mark - ZOOMING
+
 /**
  Set the camera zoom level by adding the value to the current zoom level.
  Only works if the camera is active.
@@ -82,6 +84,8 @@
  Get the current camera zoom value.
  */
 -(float)zoomValue;
+
+#pragma mark - LOOK AT
 
 /**
  Makes the camera to look at a specific position by moving from the current or followed object position to this new position in a period of time.
@@ -117,5 +121,17 @@
  Returns whether or not this camera is currently looking at something. A boolean value.;
  */
 -(BOOL)isLookingAt;
+
+#pragma mark - PINCH ZOOM
+/**
+ Sets the camera to zoom on pinch gesture on iOS or scroll wheel on Mac OS when active.
+ The zoom will be centered on the followed node or on the center of the pinch.
+ */
+-(void)setUsePinchOrScrollWheelToZoom:(BOOL)value;
+
+/**
+ Returns whether or not this camera is zooming on pinch gesture on iOS or on scroll wheel on Mac OS.
+ */
+-(BOOL)usePinchOrScrollWheelToZoom;
 
 @end

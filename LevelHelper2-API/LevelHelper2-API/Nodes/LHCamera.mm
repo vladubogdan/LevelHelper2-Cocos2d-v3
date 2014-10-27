@@ -44,6 +44,8 @@
     CGPoint startLookAtPosition;
     float lookAtTime;
     NSTimeInterval lookAtStartTime;
+    
+    BOOL _zoomsOnPinch;
 
     CGPoint _centerPosition;//camera pos or followed node position (used by resetLookAt)
     CGPoint _viewPosition;//actual camera view position
@@ -126,6 +128,9 @@
                 }
             }
         }
+        
+        _zoomsOnPinch = true;
+        
     }
     
     return self;
@@ -183,6 +188,7 @@
     if(_active)
     {
         CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
+
         LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
         
         if(zooming)
@@ -322,7 +328,7 @@
         [self setPosition:pt];
     }
     [self setSceneView];
-    
+
      wasUpdated = true;
 }
 
@@ -427,6 +433,38 @@
 -(BOOL)isLookingAt{
     return lookingAt;
 }
+
+-(void)setUsePinchOrScrollWheelToZoom:(BOOL)value{
+    _zoomsOnPinch = value;
+}
+
+-(BOOL)usePinchOrScrollWheelToZoom{
+    return _zoomsOnPinch;
+}
+
+-(void)pinchZoomWithScaleDelta:(float)delta center:(CGPoint)scaleCenter
+{
+    LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+    
+    float newScale = [gwNode scale] + delta;
+
+    if(newScale < minZoomValue){
+        newScale = minZoomValue;
+    }
+    
+    scaleCenter = [gwNode convertToNodeSpaceAR:scaleCenter];
+    
+    CGPoint oldCenterPoint = ccp(scaleCenter.x * gwNode.scale, scaleCenter.y * gwNode.scale);
+    gwNode.scale = newScale;
+    CGPoint newCenterPoint = ccp(scaleCenter.x * gwNode.scale, scaleCenter.y * gwNode.scale);
+    
+    CGPoint centerPointDelta = ccpSub(oldCenterPoint, newCenterPoint);
+    self.position = ccpAdd(self.position, centerPointDelta);
+    
+    [self visit];
+}
+
+
 
 #pragma mark LHNodeProtocol Required
 

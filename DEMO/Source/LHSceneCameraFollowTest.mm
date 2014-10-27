@@ -26,7 +26,7 @@
     if (!self) return(nil);
     
 
-    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick to look at a different node.\nUse left buttons for more actions."
+    CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick a position to look at it.\nUse left buttons for more actions."
                                          fontName:@"Arial"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
@@ -48,8 +48,9 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Zoom In"];
-        button.position = CGPointMake(100, self.contentSize.height - 200);
-        button.preferredSize = CGSizeMake(90, 90);
+        button.position = CGPointMake(10, self.contentSize.height - 200);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(zoomIn)];
@@ -59,8 +60,9 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Zoom Out"];
-        button.position = CGPointMake(100, self.contentSize.height - 300);
-        button.preferredSize = CGSizeMake(90, 90);
+        button.position = CGPointMake(10, self.contentSize.height - 250);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(zoomOut)];
@@ -70,8 +72,9 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Reset Zoom"];
-        button.position = CGPointMake(100, self.contentSize.height - 400);
-        button.preferredSize = CGSizeMake(90, 90);
+        button.position = CGPointMake(10, self.contentSize.height - 300);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(resetZoom)];
@@ -82,8 +85,9 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Flip Gravity"];
-        button.position = CGPointMake(100, self.contentSize.height - 500);
-        button.preferredSize = CGSizeMake(90, 90);
+        button.position = CGPointMake(10, self.contentSize.height - 350);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(flipGravity)];
@@ -93,14 +97,43 @@
     
     {
         CCButton *button = [CCButton buttonWithTitle:@"Reset Look At"];
-        button.position = CGPointMake(100, self.contentSize.height - 600);
-        button.preferredSize = CGSizeMake(90, 90);
+        button.position = CGPointMake(10, self.contentSize.height - 400);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
         button.label.fontSize = 32;
         [button setColor:[CCColor magentaColor]];
         [button setTarget:self selector:@selector(resetLookAt)];
         button.exclusiveTouch = YES;
         [[self uiNode]  addChild:button];
     }
+
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Toggle Follow Wheel"];
+        button.position = CGPointMake(10, self.contentSize.height - 450);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
+        button.label.fontSize = 32;
+        button.label.horizontalAlignment = CCTextAlignmentLeft;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(toggleFollowNode:)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+    
+    {
+        CCButton *button = [CCButton buttonWithTitle:@"Look At Another Node"];
+        button.position = CGPointMake(10, self.contentSize.height - 500);
+        button.anchorPoint = CGPointMake(0, 0);
+        button.preferredSize = CGSizeMake(120, 50);
+        button.label.fontSize = 32;
+        button.label.horizontalAlignment = CCTextAlignmentLeft;
+        [button setColor:[CCColor magentaColor]];
+        [button setTarget:self selector:@selector(lookAtAnotherNode:)];
+        button.exclusiveTouch = YES;
+        [[self uiNode]  addChild:button];
+    }
+
+    
     
     // done
 	return self;
@@ -113,7 +146,14 @@
         //this are equivalent way of getting the current camera zoom level
         //[ttfZoomLevel setString:[NSString stringWithFormat:@"Zoom %f", [[self gameWorldNode] scale]]];
         //or
+        
+        
         [ttfZoomLevel setString:[NSString stringWithFormat:@"Zoom %f", [camera zoomValue]]];
+        
+        if([camera isLookingAt])
+        {
+            [ttfZoomLevel setString:[NSString stringWithFormat:@"Zoom %f\nIs Looking At Something!", [camera zoomValue]]];
+        }
     }
 }
 
@@ -153,6 +193,24 @@
 //    }
 }
 
+-(IBAction)toggleFollowNode:(CCButton*)sender
+{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        if(nil != [camera followedNode])
+        {
+            [camera followNode:nil];
+            [sender setTitle:@"Toggle Follow Node (not following)"];
+        }
+        else
+        {
+            LHSprite* carTyre = (LHSprite*)[self childNodeWithName:@"carTyre"];
+            [camera followNode:carTyre];
+            [sender setTitle:@"Toggle Follow Node (following sprite)"];
+        }
+    }
+}
+
 -(void)resetLookAt
 {
     LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
@@ -165,6 +223,19 @@
     }
 }
 
+-(void)lookAtAnotherNode:(CCButton*)sender
+{
+    LHCamera* camera = (LHCamera*)[self childNodeWithName:@"UntitledCamera"];
+    if(camera){
+        if(false == [camera isLookingAt])
+        {
+            CCNode* lookAtNode = [[self scene] childNodeWithName:@"lookAtTire"];
+            [camera lookAtNode:lookAtNode inSeconds:4];
+            
+            [camera zoomByValue:0.5 inSeconds:4];
+        }
+    }
+}
 
 #ifdef __CC_PLATFORM_IOS
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
@@ -196,11 +267,7 @@
     if(camera){
         if(false == [camera isLookingAt])
         {
-            //        [camera lookAtPosition:touchLocationInGWCoordinates inSeconds:4];
-            
-            CCNode* lookAtNode = [[self scene] childNodeWithName:@"lookAtTire"];
-            [camera lookAtNode:lookAtNode inSeconds:4];
-            
+            [camera lookAtPosition:touchLocationInGWCoordinates inSeconds:4];
             [camera zoomByValue:0.5 inSeconds:4];
         }
     }

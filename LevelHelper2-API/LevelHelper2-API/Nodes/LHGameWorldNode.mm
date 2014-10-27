@@ -396,7 +396,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
                 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
-        
+        [self setAnchorPoint:ccp(0.0f, 0.0f)]; //very important for scaling
     }
     return self;
 }
