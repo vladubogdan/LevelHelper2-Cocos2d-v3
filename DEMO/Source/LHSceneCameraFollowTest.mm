@@ -17,6 +17,7 @@
 }
 + (LHSceneDemo *)scene{
     return [[self alloc] initWithContentOfFile:@"PUBLISH_FOLDER/cameraFollowDemo.lhplist"];
+//    return [[self alloc] initWithContentOfFile:@"PUBLISH_FOLDER/objAnimWithCameraBug.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile

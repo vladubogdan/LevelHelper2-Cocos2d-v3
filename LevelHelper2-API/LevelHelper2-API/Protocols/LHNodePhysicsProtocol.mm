@@ -520,13 +520,14 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
-        worldPos = [[(LHScene*)[_node scene] gameWorldNode] convertToNodeSpace:worldPos];
-        CGPoint gWPos = [[(LHScene*)[_node scene] gameWorldNode] position];
+        LHGameWorldNode* gWNode = [(LHScene*)[_node scene] gameWorldNode];
         
-        worldPos = CGPointMake(worldPos.x - gWPos.x,
-                               worldPos.y - gWPos.y);
-        
+        NSPoint worldPos = [_node position];
+        if(gWNode != [_node parent]){
+            worldPos = [[_node parent] convertToWorldSpace:worldPos];
+            worldPos = [gWNode convertToNodeSpace:worldPos];
+        }
+                
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node globalAngleFromLocalAngle:[_node rotation]]));
         _body->SetAwake(true);
