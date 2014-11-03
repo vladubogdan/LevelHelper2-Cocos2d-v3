@@ -129,7 +129,8 @@
             }
         }
         
-        _zoomsOnPinch = true;
+        _zoomsOnPinch = [dict boolForKey:@"zoomOnPinchOrScroll"];
+//        float zoomVal = [dict boolForKey:@"zoomValue"];
         
     }
     
