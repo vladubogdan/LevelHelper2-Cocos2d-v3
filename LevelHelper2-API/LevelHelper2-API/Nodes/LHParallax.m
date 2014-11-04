@@ -25,6 +25,11 @@
 -(BOOL)wasUpdated;
 @end
 
+@interface LHParallaxLayer (LH_PARALLAX_DELTA_MOVEMENT)
+-(CGPoint)initialPosition;
+@end
+
+
 @implementation LHParallax
 {
     CGPoint lastPosition;
@@ -34,6 +39,7 @@
     
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
+    CGPoint initialPosition;
 }
 
 -(void)dealloc{
@@ -98,10 +104,7 @@
     LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
     
     float oldScale = gwNode.scale;
-    CGPoint oldPos = [gwNode position];
     gwNode.scale = 1.0f;
-    gwNode.position = CGPointZero;
-    
     
     CGPoint parallaxPos = [self position];
     CCNode* followed = [self followedNode];
@@ -112,64 +115,54 @@
         }
         
         CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
+        
+        if([followed isKindOfClass:[LHCamera class]]){
+
+            [(LHCamera*)followed setZoomValue:1];
+            
+            CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
+            worldPoint = CGPointMake(winSize.width*0.5, winSize.height*0.5);
+        }
+        
         parallaxPos = [gwNode convertToNodeSpaceAR:worldPoint];
-
-
-//        parallaxPos = [followed position];
-//        CGPoint anchor = [followed anchorPoint];
-//        CGSize content = [followed contentSize];
-
-//        parallaxPos.x /= gwScale;
-//        parallaxPos.y /= gwScale;
-//        content.width *=gwScale;
-//        content.height*=gwScale;
-        
-//        parallaxPos.x -= content.width*(anchor.x -0.5);
-//        parallaxPos.y -= content.height*(anchor.y -0.5);
-//
-//        CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
-//        
-//        parallaxPos.x = parallaxPos.x - winSize.width*0.5;
-//        parallaxPos.y = parallaxPos.y - winSize.height*0.5;
-        
     }
     
-    if(CGPointEqualToPoint(lastPosition, CGPointZero)){
-        lastPosition = parallaxPos;
+    if(CGPointEqualToPoint(initialPosition, CGPointZero)){
+        initialPosition = parallaxPos;
     }
-    
     
     
     if(!CGPointEqualToPoint(lastPosition, parallaxPos))
     {
-        CGPoint deltaPos = CGPointMake(parallaxPos.x - lastPosition.x,
-                                       parallaxPos.y - lastPosition.y);
-
+        CGPoint deltaPos = CGPointMake(initialPosition.x - parallaxPos.x,
+                                       initialPosition.y - parallaxPos.y);
+        
         for(LHParallaxLayer* nd in [self children])
         {
             if([nd isKindOfClass:[LHParallaxLayer class]])
             {
-
                 CGPoint curPos = [nd position];
-    
+                
+                curPos = [nd initialPosition];
+                
                 CGPoint pt = CGPointMake(curPos.x - deltaPos.x*(nd.xRatio),
                                          curPos.y - deltaPos.y*(nd.yRatio));
                 [nd setPosition:pt];
             }
         }
     }
+    
     lastPosition = parallaxPos;
     
     gwNode.scale = oldScale;
-    gwNode.position = oldPos;
+    if(followed&& [followed isKindOfClass:[LHCamera class]]){
+        [(LHCamera*)followed setZoomValue:oldScale];
+    }
 }
 
--(void)visit
-{
+-(void)visit{
     [_animationProtocolImp visit];
-    
     [self transformLayerPositions];
-    
     [super visit];
 }
 

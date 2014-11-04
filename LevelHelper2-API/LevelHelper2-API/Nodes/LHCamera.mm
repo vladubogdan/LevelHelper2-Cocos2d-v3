@@ -129,9 +129,8 @@
             }
         }
         
-        _zoomsOnPinch = [dict boolForKey:@"zoomOnPinchOrScroll"];
+        _zoomsOnPinch = [dict boolForKey:@"zoomOnPinchOrScroll"];    
 //        float zoomVal = [dict boolForKey:@"zoomValue"];
-        
     }
     
     return self;
@@ -369,6 +368,15 @@
 {
     return [[[self scene] gameWorldNode] scale];
 }
+
+-(void)setZoomValue:(float)val
+{
+    CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
+    LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
+    [[(LHScene*)[self scene] gameWorldNode] setScale:val];
+    [gwNode setPosition:transPoint];
+}
+
 
 -(void)lookAtPosition:(CGPoint)gwPosition inSeconds:(float)seconds
 {

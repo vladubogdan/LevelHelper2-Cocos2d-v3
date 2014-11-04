@@ -85,6 +85,11 @@
  */
 -(float)zoomValue;
 
+/**
+ Set the camera zoom value without any delay.
+ */
+-(void)setZoomValue:(float)val;
+
 #pragma mark - LOOK AT
 
 /**
