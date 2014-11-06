@@ -46,7 +46,7 @@
 -(void)followNode:(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)node;
 
 /**
- Returns wheter or not this camera is restricted to the game world rectangle.
+ Returns whether or not this camera is restricted to the game world rectangle.
  */
 -(BOOL)restrictedToGameWorld;
 
@@ -61,6 +61,69 @@
  @param position The new camera position.
  */
 -(void)setPosition:(CGPoint)position;
+
+
+/**
+ Set the camera view offset unit. This value is added to the camera position as an offset.
+ @param unit The new camera offset unit. This value is multipled with the screen dimensions and added to the camera position.
+ */
+-(void)setOffsetUnit:(CGPoint)unit;
+
+/**
+ Returns the camera unit offset.
+ */
+-(CGPoint)offsetUnit;
+
+/**
+ Set the important camera view unit. This value is multipled with the screen dimensions. The area is based on the center.
+ Based on this area the camera position will be calculated based on the following node movement.
+ This value is ignored when camera is not following a node.
+ @param unit The new camera important area unit. This value is multipled with the screen dimensions.
+ */
+-(void)setImportantAreaUnit:(NSSize)unit;
+
+/**
+ Returns the camera important area unit.
+ */
+-(NSSize)importantAreaUnit;
+
+/**
+ Set whether or not the camera should move on x axis.
+ This value is ignored when camera is not following a node.
+ @param val A boolean value specifying if camera should move on x axis.
+ */
+-(void)setLockX:(BOOL)val;
+
+/**
+ Returns the camera x axis movement locking state.
+ */
+-(BOOL)lockX;
+
+/**
+ Set whether or not the camera should move on y axis.
+ This value is ignored when camera is not following a node.
+ @param val A boolean value specifying if camera should move on y axis.
+ */
+-(void)setLockY:(BOOL)val;
+
+/**
+ Returns the camera y axis movement locking state.
+ */
+-(BOOL)lockY;
+
+/**
+ When an important area is set, and the following node has exist it or has changed direction,
+ smooth movement will make the camera reach its new position in a non-snapping mode.
+ This value is ignored when camera is not following a node.
+ @param val A boolean value specifying if camera should reach its important area smoothly.
+ */
+-(void)setSmoothMovement:(BOOL)val;
+
+/**
+ Returns if the camera is trying to reach the important area smoothly.
+ */
+-(BOOL)smoothMovement;
+
 
 #pragma mark - ZOOMING
 

@@ -52,6 +52,25 @@
     
     NSString* _followedNodeUUID;
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
+    
+    
+    CGPoint previousFollowedPosition;
+    CGPoint previousDirectionVector;
+    
+    CGPoint directionalOffset;
+    CGPoint directionalOffsetToReach;
+    float directionMultiplierX;
+    float directionMultiplierY;
+    
+    BOOL reachingOffsetX;
+    BOOL reachingOffsetY;
+    
+    BOOL lockX;
+    BOOL lockY;
+    BOOL smoothMovement;
+    CGSize importantArea;
+    
+    CGPoint offset;//user offset
 }
 
 -(BOOL)wasUpdated{
@@ -129,8 +148,19 @@
             }
         }
         
-        _zoomsOnPinch = [dict boolForKey:@"zoomOnPinchOrScroll"];    
-//        float zoomVal = [dict boolForKey:@"zoomValue"];
+        if([dict objectForKey:@"offset"])//all this properties were added at the same time
+        {
+            _zoomsOnPinch = [dict boolForKey:@"zoomOnPinchOrScroll"];
+            
+            lockX = [dict boolForKey:@"lockX"];
+            lockY = [dict boolForKey:@"lockY"];
+            importantArea = [dict sizeForKey:@"importantArea"];
+            smoothMovement = [dict boolForKey:@"smoothMovement"];
+            offset = [dict pointForKey:@"offset"];
+            
+            float zoomVal = [dict floatForKey:@"zoomValue"];
+            [self setZoomValue:zoomVal];
+        }
     }
     
     return self;
@@ -154,7 +184,6 @@
 
 -(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)followedNode{
     
-    
     if(_followedNodeUUID && _followedNode == nil){
         _followedNode = (CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(LHScene*)[self scene] childNodeWithUUID:_followedNodeUUID];
         if(_followedNode){
@@ -175,9 +204,57 @@
     _restricted = val;
 }
 
+-(void)setOffsetUnit:(CGPoint)val{
+    offset = val;
+}
+
+-(CGPoint)offsetUnit{
+    return offset;
+}
+
+-(void)setImportantAreaUnit:(NSSize)val;{
+    importantArea = val;
+}
+-(NSSize)importantAreaUnit{
+    return importantArea;
+}
+
+-(void)setLockX:(BOOL)val{
+    lockX = val;
+}
+-(BOOL)lockX{
+    return lockX;
+}
+
+-(void)setLockY:(BOOL)val{
+    lockY = val;
+}
+-(BOOL)lockY{
+    return lockY;
+}
+
+-(BOOL)smoothMovement{
+    return smoothMovement;
+}
+-(void)setSmoothMovement:(BOOL)val{
+    smoothMovement = val;
+}
+
+
 -(void)setPosition:(CGPoint)position{
     if(_active){
-        [super setPosition:[self transformToRestrictivePosition:position]];
+        
+        CGPoint transPoint = [self transformToRestrictivePosition:position];
+        
+        if(lockX){
+            transPoint.x = position.x;
+        }
+        if(lockY){
+            transPoint.y = position.y;
+        }
+        
+        [super setPosition:transPoint];
+        
     }
     else{
         [super setPosition:position];
@@ -235,7 +312,20 @@
         _centerPosition = transPoint;
         
         CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
-        transPoint = ccpSub(halfWinSize, scaledMidpoint);
+        CGPoint followedPos = ccpSub(halfWinSize, scaledMidpoint);
+        
+        
+        if(!lockX){
+            transPoint.x = followedPos.x;
+            transPoint.x -= directionalOffset.x;
+        }
+        if(!lockY){
+            transPoint.y = followedPos.y;
+            transPoint.y -= directionalOffset.y;
+        }
+        
+        transPoint.x += offset.x*winSize.width;
+        transPoint.y += offset.y*winSize.height;
     }
     
     
@@ -321,6 +411,125 @@
 {
     if(![self isActive])return;
  
+    CCNode* followed = [self followedNode];
+    if(followed){
+        
+        CGSize winSize = [(LHScene*)[self scene] contentSize];
+        
+        CGPoint curPosition = [followed position];
+        if(CGPointEqualToPoint(previousFollowedPosition, NSZeroPoint)){
+            previousFollowedPosition = curPosition;
+            
+            directionalOffset.x = -importantArea.width * winSize.width * 0.5;
+            directionalOffset.y = importantArea.height * winSize.height * 0.5;
+        }
+        
+        if(!CGPointEqualToPoint(curPosition, previousFollowedPosition))
+        {
+            CGPoint direction = ccpSub(curPosition,previousFollowedPosition);
+            
+            if(NSEqualPoints(previousDirectionVector, NSZeroPoint)){
+                previousDirectionVector = direction;
+            }
+            
+            float followedDeltaX = curPosition.x - previousFollowedPosition.x;
+            float followedDeltaY = curPosition.y - previousFollowedPosition.y;
+            
+            float filteringFactor = 0.50;
+            
+            
+            
+            if(reachingOffsetX)
+            {
+                float lastOffset = directionalOffset.x;
+                
+                directionalOffset.x += followedDeltaX;
+                
+                if(smoothMovement)
+                    directionalOffset.x = directionalOffset.x * filteringFactor + lastOffset * (1.0 - filteringFactor);
+                
+                if(directionMultiplierX > 0)
+                {
+                    if(directionalOffset.x  < directionalOffsetToReach.x)
+                    {
+                        directionalOffset.x = directionalOffsetToReach.x;
+                        reachingOffsetX = false;
+                    }
+                }
+                else
+                {
+                    if(directionalOffset.x > directionalOffsetToReach.x)
+                    {
+                        directionalOffset.x = directionalOffsetToReach.x;
+                        reachingOffsetX = false;
+                    }
+                }
+            }
+            
+            if(direction.x/previousDirectionVector.x <= 0)
+            {
+                if(direction.x >= 0){
+                    directionMultiplierX = -1.0f;
+                }
+                else{
+                    directionMultiplierX = 1.0f;
+                }
+                
+                directionalOffsetToReach.x = -importantArea.width * winSize.width * 0.5 * directionMultiplierX;
+                reachingOffsetX = true;
+            }
+            
+            
+            if(reachingOffsetY)
+            {
+                float lastOffset = directionalOffset.y;
+                directionalOffset.y += followedDeltaY;
+                
+                if(smoothMovement)
+                    directionalOffset.y = directionalOffset.y * filteringFactor + lastOffset * (1.0 - filteringFactor);
+                
+                if(directionMultiplierY > 0)
+                {
+                    if(directionalOffset.y  > directionalOffsetToReach.y)
+                    {
+                        directionalOffset.y = directionalOffsetToReach.y;
+                        reachingOffsetY = false;
+                    }
+                }
+                else
+                {
+                    if(directionalOffset.y < directionalOffsetToReach.y)
+                    {
+                        directionalOffset.y = directionalOffsetToReach.y;
+                        reachingOffsetY = false;
+                    }
+                }
+            }
+            
+            
+            
+            if(direction.y/previousDirectionVector.y <= 0)
+            {
+                if(direction.y >= 0){
+                    directionMultiplierY = 1.0f;
+                }
+                else{
+                    directionMultiplierY = -1.0f;
+                }
+                
+                directionalOffsetToReach.y = importantArea.height * winSize.height * 0.5 * directionMultiplierY;
+                
+                reachingOffsetY = true;
+            }
+            
+            previousDirectionVector = direction;
+        }
+        
+        
+        previousFollowedPosition = curPosition;
+    }
+    
+    
     [_animationProtocolImp visit];
 
     if([self followedNode]){

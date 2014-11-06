@@ -50,6 +50,7 @@
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
+    bool loadingInProgress;
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
     LHNodeProtocolImpl* _nodeProtocolImp;
@@ -185,6 +186,8 @@
 
     if (self = [super init])
     {
+        loadingInProgress = true;
+        
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
         
         designResolutionSize = designResolution;
@@ -244,6 +247,7 @@
         //call this to update the views when using camera/parallax
         [self visit];
         
+        loadingInProgress = false;
     }
     return self;
 }
@@ -253,6 +257,9 @@
     [super onEnter];
 }
 
+-(BOOL)loadingInProgress{
+    return loadingInProgress;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
