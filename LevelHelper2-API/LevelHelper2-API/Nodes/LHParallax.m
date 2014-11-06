@@ -141,12 +141,10 @@
         {
             if([nd isKindOfClass:[LHParallaxLayer class]])
             {
-                CGPoint curPos = [nd position];
+                CGPoint initialPos = [nd initialPosition];
                 
-                curPos = [nd initialPosition];
-                
-                CGPoint pt = CGPointMake(curPos.x - deltaPos.x*(nd.xRatio),
-                                         curPos.y - deltaPos.y*(nd.yRatio));
+                CGPoint pt = CGPointMake(initialPos.x - deltaPos.x*(nd.xRatio),
+                                         initialPos.y - deltaPos.y*(nd.yRatio));
                 [nd setPosition:pt];
             }
         }

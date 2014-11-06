@@ -278,10 +278,10 @@
                 reachZoomValue = minZoomValue;
             }
             
-            [[(LHScene*)[self scene] gameWorldNode] setScale:deltaZoom];
+            [gwNode setScale:deltaZoom];
             
             if(zoomUnit >= 1.0f){
-                [[(LHScene*)[self scene] gameWorldNode] setScale:reachZoomValue];
+                [gwNode setScale:reachZoomValue];
                 zooming = false;
             }
         }
@@ -329,15 +329,13 @@
     }
     
     
+    NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
+    float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
     
     if(lookingAt)
     {
-        NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
-        float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
-
         if(_lookAtNode)
         {
-            LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
             CGPoint worldPoint = [_lookAtNode convertToWorldSpaceAR:CGPointZero];
             lookAtPosition = [gwNode convertToNodeSpaceAR:worldPoint];
         }
@@ -359,9 +357,6 @@
     
     if(resetingLookAt)
     {
-        NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
-        float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
-        
         float newX = startLookAtPosition.x + (_centerPosition.x - startLookAtPosition.x)*lookAtUnit;
         float newY = startLookAtPosition.y + (_centerPosition.y - startLookAtPosition.y)*lookAtUnit;
         CGPoint gwNodePos = CGPointMake(newX, newY);
@@ -466,7 +461,7 @@
                 }
             }
             
-            if(direction.x/previousDirectionVector.x <= 0)
+            if(direction.x/previousDirectionVector.x <= 0 || (direction.x == 0 && previousDirectionVector.x == 0))
             {
                 if(direction.x >= 0){
                     directionMultiplierX = -1.0f;
@@ -508,7 +503,7 @@
             
             
             
-            if(direction.y/previousDirectionVector.y <= 0)
+            if(direction.y/previousDirectionVector.y <= 0 || (direction.y == 0 && previousDirectionVector.y == 0))
             {
                 if(direction.y >= 0){
                     directionMultiplierY = 1.0f;
@@ -582,7 +577,7 @@
 {
     CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
     LHGameWorldNode* gwNode = [[self scene] gameWorldNode];
-    [[(LHScene*)[self scene] gameWorldNode] setScale:val];
+    [gwNode setScale:val];
     [gwNode setPosition:transPoint];
 }
 
