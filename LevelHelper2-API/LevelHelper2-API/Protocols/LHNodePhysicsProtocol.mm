@@ -395,6 +395,10 @@
     return _body;
 }
 
+-(void)setBody:(b2Body*)b{
+    _body = b;
+}
+
 -(int)bodyType{
     if(_body){
         return (int)_body->GetType();
