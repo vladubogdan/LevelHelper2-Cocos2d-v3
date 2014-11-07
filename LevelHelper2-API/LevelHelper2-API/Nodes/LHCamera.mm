@@ -120,12 +120,12 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
-        CGPoint newPos = [self position];
+//        CGPoint newPos = [self position];
         CGSize winSize = [[self scene] contentSize];
-        newPos = CGPointMake(winSize.width*0.5  - newPos.x,
-                             winSize.height*0.5 - newPos.y);
+//        newPos = CGPointMake(winSize.width*0.5  - newPos.x,
+//                             winSize.height*0.5 - newPos.y);
 
-        [super setPosition:[self transformToRestrictivePosition:newPos]];
+//        [super setPosition:[self transformToRestrictivePosition:newPos]];
         
         CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
         
@@ -307,21 +307,21 @@
 
         CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
         CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
-        
+
         _viewPosition = gwNodePos;
         _centerPosition = transPoint;
-        
+
         CGPoint scaledMidpoint = ccpMult(gwNodePos, gwNode.scale);
         CGPoint followedPos = ccpSub(halfWinSize, scaledMidpoint);
         
         
         if(!lockX){
             transPoint.x = followedPos.x;
-            transPoint.x -= directionalOffset.x;
+            transPoint.x += directionalOffset.x;
         }
         if(!lockY){
             transPoint.y = followedPos.y;
-            transPoint.y -= directionalOffset.y;
+            transPoint.y += directionalOffset.y;
         }
         
         transPoint.x += offset.x*winSize.width;
@@ -415,7 +415,7 @@
         if(CGPointEqualToPoint(previousFollowedPosition, NSZeroPoint)){
             previousFollowedPosition = curPosition;
             
-            directionalOffset.x = -importantArea.width * winSize.width * 0.5;
+            directionalOffset.x = importantArea.width * winSize.width * 0.5;
             directionalOffset.y = importantArea.height * winSize.height * 0.5;
         }
         
@@ -438,7 +438,7 @@
             {
                 float lastOffset = directionalOffset.x;
                 
-                directionalOffset.x += followedDeltaX;
+                directionalOffset.x -= followedDeltaX;//XYXY
                 
                 if(smoothMovement)
                     directionalOffset.x = directionalOffset.x * filteringFactor + lastOffset * (1.0 - filteringFactor);
@@ -464,10 +464,10 @@
             if(direction.x/previousDirectionVector.x <= 0 || (direction.x == 0 && previousDirectionVector.x == 0))
             {
                 if(direction.x >= 0){
-                    directionMultiplierX = -1.0f;
+                    directionMultiplierX = 1.0f;//XYXY
                 }
                 else{
-                    directionMultiplierX = 1.0f;
+                    directionMultiplierX = -1.0f;//XYXY
                 }
                 
                 directionalOffsetToReach.x = -importantArea.width * winSize.width * 0.5 * directionMultiplierX;
@@ -478,7 +478,7 @@
             if(reachingOffsetY)
             {
                 float lastOffset = directionalOffset.y;
-                directionalOffset.y += followedDeltaY;
+                directionalOffset.y -= followedDeltaY;//XYXY
                 
                 if(smoothMovement)
                     directionalOffset.y = directionalOffset.y * filteringFactor + lastOffset * (1.0 - filteringFactor);
@@ -501,15 +501,15 @@
                 }
             }
             
-            
+            //to change sign, change sign on XYXY lines
             
             if(direction.y/previousDirectionVector.y <= 0 || (direction.y == 0 && previousDirectionVector.y == 0))
             {
                 if(direction.y >= 0){
-                    directionMultiplierY = 1.0f;
+                    directionMultiplierY = -1.0f;//XYXY
                 }
                 else{
-                    directionMultiplierY = -1.0f;
+                    directionMultiplierY = 1.0f;//XYXY
                 }
                 
                 directionalOffsetToReach.y = importantArea.height * winSize.height * 0.5 * directionMultiplierY;

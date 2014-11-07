@@ -958,7 +958,7 @@
 					<key>followedNodeUUID</key>
 					<string>6FE3A2EA-56A0-40F8-A08A-D59DB1B39EBA</string>
 					<key>generalPosition</key>
-					<string>{0.516667, -0.617980}</string>
+					<string>{0.500000, 0.362500}</string>
 					<key>importantArea</key>
 					<string>{0.500000, 0.500000}</string>
 					<key>invisibleInEditor</key>
@@ -998,7 +998,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.066667, -0.350000}</string>
+					<string>{0.033333, 0.175000}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
 					<key>invisibleInEditor</key>
@@ -2519,6 +2519,86 @@
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.250000, -1.400000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
+							<key>name</key>
+							<string>brick_36</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>5118D21D-A2BD-4EAB-B8F6-381143175B35</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B5D17203-909B-4CC4-AD42-80CFC30CD057</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.316666, -1.400000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
+							<key>name</key>
+							<string>brick_37</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>5118D21D-A2BD-4EAB-B8F6-381143175B35</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>803880E8-7AB8-4BCD-8817-AAEC213BE926</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
 					</array>
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
@@ -2779,7 +2859,7 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.016667, -1.800000}, {4.383333, 2.975000}}</string>
+		<string>{{-0.033333, -1.800000}, {4.400000, 2.900000}}</string>
 		<key>1136x640</key>
 		<string>{{-0.016667, -0.975000}, {4.383333, 2.100000}}</string>
 		<key>1334x750</key>
@@ -2791,7 +2871,7 @@
 		<key>960x640</key>
 		<string>{{-0.016667, -1.250000}, {4.383333, 3.150000}}</string>
 		<key>general</key>
-		<string>{{-0.016667, -1.600000}, {4.383333, 2.750000}}</string>
+		<string>{{-0.033333, -1.800000}, {4.400000, 2.900000}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
 	<string>{-0.000000, -1.000000}</string>
@@ -2804,7 +2884,7 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.016667, -0.950000}, {4.383333, 1.950000}}</string>
+		<string>{{-0.033333, -0.950000}, {4.400000, 2.050000}}</string>
 		<key>1136x640</key>
 		<string>{{-0.016667, -0.500000}, {4.383333, 1.600000}}</string>
 		<key>1334x750</key>
@@ -2816,7 +2896,7 @@
 		<key>960x640</key>
 		<string>{{-0.016667, -0.650000}, {4.383333, 1.825000}}</string>
 		<key>general</key>
-		<string>{{-0.016667, -1.000000}, {4.383333, 2.100000}}</string>
+		<string>{{-0.033333, -0.950000}, {4.400000, 2.050000}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2826,7 +2906,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>0FEA620C-9870-4EDC-B381-F46FDAD19003</key>
+		<key>E13665CA-33B7-4AD8-85DE-3F184229A17B</key>
 		<array>
 			<array>
 				<string>{-40.75, -37.5}</string>

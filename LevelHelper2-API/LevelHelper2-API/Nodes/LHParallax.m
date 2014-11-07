@@ -120,7 +120,7 @@
 
             [(LHCamera*)followed setZoomValue:1];
             
-            CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
+            CGSize winSize = [(LHScene*)[self scene] contentSize];
             worldPoint = CGPointMake(winSize.width*0.5, winSize.height*0.5);
         }
         

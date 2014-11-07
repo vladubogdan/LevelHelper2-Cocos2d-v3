@@ -186,7 +186,7 @@
         {
             _body->SetAngularDamping([dict floatForKey:@"angularDamping"]);
             
-            _body->SetAngularVelocity([dict floatForKey:@"angularVelocity" ]);//radians/second.
+            _body->SetAngularVelocity(-360.0*[dict floatForKey:@"angularVelocity" ]);//radians/second.
             
             _body->SetLinearDamping([dict floatForKey:@"linearDamping"]);
             
