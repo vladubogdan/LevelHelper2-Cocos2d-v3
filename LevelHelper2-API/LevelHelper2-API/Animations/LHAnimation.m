@@ -431,7 +431,7 @@
         newPos.x += offset.x;
         newPos.y += offset.y;
         
-        newPos.y += p.contentSize.height;
+        newPos.y += scene.designResolutionSize.height;// p.contentSize.height;
     }
     else{
         CGSize content = [p contentSizeInPoints];

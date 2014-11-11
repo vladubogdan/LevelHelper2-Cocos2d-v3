@@ -9,8 +9,8 @@
 
 // Import the interfaces
 #import "LHSceneCarTest.h"
-#import "LevelHelper2-API/LHConfig.h"
-#import "LevelHelper2-API/LHUtils.h"
+#import "LHConfig.h"
+#import "LHUtils.h"
 
 @implementation LHSceneCarTest
 {

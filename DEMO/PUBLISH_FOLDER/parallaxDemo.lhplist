@@ -100,7 +100,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.769291, -1.266676}</string>
+									<string>{0.534784, -1.230649}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -140,7 +140,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{1.357626, -1.393282}</string>
+									<string>{1.123119, -1.357255}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -180,7 +180,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{2.191601, -1.282583}</string>
+									<string>{1.957094, -1.246556}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -220,7 +220,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{2.473728, -1.335671}</string>
+									<string>{2.239221, -1.299644}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -260,7 +260,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{3.445986, -1.337436}</string>
+									<string>{3.211479, -1.301409}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -294,7 +294,7 @@
 								</dict>
 							</array>
 							<key>generalPosition</key>
-							<string>{0.000000, 0.000000}</string>
+							<string>{0.250000, -0.277597}</string>
 							<key>invisibleInEditor</key>
 							<false/>
 							<key>name</key>
@@ -327,7 +327,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.601098, -1.167188}</string>
+									<string>{0.626018, -1.415453}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -367,7 +367,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{1.728971, -1.186283}</string>
+									<string>{1.753891, -1.434548}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -407,7 +407,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{2.769748, -1.171277}</string>
+									<string>{2.794668, -1.419542}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -447,7 +447,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{2.286396, -1.177078}</string>
+									<string>{2.311316, -1.425343}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -487,7 +487,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{3.682396, -1.180142}</string>
+									<string>{3.707316, -1.428407}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -521,7 +521,7 @@
 								</dict>
 							</array>
 							<key>generalPosition</key>
-							<string>{0.000000, 0.000000}</string>
+							<string>{0.250000, 0.022403}</string>
 							<key>invisibleInEditor</key>
 							<false/>
 							<key>name</key>
@@ -554,7 +554,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.995551, -1.093892}</string>
+									<string>{1.020672, -1.769488}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -594,7 +594,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{1.847786, -1.094898}</string>
+									<string>{1.874784, -1.736830}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -634,7 +634,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{2.614037, -1.094907}</string>
+									<string>{2.641451, -1.736830}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -674,7 +674,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{3.296286, -1.096856}</string>
+									<string>{3.324784, -1.736830}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -714,7 +714,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{3.999516, -1.114928}</string>
+									<string>{4.024784, -1.712677}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -754,7 +754,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{5.332913, -1.160387}</string>
+									<string>{5.324784, -1.736830}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -794,7 +794,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{5.982913, -1.135387}</string>
+									<string>{6.008118, -1.736830}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -834,7 +834,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{4.535926, -1.128442}</string>
+									<string>{4.558117, -1.712677}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -874,7 +874,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.412050, -1.063774}</string>
+									<string>{0.437171, -1.739370}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
 									<key>invisibleInEditor</key>
@@ -908,7 +908,7 @@
 								</dict>
 							</array>
 							<key>generalPosition</key>
-							<string>{0.000000, 0.000000}</string>
+							<string>{0.258549, 0.309233}</string>
 							<key>invisibleInEditor</key>
 							<false/>
 							<key>name</key>
@@ -932,9 +932,9 @@
 						</dict>
 					</array>
 					<key>followedNodeUUID</key>
-					<string>2BB2FE4F-DA3F-4BE5-8941-1E3DAFF29742</string>
+					<string>C51199C4-140B-4E74-972C-4630ABB24BBD</string>
 					<key>generalPosition</key>
-					<string>{-0.366246, 1.985387}</string>
+					<string>{-0.233333, 2.277597}</string>
 					<key>invisibleInEditor</key>
 					<false/>
 					<key>name</key>
@@ -958,23 +958,119 @@
 					<key>followedNodeUUID</key>
 					<string>6FE3A2EA-56A0-40F8-A08A-D59DB1B39EBA</string>
 					<key>generalPosition</key>
-					<string>{0.512326, 0.075000}</string>
+					<string>{0.500000, 0.275000}</string>
+					<key>importantArea</key>
+					<string>{0.500000, 0.500000}</string>
 					<key>invisibleInEditor</key>
 					<false/>
+					<key>lockX</key>
+					<false/>
+					<key>lockY</key>
+					<false/>
 					<key>name</key>
-					<string>UntitledCamera</string>
+					<string>UntitledCamera_1</string>
 					<key>nodeType</key>
 					<string>LHCamera</string>
+					<key>offset</key>
+					<string>{0.000000, 0.000000}</string>
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>restrictToGameWorld</key>
+					<true/>
+					<key>smoothMovement</key>
 					<true/>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
 					</array>
 					<key>uuid</key>
-					<string>2BB2FE4F-DA3F-4BE5-8941-1E3DAFF29742</string>
+					<string>C51199C4-140B-4E74-972C-4630ABB24BBD</string>
+					<key>zoomOnPinchOrScroll</key>
+					<true/>
+					<key>zoomValue</key>
+					<real>1</real>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.050000, 0.075000}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>carTyre</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>1</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{47.000000, 46.000000}</string>
+					<key>spriteName</key>
+					<string>carTyre</string>
+					<key>spriteUUID</key>
+					<string>F2BF5807-ACFF-44E8-BAA8-94A87CAC4F40</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>6FE3A2EA-56A0-40F8-A08A-D59DB1B39EBA</string>
+					<key>zOrder</key>
+					<integer>1</integer>
 				</dict>
 				<dict>
 					<key>alpha</key>
@@ -2449,89 +2545,7 @@
 					<key>uuid</key>
 					<string>5118D21D-A2BD-4EAB-B8F6-381143175B35</string>
 					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.500000, 0.500000}</string>
-					<key>colorOverlay</key>
-					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
-					<key>generalPosition</key>
-					<string>{0.183333, 0.075000}</string>
-					<key>imageFileName</key>
-					<string>carParts.png</string>
-					<key>invisibleInEditor</key>
-					<false/>
-					<key>name</key>
-					<string>carTyre</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>angularDamping</key>
-						<real>0.0</real>
-						<key>angularVelocity</key>
-						<real>0.0</real>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>linearDamping</key>
-						<real>0.0</real>
-						<key>linearVelocity</key>
-						<string>{0.000000, 0.000000}</string>
-						<key>shape</key>
-						<integer>1</integer>
-						<key>type</key>
-						<integer>2</integer>
-					</dict>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>relativeImagePath</key>
-					<string>PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{1.000000, 1.000000}</string>
-					<key>size</key>
-					<string>{47.000000, 46.000000}</string>
-					<key>spriteName</key>
-					<string>carTyre</string>
-					<key>spriteUUID</key>
-					<string>F2BF5807-ACFF-44E8-BAA8-94A87CAC4F40</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>6FE3A2EA-56A0-40F8-A08A-D59DB1B39EBA</string>
-					<key>zOrder</key>
-					<integer>0</integer>
+					<integer>2</integer>
 				</dict>
 				<dict>
 					<key>alpha</key>
@@ -2543,7 +2557,7 @@
 					<key>colorOverlay</key>
 					<string>{{0.000000, 0.000000}, {0.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{2.211656, 0.433581}</string>
+					<string>{2.175676, 0.467706}</string>
 					<key>invisibleInEditor</key>
 					<false/>
 					<key>name</key>
@@ -2598,27 +2612,39 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-2178.362949, -190.715523}</string>
+							<string>{-2105.645880, -173.922974}</string>
 							<key>ctrl2</key>
-							<string>{-2176.845896, 388.546074}</string>
+							<string>{-2104.128827, 405.338623}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-2178.362949, -290.715523}</string>
+							<string>{-2103.351746, -273.995789}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{1565.359531, 371.492690}</string>
+							<string>{-807.351746, 398.004211}</string>
 							<key>ctrl2</key>
-							<string>{3651.387045, 809.141591}</string>
+							<string>{722.686782, -59.432221}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{2178.362769, 165.248744}</string>
+							<string>{-106.217518, 131.073535}</string>
+						</dict>
+						<dict>
+							<key>ctrl1</key>
+							<string>{1575.351516, 132.668182}</string>
+							<key>ctrl2</key>
+							<string>{3556.811835, 326.184904}</string>
+							<key>hasCtrl1</key>
+							<true/>
+							<key>hasCtrl2</key>
+							<true/>
+							<key>mainPt</key>
+							<string>{2103.351516, -299.331818}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
@@ -2626,7 +2652,7 @@
 					<key>scale</key>
 					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{4356.726074, 581.431030}</string>
+					<string>{4206.703613, 598.663940}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -2753,20 +2779,22 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.083333, -0.525000}, {4.650000, 1.700000}}</string>
+		<string>{{-0.033333, -1.800000}, {4.400000, 2.900000}}</string>
 		<key>1136x640</key>
-		<string>{{-0.066667, -0.475000}, {4.700000, 1.600000}}</string>
+		<string>{{-0.016667, -0.975000}, {4.383333, 2.100000}}</string>
 		<key>1334x750</key>
-		<string>{{-0.066667, -0.475000}, {4.700000, 1.600000}}</string>
+		<string>{{-0.016667, -1.900000}, {4.383333, 3.100000}}</string>
 		<key>2048x1536</key>
-		<string>{{-0.066667, -0.475000}, {4.600000, 1.625000}}</string>
+		<string>{{-0.016667, -1.600000}, {4.383333, 2.750000}}</string>
+		<key>2208x1242</key>
+		<string>{{-0.016667, -1.900000}, {4.383333, 3.100000}}</string>
 		<key>960x640</key>
-		<string>{{-0.083333, -0.375000}, {4.633333, 1.475000}}</string>
+		<string>{{-0.016667, -1.250000}, {4.383333, 3.150000}}</string>
 		<key>general</key>
-		<string>{{-0.066667, -0.475000}, {4.700000, 1.600000}}</string>
+		<string>{{-0.033333, -1.800000}, {4.400000, 2.900000}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
-	<string>{0.000000, -1.000000}</string>
+	<string>{-0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
 	<key>invisibleInEditor</key>
@@ -2776,17 +2804,19 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.033333, -0.950000}, {4.400000, 2.050000}}</string>
 		<key>1136x640</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.016667, -0.500000}, {4.383333, 1.600000}}</string>
 		<key>1334x750</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.016667, -0.950000}, {4.383333, 2.150000}}</string>
 		<key>2048x1536</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.016667, -1.000000}, {4.383333, 2.100000}}</string>
+		<key>2208x1242</key>
+		<string>{{-0.016667, -0.950000}, {4.383333, 2.150000}}</string>
 		<key>960x640</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.016667, -0.650000}, {4.383333, 1.825000}}</string>
 		<key>general</key>
-		<string>{{-0.050000, -0.025000}, {4.500000, 1.125000}}</string>
+		<string>{{-0.033333, -0.950000}, {4.400000, 2.050000}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2794,6 +2824,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>D34EC939-1393-49E8-B57E-BA9E64E11BD3</key>
+		<array>
+			<array>
+				<string>{-40.75, -37.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-41.25, -34.5}</string>
+			</array>
+			<array>
+				<string>{10.25, -37}</string>
+				<string>{10.25, -35}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{5.75, -40.5}</string>
+				<string>{8.75, -39}</string>
+			</array>
+			<array>
+				<string>{82.25, 4.5}</string>
+				<string>{82.25, 22}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{42.25, -19.5}</string>
+				<string>{52.25, -16.5}</string>
+				<string>{63.75, -11}</string>
+				<string>{75.25, -2.5}</string>
+			</array>
+			<array>
+				<string>{-83.75, 24}</string>
+				<string>{-84.75, 21}</string>
+				<string>{-84.75, -7.5}</string>
+				<string>{-83.75, -10}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-80.25, 26.5}</string>
+				<string>{-81.75, 26}</string>
+			</array>
+			<array>
+				<string>{81.75, 23.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{82.25, 22}</string>
+			</array>
+			<array>
+				<string>{10.25, -35}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{-36.75, -40.5}</string>
+			</array>
+			<array>
+				<string>{-54.75, -22.5}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-83.75, -10}</string>
+			</array>
+			<array>
+				<string>{-41.25, -34.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-46.75, -22.5}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

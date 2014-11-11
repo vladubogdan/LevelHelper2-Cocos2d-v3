@@ -33,6 +33,10 @@
 #import "LHUINode.h"
 #import "LHBox2dCollisionHandling.h"
 
+@interface LHCamera (LH_CAMERA_PINCH_ZOOM)
+-(void)pinchZoomWithScaleDelta:(float)value center:(CGPoint)center;
+@end
+
 @implementation LHScene
 {
     __weak LHBackUINode*       _backUiNode;
@@ -46,6 +50,7 @@
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
+    bool loadingInProgress;
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
     LHNodeProtocolImpl* _nodeProtocolImp;
@@ -68,6 +73,11 @@
     CGRect gameWorldRect;
 
     CGPoint touchBeganLocation;
+    
+#ifdef __CC_PLATFORM_IOS
+    UIPinchGestureRecognizer *pinchRecognizer;
+#endif
+    
 }
 
 
@@ -88,6 +98,11 @@
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
+    
+#ifdef __CC_PLATFORM_IOS
+    [[[CCDirector sharedDirector] view] removeGestureRecognizer:pinchRecognizer];
+    LH_SAFE_RELEASE(pinchRecognizer);
+#endif
     
     _backUiNode = nil;
     _gameWorldNode = nil;
@@ -171,11 +186,15 @@
 
     if (self = [super init])
     {
+        loadingInProgress = true;
+        
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
         
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
         currentDeviceSize    = curDev.size;
+        
+        
         
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
 #ifdef __CC_PLATFORM_IOS
@@ -200,18 +219,23 @@
 
         supportedDevices = [[NSArray alloc] initWithArray:devices];
         
-        
-        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-        
-        [self loadGlobalGravityFromDictionary:dict];
         [self loadBackgroundColorFromDictionary:dict];
-        [self loadPhysicsBoundariesFromDictionary:dict];
         [self loadGameWorldInfoFromDictionary:dict];
         
-        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+
+        [self loadGlobalGravityFromDictionary:dict];
+        [self loadPhysicsBoundariesFromDictionary:dict];
+
         [self performLateLoading];
         
         [self setUserInteractionEnabled:YES];
+
+        #ifdef __CC_PLATFORM_IOS
+        pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+        [[[CCDirector sharedDirector] view] addGestureRecognizer:pinchRecognizer];
+        #endif
+        
         
 
 #if LH_USE_BOX2D
@@ -223,6 +247,7 @@
         //call this to update the views when using camera/parallax
         [self visit];
         
+        loadingInProgress = false;
     }
     return self;
 }
@@ -232,6 +257,9 @@
     [super onEnter];
 }
 
+-(BOOL)loadingInProgress{
+    return loadingInProgress;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
@@ -616,7 +644,24 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 ////////////////////////////////////////////////////////////////////////////////
 
 #ifdef __CC_PLATFORM_IOS
+
+- (void) pinch:(UIPinchGestureRecognizer *)recognizer{
+    
+    CGPoint touchLocation = [recognizer locationInView:recognizer.view];
+    touchLocation = [[CCDirector sharedDirector] convertToGL:touchLocation];
+    touchLocation = [self convertToNodeSpace:touchLocation];
+
+    for(LHCamera* cam in [self childrenOfType:[LHCamera class]]){
+        if([cam isActive] && [cam usePinchOrScrollWheelToZoom]){
+            [cam pinchZoomWithScaleDelta:recognizer.scale - 1.0 center:touchLocation];
+        }
+    }
+    
+    [recognizer setScale:1.0];
+}
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+
     touchBeganLocation = [touch locationInNode:self];
 }
 
@@ -631,6 +676,30 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
 }
 #else
+
+
+- (void)scrollWheel:(NSEvent *)event
+{
+    CGPoint location = [(CCDirectorMac*)[CCDirector sharedDirector] convertEventToGL:event];
+    location = [self convertToNodeSpace:location];
+    
+    
+    for(LHCamera* cam in [self childrenOfType:[LHCamera class]]){
+        if([cam isActive] && [cam usePinchOrScrollWheelToZoom]){
+            
+            float newScale = [_gameWorldNode scale];
+            if([event deltaY] > 0)
+                newScale += 0.025*[_gameWorldNode scale];
+            else if([event deltaY] <0)
+                newScale -= 0.025*[_gameWorldNode scale];
+
+            float delta = newScale - [_gameWorldNode scale];
+            
+            [cam pinchZoomWithScaleDelta:delta center:location];
+        }
+    }
+}
+
 -(void)mouseDown:(NSEvent *)theEvent{
     touchBeganLocation = [theEvent locationInNode:self];
 }

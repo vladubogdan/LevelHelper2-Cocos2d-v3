@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-
+#import "LHGameWorldNode.h"
 #import "LHNode.h"
 
 
@@ -50,6 +50,15 @@
     if(self = [super init]){
         
         [prnt addChild:self];
+
+        LHScene* scene = (LHScene*)[prnt scene];
+        
+        LHGameWorldNode* gwNode = [scene gameWorldNode];
+        float oldScale = gwNode.scale;
+        CGPoint oldPos = [gwNode position];
+        gwNode.scale = 1.0f;
+        gwNode.position = CGPointZero;
+        
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -58,7 +67,6 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        LHScene* scene = (LHScene*)[self scene];
         
         NSDictionary* assetInfo = nil;
         NSString* assetFile = [dict objectForKey:@"assetFile"];
@@ -85,7 +93,10 @@
         
 #if LH_DEBUG
         [self createDebugNode];
-#endif//LH_DEBUG        
+#endif//LH_DEBUG
+        
+        gwNode.scale = oldScale;
+        gwNode.position = oldPos;
     }
     
     return self;
@@ -126,13 +137,19 @@
                assetFileName:(NSString*)fileName
                       parent:(CCNode*)prnt{
     
+    LHScene* scene = (LHScene*)[prnt scene];
+    
+    LHGameWorldNode* gwNode = [scene gameWorldNode];
+    float oldScale = gwNode.scale;
+    CGPoint oldPos = [gwNode position];
+    gwNode.scale = 1.0f;
+    gwNode.position = CGPointZero;
+
     
     if(self = [super init]){
         
         [prnt addChild:self];
         [self setName:newName];
-        
-        LHScene* scene = (LHScene*)[prnt scene];
         
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
         
@@ -160,7 +177,7 @@
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
-    
+        
     }
     
 #if LH_DEBUG
@@ -168,6 +185,9 @@
 #endif//LH_DEBUG
     
     [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
+
+    gwNode.scale = oldScale;
+    gwNode.position = oldPos;
     
     return self;
 }

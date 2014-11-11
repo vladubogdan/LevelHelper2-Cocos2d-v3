@@ -24,6 +24,10 @@
 
 #endif
 
+@interface LHScene (LH_SCENE_LOADING_INFO)
+-(BOOL)loadingInProgress;
+@end
+
 #if LH_USE_BOX2D
 
 class LHBox2dDebug;
@@ -396,7 +400,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
                 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
-        
+        [self setAnchorPoint:ccp(0.0f, 0.0f)]; //very important for scaling
     }
     return self;
 }
@@ -599,6 +603,33 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         }
     }
 }
+
+-(CGPoint)position{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return CGPointZero;
+    }
+    return [super position];
+}
+-(void)setPosition:(CGPoint)pos{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setPosition:pos];
+}
+
+-(float)scale{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return 1;
+    }
+    return [super scale];
+}
+-(void)setScale:(float)val{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setScale:val];
+}
+
 
 #pragma mark - CHIPMUNK SUPPORT
 #else //CHIPMUNK

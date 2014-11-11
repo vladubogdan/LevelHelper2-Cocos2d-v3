@@ -13,6 +13,7 @@
 #import "LHAnimation.h"
 #import "LHConfig.h"
 #import "LHDrawNode.h"
+#import "LHGameWorldNode.h"
 
 static float MAX_BEZIER_STEPS = 24.0f;
 
@@ -51,6 +52,14 @@ static float MAX_BEZIER_STEPS = 24.0f;
     if(self = [super init]){
         
         [prnt addChild:self];
+        
+//        LHScene* scene = (LHScene*)[prnt scene];
+//        
+//        LHGameWorldNode* gwNode = [scene gameWorldNode];
+//        float oldScale = gwNode.scale;
+//        CGPoint oldPos = [gwNode position];
+//        gwNode.scale = 1.0f;
+//        gwNode.position = CGPointZero;
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -174,7 +183,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
-        
+//        gwNode.scale = oldScale;
+//        gwNode.position = oldPos;
     }
     
     return self;
