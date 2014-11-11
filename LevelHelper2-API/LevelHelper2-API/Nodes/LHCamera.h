@@ -80,12 +80,12 @@
  This value is ignored when camera is not following a node.
  @param unit The new camera important area unit. This value is multipled with the screen dimensions.
  */
--(void)setImportantAreaUnit:(NSSize)unit;
+-(void)setImportantAreaUnit:(CGSize)unit;
 
 /**
  Returns the camera important area unit.
  */
--(NSSize)importantAreaUnit;
+-(CGSize)importantAreaUnit;
 
 /**
  Set whether or not the camera should move on x axis.

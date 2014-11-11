@@ -269,6 +269,43 @@
                 shape = new b2ChainShape();
                 ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
             }
+            else if([_node isKindOfClass:[LHShape class]])
+            {
+                NSMutableArray* points = [(LHShape*)_node outlinePoints];
+                
+                std::vector< b2Vec2 > verts;
+                
+                NSValue* lastPt = nil;
+                
+                for(NSValue* val in points){
+                    CGPoint pt = CGPointFromValue(val);
+                    pt.x *= scale.x;
+                    pt.y *= scale.y;
+                    
+                    
+                    b2Vec2 v2 = [scene metersFromPoint:pt];
+                    
+                    if(lastPt != nil)
+                    {
+                        CGPoint oldPt = CGPointFromValue(lastPt);
+                        b2Vec2 v1 = b2Vec2(oldPt.x, oldPt.y);
+                        
+                        if(b2DistanceSquared(v1, v2) > b2_linearSlop * b2_linearSlop)
+                        {
+                            verts.push_back(v2);
+                        }
+                    }
+                    else{
+                        verts.push_back(v2);
+                    }
+                    
+                    lastPt = LHValueWithCGPoint(CGPointMake(v2.x, v2.y));
+                    
+                }
+                
+                shape = new b2ChainShape();
+                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
+            }
         }
         else if(shapeType == 4)//OVAL
         {
@@ -526,7 +563,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     {
         LHGameWorldNode* gWNode = [(LHScene*)[_node scene] gameWorldNode];
         
-        NSPoint worldPos = [_node position];
+        CGPoint worldPos = [_node position];
         if(gWNode != [_node parent]){
             worldPos = [[_node parent] convertToWorldSpace:worldPos];
             worldPos = [gWNode convertToNodeSpace:worldPos];

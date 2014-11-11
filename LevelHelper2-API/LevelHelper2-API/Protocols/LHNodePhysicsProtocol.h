@@ -63,7 +63,7 @@ typedef enum
 -(b2Body*)box2dBody;
 
 /**
- Manually set a Box2d body created via code. Do not delete the body, or if you do delete it, call [node setBodyBody:NULL];
+ Manually set a Box2d body created via code. Do not delete the body, or if you do delete it, call [node setBox2dBody:NULL];
  */
 -(void)setBox2dBody:(b2Body*)b;
 #endif

@@ -120,13 +120,8 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
 
-//        CGPoint newPos = [self position];
-        CGSize winSize = [[self scene] contentSize];
-//        newPos = CGPointMake(winSize.width*0.5  - newPos.x,
-//                             winSize.height*0.5 - newPos.y);
 
-//        [super setPosition:[self transformToRestrictivePosition:newPos]];
-        
+        CGSize winSize = [[self scene] contentSize];
         CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
         
         CGSize worldSize = worldRect.size;
@@ -139,10 +134,8 @@
         minZoomValue = 0.1;
         if([self restrictedToGameWorld]){
             if(winSize.width < worldSize.width || winSize.height < worldSize.height){
-                if(worldSize.width > worldSize.height){
-                    minZoomValue = winSize.height/worldSize.height;
-                }
-                else{
+                minZoomValue = winSize.height/worldSize.height;
+                if(minZoomValue < winSize.width/worldSize.width){
                     minZoomValue = winSize.width/worldSize.width;
                 }
             }
@@ -212,10 +205,10 @@
     return offset;
 }
 
--(void)setImportantAreaUnit:(NSSize)val;{
+-(void)setImportantAreaUnit:(CGSize)val;{
     importantArea = val;
 }
--(NSSize)importantAreaUnit{
+-(CGSize)importantAreaUnit{
     return importantArea;
 }
 
@@ -305,8 +298,12 @@
     CCNode* followed = [self followedNode];
     if(followed){
 
-        CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
-        CGPoint gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
+        CGPoint gwNodePos = [followed position];
+        if([followed parent] != gwNode)
+        {
+            CGPoint worldPoint = [followed convertToWorldSpaceAR:CGPointZero];
+            gwNodePos = [gwNode convertToNodeSpaceAR:worldPoint];
+        }
 
         _viewPosition = gwNodePos;
         _centerPosition = transPoint;
@@ -327,7 +324,6 @@
         transPoint.x += offset.x*winSize.width;
         transPoint.y += offset.y*winSize.height;
     }
-    
     
     NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
     float lookAtUnit = (currentTimer - lookAtStartTime)/lookAtTime;
@@ -375,8 +371,6 @@
     }
     
     
-    
-    
     float x = transPoint.x;
     float y = transPoint.y;
     
@@ -412,7 +406,7 @@
         CGSize winSize = [(LHScene*)[self scene] contentSize];
         
         CGPoint curPosition = [followed position];
-        if(CGPointEqualToPoint(previousFollowedPosition, NSZeroPoint)){
+        if(CGPointEqualToPoint(previousFollowedPosition, CGPointZero)){
             previousFollowedPosition = curPosition;
             
             directionalOffset.x = importantArea.width * winSize.width * 0.5;
@@ -423,7 +417,7 @@
         {
             CGPoint direction = ccpSub(curPosition,previousFollowedPosition);
             
-            if(NSEqualPoints(previousDirectionVector, NSZeroPoint)){
+            if(CGPointEqualToPoint(previousDirectionVector, CGPointZero)){
                 previousDirectionVector = direction;
             }
             

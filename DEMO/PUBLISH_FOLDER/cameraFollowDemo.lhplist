@@ -3970,6 +3970,59 @@
 							<real>255</real>
 							<key>anchor</key>
 							<string>{0.500000, 0.500000}</string>
+							<key>animations</key>
+							<array>
+								<dict>
+									<key>active</key>
+									<true/>
+									<key>fps</key>
+									<integer>24</integer>
+									<key>name</key>
+									<string>animTest</string>
+									<key>properties</key>
+									<dict>
+										<key>Position</key>
+										<dict>
+											<key>Frames</key>
+											<array>
+												<dict>
+													<key>frameIndex</key>
+													<integer>0</integer>
+													<key>positions</key>
+													<dict>
+														<key>1A1EF651-4734-449A-84DC-B3183033B7CE</key>
+														<string>{846.700800, 1658.224000}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>14</integer>
+													<key>positions</key>
+													<dict>
+														<key>1A1EF651-4734-449A-84DC-B3183033B7CE</key>
+														<string>{1343.999680, 1680.000000}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>29</integer>
+													<key>positions</key>
+													<dict>
+														<key>1A1EF651-4734-449A-84DC-B3183033B7CE</key>
+														<string>{846.700800, 1658.224000}</string>
+													</dict>
+												</dict>
+											</array>
+											<key>type</key>
+											<string>LHPositionProperty</string>
+										</dict>
+									</dict>
+									<key>repetitions</key>
+									<integer>0</integer>
+									<key>totalFrames</key>
+									<integer>30</integer>
+								</dict>
+							</array>
 							<key>colorOverlay</key>
 							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
@@ -5716,30 +5769,6 @@
 					<integer>0</integer>
 				</dict>
 				<dict>
-					<key>activeCamera</key>
-					<true/>
-					<key>followedNodeUUID</key>
-					<string>6A238A39-2E10-4EBB-95BE-ED541234429E</string>
-					<key>generalPosition</key>
-					<string>{1.016667, -0.550000}</string>
-					<key>invisibleInEditor</key>
-					<false/>
-					<key>name</key>
-					<string>UntitledCamera</string>
-					<key>nodeType</key>
-					<string>LHCamera</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>restrictToGameWorld</key>
-					<true/>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>0B4D532A-BFBF-4101-BD60-F5F682DEEB2B</string>
-				</dict>
-				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
@@ -5747,7 +5776,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{1.016667, -0.550000}</string>
+					<string>{0.833333, 0.000000}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
 					<key>invisibleInEditor</key>
@@ -5903,6 +5932,137 @@
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>anim</string>
+							<key>properties</key>
+							<dict>
+								<key>Position</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>4456C873-D078-46C5-9EF6-6EE9F3DD13D9</key>
+												<string>{859.535583, -359.521698}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>149</integer>
+											<key>positions</key>
+											<dict>
+												<key>4456C873-D078-46C5-9EF6-6EE9F3DD13D9</key>
+												<string>{-272.000000, 1104.000000}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>299</integer>
+											<key>positions</key>
+											<dict>
+												<key>4456C873-D078-46C5-9EF6-6EE9F3DD13D9</key>
+												<string>{859.535583, -359.521698}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>300</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.895350, -0.561753}</string>
+					<key>imageFileName</key>
+					<string>platformer.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>brick_95</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>358.31182861328125</real>
+					<key>scale</key>
+					<string>{0.551317, 0.634043}</string>
+					<key>size</key>
+					<string>{128.000000, 128.000000}</string>
+					<key>spriteName</key>
+					<string>brick.png</string>
+					<key>spriteUUID</key>
+					<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>4456C873-D078-46C5-9EF6-6EE9F3DD13D9</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>activeCamera</key>
+					<true/>
+					<key>followedNodeUUID</key>
+					<string>6A238A39-2E10-4EBB-95BE-ED541234429E</string>
+					<key>generalPosition</key>
+					<string>{0.833333, 0.000000}</string>
+					<key>importantArea</key>
+					<string>{0.000000, 0.000000}</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>lockX</key>
+					<false/>
+					<key>lockY</key>
+					<false/>
+					<key>name</key>
+					<string>UntitledCamera</string>
+					<key>nodeType</key>
+					<string>LHCamera</string>
+					<key>offset</key>
+					<string>{0.000000, 0.000000}</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>restrictToGameWorld</key>
+					<true/>
+					<key>smoothMovement</key>
+					<false/>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>0B4D532A-BFBF-4101-BD60-F5F682DEEB2B</string>
+					<key>zoomOnPinchOrScroll</key>
+					<true/>
+					<key>zoomValue</key>
+					<real>1</real>
+				</dict>
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
@@ -6020,15 +6180,19 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.766667, -1.050000}, {2.933333, 3.000000}}</string>
+		<string>{{-0.783333, -1.075000}, {2.950000, 3.025000}}</string>
 		<key>1136x640</key>
+		<string>{{-0.733333, -1.075000}, {2.900000, 3.025000}}</string>
+		<key>1334x750</key>
 		<string>{{-0.766667, -1.050000}, {2.933333, 3.000000}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.766667, -1.050000}, {2.933333, 3.000000}}</string>
+		<key>2208x1242</key>
+		<string>{{-0.733333, -1.075000}, {2.900000, 3.025000}}</string>
 		<key>960x640</key>
 		<string>{{-0.766667, -1.050000}, {2.933333, 3.000000}}</string>
 		<key>general</key>
-		<string>{{-0.766667, -1.050000}, {2.933333, 3.000000}}</string>
+		<string>{{-0.783333, -1.075000}, {2.950000, 3.025000}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
 	<string>{0.000000, -1.000000}</string>
@@ -6046,7 +6210,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>8501639E-BC97-4AC5-A6BB-C2DF28B79938</key>
+		<key>660BAB78-4E95-4D5C-A0E9-E65FA3E2AC5C</key>
 		<array>
 			<array>
 				<string>{-40.75, -37.5}</string>

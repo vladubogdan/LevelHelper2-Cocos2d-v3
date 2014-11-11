@@ -89,9 +89,6 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        self.contentSize = CGSizeZero;
-        
-        
         NSArray* triangles = [dict objectForKey:@"triangles"];
         [self ensureCapacity:[triangles count]];
         
@@ -193,7 +190,8 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-                
+        self.contentSize = CGSizeZero;
+        
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
