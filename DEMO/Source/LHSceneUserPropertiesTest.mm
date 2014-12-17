@@ -24,7 +24,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"USER PROPERTIES ON A NODE\nDemonstrate using user properties that were setup inside LevelHelper 2.\nLook at the console for the output.\nLook inside LHSceneUserPropertiesTest.mm for help on how you can set this up."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

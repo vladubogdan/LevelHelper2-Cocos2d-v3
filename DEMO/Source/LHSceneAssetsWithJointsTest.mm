@@ -25,12 +25,12 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR ASSETS DEMO\nAnother asset demo. This time demonstrating an asset containing joints.\n\nClick to create a new car of a random rotation."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR ASSETS DEMO\nSorry this demo is not available when using Chipmunk.\nPlease switch to the Box2d target inside Xcode."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor redColor]];
 #endif
@@ -51,9 +51,14 @@
     return ((arc4random()%RAND_MAX)/(RAND_MAX*1.0))*(Max-Min)+Min;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     
     [self createAssetAtLocation:[touch locationInNode:self]];
     

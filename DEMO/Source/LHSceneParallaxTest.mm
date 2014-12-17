@@ -27,7 +27,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"PARALLAX DEMO\nDemonstrate using a parallax to give an illusion of depth.\nThe camera is following the tire sprite.\nThe parallax is following the camera.\nEach layer in the parallax has a different movement ratio making them move at different speeds.\nLayers in the back move slower then layer in the front.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

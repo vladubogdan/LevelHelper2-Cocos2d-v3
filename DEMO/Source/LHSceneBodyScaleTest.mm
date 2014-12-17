@@ -31,12 +31,12 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"PHYSICS SCALE DEMO\nTest physics body scaling.\nTouch left side to scale objects down.\nTouch right side to scale objects up."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"PHYSICS SCALE DEMO\nTest physics body scaling.\nTouch left side to scale objects down.\nTouch right side to scale objects up.\nWhen using Chipmunk scale is done using Cocos2d API (does not work correctly\n check Box2d example for difference)."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
 #endif
 
@@ -52,10 +52,15 @@
 	return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
+
     CGPoint pt = [touch locationInNode:self];
     [self scaleSpritesAtPoint:pt];
     

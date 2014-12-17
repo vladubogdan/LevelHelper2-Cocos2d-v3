@@ -31,12 +31,12 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS\nClick to remove joints.\n"
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"OTHER JOINTS\nClick to remove joints.\n\nNot all joints are supported when using CHIPMUNK."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
 #endif
 
@@ -55,10 +55,15 @@
     return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
+
     [self handleJoints];
 
     //dont forget to call super

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E02751C1A41DC1000327FEE /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB7B2BD1A41CE2100CE7E65 /* libcocos2d.a */; };
 		6E0D5612194C32A30036E940 /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
 		6E0D5629194C32A30036E940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228B1924BD88005E8532 /* main.m */; };
 		6E0D5662194C32A30036E940 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12228F1924BD88005E8532 /* AppDelegate.m */; };
@@ -66,12 +67,6 @@
 		6E2171481982BA8600C1F7CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEE1924BD85005E8532 /* AVFoundation.framework */; };
 		6E21714C1982BA8600C1F7CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FF21924BD85005E8532 /* Foundation.framework */; };
 		6E21714D1982BA8600C1F7CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E121FEC1924BD85005E8532 /* AudioToolbox.framework */; };
-		6E34197419A74BC800B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E34132619A710CB00B73620 /* libcocos2d.a */; };
-		6E3419D419A7503000B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */; };
-		6E341A0419A751E500B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E34132619A710CB00B73620 /* libcocos2d.a */; };
-		6E341A0519A751EC00B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */; };
-		6E341A9919A752A600B73620 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E341A9619A7529300B73620 /* libcocos2d.a */; };
-		6E341A9A19A752AD00B73620 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E341A0319A751DF00B73620 /* libObjectiveChipmunk.a */; };
 		6E341AA819A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
 		6E341AA919A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
 		6E341AAA19A755F100B73620 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E341AA719A755F100B73620 /* PUBLISH_FOLDER */; };
@@ -168,57 +163,16 @@
 		6EC5552C19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
 		6EC5552D19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
 		6EF5DD2419A50DBB00D5D289 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74A19A4F1E50046CDBD /* libLevelHelper2-API.a */; };
+		6EFF0CE51A41F0B500240D0B /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB7B2C31A41CE2100CE7E65 /* libcocos2d-mac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E34132519A710CB00B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6E3412F819A710A100B73620;
-			remoteInfo = cocos2d;
-		};
-		6E34197219A74BBF00B73620 /* PBXContainerItemProxy */ = {
+		6E02751A1A41DC0600327FEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E3412F719A710A100B73620;
-			remoteInfo = cocos2d;
-		};
-		6E3419D219A74FA500B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6E34198B19A74F5300B73620;
-			remoteInfo = ObjectiveChipmunk;
-		};
-		6E3419FF19A751DF00B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E3412F719A710A100B73620;
-			remoteInfo = cocos2d;
-		};
-		6E341A0219A751DF00B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6E3419FE19A7508000B73620;
-			remoteInfo = "ObjectiveChipmunk-MAC";
-		};
-		6E341A9519A7529300B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6E341A9319A7525B00B73620;
-			remoteInfo = "cocos2d-MAC";
-		};
-		6E341A9719A7529D00B73620 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E341A0619A7525B00B73620;
-			remoteInfo = "cocos2d-MAC";
+			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
+			remoteInfo = "cocos2d-ios";
 		};
 		6E9FC73E19A4F1E50046CDBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -269,6 +223,34 @@
 			remoteGlobalIDString = 6EDE86AA19A4898100599C48;
 			remoteInfo = "LevelHelper2-API+Box2d";
 		};
+		6EB7B2BC1A41CE2100CE7E65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5018F24D0DFDEAC400C013A5;
+			remoteInfo = "cocos2d-ios";
+		};
+		6EB7B2BE1A41CE2100CE7E65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2FEB74F194F6C9E00FC0574;
+			remoteInfo = cocos2dAndroid;
+		};
+		6EB7B2C01A41CE2100CE7E65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BF3267A195F8D8800D9A51A;
+			remoteInfo = cocos2dJava;
+		};
+		6EB7B2C21A41CE2100CE7E65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A4037A819E37038007B6E8F;
+			remoteInfo = "cocos2d-mac";
+		};
 		6EF5DD0019A50C3900D5D289 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */;
@@ -276,9 +258,19 @@
 			remoteGlobalIDString = 6EDE8B1019A4986C00599C48;
 			remoteInfo = "LevelHelper2-API+Box2d-OSX";
 		};
+		6EFF0CE31A41F0AB00240D0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4037A719E37038007B6E8F;
+			remoteInfo = "cocos2d-mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E0275221A41DD2700327FEE /* libObjectiveChipmunk-iPhone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libObjectiveChipmunk-iPhone.a"; path = "cocos2d/build/Debug-iphoneos/libObjectiveChipmunk-iPhone.a"; sourceTree = "<group>"; };
+		6E0275241A41DD8600327FEE /* libObjectAL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectAL.a; path = "cocos2d/external/ObjectAL/ObjectAL/build/Debug-iphoneos/libObjectAL.a"; sourceTree = "<group>"; };
+		6E0275261A41DE0500327FEE /* libSSZipArchive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSSZipArchive.a; path = "cocos2d/external/SSZipArchive/build/Debug-iphoneos/libSSZipArchive.a"; sourceTree = "<group>"; };
 		6E0D56A3194C32A30036E940 /* LevelHelper2-Cocos2d-v3+Box2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0D56A4194C32A30036E940 /* Info+Box2D.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2D.plist"; path = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2D.plist"; sourceTree = "<absolute>"; };
 		6E121FE31924BD85005E8532 /* LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,8 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E34197419A74BC800B73620 /* libcocos2d.a in Frameworks */,
-				6E3419D419A7503000B73620 /* libObjectiveChipmunk.a in Frameworks */,
+				6E02751C1A41DC1000327FEE /* libcocos2d.a in Frameworks */,
 				6E9FD2D119A5044F0046CDBD /* libLevelHelper2-API.a in Frameworks */,
 				6E0D567C194C32A30036E940 /* OpenAL.framework in Frameworks */,
 				6E0D567D194C32A30036E940 /* UIKit.framework in Frameworks */,
@@ -406,8 +397,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E341A0419A751E500B73620 /* libcocos2d.a in Frameworks */,
-				6E341A0519A751EC00B73620 /* libObjectiveChipmunk.a in Frameworks */,
 				6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */,
 				6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */,
 				6E121FF11924BD85005E8532 /* UIKit.framework in Frameworks */,
@@ -425,9 +414,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E341A9919A752A600B73620 /* libcocos2d.a in Frameworks */,
+				6EFF0CE51A41F0B500240D0B /* libcocos2d-mac.a in Frameworks */,
 				6EF5DD2419A50DBB00D5D289 /* libLevelHelper2-API.a in Frameworks */,
-				6E341A9A19A752AD00B73620 /* libObjectiveChipmunk.a in Frameworks */,
 				6E2171481982BA8600C1F7CF /* AVFoundation.framework in Frameworks */,
 				6E2171451982BA8600C1F7CF /* OpenAL.framework in Frameworks */,
 				6E21714D1982BA8600C1F7CF /* AudioToolbox.framework in Frameworks */,
@@ -467,6 +455,9 @@
 		6E121FE51924BD85005E8532 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E0275261A41DE0500327FEE /* libSSZipArchive.a */,
+				6E0275241A41DD8600327FEE /* libObjectAL.a */,
+				6E0275221A41DD2700327FEE /* libObjectiveChipmunk-iPhone.a */,
 				6E4026931982BC50002B4D32 /* AppKit.framework */,
 				6E4026911982BC32002B4D32 /* OpenGL.framework */,
 				6E121FE61924BD85005E8532 /* QuartzCore.framework */,
@@ -548,17 +539,6 @@
 				6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		6E34132219A710CB00B73620 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6E34132619A710CB00B73620 /* libcocos2d.a */,
-				6E341A9619A7529300B73620 /* libcocos2d.a */,
-				6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */,
-				6E341A0319A751DF00B73620 /* libObjectiveChipmunk.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6E341AA619A755DC00B73620 /* Demo */ = {
@@ -660,6 +640,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6EB7B2B51A41CE2100CE7E65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EB7B2BD1A41CE2100CE7E65 /* libcocos2d.a */,
+				6EB7B2BF1A41CE2100CE7E65 /* libcocos2dAndroid.a */,
+				6EB7B2C11A41CE2100CE7E65 /* cocos2dJava.jar */,
+				6EB7B2C31A41CE2100CE7E65 /* libcocos2d-mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -674,7 +665,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6E34197319A74BBF00B73620 /* PBXTargetDependency */,
+				6E02751B1A41DC0600327FEE /* PBXTargetDependency */,
 				6E9FD2D019A504420046CDBD /* PBXTargetDependency */,
 			);
 			name = "LevelHelper2-Cocos2d-v3+Box2d-iOS";
@@ -693,7 +684,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6E341A0019A751DF00B73620 /* PBXTargetDependency */,
 				6E9FD2A219A4FBFD0046CDBD /* PBXTargetDependency */,
 			);
 			name = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS";
@@ -712,7 +702,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6E341A9819A7529D00B73620 /* PBXTargetDependency */,
+				6EFF0CE41A41F0AB00240D0B /* PBXTargetDependency */,
 				6EF5DD0119A50C3900D5D289 /* PBXTargetDependency */,
 			);
 			name = "LevelHelper2-Cocos2d-v3+Box2d-MacOS";
@@ -745,7 +735,7 @@
 					ProjectRef = 6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */;
 				},
 				{
-					ProductGroup = 6E34132219A710CB00B73620 /* Products */;
+					ProductGroup = 6EB7B2B51A41CE2100CE7E65 /* Products */;
 					ProjectRef = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
 				},
 				{
@@ -763,34 +753,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6E34132619A710CB00B73620 /* libcocos2d.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcocos2d.a;
-			remoteRef = 6E34132519A710CB00B73620 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E3419D319A74FA500B73620 /* libObjectiveChipmunk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libObjectiveChipmunk.a;
-			remoteRef = 6E3419D219A74FA500B73620 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E341A0319A751DF00B73620 /* libObjectiveChipmunk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libObjectiveChipmunk.a;
-			remoteRef = 6E341A0219A751DF00B73620 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E341A9619A7529300B73620 /* libcocos2d.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcocos2d.a;
-			remoteRef = 6E341A9519A7529300B73620 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		6E9FC73F19A4F1E50046CDBD /* libBox2D.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -824,6 +786,34 @@
 			fileType = archive.ar;
 			path = "libLevelHelper2-API.a";
 			remoteRef = 6E9FC74919A4F1E50046CDBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB7B2BD1A41CE2100CE7E65 /* libcocos2d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2d.a;
+			remoteRef = 6EB7B2BC1A41CE2100CE7E65 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB7B2BF1A41CE2100CE7E65 /* libcocos2dAndroid.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2dAndroid.a;
+			remoteRef = 6EB7B2BE1A41CE2100CE7E65 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB7B2C11A41CE2100CE7E65 /* cocos2dJava.jar */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.jar;
+			path = cocos2dJava.jar;
+			remoteRef = 6EB7B2C01A41CE2100CE7E65 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EB7B2C31A41CE2100CE7E65 /* libcocos2d-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcocos2d-mac.a";
+			remoteRef = 6EB7B2C21A41CE2100CE7E65 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1004,20 +994,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E34197319A74BBF00B73620 /* PBXTargetDependency */ = {
+		6E02751B1A41DC0600327FEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = cocos2d;
-			targetProxy = 6E34197219A74BBF00B73620 /* PBXContainerItemProxy */;
-		};
-		6E341A0019A751DF00B73620 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2d;
-			targetProxy = 6E3419FF19A751DF00B73620 /* PBXContainerItemProxy */;
-		};
-		6E341A9819A7529D00B73620 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "cocos2d-MAC";
-			targetProxy = 6E341A9719A7529D00B73620 /* PBXContainerItemProxy */;
+			name = "cocos2d-ios";
+			targetProxy = 6E02751A1A41DC0600327FEE /* PBXContainerItemProxy */;
 		};
 		6E9FD2A219A4FBFD0046CDBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1033,6 +1013,11 @@
 			isa = PBXTargetDependency;
 			name = "LevelHelper2-API+Box2d-OSX";
 			targetProxy = 6EF5DD0019A50C3900D5D289 /* PBXContainerItemProxy */;
+		};
+		6EFF0CE41A41F0AB00240D0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2d-mac";
+			targetProxy = 6EFF0CE31A41F0AB00240D0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1065,13 +1050,19 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
@@ -1124,13 +1115,19 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
@@ -1340,14 +1337,20 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Mac\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Mac\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",
@@ -1399,14 +1402,20 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Mac\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Mac\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API/Animations\"",

@@ -851,7 +851,12 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     return array;
 }
 
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+#else
 - (void)visit
+#endif//cocos2d_version
 {
     if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
         [self lateLoading];
@@ -922,7 +927,13 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
                    segments:_segments];
     }
     
+    
+#if COCOS2D_VERSION >= 0x00030300
+    [super visit:renderer parentTransform:parentTransform];
+#else
     [super visit];
+#endif//cocos2d_version
+    
 }
 
 #pragma mark LHNodeProtocol Optional

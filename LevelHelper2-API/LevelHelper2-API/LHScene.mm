@@ -74,7 +74,7 @@
 
     CGPoint touchBeganLocation;
     
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
     UIPinchGestureRecognizer *pinchRecognizer;
 #endif
     
@@ -99,7 +99,7 @@
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
     [[[CCDirector sharedDirector] view] removeGestureRecognizer:pinchRecognizer];
     LH_SAFE_RELEASE(pinchRecognizer);
 #endif
@@ -197,7 +197,7 @@
         
         
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
         [[CCFileUtils sharedFileUtils] setiPhoneContentScaleFactor:curDev.ratio];
 #endif
         
@@ -231,7 +231,7 @@
         
         [self setUserInteractionEnabled:YES];
 
-        #ifdef __CC_PLATFORM_IOS
+        #if __CC_PLATFORM_IOS
         pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
         [[[CCDirector sharedDirector] view] addGestureRecognizer:pinchRecognizer];
         #endif
@@ -245,7 +245,7 @@
 #endif
         
         //call this to update the views when using camera/parallax
-        [self visit];
+//        [self visit];
         
         loadingInProgress = false;
     }
@@ -643,7 +643,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #pragma mark - TOUCH SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
 - (void) pinch:(UIPinchGestureRecognizer *)recognizer{
     
@@ -660,12 +660,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     [recognizer setScale:1.0];
 }
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     touchBeganLocation = [touch locationInNode:self];
 }
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
 {
     CGPoint touchLocation = [touch locationInNode:self];
     for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
@@ -675,6 +684,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         }
     }
 }
+
 #else
 
 

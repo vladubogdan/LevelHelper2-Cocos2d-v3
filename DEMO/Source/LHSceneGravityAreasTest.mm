@@ -29,7 +29,7 @@
     
     
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"GRAVITY AREAS DEMO\nObjects inside the gravity areas will get a radial or directional velocity."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     
     

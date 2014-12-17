@@ -158,11 +158,25 @@
     }
 }
 
--(void)visit{
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    if(!renderer)return;
+    
+    [_animationProtocolImp visit];
+    [self transformLayerPositions];
+    
+    [super visit:renderer parentTransform:parentTransform];
+}
+#else
+- (void)visit
+{
     [_animationProtocolImp visit];
     [self transformLayerPositions];
     [super visit];
+
 }
+#endif//cocos2d_version
 
 
 #pragma mark LHNodeProtocol Required

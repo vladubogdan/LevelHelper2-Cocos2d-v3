@@ -4,63 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ObjectiveChipmunk-MAC.xcscheme</key>
+		<key>appledoc.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>9</integer>
 		</dict>
-		<key>ObjectiveChipmunk.xcscheme</key>
+		<key>cocos2d-ios.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>8</integer>
 		</dict>
-		<key>cocos2d-MAC.xcscheme</key>
+		<key>cocos2d-mac.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>12</integer>
 		</dict>
-		<key>cocos2d.xcscheme</key>
+		<key>cocos2dAndroid.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>10</integer>
+		</dict>
+		<key>cocos2dJava.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6E3412F719A710A100B73620</key>
+		<key>5018F24C0DFDEAC400C013A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E34130719A710A100B73620</key>
+		<key>5BF32679195F8D8800D9A51A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E34198A19A74F5300B73620</key>
+		<key>7A4037A719E37038007B6E8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E34199819A74F5400B73620</key>
+		<key>B772F6B118120CC9005C069B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E3419D519A7508000B73620</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E341A0619A7525B00B73620</key>
+		<key>D2FEB60D194F6C9E00FC0574</key>
 		<dict>
 			<key>primary</key>
 			<true/>

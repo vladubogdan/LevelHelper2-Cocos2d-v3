@@ -27,11 +27,11 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"REMOVE OBJECTS ON COLLISION\nIf you are familiar with Box2d then you will know that\nremoving a body in the collision callback function\nwill make Box2d library assert as the world is locked.\nThe LevelHelper API solves this by sending the callbacks when its safe.\nCut the rope to remove the bodies when collision occurs."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"This demo is currently not available when using Chipmunk.\nIn Xcode, please switch to the Box2d targets."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
 #endif
 

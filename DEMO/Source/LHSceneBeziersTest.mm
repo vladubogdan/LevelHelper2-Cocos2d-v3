@@ -24,7 +24,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"BEZIERS DEMO\nBeziers can be used to draw line shapes.\nBy disabling control points you can have part of the bezier as a straight line.\nIn LevelHelper, select a bezier and hold control to edit it.Right click to toggle control points.\nYou can draw the outline of a shape using beziers and then make that outline into a shape."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

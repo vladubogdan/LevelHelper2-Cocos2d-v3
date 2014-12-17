@@ -28,7 +28,7 @@
      */
     
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"SPRITE SHEET ANIMATION DEMO\nThe tilt effect is done by animating the rotation."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     
     

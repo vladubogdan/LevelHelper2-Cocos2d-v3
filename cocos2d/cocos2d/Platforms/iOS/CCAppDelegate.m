@@ -24,37 +24,21 @@
  */
 
 #import "../../ccMacros.h"
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
 #import "CCAppDelegate.h"
 #import "CCTexture.h"
 #import "CCFileUtils.h"
 #import "CCDirector_Private.h"
 #import "CCScheduler.h"
-
-#import "kazmath/kazmath.h"
-#import "kazmath/GL/matrix.h"
+#import "CCGLView.h"
 
 #import "OALSimpleAudio.h"
+#import "CCPackageManager.h"
 
-NSString* const CCSetupPixelFormat = @"CCSetupPixelFormat";
-NSString* const CCSetupScreenMode = @"CCSetupScreenMode";
-NSString* const CCSetupScreenOrientation = @"CCSetupScreenOrientation";
-NSString* const CCSetupAnimationInterval = @"CCSetupAnimationInterval";
-NSString* const CCSetupFixedUpdateInterval = @"CCSetupFixedUpdateInterval";
-NSString* const CCSetupShowDebugStats = @"CCSetupShowDebugStats";
-NSString* const CCSetupTabletScale2X = @"CCSetupTabletScale2X";
-
-NSString* const CCSetupDepthFormat = @"CCSetupDepthFormat";
-NSString* const CCSetupPreserveBackbuffer = @"CCSetupPreserveBackbuffer";
-NSString* const CCSetupMultiSampling = @"CCSetupMultiSampling";
-NSString* const CCSetupNumberOfSamples = @"CCSetupNumberOfSamples";
-
-NSString* const CCScreenOrientationLandscape = @"CCScreenOrientationLandscape";
-NSString* const CCScreenOrientationPortrait = @"CCScreenOrientationPortrait";
-
-NSString* const CCScreenModeFlexible = @"CCScreenModeFlexible";
-NSString* const CCScreenModeFixed = @"CCScreenModeFixed";
+#if __CC_METAL_SUPPORTED_AND_ENABLED
+#import "CCMetalView.h"
+#endif
 
 // Fixed size. As wide as iPhone 5 at 2x and as high as the iPad at 2x.
 const CGSize FIXED_SIZE = {568, 384};
@@ -78,13 +62,17 @@ const CGSize FIXED_SIZE = {568, 384};
 // Only valid for iOS 6+. NOT VALID for iOS 4 / 5.
 -(NSUInteger)supportedInterfaceOrientations
 {
-    if ([_screenOrientation isEqual:CCScreenOrientationLandscape])
+    if ([_screenOrientation isEqual:CCScreenOrientationAll])
     {
-        return UIInterfaceOrientationMaskLandscape;
+        return UIInterfaceOrientationMaskAll;
+    }
+    else if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
+    {
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
     }
     else
     {
-        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+        return UIInterfaceOrientationMaskLandscape;
     }
 }
 
@@ -92,18 +80,22 @@ const CGSize FIXED_SIZE = {568, 384};
 // Only valid on iOS 4 / 5. NOT VALID for iOS 6.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([_screenOrientation isEqual:CCScreenOrientationLandscape])
+    if ([_screenOrientation isEqual:CCScreenOrientationAll])
     {
-        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+        return YES;
+    }
+    else if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
+    {
+        return UIInterfaceOrientationIsPortrait(interfaceOrientation);
     }
     else
     {
-        return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
     }
 }
 
 // Projection delegate is only used if the fixed resolution mode is enabled
--(void)updateProjection
+-(GLKMatrix4)updateProjection
 {
 	CGSize sizePoint = [CCDirector sharedDirector].viewSize;
 	CGSize fixed = [CCDirector sharedDirector].designSize;
@@ -111,15 +103,7 @@ const CGSize FIXED_SIZE = {568, 384};
 	// Half of the extra size that will be cut off
 	CGPoint offset = ccpMult(ccp(fixed.width - sizePoint.width, fixed.height - sizePoint.height), 0.5);
 	
-	kmGLMatrixMode(KM_GL_PROJECTION);
-	kmGLLoadIdentity();
-	
-	kmMat4 orthoMatrix;
-	kmMat4OrthographicProjection(&orthoMatrix, offset.x, sizePoint.width + offset.x, offset.y, sizePoint.height + offset.y, -1024, 1024 );
-	kmGLMultMatrix( &orthoMatrix );
-	
-	kmGLMatrixMode(KM_GL_MODELVIEW);
-	kmGLLoadIdentity();
+	return GLKMatrix4MakeOrtho(offset.x, sizePoint.width + offset.x, offset.y, sizePoint.height + offset.y, -1024, 1024);
 }
 
 // This is needed for iOS4 and iOS5 in order to ensure
@@ -165,8 +149,9 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
+	CGRect bounds = [window_ bounds];
 	
-	// CCGLView creation
+	// CCView creation
 	// viewWithFrame: size of the OpenGL view. For full screen use [_window bounds]
 	//  - Possible values: any CGRect
 	// pixelFormat: Format of the render buffer. Use RGBA8 for better color precision (eg: gradients). But it takes more memory and it is slower
@@ -179,24 +164,34 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	//  - Possible values: YES, NO
 	// numberOfSamples: Only valid if multisampling is enabled
 	//  - Possible values: 0 to glGetIntegerv(GL_MAX_SAMPLES_APPLE)
-	CCGLView *glView = [CCGLView
-		viewWithFrame:[window_ bounds]
-		pixelFormat:config[CCSetupPixelFormat] ?: kEAGLColorFormatRGBA8
-        depthFormat:[config[CCSetupDepthFormat] unsignedIntValue]
-		preserveBackbuffer:[config[CCSetupPreserveBackbuffer] boolValue]
-		sharegroup:nil
-		multiSampling:[config[CCSetupMultiSampling] boolValue]
-		numberOfSamples:[config[CCSetupNumberOfSamples] unsignedIntValue]
-	];
+	CC_VIEW<CCDirectorView> *ccview = nil;
+	switch([CCConfiguration sharedConfiguration].graphicsAPI){
+		case CCGraphicsAPIGL:
+			ccview = [CCGLView
+				viewWithFrame:bounds
+				pixelFormat:config[CCSetupPixelFormat] ?: kEAGLColorFormatRGBA8
+				depthFormat:[config[CCSetupDepthFormat] unsignedIntValue]
+				preserveBackbuffer:[config[CCSetupPreserveBackbuffer] boolValue]
+				sharegroup:nil
+				multiSampling:[config[CCSetupMultiSampling] boolValue]
+				numberOfSamples:[config[CCSetupNumberOfSamples] unsignedIntValue]
+			];
+			break;
+#if __CC_METAL_SUPPORTED_AND_ENABLED
+		case CCGraphicsAPIMetal:
+			// TODO support MSAA, depth buffers, etc.
+			ccview = [[CCMetalView alloc] initWithFrame:bounds];
+			break;
+#endif
+		default: NSAssert(NO, @"Internal error: Graphics API not set up.");
+	}
 	
 	CCDirectorIOS* director = (CCDirectorIOS*) [CCDirector sharedDirector];
 	
 	director.wantsFullScreenLayout = YES;
 	
-//#if DEBUG
 	// Display FSP and SPF
 	[director setDisplayStats:[config[CCSetupShowDebugStats] boolValue]];
-//#endif
 	
 	// set FPS at 60
 	NSTimeInterval animationInterval = [(config[CCSetupAnimationInterval] ?: @(1.0/60.0)) doubleValue];
@@ -205,7 +200,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	director.fixedUpdateInterval = [(config[CCSetupFixedUpdateInterval] ?: @(1.0/60.0)) doubleValue];
 	
 	// attach the openglView to the director
-	[director setView:glView];
+	[director setView:ccview];
 	
 	if([config[CCSetupScreenMode] isEqual:CCScreenModeFixed]){
 		CGSize size = [CCDirector sharedDirector].viewSizeInPixels;
@@ -264,48 +259,80 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	
 	// set the Navigation Controller as the root view controller
 	[window_ setRootViewController:navController_];
-	
+
+	[[CCPackageManager sharedManager] loadPackages];
+
 	// make main window visible
 	[window_ makeKeyAndVisible];
+    
+    [self forceOrientation];
+}
+
+// iOS8 hack around orientation bug
+-(void)forceOrientation
+{
+#if __CC_PLATFORM_IOS && defined(__IPHONE_8_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+    if([navController_.screenOrientation isEqual:CCScreenOrientationAll])
+    {
+        [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationUnknown];
+    }
+    else if([navController_.screenOrientation isEqual:CCScreenOrientationPortrait])
+    {
+        [[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait | UIDeviceOrientationPortraitUpsideDown];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationLandscapeLeft | UIDeviceOrientationLandscapeRight];
+    }
+#endif
 }
 
 // getting a call, pause the game
 -(void) applicationWillResignActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == [CCDirector sharedDirector] )
+	if([CCDirector sharedDirector].paused == NO) {
 		[[CCDirector sharedDirector] pause];
+	}
 }
 
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
 	[[CCDirector sharedDirector] setNextDeltaTimeZero:YES];
-	if( [navController_ visibleViewController] == [CCDirector sharedDirector] )
+	if([CCDirector sharedDirector].paused) {
 		[[CCDirector sharedDirector] resume];
+	}
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == [CCDirector sharedDirector] )
+	if([CCDirector sharedDirector].animating) {
 		[[CCDirector sharedDirector] stopAnimation];
+	}
+	[[CCPackageManager sharedManager] savePackages];
 }
 
 -(void) applicationWillEnterForeground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == [CCDirector sharedDirector] )
+	if([CCDirector sharedDirector].animating == NO) {
 		[[CCDirector sharedDirector] startAnimation];
+	}
 }
 
 // application will be killed
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	[[CCDirector sharedDirector] end];
+
+    [[CCPackageManager sharedManager] savePackages];
 }
 
 // purge memory
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {
 	[[CCDirector sharedDirector] purgeCachedData];
+
+    [[CCPackageManager sharedManager] savePackages];
 }
 
 // next delta time will be zero

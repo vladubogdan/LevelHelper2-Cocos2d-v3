@@ -112,7 +112,7 @@
         NSInteger demoIdx = [availableScenes indexOfObject:[self class]];
         
         CCLabelTTF* ttf = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"Demo %d/%d",(int)demoIdx+1, (int)[availableScenes count]]
-                                             fontName:@"Arial"
+                                             fontName:@"ArialMT"
                                              fontSize:22];
         [ttf setColor:[CCColor blackColor]];
         [ttf setHorizontalAlignment:CCTextAlignmentLeft];

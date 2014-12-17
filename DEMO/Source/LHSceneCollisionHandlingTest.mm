@@ -27,11 +27,11 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"COLLISION DEMO\nWatch the console for collision information.\nCheck the LHSceneCollisionHandlingTest.mm for more info.\n\nWhen the car tyre will enter the gravity area it will be thrown upwards.\nIf the position of the car tyre is under the wood object collision will be disabled.\nWhen its on top of it, collision will occur."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"COLLISION DEMO\nWhen using Chipmunk collision is handled by Cocos2d."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
 #endif
 

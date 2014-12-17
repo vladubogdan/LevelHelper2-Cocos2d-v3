@@ -16,8 +16,11 @@
 {
     if(self = [super init]){
         
-        
+#if COCOS2D_VERSION >= 0x00030300
+//        _shader = [CCShader shaderNamed:@""];
+#else
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+#endif//cocos2d_version
 
         
     }
@@ -30,9 +33,14 @@
                    color:(CCColor*)color;
 {
     [self clear];
-    
+
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
     _blendFunc.src = GL_SRC_ALPHA;
     _blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
+#endif//cocos2d_version
+
 
     
     int count = (int)[triangles count];
@@ -63,35 +71,66 @@
         ccV2F_C4B_T2F a = {{pa.x, pa.y}, c4, {ua.x, ua.y} };
         ccV2F_C4B_T2F b = {{pb.x, pb.y}, c4, {ub.x, ub.y} };
         ccV2F_C4B_T2F c = {{pc.x, pc.y}, c4, {uc.x, uc.y} };
-            
+        
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         ccV2F_C4B_T2F_Triangle *triangles = (ccV2F_C4B_T2F_Triangle *)(_buffer + _bufferCount);
         triangles[0] = (ccV2F_C4B_T2F_Triangle){a, b, c};
-            
+        
         _bufferCount += 3;
+#endif//cocos2d_version
+
     }
     
+    
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
     _dirty = YES;
+#endif//cocos2d_version
+
 }
 
 
 -(void)ensureCapacity:(NSUInteger)count
 {
-	if(_bufferCount + count > _bufferCapacity){
-		_bufferCapacity += MAX(_bufferCapacity, count);
-		_buffer = realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
-	}
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if(_bufferCount + count > _bufferCapacity){
+        _bufferCapacity += MAX(_bufferCapacity, count);
+        _buffer = realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
+    }
+#endif//cocos2d_version
+
 }
 
 
 
 -(void) updateBlendFunc{
 	if( !_texture || ! [_texture hasPremultipliedAlpha] ) {
-		_blendFunc.src = GL_SRC_ALPHA;
-		_blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
+        _blendFunc.src = GL_SRC_ALPHA;
+        _blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
+
+#endif//cocos2d_version
+
+        
 		[self setOpacityModifyRGB:NO];
 	} else {
-		_blendFunc.src = CC_BLEND_SRC;
-		_blendFunc.dst = CC_BLEND_DST;
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
+        _blendFunc.src = CC_BLEND_SRC;
+        _blendFunc.dst = CC_BLEND_DST;
+#endif//cocos2d_version
+
 		[self setOpacityModifyRGB:YES];
 	}
 }
@@ -100,7 +139,13 @@
     NSAssert( !texture || [texture isKindOfClass:[CCTexture class]], @"setTexture expects a CCTexture2D. Invalid argument");
 	if(_texture != texture ) {
 		_texture = texture;
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
+#endif//cocos2d_version
+
 		[self updateBlendFunc];
 	}
 }
@@ -113,31 +158,45 @@
 
 -(void)render
 {
-	if( _dirty ) {
-		glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-		_dirty = NO;
-	}
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if( _dirty ) {
+        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        _dirty = NO;
+    }
+    
+    ccGLBindVAO(_vao);
+    glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
+    
+    CC_INCREMENT_GL_DRAWS(1);
+    
+    CHECK_GL_ERROR();
+#endif//cocos2d_version
+
+    
 	
-	ccGLBindVAO(_vao);
-	glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
-	
-	CC_INCREMENT_GL_DRAWS(1);
-	
-	CHECK_GL_ERROR();
 }
 
 -(void)draw
 {
-	ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
+    
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
     
     ccGLBindTexture2D( [_texture name] );
     
-	[_shaderProgram use];
-	[_shaderProgram setUniformsForBuiltins];
-	
-	[self render];
+    [_shaderProgram use];
+    [_shaderProgram setUniformsForBuiltins];
+    
+    [self render];
+
+#endif//cocos2d_version
+
 }
 
 @end

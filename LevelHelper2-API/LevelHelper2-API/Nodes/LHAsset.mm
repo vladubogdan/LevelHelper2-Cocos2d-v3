@@ -196,6 +196,18 @@
     return [tracedFixtures objectForKey:uuid];
 }
 
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    if(!renderer)return;
+    
+    [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
+    
+    [super visit:renderer parentTransform:parentTransform];
+}
+#else
 - (void)visit
 {
     [_physicsProtocolImp visit];
@@ -203,6 +215,9 @@
     
     [super visit];
 }
+#endif//cocos2d_version
+
+
 
 #pragma mark - Box2D Support
 #if LH_USE_BOX2D

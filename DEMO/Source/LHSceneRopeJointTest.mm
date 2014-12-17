@@ -27,7 +27,7 @@
      */
     
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\nThe middle joint does not use a texture.\nThe right most joint can be cut - Make a line to cut it.\nWatch the console for didCutRopeJoint notification."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

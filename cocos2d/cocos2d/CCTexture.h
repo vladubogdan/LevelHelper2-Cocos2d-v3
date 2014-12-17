@@ -105,11 +105,14 @@ typedef NS_ENUM(NSUInteger, CCTexturePixelFormat) {
 	///! 2-bit PVRTC-compressed texture: PVRTC2
 	CCTexturePixelFormat_PVRTC2,
 
+	///! 32-bit texture: BGRA8888
+	CCTexturePixelFormat_BGRA8888,
+    
 	///! Default texture format: RGBA8888
 	CCTexturePixelFormat_Default = CCTexturePixelFormat_RGBA8888,
 };
 
-@class CCGLProgram;
+@class CCShader;
 
 /** CCTexture2D class.
  *  This class allows to easily create OpenGL 2D textures from images, text or raw data.
@@ -118,24 +121,7 @@ typedef NS_ENUM(NSUInteger, CCTexturePixelFormat) {
  *  - i.e. "contentSize" != (pixelsWide, pixelsHigh) and (maxS, maxT) != (1.0, 1.0).
  *  Be aware that the content of the generated textures will be upside-down!
  */
-@interface CCTexture : NSObject {
-	GLuint						_name;
-	CGSize						_sizeInPixels;
-	CGFloat _contentScale;
-	NSUInteger					_width,
-								_height;
-	CCTexturePixelFormat		_format;
-	GLfloat						_maxS,
-								_maxT;
-	BOOL						_premultipliedAlpha;
-	BOOL						_hasMipmaps;
-    
-    BOOL                        _antialiased;
-
-	// Needed for drawAtRect, drawInPoint.
-	CCGLProgram					*_shaderProgram;
-}
-
+@interface CCTexture : NSObject
 
 /// -----------------------------------------------------------------------
 /// @name Initializing a CCTexture Object
@@ -170,6 +156,9 @@ typedef NS_ENUM(NSUInteger, CCTexturePixelFormat) {
  */
 +(instancetype)textureWithFile:(NSString*)file;
 
+/// A placeholder value for a blank sizeless texture.
++(instancetype)none;
+
 
 /// -------------------------------------------------------
 /// @name Accessing The Texture Attributes
@@ -192,9 +181,6 @@ typedef NS_ENUM(NSUInteger, CCTexturePixelFormat) {
 
 /** True if antialised. */
 @property(nonatomic,assign,getter=isAntialiased) BOOL antialiased;
-
-/** Shader program used by drawAtPoint and drawInRect. */
-@property(nonatomic,readwrite,strong) CCGLProgram *shaderProgram;
 
 /** Returns the contentScale of the texture.
  In general "HD" textures return a contentScale of 2.0, while non-HD textures return 1.0.

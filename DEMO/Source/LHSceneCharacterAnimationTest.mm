@@ -24,7 +24,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CHARACTER ANIMATION DEMO\nDemonstrate a character animation.\nThis demo also uses per device positioning.\nChange the device and run this demo again\nto see how the character is placed in a different position on each device.\nPer device positioning is mostly useful for User Interface elements,\nlike a life bar that you always want to be displayed in the top right corner."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
@@ -37,9 +37,14 @@
 	return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     
     [self tougleAnimation];
     

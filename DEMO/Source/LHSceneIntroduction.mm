@@ -24,7 +24,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"INTRODUCTION\nUse the Previous and Next buttons to toggle between demos.\nUse the Restart button to start the current demo again.\nInvestigate each demo source file and LevelHelper document file for more info on how it was done.\nYou can find all scene files in the DEMO_DOCUMENTS\\levels folder.\nYou can find all source files in the DemoExamples folder located under Classes in Xcode.\nFor acurate FPS count use a real device.\n\nGo to AppDelegate.m to set your own starting scene."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

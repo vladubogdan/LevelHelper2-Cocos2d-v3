@@ -125,14 +125,27 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark LHNodeProtocol Optional
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    if(!renderer)return;
+    
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
+    }
+    
+    [super visit:renderer parentTransform:parentTransform];
+}
+#else
 - (void)visit
 {
     if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
         [self lateLoading];
     }
-       
+    
     [super visit];
 }
+#endif//cocos2d_version
 -(BOOL)lateLoading
 {
     [_jointProtocolImp findConnectedNodes];

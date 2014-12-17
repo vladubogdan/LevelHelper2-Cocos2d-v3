@@ -239,7 +239,15 @@ typedef struct _LH_V2F_C4B_Triangle
         
         bodySplashes = [[NSMutableDictionary alloc] init];
         
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+#endif//cocos2d_version
+
+        
+        
         
         [self setColor:[dict colorForKey:@"colorOverlay"]];
         
@@ -399,37 +407,55 @@ typedef struct _LH_V2F_C4B_Triangle
 
 -(void)ensureCapacity:(NSUInteger)count
 {
-	if(_bufferCount + count > _bufferCapacity){
-		_bufferCapacity += MAX(_bufferCapacity, count);
-		_buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
-	}
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if(_bufferCount + count > _bufferCapacity){
+        _bufferCapacity += MAX(_bufferCapacity, count);
+        _buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
+    }
+#endif//cocos2d_version
+
+    
+	
 }
 
 -(void)render
 {
-	if( _dirty ) {
-		glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-		_dirty = NO;
-	}
-	
-	ccGLBindVAO(_vao);
-	glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
-	
-	CC_INCREMENT_GL_DRAWS(1);
-	
-	CHECK_GL_ERROR();
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if( _dirty ) {
+        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        _dirty = NO;
+    }
+    
+    ccGLBindVAO(_vao);
+    glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
+    
+    CC_INCREMENT_GL_DRAWS(1);
+    
+    CHECK_GL_ERROR();
+#endif//cocos2d_version
+
+    
 }
 
 -(void)draw
 {
-	ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
     
     [_shaderProgram use];
-	[_shaderProgram setUniformsForBuiltins];
-	
-	[self render];
+    [_shaderProgram setUniformsForBuiltins];
+    
+    [self render];
+#endif//cocos2d_version
+
 }
 #if LH_USE_BOX2D
 -(CGRect)boundingRectForBody:(b2Body*)bd
@@ -468,7 +494,11 @@ typedef struct _LH_V2F_C4B_Triangle
 #endif
 
 
--(void)visit
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+#else
+- (void)visit
+#endif//cocos2d_version
 {
     NSMutableArray* toRemove = [NSMutableArray array];
     for(LHWave* w in waves){
@@ -568,14 +598,26 @@ typedef struct _LH_V2F_C4B_Triangle
             ccV2F_C4B_T2F b = {{(GLfloat)posB.x, (GLfloat)posB.y}, {(GLubyte)(color.red*255.0f), (GLubyte)(color.green*255.0f), (GLubyte)(color.blue*255.0f), (GLubyte)(color.alpha*255.0f)}};
             ccV2F_C4B_T2F c = {{(GLfloat)posC.x, (GLfloat)posC.y}, {(GLubyte)(color.red*255.0f), (GLubyte)(color.green*255.0f), (GLubyte)(color.blue*255.0f), (GLubyte)(color.alpha*255.0f)}};
             
+            
+#if COCOS2D_VERSION >= 0x00030300
+            //XXX
+#else
             ccV2F_C4B_T2F_Triangle *triangles = (ccV2F_C4B_T2F_Triangle *)(_buffer + _bufferCount);
             triangles[0] = (ccV2F_C4B_T2F_Triangle){a, b, c};
             
             _bufferCount += 3;
+#endif//cocos2d_version
+
+            
+            
         }
     }
 
+#if COCOS2D_VERSION >= 0x00030300
+    [super visit:renderer parentTransform:parentTransform];
+#else
     [super visit];
+#endif//cocos2d_version
 
     
 #if LH_USE_BOX2D

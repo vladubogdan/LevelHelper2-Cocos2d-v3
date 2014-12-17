@@ -26,7 +26,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"NODES SUBLCASSING DEMO\nAll node types available in LevelHelper can be subclassed in order to add your own game logic.\nCheck LHSceneNodesSubclassingTest for how to do it.\nBlue robot is of class \"BlueRobotSprite\" while the pink robot is a generic \"LHSprite\" class.\nThe node is of class \"MyCustomNode\" and the blue outline is draw by the custom class."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

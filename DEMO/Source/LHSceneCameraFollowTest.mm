@@ -28,7 +28,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA FOLLOW DEMO\nDemonstrate a camera following an object (the tire sprite).\nThe camera is restricted and cannot go outside the game world rectangle.\nNotice how on the sides the candy will no longer be in the center and the camera stops following it.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n\nClick a position to look at it.\nUse left buttons for more actions."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];
@@ -38,7 +38,7 @@
     [[self uiNode] addChild:ttf];//add the text to the ui element as we dont want it to move with the camera
 
     ttfZoomLevel = [CCLabelTTF labelWithString:@"Zoom 1.0"
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttfZoomLevel setColor:[CCColor blackColor]];
     [ttfZoomLevel setHorizontalAlignment:CCTextAlignmentCenter];
@@ -238,9 +238,14 @@
     }
 }
 
-#ifdef __CC_PLATFORM_IOS
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
+#if __CC_PLATFORM_IOS
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{    
     CGPoint touchLocation = [touch locationInNode:self];
     CGPoint touchLocationInGWCoordinates = [[self gameWorldNode] convertToNodeSpaceAR:touchLocation];
     

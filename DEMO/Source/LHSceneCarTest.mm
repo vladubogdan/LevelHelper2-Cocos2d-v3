@@ -47,12 +47,12 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR Demo - Wheel Joints Example.\n\nIn order for gear joints to work, Box2d requires all objects involved to be dynamic.\n\nDrag a wheel or the red handle to move the joints."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAR Demo - Wheel Joints Example.\nSorry, this demo is not available using Chipmunk. Try Box2d instead.\n"
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:24];
     
 #endif
@@ -72,7 +72,13 @@
 
 #if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
+
     
     touching = true;
     touchLocation = [touch locationInNode:self];
@@ -81,14 +87,24 @@
     [super touchBegan:touch withEvent:event];
 }
 
--(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
  
     touching = false;
 
     [super touchCancelled:touch withEvent:event];
 }
 
--(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     
     touching = false;
     

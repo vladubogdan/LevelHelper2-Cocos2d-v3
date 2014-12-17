@@ -59,7 +59,14 @@
         
         [prnt addChild:self];
         
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+#endif//cocos2d_version
+        
+        
         
         _tile = [dict boolForKey:@"tileTexture"];
         _tileScale = [dict sizeForKey:@"tileScale"];
@@ -83,7 +90,14 @@
             [self.texture setTexParameters: &texParams];
             
             
+#if COCOS2D_VERSION >= 0x00030300
+            //XXX
+#else
             _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
+#endif//cocos2d_version
+
+            
+            
         }
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
@@ -178,13 +192,26 @@
             ccV2F_C4B_T2F b = {{(GLfloat)posB.x, (GLfloat)posB.y}, c4B, {(GLfloat)uvB.x, (GLfloat)uvB.y} };
             ccV2F_C4B_T2F c = {{(GLfloat)posC.x, (GLfloat)posC.y}, c4C, {(GLfloat)uvC.x, (GLfloat)uvC.y} };
             
+            
+#if COCOS2D_VERSION >= 0x00030300
+            //XXX
+#else
             ccV2F_C4B_T2F_Triangle *triangles = (ccV2F_C4B_T2F_Triangle *)(_buffer + _bufferCount);
             triangles[0] = (ccV2F_C4B_T2F_Triangle){a, b, c};
             
             _bufferCount += 3;
+#endif//cocos2d_version
+            
+            
         }
 
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         _dirty = YES;
+#endif//cocos2d_version
+
+
     
 
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
@@ -205,26 +232,39 @@
 
 -(void)ensureCapacity:(NSUInteger)count
 {
-	if(_bufferCount + count > _bufferCapacity){
-		_bufferCapacity += MAX(_bufferCapacity, count);
-		_buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
-		
-        //		NSLog(@"Resized vertex buffer to %d", _bufferCapacity);
-	}
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if(_bufferCount + count > _bufferCapacity){
+        _bufferCapacity += MAX(_bufferCapacity, count);
+        _buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
+    }
+#endif//cocos2d_version
+
+    
+	
 }
 
 
 
 -(void) updateBlendFunc{
-	if( !_texture || ! [_texture hasPremultipliedAlpha] ) {
-		_blendFunc.src = GL_SRC_ALPHA;
-		_blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
-		[self setOpacityModifyRGB:NO];
-	} else {
-		_blendFunc.src = CC_BLEND_SRC;
-		_blendFunc.dst = CC_BLEND_DST;
-		[self setOpacityModifyRGB:YES];
-	}
+    
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if( !_texture || ! [_texture hasPremultipliedAlpha] ) {
+        _blendFunc.src = GL_SRC_ALPHA;
+        _blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
+        [self setOpacityModifyRGB:NO];
+    } else {
+        _blendFunc.src = CC_BLEND_SRC;
+        _blendFunc.dst = CC_BLEND_DST;
+        [self setOpacityModifyRGB:YES];
+    }
+#endif//cocos2d_version
+
+    
+	
 }
 
 -(void) setTexture:(CCTexture*)texture{
@@ -243,31 +283,42 @@
 
 -(void)render
 {
-	if( _dirty ) {
-		glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-		_dirty = NO;
-	}
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    if( _dirty ) {
+        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        _dirty = NO;
+    }
+    
+    ccGLBindVAO(_vao);
+    glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
+    
+    CC_INCREMENT_GL_DRAWS(1);
+    
+    CHECK_GL_ERROR();
+#endif//cocos2d_version
+
+    
 	
-	ccGLBindVAO(_vao);
-	glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
-	
-	CC_INCREMENT_GL_DRAWS(1);
-	
-	CHECK_GL_ERROR();
 }
 
 -(void)draw
 {
-	ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
-
+#if COCOS2D_VERSION >= 0x00030300
+    //XXX
+#else
+    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
+    
     ccGLBindTexture2D( [_texture name] );
-
-	[_shaderProgram use];
-	[_shaderProgram setUniformsForBuiltins];
-	
-	[self render];
+    
+    [_shaderProgram use];
+    [_shaderProgram setUniformsForBuiltins];
+    
+    [self render];
+#endif//cocos2d_version
 }
 
 -(NSMutableArray*)trianglePoints{
@@ -277,13 +328,26 @@
     return outlinePoints;
 }
 
--(void)visit
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    if(!renderer)return;
+    
+    [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
+    
+    [super visit:renderer parentTransform:parentTransform];
+}
+#else
+- (void)visit
 {
     [_physicsProtocolImp visit];
     [_animationProtocolImp visit];
     
     [super visit];
 }
+#endif//cocos2d_version
 
 #pragma mark - Box2D Support
 #if LH_USE_BOX2D

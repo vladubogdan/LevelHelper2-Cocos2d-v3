@@ -24,7 +24,7 @@
     
 
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"CAMERA DEMO\nDemonstrate a simple camera that moves in a game world by an animation.\nThe camera is not restricted and does not follow any object.\nThe blue sky is added to the Back User Interface so it will always be on screen in the back.\nThis text is added in the Front User Interface node, so it will always be on screen.\n"
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:22];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

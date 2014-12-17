@@ -12,6 +12,12 @@
 
 int main(int argc, char *argv[])
 {
-	[CCGLView load_];
+
+#if COCOS2D_VERSION >= 0x00030300
+    
+#else
+    [CCGLView load_];
+#endif//cocos2d_version
+    
     return NSApplicationMain(argc,  (const char **) argv);
 }

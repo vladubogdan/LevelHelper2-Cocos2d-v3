@@ -22,11 +22,25 @@
 
 #else
 
+
 #endif
 
 @interface LHScene (LH_SCENE_LOADING_INFO)
 -(BOOL)loadingInProgress;
 @end
+
+
+#if COCOS2D_VERSION >= 0x00030300
+
+@interface CCRenderer()
++(instancetype)currentRenderer;
+@end
+
+#else
+
+#endif//cocos2d_version
+
+
 
 #if LH_USE_BOX2D
 
@@ -251,7 +265,13 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 #if LH_DEBUG
     if(_drawState){
         [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
+        
+#if COCOS2D_VERSION >= 0x00030300
+        //XXX
+#else
         [super draw];
+#endif//cocos2d_version
+        
     }
 #endif
     
@@ -463,7 +483,17 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     if(![self paused])
         [self step:delta];
     
+    
+#if COCOS2D_VERSION >= 0x00030300
+    CCRenderer *renderer = [CCRenderer currentRenderer];
+    if(renderer){
+        [super visit];//required for smooth scrolling
+    }
+#else
     [super visit];//required for smooth scrolling
+#endif//cocos2d_version
+    
+    
 }
 
 

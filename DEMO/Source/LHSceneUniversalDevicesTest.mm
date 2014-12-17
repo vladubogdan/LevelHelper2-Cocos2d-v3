@@ -30,7 +30,7 @@
     NSString* txt = [NSString stringWithFormat:@"UNIVERSAL DEVICES DEMO: Win size in pixels %dx%d, Design Size %dx%d", (int)winSizePixels.width, (int)winSizePixels.height, (int)designSize.width, (int)designSize.height];
     
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:txt
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     [ttf setColor:[CCColor blackColor]];
     [ttf setHorizontalAlignment:CCTextAlignmentCenter];

@@ -34,9 +34,14 @@
 	return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     
     //dont forget to call super
     [super touchBegan:touch withEvent:event];

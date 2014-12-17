@@ -47,12 +47,12 @@
     
 #if LH_USE_BOX2D
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Collision Filtering Demo\nPINK collides only with BLUE\nBLUE collides only with PINK and GREEN\nGREEN collides with BLUE AND GREEN\n\nClick and drag to move the robots."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     
 #else
     CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Collision Filtering Demo\nPINK collides only with BLUE\nBLUE collides only with PINK and GREEN\nGREEN collides with BLUE\n\nClick and drag to move the robots."
-                                         fontName:@"Arial"
+                                         fontName:@"ArialMT"
                                          fontSize:20];
     
 #endif
@@ -72,8 +72,12 @@
 
 #if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     //without this touch began is not called
     CGPoint touchLocation = [touch locationInNode:self];
     
@@ -84,8 +88,13 @@
     [super touchBegan:touch withEvent:event];
 }
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
 {
+
     CGPoint touchLocation = [touch locationInNode:self];
     [self setTargetOnMouseJoint:touchLocation];
 
@@ -93,13 +102,23 @@
     [super touchMoved:touch withEvent:event];
 }
 
--(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     [self destroyMouseJoint];
     
     [super touchCancelled:touch withEvent:event];
 }
 
--(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     [self destroyMouseJoint];
     
     [super touchEnded:touch withEvent:event];
