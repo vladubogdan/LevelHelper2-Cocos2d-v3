@@ -63,6 +63,8 @@
     
     [availableScenes addObject:[LHSceneIntroduction class]];
 
+    [availableScenes addObject:[LHSceneRopeJointTest class]];
+    
     [availableScenes addObject:[LHSceneCameraFollowTest class]];
     
     [availableScenes addObject:[LHSceneUniversalDevicesTest class]];
@@ -74,7 +76,7 @@
     [availableScenes addObject:[LHSceneParallaxTest class]];
     [availableScenes addObject:[LHSceneCharacterAnimationTest class]];
 
-    [availableScenes addObject:[LHSceneRopeJointTest class]];
+
     
     [availableScenes addObject:[LHSceneAssetsTest class]];
     [availableScenes addObject:[LHSceneAssetsWithJointsTest class]];

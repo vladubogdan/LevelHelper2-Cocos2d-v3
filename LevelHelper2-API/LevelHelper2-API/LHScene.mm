@@ -363,7 +363,12 @@
 {
     //load background color
     CCColor* backgroundClr = [dict colorForKey:@"backgroundColor"];
+#if COCOS2D_VERSION >= 0x00030300
+    self.color = backgroundClr;
+#else
     glClearColor(backgroundClr.red, backgroundClr.green, backgroundClr.blue, 1.0f);
+#endif//cocos2d_version
+    
 }
 
 -(void)loadGameWorldInfoFromDictionary:(NSDictionary*)dict
