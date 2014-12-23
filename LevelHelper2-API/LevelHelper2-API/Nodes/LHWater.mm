@@ -13,6 +13,7 @@
 #import "LHConfig.h"
 #import "LHGameWorldNode.h"
 #import "LHNodePhysicsProtocol.h"
+#import "LHDrawNode.h"
 
 #if LH_USE_BOX2D
 #include "LHb2BuoyancyController.h"
@@ -154,7 +155,8 @@ typedef struct _LH_V2F_C4B_Triangle
 @implementation LHWater
 {
     LHNodeProtocolImpl* _nodeProtocolImp;
-        
+    __weak LHDrawNode* _drawNode;
+    
     float width, height;
     float numLines;
     NSMutableArray* waves;
@@ -183,13 +185,14 @@ typedef struct _LH_V2F_C4B_Triangle
 -(void)dealloc{
     
     LH_SAFE_RELEASE(_nodeProtocolImp);
-    
     LH_SAFE_RELEASE(bodySplashes);
     LH_SAFE_RELEASE(waves);
     
 #if LH_USE_BOX2D
     LH_SAFE_DELETE(buoyancyController);
 #endif
+    
+    _drawNode = nil;
     
     LH_SUPER_DEALLOC();
 }
@@ -212,6 +215,10 @@ typedef struct _LH_V2F_C4B_Triangle
 #if LH_USE_BOX2D
         buoyancyController = NULL;
 #endif
+        
+        LHDrawNode* shape = [LHDrawNode node];
+        [self addChild:shape];
+        _drawNode = shape;
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -238,16 +245,6 @@ typedef struct _LH_V2F_C4B_Triangle
         splashTime      = [dict floatForKey:@"splashT"];
         
         bodySplashes = [[NSMutableDictionary alloc] init];
-        
-        
-#if COCOS2D_VERSION >= 0x00030300
-        //XXX
-#else
-        _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
-#endif//cocos2d_version
-
-        
-        
         
         [self setColor:[dict colorForKey:@"colorOverlay"]];
         
@@ -404,59 +401,6 @@ typedef struct _LH_V2F_C4B_Triangle
                       height * self.scaleY);
 }
 
-
--(void)ensureCapacity:(NSUInteger)count
-{
-#if COCOS2D_VERSION >= 0x00030300
-    //XXX
-#else
-    if(_bufferCount + count > _bufferCapacity){
-        _bufferCapacity += MAX(_bufferCapacity, count);
-        _buffer = (ccV2F_C4B_T2F*)realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
-    }
-#endif//cocos2d_version
-
-    
-	
-}
-
--(void)render
-{
-#if COCOS2D_VERSION >= 0x00030300
-    //XXX
-#else
-    if( _dirty ) {
-        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(ccV2F_C4B_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        _dirty = NO;
-    }
-    
-    ccGLBindVAO(_vao);
-    glDrawArrays(GL_TRIANGLES, 0, _bufferCount);
-    
-    CC_INCREMENT_GL_DRAWS(1);
-    
-    CHECK_GL_ERROR();
-#endif//cocos2d_version
-
-    
-}
-
--(void)draw
-{
-#if COCOS2D_VERSION >= 0x00030300
-    //XXX
-#else
-    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
-    
-    [_shaderProgram use];
-    [_shaderProgram setUniformsForBuiltins];
-    
-    [self render];
-#endif//cocos2d_version
-
-}
 #if LH_USE_BOX2D
 -(CGRect)boundingRectForBody:(b2Body*)bd
 {
@@ -495,11 +439,12 @@ typedef struct _LH_V2F_C4B_Triangle
 
 
 #if COCOS2D_VERSION >= 0x00030300
--(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform{
+    if(!renderer)return;
 #else
-- (void)visit
+- (void)visit{
 #endif//cocos2d_version
-{
+
     NSMutableArray* toRemove = [NSMutableArray array];
     for(LHWave* w in waves){
         [w step];
@@ -517,9 +462,6 @@ typedef struct _LH_V2F_C4B_Triangle
     for(int i = 0; i <= numLines; ++i) {
         [points addObject:[NSNumber numberWithFloat:[self valueAt:(i * lineWidth)]]];
     }
-
-    [self clear];//clear the geometry in the node buffer
-    
     
     float ox = -width*0.5;
     float oy = -height*0.5;
@@ -530,14 +472,14 @@ typedef struct _LH_V2F_C4B_Triangle
 
         float firstX = -width*0.5;
         float firstY = height*0.5;
-        NSValue* first = LHValueWithCGPoint(CGPointMake(firstX, firstY));
+        NSValue* first = LHValueWithCGPoint(CGPointMake(firstX, -firstY));
         [trianglePts addObject:first];
         
         NSValue* prevDown = first;
         
         float x = -width*0.5;
         float y = [[points objectAtIndex:0] floatValue] + oy;
-        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, y))];
+        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, -y))];
         
         NSValue* prev = nil;
         for(int i = 1; i < (int)[points count]; ++i)
@@ -549,13 +491,13 @@ typedef struct _LH_V2F_C4B_Triangle
                 [trianglePts addObject:first];
                 [trianglePts addObject:prev];
             }
-            NSValue* curValue = LHValueWithCGPoint(CGPointMake(x, y));
+            NSValue* curValue = LHValueWithCGPoint(CGPointMake(x, -y));
             [trianglePts addObject:curValue];
 
             [trianglePts addObject:curValue];
             
             
-            NSValue* down = LHValueWithCGPoint(CGPointMake(x, firstY));
+            NSValue* down = LHValueWithCGPoint(CGPointMake(x, -firstY));
             [trianglePts addObject:down];
             [trianglePts addObject:prevDown];
             prevDown = down;
@@ -566,59 +508,24 @@ typedef struct _LH_V2F_C4B_Triangle
         
         x = width*0.5;
         y = height*0.5;
-        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, y))];
+        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, -y))];
         
         x = width + ox;
         y = -height*0.5;
-        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, y))];
+        [trianglePts addObject:LHValueWithCGPoint(CGPointMake(x, -y))];
         [trianglePts addObject:first];
         
-        
-        [self ensureCapacity:[trianglePts count]];
-        for(int i = 0; i < [trianglePts count]; i+=3)
-        {
-            NSValue* valA = [trianglePts objectAtIndex:i];
-            NSValue* valB = [trianglePts objectAtIndex:i+1];
-            NSValue* valC = [trianglePts objectAtIndex:i+2];
-            
-            CCColor* color = [self color];
-            
-            CGPoint posA =  CGPointFromValue(valA);
-            posA.y = -posA.y;
-
-            
-            CGPoint posB = CGPointFromValue(valB);
-            posB.y = -posB.y;
-
-            
-            CGPoint posC = CGPointFromValue(valC);
-            posC.y = -posC.y;
-            
-            ccV2F_C4B_T2F a = {{(GLfloat)posA.x, (GLfloat)posA.y}, {(GLubyte)(color.red*255.0f), (GLubyte)(color.green*255.0f), (GLubyte)(color.blue*255.0f), (GLubyte)(color.alpha*255.0f)}};
-            ccV2F_C4B_T2F b = {{(GLfloat)posB.x, (GLfloat)posB.y}, {(GLubyte)(color.red*255.0f), (GLubyte)(color.green*255.0f), (GLubyte)(color.blue*255.0f), (GLubyte)(color.alpha*255.0f)}};
-            ccV2F_C4B_T2F c = {{(GLfloat)posC.x, (GLfloat)posC.y}, {(GLubyte)(color.red*255.0f), (GLubyte)(color.green*255.0f), (GLubyte)(color.blue*255.0f), (GLubyte)(color.alpha*255.0f)}};
-            
-            
-#if COCOS2D_VERSION >= 0x00030300
-            //XXX
-#else
-            ccV2F_C4B_T2F_Triangle *triangles = (ccV2F_C4B_T2F_Triangle *)(_buffer + _bufferCount);
-            triangles[0] = (ccV2F_C4B_T2F_Triangle){a, b, c};
-            
-            _bufferCount += 3;
-#endif//cocos2d_version
-
-            
-            
-        }
+        [_drawNode setShapeTriangles:trianglePts
+                               color:[self color]];
     }
+
 
 #if COCOS2D_VERSION >= 0x00030300
     [super visit:renderer parentTransform:parentTransform];
 #else
     [super visit];
 #endif//cocos2d_version
-
+    
     
 #if LH_USE_BOX2D
     

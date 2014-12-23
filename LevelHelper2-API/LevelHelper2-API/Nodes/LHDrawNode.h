@@ -16,6 +16,9 @@
 }
 
 -(void)setShapeTriangles:(NSArray*)sPoints
+                   color:(CCColor*)color;
+
+-(void)setShapeTriangles:(NSArray*)sPoints
                 uvPoints:(NSArray*)uvPoints
                    color:(CCColor*)color;
 

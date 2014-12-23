@@ -39,14 +39,56 @@
 
 #if COCOS2D_VERSION >= 0x00030300
 
+-(void)setShapeTriangles:(NSArray*)triangles
+                   color:(CCColor*)color
+{
+    [self clear];
+    
+    GLKVector4 c = color.glkVector4;
+    GLKVector4 fill4 = GLKVector4Make(c.r*c.a, c.g*c.a, c.b*c.a, c.a);
+    
+    const GLKVector2 GLKVector2Zero = {{0.0f, 0.0f}};
+    
+    for(int i = 0; i < [triangles count]; i+=3)
+    {
+        NSValue* valA = [triangles objectAtIndex:i];
+        NSValue* valB = [triangles objectAtIndex:i+1];
+        NSValue* valC = [triangles objectAtIndex:i+2];
+        
+        CGPoint pa = CGPointFromValue(valA);
+        CGPoint pb = CGPointFromValue(valB);
+        CGPoint pc = CGPointFromValue(valC);
+        
+        CCRenderBuffer buffer = [self bufferVertexes:3 andTriangleCount:1];
+        
+
+        CCVertex va = (CCVertex){GLKVector4Make(pa.x, pa.y, 0.0f, 1.0f),
+                    GLKVector2Zero,
+                    GLKVector2Zero,
+                    fill4};
+        
+        CCVertex vb = (CCVertex){   GLKVector4Make(pb.x, pb.y, 0.0f, 1.0f),
+                    GLKVector2Zero,
+                    GLKVector2Zero,
+                    fill4};
+        
+        CCVertex vc = (CCVertex){   GLKVector4Make(pc.x, pc.y, 0.0f, 1.0f),
+                    GLKVector2Zero,
+                    GLKVector2Zero,
+                    fill4};
+                
+        CCRenderBufferSetVertex(buffer, 0, va);
+        CCRenderBufferSetVertex(buffer, 1, vb);
+        CCRenderBufferSetVertex(buffer, 2, vc);
+        
+        CCRenderBufferSetTriangle(buffer, 0, 0, 1, 2);
+    }
+}
 -(void)setShapeTriangles:(NSArray*)triangles//contains NSValue with point
                 uvPoints:(NSArray*)uvPoints//contains NSValue with point
             vertexColors:(NSArray*)colors//contains CCColor
 {
     [self clear];
-    
-//    GLKVector4 c = color.glkVector4;
-//    GLKVector4 fill4 = GLKVector4Make(c.r*c.a, c.g*c.a, c.b*c.a, c.a);
     
     const GLKVector2 GLKVector2Zero = {{0.0f, 0.0f}};
     
@@ -222,6 +264,52 @@
 }
 
 #else
+
+-(void)setShapeTriangles:(NSArray*)triangles
+                   color:(CCColor*)color
+{
+    [self clear];
+    
+    _blendFunc.src = GL_SRC_ALPHA;
+    _blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
+    
+    int count = (int)[triangles count];
+    [self ensureCapacity:count];
+    
+    for(int i = 0; i < [triangles count]; i+=3)
+    {
+        NSValue* valA = [triangles objectAtIndex:i];
+        NSValue* valB = [triangles objectAtIndex:i+1];
+        NSValue* valC = [triangles objectAtIndex:i+2];
+        
+        CGPoint posA = CGPointFromValue(valA);
+        CGPoint posB = CGPointFromValue(valB);
+        CGPoint posC = CGPointFromValue(valC);
+        
+        ccV2F_C4B_T2F a = { {(GLfloat)posA.x, (GLfloat)posA.y},
+            {   (GLubyte)(color.red*255.0f),
+                (GLubyte)(color.green*255.0f),
+                (GLubyte)(color.blue*255.0f),
+                (GLubyte)(color.alpha*255.0f)}};
+        ccV2F_C4B_T2F b = { {(GLfloat)posB.x, (GLfloat)posB.y},
+            {   (GLubyte)(color.red*255.0f),
+                (GLubyte)(color.green*255.0f),
+                (GLubyte)(color.blue*255.0f),
+                (GLubyte)(color.alpha*255.0f)}};
+        ccV2F_C4B_T2F c = { {(GLfloat)posC.x, (GLfloat)posC.y},
+            {   (GLubyte)(color.red*255.0f),
+                (GLubyte)(color.green*255.0f),
+                (GLubyte)(color.blue*255.0f),
+                (GLubyte)(color.alpha*255.0f)}};
+        
+        ccV2F_C4B_T2F_Triangle *triangles = (ccV2F_C4B_T2F_Triangle *)(_buffer + _bufferCount);
+        triangles[0] = (ccV2F_C4B_T2F_Triangle){a, b, c};
+        
+        _bufferCount += 3;
+    }
+    
+    _dirty = YES;
+}
 
 -(void)setShapeTriangles:(NSArray*)triangles//contains NSValue with point
                 uvPoints:(NSArray*)uvPoints//contains NSValue with point
