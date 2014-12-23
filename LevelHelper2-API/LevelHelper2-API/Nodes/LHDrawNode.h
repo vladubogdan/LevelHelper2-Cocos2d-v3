@@ -19,6 +19,11 @@
                 uvPoints:(NSArray*)uvPoints
                    color:(CCColor*)color;
 
+-(void)setShapeTriangles:(NSArray*)sPoints//contains NSValue with point
+                uvPoints:(NSArray*)uvPoints//contains NSValue with point
+            vertexColors:(NSArray*)colors;//contains CCColor
+
+
 #if COCOS2D_VERSION < 0x00030300
 -(void)setTexture:(CCTexture*)texture;
 -(CCTexture*)texture;
