@@ -27,7 +27,7 @@
     if(self = [super init]){
         
 #if COCOS2D_VERSION >= 0x00030300
-//        _shader = [CCShader positionColorShader];
+
 #else
         _shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
 #endif//cocos2d_version
@@ -45,19 +45,10 @@
 {
     [self clear];
     
-    NSUInteger vertexCount = [triangles count]*3;
-    CCRenderBuffer buffer = [self bufferVertexes:(GLsizei)vertexCount andTriangleCount:(GLsizei)[triangles count]];
-    
-    
     GLKVector4 c = color.glkVector4;
     GLKVector4 fill4 = GLKVector4Make(c.r*c.a, c.g*c.a, c.b*c.a, c.a);
     
-    
-    int vertexCursor = 0, triangleCursor = 0;
-    
     const GLKVector2 GLKVector2Zero = {{0.0f, 0.0f}};
-    
-    int count = (int)[triangles count];
     
     for(int i = 0; i < [triangles count]; i+=3)
     {
@@ -78,69 +69,58 @@
         CGPoint ua = CGPointFromValue(uvA);
         CGPoint ub = CGPointFromValue(uvB);
         CGPoint uc = CGPointFromValue(uvC);
-        
-        if(self.texture)
-        {
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pa.x, pa.y, 0.0f, 1.0f),
-                                        GLKVector2Make(ua.x, ua.y),
-                                        GLKVector2Zero,
-                                        fill4}
-                                    );
-            
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pb.x, pb.y, 0.0f, 1.0f),
-                                        GLKVector2Make(ub.x, ub.y),
-                                        GLKVector2Zero,
-                                        fill4}
-                                    );
-            
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pc.x, pc.y, 0.0f, 1.0f),
-                                        GLKVector2Make(uc.x, uc.y),
-                                        GLKVector2Zero,
-                                        fill4}
-                                    );
-            
-        }
-        else{
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pa.x, pa.y, 0.0f, 1.0f),
-                                        GLKVector2Zero,
-                                        GLKVector2Make(ua.x, ua.y),
-                                        fill4}
-                                    );
-            
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pb.x, pb.y, 0.0f, 1.0f),
-                                        GLKVector2Zero,
-                                        GLKVector2Make(ub.x, ub.y),
-                                        fill4}
-                                    );
-            
-            CCRenderBufferSetVertex(buffer,
-                                    vertexCursor++,
-                                    (CCVertex){ GLKVector4Make(pc.x, pc.y, 0.0f, 1.0f),
-                                        GLKVector2Zero,
-                                        GLKVector2Make(uc.x, uc.y),
-                                        fill4}
-                                    );
 
+        CCRenderBuffer buffer = [self bufferVertexes:3 andTriangleCount:1];
+        
+        CCVertex va = (CCVertex){   GLKVector4Make(pa.x, pa.y, 0.0f, 1.0f),
+                                    GLKVector2Make(ua.x, ua.y),
+                                    GLKVector2Zero,
+                                    fill4};
+        
+        if(!self.texture){
+            va = (CCVertex){GLKVector4Make(pa.x, pa.y, 0.0f, 1.0f),
+                            GLKVector2Zero,
+                            GLKVector2Make(ua.x, ua.y),
+                            fill4};
         }
         
-    }
-    
-    for(int i=0; i<count; i++){
-        CCRenderBufferSetTriangle(buffer, triangleCursor++, i, i + 1, i + 2);
+        
+        CCVertex vb = (CCVertex){   GLKVector4Make(pb.x, pb.y, 0.0f, 1.0f),
+                                    GLKVector2Make(ub.x, ub.y),
+                                    GLKVector2Zero,
+                                    fill4};
+
+        if(!self.texture){
+                vb = (CCVertex){GLKVector4Make(pb.x, pb.y, 0.0f, 1.0f),
+                                GLKVector2Zero,
+                                GLKVector2Make(ub.x, ub.y),
+                                fill4};
+        }
+
+        
+        CCVertex vc = (CCVertex){   GLKVector4Make(pc.x, pc.y, 0.0f, 1.0f),
+                                    GLKVector2Make(uc.x, uc.y),
+                                    GLKVector2Zero,
+                                    fill4};
+        
+        if(!self.texture){
+            vc = (CCVertex){GLKVector4Make(pc.x, pc.y, 0.0f, 1.0f),
+                            GLKVector2Zero,
+                            GLKVector2Make(uc.x, uc.y),
+                            fill4};
+        }
+
+
+        CCRenderBufferSetVertex(buffer, 0, va);
+        CCRenderBufferSetVertex(buffer, 1, vb);
+        CCRenderBufferSetVertex(buffer, 2, vc);
+        
+        CCRenderBufferSetTriangle(buffer, 0, 0, 1, 2);
     }
 }
 
 -(void) setTexture:(CCTexture*)texture{
+    
     NSAssert( !texture || [texture isKindOfClass:[CCTexture class]], @"setTexture expects a CCTexture2D. Invalid argument");
 
     self.blendMode = [CCBlendMode premultipliedAlphaMode];

@@ -89,9 +89,9 @@
 		6E9FC81219A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
 		6E9FC81319A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
 		6E9FC81419A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
-		6E9FC81519A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
-		6E9FC81619A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
-		6E9FC81719A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
+		6E9FC81519A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
+		6E9FC81619A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
+		6E9FC81719A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
 		6E9FC81819A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
 		6E9FC81919A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
 		6E9FC81A19A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
@@ -232,7 +232,7 @@
 		6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDistanceJointNode.h; sourceTree = "<group>"; };
 		6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHDistanceJointNode.mm; sourceTree = "<group>"; };
 		6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDrawNode.h; sourceTree = "<group>"; };
-		6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDrawNode.m; sourceTree = "<group>"; };
+		6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHDrawNode.mm; sourceTree = "<group>"; };
 		6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGameWorldNode.mm; sourceTree = "<group>"; };
 		6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGearJointNode.h; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 				6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */,
 				6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */,
 				6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */,
-				6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */,
+				6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */,
 				6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */,
 				6E9FC79319A4F2330046CDBD /* LHGearJointNode.mm */,
 				6E9FC79419A4F2330046CDBD /* LHGravityArea.h */,
@@ -713,7 +713,7 @@
 				6E9FC7E519A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84E19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83919A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81519A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81519A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85A19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EE19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82A19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -772,7 +772,7 @@
 				6E9FC7E619A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84F19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83A19A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81619A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81619A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85B19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EF19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82B19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -831,7 +831,7 @@
 				6E9FC7E719A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC85019A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83B19A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81719A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81719A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85C19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7F019A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82C19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
