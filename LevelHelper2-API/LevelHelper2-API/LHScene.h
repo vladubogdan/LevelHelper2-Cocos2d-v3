@@ -19,7 +19,7 @@
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus
-#include "Box2d/Box2D.h"
+#include "Box2D/Box2D.h"
 #endif
 #endif //LH_USE_BOX2D
 

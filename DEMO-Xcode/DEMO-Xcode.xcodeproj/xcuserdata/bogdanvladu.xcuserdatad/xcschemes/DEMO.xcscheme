@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E2170401982BA8600C1F7CF"
-               BuildableName = "DEMO-Xcode+Box2d MAC OS.app"
+               BuildableName = "DEMO-Xcode.app"
                BlueprintName = "DEMO"
                ReferencedContainer = "container:DEMO-Xcode.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E2170401982BA8600C1F7CF"
-            BuildableName = "DEMO-Xcode+Box2d MAC OS.app"
+            BuildableName = "DEMO-Xcode.app"
             BlueprintName = "DEMO"
             ReferencedContainer = "container:DEMO-Xcode.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E2170401982BA8600C1F7CF"
-            BuildableName = "DEMO-Xcode+Box2d MAC OS.app"
+            BuildableName = "DEMO-Xcode.app"
             BlueprintName = "DEMO"
             ReferencedContainer = "container:DEMO-Xcode.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E2170401982BA8600C1F7CF"
-            BuildableName = "DEMO-Xcode+Box2d MAC OS.app"
+            BuildableName = "DEMO-Xcode.app"
             BlueprintName = "DEMO"
             ReferencedContainer = "container:DEMO-Xcode.xcodeproj">
          </BuildableReference>

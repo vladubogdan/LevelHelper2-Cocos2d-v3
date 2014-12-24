@@ -439,7 +439,7 @@
 		6E7162751A4AA630000B458A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E7162801A4AA630000B458A /* DEMO-Xcode+Box2d MAC OS.app */,
+				6E7162801A4AA630000B458A /* DEMO-Xcode.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,10 +581,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6E7162801A4AA630000B458A /* DEMO-Xcode+Box2d MAC OS.app */ = {
+		6E7162801A4AA630000B458A /* DEMO-Xcode.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = "DEMO-Xcode+Box2d MAC OS.app";
+			path = "DEMO-Xcode.app";
 			remoteRef = 6E71627F1A4AA630000B458A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -809,6 +809,7 @@
 					"\"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/Box2D\"/**",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
@@ -850,6 +851,7 @@
 					"\"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/Box2D\"/**",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2D.plist";
@@ -1014,6 +1016,7 @@
 					"\"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/Box2D\"/**",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";
@@ -1055,6 +1058,7 @@
 					"\"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/Box2D\"/**",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info+Box2dMacOS.plist";

@@ -65,7 +65,7 @@
         [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
                                      self.contentSize.height*0.5-60)];
         //add the text to the ui element as we dont want it to move with the camera
-        [[self uiNode] addChild:ttf];
+        [[self uiNode] addChild:ttf];     
     }
     
     
