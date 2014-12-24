@@ -440,7 +440,6 @@ typedef struct _LH_V2F_C4B_Triangle
 
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform{
-    if(!renderer)return;
 #else
 - (void)visit{
 #endif//cocos2d_version
@@ -521,7 +520,8 @@ typedef struct _LH_V2F_C4B_Triangle
 
 
 #if COCOS2D_VERSION >= 0x00030300
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 #else
     [super visit];
 #endif//cocos2d_version

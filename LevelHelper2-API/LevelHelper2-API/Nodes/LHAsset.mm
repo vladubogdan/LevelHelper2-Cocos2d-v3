@@ -95,6 +95,8 @@
         [self createDebugNode];
 #endif//LH_DEBUG
         
+        [_nodeProtocolImp performLateLoading];
+
         gwNode.scale = oldScale;
         gwNode.position = oldPos;
     }
@@ -184,8 +186,9 @@
     [self createDebugNode];
 #endif//LH_DEBUG
     
-    [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
 
+    [_nodeProtocolImp performLateLoading];
+    
     gwNode.scale = oldScale;
     gwNode.position = oldPos;
     
@@ -200,12 +203,11 @@
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
-    if(!renderer)return;
-    
     [_physicsProtocolImp visit];
     [_animationProtocolImp visit];
-    
-    [super visit:renderer parentTransform:parentTransform];
+
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 }
 #else
 - (void)visit

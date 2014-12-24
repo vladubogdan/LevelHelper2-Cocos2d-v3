@@ -396,6 +396,10 @@
     return transPoint;
 }
 
+-(void)lateLoading{
+    [self followedNode];//find the followed node if any
+}
+
 
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform

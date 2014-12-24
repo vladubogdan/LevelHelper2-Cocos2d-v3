@@ -78,7 +78,8 @@
  */
 -(NSMutableArray*)childrenOfType:(Class)type;
 
--(BOOL)lateLoading;
+-(void)lateLoading;
+-(void)performLateLoading;
 
 -(BOOL)isB2WorldDirty;
 -(void)markAsB2WorldDirty;
@@ -91,11 +92,13 @@
 
 @interface LHNodeProtocolImpl : NSObject
 
-+ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
-- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd;
-- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd;
++ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd;
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd;
+- (instancetype)initNodeProtocolImpWithNode:(CCNode<LHNodeProtocol>*)nd;
 
 +(void)loadChildrenForNode:(CCNode*)prntNode fromDictionary:(NSDictionary*)dict;
+
+-(void)performLateLoading;
 
 -(NSString*)uuid;
 -(NSArray*)tags;
@@ -108,6 +111,7 @@
 
 -(BOOL)isB2WorldDirty;
 -(void)markAsB2WorldDirty;
+
 @end
 
 
@@ -145,3 +149,7 @@ return [_nodeProtocolImp uuid];\
 -(NSMutableArray*)childrenOfType:(Class)type{\
     return [_nodeProtocolImp childrenOfType:type];\
 }\
+-(void)performLateLoading{\
+    [_nodeProtocolImp performLateLoading];\
+}\
+

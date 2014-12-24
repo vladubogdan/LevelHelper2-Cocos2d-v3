@@ -259,12 +259,9 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     return _debug;
 }
 
-
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
-    if(!renderer)return;
-    
     [self clear];
     
 #if LH_DEBUG
@@ -273,7 +270,8 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     }
 #endif
     
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 }
 #else
 - (void)visit
@@ -439,7 +437,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     }
     return self;
 }
-
 
 #pragma mark - BOX2D SUPPORT
 #if LH_USE_BOX2D

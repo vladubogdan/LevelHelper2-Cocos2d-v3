@@ -182,9 +182,6 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
-
-//        gwNode.scale = oldScale;
-//        gwNode.position = oldPos;
     }
     
     return self;
@@ -198,12 +195,11 @@ static float MAX_BEZIER_STEPS = 24.0f;
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
-    if(!renderer)return;
-    
     [_physicsProtocolImp visit];
     [_animationProtocolImp visit];
     
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 }
 #else
 - (void)visit

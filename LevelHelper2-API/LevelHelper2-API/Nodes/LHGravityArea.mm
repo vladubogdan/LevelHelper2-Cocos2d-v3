@@ -195,7 +195,8 @@
 	}
     
 #if COCOS2D_VERSION >= 0x00030300
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 #else
     [super visit];
 #endif//cocos2d_version
@@ -253,7 +254,8 @@
     }
     
 #if COCOS2D_VERSION >= 0x00030300
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 #else
     [super visit];
 #endif//cocos2d_version

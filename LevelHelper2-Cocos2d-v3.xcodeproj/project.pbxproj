@@ -144,6 +144,7 @@
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
+		6E65BDB21A4A86EF004AC642 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB7B2BD1A41CE2100CE7E65 /* libcocos2d.a */; };
 		6E68F6F919D0A3E400A2D652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E68F6F819D0A3E400A2D652 /* Images.xcassets */; };
 		6E68F6FA19D0A3E400A2D652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E68F6F819D0A3E400A2D652 /* Images.xcassets */; };
 		6E68F6FB19D0A3E400A2D652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E68F6F819D0A3E400A2D652 /* Images.xcassets */; };
@@ -168,6 +169,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		6E02751A1A41DC0600327FEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
+			remoteInfo = "cocos2d-ios";
+		};
+		6E65BDB01A4A863E004AC642 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
 			proxyType = 1;
@@ -397,6 +405,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E65BDB21A4A86EF004AC642 /* libcocos2d.a in Frameworks */,
 				6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */,
 				6E121FEB1924BD85005E8532 /* OpenAL.framework in Frameworks */,
 				6E121FF11924BD85005E8532 /* UIKit.framework in Frameworks */,
@@ -684,6 +693,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E65BDB11A4A863E004AC642 /* PBXTargetDependency */,
 				6E9FD2A219A4FBFD0046CDBD /* PBXTargetDependency */,
 			);
 			name = "LevelHelper2-Cocos2d-v3+Chipmunk-iOS";
@@ -999,6 +1009,11 @@
 			name = "cocos2d-ios";
 			targetProxy = 6E02751A1A41DC0600327FEE /* PBXContainerItemProxy */;
 		};
+		6E65BDB11A4A863E004AC642 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2d-ios";
+			targetProxy = 6E65BDB01A4A863E004AC642 /* PBXContainerItemProxy */;
+		};
 		6E9FD2A219A4FBFD0046CDBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "LevelHelper2-API";
@@ -1211,7 +1226,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1227,13 +1243,19 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",
@@ -1265,7 +1287,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LevelHelper2-Cocos2d-v3/Supporting Files/Prefix.pch";
@@ -1280,13 +1303,19 @@
 					"\"$(SRCROOT)/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/cocos2d/ObjectAL/AudioTrack\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Support\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/OpenAL\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Session\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/Actions\"",
+					"\"$(SRCROOT)/cocos2d/external/ObjectAL/ObjectAL/ObjectAL/AudioTrack\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d/Platforms/Android\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/CCBReader\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/iOS\"",
+					"\"$(SRCROOT)/cocos2d/cocos2d-ui/Platform/Android\"",
 					"\"$(SRCROOT)/cocos2d/cocos2d-ui\"",
 					"\"$(SRCROOT)/cocos2d/CCBReader\"",
 					"\"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API\"",

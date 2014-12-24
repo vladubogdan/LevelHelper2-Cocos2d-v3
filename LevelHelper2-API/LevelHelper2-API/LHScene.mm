@@ -33,12 +33,15 @@
 #import "LHUINode.h"
 #import "LHBox2dCollisionHandling.h"
 
+
 @interface LHCamera (LH_CAMERA_PINCH_ZOOM)
 -(void)pinchZoomWithScaleDelta:(float)value center:(CGPoint)center;
 @end
 
 @implementation LHScene
 {
+    NSMutableArray* toBeRemoved;
+    
     __weak LHBackUINode*       _backUiNode;
     __weak LHGameWorldNode*    _gameWorldNode;
     __weak LHUINode*           _uiNode;
@@ -51,7 +54,6 @@
 #endif
     
     bool loadingInProgress;
-    NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
     LHNodeProtocolImpl* _nodeProtocolImp;
     
@@ -91,6 +93,8 @@
     
     [self removeAllChildren];
 
+    LH_SAFE_RELEASE(toBeRemoved);
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(relativePath);
@@ -226,8 +230,6 @@
 
         [self loadGlobalGravityFromDictionary:dict];
         [self loadPhysicsBoundariesFromDictionary:dict];
-
-        [self performLateLoading];
         
         [self setUserInteractionEnabled:YES];
 
@@ -242,10 +244,8 @@
         _box2dCollision = [[LHBox2dCollisionHandling alloc] initWithScene:self];
 #else//cocos2d
         
-#endif
-        
-        //call this to update the views when using camera/parallax
-//        [self visit];
+#endif        
+        [self performLateLoading];
         
         loadingInProgress = false;
     }
@@ -256,6 +256,31 @@
     [[self gameWorldNode] setPaused:NO];
     [super onEnter];
 }
+
+//cocos2d v3.3 compatibility - or else we will get a mutated while being enumerated exception on mac os
+-(void)removedNodeAfterVisit:(__weak CCNode*)shouldRemoveSelf
+{
+    if(!toBeRemoved){
+        toBeRemoved = [[NSMutableArray alloc] init];
+    }
+    [toBeRemoved addObject:shouldRemoveSelf];
+}
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform{
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+#else
+- (void)visit{
+    [super visit];
+#endif//cocos2d_version
+
+    for(CCNode* n in toBeRemoved){
+        [n removeFromParent];
+    }
+    [toBeRemoved removeAllObjects];
+}
+
 
 -(BOOL)loadingInProgress{
     return loadingInProgress;
@@ -424,23 +449,6 @@
 
             
         }
-    }
-}
-
--(void)performLateLoading{
-    if(!lateLoadingNodes)return;
-    
-    NSMutableArray* lateLoadingToRemove = [NSMutableArray array];
-    for(CCNode* node in lateLoadingNodes){
-        if([node respondsToSelector:@selector(lateLoading)]){
-            if([(id<LHNodeProtocol>)node lateLoading]){
-                [lateLoadingToRemove addObject:node];
-            }
-        }
-    }
-    [lateLoadingNodes removeObjectsInArray:lateLoadingToRemove];
-    if([lateLoadingNodes count] == 0){
-        LH_SAFE_RELEASE(lateLoadingNodes);
     }
 }
 
@@ -736,13 +744,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
-}
-
--(void)addLateLoadingNode:(CCNode*)node{
-    if(!lateLoadingNodes) {
-        lateLoadingNodes = [[NSMutableArray alloc] init];
-    }
-    [lateLoadingNodes addObject:node];
 }
 
 -(float)currentDeviceRatio{

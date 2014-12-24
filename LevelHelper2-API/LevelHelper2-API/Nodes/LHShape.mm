@@ -228,13 +228,12 @@
 
 #if COCOS2D_VERSION >= 0x00030300
 -(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
-{
-    if(!renderer)return;
-    
+{    
     [_physicsProtocolImp visit];
     [_animationProtocolImp visit];
     
-    [super visit:renderer parentTransform:parentTransform];
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 }
 #else
 - (void)visit

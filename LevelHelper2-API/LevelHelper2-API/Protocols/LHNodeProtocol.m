@@ -38,7 +38,6 @@
 #import "LHGearJointNode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
--(void)addLateLoadingNode:(CCNode*)node;
 -(CGPoint)designOffset;
 -(CGSize)designResolutionSize;
 @end
@@ -46,7 +45,7 @@
 @implementation LHNodeProtocolImpl
 {
     BOOL b2WorldDirty;
-    __weak CCNode* _node;
+    __weak CCNode<LHNodeProtocol>* _node;
     
     NSString*           _uuid;
     NSMutableArray*     _tags;
@@ -62,11 +61,11 @@
     LH_SUPER_DEALLOC();
 }
 
-+ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
++ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd{
     return LH_AUTORELEASED([[self alloc] initNodeProtocolImpWithDictionary:dict node:nd]);
 }
 
-- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd{
     
     if(self = [super init])
     {
@@ -168,7 +167,7 @@
     return self;
 }
 
-- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd{
+- (instancetype)initNodeProtocolImpWithNode:(CCNode<LHNodeProtocol>*)nd{
     
     if(self = [super init])
     {
@@ -187,6 +186,20 @@
             CCNode* node = [LHNodeProtocolImpl createLHNodeWithDictionary:childInfo
                                                                    parent:prntNode];
 #pragma unused (node)
+        }
+    }
+}
+
+-(void)performLateLoading
+{
+    if([_node respondsToSelector:@selector(lateLoading)]){
+        [_node lateLoading];
+    }
+    
+    for(CCNode<LHNodeProtocol>* child in [_node children])
+    {
+        if([child respondsToSelector:@selector(performLateLoading)]){
+            [child performLateLoading];
         }
     }
 }
@@ -211,19 +224,9 @@
     if(subclassNodeType && subclassNodeType.length > 0)
     {
         //this will not work as we do not have the class included in the api
-//        Class classObj = NSClassFromString(subclassNodeType);
-        
         Class classObj = [scene createNodeObjectForSubclassWithName:subclassNodeType superTypeName:nodeType];
         if(classObj){
-            
-            CCNode* node = [classObj nodeWithDictionary:childInfo parent:prnt];
-            if(node){
-                if([node conformsToProtocol:@protocol(LHJointNodeProtocol)])
-                {
-                    [scene addLateLoadingNode:node];
-                }
-            }
-            return node;
+            return [classObj nodeWithDictionary:childInfo parent:prnt];
         }
         else{
             NSLog(@"\n\nWARNING: Expected a class of type %@ subclassed from %@, but nothing was returned. Check your \"createNodeObjectForSubclassWithName:superTypeName:\" method and make sure you return a valid Class.\n\n", subclassNodeType, nodeType);
@@ -320,51 +323,50 @@
     {
         LHRopeJointNode* jt = [LHRopeJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHWeldJoint"])
     {
         LHWeldJointNode* jt = [LHWeldJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
         
         LHRevoluteJointNode* jt = [LHRevoluteJointNode nodeWithDictionary:childInfo
                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHDistanceJoint"]){
         
         LHDistanceJointNode* jt = [LHDistanceJointNode nodeWithDictionary:childInfo
                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
         
     }
     else if([nodeType isEqualToString:@"LHPulleyJoint"]){
         
         LHPulleyJointNode* jt = [LHPulleyJointNode nodeWithDictionary:childInfo
                                                                parent:prnt];
-        [scene addLateLoadingNode:jt];
-        
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
         
         LHPrismaticJointNode* jt = [LHPrismaticJointNode nodeWithDictionary:childInfo
                                                                      parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHWheelJoint"]){
         
         LHWheelJointNode* jt = [LHWheelJointNode nodeWithDictionary:childInfo
                                                              parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHGearJoint"]){
         
         LHGearJointNode* jt = [LHGearJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     
     
