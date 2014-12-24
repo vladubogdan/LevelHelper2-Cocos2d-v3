@@ -140,6 +140,8 @@
 		6E7162851A4AA7B7000B458A /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = ../Box2D/build/Debug/libBox2D.a; sourceTree = "<group>"; };
 		6E7162871A4AA8B5000B458A /* libLevelHelper2-API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLevelHelper2-API.a"; path = "../LevelHelper2-API/build/Debug/libLevelHelper2-API.a"; sourceTree = "<group>"; };
 		6E7162951A4AAA6B000B458A /* Info-Demo-Xcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Demo-Xcode.plist"; sourceTree = SOURCE_ROOT; };
+		6E7162A11A4AAFE9000B458A /* LH_DEMO_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_DEMO_VERSION.plist; sourceTree = "<group>"; };
+		6E7162A21A4AB067000B458A /* HOW_TO_REMOVE_DEMOS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HOW_TO_REMOVE_DEMOS.md; sourceTree = "<group>"; };
 		6EC5550519AB4F4200CF0760 /* LHSceneNodesSubclassingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneNodesSubclassingTest.h; sourceTree = "<group>"; };
 		6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodesSubclassingTest.mm; sourceTree = "<group>"; };
 		6EC5550E19AB553900CF0760 /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueRobotSprite.h; sourceTree = "<group>"; };
@@ -172,6 +174,8 @@
 		6E121FDA1924BD85005E8532 = {
 			isa = PBXGroup;
 			children = (
+				6E7162A21A4AB067000B458A /* HOW_TO_REMOVE_DEMOS.md */,
+				6E7162A11A4AAFE9000B458A /* LH_DEMO_VERSION.plist */,
 				6E341AA619A755DC00B73620 /* Demo */,
 				6E121FFE1924BD85005E8532 /* DEMO-Xcode */,
 				6E121FE51924BD85005E8532 /* Frameworks */,

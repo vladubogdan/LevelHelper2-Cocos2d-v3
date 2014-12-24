@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<string>3.3.0</string>
+	<string>1.0.0</string>
 	<key>Name</key>
-	<string>Cocos2d</string>
+	<string>DEMO-Xcode</string>
 	<key>RelativePath</key>
-	<string>cocos2d</string>
+	<string>DEMO-Xcode</string>
 </dict>
 </plist>
