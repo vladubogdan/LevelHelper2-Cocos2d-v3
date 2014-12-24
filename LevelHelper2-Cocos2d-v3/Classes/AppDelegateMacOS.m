@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegateMacOS.h"
-#import "LHSceneIntroduction.h"
+#import "LHSceneSubclass.h"
 
 @implementation OsXAppDelegate
 
@@ -36,7 +36,7 @@
 	// Center main window
 	[_window center];
 	
-	[director runWithScene:[LHSceneIntroduction scene]];
+	[director runWithScene:[LHSceneSubclass scene]];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication

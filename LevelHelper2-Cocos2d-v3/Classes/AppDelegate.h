@@ -6,7 +6,7 @@
 //  Copyright VLADU BOGDAN DANIEL PFA 2014. All rights reserved.
 //
 // -----------------------------------------------------------------------
-
+#import <UIKit/UIKit.h>
 #import "cocos2d.h"
 
 @interface AppDelegate : CCAppDelegate

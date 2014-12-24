@@ -6,28 +6,38 @@
 	<dict>
 		<key>appledoc.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>35</integer>
 		</dict>
 		<key>cocos2d-ios.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>33</integer>
 		</dict>
 		<key>cocos2d-mac.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>48</integer>
 		</dict>
 		<key>cocos2dAndroid.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>40</integer>
 		</dict>
 		<key>cocos2dJava.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>44</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
