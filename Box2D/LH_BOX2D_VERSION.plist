@@ -4,8 +4,10 @@
 <dict>
 	<key>Version</key>
 	<string>2.3.0</string>
+	<key>MinimumUpdateableVersion</key>
+	<string>2.3.0</string>
 	<key>Name</key>
-	<string>Box2d</string>
+	<string>Box2D</string>
 	<key>RelativePath</key>
 	<string>Box2D</string>
 </dict>

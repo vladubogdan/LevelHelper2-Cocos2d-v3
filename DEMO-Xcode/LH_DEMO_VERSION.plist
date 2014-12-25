@@ -4,6 +4,8 @@
 <dict>
 	<key>Version</key>
 	<string>1.0.0</string>
+	<key>MinimumUpdateableVersion</key>
+	<string>1.0.0</string>
 	<key>Name</key>
 	<string>DEMO-Xcode</string>
 	<key>RelativePath</key>
