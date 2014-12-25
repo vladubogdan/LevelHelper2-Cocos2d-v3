@@ -529,9 +529,10 @@
 					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
 					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Demo-Xcode.plist";
-				LIBRARY_SEARCH_PATHS = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/LevelHelper2-API/build/Debug";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -570,9 +571,10 @@
 					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
 					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
 					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Demo-Xcode.plist";
-				LIBRARY_SEARCH_PATHS = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/LevelHelper2-API/build/Debug";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
