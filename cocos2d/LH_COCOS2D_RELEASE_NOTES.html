@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<h4>Release Notes</h4>
+<ul>
+	<li>Support for Cocos2d 3.3</li>
+</ul>
+
+<h4>After Update Compilation Help</h4>
+
+Because of changes in the Cocos2d 3.3 library files structure, you will need to change your Xcode project "Header Search Paths".</br>
+</br>
+<hr>
+1. Select you <b>[ProjectName]+Box2d+iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>	
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+</br>
+
+<hr>
+1. Select you <b>[ProjectName]+Box2d-MacOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>	
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+</br>
+
+
+<hr>
+1. Select you <b>[ProjectName]+Chipmunk-iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>		
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+</br>
+
+
+You can view this text at any time by locating "LH_COCOS2D_RELEASE_NOTES.html" in your "cocos2d" subfolder of your project folder.
+
+<body>
+</body>
+</html>

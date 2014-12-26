@@ -10,5 +10,7 @@
 	<string>DEMO-Xcode</string>
 	<key>RelativePath</key>
 	<string>DEMO-Xcode</string>
+	<key>ReleaseNotesFile</key>
+	<string>LH_DEMO_RELEASE_NOTES.html</string>
 </dict>
 </plist>
