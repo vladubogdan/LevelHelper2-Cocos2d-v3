@@ -10,7 +10,5 @@
 	<string>Box2D</string>
 	<key>RelativePath</key>
 	<string>Box2D</string>
-	<key>ReleaseNotesFile</key>
-	<string>LH_BOX2D_RELEASE_NOTES.html</string>
 </dict>
 </plist>

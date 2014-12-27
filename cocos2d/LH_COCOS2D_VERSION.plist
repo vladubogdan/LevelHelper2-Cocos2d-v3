@@ -10,7 +10,5 @@
 	<string>Cocos2d</string>
 	<key>RelativePath</key>
 	<string>cocos2d</string>
-	<key>ReleaseNotesFile</key>
-	<string>LH_COCOS2D_RELEASE_NOTES.html</string>
 </dict>
 </plist>
