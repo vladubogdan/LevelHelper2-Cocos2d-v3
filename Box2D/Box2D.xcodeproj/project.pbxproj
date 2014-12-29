@@ -433,7 +433,7 @@
 		6EDE88DB19A48EEF00599C48 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
 			};
 			buildConfigurationList = 6EDE88DE19A48EEF00599C48 /* Build configuration list for PBXProject "Box2D" */;
@@ -679,7 +679,7 @@
 		6EDE8B0D19A4976900599C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/Box2D.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
@@ -701,7 +701,7 @@
 		6EDE8B0E19A4976900599C48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/Box2D.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (

@@ -41,12 +41,10 @@
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
-		6E68F6FA19D0A3E400A2D652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E68F6F819D0A3E400A2D652 /* Images.xcassets */; };
 		6E7009E719C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */; };
 		6E7162841A4AA7B0000B458A /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7162831A4AA7AF000B458A /* libcocos2d-mac.a */; };
 		6E7162861A4AA7B7000B458A /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7162851A4AA7B7000B458A /* libBox2D.a */; };
 		6E7162881A4AA8B5000B458A /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7162871A4AA8B5000B458A /* libLevelHelper2-API.a */; };
-		6E7162961A4AAA6B000B458A /* Info-Demo-Xcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E7162951A4AAA6B000B458A /* Info-Demo-Xcode.plist */; };
 		6EC5550819AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550619AB4F4200CF0760 /* LHSceneNodesSubclassingTest.mm */; };
 		6EC5551119AB553900CF0760 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5550F19AB553900CF0760 /* BlueRobotSprite.m */; };
 		6EC5552C19AB5FF800CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5552A19AB5FF800CF0760 /* MyCustomNode.m */; };
@@ -62,19 +60,6 @@
 		6E121FF21924BD85005E8532 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E121FF41924BD85005E8532 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6E121FF61924BD85005E8532 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		6E1220091924BD85005E8532 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icons/Icon.png; sourceTree = "<group>"; };
-		6E12200B1924BD85005E8532 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icons/Icon@2x.png"; sourceTree = "<group>"; };
-		6E12200D1924BD85005E8532 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icons/Icon-72.png"; sourceTree = "<group>"; };
-		6E12200F1924BD85005E8532 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Resources/Icons/Icon-72@2x.png"; sourceTree = "<group>"; };
-		6E1220111924BD85005E8532 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Resources/Icons/Icon-76.png"; sourceTree = "<group>"; };
-		6E1220131924BD85005E8532 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Resources/Icons/Icon-76@2x.png"; sourceTree = "<group>"; };
-		6E1220151924BD85005E8532 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Resources/Icons/Icon-120.png"; sourceTree = "<group>"; };
-		6E1220171924BD85005E8532 /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
-		6E1220191924BD85005E8532 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
-		6E12201B1924BD85005E8532 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icons/Icon-Small.png"; sourceTree = "<group>"; };
-		6E12201D1924BD85005E8532 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		6E12201F1924BD85005E8532 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7.png"; path = "Resources/Icons/Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
-		6E1220211924BD85005E8532 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		6E12228A1924BD88005E8532 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Supporting Files/Prefix.pch"; sourceTree = "<group>"; };
 		6E12228B1924BD88005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		6E12228E1924BD88005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -133,7 +118,6 @@
 		6E4026991982BDE4002B4D32 /* AppDelegateMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMacOS.h; path = Classes/AppDelegateMacOS.h; sourceTree = "<group>"; };
 		6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateMacOS.m; path = Classes/AppDelegateMacOS.m; sourceTree = "<group>"; };
 		6E40269C1982BE30002B4D32 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
-		6E68F6F819D0A3E400A2D652 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		6E7009E419C1B0EC00E75764 /* LHSceneUniversalDevicesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUniversalDevicesTest.h; sourceTree = "<group>"; };
 		6E7009E519C1B0EC00E75764 /* LHSceneUniversalDevicesTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUniversalDevicesTest.mm; sourceTree = "<group>"; };
 		6E7162831A4AA7AF000B458A /* libcocos2d-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d-mac.a"; path = "../cocos2d/build/Release/libcocos2d-mac.a"; sourceTree = "<group>"; };
@@ -226,31 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				6E7162951A4AAA6B000B458A /* Info-Demo-Xcode.plist */,
-				6E68F6F819D0A3E400A2D652 /* Images.xcassets */,
 				6E40269C1982BE30002B4D32 /* MainMenu.xib */,
-				6E1220081924BD85005E8532 /* Icons */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		6E1220081924BD85005E8532 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				6E1220091924BD85005E8532 /* Icon.png */,
-				6E12200B1924BD85005E8532 /* Icon@2x.png */,
-				6E12200D1924BD85005E8532 /* Icon-72.png */,
-				6E12200F1924BD85005E8532 /* Icon-72@2x.png */,
-				6E1220111924BD85005E8532 /* Icon-76.png */,
-				6E1220131924BD85005E8532 /* Icon-76@2x.png */,
-				6E1220151924BD85005E8532 /* Icon-120.png */,
-				6E1220171924BD85005E8532 /* Icon-iPad-Spotlight-iOS7@2x.png */,
-				6E1220191924BD85005E8532 /* Icon-Small-50.png */,
-				6E12201B1924BD85005E8532 /* Icon-Small.png */,
-				6E12201D1924BD85005E8532 /* Icon-Small@2x.png */,
-				6E12201F1924BD85005E8532 /* Icon-Spotlight-iOS7.png */,
-				6E1220211924BD85005E8532 /* Icon-Spotlight-iOS7@2x.png */,
-			);
-			name = Icons;
 			sourceTree = "<group>";
 		};
 		6E1222891924BD88005E8532 /* Supporting Files */ = {
@@ -380,7 +342,7 @@
 		6E121FDB1924BD85005E8532 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
 			};
 			buildConfigurationList = 6E121FDE1924BD85005E8532 /* Build configuration list for PBXProject "DEMO-Xcode" */;
@@ -406,8 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E341AA919A755F100B73620 /* PUBLISH_FOLDER in Resources */,
-				6E7162961A4AAA6B000B458A /* Info-Demo-Xcode.plist in Resources */,
-				6E68F6FA19D0A3E400A2D652 /* Images.xcassets in Resources */,
 				6E341AAD19A755F600B73620 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */,
 			);
@@ -457,9 +417,16 @@
 		6E1222971924BD88005E8532 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -468,13 +435,18 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,16 +455,27 @@
 		6E1222981924BD88005E8532 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,10 +491,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -550,10 +533,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
