@@ -91,9 +91,9 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
         
-#if LH_DEBUG
-        [self createDebugNode];
-#endif//LH_DEBUG
+//#if LH_DEBUG
+//        [self createDebugNode];
+//#endif//LH_DEBUG
         
         [_nodeProtocolImp performLateLoading];
 
@@ -182,9 +182,9 @@
         
     }
     
-#if LH_DEBUG
-    [self createDebugNode];
-#endif//LH_DEBUG
+//#if LH_DEBUG
+//    [self createDebugNode];
+//#endif//LH_DEBUG
     
 
     [_nodeProtocolImp performLateLoading];

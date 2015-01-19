@@ -26,4 +26,8 @@
 
 -(void)setSpriteFrameWithName:(NSString*)spriteFrame;
 
+
+-(NSString*)imageFilePath;
+-(NSString*)spriteFrameName;
+
 @end

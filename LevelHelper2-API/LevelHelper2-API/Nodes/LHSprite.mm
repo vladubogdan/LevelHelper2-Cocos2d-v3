@@ -15,14 +15,28 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSString*)currentDeviceSuffix:(BOOL)keep2x;
+
+-(void)setEditorBodyInfoForSpriteName:(NSString*)sprName
+                                atlas:(NSString*)atlasPlist
+                             bodyInfo:(NSDictionary*)bodyInfo;
+-(NSDictionary*)getEditorBodyInfoForSpriteName:(NSString*)sprName
+                                         atlas:(NSString*)atlasPlist;
+-(BOOL)hasEditorBodyInfoForImageFilePath:(NSString*)atlasImgFile;
 @end
 
+@interface CCSpriteFrameCache (LH_SPRITE_FRAME_CACHE_DICTIONARY_SAVING)
+-(void) addSpriteFramesWithDictionary:(NSDictionary*)dictionary
+                     textureReference:(id)textureReference;
+@end
 
 @implementation LHSprite
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     LHNodePhysicsProtocolImp*   _physicsProtocolImp;
+    
+    NSString* _imageFilePath;
+    NSString* _spriteFrameName;
 }
 
 
@@ -30,9 +44,20 @@
     LH_SAFE_RELEASE(_physicsProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
+
+    LH_SAFE_RELEASE(_imageFilePath);
+    LH_SAFE_RELEASE(_spriteFrameName);
     
     LH_SUPER_DEALLOC();
 }
+
+-(NSString*)imageFilePath{
+    return _imageFilePath;
+}
+-(NSString*)spriteFrameName{
+    return _spriteFrameName;
+}
+
 
 + (instancetype)nodeWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt{
@@ -40,6 +65,44 @@
                                                          parent:prnt]);
 }
 
+-(void)cacheSpriteFramesInfo:(NSString*)imageDevPath scene:(LHScene*)scene texture:(CCTexture*)texture
+{
+    NSString* atlasPlist = [[imageDevPath lastPathComponent] stringByDeletingPathExtension];
+    atlasPlist = [[scene relativePath] stringByAppendingPathComponent:atlasPlist];
+    atlasPlist = [atlasPlist stringByAppendingPathExtension:@"plist"];
+
+    
+    NSString *path = [[CCFileUtils sharedFileUtils] fullPathForFilename:atlasPlist];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+//    NSLog(@"CACHE SPRITES FRAME INFO %@ %@", path, dict);
+    
+    if(dict){
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithDictionary:dict
+                                                                  textureReference:texture];
+
+        NSDictionary* framesDict = [dict objectForKey:@"frames"];
+        
+        NSArray* allKeys = [framesDict allKeys];
+
+        //here we add all bodies info found in this plist file
+        //I do it this way in order to avoid loading the file again
+        //this way - we only read this plist file once
+
+        for(NSString* sprName in allKeys)
+        {
+            NSDictionary* frmInfo = [framesDict objectForKey:sprName];
+            if(frmInfo)
+            {
+                NSDictionary* bodyInfo = [frmInfo objectForKey:@"body"];
+                if(bodyInfo)
+                {
+                    [scene setEditorBodyInfoForSpriteName:sprName atlas:imageDevPath bodyInfo:bodyInfo];
+                }
+            }
+        }
+    }
+}
 
 - (instancetype)initWithDictionary:(NSDictionary*)dict
                                 parent:(CCNode*)prnt{
@@ -50,22 +113,32 @@
                                                   folder:[dict objectForKey:@"relativeImagePath"]
                                                   suffix:[scene currentDeviceSuffix:NO]];
 
-    NSString* plistPath = [LHUtils imagePathWithFilename:[dict objectForKey:@"imageFileName"]
+    NSString* imageDevPath = [LHUtils imagePathWithFilename:[dict objectForKey:@"imageFileName"]
                                                   folder:[dict objectForKey:@"relativeImagePath"]
                                                   suffix:[scene currentDeviceSuffix:YES]];
-        
+    
     CCTexture* texture = [scene textureWithImagePath:imagePath];
     
     CCSpriteFrame* spriteFrame = nil;
-    
-    NSString* spriteName = [dict objectForKey:@"spriteName"];
-    if(spriteName){
-        NSString* atlasName = [[plistPath lastPathComponent] stringByDeletingPathExtension];
-        atlasName = [[scene relativePath] stringByAppendingPathComponent:atlasName];
-        atlasName = [atlasName stringByAppendingPathExtension:@"plist"];
+
+    _imageFilePath = [[NSString alloc] initWithString:imageDevPath];
+
+    NSString* spriteFrameName = [dict objectForKey:@"spriteName"];
+    if(spriteFrameName){
         
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:atlasName texture:texture];
-        spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:spriteName];
+        
+        if(NULL == [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:spriteFrameName]
+           ||  false == [scene hasEditorBodyInfoForImageFilePath:imageDevPath])
+        {
+            //dont reload if already loaded
+            [self cacheSpriteFramesInfo:imageDevPath scene:scene texture:texture];
+            //we are no longer using this method because we need to load the physics info if available
+            //[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:atlasPlist texture:texture];
+        }
+        
+        spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:spriteFrameName];
+        
+        _spriteFrameName = [[NSString alloc] initWithString:spriteFrameName];
     }
     else{
         spriteFrame = [texture createSpriteFrame];

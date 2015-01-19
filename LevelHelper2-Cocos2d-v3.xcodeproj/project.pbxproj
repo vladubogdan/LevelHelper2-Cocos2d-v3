@@ -102,12 +102,26 @@
 			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
 			remoteInfo = "cocos2d-ios";
 		};
-		6E71627F1A4AA630000B458A /* PBXContainerItemProxy */ = {
+		6E9B5CD81A6CF8B50090C8B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6E7162741A4AA630000B458A /* DEMO-Xcode.xcodeproj */;
+			containerPortal = 6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E0D56A3194C32A30036E940;
+			remoteInfo = "DEMOS+Box2d-iOS";
+		};
+		6E9B5CDA1A6CF8B50090C8B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6E21716E1982BA8600C1F7CF;
-			remoteInfo = "DEMO-Xcode+Box2d-MacOS";
+			remoteInfo = "DEMOS+Box2d-MacOS";
+		};
+		6E9B5CDC1A6CF8B50090C8B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E121FE31924BD85005E8532;
+			remoteInfo = "DEMOS+Chipmunk-iOS";
 		};
 		6E9FC73E19A4F1E50046CDBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -249,11 +263,11 @@
 		6E4026991982BDE4002B4D32 /* AppDelegateMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMacOS.h; path = Classes/AppDelegateMacOS.h; sourceTree = "<group>"; };
 		6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateMacOS.m; path = Classes/AppDelegateMacOS.m; sourceTree = "<group>"; };
 		6E40269C1982BE30002B4D32 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
-		6E7162741A4AA630000B458A /* DEMO-Xcode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "DEMO-Xcode.xcodeproj"; path = "DEMO-Xcode/DEMO-Xcode.xcodeproj"; sourceTree = "<group>"; };
 		6E7162931A4AAA3A000B458A /* Info+Box2D.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info+Box2D.plist"; sourceTree = SOURCE_ROOT; };
 		6E71629D1A4AABC0000B458A /* LH2-Published */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "LH2-Published"; path = "Resources/LH2-Published"; sourceTree = "<group>"; };
 		6E89FE31192E261E0040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSubclass.h; path = Classes/LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
+		6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DEMOS.xcodeproj; path = DEMOS/DEMOS.xcodeproj; sourceTree = "<group>"; };
 		6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
 		6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,7 +331,7 @@
 		6E121FDA1924BD85005E8532 = {
 			isa = PBXGroup;
 			children = (
-				6E7162741A4AA630000B458A /* DEMO-Xcode.xcodeproj */,
+				6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */,
 				6E34132119A710CB00B73620 /* cocos2d.xcodeproj */,
 				6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */,
 				6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */,
@@ -439,10 +453,12 @@
 			path = "Supporting Files/MacOS";
 			sourceTree = "<group>";
 		};
-		6E7162751A4AA630000B458A /* Products */ = {
+		6E9B5CCF1A6CF8B50090C8B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E7162801A4AA630000B458A /* DEMO-Xcode.app */,
+				6E9B5CD91A6CF8B50090C8B4 /* DEMOS+Box2D.app */,
+				6E9B5CDB1A6CF8B50090C8B4 /* DEMOS+Box2d MAC OS.app */,
+				6E9B5CDD1A6CF8B50090C8B4 /* DEMOS+Chipmunk-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -566,8 +582,8 @@
 					ProjectRef = 6E34132119A710CB00B73620 /* cocos2d.xcodeproj */;
 				},
 				{
-					ProductGroup = 6E7162751A4AA630000B458A /* Products */;
-					ProjectRef = 6E7162741A4AA630000B458A /* DEMO-Xcode.xcodeproj */;
+					ProductGroup = 6E9B5CCF1A6CF8B50090C8B4 /* Products */;
+					ProjectRef = 6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */;
 				},
 				{
 					ProductGroup = 6E9FC73A19A4F1E40046CDBD /* Products */;
@@ -584,11 +600,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6E7162801A4AA630000B458A /* DEMO-Xcode.app */ = {
+		6E9B5CD91A6CF8B50090C8B4 /* DEMOS+Box2D.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = "DEMO-Xcode.app";
-			remoteRef = 6E71627F1A4AA630000B458A /* PBXContainerItemProxy */;
+			path = "DEMOS+Box2D.app";
+			remoteRef = 6E9B5CD81A6CF8B50090C8B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E9B5CDB1A6CF8B50090C8B4 /* DEMOS+Box2d MAC OS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DEMOS+Box2d MAC OS.app";
+			remoteRef = 6E9B5CDA1A6CF8B50090C8B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E9B5CDD1A6CF8B50090C8B4 /* DEMOS+Chipmunk-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DEMOS+Chipmunk-iOS.app";
+			remoteRef = 6E9B5CDC1A6CF8B50090C8B4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		6E9FC73F19A4F1E50046CDBD /* libBox2D.a */ = {

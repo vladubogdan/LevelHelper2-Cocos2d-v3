@@ -58,6 +58,7 @@
     LHNodeProtocolImpl* _nodeProtocolImp;
     
     NSMutableDictionary* loadedTextures;
+    NSMutableDictionary* editorBodiesInfo;
     NSDictionary* tracedFixtures;
     
     NSArray* supportedDevices;
@@ -99,6 +100,7 @@
     
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
+    LH_SAFE_RELEASE(editorBodiesInfo);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
@@ -741,11 +743,47 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - PRIVATES
 ////////////////////////////////////////////////////////////////////////////////
-
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
 }
 
+-(void)setEditorBodyInfoForSpriteName:(NSString*)sprName
+                                atlas:(NSString*)atlasPlist
+                            bodyInfo:(NSDictionary*)bodyInfo
+{
+    if(!editorBodiesInfo){
+        editorBodiesInfo = [[NSMutableDictionary alloc] init];
+    }
+    
+    if(!bodyInfo || !sprName || !atlasPlist)return;
+    
+    NSMutableDictionary* imagesDict = [editorBodiesInfo objectForKey:atlasPlist];
+    if(!imagesDict){
+        imagesDict = [NSMutableDictionary dictionary];
+    }
+    
+    if(![imagesDict objectForKey:sprName])
+    {
+        [imagesDict setObject:bodyInfo forKey:sprName];
+        [editorBodiesInfo setObject:imagesDict forKey:atlasPlist];
+    }
+}
+    
+-(NSDictionary*)getEditorBodyInfoForSpriteName:(NSString*)sprName atlas:(NSString*)atlasPlist
+{
+    if(!atlasPlist || !sprName)return nil;
+    NSDictionary* spritesInfo = [editorBodiesInfo objectForKey:atlasPlist];
+    if(spritesInfo){
+        return [spritesInfo objectForKey:sprName];
+    }
+    return nil;
+}
+-(BOOL)hasEditorBodyInfoForImageFilePath:(NSString*)atlasImgFile{
+    if(!atlasImgFile)return NO;
+    return [editorBodiesInfo objectForKey:atlasImgFile] != nil;
+}
+
+    
 -(float)currentDeviceRatio{
     
     CGSize scrSize = LH_SCREEN_RESOLUTION;

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>DD2BF8F8-5D66-46CC-9281-29B6DE140336</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>32147585-7FE9-45BD-8A0E-CD53DD333B29</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>assetFile</key>
+					<string>OfficerAsset.lhasset</string>
+					<key>assetUUID</key>
+					<string>CD8594EB-81D4-472A-AB7B-AB056B63CF91</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.475056, 0.380094}</string>
+					<key>name</key>
+					<string>OfficerAsset</string>
+					<key>nodeType</key>
+					<string>LHAsset</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{249.822678, 442.649261}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>AB4A06F0-2788-4FA0-A418-F8F0F43D3F84</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>DD2BF8F8-5D66-46CC-9281-29B6DE140336</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>66EACCD5-7783-417D-B83C-FE324B5359C2</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>DD2BF8F8-5D66-46CC-9281-29B6DE140336</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>7AE1A3C1-E08A-477D-89C7-BFE195058DF1</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960.000000, 640.000000}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024.000000, 768.000000}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048.000000, 1536.000000}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0.000000, -1.000000}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>1024x768</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>1136x640</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>1334x750</key>
+		<string>{{-0.073825, 0.000000}, {1.150497, 0.991943}}</string>
+		<key>2048x1536</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>2208x1242</key>
+		<string>{{-0.075526, 0.000000}, {1.151607, 0.978408}}</string>
+		<key>960x640</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>general</key>
+		<string>{{-0.073825, 0.000000}, {1.150497, 0.991943}}</string>
+	</dict>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>DD2BF8F8-5D66-46CC-9281-29B6DE140336</string>
+</dict>
+</plist>

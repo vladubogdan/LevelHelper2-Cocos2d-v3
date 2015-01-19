@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6E80C4D319A7683B002EEA12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C4D219A7683B002EEA12 /* Foundation.framework */; };
+		6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
 		6E9FC7C119A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C219A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C319A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
@@ -174,6 +177,8 @@
 		6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_COCOS2D_PROJECT_TEMPLATE.plist; path = ../LH_COCOS2D_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
+		6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyShape.mm; sourceTree = "<group>"; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E9FC74E19A4F2330046CDBD /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
 		6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHOpacityFrame.h; sourceTree = "<group>"; };
@@ -475,6 +480,8 @@
 				6E9FC7B919A4F2330046CDBD /* LHUserProperties.h */,
 				6E9FC7BA19A4F2330046CDBD /* LHUserProperties.mm */,
 				6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */,
+				6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */,
+				6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -701,6 +708,7 @@
 				6E9FC85719A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82119A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84219A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82D19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83319A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83019A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
@@ -760,6 +768,7 @@
 				6E9FC85819A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82219A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84319A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82E19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83419A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83119A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
@@ -819,6 +828,7 @@
 				6E9FC85919A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82319A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84419A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82F19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83519A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83219A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
