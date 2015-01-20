@@ -69,9 +69,9 @@
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
-		6E9B5D371A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.m */; };
-		6E9B5D381A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.m */; };
-		6E9B5D391A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.m */; };
+		6E9B5D371A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
+		6E9B5D381A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
+		6E9B5D391A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
 		6E9B5D3A1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D061A6CF9170090C8B4 /* LHSceneAssetsTest.mm */; };
 		6E9B5D3B1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D061A6CF9170090C8B4 /* LHSceneAssetsTest.mm */; };
 		6E9B5D3C1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D061A6CF9170090C8B4 /* LHSceneAssetsTest.mm */; };
@@ -144,9 +144,9 @@
 		6E9B5D7F1A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D341A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm */; };
 		6E9B5D801A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D341A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm */; };
 		6E9B5D811A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D341A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm */; };
-		6E9B5D821A6CF9170090C8B4 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.m */; };
-		6E9B5D831A6CF9170090C8B4 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.m */; };
-		6E9B5D841A6CF9170090C8B4 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.m */; };
+		6E9B5D821A6CF9170090C8B4 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.mm */; };
+		6E9B5D831A6CF9170090C8B4 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.mm */; };
+		6E9B5D841A6CF9170090C8B4 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D361A6CF9170090C8B4 /* MyCustomNode.mm */; };
 		6E9B5D871A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5D851A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E9B5D881A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5D851A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E9B5D891A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5D851A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
@@ -170,6 +170,9 @@
 		6E9B5E011A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
 		6E9B5E021A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
 		6E9B5E031A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5E7B1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5E7A1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm */; };
+		6E9B5E7C1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5E7A1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm */; };
+		6E9B5E7D1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5E7A1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,7 +344,7 @@
 		6E9B5CE71A6CF8EF0090C8B4 /* cocos2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d.xcodeproj; path = ../cocos2d/cocos2d.xcodeproj; sourceTree = "<group>"; };
 		6E9B5CF71A6CF8F70090C8B4 /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "../LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
 		6E9B5D031A6CF9170090C8B4 /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueRobotSprite.h; path = Classes/BlueRobotSprite.h; sourceTree = "<group>"; };
-		6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueRobotSprite.m; path = Classes/BlueRobotSprite.m; sourceTree = "<group>"; };
+		6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlueRobotSprite.mm; path = Classes/BlueRobotSprite.mm; sourceTree = "<group>"; };
 		6E9B5D051A6CF9170090C8B4 /* LHSceneAssetsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetsTest.h; path = Classes/LHSceneAssetsTest.h; sourceTree = "<group>"; };
 		6E9B5D061A6CF9170090C8B4 /* LHSceneAssetsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAssetsTest.mm; path = Classes/LHSceneAssetsTest.mm; sourceTree = "<group>"; };
 		6E9B5D071A6CF9170090C8B4 /* LHSceneAssetsWithJointsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetsWithJointsTest.h; path = Classes/LHSceneAssetsWithJointsTest.h; sourceTree = "<group>"; };
@@ -391,7 +394,7 @@
 		6E9B5D331A6CF9170090C8B4 /* LHSceneWaterAreaTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneWaterAreaTest.h; path = Classes/LHSceneWaterAreaTest.h; sourceTree = "<group>"; };
 		6E9B5D341A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneWaterAreaTest.mm; path = Classes/LHSceneWaterAreaTest.mm; sourceTree = "<group>"; };
 		6E9B5D351A6CF9170090C8B4 /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomNode.h; path = Classes/MyCustomNode.h; sourceTree = "<group>"; };
-		6E9B5D361A6CF9170090C8B4 /* MyCustomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCustomNode.m; path = Classes/MyCustomNode.m; sourceTree = "<group>"; };
+		6E9B5D361A6CF9170090C8B4 /* MyCustomNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomNode.mm; path = Classes/MyCustomNode.mm; sourceTree = "<group>"; };
 		6E9B5D851A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; name = INDIVIDUAL_IMAGES_EXAMPLE; path = Resources/INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = "<group>"; };
 		6E9B5D8D1A6CF9560090C8B4 /* HOW_TO_REMOVE_DEMOS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HOW_TO_REMOVE_DEMOS.md; sourceTree = "<group>"; };
 		6E9B5D8E1A6CF9560090C8B4 /* LH_DEMO_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_DEMO_VERSION.plist; sourceTree = "<group>"; };
@@ -402,6 +405,8 @@
 		6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAdvancedPhysicsTest.mm; path = Classes/LHSceneAdvancedPhysicsTest.mm; sourceTree = "<group>"; };
 		6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
 		6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
+		6E9B5E791A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneOnTheFlySpritesWithPhysicsTest.h; path = Classes/LHSceneOnTheFlySpritesWithPhysicsTest.h; sourceTree = "<group>"; };
+		6E9B5E7A1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneOnTheFlySpritesWithPhysicsTest.mm; path = Classes/LHSceneOnTheFlySpritesWithPhysicsTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,8 +559,10 @@
 				6E9B5D201A6CF9170090C8B4 /* LHSceneIntroduction.mm */,
 				6E9B5DA81A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.h */,
 				6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */,
+				6E9B5E791A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.h */,
+				6E9B5E7A1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm */,
 				6E9B5D031A6CF9170090C8B4 /* BlueRobotSprite.h */,
-				6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.m */,
+				6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */,
 				6E9B5D051A6CF9170090C8B4 /* LHSceneAssetsTest.h */,
 				6E9B5D061A6CF9170090C8B4 /* LHSceneAssetsTest.mm */,
 				6E9B5D071A6CF9170090C8B4 /* LHSceneAssetsWithJointsTest.h */,
@@ -601,7 +608,7 @@
 				6E9B5D331A6CF9170090C8B4 /* LHSceneWaterAreaTest.h */,
 				6E9B5D341A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm */,
 				6E9B5D351A6CF9170090C8B4 /* MyCustomNode.h */,
-				6E9B5D361A6CF9170090C8B4 /* MyCustomNode.m */,
+				6E9B5D361A6CF9170090C8B4 /* MyCustomNode.mm */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -915,12 +922,12 @@
 			files = (
 				6E9B5D761A6CF9170090C8B4 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E9B5D401A6CF9170090C8B4 /* LHSceneBeziersTest.mm in Sources */,
-				6E9B5D371A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */,
+				6E9B5D371A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */,
 				6E9B5D3D1A6CF9170090C8B4 /* LHSceneAssetsWithJointsTest.mm in Sources */,
 				6E9B5D6D1A6CF9170090C8B4 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E9B5D611A6CF9170090C8B4 /* LHSceneIntroduction.mm in Sources */,
 				6E9B5D641A6CF9170090C8B4 /* LHSceneJointsTest.mm in Sources */,
-				6E9B5D821A6CF9170090C8B4 /* MyCustomNode.m in Sources */,
+				6E9B5D821A6CF9170090C8B4 /* MyCustomNode.mm in Sources */,
 				6E9B5D791A6CF9170090C8B4 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6E9B5D6A1A6CF9170090C8B4 /* LHSceneParallaxTest.mm in Sources */,
 				6E0D5629194C32A30036E940 /* main.m in Sources */,
@@ -935,6 +942,7 @@
 				6E9B5DAA1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */,
 				6E9B5D581A6CF9170090C8B4 /* LHSceneDemo.mm in Sources */,
 				6E9B5D731A6CF9170090C8B4 /* LHSceneShapesTest.mm in Sources */,
+				6E9B5E7B1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */,
 				6E9B5D7F1A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E9B5D7C1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D491A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,
@@ -951,12 +959,12 @@
 			files = (
 				6E9B5D781A6CF9170090C8B4 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E9B5D421A6CF9170090C8B4 /* LHSceneBeziersTest.mm in Sources */,
-				6E9B5D391A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */,
+				6E9B5D391A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */,
 				6E9B5D3F1A6CF9170090C8B4 /* LHSceneAssetsWithJointsTest.mm in Sources */,
 				6E9B5D6F1A6CF9170090C8B4 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E9B5D631A6CF9170090C8B4 /* LHSceneIntroduction.mm in Sources */,
 				6E9B5D661A6CF9170090C8B4 /* LHSceneJointsTest.mm in Sources */,
-				6E9B5D841A6CF9170090C8B4 /* MyCustomNode.m in Sources */,
+				6E9B5D841A6CF9170090C8B4 /* MyCustomNode.mm in Sources */,
 				6E9B5D7B1A6CF9170090C8B4 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6E9B5D6C1A6CF9170090C8B4 /* LHSceneParallaxTest.mm in Sources */,
 				6E12228C1924BD88005E8532 /* main.m in Sources */,
@@ -971,6 +979,7 @@
 				6E9B5DAC1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */,
 				6E9B5D5A1A6CF9170090C8B4 /* LHSceneDemo.mm in Sources */,
 				6E9B5D751A6CF9170090C8B4 /* LHSceneShapesTest.mm in Sources */,
+				6E9B5E7D1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */,
 				6E9B5D811A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E9B5D7E1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D4B1A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,
@@ -987,12 +996,12 @@
 			files = (
 				6E9B5D771A6CF9170090C8B4 /* LHSceneSpriteSheetAnimationTest.mm in Sources */,
 				6E9B5D411A6CF9170090C8B4 /* LHSceneBeziersTest.mm in Sources */,
-				6E9B5D381A6CF9170090C8B4 /* BlueRobotSprite.m in Sources */,
+				6E9B5D381A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */,
 				6E9B5D3E1A6CF9170090C8B4 /* LHSceneAssetsWithJointsTest.mm in Sources */,
 				6E9B5D6E1A6CF9170090C8B4 /* LHSceneRemoveOnCollisionTest.mm in Sources */,
 				6E9B5D621A6CF9170090C8B4 /* LHSceneIntroduction.mm in Sources */,
 				6E9B5D651A6CF9170090C8B4 /* LHSceneJointsTest.mm in Sources */,
-				6E9B5D831A6CF9170090C8B4 /* MyCustomNode.m in Sources */,
+				6E9B5D831A6CF9170090C8B4 /* MyCustomNode.mm in Sources */,
 				6E9B5D7A1A6CF9170090C8B4 /* LHSceneUniversalDevicesTest.mm in Sources */,
 				6E9B5D6B1A6CF9170090C8B4 /* LHSceneParallaxTest.mm in Sources */,
 				6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */,
@@ -1007,6 +1016,7 @@
 				6E9B5DAB1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */,
 				6E9B5D591A6CF9170090C8B4 /* LHSceneDemo.mm in Sources */,
 				6E9B5D741A6CF9170090C8B4 /* LHSceneShapesTest.mm in Sources */,
+				6E9B5E7C1A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.mm in Sources */,
 				6E9B5D801A6CF9170090C8B4 /* LHSceneWaterAreaTest.mm in Sources */,
 				6E9B5D7D1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D4A1A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,

@@ -34,6 +34,7 @@
 #import "LHSceneRemoveOnCollisionTest.h"
 #import "LHSceneNodesSubclassingTest.h"
 #import "LHSceneAdvancedPhysicsTest.h"
+#import "LHSceneOnTheFlySpritesWithPhysicsTest.h"
 
 #import "LHSceneUniversalDevicesTest.h"
 
@@ -63,6 +64,8 @@
     availableScenes = [[NSMutableArray alloc] init];
     
     [availableScenes addObject:[LHSceneIntroduction class]];
+
+    [availableScenes addObject:[LHSceneOnTheFlySpritesWithPhysicsTest class]];
 
     [availableScenes addObject:[LHSceneAdvancedPhysicsTest class]];
     

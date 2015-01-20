@@ -151,20 +151,21 @@
     fixture->filter.categoryBits = [fixInfo intForKey:@"category"];
 }
 
-- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
+- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
     
     if(self = [super init])
     {
         _node = nd;
         _body = NULL;
         
-        NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
-        
         if(!dict){
             return self;
         }
         
-        int shapeType = [dict intForKey:@"shape"];
+        int shapeType = 6;//editor
+        if([dict objectForKey:@"shape"])
+            shapeType = [dict intForKey:@"shape"];
+        
         int type = [dict intForKey:@"type"];
         
         LHScene* scene = (LHScene*)[_node scene];
@@ -730,14 +731,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     //nothing to do for chipmunk
 }
 
-- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(CCNode*)nd{
+- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
     
     if(self = [super init])
     {
         _node = nd;
 
-        NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
-        
         if(!dict){
             return self;
         }
