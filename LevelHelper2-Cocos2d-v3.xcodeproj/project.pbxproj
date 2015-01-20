@@ -81,6 +81,12 @@
 		6E71629F1A4AABC0000B458A /* LH2-Published in Resources */ = {isa = PBXBuildFile; fileRef = 6E71629D1A4AABC0000B458A /* LH2-Published */; };
 		6E7162A01A4AABC0000B458A /* LH2-Published in Resources */ = {isa = PBXBuildFile; fileRef = 6E71629D1A4AABC0000B458A /* LH2-Published */; };
 		6E89FE33192E261E0040478F /* LHSceneSubclass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FE32192E261E0040478F /* LHSceneSubclass.mm */; };
+		6E9B5DF11A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF01A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5DF21A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF01A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5DF31A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF01A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5DF91A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF81A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
+		6E9B5DFA1A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF81A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
+		6E9B5DFB1A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DF81A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
 		6E9FD2C119A5001D0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74619A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 		6E9FD2D119A5044F0046CDBD /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74819A4F1E50046CDBD /* libLevelHelper2-API.a */; };
 		6EF5DD2419A50DBB00D5D289 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9FC74A19A4F1E50046CDBD /* libLevelHelper2-API.a */; };
@@ -254,7 +260,7 @@
 		6E201E701A513D940003F030 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6E201E711A513D940003F030 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6E21716E1982BA8600C1F7CF /* LevelHelper2-Cocos2d-v3+Box2d MAC OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-Cocos2d-v3+Box2d MAC OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E21716F1982BA8600C1F7CF /* Info+Box2dMacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2dMacOS.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Info+Box2dMacOS.plist"; sourceTree = "<absolute>"; };
+		6E21716F1982BA8600C1F7CF /* Info+Box2dMacOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info+Box2dMacOS.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/Cocos2d.v3.3.0/Info+Box2dMacOS.plist"; sourceTree = "<absolute>"; };
 		6E34132119A710CB00B73620 /* cocos2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d.xcodeproj; path = cocos2d/cocos2d.xcodeproj; sourceTree = "<group>"; };
 		6E4026911982BC32002B4D32 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		6E4026931982BC50002B4D32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -268,6 +274,8 @@
 		6E89FE31192E261E0040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSubclass.h; path = Classes/LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FE32192E261E0040478F /* LHSceneSubclass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSubclass.mm; path = Classes/LHSceneSubclass.mm; sourceTree = "<group>"; };
 		6E9B5CCE1A6CF8B50090C8B4 /* DEMOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DEMOS.xcodeproj; path = DEMOS/DEMOS.xcodeproj; sourceTree = "<group>"; };
+		6E9B5DF01A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
+		6E9B5DF81A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
 		6E9FC73619A4F1E40046CDBD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
 		6E9FC73919A4F1E40046CDBD /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -423,6 +431,8 @@
 		6E201E491A51348E0003F030 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				6E9B5DF81A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png */,
+				6E9B5DF01A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png */,
 				6E201E6D1A513D940003F030 /* Default-568h@2x.png */,
 				6E201E6E1A513D940003F030 /* Default-Landscape@2x~ipad.png */,
 				6E201E6F1A513D940003F030 /* Default-Landscape~ipad.png */,
@@ -704,7 +714,9 @@
 				6E201E721A513D940003F030 /* Default-568h@2x.png in Resources */,
 				6E201E5C1A51348F0003F030 /* iPhone-old.png in Resources */,
 				6E201E601A51348F0003F030 /* iPhone.png in Resources */,
+				6E9B5DF91A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
 				6E71629E1A4AABC0000B458A /* LH2-Published in Resources */,
+				6E9B5DF11A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
 				6E201E621A51348F0003F030 /* iPhone@2x.png in Resources */,
 				6E201E7A1A513D940003F030 /* Default@2x.png in Resources */,
 				6E0D569F194C32A30036E940 /* iTunesArtwork@2x in Resources */,
@@ -729,7 +741,9 @@
 				6E201E631A51348F0003F030 /* iPhone@2x.png in Resources */,
 				6E201E5F1A51348F0003F030 /* iPhone-old@2x.png in Resources */,
 				6E201E7B1A513D940003F030 /* Default@2x.png in Resources */,
+				6E9B5DFB1A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
 				6E1220251924BD85005E8532 /* iTunesArtwork in Resources */,
+				6E9B5DF31A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
 				6E1220271924BD85005E8532 /* iTunesArtwork@2x in Resources */,
 				6E201E651A51348F0003F030 /* Settings.png in Resources */,
 				6E201E5B1A51348F0003F030 /* iPad@2x.png in Resources */,
@@ -741,6 +755,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9B5DF21A6E547C0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
+				6E9B5DFA1A6E557B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
 				6E71629F1A4AABC0000B458A /* LH2-Published in Resources */,
 				6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */,
 			);

@@ -16,6 +16,7 @@
 @class LHGameWorldNode;
 @class LHUINode;
 @class LHRopeJointNode;
+@class LHContactInfo;
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus
@@ -32,13 +33,16 @@
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
                                andNodeB:(CCNode*)b;
 
+-(void)didBeginContact:(LHContactInfo*)contact;
+-(void)didEndContact:(LHContactInfo*)contact;
+
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
                           andNodeB:(CCNode*)b
                         atLocation:(CGPoint)scenePt
-                       withImpulse:(float)impulse;
+                       withImpulse:(float)impulse __attribute__((deprecated));
 
 -(void)didEndContactBetweenNodeA:(CCNode*)a
-                        andNodeB:(CCNode*)b;
+                        andNodeB:(CCNode*)b __attribute__((deprecated));
 
 #endif
 
@@ -179,26 +183,27 @@
 /**
  Overwrite this methods to receive collision informations when using Box2d.
  Called when the collision begins. Called with every new contact point between two nodes. May be called multiple times for same two nodes, because the point at which the nodes are touching has changed.
- @param a First node that participates in the collision.
- @param b Second node that participates in the collision.
- @param scenePt The location where the two nodes collided in scene coordinates.
- @param impulse The impulse of the collision.
+ @param contact The info of this contact. An object with nodeA, nodeB, nodeAShapeName, nodeBShapeName, nodeAShapeID, nodeBShapeID.
  @discussion Available only when using Box2d.
  */
+
+-(void)didBeginContact:(LHContactInfo*)contact;
+
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
                           andNodeB:(CCNode*)b
                         atLocation:(CGPoint)scenePt
-                       withImpulse:(float)impulse;
+                       withImpulse:(float)impulse __attribute__((deprecated));
 
 /**
  Overwrite this methods to receive collision informations when using Box2d.
  Called when the collision ends. Called when two nodes no longer collide at a specific point. May be called multiple times for same two nodes, because the point at which the nodes are touching has changed.
- @param a First node that participates in the collision.
- @param b Second node that participates in the collision.
+ @param contact The info of this contact. An object with nodeA, nodeB, nodeAShapeName, nodeBShapeName, nodeAShapeID, nodeBShapeID. NOTE: Contact Point and Impulse is not available at this stage.
  @discussion Available only when using Box2d.
  */
+-(void)didEndContact:(LHContactInfo*)contact;
+
 -(void)didEndContactBetweenNodeA:(CCNode*)a
-                        andNodeB:(CCNode*)b;
+                        andNodeB:(CCNode*)b __attribute__((deprecated));
 
 #else //Chipmunk (Cocos2d)
 //users of chipmunk should use the implementation provided by Cocos2d.

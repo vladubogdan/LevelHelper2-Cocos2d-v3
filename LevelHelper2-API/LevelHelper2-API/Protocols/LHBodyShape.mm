@@ -15,7 +15,6 @@
 #include "Box2d/Box2D.h"
 #include <vector>
 
-#endif //LH_USE_BOX2D
 
 @implementation LHBodyShape
 {
@@ -173,7 +172,7 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
                     const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
                     
                     NSString* pointStr = [fixPoints objectAtIndex:j];
-                    CGPoint point = CGPointFromString(pointStr);
+                    CGPoint point = LHPointFromString(pointStr);
                     
                     point.x *= scale.x;
                     point.y *= scale.y;
@@ -347,6 +346,42 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
     return self;
 }
 
++(id)createWithName:(NSString*)name pointA:(CGPoint)ptA pointB:(CGPoint)ptB node:(CCNode*)node scene:(LHScene*)scene
+{
+    return LH_AUTORELEASED([[self alloc] initWithName:name pointA:ptA pointB:ptB node:node scene:scene]);
+}
+
+-(id)initWithName:(NSString*)nm pointA:(CGPoint)ptA pointB:(CGPoint)ptB node:(CCNode*)node scene:(LHScene*)scene
+{
+    if(self = [super init]){
+        
+        _shapeID = 0;
+        if(nm){
+            _shapeName = [[NSString alloc] initWithString:nm];
+        }
+        
+        // Define the ground body.
+        b2BodyDef groundBodyDef;
+        groundBodyDef.position.Set(0, 0); // bottom-left corner
+        
+        b2Body* physicsBoundariesBody = [scene box2dWorld]->CreateBody(&groundBodyDef);
+        physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(node));
+        
+        // Define the ground box shape.
+        b2EdgeShape groundBox;
+        
+        b2Vec2 from = [scene metersFromPoint:ptA];
+        b2Vec2 to = [scene metersFromPoint:ptB];
+        
+        // top
+        groundBox.Set(from, to);
+        b2Fixture* fixture = physicsBoundariesBody->CreateFixture(&groundBox,0);
+        
+        fixture->SetUserData(LH_VOID_BRIDGE_CAST(self));
+    }
+    return self;
+}
+
 
 +(id)createWithDictionary:(NSDictionary*)dict body:(b2Body*)body node:(CCNode*)node scene:(LHScene*)scene scale:(CGPoint)scale
 {
@@ -370,7 +405,7 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
         NSArray* fixtures = [dict objectForKey:@"points"];
         
         float ratio = [[CCDirector sharedDirector] contentScaleFactor];
-                
+        
         if(fixtures != nil)
         {
             for(NSArray* fixPoints in fixtures)
@@ -387,7 +422,7 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
                         const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
                         
                         NSString* ptStr = [fixPoints objectAtIndex:j];
-                        CGPoint point = CGPointFromString(ptStr);
+                        CGPoint point = LHPointFromString(ptStr);
                         
                         point.x /= ratio;
                         point.y /= ratio;
@@ -424,7 +459,7 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
             
             float radius = [[dict objectForKey:@"radius"] floatValue];
             NSString* centerStr = [dict objectForKey:@"center"];
-            CGPoint point = CGPointFromString(centerStr);
+            CGPoint point = LHPointFromString(centerStr);
             
             radius /= ratio;
             
@@ -489,3 +524,5 @@ static bool LHValidateCentroid(b2Vec2* vs, int count)
 }
 
 @end
+
+#endif //LH_USE_BOX2D

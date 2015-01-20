@@ -44,5 +44,46 @@
 	return self;
 }
 
+#if LH_USE_BOX2D
+
+
+-(void)didBeginContact:(LHContactInfo *)contact
+{
+
+    NSLog(@"did BEGIN contact with info.............");
+    NSLog(@"NODE A: %@", [[contact nodeA] name]);
+    NSLog(@"NODE B: %@", [[contact nodeB] name]);
+    NSLog(@"NODE A SHAPE NAME: %@", [contact nodeAShapeName]);
+    NSLog(@"NODE B SHAPE NAME: %@", [contact nodeBShapeName]);
+    NSLog(@"NODE A SHAPE ID: %d", [contact nodeAShapeID]);
+    NSLog(@"NODE B SHAPE ID: %d", [contact nodeBShapeID]);
+    NSLog(@"CONTACT POINT: %f %f", [contact contactPoint].x, [contact contactPoint].y);
+    NSLog(@"IMPULSE %f", [contact impulse]);
+    NSLog(@"BOX2D CONTACT OBJ %p", [contact box2dContact]);
+    
+}
+
+-(void)didEndContact:(LHContactInfo *)contact
+{
+    NSLog(@"did END contact with info.............");
+    NSLog(@"NODE A: %@", [[contact nodeA] name]);
+    NSLog(@"NODE B: %@", [[contact nodeB] name]);
+    NSLog(@"NODE A SHAPE NAME: %@", [contact nodeAShapeName]);
+    NSLog(@"NODE B SHAPE NAME: %@", [contact nodeBShapeName]);
+    NSLog(@"NODE A SHAPE ID: %d", [contact nodeAShapeID]);
+    NSLog(@"NODE B SHAPE ID: %d", [contact nodeBShapeID]);
+    NSLog(@"CONTACT POINT: %f %f", [contact contactPoint].x, [contact contactPoint].y);
+    NSLog(@"IMPULSE %f", [contact impulse]);
+    NSLog(@"BOX2D CONTACT OBJ %p", [contact box2dContact]);
+
+}
+
+#else
+
+//chipmunk
+
+#endif
+
+
 
 @end

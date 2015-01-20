@@ -32,7 +32,7 @@
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 #import "LHBox2dCollisionHandling.h"
-
+#import "LHBodyShape.h"
 
 @interface LHCamera (LH_CAMERA_PINCH_ZOOM)
 -(void)pinchZoomWithScaleDelta:(float)value center:(CGPoint)center;
@@ -57,6 +57,7 @@
     
     LHNodeProtocolImpl* _nodeProtocolImp;
     
+    NSMutableArray* _phyBoundarySubshapes;
     NSMutableDictionary* loadedTextures;
     NSMutableDictionary* editorBodiesInfo;
     NSDictionary* tracedFixtures;
@@ -85,6 +86,8 @@
 
 
 -(void)dealloc{
+    
+    LH_SAFE_RELEASE(_phyBoundarySubshapes);
     
     _animationsDelegate = nil;
 #if LH_USE_BOX2D
@@ -165,8 +168,6 @@
     sceneSize.height = sceneSize.height/ratio;
     
     aspect = 2;//HARD CODED UNTIL I FIGURE OUT HOW TO DO IT IN v3
-    
-    
     
     if(aspect == 0)//exact fit
     {
@@ -290,8 +291,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
-////////////////////////////////////////////////////////////////////////////////
-
 -(void)loadPhysicsBoundariesFromDictionary:(NSDictionary*)dict
 {
     NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
@@ -358,24 +357,39 @@
     
 #if LH_USE_BOX2D
     
-    float PTM_RATIO = [self ptm];
+    LHBodyShape* bodyShape = [LHBodyShape createWithName:sectionName
+                                                  pointA:from
+                                                  pointB:to
+                                                    node:drawNode
+                                                   scene:self];
     
-    // Define the ground body.
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0); // bottom-left corner
+    if(!_phyBoundarySubshapes){
+        _phyBoundarySubshapes = [[NSMutableArray alloc] init];
+    }
     
-    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
-    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
+    if(bodyShape){
+        [_phyBoundarySubshapes addObject:bodyShape];
+    }
     
-    // Define the ground box shape.
-    b2EdgeShape groundBox;
     
-    // top
-    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
-                         from.y/PTM_RATIO),
-                  b2Vec2(to.x/PTM_RATIO,
-                         to.y/PTM_RATIO));
-    physicsBoundariesBody->CreateFixture(&groundBox,0);
+//    float PTM_RATIO = [self ptm];
+//    
+//    // Define the ground body.
+//    b2BodyDef groundBodyDef;
+//    groundBodyDef.position.Set(0, 0); // bottom-left corner
+//    
+//    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+//    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
+//    
+//    // Define the ground box shape.
+//    b2EdgeShape groundBox;
+//    
+//    // top
+//    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
+//                         from.y/PTM_RATIO),
+//                  b2Vec2(to.x/PTM_RATIO,
+//                         to.y/PTM_RATIO));
+//    b2Fixture* fix = physicsBoundariesBody->CreateFixture(&groundBox,0);
     
     
 #else //chipmunk
@@ -534,11 +548,21 @@
                                andNodeB:(CCNode*)b{
     return NO;
 }
+    
+-(void)didBeginContact:(LHContactInfo *)contact
+{
+    //nothing to do - users should overwrite this method
+}
 
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
                           andNodeB:(CCNode*)b
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse
+{
+    //nothing to do - users should overwrite this method
+}
+    
+-(void)didEndContact:(LHContactInfo *)contact
 {
     //nothing to do - users should overwrite this method
 }

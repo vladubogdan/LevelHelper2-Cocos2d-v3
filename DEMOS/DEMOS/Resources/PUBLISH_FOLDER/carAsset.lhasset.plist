@@ -36,7 +36,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>D9F4A613-1496-472F-AF81-6A699B5E6434</string>
+				<string>32AB0B2D-A184-465B-B70D-7F4F51029585</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -70,7 +70,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+			<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -112,7 +112,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+			<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -148,7 +148,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+			<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -222,7 +222,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+			<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -302,7 +302,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+			<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -347,67 +347,106 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>D9F4A613-1496-472F-AF81-6A699B5E6434</key>
+		<key>32AB0B2D-A184-465B-B70D-7F4F51029585</key>
 		<array>
 			<array>
-				<string>{-40.75, -37.5}</string>
-				<string>{-37.25, -40}</string>
-				<string>{-41.25, -34.5}</string>
-			</array>
-			<array>
-				<string>{10.25, -37}</string>
-				<string>{10.25, -35}</string>
-				<string>{-36.75, -40.5}</string>
-				<string>{5.75, -40.5}</string>
-				<string>{8.75, -39}</string>
-			</array>
-			<array>
-				<string>{82.25, 4.5}</string>
-				<string>{82.25, 22}</string>
-				<string>{17.25, -22.5}</string>
-				<string>{42.25, -19.5}</string>
-				<string>{52.25, -16.5}</string>
-				<string>{63.75, -11}</string>
-				<string>{75.25, -2.5}</string>
-			</array>
-			<array>
-				<string>{-83.75, 24}</string>
+				<string>{-84.75, 27}</string>
 				<string>{-84.75, 21}</string>
-				<string>{-84.75, -7.5}</string>
-				<string>{-83.75, -10}</string>
-				<string>{-46.75, -22.5}</string>
-				<string>{79.25, 26}</string>
-				<string>{-80.25, 26.5}</string>
-				<string>{-81.75, 26}</string>
+				<string>{-48.75, -25}</string>
+				<string>{-45.25, -28}</string>
+				<string>{84.25, 24}</string>
+				<string>{81.25, 25}</string>
+				<string>{-78.25, 27.5}</string>
 			</array>
 			<array>
-				<string>{81.75, 23.5}</string>
-				<string>{79.25, 26}</string>
-				<string>{-46.75, -22.5}</string>
-				<string>{-37.25, -40}</string>
-				<string>{-36.75, -40.5}</string>
-				<string>{17.25, -22.5}</string>
-				<string>{82.25, 22}</string>
+				<string>{-84.75, -13}</string>
+				<string>{-82.25, -13}</string>
+				<string>{-84.75, -9.5}</string>
 			</array>
 			<array>
-				<string>{10.25, -35}</string>
-				<string>{17.25, -22.5}</string>
-				<string>{-36.75, -40.5}</string>
+				<string>{-71.75, -19}</string>
+				<string>{-66.75, -19}</string>
+				<string>{-86.75, 20.5}</string>
+				<string>{-73.25, -16}</string>
 			</array>
 			<array>
-				<string>{-54.75, -22.5}</string>
-				<string>{-46.75, -22.5}</string>
-				<string>{-83.75, -10}</string>
+				<string>{84.25, 2.5}</string>
+				<string>{84.25, 24}</string>
+				<string>{18.25, -25}</string>
+				<string>{61.75, -16}</string>
 			</array>
 			<array>
-				<string>{-41.25, -34.5}</string>
-				<string>{-37.25, -40}</string>
-				<string>{-46.75, -22.5}</string>
+				<string>{-57.75, -24}</string>
+				<string>{-56.25, -25}</string>
+				<string>{-48.75, -25}</string>
+				<string>{-58.25, -22}</string>
+			</array>
+			<array>
+				<string>{-80.75, -16}</string>
+				<string>{-73.25, -16}</string>
+				<string>{-82.25, -13}</string>
+			</array>
+			<array>
+				<string>{-47.25, -27.5}</string>
+				<string>{-45.25, -28}</string>
+				<string>{-48.75, -25}</string>
+			</array>
+			<array>
+				<string>{-65.75, -21.5}</string>
+				<string>{-58.25, -22}</string>
+				<string>{-66.75, -19}</string>
+			</array>
+			<array>
+				<string>{14.25, -36}</string>
+				<string>{18.25, -25}</string>
+				<string>{-38.25, -43}</string>
+				<string>{7.25, -43}</string>
+			</array>
+			<array>
+				<string>{-82.25, -13}</string>
+				<string>{-73.25, -16}</string>
+				<string>{-86.75, 20.5}</string>
+				<string>{-84.75, -9.5}</string>
+			</array>
+			<array>
+				<string>{-42.25, -39.5}</string>
+				<string>{-39.75, -40}</string>
+				<string>{84.25, 24}</string>
+				<string>{-45.25, -28}</string>
+			</array>
+			<array>
+				<string>{-38.75, -42.5}</string>
+				<string>{-38.25, -43}</string>
+				<string>{18.25, -25}</string>
+				<string>{84.25, 24}</string>
+				<string>{-39.75, -40}</string>
+			</array>
+			<array>
+				<string>{46.75, -21.5}</string>
+				<string>{48.25, -19}</string>
+				<string>{18.25, -25}</string>
+			</array>
+			<array>
+				<string>{-86.75, -9}</string>
+				<string>{-84.75, -9.5}</string>
+				<string>{-86.75, 20.5}</string>
+			</array>
+			<array>
+				<string>{-66.75, -19}</string>
+				<string>{-48.75, -25}</string>
+				<string>{-84.75, 21}</string>
+				<string>{-86.75, 20.5}</string>
+			</array>
+			<array>
+				<string>{80.75, 27.5}</string>
+				<string>{-77.75, 29}</string>
+				<string>{-78.25, 27.5}</string>
+				<string>{81.25, 25}</string>
 			</array>
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>54034BBB-AC1F-4AEE-A75C-9012837B82B7</string>
+	<string>617CB543-CDC2-4A1F-BDBB-2955D9627411</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

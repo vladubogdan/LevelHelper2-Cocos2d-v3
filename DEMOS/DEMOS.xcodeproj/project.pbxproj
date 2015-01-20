@@ -162,6 +162,14 @@
 		6E9B5DAA1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */; };
 		6E9B5DAB1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */; };
 		6E9B5DAC1A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */; };
+		6E9B5DDB1A6E474B0090C8B4 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9B5CE41A6CF8E60090C8B4 /* libBox2D.a */; };
+		6E9B5DDF1A6E47520090C8B4 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9B5CE61A6CF8E60090C8B4 /* libBox2D.a */; };
+		6E9B5DFE1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
+		6E9B5DFF1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
+		6E9B5E001A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */; };
+		6E9B5E011A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5E021A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
+		6E9B5E031A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +277,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7A4037A719E37038007B6E8F;
 			remoteInfo = "cocos2d-mac";
+		};
+		6E9B5DE01A6E475D0090C8B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9B5CDE1A6CF8E60090C8B4 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE8AA419A4976900599C48;
+			remoteInfo = "Box2D-OSX";
+		};
+		6E9B5DE21A6E47620090C8B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E9B5CDE1A6CF8E60090C8B4 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE88E219A48EEF00599C48;
+			remoteInfo = Box2D;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -378,6 +400,8 @@
 		6E9B5D981A6CFD120090C8B4 /* PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PUBLISH_FOLDER; path = Resources/PUBLISH_FOLDER; sourceTree = "<group>"; };
 		6E9B5DA81A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAdvancedPhysicsTest.h; path = Classes/LHSceneAdvancedPhysicsTest.h; sourceTree = "<group>"; };
 		6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAdvancedPhysicsTest.mm; path = Classes/LHSceneAdvancedPhysicsTest.mm; sourceTree = "<group>"; };
+		6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
+		6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +409,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9B5DDB1A6E474B0090C8B4 /* libBox2D.a in Frameworks */,
 				6E9B5D931A6CFA130090C8B4 /* libLevelHelper2-API.a in Frameworks */,
 				6E9B5D921A6CFA010090C8B4 /* libcocos2d.a in Frameworks */,
 				6E0D567C194C32A30036E940 /* OpenAL.framework in Frameworks */,
@@ -421,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9B5DDF1A6E47520090C8B4 /* libBox2D.a in Frameworks */,
 				6E9B5D9D1A6CFD810090C8B4 /* libLevelHelper2-API.a in Frameworks */,
 				6E9B5D9C1A6CFD7A0090C8B4 /* libcocos2d-mac.a in Frameworks */,
 				6E2171481982BA8600C1F7CF /* AVFoundation.framework in Frameworks */,
@@ -583,6 +609,8 @@
 		6E201E491A51348E0003F030 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				6E9B5DFC1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png */,
+				6E9B5DFD1A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png */,
 				6E201E6D1A513D940003F030 /* Default-568h@2x.png */,
 				6E201E6E1A513D940003F030 /* Default-Landscape@2x~ipad.png */,
 				6E201E6F1A513D940003F030 /* Default-Landscape~ipad.png */,
@@ -657,6 +685,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E9B5DE31A6E47620090C8B4 /* PBXTargetDependency */,
 				6E9B5D971A6CFA280090C8B4 /* PBXTargetDependency */,
 				6E9B5D951A6CFA230090C8B4 /* PBXTargetDependency */,
 			);
@@ -695,6 +724,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E9B5DE11A6E475D0090C8B4 /* PBXTargetDependency */,
 				6E9B5DA71A6CFDCF0090C8B4 /* PBXTargetDependency */,
 				6E9B5DA51A6CFDCC0090C8B4 /* PBXTargetDependency */,
 			);
@@ -829,6 +859,8 @@
 				6E201E5C1A51348F0003F030 /* iPhone-old.png in Resources */,
 				6E201E601A51348F0003F030 /* iPhone.png in Resources */,
 				6E9B5D871A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E9B5DFE1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6E9B5E011A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
 				6E201E621A51348F0003F030 /* iPhone@2x.png in Resources */,
 				6E201E7A1A513D940003F030 /* Default@2x.png in Resources */,
 				6E201E541A51348F0003F030 /* iPad-old.png in Resources */,
@@ -853,6 +885,8 @@
 				6E201E5F1A51348F0003F030 /* iPhone-old@2x.png in Resources */,
 				6E201E7B1A513D940003F030 /* Default@2x.png in Resources */,
 				6E9B5D891A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E9B5E001A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6E9B5E031A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
 				6E201E651A51348F0003F030 /* Settings.png in Resources */,
 				6E201E5B1A51348F0003F030 /* iPad@2x.png in Resources */,
 				6E201E551A51348F0003F030 /* iPad-old.png in Resources */,
@@ -865,7 +899,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9B5D881A6CF93A0090C8B4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E9B5DFF1A6E563B0090C8B4 /* Default-375w-667h@2x~iphone.png in Resources */,
 				6E9B5D9A1A6CFD120090C8B4 /* PUBLISH_FOLDER in Resources */,
+				6E9B5E021A6E563B0090C8B4 /* Default-414w-736h@3x~iphone.png in Resources */,
 				6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,6 +1049,16 @@
 			isa = PBXTargetDependency;
 			name = "cocos2d-mac";
 			targetProxy = 6E9B5DA61A6CFDCF0090C8B4 /* PBXContainerItemProxy */;
+		};
+		6E9B5DE11A6E475D0090C8B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Box2D-OSX";
+			targetProxy = 6E9B5DE01A6E475D0090C8B4 /* PBXContainerItemProxy */;
+		};
+		6E9B5DE31A6E47620090C8B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Box2D;
+			targetProxy = 6E9B5DE21A6E47620090C8B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

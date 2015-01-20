@@ -68,6 +68,8 @@
     CGPoint previousScale;
 #endif
     __unsafe_unretained CCNode* _node;
+    
+    NSMutableArray* _subShapes;
 }
 
 -(void)dealloc{
@@ -94,6 +96,8 @@
         //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
         [self removeBody];
     }
+    
+    LH_SAFE_RELEASE(_subShapes);
 #endif
     _node = nil;
         
@@ -214,24 +218,24 @@
         }
 
         
-        b2Shape* shape= NULL;
-
-//        NSMutableArray* fixShapes = [NSMutableArray array];
-//        NSArray* fixturesInfo = nil;
+        _subShapes = [[NSMutableArray alloc] init];
+        
         
         if(shapeType == 0)//RECTANGLE
         {
             LHBodyShape* shape = [LHBodyShape createRectangleWithDictionary:fixInfo body:_body node:_node scene:scene size:sizet];
             
-            //shape = new b2PolygonShape();
-            //((b2PolygonShape*)shape)->SetAsBox(sizet.width*0.5f, sizet.height*0.5f);
+            if(shape){
+                [_subShapes addObject:shape];
+            }
         }
         else if(shapeType == 1)//CIRCLE
         {
             LHBodyShape* shape = [LHBodyShape createCircleWithDictionary:fixInfo body:_body node:_node scene:scene size:sizet];
             
-//            shape = new b2CircleShape();
-//            ((b2CircleShape*)shape)->m_radius = sizet.width*0.5;
+            if(shape){
+                [_subShapes addObject:shape];
+            }
         }
         else if(shapeType == 2)//POLYGON
         {
@@ -244,7 +248,10 @@
                                                                   body:_body
                                                                   node:_node
                                                                  scene:scene
-                                                                 scale:scale];                
+                                                                 scale:scale];
+                if(shape){
+                    [_subShapes addObject:shape];
+                }
             }
         }
         else if(shapeType == 3)//CHAIN
@@ -261,7 +268,9 @@
                                                                       scene:scene
                                                                       scale:scale];
                 
-                NSLog(@"DID CREATE CHAIN FOR BEZIER");
+                if(shape){
+                    [_subShapes addObject:shape];
+                }
             }
             else if([_node isKindOfClass:[LHShape class]])
             {
@@ -275,7 +284,9 @@
                                                                       scene:scene
                                                                       scale:scale];
                 
-                NSLog(@"DID CREATE CHAIN FOR SHAPE");
+                if(shape){
+                    [_subShapes addObject:shape];
+                }
             }
         }
         else if(shapeType == 4)//OVAL
@@ -283,21 +294,19 @@
             NSArray* shapePoints = [dict objectForKey:@"ovalShape"];
             if(shapePoints)
             {
-                NSLog(@"SHOULD CREATE OVAL");
                 LHBodyShape* shape = [LHBodyShape createWithDictionary:fixInfo
                                                            shapePoints:shapePoints
                                                                   body:_body
                                                                   node:_node
                                                                  scene:scene
                                                                  scale:scale];
-                NSLog(@"DID CREATE OVAL");
+                if(shape){
+                    [_subShapes addObject:shape];
+                }
             }
-            
         }
         else if(shapeType == 5)//TRACED
         {
-            NSLog(@"SHOULD CREATE TRACED");
-            
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             NSArray* shapePoints = [scene tracedFixturesWithUUID:fixUUID];
@@ -317,7 +326,9 @@
                                                                  scene:scene
                                                                  scale:scale];
 
-                NSLog(@"DID CREATE TRACED");
+                if(shape){
+                    [_subShapes addObject:shape];
+                }
             }
         }
         else if(shapeType == 6)//editor
@@ -328,8 +339,6 @@
             {
                 NSDictionary* bodyInfo = [scene getEditorBodyInfoForSpriteName:[sprite spriteFrameName] atlas:[sprite imageFilePath]];
                 
-                NSLog(@"BODY INFO %@", bodyInfo);
-                
                 if(bodyInfo){
                     NSArray* fixturesInfo = [bodyInfo objectForKey:@"shapes"];
                     
@@ -338,66 +347,13 @@
                         
                         LHBodyShape* shape = [LHBodyShape createWithDictionary:shapeInfo body:_body node:_node scene:scene scale:scale];
                         
-                        
+                        if(shape){
+                            [_subShapes addObject:shape];
+                        }
                     }
                 }
             }
         }
-        
-//        if(fixturesInfo)
-//        {
-//            int flipx = scale.x < 0 ? -1 : 1;
-//            int flipy = scale.y < 0 ? -1 : 1;
-//            
-//            for(NSArray* fixPoints in fixturesInfo)
-//            {
-//                int count = (int)[fixPoints count];
-//                if(count > 2)
-//                {
-//                    b2Vec2 *verts = new b2Vec2[count];
-//                    b2PolygonShape shapeDef;
-//                    
-//                    int i = 0;
-//                    for(int j = count-1; j >=0; --j)
-//                    {
-//                        const int idx = (flipx < 0 && flipy >= 0) || (flipx >= 0 && flipy < 0) ? count - i - 1 : i;
-//                        
-//                        NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
-//                        CGPoint point = LHPointFromString(pointStr);
-//                        point.x *= scale.x;
-//                        point.y *= scale.y;
-//                        
-//                        point.y = -point.y;
-//                        
-//                        verts[idx] = [scene metersFromPoint:point];
-//                        ++i;
-//                    }
-//                    
-//                    
-//                    if([self validCentroid:verts count:count])
-//                    {
-//                        shapeDef.Set(verts, count);
-//                        b2FixtureDef fixture;
-//                        [self setupFixture:&fixture withInfo:fixInfo];                        
-//                        fixture.shape = &shapeDef;
-//                        _body->CreateFixture(&fixture);
-//                    }
-//                    
-//                    delete[] verts;
-//                }
-//            }
-//            
-//        }
-//        
-//        if(shape){
-//            fixture.shape = shape;
-//            _body->CreateFixture(&fixture);
-//        }
-//        
-//        if(shape){
-//            delete shape;
-//            shape = NULL;
-//        }
     }
     
     return self;
@@ -465,6 +421,9 @@
     if(_body){
         b2World* world = _body->GetWorld();
         if(world){
+            
+            LH_SAFE_RELEASE(_subShapes);
+            
             _body->SetUserData(NULL);
             if(!world->IsLocked()){
                 [self removeAllAttachedJoints];

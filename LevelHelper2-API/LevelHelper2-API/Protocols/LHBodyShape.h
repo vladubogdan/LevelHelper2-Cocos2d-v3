@@ -48,6 +48,8 @@ class b2Fixture;
                     scene:(LHScene*)scene
                     scale:(CGPoint)scale;
 
++(id)createWithName:(NSString*)name pointA:(CGPoint)ptA pointB:(CGPoint)ptB node:(CCNode*)node scene:(LHScene*)scene;
+
 +(id)createWithDictionary:(NSDictionary*)dict body:(b2Body*)body node:(CCNode*)node scene:(LHScene*)scene scale:(CGPoint)scale;
 
 -(NSString*)shapeName;

@@ -11,6 +11,9 @@
 		6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
 		6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
 		6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DD61A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
+		6E9B5DD71A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
+		6E9B5DD81A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
 		6E9FC7C119A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C219A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C319A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
@@ -179,6 +182,8 @@
 		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
 		6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyShape.mm; sourceTree = "<group>"; };
+		6E9B5DD41A6E3E240090C8B4 /* LHContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactInfo.h; sourceTree = "<group>"; };
+		6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHContactInfo.mm; sourceTree = "<group>"; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E9FC74E19A4F2330046CDBD /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
 		6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHOpacityFrame.h; sourceTree = "<group>"; };
@@ -493,6 +498,8 @@
 				6E9FC7BE19A4F2330046CDBD /* LHBox2dCollisionHandling.mm */,
 				6E9FC7BF19A4F2330046CDBD /* LHUtils.h */,
 				6E9FC7C019A4F2330046CDBD /* LHUtils.m */,
+				6E9B5DD41A6E3E240090C8B4 /* LHContactInfo.h */,
+				6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -717,6 +724,7 @@
 				6E9FC80F19A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CC19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81B19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD61A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7EB19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E519A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84E19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
@@ -777,6 +785,7 @@
 				6E9FC81019A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CD19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81C19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD71A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7EC19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E619A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84F19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
@@ -837,6 +846,7 @@
 				6E9FC81119A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CE19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81D19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD81A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7ED19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E719A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC85019A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,

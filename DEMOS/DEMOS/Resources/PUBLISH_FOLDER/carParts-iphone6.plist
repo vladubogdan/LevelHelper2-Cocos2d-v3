@@ -101,7 +101,29 @@
 						<key>sensor</key>
 						<false/>
 						<key>shapeID</key>
-						<integer>2</integer>
+						<integer>3</integer>
+					</dict>
+					<dict>
+						<key>category</key>
+						<integer>1</integer>
+						<key>center</key>
+						<string>{71.792190, -9.643750}</string>
+						<key>density</key>
+						<real>0.10000000000000001</real>
+						<key>friction</key>
+						<real>0.20000000000000001</real>
+						<key>mask</key>
+						<integer>65535</integer>
+						<key>name</key>
+						<string>carCircleShapeForTesting</string>
+						<key>radius</key>
+						<real>17.455880000000001</real>
+						<key>restitution</key>
+						<integer>0</integer>
+						<key>sensor</key>
+						<false/>
+						<key>shapeID</key>
+						<integer>5</integer>
 					</dict>
 				</array>
 				<key>type</key>
@@ -154,7 +176,7 @@
 						<key>mask</key>
 						<integer>65535</integer>
 						<key>name</key>
-						<string>UntitledCircleShape</string>
+						<string>myTyreShape</string>
 						<key>radius</key>
 						<real>22.673439999999999</real>
 						<key>restitution</key>
@@ -162,7 +184,7 @@
 						<key>sensor</key>
 						<false/>
 						<key>shapeID</key>
-						<integer>0</integer>
+						<integer>1</integer>
 					</dict>
 				</array>
 				<key>type</key>
