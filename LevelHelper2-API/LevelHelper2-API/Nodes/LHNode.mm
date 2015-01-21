@@ -48,7 +48,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
                 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];

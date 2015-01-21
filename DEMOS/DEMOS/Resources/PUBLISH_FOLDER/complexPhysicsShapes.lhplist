@@ -53,6 +53,166 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
+					<string>{0.364001, 0.247917}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood_2</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.20000000298023224</real>
+							<key>friction</key>
+							<real>0.30000001192092896</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.30000001192092896</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>1</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>200.98974609375</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 32.000000}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>3ACF62EF-6EF4-40E5-B604-510E6C6AA510</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.219139, 0.713738}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood_4</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.20000000298023224</real>
+							<key>friction</key>
+							<real>0.30000001192092896</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.30000001192092896</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>1</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 32.000000}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>07A1B06F-E095-4938-82C2-3D1D04DED99F</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
 					<string>{0.182658, 0.278878}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
@@ -254,7 +414,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>32AB0B2D-A184-465B-B70D-7F4F51029585</string>
+						<string>0FBDAB14-E44D-4B09-BA78-3039035F77C3</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -1020,6 +1180,240 @@
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.220996, 0.674037}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood_5</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.5</real>
+							<key>friction</key>
+							<real>0.30000001192092896</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.30000001192092896</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>2</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>335.30099487304688</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 32.000000}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>B3B1D0B8-FB10-4BB1-B2BE-0E26781C9806</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>collideConnected</key>
+					<false/>
+					<key>enableLimit</key>
+					<true/>
+					<key>enableMotor</key>
+					<true/>
+					<key>lowerAngle</key>
+					<real>-90</real>
+					<key>maxMotorTorque</key>
+					<real>20</real>
+					<key>motorSpeed</key>
+					<real>1</real>
+					<key>name</key>
+					<string>UntitledRevoluteJoint</string>
+					<key>needsCopyReasignment</key>
+					<true/>
+					<key>nodeType</key>
+					<string>LHRevoluteJoint</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativePosA</key>
+					<string>{-39.327172, -5.581974}</string>
+					<key>spriteAUUID</key>
+					<string>B3B1D0B8-FB10-4BB1-B2BE-0E26781C9806</string>
+					<key>spriteBUUID</key>
+					<string>07A1B06F-E095-4938-82C2-3D1D04DED99F</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>upperAngle</key>
+					<real>180</real>
+					<key>uuid</key>
+					<string>B4D81638-E6AE-4DA8-A111-651337A75138</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.416007, 0.201015}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood_3</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.5</real>
+							<key>friction</key>
+							<real>0.30000001192092896</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.30000001192092896</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>2</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>184.49923706054688</real>
+					<key>scale</key>
+					<string>{1.278859, 1.533131}</string>
+					<key>size</key>
+					<string>{128.000000, 32.000000}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>3F2D9FA1-4662-4CB0-95C0-8C6D2975D947</string>
+					<key>zOrder</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>axis</key>
+					<string>{0.382683, -0.923880}</string>
+					<key>collideConnected</key>
+					<false/>
+					<key>enablePrismaticLimit</key>
+					<true/>
+					<key>enablePrismaticMotor</key>
+					<true/>
+					<key>lowerTranslation</key>
+					<real>-45</real>
+					<key>maxMotorForce</key>
+					<real>67.800003051757812</real>
+					<key>name</key>
+					<string>UntitledPrismaticJoint</string>
+					<key>needsCopyReasignment</key>
+					<true/>
+					<key>nodeType</key>
+					<string>LHPrismaticJoint</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>prismaticMotorSpeed</key>
+					<real>-7.0999999046325684</real>
+					<key>relativePosA</key>
+					<string>{57.184756, -5.751861}</string>
+					<key>spriteAUUID</key>
+					<string>3F2D9FA1-4662-4CB0-95C0-8C6D2975D947</string>
+					<key>spriteBUUID</key>
+					<string>3ACF62EF-6EF4-40E5-B604-510E6C6AA510</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>upperTranslation</key>
+					<real>95.199996948242188</real>
+					<key>uuid</key>
+					<string>1E862CC2-5895-4C3A-A183-C337E287CD53</string>
+				</dict>
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
@@ -1153,101 +1547,62 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>32AB0B2D-A184-465B-B70D-7F4F51029585</key>
+		<key>0FBDAB14-E44D-4B09-BA78-3039035F77C3</key>
 		<array>
 			<array>
-				<string>{-84.75, 27}</string>
+				<string>{-40.75, -37.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-41.25, -34.5}</string>
+			</array>
+			<array>
+				<string>{10.25, -37}</string>
+				<string>{10.25, -35}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{5.75, -40.5}</string>
+				<string>{8.75, -39}</string>
+			</array>
+			<array>
+				<string>{82.25, 4.5}</string>
+				<string>{82.25, 22}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{42.25, -19.5}</string>
+				<string>{52.25, -16.5}</string>
+				<string>{63.75, -11}</string>
+				<string>{75.25, -2.5}</string>
+			</array>
+			<array>
+				<string>{-83.75, 24}</string>
 				<string>{-84.75, 21}</string>
-				<string>{-48.75, -25}</string>
-				<string>{-45.25, -28}</string>
-				<string>{84.25, 24}</string>
-				<string>{81.25, 25}</string>
-				<string>{-78.25, 27.5}</string>
+				<string>{-84.75, -7.5}</string>
+				<string>{-83.75, -10}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-80.25, 26.5}</string>
+				<string>{-81.75, 26}</string>
 			</array>
 			<array>
-				<string>{-84.75, -13}</string>
-				<string>{-82.25, -13}</string>
-				<string>{-84.75, -9.5}</string>
+				<string>{81.75, 23.5}</string>
+				<string>{79.25, 26}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-36.75, -40.5}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{82.25, 22}</string>
 			</array>
 			<array>
-				<string>{-71.75, -19}</string>
-				<string>{-66.75, -19}</string>
-				<string>{-86.75, 20.5}</string>
-				<string>{-73.25, -16}</string>
+				<string>{10.25, -35}</string>
+				<string>{17.25, -22.5}</string>
+				<string>{-36.75, -40.5}</string>
 			</array>
 			<array>
-				<string>{84.25, 2.5}</string>
-				<string>{84.25, 24}</string>
-				<string>{18.25, -25}</string>
-				<string>{61.75, -16}</string>
+				<string>{-54.75, -22.5}</string>
+				<string>{-46.75, -22.5}</string>
+				<string>{-83.75, -10}</string>
 			</array>
 			<array>
-				<string>{-57.75, -24}</string>
-				<string>{-56.25, -25}</string>
-				<string>{-48.75, -25}</string>
-				<string>{-58.25, -22}</string>
-			</array>
-			<array>
-				<string>{-80.75, -16}</string>
-				<string>{-73.25, -16}</string>
-				<string>{-82.25, -13}</string>
-			</array>
-			<array>
-				<string>{-47.25, -27.5}</string>
-				<string>{-45.25, -28}</string>
-				<string>{-48.75, -25}</string>
-			</array>
-			<array>
-				<string>{-65.75, -21.5}</string>
-				<string>{-58.25, -22}</string>
-				<string>{-66.75, -19}</string>
-			</array>
-			<array>
-				<string>{14.25, -36}</string>
-				<string>{18.25, -25}</string>
-				<string>{-38.25, -43}</string>
-				<string>{7.25, -43}</string>
-			</array>
-			<array>
-				<string>{-82.25, -13}</string>
-				<string>{-73.25, -16}</string>
-				<string>{-86.75, 20.5}</string>
-				<string>{-84.75, -9.5}</string>
-			</array>
-			<array>
-				<string>{-42.25, -39.5}</string>
-				<string>{-39.75, -40}</string>
-				<string>{84.25, 24}</string>
-				<string>{-45.25, -28}</string>
-			</array>
-			<array>
-				<string>{-38.75, -42.5}</string>
-				<string>{-38.25, -43}</string>
-				<string>{18.25, -25}</string>
-				<string>{84.25, 24}</string>
-				<string>{-39.75, -40}</string>
-			</array>
-			<array>
-				<string>{46.75, -21.5}</string>
-				<string>{48.25, -19}</string>
-				<string>{18.25, -25}</string>
-			</array>
-			<array>
-				<string>{-86.75, -9}</string>
-				<string>{-84.75, -9.5}</string>
-				<string>{-86.75, 20.5}</string>
-			</array>
-			<array>
-				<string>{-66.75, -19}</string>
-				<string>{-48.75, -25}</string>
-				<string>{-84.75, 21}</string>
-				<string>{-86.75, 20.5}</string>
-			</array>
-			<array>
-				<string>{80.75, 27.5}</string>
-				<string>{-77.75, 29}</string>
-				<string>{-78.25, 27.5}</string>
-				<string>{81.25, 25}</string>
+				<string>{-41.25, -34.5}</string>
+				<string>{-37.25, -40}</string>
+				<string>{-46.75, -22.5}</string>
 			</array>
 		</array>
 	</dict>

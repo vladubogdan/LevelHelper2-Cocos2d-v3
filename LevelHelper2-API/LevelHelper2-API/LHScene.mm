@@ -545,13 +545,20 @@
 }
 
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
-                               andNodeB:(CCNode*)b{
+                               andNodeB:(CCNode*)b
+{
+    if(_collisionsDelegate){
+       return [_collisionsDelegate shouldDisableContactBetweenNodeA:a andNodeB:b];
+    }
     return NO;
 }
     
 -(void)didBeginContact:(LHContactInfo *)contact
 {
     //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContact:contact];
+    }
 }
 
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
@@ -560,16 +567,28 @@
                        withImpulse:(float)impulse
 {
     //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContactBetweenNodeA:a
+                                                andNodeB:b
+                                              atLocation:scenePt
+                                             withImpulse:impulse];
+    }
 }
     
 -(void)didEndContact:(LHContactInfo *)contact
 {
     //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContact:contact];
+    }
 }
 
 -(void)didEndContactBetweenNodeA:(CCNode*)a
                         andNodeB:(CCNode*)b
 {
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContactBetweenNodeA:a andNodeB:b];
+    }
     //nothing to do - users should overwrite this method
 }
 

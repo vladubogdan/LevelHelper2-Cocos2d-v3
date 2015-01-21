@@ -64,7 +64,7 @@
                                                                                     node:self];
         
         
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
         
         
@@ -170,7 +170,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
                                                                                     node:self];
         
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[assetInfo objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 
         

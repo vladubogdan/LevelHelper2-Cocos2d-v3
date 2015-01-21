@@ -187,7 +187,7 @@
                             vertexColors:colors];
         }
 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
         
         self.contentSize = CGSizeZero;

@@ -172,7 +172,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 #if LH_USE_BOX2D == 0
         self.position = loadedPosition;
