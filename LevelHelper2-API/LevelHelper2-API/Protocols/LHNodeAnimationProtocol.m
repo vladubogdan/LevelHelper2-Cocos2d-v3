@@ -92,4 +92,7 @@
     }
     return nil;
 }
+-(NSMutableArray*)animations{
+    return _animations;
+}
 @end

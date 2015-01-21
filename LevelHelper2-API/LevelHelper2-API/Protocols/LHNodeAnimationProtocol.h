@@ -30,6 +30,10 @@
  */
 -(LHAnimation*)activeAnimation;
 
+/**
+ Returns all animations available on this node.
+ */
+-(NSMutableArray*)animations;
 
 /**
  Returns the animation with a given name or nil if no animation with the specified name is found on the node.
@@ -81,6 +85,7 @@
 -(LHAnimation*)activeAnimation;
 
 -(LHAnimation*)animationWithName:(NSString*)animName;
+-(NSMutableArray*)animations;
 @end
 
 #define LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION  \
@@ -92,5 +97,7 @@ return [_animationProtocolImp activeAnimation];\
 }\
 -(LHAnimation*)animationWithName:(NSString*)animName{\
 return [_animationProtocolImp animationWithName:animName];\
+}\
+-(NSMutableArray*) animations{\
+  return [_animationProtocolImp animations];\
 }
-
