@@ -665,6 +665,15 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     }
 }
 
++(b2Body*)LHGetBox2dBody:(CCNode*)_node_
+{
+    if([_node_ respondsToSelector:@selector(box2dBody)]){
+        return [(id<LHNodePhysicsProtocol>)_node_ box2dBody];
+    }
+    return NULL;
+}
+
+
 #pragma mark - CHIPMUNK SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 #else //chipmunk

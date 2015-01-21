@@ -114,6 +114,7 @@ double fcat(double x, void *data)
 #if LH_USE_BOX2D
     b2RopeJoint* cutJointA;
     b2RopeJoint* cutJointB;
+    b2RopeJoint* cutJointAB;
     b2Body* cutBodyA;
     b2Body* cutBodyB;
     
@@ -227,6 +228,11 @@ double fcat(double x, void *data)
             //if we dont have the scene it means
             b2World* world = [pNode box2dWorld];
             if(world){
+                if(cutJointAB){
+                    world->DestroyJoint(cutJointAB);
+                    cutJointAB = NULL;
+                }
+                
                 if(cutJointA)
                 {
                     world->DestroyJoint(cutJointA);
@@ -242,6 +248,8 @@ double fcat(double x, void *data)
                     world->DestroyJoint(cutJointB);
                     cutJointB = NULL;
                 }
+                
+                
                 if(cutBodyB){
                     world->DestroyBody(cutBodyB);
                     cutBodyB = NULL;
@@ -501,6 +509,17 @@ double fcat(double x, void *data)
                      
                      cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
                      cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
+                     
+                     
+                     b2RopeJointDef jointBetweenBodiesDef;
+                     jointBetweenBodiesDef.localAnchorA = b2Vec2(0,0);
+                     jointBetweenBodiesDef.localAnchorB = b2Vec2(0,0);
+                     jointBetweenBodiesDef.bodyA = LH_GET_BOX2D_BODY([self nodeA]);
+                     jointBetweenBodiesDef.bodyB = LH_GET_BOX2D_BODY([self nodeB]);
+                     jointBetweenBodiesDef.maxLength = [scene metersFromValue:std::numeric_limits<float>::max()];
+                     jointBetweenBodiesDef.collideConnected = [_jointProtocolImp collideConnected];
+                     cutJointAB = (b2RopeJoint*)world->CreateJoint(&jointBetweenBodiesDef);
+                     
                      
                     #else //chipmunk
                         CCNode* cutNodeB = [CCNode node];
