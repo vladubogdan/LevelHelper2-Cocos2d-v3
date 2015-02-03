@@ -172,7 +172,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
             }
         }
 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 #if LH_USE_BOX2D == 0
         self.position = loadedPosition;
@@ -182,9 +182,6 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
-
-//        gwNode.scale = oldScale;
-//        gwNode.position = oldPos;
     }
     
     return self;
@@ -195,13 +192,25 @@ static float MAX_BEZIER_STEPS = 24.0f;
 }
 
 
--(void)visit
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
+    
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+}
+#else
+- (void)visit
 {
     [_physicsProtocolImp visit];
     [_animationProtocolImp visit];
     
     [super visit];
 }
+#endif//cocos2d_version
+
 
 #pragma mark - Box2D Support
 #if LH_USE_BOX2D

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6E80C4D319A7683B002EEA12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C4D219A7683B002EEA12 /* Foundation.framework */; };
+		6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
+		6E9B5DD61A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
+		6E9B5DD71A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
+		6E9B5DD81A6E3E240090C8B4 /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */; };
 		6E9FC7C119A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C219A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
 		6E9FC7C319A4F2330046CDBD /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC74E19A4F2330046CDBD /* LHFrame.m */; };
@@ -89,9 +95,9 @@
 		6E9FC81219A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
 		6E9FC81319A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
 		6E9FC81419A4F2330046CDBD /* LHDistanceJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */; };
-		6E9FC81519A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
-		6E9FC81619A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
-		6E9FC81719A4F2330046CDBD /* LHDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */; };
+		6E9FC81519A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
+		6E9FC81619A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
+		6E9FC81719A4F2330046CDBD /* LHDrawNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */; };
 		6E9FC81819A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
 		6E9FC81919A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
 		6E9FC81A19A4F2330046CDBD /* LHGameWorldNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */; };
@@ -174,6 +180,10 @@
 		6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_COCOS2D_PROJECT_TEMPLATE.plist; path = ../LH_COCOS2D_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
+		6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyShape.mm; sourceTree = "<group>"; };
+		6E9B5DD41A6E3E240090C8B4 /* LHContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactInfo.h; sourceTree = "<group>"; };
+		6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHContactInfo.mm; sourceTree = "<group>"; };
 		6E9FC74D19A4F2330046CDBD /* LHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFrame.h; sourceTree = "<group>"; };
 		6E9FC74E19A4F2330046CDBD /* LHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFrame.m; sourceTree = "<group>"; };
 		6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHOpacityFrame.h; sourceTree = "<group>"; };
@@ -232,7 +242,7 @@
 		6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDistanceJointNode.h; sourceTree = "<group>"; };
 		6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHDistanceJointNode.mm; sourceTree = "<group>"; };
 		6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDrawNode.h; sourceTree = "<group>"; };
-		6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDrawNode.m; sourceTree = "<group>"; };
+		6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHDrawNode.mm; sourceTree = "<group>"; };
 		6E9FC79019A4F2330046CDBD /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6E9FC79119A4F2330046CDBD /* LHGameWorldNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGameWorldNode.mm; sourceTree = "<group>"; };
 		6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGearJointNode.h; sourceTree = "<group>"; };
@@ -430,7 +440,7 @@
 				6E9FC78C19A4F2330046CDBD /* LHDistanceJointNode.h */,
 				6E9FC78D19A4F2330046CDBD /* LHDistanceJointNode.mm */,
 				6E9FC78E19A4F2330046CDBD /* LHDrawNode.h */,
-				6E9FC78F19A4F2330046CDBD /* LHDrawNode.m */,
+				6E9FC78F19A4F2330046CDBD /* LHDrawNode.mm */,
 				6E9FC79219A4F2330046CDBD /* LHGearJointNode.h */,
 				6E9FC79319A4F2330046CDBD /* LHGearJointNode.mm */,
 				6E9FC79419A4F2330046CDBD /* LHGravityArea.h */,
@@ -475,6 +485,8 @@
 				6E9FC7B919A4F2330046CDBD /* LHUserProperties.h */,
 				6E9FC7BA19A4F2330046CDBD /* LHUserProperties.mm */,
 				6E9FC7BB19A4F2330046CDBD /* LHUserPropertyProtocol.h */,
+				6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */,
+				6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -486,6 +498,8 @@
 				6E9FC7BE19A4F2330046CDBD /* LHBox2dCollisionHandling.mm */,
 				6E9FC7BF19A4F2330046CDBD /* LHUtils.h */,
 				6E9FC7C019A4F2330046CDBD /* LHUtils.m */,
+				6E9B5DD41A6E3E240090C8B4 /* LHContactInfo.h */,
+				6E9B5DD51A6E3E240090C8B4 /* LHContactInfo.mm */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -607,7 +621,7 @@
 		6EDE843119A483A200599C48 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
 			};
 			buildConfigurationList = 6EDE843419A483A200599C48 /* Build configuration list for PBXProject "LevelHelper2-API" */;
@@ -641,7 +655,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\n#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 		6EC5551419AB565100CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -654,7 +668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\n#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 		6EC5551519AB565900CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -667,7 +681,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#we keep this around for old projects\n\necho 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#we keep this around for old projects\n\n#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n\n#this preserves folder structure - DO NOT USE\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -701,6 +715,7 @@
 				6E9FC85719A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82119A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84219A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82D19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83319A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83019A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
@@ -709,11 +724,12 @@
 				6E9FC80F19A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CC19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81B19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD61A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7EB19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E519A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84E19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83919A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81519A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81519A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85A19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EE19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82A19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -760,6 +776,7 @@
 				6E9FC85819A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82219A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84319A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82E19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83419A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83119A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
@@ -768,11 +785,12 @@
 				6E9FC81019A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CD19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81C19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD71A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7EC19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E619A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC84F19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83A19A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81619A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81619A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85B19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EF19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82B19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -819,6 +837,7 @@
 				6E9FC85919A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
 				6E9FC82319A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84419A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
+				6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
 				6E9FC82F19A4F2330046CDBD /* LHPulleyJointNode.mm in Sources */,
 				6E9FC83519A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83219A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
@@ -827,11 +846,12 @@
 				6E9FC81119A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CE19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
 				6E9FC81D19A4F2330046CDBD /* LHGearJointNode.mm in Sources */,
+				6E9B5DD81A6E3E240090C8B4 /* LHContactInfo.mm in Sources */,
 				6E9FC7ED19A4F2330046CDBD /* LHRotationProperty.m in Sources */,
 				6E9FC7E719A4F2330046CDBD /* LHOpacityProperty.m in Sources */,
 				6E9FC85019A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83B19A4F2330046CDBD /* LHSprite.mm in Sources */,
-				6E9FC81719A4F2330046CDBD /* LHDrawNode.m in Sources */,
+				6E9FC81719A4F2330046CDBD /* LHDrawNode.mm in Sources */,
 				6E9FC85C19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7F019A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82C19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -929,19 +949,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include/\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL/\"/**",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
@@ -960,19 +972,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include/\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL/\"/**",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
@@ -999,22 +1003,14 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Box2D/build/Debug-iphoneos";
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";
@@ -1035,22 +1031,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = "/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/Cocos2d.v3/Box2D/build/Debug-iphoneos";
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";
@@ -1063,6 +1051,7 @@
 		6EDE8B7A19A4986C00599C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1072,20 +1061,12 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1100,25 +1081,18 @@
 		6EDE8B7B19A4986C00599C48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../cocos2d/cocos2d\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Support\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/OpenAL\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Session\"",
-					"\"$(SRCROOT)/../cocos2d/kazmath/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/../cocos2d/Chipmunk/objectivec/include\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/Actions\"",
-					"\"$(SRCROOT)/../cocos2d/ObjectAL/AudioTrack\"",
-					"\"$(SRCROOT)/../cocos2d/cocos2d/Platforms/iOS\"",
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/include\"",
+					"\"$(SRCROOT)/../cocos2d/external/Chipmunk/objectivec/include\"",
+					"\"$(SRCROOT)/../cocos2d/cocos2d-ui\"/**",
+					"\"$(SRCROOT)/../cocos2d/external/ObjectAL\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;

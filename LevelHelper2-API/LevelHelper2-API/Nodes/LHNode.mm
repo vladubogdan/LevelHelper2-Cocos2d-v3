@@ -48,7 +48,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
                 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
@@ -86,6 +86,16 @@
     return self;
 }
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
+    
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+}
+#else
 - (void)visit
 {
     [_physicsProtocolImp visit];
@@ -93,6 +103,7 @@
     
     [super visit];
 }
+#endif//cocos2d_version
 
 #pragma mark - Box2D Support
 #if LH_USE_BOX2D

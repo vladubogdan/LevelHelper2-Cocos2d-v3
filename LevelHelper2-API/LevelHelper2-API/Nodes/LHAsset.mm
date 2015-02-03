@@ -64,7 +64,7 @@
                                                                                     node:self];
         
         
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
                                                                                                 node:self];
         
         
@@ -91,10 +91,12 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
         
-#if LH_DEBUG
-        [self createDebugNode];
-#endif//LH_DEBUG
+//#if LH_DEBUG
+//        [self createDebugNode];
+//#endif//LH_DEBUG
         
+        [_nodeProtocolImp performLateLoading];
+
         gwNode.scale = oldScale;
         gwNode.position = oldPos;
     }
@@ -168,7 +170,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
                                                                                     node:self];
         
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[assetInfo objectForKey:@"nodePhysics"]
                                                                                                 node:self];
 
         
@@ -180,12 +182,13 @@
         
     }
     
-#if LH_DEBUG
-    [self createDebugNode];
-#endif//LH_DEBUG
+//#if LH_DEBUG
+//    [self createDebugNode];
+//#endif//LH_DEBUG
     
-    [self visit];//very important - if asset contains joint - all objects must be updated before that joint is created
 
+    [_nodeProtocolImp performLateLoading];
+    
     gwNode.scale = oldScale;
     gwNode.position = oldPos;
     
@@ -196,6 +199,17 @@
     return [tracedFixtures objectForKey:uuid];
 }
 
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    [_physicsProtocolImp visit];
+    [_animationProtocolImp visit];
+
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+}
+#else
 - (void)visit
 {
     [_physicsProtocolImp visit];
@@ -203,6 +217,9 @@
     
     [super visit];
 }
+#endif//cocos2d_version
+
+
 
 #pragma mark - Box2D Support
 #if LH_USE_BOX2D

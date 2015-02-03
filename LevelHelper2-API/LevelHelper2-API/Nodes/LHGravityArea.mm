@@ -139,7 +139,11 @@
 }
 
 #if LH_USE_BOX2D
--(void)visit
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+#else
+- (void)visit
+#endif//cocos2d_version
 {
     LHScene* scene = (LHScene*)[self scene];
     LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
@@ -190,12 +194,22 @@
         }
 	}
     
+#if COCOS2D_VERSION >= 0x00030300
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+#else
     [super visit];
+#endif//cocos2d_version
+    
 }
 
 #else //chipmunk
 
--(void)visit
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+#else
+- (void)visit
+#endif//cocos2d_version
 {
     CGRect rect = [self globalRect];
     
@@ -239,7 +253,12 @@
         }
     }
     
+#if COCOS2D_VERSION >= 0x00030300
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+#else
     [super visit];
+#endif//cocos2d_version
 }
 #endif
 

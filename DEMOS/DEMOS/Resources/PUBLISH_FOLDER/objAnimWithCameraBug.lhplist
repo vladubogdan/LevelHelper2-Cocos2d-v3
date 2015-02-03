@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>3F08AFD3-8512-4310-B9C1-A996EDF2BA68</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>4946A985-AF60-4449-9F05-42BA50236D8F</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>otherANim</string>
+							<key>properties</key>
+							<dict>
+								<key>Position</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>7E7B00B1-12DE-438F-91C9-AA16C70CF712</key>
+												<string>{173.342682, 790.561683}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>79</integer>
+											<key>positions</key>
+											<dict>
+												<key>7E7B00B1-12DE-438F-91C9-AA16C70CF712</key>
+												<string>{151.126665, -302.416223}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>199</integer>
+											<key>positions</key>
+											<dict>
+												<key>7E7B00B1-12DE-438F-91C9-AA16C70CF712</key>
+												<string>{858.364374, -322.920042}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>299</integer>
+											<key>positions</key>
+											<dict>
+												<key>7E7B00B1-12DE-438F-91C9-AA16C70CF712</key>
+												<string>{173.342682, 790.561683}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>300</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.180565, 1.235253}</string>
+					<key>imageFileName</key>
+					<string>platformer.png</string>
+					<key>name</key>
+					<string>brick</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 128.000000}</string>
+					<key>spriteName</key>
+					<string>brick.png</string>
+					<key>spriteUUID</key>
+					<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>7E7B00B1-12DE-438F-91C9-AA16C70CF712</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>animTest</string>
+							<key>properties</key>
+							<dict>
+								<key>Position</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>0CA2C454-F304-41C1-9681-D5F7AF92690A</key>
+												<string>{390.058195, 444.383828}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>positions</key>
+											<dict>
+												<key>0CA2C454-F304-41C1-9681-D5F7AF92690A</key>
+												<string>{869.343931, 442.243466}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>positions</key>
+											<dict>
+												<key>0CA2C454-F304-41C1-9681-D5F7AF92690A</key>
+												<string>{390.058195, 444.383828}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>30</integer>
+						</dict>
+					</array>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>animations</key>
+							<array>
+								<dict>
+									<key>active</key>
+									<true/>
+									<key>fps</key>
+									<integer>24</integer>
+									<key>name</key>
+									<string>animTest</string>
+									<key>properties</key>
+									<dict>
+										<key>Position</key>
+										<dict>
+											<key>Frames</key>
+											<array>
+												<dict>
+													<key>frameIndex</key>
+													<integer>0</integer>
+													<key>positions</key>
+													<dict>
+														<key>6D3B37CA-FD83-4B55-A36E-2FBC4A8D52CC</key>
+														<string>{0.678680, -135.630859}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>14</integer>
+													<key>positions</key>
+													<dict>
+														<key>6D3B37CA-FD83-4B55-A36E-2FBC4A8D52CC</key>
+														<string>{479.964416, -137.771221}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>29</integer>
+													<key>positions</key>
+													<dict>
+														<key>6D3B37CA-FD83-4B55-A36E-2FBC4A8D52CC</key>
+														<string>{0.678680, -135.630859}</string>
+													</dict>
+												</dict>
+											</array>
+											<key>type</key>
+											<string>LHPositionProperty</string>
+										</dict>
+									</dict>
+									<key>repetitions</key>
+									<integer>0</integer>
+									<key>totalFrames</key>
+									<integer>30</integer>
+								</dict>
+							</array>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>animations</key>
+									<array>
+										<dict>
+											<key>active</key>
+											<true/>
+											<key>fps</key>
+											<integer>24</integer>
+											<key>name</key>
+											<string>animTest</string>
+											<key>properties</key>
+											<dict>
+												<key>Position</key>
+												<dict>
+													<key>Frames</key>
+													<array>
+														<dict>
+															<key>frameIndex</key>
+															<integer>0</integer>
+															<key>positions</key>
+															<dict>
+																<key>041E5B67-774B-45DF-8EA2-BBF269BEF0E6</key>
+																<string>{-10.855033, -265.835479}</string>
+															</dict>
+														</dict>
+														<dict>
+															<key>frameIndex</key>
+															<integer>14</integer>
+															<key>positions</key>
+															<dict>
+																<key>041E5B67-774B-45DF-8EA2-BBF269BEF0E6</key>
+																<string>{468.430703, -267.975841}</string>
+															</dict>
+														</dict>
+														<dict>
+															<key>frameIndex</key>
+															<integer>29</integer>
+															<key>positions</key>
+															<dict>
+																<key>041E5B67-774B-45DF-8EA2-BBF269BEF0E6</key>
+																<string>{-10.855033, -265.835479}</string>
+															</dict>
+														</dict>
+													</array>
+													<key>type</key>
+													<string>LHPositionProperty</string>
+												</dict>
+											</dict>
+											<key>repetitions</key>
+											<integer>0</integer>
+											<key>totalFrames</key>
+											<integer>30</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.011307, -0.415368}</string>
+									<key>imageFileName</key>
+									<string>platformer.png</string>
+									<key>name</key>
+									<string>brick_3</string>
+									<key>nodePhysics</key>
+									<dict>
+										<key>allowSleep</key>
+										<true/>
+										<key>angularDamping</key>
+										<real>0.0</real>
+										<key>angularVelocity</key>
+										<real>0.0</real>
+										<key>bullet</key>
+										<false/>
+										<key>fixedRotation</key>
+										<false/>
+										<key>genericFixture</key>
+										<dict>
+											<key>category</key>
+											<integer>1</integer>
+											<key>density</key>
+											<real>0.10000000149011612</real>
+											<key>friction</key>
+											<real>0.20000000298023224</real>
+											<key>mask</key>
+											<integer>65535</integer>
+											<key>name</key>
+											<string>GenericFixture</string>
+											<key>restitution</key>
+											<real>0.0</real>
+											<key>sensor</key>
+											<false/>
+											<key>shapeID</key>
+											<integer>0</integer>
+										</dict>
+										<key>gravityScale</key>
+										<real>1</real>
+										<key>linearDamping</key>
+										<real>0.0</real>
+										<key>linearVelocity</key>
+										<string>{0.000000, 0.000000}</string>
+										<key>shape</key>
+										<integer>0</integer>
+										<key>type</key>
+										<integer>0</integer>
+									</dict>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>6D3B37CA-FD83-4B55-A36E-2FBC4A8D52CC</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>0.0</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{128.000000, 128.000000}</string>
+									<key>spriteName</key>
+									<string>brick.png</string>
+									<key>spriteUUID</key>
+									<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>041E5B67-774B-45DF-8EA2-BBF269BEF0E6</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.000707, -0.211923}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_2</string>
+							<key>nodePhysics</key>
+							<dict>
+								<key>allowSleep</key>
+								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
+								<key>bullet</key>
+								<false/>
+								<key>fixedRotation</key>
+								<false/>
+								<key>genericFixture</key>
+								<dict>
+									<key>category</key>
+									<integer>1</integer>
+									<key>density</key>
+									<real>0.10000000149011612</real>
+									<key>friction</key>
+									<real>0.20000000298023224</real>
+									<key>mask</key>
+									<integer>65535</integer>
+									<key>name</key>
+									<string>GenericFixture</string>
+									<key>restitution</key>
+									<real>0.0</real>
+									<key>sensor</key>
+									<false/>
+									<key>shapeID</key>
+									<integer>0</integer>
+								</dict>
+								<key>gravityScale</key>
+								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
+								<key>shape</key>
+								<integer>0</integer>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>0CA2C454-F304-41C1-9681-D5F7AF92690A</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>6D3B37CA-FD83-4B55-A36E-2FBC4A8D52CC</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.406311, 0.694350}</string>
+					<key>imageFileName</key>
+					<string>platformer.png</string>
+					<key>name</key>
+					<string>brick_1</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>0</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 128.000000}</string>
+					<key>spriteName</key>
+					<string>brick.png</string>
+					<key>spriteUUID</key>
+					<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>0CA2C454-F304-41C1-9681-D5F7AF92690A</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>activeCamera</key>
+					<true/>
+					<key>followedNodeUUID</key>
+					<string>7E7B00B1-12DE-438F-91C9-AA16C70CF712</string>
+					<key>generalPosition</key>
+					<string>{0.544857, 0.802367}</string>
+					<key>importantArea</key>
+					<string>{0.000000, 0.000000}</string>
+					<key>lockX</key>
+					<false/>
+					<key>lockY</key>
+					<false/>
+					<key>name</key>
+					<string>UntitledCamera</string>
+					<key>nodeType</key>
+					<string>LHCamera</string>
+					<key>offset</key>
+					<string>{0.000000, 0.000000}</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>restrictToGameWorld</key>
+					<true/>
+					<key>smoothMovement</key>
+					<false/>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>3ED736CE-D0ED-4F86-ADE9-AC51018CF149</string>
+					<key>zoomOnPinchOrScroll</key>
+					<true/>
+					<key>zoomValue</key>
+					<real>1</real>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>3F08AFD3-8512-4310-B9C1-A996EDF2BA68</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>83768B2C-BEBA-4831-9645-77D1744101F9</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>3F08AFD3-8512-4310-B9C1-A996EDF2BA68</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>3955602C-1E45-4FEE-BE31-04F581871273</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960.000000, 640.000000}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string>-iphone5</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6plus</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024.000000, 768.000000}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048.000000, 1536.000000}</string>
+			<key>suffix</key>
+			<string>-ipadhd</string>
+		</dict>
+	</array>
+	<key>gameWorld</key>
+	<dict>
+		<key>2048x1536</key>
+		<string>{{0.011524, -0.625469}, {2.148153, 2.027836}}</string>
+		<key>960x640</key>
+		<string>{{0.011524, -0.625469}, {2.148153, 2.027836}}</string>
+		<key>general</key>
+		<string>{{0.011524, -0.625469}, {2.148153, 2.027836}}</string>
+	</dict>
+	<key>globalGravityDirection</key>
+	<string>{0.000000, -1.000000}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>physicsBoundaries</key>
+	<dict>
+		<key>2048x1536</key>
+		<string>{{0.056734, -0.632755}, {0.918835, 1.435040}}</string>
+		<key>960x640</key>
+		<string>{{0.056734, -0.632755}, {0.918835, 1.435040}}</string>
+		<key>general</key>
+		<string>{{0.056734, -0.632755}, {0.918835, 1.435040}}</string>
+	</dict>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>3F08AFD3-8512-4310-B9C1-A996EDF2BA68</string>
+</dict>
+</plist>

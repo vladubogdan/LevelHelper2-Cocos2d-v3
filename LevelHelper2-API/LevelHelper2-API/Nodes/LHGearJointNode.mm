@@ -127,16 +127,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     }
 }
 
-- (void)visit
+-(void)lateLoading
 {
-    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
-        [self lateLoading];
+    if([_jointProtocolImp nodeA]){
+        return;
     }
+
     
-    [super visit];
-}
--(BOOL)lateLoading
-{
     [_jointProtocolImp findConnectedNodes];
     
     [self findConnectedJoints];
@@ -153,12 +150,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2World* world = [pNode box2dWorld];
         
-        if(world == nil)return NO;
+        if(world == nil)return;
         
         b2Body* bodyA = [nodeA box2dBody];
         b2Body* bodyB = [nodeB box2dBody];
         
-        if(!bodyA || !bodyB)return NO;
+        if(!bodyA || !bodyB)return;
         
         b2Joint* jtA = [_jointA joint];
         b2Joint* jtB = [_jointB joint];
@@ -181,7 +178,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #else//chipmunk
         
         if(!nodeA.physicsBody || !nodeB.physicsBody)
-            return NO;
+            return;
 
         NSLog(@"\n\nWARNING: Gear joint is not supported when using Chipmunk physics engine.\n\n");
         
@@ -216,11 +213,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 //        [_jointProtocolImp setJoint:joint];
         
 #endif//LH_USE_BOX2D
-
-        
-        return true;
     }
-    return false;
 }
 
 @end

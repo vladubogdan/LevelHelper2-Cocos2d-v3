@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2E6C7884-CE6E-43A2-9925-121427306DA0</string>
+	<string>6ACB403F-5626-4406-9CF4-67A3D3F7607B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Box2D</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>354868DA-58A3-4906-AFBB-99438E08ABC2</key>
-		<string>ssh://github.com/vladubogdan/LevelHelper2-SpriteKit.git</string>
+		<key>14F6A321-D7BF-4630-AF62-0F2680F1CFC6</key>
+		<string>ssh://github.com/vladubogdan/LevelHelper2-Cocos2d-v3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Box2D/Box2D.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>354868DA-58A3-4906-AFBB-99438E08ABC2</key>
+		<key>14F6A321-D7BF-4630-AF62-0F2680F1CFC6</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/vladubogdan/LevelHelper2-SpriteKit.git</string>
+	<string>ssh://github.com/vladubogdan/LevelHelper2-Cocos2d-v3.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>354868DA-58A3-4906-AFBB-99438E08ABC2</string>
+	<string>14F6A321-D7BF-4630-AF62-0F2680F1CFC6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>354868DA-58A3-4906-AFBB-99438E08ABC2</string>
+			<string>14F6A321-D7BF-4630-AF62-0F2680F1CFC6</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SpriteKit</string>
+			<string>Cocos2d.v3</string>
 		</dict>
 	</array>
 </dict>

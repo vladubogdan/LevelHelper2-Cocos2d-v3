@@ -13,20 +13,41 @@
 #import "LHNodeProtocol.h"
 #import "LHNode.h"
 
+#import "LHContactInfo.h"
+
 #if LH_USE_BOX2D
 
 #include <cstdio>
 #include <cstdarg>
 #include <cstring>
 
+@interface LHContactInfo (LH_CONTACT_MARKING)
+-(void)setMarked;
+-(BOOL)marked;
+@end
+
 
 #else
+
 
 #endif
 
 @interface LHScene (LH_SCENE_LOADING_INFO)
 -(BOOL)loadingInProgress;
 @end
+
+
+#if COCOS2D_VERSION >= 0x00030300
+
+@interface CCRenderer()
++(instancetype)currentRenderer;
+@end
+
+#else
+
+#endif//cocos2d_version
+
+
 
 #if LH_USE_BOX2D
 
@@ -244,18 +265,37 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     }
     return _debug;
 }
--(void)draw
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
     [self clear];
     
 #if LH_DEBUG
     if(_drawState){
         [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
-        [super draw];
     }
 #endif
     
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
 }
+#else
+- (void)visit
+{
+    [self clear];
+    
+#if LH_DEBUG
+    if(_drawState){
+        [(LHGameWorldNode*)[self parent] box2dWorld]->DrawDebugData();
+    }
+#endif
+    
+    [super visit];
+}
+#endif//cocos2d_version
+
+
 -(BOOL)drawState{
     return _drawState;
 }
@@ -267,55 +307,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 
 #endif//LH_USE_BOX2D
-
-@interface LHScheduledContactInfo : NSObject
-
-+(instancetype)scheduledContactWithNodeA:(CCNode*)a
-                                   nodeB:(CCNode*)b
-                                   point:(CGPoint)pt
-                                 impulse:(float)i;
-
--(CCNode*)nodeA;
--(CCNode*)nodeB;
--(CGPoint)contactPoint;
--(float)impulse;
--(void)setMarked;
--(BOOL)marked;
-@end
-
-@implementation LHScheduledContactInfo
-{
-    __weak CCNode* _nodeA;
-    __weak CCNode* _nodeB;
-    CGPoint contactPoint;
-    float impulse;
-    BOOL marked;
-}
-
--(instancetype)initWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
-{
-    if(self = [super init])
-    {
-        _nodeA = a;
-        _nodeB = b;
-        contactPoint = pt;
-        impulse = i;
-    }
-    return self;
-}
--(void)setMarked{marked = true;}
--(BOOL)marked{return marked;}
--(CCNode*)nodeA{return _nodeA;}
--(CCNode*)nodeB{return _nodeB;}
--(CGPoint)contactPoint{return contactPoint;}
--(float)impulse{return impulse;}
-
-+(instancetype)scheduledContactWithNodeA:(CCNode*)a nodeB:(CCNode*)b point:(CGPoint)pt impulse:(float)i
-{
-    return LH_AUTORELEASED([[LHScheduledContactInfo alloc] initWithNodeA:a nodeB:b point:pt impulse:i]);
-}
-
-@end
 
 
 @implementation LHGameWorldNode
@@ -405,7 +396,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     return self;
 }
 
-
 #pragma mark - BOX2D SUPPORT
 #if LH_USE_BOX2D
 -(b2World*)box2dWorld
@@ -463,7 +453,17 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     if(![self paused])
         [self step:delta];
     
+    
+#if COCOS2D_VERSION >= 0x00030300
+    CCRenderer *renderer = [CCRenderer currentRenderer];
+    if(renderer){
+        [super visit];//required for smooth scrolling
+    }
+#else
     [super visit];//required for smooth scrolling
+#endif//cocos2d_version
+    
+    
 }
 
 
@@ -505,34 +505,47 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 -(void)afterStep:(float)dt {
     
-    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    for(LHContactInfo* info in _scheduledBeginContact)
     {
         if(![info marked] && [info nodeA] && [info nodeB])
         {
+            [[self scene] didBeginContact:info];
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+
             [[self scene] didBeginContactBetweenNodeA:[info nodeA]
                                              andNodeB:[info nodeB]
                                            atLocation:[info contactPoint]
                                           withImpulse:[info impulse]];
+            
+#pragma clang diagnostic pop
+            
         }
     }
     [_scheduledBeginContact removeAllObjects];
     
     
-    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    for(LHContactInfo* info in _scheduledEndContact)
     {
         if(![info marked] && [info nodeA] && [info nodeB])
         {
+            [[self scene] didEndContact:info];
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+            
             [[self scene] didEndContactBetweenNodeA:[info nodeA]
                                            andNodeB:[info nodeB]];
+            
+#pragma clang diagnostic pop
+
         }
     }
     [_scheduledEndContact removeAllObjects];
 }
 
--(void)scheduleDidBeginContactBetweenNodeA:(CCNode*)nodeA
-                                  andNodeB:(CCNode*)nodeB
-                                atLocation:(CGPoint)contactPoint
-                               withImpulse:(float)impulse
+-(void)scheduleDidBeginContact:(LHContactInfo*)contact
 {
     if(!_scheduledBeginContact){
         _scheduledBeginContact = [[NSMutableArray alloc] init];
@@ -548,18 +561,13 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 //        }
 //    }
     //if this happens the objects have been removed but box2d still calls the box2d body
-    if(!nodeA || ![nodeA parent])return;
-    if(!nodeB || ![nodeB parent])return;
-    
-    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
-                                                                               nodeB:nodeB
-                                                                               point:contactPoint
-                                                                             impulse:impulse];
-    [_scheduledBeginContact addObject:info];
+    if(![contact nodeA] || ![[contact nodeA] parent])return;
+    if(![contact nodeB] || ![[contact nodeB] parent])return;
+
+    [_scheduledBeginContact addObject:contact];
 }
 
--(void)scheduleDidEndContactBetweenNodeA:(CCNode*)nodeA
-                                andNodeB:(CCNode*)nodeB
+-(void)scheduleDidEndContact:(LHContactInfo*)contact
 {
     
     if(!_scheduledEndContact){
@@ -577,26 +585,22 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 //    }
 
     //if this happens the objects have been removed but box2d still calls the box2d body
-    if(!nodeA || ![nodeA parent])return;
-    if(!nodeB || ![nodeB parent])return;
+    if(![contact nodeA] || ![[contact nodeA] parent])return;
+    if(![contact nodeB] || ![[contact nodeB] parent])return;
     
-    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
-                                                                               nodeB:nodeB
-                                                                               point:CGPointZero
-                                                                             impulse:0];
-    [_scheduledEndContact addObject:info];
+    [_scheduledEndContact addObject:contact];
 }
 
 -(void)removeScheduledContactsWithNode:(CCNode*)node
 {
-    for(LHScheduledContactInfo* info in _scheduledBeginContact){
+    for(LHContactInfo* info in _scheduledBeginContact){
         if([info nodeA] == node || [info nodeB] == node)
         {
             [info setMarked];
         }
     }
     
-    for(LHScheduledContactInfo* info in _scheduledEndContact){
+    for(LHContactInfo* info in _scheduledEndContact){
         if([info nodeA] == node || [info nodeB] == node)
         {
             [info setMarked];

@@ -16,11 +16,11 @@
  */
 
 
-@interface LHShape : CCDrawNode <CCTextureProtocol, LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
+@interface LHShape : CCNode <CCTextureProtocol, LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 {
-    CCTexture *_texture; // Texture used to render the shape
     
 }
+
 + (instancetype)nodeWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt;
 

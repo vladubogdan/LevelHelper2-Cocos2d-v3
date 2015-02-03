@@ -9,7 +9,7 @@
 
 #import "AppDelegate.h"
 
-#import "LHSceneIntroduction.h"
+#import "LHSceneSubclass.h"
 
 
 @implementation AppDelegate
@@ -49,7 +49,7 @@
 
 -(CCScene *)startScene
 {
-    return [LHSceneIntroduction scene];
+    return [LHSceneSubclass scene];
 }
 
 @end

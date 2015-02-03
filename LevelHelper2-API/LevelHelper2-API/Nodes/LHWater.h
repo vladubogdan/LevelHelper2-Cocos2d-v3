@@ -14,7 +14,7 @@
  */
 
 
-@interface LHWater : CCDrawNode <LHNodeProtocol>
+@interface LHWater : CCNode <LHNodeProtocol>
 
 + (instancetype)nodeWithDictionary:(NSDictionary*)dict
                             parent:(CCNode*)prnt;

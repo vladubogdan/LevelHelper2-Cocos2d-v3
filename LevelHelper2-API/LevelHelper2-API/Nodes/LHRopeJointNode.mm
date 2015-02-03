@@ -33,6 +33,7 @@
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSString*)currentDeviceSuffix:(BOOL)keep2x;
+-(void)removedNodeAfterVisit:(CCNode*)shouldRemoveSelf;
 @end
 
 
@@ -113,6 +114,7 @@ double fcat(double x, void *data)
 #if LH_USE_BOX2D
     b2RopeJoint* cutJointA;
     b2RopeJoint* cutJointB;
+    b2RopeJoint* cutJointAB;
     b2Body* cutBodyA;
     b2Body* cutBodyB;
     
@@ -226,6 +228,11 @@ double fcat(double x, void *data)
             //if we dont have the scene it means
             b2World* world = [pNode box2dWorld];
             if(world){
+                if(cutJointAB){
+                    world->DestroyJoint(cutJointAB);
+                    cutJointAB = NULL;
+                }
+                
                 if(cutJointA)
                 {
                     world->DestroyJoint(cutJointA);
@@ -241,6 +248,8 @@ double fcat(double x, void *data)
                     world->DestroyJoint(cutJointB);
                     cutJointB = NULL;
                 }
+                
+                
                 if(cutBodyB){
                     world->DestroyBody(cutBodyB);
                     cutBodyB = NULL;
@@ -500,6 +509,17 @@ double fcat(double x, void *data)
                      
                      cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
                      cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
+                     
+                     
+                     b2RopeJointDef jointBetweenBodiesDef;
+                     jointBetweenBodiesDef.localAnchorA = b2Vec2(0,0);
+                     jointBetweenBodiesDef.localAnchorB = b2Vec2(0,0);
+                     jointBetweenBodiesDef.bodyA = LH_GET_BOX2D_BODY([self nodeA]);
+                     jointBetweenBodiesDef.bodyB = LH_GET_BOX2D_BODY([self nodeB]);
+                     jointBetweenBodiesDef.maxLength = [scene metersFromValue:std::numeric_limits<float>::max()];
+                     jointBetweenBodiesDef.collideConnected = [_jointProtocolImp collideConnected];
+                     cutJointAB = (b2RopeJoint*)world->CreateJoint(&jointBetweenBodiesDef);
+                     
                      
                     #else //chipmunk
                         CCNode* cutNodeB = [CCNode node];
@@ -851,11 +871,13 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
     return array;
 }
 
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+#else
 - (void)visit
+#endif//cocos2d_version
 {
-    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
-        [self lateLoading];
-    }
     
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
@@ -881,7 +903,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
         _alphaValue -=_alphaValue*unit;
         
         if(unit >=1){
-            [self removeFromParent];
+            [[self scene] removedNodeAfterVisit:self];
             return;
         }
     }
@@ -922,13 +944,24 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
                    segments:_segments];
     }
     
+    
+#if COCOS2D_VERSION >= 0x00030300
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+#else
     [super visit];
+#endif//cocos2d_version
+    
 }
 
 #pragma mark LHNodeProtocol Optional
 
--(BOOL)lateLoading
+-(void)lateLoading
 {
+    if([_jointProtocolImp nodeA]){
+        return;
+    }
+    
     [_jointProtocolImp findConnectedNodes];
     
     CCNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
@@ -944,12 +977,12 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
         LHScene* scene = [self scene];
         LHGameWorldNode* pNode = [scene gameWorldNode];
         b2World* world = [pNode box2dWorld];
-        if(world == nil)return NO;
+        if(world == nil)return;
         
         b2Body* bodyA = [nodeA box2dBody];
         b2Body* bodyB = [nodeB box2dBody];
         
-        if(!bodyA || !bodyB)return NO;
+        if(!bodyA || !bodyB)return;
         
         b2Vec2 posA = [scene metersFromPoint:relativePosA];
         b2Vec2 posB = [scene metersFromPoint:relativePosB];
@@ -973,7 +1006,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 #else//chipmunk
         
         if(!nodeA.physicsBody || !nodeB.physicsBody)
-            return NO;
+            return;
         
 
         CCPhysicsJoint* joint = [CCPhysicsJoint connectedDistanceJointWithBodyA:nodeA.physicsBody
@@ -989,11 +1022,7 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
         [_jointProtocolImp setJoint:joint];
         
 #endif//LH_USE_BOX2D
-        
-        return true;
     }
-    
-    return false;
 }
 
 #pragma mark LHNodeProtocol Required

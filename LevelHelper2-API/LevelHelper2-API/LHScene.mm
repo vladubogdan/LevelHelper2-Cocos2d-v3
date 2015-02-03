@@ -32,6 +32,7 @@
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 #import "LHBox2dCollisionHandling.h"
+#import "LHBodyShape.h"
 
 @interface LHCamera (LH_CAMERA_PINCH_ZOOM)
 -(void)pinchZoomWithScaleDelta:(float)value center:(CGPoint)center;
@@ -39,6 +40,8 @@
 
 @implementation LHScene
 {
+    NSMutableArray* toBeRemoved;
+    
     __weak LHBackUINode*       _backUiNode;
     __weak LHGameWorldNode*    _gameWorldNode;
     __weak LHUINode*           _uiNode;
@@ -51,11 +54,12 @@
 #endif
     
     bool loadingInProgress;
-    NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
     LHNodeProtocolImpl* _nodeProtocolImp;
     
+    NSMutableArray* _phyBoundarySubshapes;
     NSMutableDictionary* loadedTextures;
+    NSMutableDictionary* editorBodiesInfo;
     NSDictionary* tracedFixtures;
     
     NSArray* supportedDevices;
@@ -74,7 +78,7 @@
 
     CGPoint touchBeganLocation;
     
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
     UIPinchGestureRecognizer *pinchRecognizer;
 #endif
     
@@ -82,6 +86,8 @@
 
 
 -(void)dealloc{
+    
+    LH_SAFE_RELEASE(_phyBoundarySubshapes);
     
     _animationsDelegate = nil;
 #if LH_USE_BOX2D
@@ -91,15 +97,18 @@
     
     [self removeAllChildren];
 
+    LH_SAFE_RELEASE(toBeRemoved);
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
+    LH_SAFE_RELEASE(editorBodiesInfo);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
     [[[CCDirector sharedDirector] view] removeGestureRecognizer:pinchRecognizer];
     LH_SAFE_RELEASE(pinchRecognizer);
 #endif
@@ -160,8 +169,6 @@
     
     aspect = 2;//HARD CODED UNTIL I FIGURE OUT HOW TO DO IT IN v3
     
-    
-    
     if(aspect == 0)//exact fit
     {
         sceneSize = designResolution;
@@ -197,7 +204,7 @@
         
         
         [[CCDirector sharedDirector] setContentScaleFactor:ratio];
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
         [[CCFileUtils sharedFileUtils] setiPhoneContentScaleFactor:curDev.ratio];
 #endif
         
@@ -226,12 +233,10 @@
 
         [self loadGlobalGravityFromDictionary:dict];
         [self loadPhysicsBoundariesFromDictionary:dict];
-
-        [self performLateLoading];
         
         [self setUserInteractionEnabled:YES];
 
-        #ifdef __CC_PLATFORM_IOS
+        #if __CC_PLATFORM_IOS
         pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
         [[[CCDirector sharedDirector] view] addGestureRecognizer:pinchRecognizer];
         #endif
@@ -242,10 +247,8 @@
         _box2dCollision = [[LHBox2dCollisionHandling alloc] initWithScene:self];
 #else//cocos2d
         
-#endif
-        
-        //call this to update the views when using camera/parallax
-        [self visit];
+#endif        
+        [self performLateLoading];
         
         loadingInProgress = false;
     }
@@ -257,14 +260,37 @@
     [super onEnter];
 }
 
+//cocos2d v3.3 compatibility - or else we will get a mutated while being enumerated exception on mac os
+-(void)removedNodeAfterVisit:(__weak CCNode*)shouldRemoveSelf
+{
+    if(!toBeRemoved){
+        toBeRemoved = [[NSMutableArray alloc] init];
+    }
+    [toBeRemoved addObject:shouldRemoveSelf];
+}
+
+#if COCOS2D_VERSION >= 0x00030300
+-(void) visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform{
+    if(renderer)
+        [super visit:renderer parentTransform:parentTransform];
+#else
+- (void)visit{
+    [super visit];
+#endif//cocos2d_version
+
+    for(CCNode* n in toBeRemoved){
+        [n removeFromParent];
+    }
+    [toBeRemoved removeAllObjects];
+}
+
+
 -(BOOL)loadingInProgress{
     return loadingInProgress;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
-////////////////////////////////////////////////////////////////////////////////
-
 -(void)loadPhysicsBoundariesFromDictionary:(NSDictionary*)dict
 {
     NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
@@ -331,24 +357,39 @@
     
 #if LH_USE_BOX2D
     
-    float PTM_RATIO = [self ptm];
+    LHBodyShape* bodyShape = [LHBodyShape createWithName:sectionName
+                                                  pointA:from
+                                                  pointB:to
+                                                    node:drawNode
+                                                   scene:self];
     
-    // Define the ground body.
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0); // bottom-left corner
+    if(!_phyBoundarySubshapes){
+        _phyBoundarySubshapes = [[NSMutableArray alloc] init];
+    }
     
-    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
-    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
+    if(bodyShape){
+        [_phyBoundarySubshapes addObject:bodyShape];
+    }
     
-    // Define the ground box shape.
-    b2EdgeShape groundBox;
     
-    // top
-    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
-                         from.y/PTM_RATIO),
-                  b2Vec2(to.x/PTM_RATIO,
-                         to.y/PTM_RATIO));
-    physicsBoundariesBody->CreateFixture(&groundBox,0);
+//    float PTM_RATIO = [self ptm];
+//    
+//    // Define the ground body.
+//    b2BodyDef groundBodyDef;
+//    groundBodyDef.position.Set(0, 0); // bottom-left corner
+//    
+//    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+//    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
+//    
+//    // Define the ground box shape.
+//    b2EdgeShape groundBox;
+//    
+//    // top
+//    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
+//                         from.y/PTM_RATIO),
+//                  b2Vec2(to.x/PTM_RATIO,
+//                         to.y/PTM_RATIO));
+//    b2Fixture* fix = physicsBoundariesBody->CreateFixture(&groundBox,0);
     
     
 #else //chipmunk
@@ -363,7 +404,12 @@
 {
     //load background color
     CCColor* backgroundClr = [dict colorForKey:@"backgroundColor"];
+#if COCOS2D_VERSION >= 0x00030300
+    self.color = backgroundClr;
+#else
     glClearColor(backgroundClr.red, backgroundClr.green, backgroundClr.blue, 1.0f);
+#endif//cocos2d_version
+    
 }
 
 -(void)loadGameWorldInfoFromDictionary:(NSDictionary*)dict
@@ -419,23 +465,6 @@
 
             
         }
-    }
-}
-
--(void)performLateLoading{
-    if(!lateLoadingNodes)return;
-    
-    NSMutableArray* lateLoadingToRemove = [NSMutableArray array];
-    for(CCNode* node in lateLoadingNodes){
-        if([node respondsToSelector:@selector(lateLoading)]){
-            if([(id<LHNodeProtocol>)node lateLoading]){
-                [lateLoadingToRemove addObject:node];
-            }
-        }
-    }
-    [lateLoadingNodes removeObjectsInArray:lateLoadingToRemove];
-    if([lateLoadingNodes count] == 0){
-        LH_SAFE_RELEASE(lateLoadingNodes);
     }
 }
 
@@ -516,8 +545,20 @@
 }
 
 -(BOOL)shouldDisableContactBetweenNodeA:(CCNode*)a
-                               andNodeB:(CCNode*)b{
+                               andNodeB:(CCNode*)b
+{
+    if(_collisionsDelegate){
+       return [_collisionsDelegate shouldDisableContactBetweenNodeA:a andNodeB:b];
+    }
     return NO;
+}
+    
+-(void)didBeginContact:(LHContactInfo *)contact
+{
+    //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContact:contact];
+    }
 }
 
 -(void)didBeginContactBetweenNodeA:(CCNode*)a
@@ -526,11 +567,28 @@
                        withImpulse:(float)impulse
 {
     //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContactBetweenNodeA:a
+                                                andNodeB:b
+                                              atLocation:scenePt
+                                             withImpulse:impulse];
+    }
+}
+    
+-(void)didEndContact:(LHContactInfo *)contact
+{
+    //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContact:contact];
+    }
 }
 
 -(void)didEndContactBetweenNodeA:(CCNode*)a
                         andNodeB:(CCNode*)b
 {
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContactBetweenNodeA:a andNodeB:b];
+    }
     //nothing to do - users should overwrite this method
 }
 
@@ -643,7 +701,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #pragma mark - TOUCH SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
 - (void) pinch:(UIPinchGestureRecognizer *)recognizer{
     
@@ -660,12 +718,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     [recognizer setScale:1.0];
 }
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     touchBeganLocation = [touch locationInNode:self];
 }
 
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
 {
     CGPoint touchLocation = [touch locationInNode:self];
     for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
@@ -675,6 +742,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         }
     }
 }
+
 #else
 
 
@@ -718,18 +786,47 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - PRIVATES
 ////////////////////////////////////////////////////////////////////////////////
-
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
 }
 
--(void)addLateLoadingNode:(CCNode*)node{
-    if(!lateLoadingNodes) {
-        lateLoadingNodes = [[NSMutableArray alloc] init];
+-(void)setEditorBodyInfoForSpriteName:(NSString*)sprName
+                                atlas:(NSString*)atlasPlist
+                            bodyInfo:(NSDictionary*)bodyInfo
+{
+    if(!editorBodiesInfo){
+        editorBodiesInfo = [[NSMutableDictionary alloc] init];
     }
-    [lateLoadingNodes addObject:node];
+    
+    if(!bodyInfo || !sprName || !atlasPlist)return;
+    
+    NSMutableDictionary* imagesDict = [editorBodiesInfo objectForKey:atlasPlist];
+    if(!imagesDict){
+        imagesDict = [NSMutableDictionary dictionary];
+    }
+    
+    if(![imagesDict objectForKey:sprName])
+    {
+        [imagesDict setObject:bodyInfo forKey:sprName];
+        [editorBodiesInfo setObject:imagesDict forKey:atlasPlist];
+    }
+}
+    
+-(NSDictionary*)getEditorBodyInfoForSpriteName:(NSString*)sprName atlas:(NSString*)atlasPlist
+{
+    if(!atlasPlist || !sprName)return nil;
+    NSDictionary* spritesInfo = [editorBodiesInfo objectForKey:atlasPlist];
+    if(spritesInfo){
+        return [spritesInfo objectForKey:sprName];
+    }
+    return nil;
+}
+-(BOOL)hasEditorBodyInfoForImageFilePath:(NSString*)atlasImgFile{
+    if(!atlasImgFile)return NO;
+    return [editorBodiesInfo objectForKey:atlasImgFile] != nil;
 }
 
+    
 -(float)currentDeviceRatio{
     
     CGSize scrSize = LH_SCREEN_RESOLUTION;

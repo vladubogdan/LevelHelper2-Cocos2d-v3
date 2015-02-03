@@ -41,17 +41,20 @@
         _node = nd;
         _activeAnimation = nil;
         
-        NSArray* animsInfo = [dict objectForKey:@"animations"];
-        for(NSDictionary* anim in animsInfo){
-            if(!_animations){
-                _animations = [[NSMutableArray alloc] init];
+        if(dict)
+        {
+            NSArray* animsInfo = [dict objectForKey:@"animations"];
+            for(NSDictionary* anim in animsInfo){
+                if(!_animations){
+                    _animations = [[NSMutableArray alloc] init];
+                }
+                LHAnimation* animation = [LHAnimation animationWithDictionary:anim
+                                                                         node:(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)_node];
+                if([animation isActive]){
+                    _activeAnimation = animation;
+                }
+                [_animations addObject:animation];
             }
-            LHAnimation* animation = [LHAnimation animationWithDictionary:anim
-                                                                     node:(CCNode<LHNodeAnimationProtocol, LHNodeProtocol>*)_node];
-            if([animation isActive]){
-                _activeAnimation = animation;
-            }
-            [_animations addObject:animation];
         }
     }
     return self;
@@ -88,5 +91,8 @@
         }
     }
     return nil;
+}
+-(NSMutableArray*)animations{
+    return _animations;
 }
 @end

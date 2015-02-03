@@ -17,7 +17,7 @@
 
 + (LHSceneSubclass *)scene
 {
-	return [[self alloc] initWithContentOfFile:@"PUBLISH_FOLDER/level01.plist"];
+	return [[self alloc] initWithContentOfFile:@"LH2-Published/example.lhplist"];
 }
 
 - (id)initWithContentOfFile:(NSString *)levelPlistFile
@@ -29,14 +29,58 @@
     /*
      INIT YOUR CONTENT HERE
      */
+
+    {
+        CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Welcome to"
+                                             fontName:@"ArialMT"
+                                             fontSize:40];
+        
+        [ttf setColor:[CCColor blackColor]];
+        [ttf setHorizontalAlignment:CCTextAlignmentCenter];
+        [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
+                                     self.contentSize.height*0.5+120)];
+        //add the text to the ui element as we dont want it to move with the camera
+        [[self uiNode] addChild:ttf];
+    }
+
+    {
+        CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"LevelHelper 2"
+                                             fontName:@"ArialMT"
+                                             fontSize:80];
+        
+        [ttf setColor:[CCColor blackColor]];
+        [ttf setHorizontalAlignment:CCTextAlignmentCenter];
+        [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
+                                     self.contentSize.height*0.5+60)];
+        //add the text to the ui element as we dont want it to move with the camera
+        [[self uiNode] addChild:ttf];
+    }
+    {
+        CCLabelTTF* ttf = [CCLabelTTF labelWithString:@"Run the DEMO target for examples.\nCheck LHSceneSubclass.mm to learn how to load a level.\nVisit www.gamedevhelper.com for more learn resources."
+                                             fontName:@"ArialMT"
+                                             fontSize:20];
+
+        [ttf setColor:[CCColor blackColor]];
+        [ttf setHorizontalAlignment:CCTextAlignmentCenter];
+        [ttf setPosition:CGPointMake(self.contentSize.width*0.5,
+                                     self.contentSize.height*0.5-60)];
+        //add the text to the ui element as we dont want it to move with the camera
+        [[self uiNode] addChild:ttf];     
+    }
+    
     
     // done
 	return self;
 }
 
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+#if COCOS2D_VERSION >= 0x00030300
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+#else
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+#endif//cocos2d_version
+{
     
     //dont forget to call super
     [super touchBegan:touch withEvent:event];

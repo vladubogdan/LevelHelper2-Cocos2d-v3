@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <div class="container">
+
+
+	</br>
+<h3>Libraries Release Notes</h3>
+
+<h5>Cocos2d Library</h5>
+<ul>
+	<li>Cocos2d version 3.3</li>
+</ul>
+
+<h4>After Update Compilation Help</h4>
+
+Because of changes in the Cocos2d 3.3 library files & code structure, user action is required to make an old project compile.</br>
+
+It is adviced to create a new project with the same name and settings and move your code files, levels and other assets to the new project.</br>
+If this is not possible please follow the guide below in order to make your old project compile.</br>
+<b>If you can't figure it out please contact me and I will gladly help you out</b>.</br>
+A video of this process is also available <a href="http://gamedevhelper.com/HelpVideos/videos/UpdateOldProjectToCocos2d3.3Help.mp4">here</a>.
+<hr>
+<b>A. Remove all LevelHelper 2 demo source code files</b> as they will no longer compile after the Cocos2d 3.3 update.</br>
+All demo files were updated to the new Cocos2d 3.3 library but you will need to create a new project.</br>
+1. Inside Xcode right click on the "Demo" folder and choose "Remove Reference" or "Move To Trash"
+</br>
+<hr>
+<b>B. Change initial scene and update Mac main.m file.</b></br>
+</br>
+1. Inside Xcode, locate "Supporting Files" -> MacOS -> main.m and remove this line "[CCGLView load_];"</br>
+2. If your project is still loading LHSceneIntroduction as the initial scene, edit AppDelegateMacOS.m and AppDelegate.m and load your own scene file.</br>
+<hr>
+<b>C. Change your Xcode project "Header Search Paths"</b></br>
+
+1. Select you <b>[ProjectName]+Box2d+iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>	
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+6. In the Genaral tab add "libcocos2d.a" under Linked Frameworks and Libraries.</br>
+7. In the "Build Phases" tab add "cocos2d-ios" under Target Dependencies.
+8. Clean and build the project.
+</br>
+
+<hr>
+1. Select you <b>[ProjectName]+Box2d-MacOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>	
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+6. In the Genaral tab add "libcocos2d-mac.a" under Linked Frameworks and Libraries.</br>
+7. In the "Build Phases" tab add "cocos2d-mac" under Target Dependencies.
+8. Clean and build the project.
+</br>
+<hr>
+1. Select you <b>[ProjectName]+Chipmunk-iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths</br>
+<ul>
+	<li>"$(SRCROOT)/cocos2d/cocos2d" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/objectivec/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/Chipmunk/chipmunk/include" - "non-recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/cocos2d-ui" - "recursive"</li>
+	<li>"$(SRCROOT)/cocos2d/external/ObjectAL" - "recursive"</li>		
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+</ul>
+5. Remove the old paths, but make sure you keep your own paths if any.</br>
+</br>
+
+</div><!-- /.container -->
+
+</body>
+</html>

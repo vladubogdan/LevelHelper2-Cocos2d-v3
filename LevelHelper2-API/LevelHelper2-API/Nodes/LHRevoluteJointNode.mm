@@ -125,16 +125,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
 #pragma mark LHNodeProtocol Optional
-- (void)visit
+
+-(void)lateLoading
 {
-    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
-        [self lateLoading];
+    if([_jointProtocolImp nodeA]){
+        return;
     }
-       
-    [super visit];
-}
--(BOOL)lateLoading
-{
+    
     [_jointProtocolImp findConnectedNodes];
     
     CCNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
@@ -151,12 +148,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2World* world = [pNode box2dWorld];
         
-        if(world == nil)return NO;
+        if(world == nil)return;
         
         b2Body* bodyA = [nodeA box2dBody];
         b2Body* bodyB = [nodeB box2dBody];
         
-        if(!bodyA || !bodyB)return NO;
+        if(!bodyA || !bodyB)return;
         
         b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
         b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
@@ -193,7 +190,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #else//chipmunk
         
         if(!nodeA.physicsBody || !nodeB.physicsBody)
-            return NO;
+            return;
 
         NSLog(@"\n\nWARNING: Revolute joint is not supported when using Chipmunk physics engine.\n\n");
         
@@ -207,10 +204,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
 #endif//LH_USE_BOX2D
 
-        
-        return true;
     }
-    return false;
 }
 
 @end

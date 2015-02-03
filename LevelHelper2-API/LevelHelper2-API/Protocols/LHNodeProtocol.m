@@ -38,7 +38,6 @@
 #import "LHGearJointNode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
--(void)addLateLoadingNode:(CCNode*)node;
 -(CGPoint)designOffset;
 -(CGSize)designResolutionSize;
 @end
@@ -46,7 +45,7 @@
 @implementation LHNodeProtocolImpl
 {
     BOOL b2WorldDirty;
-    __weak CCNode* _node;
+    __weak CCNode<LHNodeProtocol>* _node;
     
     NSString*           _uuid;
     NSMutableArray*     _tags;
@@ -62,113 +61,114 @@
     LH_SUPER_DEALLOC();
 }
 
-+ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
++ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd{
     return LH_AUTORELEASED([[self alloc] initNodeProtocolImpWithDictionary:dict node:nd]);
 }
 
-- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode*)nd{
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(CCNode<LHNodeProtocol>*)nd{
     
     if(self = [super init])
     {
         b2WorldDirty = false;
         _node = nd;
         
-        [_node setName:[dict objectForKey:@"name"]];
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        
-        //tags loading
+        if(dict)
         {
-            NSArray* loadedTags = [dict objectForKey:@"tags"];
-            if(loadedTags){
-                _tags = [[NSMutableArray alloc] initWithArray:loadedTags];
-            }
-        }
-
-        //user properties loading
-        {
-            NSDictionary* userPropInfo  = [dict objectForKey:@"userPropertyInfo"];
-            NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
-            if(userPropInfo && userPropClassName)
+            [_node setName:[dict objectForKey:@"name"]];
+            _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
+            
+            //tags loading
             {
-                Class userPropClass = NSClassFromString(userPropClassName);
-                if(userPropClass){
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wundeclared-selector"
-                    _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
-                                                        withObject:_node];
-    #pragma clang diagnostic pop
-                    if(_userProperty){
-                        [_userProperty setPropertiesFromDictionary:userPropInfo];
+                NSArray* loadedTags = [dict objectForKey:@"tags"];
+                if(loadedTags){
+                    _tags = [[NSMutableArray alloc] initWithArray:loadedTags];
+                }
+            }
+
+            //user properties loading
+            {
+                NSDictionary* userPropInfo  = [dict objectForKey:@"userPropertyInfo"];
+                NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
+                if(userPropInfo && userPropClassName)
+                {
+                    Class userPropClass = NSClassFromString(userPropClassName);
+                    if(userPropClass){
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wundeclared-selector"
+                        _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
+                                                            withObject:_node];
+        #pragma clang diagnostic pop
+                        if(_userProperty){
+                            [_userProperty setPropertiesFromDictionary:userPropInfo];
+                        }
                     }
                 }
             }
-        }
-        
-        if([dict objectForKey:@"alpha"])
-            [_node setOpacity:[dict floatForKey:@"alpha"]/255.0f];
-        
-        if([dict objectForKey:@"rotation"])
-            [_node setRotation:[dict floatForKey:@"rotation"]];
-        
-        if([dict objectForKey:@"zOrder"])
-            [_node setZOrder:[dict floatForKey:@"zOrder"]];
-        
-        
-        if([dict objectForKey:@"scale"])
-        {
-            CGPoint scl = [dict pointForKey:@"scale"];
-            [_node setScaleX:scl.x];
-            [_node setScaleY:scl.y];
-        }
+            
+            if([dict objectForKey:@"alpha"])
+                [_node setOpacity:[dict floatForKey:@"alpha"]/255.0f];
+            
+            if([dict objectForKey:@"rotation"])
+                [_node setRotation:[dict floatForKey:@"rotation"]];
+            
+            if([dict objectForKey:@"zOrder"])
+                [_node setZOrder:[dict floatForKey:@"zOrder"]];
+            
+            
+            if([dict objectForKey:@"scale"])
+            {
+                CGPoint scl = [dict pointForKey:@"scale"];
+                [_node setScaleX:scl.x];
+                [_node setScaleY:scl.y];
+            }
 
-        //for sprites the content size is set from the CCSpriteFrame
-        if([dict objectForKey:@"size"] && ![_node isKindOfClass:[LHSprite class]] ){
-            [_node setContentSize:[dict sizeForKey:@"size"]];
-        }
-        
-        if([dict objectForKey:@"generalPosition"]&&
-           ![_node isKindOfClass:[LHUINode class]] &&
-           ![_node isKindOfClass:[LHBackUINode class]] &&
-           ![_node isKindOfClass:[LHGameWorldNode class]])
-        {
+            //for sprites the content size is set from the CCSpriteFrame
+            if([dict objectForKey:@"size"] && ![_node isKindOfClass:[LHSprite class]] ){
+                [_node setContentSize:[dict sizeForKey:@"size"]];
+            }
             
-            CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-            CGPoint pos = [LHUtils positionForNode:_node
-                                          fromUnit:unitPos];
-            
-            NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-            if(devPositions)
+            if([dict objectForKey:@"generalPosition"]&&
+               ![_node isKindOfClass:[LHUINode class]] &&
+               ![_node isKindOfClass:[LHBackUINode class]] &&
+               ![_node isKindOfClass:[LHGameWorldNode class]])
             {
                 
-                NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                       forSize:LH_SCREEN_RESOLUTION];
+                CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+                CGPoint pos = [LHUtils positionForNode:_node
+                                              fromUnit:unitPos];
                 
-                if(unitPosStr){
-                    CGPoint unitPos = LHPointFromString(unitPosStr);
-                    pos = [LHUtils positionForNode:_node
-                                          fromUnit:unitPos];
-                }
-            }
+                NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+                if(devPositions)
+                {
                     
-            [_node setPosition:pos];
-        }
-        
-        if([dict objectForKey:@"anchor"] &&
-           ![_node isKindOfClass:[LHUINode class]] &&
-           ![_node isKindOfClass:[LHBackUINode class]] &&
-           ![_node isKindOfClass:[LHGameWorldNode class]])
-        {
-            CGPoint anchor = [dict pointForKey:@"anchor"];
-            anchor.y = 1.0f - anchor.y;
-            [_node setAnchorPoint:anchor];
-        }
-
-        
+                    NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                           forSize:LH_SCREEN_RESOLUTION];
+                    
+                    if(unitPosStr){
+                        CGPoint unitPos = LHPointFromString(unitPosStr);
+                        pos = [LHUtils positionForNode:_node
+                                              fromUnit:unitPos];
+                    }
+                }
+                        
+                [_node setPosition:pos];
+            }
+            
+            if([dict objectForKey:@"anchor"] &&
+               ![_node isKindOfClass:[LHUINode class]] &&
+               ![_node isKindOfClass:[LHBackUINode class]] &&
+               ![_node isKindOfClass:[LHGameWorldNode class]])
+            {
+                CGPoint anchor = [dict pointForKey:@"anchor"];
+                anchor.y = 1.0f - anchor.y;
+                [_node setAnchorPoint:anchor];
+            }
+        }        
     }
     return self;
 }
 
-- (instancetype)initNodeProtocolImpWithNode:(CCNode*)nd{
+- (instancetype)initNodeProtocolImpWithNode:(CCNode<LHNodeProtocol>*)nd{
     
     if(self = [super init])
     {
@@ -187,6 +187,20 @@
             CCNode* node = [LHNodeProtocolImpl createLHNodeWithDictionary:childInfo
                                                                    parent:prntNode];
 #pragma unused (node)
+        }
+    }
+}
+
+-(void)performLateLoading
+{
+    if([_node respondsToSelector:@selector(lateLoading)]){
+        [_node lateLoading];
+    }
+    
+    for(CCNode<LHNodeProtocol>* child in [_node children])
+    {
+        if([child respondsToSelector:@selector(performLateLoading)]){
+            [child performLateLoading];
         }
     }
 }
@@ -211,19 +225,9 @@
     if(subclassNodeType && subclassNodeType.length > 0)
     {
         //this will not work as we do not have the class included in the api
-//        Class classObj = NSClassFromString(subclassNodeType);
-        
         Class classObj = [scene createNodeObjectForSubclassWithName:subclassNodeType superTypeName:nodeType];
         if(classObj){
-            
-            CCNode* node = [classObj nodeWithDictionary:childInfo parent:prnt];
-            if(node){
-                if([node conformsToProtocol:@protocol(LHJointNodeProtocol)])
-                {
-                    [scene addLateLoadingNode:node];
-                }
-            }
-            return node;
+            return [classObj nodeWithDictionary:childInfo parent:prnt];
         }
         else{
             NSLog(@"\n\nWARNING: Expected a class of type %@ subclassed from %@, but nothing was returned. Check your \"createNodeObjectForSubclassWithName:superTypeName:\" method and make sure you return a valid Class.\n\n", subclassNodeType, nodeType);
@@ -320,51 +324,50 @@
     {
         LHRopeJointNode* jt = [LHRopeJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHWeldJoint"])
     {
         LHWeldJointNode* jt = [LHWeldJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
         
         LHRevoluteJointNode* jt = [LHRevoluteJointNode nodeWithDictionary:childInfo
                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHDistanceJoint"]){
         
         LHDistanceJointNode* jt = [LHDistanceJointNode nodeWithDictionary:childInfo
                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
         
     }
     else if([nodeType isEqualToString:@"LHPulleyJoint"]){
         
         LHPulleyJointNode* jt = [LHPulleyJointNode nodeWithDictionary:childInfo
                                                                parent:prnt];
-        [scene addLateLoadingNode:jt];
-        
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
         
         LHPrismaticJointNode* jt = [LHPrismaticJointNode nodeWithDictionary:childInfo
                                                                      parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHWheelJoint"]){
         
         LHWheelJointNode* jt = [LHWheelJointNode nodeWithDictionary:childInfo
                                                              parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     else if([nodeType isEqualToString:@"LHGearJoint"]){
         
         LHGearJointNode* jt = [LHGearJointNode nodeWithDictionary:childInfo
                                                            parent:prnt];
-        [scene addLateLoadingNode:jt];
+        return jt;
     }
     
     

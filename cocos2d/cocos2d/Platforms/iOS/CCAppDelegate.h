@@ -24,38 +24,11 @@
  */
 
 #import "../../ccMacros.h"
-#ifdef __CC_PLATFORM_IOS
+#if __CC_PLATFORM_IOS
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CCDirectorIOS.h"
-
-extern NSString* const CCSetupPixelFormat;
-extern NSString* const CCSetupScreenMode;
-extern NSString* const CCSetupScreenOrientation;
-extern NSString* const CCSetupAnimationInterval;
-extern NSString* const CCSetupFixedUpdateInterval;
-extern NSString* const CCSetupShowDebugStats;
-extern NSString* const CCSetupTabletScale2X;
-
-extern NSString* const CCSetupDepthFormat;
-extern NSString* const CCSetupPreserveBackbuffer;
-extern NSString* const CCSetupMultiSampling;
-extern NSString* const CCSetupNumberOfSamples;
-
-// Landscape screen orientation. Used with CCSetupScreenOrientation.
-extern NSString* const CCScreenOrientationLandscape;
-
-// Portrait screen orientation.  Used with CCSetupScreenOrientation.
-extern NSString* const CCScreenOrientationPortrait;
-
-
-// The flexible screen mode is Cocos2d's default. It will give you an area that can vary slightly in size. In landscape mode the height will be 320 points for mobiles and 384 points for tablets. The width of the area can vary from 480 to 568 points.
-extern NSString* const CCScreenModeFlexible;
-
-// The fixed screen mode will setup the working area to be 568 x 384 points. Depending on the device, the outer edges may be cropped. The safe area, that will be displayed on all sorts of devices, is 480 x 320 points and placed in the center of the working area.
-extern NSString* const CCScreenModeFixed;
-
 
 @class CCAppDelegate;
 @class CCScene;
@@ -111,7 +84,7 @@ extern NSString* const CCScreenModeFixed;
  *
  *  - CCSetupPixelFormat NSString with the pixel format, normally kEAGLColorFormatRGBA8 or kEAGLColorFormatRGB565. The RGB565 option is faster, but will allow less colors.
  *  - CCSetupScreenMode NSString value that accepts either CCScreenModeFlexible or CCScreenModeFixed.
- *  - CCSetupScreenOrientation NSString value that accepts either CCScreenOrientationLandscape or CCScreenOrientationPortrait.
+ *  - CCSetupScreenOrientation NSString value that accepts CCScreenOrientationLandscape, CCScreenOrientationPortrait, or CCScreenOrientationAll.
  *  - CCSetupAnimationInterval NSNumber with double. Specifies the desired interval between animation frames. Supported values are 1.0/60.0 (default) and 1.0/30.0.
  *  - CCSetupFixedUpdateInterval NSNumber with double. Specifies the desired interval between fixed updates.Should be smaller than CCSetupAnimationInterval. Defaults to 1/60.0.
  *  - CCSetupShowDebugStats NSNumber with bool. Specifies if the stats (FPS, frame time and draw call count) should be shown. Defaults to NO.
