@@ -296,6 +296,8 @@
 		6E9FD2BF19A4FEBF0046CDBD /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../build/Release-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		6E9FD2CA19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.h"; sourceTree = "<group>"; };
 		6E9FD2CB19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CCPhysicsJoint+LHAdditionalChipmunkJoints.mm"; sourceTree = "<group>"; };
+		6EABE7961A81DC2A00BD68BF /* LH_APIS_RELEASE_NOTES.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = LH_APIS_RELEASE_NOTES.html; path = ../LH_APIS_RELEASE_NOTES.html; sourceTree = "<group>"; };
+		6EABE7971A81DC2A00BD68BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6EDE843919A483A200599C48 /* libLevelHelper2-API.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDE843C19A483A200599C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EDE844A19A483A200599C48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -507,6 +509,8 @@
 		6EDE843019A483A200599C48 = {
 			isa = PBXGroup;
 			children = (
+				6EABE7961A81DC2A00BD68BF /* LH_APIS_RELEASE_NOTES.html */,
+				6EABE7971A81DC2A00BD68BF /* README.md */,
 				6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */,
 				6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */,
 				6EDE843E19A483A200599C48 /* LevelHelper2-API */,
