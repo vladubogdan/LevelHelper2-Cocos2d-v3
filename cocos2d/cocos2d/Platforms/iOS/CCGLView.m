@@ -223,15 +223,15 @@ extern EAGLContext *CCRenderDispatchSetupGL(EAGLRenderingAPI api, EAGLSharegroup
 		UIScreen *screen = [UIScreen mainScreen];
         
 #ifdef __IPHONE_8_0
-        self.contentScaleFactor = screen.nativeScale;
+
+        if([screen respondsToSelector:@selector(nativeScale)]){
+			self.contentScaleFactor = screen.nativeScale;
+		} else {
+			self.contentScaleFactor = screen.scale;
+		}
 #else
         self.contentScaleFactor = screen.scale;
 #endif
-//		if([screen respondsToSelector:@selector(nativeScale)]){
-//			self.contentScaleFactor = screen.nativeScale;
-//		} else {
-//			self.contentScaleFactor = screen.scale;
-//		}
 
 		if( ! [self setupSurfaceWithSharegroup:sharegroup] ) {
 			return nil;
