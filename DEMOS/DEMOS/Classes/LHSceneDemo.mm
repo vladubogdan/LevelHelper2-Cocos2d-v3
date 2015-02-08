@@ -35,7 +35,7 @@
 #import "LHSceneNodesSubclassingTest.h"
 #import "LHSceneAdvancedPhysicsTest.h"
 #import "LHSceneOnTheFlySpritesWithPhysicsTest.h"
-
+#import "LHSceneSkeletalCharacterTest.h"
 #import "LHSceneUniversalDevicesTest.h"
 
 @implementation LHSceneDemo
@@ -65,6 +65,8 @@
     
     [availableScenes addObject:[LHSceneIntroduction class]];
 
+    [availableScenes addObject:[LHSceneSkeletalCharacterTest class]];
+    
     [availableScenes addObject:[LHSceneOnTheFlySpritesWithPhysicsTest class]];
 
     [availableScenes addObject:[LHSceneAdvancedPhysicsTest class]];

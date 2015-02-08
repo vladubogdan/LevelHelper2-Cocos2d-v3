@@ -228,7 +228,6 @@ ccpForAngle(const CGFloat a)
 {
 	return ccp((CGFloat)cos(a), (CGFloat)sin(a));
 }
-
 /** Converts a vector to radians.
  @return CGFloat
  */
