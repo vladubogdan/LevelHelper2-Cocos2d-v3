@@ -73,9 +73,9 @@
 
 -(CGPoint)unitForGlobalPosition:(CGPoint)globalpt
 {
-    NSPoint local = [self convertToNodeSpace:globalpt];
+    CGPoint local = [self convertToNodeSpace:globalpt];
     
-    NSSize sizer = [self contentSize];
+    CGSize sizer = [self contentSize];
     
     float centerPointX = sizer.width*0.5;
     float centerPointY = sizer.height*0.5;
@@ -83,7 +83,7 @@
     local.x += centerPointX;
     local.y += centerPointY;
     
-    return  NSMakePoint(local.x/sizer.width, local.y/sizer.height);
+    return  CGPointMake(local.x/sizer.width, local.y/sizer.height);
 }
 
 -(void)setAnchorByKeepingPosition:(CGPoint)newAnchor

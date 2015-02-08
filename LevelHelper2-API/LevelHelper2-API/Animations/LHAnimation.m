@@ -367,6 +367,8 @@
                                         property:prop
          ];
     }
+    ////////////////////////////////////////////////////////////////////
+    
     else if([prop isKindOfClass:[LHRotationProperty class]])
     {
         [self animateNodeRotationToTime:time
@@ -596,8 +598,8 @@
                 //lets calculate the new value based on the start - end and unit time
                 float newRotation = beginRotation + shortest_angle*timeUnit;
                 
-                NSPoint beginPosition = [beginFrmInfo position];
-                NSPoint endPosition = [endFrmInfo position];
+                CGPoint beginPosition = [beginFrmInfo position];
+                CGPoint endPosition = [endFrmInfo position];
                 
                 //lets calculate the new node position based on the start - end and unit time
                 double newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
@@ -632,8 +634,8 @@
                     
                     if(![b rigid])
                     {
-                        NSPoint beginPosition = [beginFrmInfo position];
-                        NSPoint endPosition = [endFrmInfo position];
+                        CGPoint beginPosition = [beginFrmInfo position];
+                        CGPoint endPosition = [endFrmInfo position];
                         
                         //lets calculate the new node position based on the start - end and unit time
                         double newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
@@ -655,7 +657,7 @@
             
             if(beginFrmInfo)
             {
-                NSPoint beginPosition = [beginFrmInfo position];
+                CGPoint beginPosition = [beginFrmInfo position];
                 CGPoint newPos = CGPointMake(beginPosition.x, -beginPosition.y);
                 
                 newPos = [self convertFramePosition:newPos
@@ -678,7 +680,7 @@
                     
                     if(![b rigid])
                     {
-                        NSPoint beginPosition = [beginFrmInfo position];
+                        CGPoint beginPosition = [beginFrmInfo position];
                         CGPoint newPos = CGPointMake(beginPosition.x, -beginPosition.y);
                         
                         newPos = [self convertFramePosition:newPos

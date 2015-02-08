@@ -20,6 +20,10 @@
 
 
 @implementation LHBoneFrameInfo
+{
+    float       rotation;
+    CGPoint     position;
+}
 
 -(id)initWithDictionary:(NSDictionary*)dict{
     
@@ -38,10 +42,10 @@
 -(void)setRotation:(float)rot{
     rotation = rot;
 }
--(NSPoint)position{
+-(CGPoint)position{
     return position;
 }
--(void)setPosition:(NSPoint)pt{
+-(void)setPosition:(CGPoint)pt{
     position = pt;
 }
 

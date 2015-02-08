@@ -18,16 +18,16 @@
 @interface LHBoneConnection : NSObject
 {
     float angleDelta;
-    NSPoint positionDelta;
-    CCNode* connectedNode;
+    CGPoint positionDelta;
+    __weak CCNode* connectedNode;
     NSString* connectedNodeName;
-    LHBone* bone;
+    __weak LHBone* bone;
 }
 
 -(id)initWithDictionary:(NSDictionary*)dict bone:(LHBone*)prnt;
 
 -(float)angleDelta;
--(NSPoint)positionDelta;
+-(CGPoint)positionDelta;
 -(CCNode*)connectedNode;
 -(NSString*)connectedNodeName;
 -(LHBone*)bone;
@@ -66,7 +66,7 @@
 -(float)angleDelta{
     return angleDelta;
 }
--(NSPoint)positionDelta{
+-(CGPoint)positionDelta{
     return positionDelta;
 }
 -(CCNode*)connectedNode{
@@ -98,10 +98,8 @@
     float spriteWorldAngle = [[node parent] convertToWorldAngle:[node rotation]];
     angleDelta = spriteWorldAngle - boneWorldAngle;
 
-    NSPoint nodeWorldPos = [node convertToWorldSpaceAR:NSZeroPoint];
+    CGPoint nodeWorldPos = [node convertToWorldSpaceAR:ccp(0, 0)];
     positionDelta = [bone convertToNodeSpace:nodeWorldPos];
-
-//    [node setAnchorByKeepingPosition:ccp(0.5, 0.5)];
 }
 
 @end
@@ -228,25 +226,25 @@
 -(void)transformConnectedSprites
 {
     float curWorldAngle = [[self parent] convertToWorldAngle:[self rotation]];
-    NSPoint curWorldPos = [[self parent] convertToWorldSpace:[self position]];
+    CGPoint curWorldPos = [[self parent] convertToWorldSpace:[self position]];
     
     for(LHBoneConnection* con in connections)
     {
         CCNode* sprite = [con connectedNode];
         if(sprite)
         {
-            NSPoint unit = [sprite unitForGlobalPosition:curWorldPos];
+            CGPoint unit = [sprite unitForGlobalPosition:curWorldPos];
             
             float newSpriteAngle = [[sprite parent] convertToNodeAngle:curWorldAngle] + [con angleDelta];
             
-            NSPoint prevAnchor = [sprite anchorPoint];
+            CGPoint prevAnchor = [sprite anchorPoint];
             [sprite setAnchorPoint:unit];
             [sprite setRotation:newSpriteAngle];
             [sprite setAnchorPoint:prevAnchor];
             
-            NSPoint posDif = [con positionDelta];
-            NSPoint deltaWorldPos = [self convertToWorldSpace:posDif];
-            NSPoint newSpritePos = [[sprite parent] convertToNodeSpace:deltaWorldPos];
+            CGPoint posDif = [con positionDelta];
+            CGPoint deltaWorldPos = [self convertToWorldSpace:posDif];
+            CGPoint newSpritePos = [[sprite parent] convertToNodeSpace:deltaWorldPos];
             [sprite setPosition:newSpritePos];
         }
     }

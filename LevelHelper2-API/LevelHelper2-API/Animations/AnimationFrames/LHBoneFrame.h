@@ -7,20 +7,12 @@
 //
 
 #import "LHFrame.h"
-@class LHNode;
-@class LHBone;
-@class LHBoneConnection;
 
 @interface LHBoneFrameInfo : NSObject
-{
-    float       rotation;
-    NSPoint     position;
-}
-
 -(float)rotation;
 -(void)setRotation:(float)rot;
--(NSPoint)position;
--(void)setPosition:(NSPoint)pt;
+-(CGPoint)position;
+-(void)setPosition:(CGPoint)pt;
 
 @end
 
