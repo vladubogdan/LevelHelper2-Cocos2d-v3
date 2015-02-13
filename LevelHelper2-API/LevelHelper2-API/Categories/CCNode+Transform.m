@@ -8,6 +8,7 @@
 
 #import "CCNode+Transform.h"
 #import "LHScene.h"
+#import "LHUtils.h"
 
 @implementation CCNode (Transform)
 
@@ -49,5 +50,56 @@
     return ga;
 }
 
+-(float) convertToWorldAngle:(float)rotation
+{
+    CGPoint rot = ccpForAngle(-CC_DEGREES_TO_RADIANS(rotation));    
+    CGPoint worldPt = [self convertToWorldSpace:rot];
+    CGPoint worldOriginPt = [self convertToWorldSpace:CGPointZero];
+    CGPoint worldVec = ccpSub(worldPt, worldOriginPt);
+    float ang = -CC_RADIANS_TO_DEGREES(ccpToAngle(worldVec));
+    return LHNormalAbsoluteAngleDegrees(ang);
+}
+
+-(float) convertToNodeAngle:(float)rotation
+{
+    CGPoint rot = ccpForAngle(-CC_DEGREES_TO_RADIANS(rotation));
+    CGPoint nodePt = [self convertToNodeSpace:rot];
+    CGPoint nodeOriginPt = [self convertToNodeSpace:CGPointZero];
+    CGPoint nodeVec = ccpSub(nodePt, nodeOriginPt);
+    float ang = -CC_RADIANS_TO_DEGREES(ccpToAngle(nodeVec));
+    return LHNormalAbsoluteAngleDegrees(ang);
+}
+
+
+-(CGPoint)unitForGlobalPosition:(CGPoint)globalpt
+{
+    CGPoint local = [self convertToNodeSpace:globalpt];
+    
+    CGSize sizer = [self contentSize];
+    
+    float centerPointX = sizer.width*0.5;
+    float centerPointY = sizer.height*0.5;
+    
+    local.x += centerPointX;
+    local.y += centerPointY;
+    
+    return  CGPointMake(local.x/sizer.width, local.y/sizer.height);
+}
+
+-(void)setAnchorByKeepingPosition:(CGPoint)newAnchor
+{
+    CGPoint prevAnchor = [self anchorPoint];
+    CGPoint prevPos = [self position];
+
+    prevPos = [[self parent] convertToWorldSpace:prevPos];
+
+    CGPoint newPos = ccp(prevPos.x + (newAnchor.x - prevAnchor.x)*self.contentSize.width,
+                         prevPos.y + (newAnchor.y - prevAnchor.y)*self.contentSize.height);
+
+    [self setAnchorPoint:newAnchor];
+    
+    newPos = [[self parent] convertToNodeSpace:newPos];
+    [self setPosition:newPos];
+}
 
 @end

@@ -172,6 +172,11 @@ NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
 }
 
 
+NS_INLINE double LHNormalAbsoluteAngleDegrees(double angle) {
+    angle = fmod(angle, 360.0f);
+    return angle >= 0 ? angle : (angle + 360.0f);
+}
+
 
 @class CCNode;
 @class LHDevice;

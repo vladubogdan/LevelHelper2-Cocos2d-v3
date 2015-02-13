@@ -69,6 +69,9 @@
 		6E4026981982BD55002B4D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4026961982BD55002B4D32 /* main.m */; };
 		6E40269B1982BDE4002B4D32 /* AppDelegateMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */; };
 		6E40269D1982BE30002B4D32 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E40269C1982BE30002B4D32 /* MainMenu.xib */; };
+		6E77DFB91A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFB81A87363C00159958 /* LHSceneSkeletalCharacterTest.mm */; };
+		6E77DFBA1A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFB81A87363C00159958 /* LHSceneSkeletalCharacterTest.mm */; };
+		6E77DFBB1A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFB81A87363C00159958 /* LHSceneSkeletalCharacterTest.mm */; };
 		6E9B5D371A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
 		6E9B5D381A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
 		6E9B5D391A6CF9170090C8B4 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5D041A6CF9170090C8B4 /* BlueRobotSprite.mm */; };
@@ -340,6 +343,8 @@
 		6E4026991982BDE4002B4D32 /* AppDelegateMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMacOS.h; path = Classes/AppDelegateMacOS.h; sourceTree = "<group>"; };
 		6E40269A1982BDE4002B4D32 /* AppDelegateMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegateMacOS.m; path = Classes/AppDelegateMacOS.m; sourceTree = "<group>"; };
 		6E40269C1982BE30002B4D32 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
+		6E77DFB71A87363C00159958 /* LHSceneSkeletalCharacterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSkeletalCharacterTest.h; path = Classes/LHSceneSkeletalCharacterTest.h; sourceTree = "<group>"; };
+		6E77DFB81A87363C00159958 /* LHSceneSkeletalCharacterTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSkeletalCharacterTest.mm; path = Classes/LHSceneSkeletalCharacterTest.mm; sourceTree = "<group>"; };
 		6E9B5CDE1A6CF8E60090C8B4 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
 		6E9B5CE71A6CF8EF0090C8B4 /* cocos2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d.xcodeproj; path = ../cocos2d/cocos2d.xcodeproj; sourceTree = "<group>"; };
 		6E9B5CF71A6CF8F70090C8B4 /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "../LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
@@ -557,6 +562,8 @@
 				6E9B5D1A1A6CF9170090C8B4 /* LHSceneDemo.mm */,
 				6E9B5D1F1A6CF9170090C8B4 /* LHSceneIntroduction.h */,
 				6E9B5D201A6CF9170090C8B4 /* LHSceneIntroduction.mm */,
+				6E77DFB71A87363C00159958 /* LHSceneSkeletalCharacterTest.h */,
+				6E77DFB81A87363C00159958 /* LHSceneSkeletalCharacterTest.mm */,
 				6E9B5DA81A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.h */,
 				6E9B5DA91A6D166E0090C8B4 /* LHSceneAdvancedPhysicsTest.mm */,
 				6E9B5E791A6E6F180090C8B4 /* LHSceneOnTheFlySpritesWithPhysicsTest.h */,
@@ -947,6 +954,7 @@
 				6E9B5D7C1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D491A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,
 				6E9B5D551A6CF9170090C8B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E77DFB91A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */,
 				6E9B5D3A1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */,
 				6E9B5D4F1A6CF9170090C8B4 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E9B5D431A6CF9170090C8B4 /* LHSceneBodyScaleTest.mm in Sources */,
@@ -984,6 +992,7 @@
 				6E9B5D7E1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D4B1A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,
 				6E9B5D571A6CF9170090C8B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E77DFBB1A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */,
 				6E9B5D3C1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */,
 				6E9B5D511A6CF9170090C8B4 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E9B5D451A6CF9170090C8B4 /* LHSceneBodyScaleTest.mm in Sources */,
@@ -1021,6 +1030,7 @@
 				6E9B5D7D1A6CF9170090C8B4 /* LHSceneUserPropertiesTest.mm in Sources */,
 				6E9B5D4A1A6CF9170090C8B4 /* LHSceneCameraTest.mm in Sources */,
 				6E9B5D561A6CF9170090C8B4 /* LHSceneCollisionHandlingTest.mm in Sources */,
+				6E77DFBA1A87363C00159958 /* LHSceneSkeletalCharacterTest.mm in Sources */,
 				6E9B5D3B1A6CF9170090C8B4 /* LHSceneAssetsTest.mm in Sources */,
 				6E9B5D501A6CF9170090C8B4 /* LHSceneCharacterAnimationTest.mm in Sources */,
 				6E9B5D441A6CF9170090C8B4 /* LHSceneBodyScaleTest.mm in Sources */,

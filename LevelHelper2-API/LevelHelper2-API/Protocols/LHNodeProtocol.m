@@ -12,6 +12,8 @@
 #import "LHScene.h"
 #import "LHUserPropertyProtocol.h"
 
+#import "LHAnimation.h"
+
 #import "LHUINode.h"
 #import "LHBackUINode.h"
 #import "LHGameWorldNode.h"
@@ -25,8 +27,9 @@
 #import "LHShape.h"
 #import "LHSprite.h"
 #import "LHWater.h"
-#import "LHAnimation.h"
 #import "LHGravityArea.h"
+#import "LHBone.h"
+#import "LHBoneNodes.h"
 
 #import "LHRopeJointNode.h"
 #import "LHDistanceJointNode.h"
@@ -272,6 +275,12 @@
                                          parent:prnt];
         return nd;
     }
+    else if([nodeType isEqualToString:@"LHBone"])
+    {
+        LHBone* bn = [LHBone nodeWithDictionary:childInfo
+                                         parent:prnt];
+        return bn;
+    }
     else if([nodeType isEqualToString:@"LHBezier"])
     {
         LHBezier* bez = [LHBezier nodeWithDictionary:childInfo
@@ -283,6 +292,12 @@
         LHShape* sp = [LHShape nodeWithDictionary:childInfo
                                            parent:prnt];
         return sp;
+    }
+    else if([nodeType isEqualToString:@"LHBoneNodes"])
+    {
+        LHBoneNodes* nd = [LHBoneNodes nodeWithDictionary:childInfo
+                                                   parent:prnt];
+        return nd;
     }
     else if([nodeType isEqualToString:@"LHWaves"])
     {

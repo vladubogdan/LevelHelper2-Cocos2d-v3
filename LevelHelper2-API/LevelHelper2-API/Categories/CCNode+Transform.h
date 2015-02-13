@@ -16,4 +16,11 @@
 -(float)globalAngleFromLocalAngle:(float)la;
 -(float)localAngleFromGlobalAngle:(float)ga;
 
+-(float)convertToWorldAngle:(float)localAngle;
+-(float)convertToNodeAngle:(float)worldAngle;
+
+-(CGPoint)unitForGlobalPosition:(CGPoint)globalpt;
+
+-(void)setAnchorByKeepingPosition:(CGPoint)newAnchor;
+
 @end

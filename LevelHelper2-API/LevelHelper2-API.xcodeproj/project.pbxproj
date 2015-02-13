@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E77DFC11A8736CC00159958 /* LHBone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC01A8736CC00159958 /* LHBone.mm */; };
+		6E77DFC21A8736CC00159958 /* LHBone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC01A8736CC00159958 /* LHBone.mm */; };
+		6E77DFC31A8736CC00159958 /* LHBone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC01A8736CC00159958 /* LHBone.mm */; };
+		6E77DFC61A87381600159958 /* LHBoneNodes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC51A87381600159958 /* LHBoneNodes.mm */; };
+		6E77DFC71A87381600159958 /* LHBoneNodes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC51A87381600159958 /* LHBoneNodes.mm */; };
+		6E77DFC81A87381600159958 /* LHBoneNodes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFC51A87381600159958 /* LHBoneNodes.mm */; };
+		6E77DFCB1A873CDB00159958 /* LHRootBoneProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCA1A873CDB00159958 /* LHRootBoneProperty.m */; };
+		6E77DFCC1A873CDB00159958 /* LHRootBoneProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCA1A873CDB00159958 /* LHRootBoneProperty.m */; };
+		6E77DFCD1A873CDB00159958 /* LHRootBoneProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCA1A873CDB00159958 /* LHRootBoneProperty.m */; };
+		6E77DFD01A873D3400159958 /* LHBoneFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCF1A873D3400159958 /* LHBoneFrame.m */; };
+		6E77DFD11A873D3400159958 /* LHBoneFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCF1A873D3400159958 /* LHBoneFrame.m */; };
+		6E77DFD21A873D3400159958 /* LHBoneFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFCF1A873D3400159958 /* LHBoneFrame.m */; };
 		6E80C4D319A7683B002EEA12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C4D219A7683B002EEA12 /* Foundation.framework */; };
 		6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
 		6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B5DB31A6D37CD0090C8B4 /* LHBodyShape.mm */; };
@@ -178,6 +190,14 @@
 
 /* Begin PBXFileReference section */
 		6E3D885819AF0B9500690BBD /* LH_COCOS2D_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_COCOS2D_PROJECT_TEMPLATE.plist; path = ../LH_COCOS2D_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
+		6E77DFBF1A8736CC00159958 /* LHBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBone.h; sourceTree = "<group>"; };
+		6E77DFC01A8736CC00159958 /* LHBone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBone.mm; sourceTree = "<group>"; };
+		6E77DFC41A87381600159958 /* LHBoneNodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBoneNodes.h; sourceTree = "<group>"; };
+		6E77DFC51A87381600159958 /* LHBoneNodes.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBoneNodes.mm; sourceTree = "<group>"; };
+		6E77DFC91A873CDB00159958 /* LHRootBoneProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRootBoneProperty.h; sourceTree = "<group>"; };
+		6E77DFCA1A873CDB00159958 /* LHRootBoneProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHRootBoneProperty.m; sourceTree = "<group>"; };
+		6E77DFCE1A873D3400159958 /* LHBoneFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBoneFrame.h; sourceTree = "<group>"; };
+		6E77DFCF1A873D3400159958 /* LHBoneFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBoneFrame.m; sourceTree = "<group>"; };
 		6E80C4B719A75ABC002EEA12 /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E80C4D219A7683B002EEA12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E9B5DB21A6D37CD0090C8B4 /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
@@ -356,6 +376,8 @@
 			children = (
 				6E9FC74D19A4F2330046CDBD /* LHFrame.h */,
 				6E9FC74E19A4F2330046CDBD /* LHFrame.m */,
+				6E77DFCE1A873D3400159958 /* LHBoneFrame.h */,
+				6E77DFCF1A873D3400159958 /* LHBoneFrame.m */,
 				6E9FC74F19A4F2330046CDBD /* LHOpacityFrame.h */,
 				6E9FC75019A4F2330046CDBD /* LHOpacityFrame.m */,
 				6E9FC75119A4F2330046CDBD /* LHPositionFrame.h */,
@@ -375,6 +397,8 @@
 			children = (
 				6E9FC75A19A4F2330046CDBD /* LHAnimationProperty.h */,
 				6E9FC75B19A4F2330046CDBD /* LHAnimationProperty.m */,
+				6E77DFC91A873CDB00159958 /* LHRootBoneProperty.h */,
+				6E77DFCA1A873CDB00159958 /* LHRootBoneProperty.m */,
 				6E9FC75C19A4F2330046CDBD /* LHCameraActivateProperty.h */,
 				6E9FC75D19A4F2330046CDBD /* LHCameraActivateProperty.m */,
 				6E9FC75E19A4F2330046CDBD /* LHChildrenOpacitiesProperty.h */,
@@ -433,6 +457,10 @@
 				6E9FC78719A4F2330046CDBD /* LHBackUINode.mm */,
 				6E9FC7A619A4F2330046CDBD /* LHSprite.h */,
 				6E9FC7A719A4F2330046CDBD /* LHSprite.mm */,
+				6E77DFBF1A8736CC00159958 /* LHBone.h */,
+				6E77DFC01A8736CC00159958 /* LHBone.mm */,
+				6E77DFC41A87381600159958 /* LHBoneNodes.h */,
+				6E77DFC51A87381600159958 /* LHBoneNodes.mm */,
 				6E9FC78419A4F2330046CDBD /* LHAsset.h */,
 				6E9FC78519A4F2330046CDBD /* LHAsset.mm */,
 				6E9FC78819A4F2330046CDBD /* LHBezier.h */,
@@ -714,9 +742,11 @@
 				6E9FC7F419A4F2330046CDBD /* LHAnimation.m in Sources */,
 				6E9FC85119A4F2330046CDBD /* LHNodeProtocol.m in Sources */,
 				6E9FC7CD19A4F2330046CDBD /* LHScaleFrame.m in Sources */,
+				6E77DFCB1A873CDB00159958 /* LHRootBoneProperty.m in Sources */,
 				6E9FC83619A4F2330046CDBD /* LHShape.mm in Sources */,
 				6E9FC7D319A4F2330046CDBD /* LHAnimationProperty.m in Sources */,
 				6E9FC85719A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
+				6E77DFC61A87381600159958 /* LHBoneNodes.mm in Sources */,
 				6E9FC82119A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84219A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
 				6E9B5DB41A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
@@ -724,6 +754,7 @@
 				6E9FC83319A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83019A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
 				6E9FC7DC19A4F2330046CDBD /* LHChildrenPositionsProperty.m in Sources */,
+				6E77DFC11A8736CC00159958 /* LHBone.mm in Sources */,
 				6E9FC80C19A4F2330046CDBD /* LHBezier.mm in Sources */,
 				6E9FC80F19A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CC19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
@@ -734,6 +765,7 @@
 				6E9FC84E19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83919A4F2330046CDBD /* LHSprite.mm in Sources */,
 				6E9FC81519A4F2330046CDBD /* LHDrawNode.mm in Sources */,
+				6E77DFD01A873D3400159958 /* LHBoneFrame.m in Sources */,
 				6E9FC85A19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EE19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82A19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -775,9 +807,11 @@
 				6E9FC7F519A4F2330046CDBD /* LHAnimation.m in Sources */,
 				6E9FC85219A4F2330046CDBD /* LHNodeProtocol.m in Sources */,
 				6E9FC7CE19A4F2330046CDBD /* LHScaleFrame.m in Sources */,
+				6E77DFCC1A873CDB00159958 /* LHRootBoneProperty.m in Sources */,
 				6E9FC83719A4F2330046CDBD /* LHShape.mm in Sources */,
 				6E9FC7D419A4F2330046CDBD /* LHAnimationProperty.m in Sources */,
 				6E9FC85819A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
+				6E77DFC71A87381600159958 /* LHBoneNodes.mm in Sources */,
 				6E9FC82219A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84319A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
 				6E9B5DB51A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
@@ -785,6 +819,7 @@
 				6E9FC83419A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83119A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
 				6E9FC7DD19A4F2330046CDBD /* LHChildrenPositionsProperty.m in Sources */,
+				6E77DFC21A8736CC00159958 /* LHBone.mm in Sources */,
 				6E9FC80D19A4F2330046CDBD /* LHBezier.mm in Sources */,
 				6E9FC81019A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CD19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
@@ -795,6 +830,7 @@
 				6E9FC84F19A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83A19A4F2330046CDBD /* LHSprite.mm in Sources */,
 				6E9FC81619A4F2330046CDBD /* LHDrawNode.mm in Sources */,
+				6E77DFD11A873D3400159958 /* LHBoneFrame.m in Sources */,
 				6E9FC85B19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7EF19A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82B19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
@@ -836,9 +872,11 @@
 				6E9FC7F619A4F2330046CDBD /* LHAnimation.m in Sources */,
 				6E9FC85319A4F2330046CDBD /* LHNodeProtocol.m in Sources */,
 				6E9FC7CF19A4F2330046CDBD /* LHScaleFrame.m in Sources */,
+				6E77DFCD1A873CDB00159958 /* LHRootBoneProperty.m in Sources */,
 				6E9FC83819A4F2330046CDBD /* LHShape.mm in Sources */,
 				6E9FC7D519A4F2330046CDBD /* LHAnimationProperty.m in Sources */,
 				6E9FC85919A4F2330046CDBD /* LHBox2dCollisionHandling.mm in Sources */,
+				6E77DFC81A87381600159958 /* LHBoneNodes.mm in Sources */,
 				6E9FC82319A4F2330046CDBD /* LHNode.mm in Sources */,
 				6E9FC84419A4F2330046CDBD /* LHWeldJointNode.mm in Sources */,
 				6E9B5DB61A6D37CD0090C8B4 /* LHBodyShape.mm in Sources */,
@@ -846,6 +884,7 @@
 				6E9FC83519A4F2330046CDBD /* LHRopeJointNode.mm in Sources */,
 				6E9FC83219A4F2330046CDBD /* LHRevoluteJointNode.mm in Sources */,
 				6E9FC7DE19A4F2330046CDBD /* LHChildrenPositionsProperty.m in Sources */,
+				6E77DFC31A8736CC00159958 /* LHBone.mm in Sources */,
 				6E9FC80E19A4F2330046CDBD /* LHBezier.mm in Sources */,
 				6E9FC81119A4F2330046CDBD /* LHCamera.mm in Sources */,
 				6E9FD2CE19A501B20046CDBD /* CCPhysicsJoint+LHAdditionalChipmunkJoints.mm in Sources */,
@@ -856,6 +895,7 @@
 				6E9FC85019A4F2330046CDBD /* LHNodePhysicsProtocol.mm in Sources */,
 				6E9FC83B19A4F2330046CDBD /* LHSprite.mm in Sources */,
 				6E9FC81719A4F2330046CDBD /* LHDrawNode.mm in Sources */,
+				6E77DFD21A873D3400159958 /* LHBoneFrame.m in Sources */,
 				6E9FC85C19A4F2330046CDBD /* LHUtils.m in Sources */,
 				6E9FC7F019A4F2330046CDBD /* LHScaleProperty.m in Sources */,
 				6E9FC82C19A4F2330046CDBD /* LHPrismaticJointNode.mm in Sources */,
