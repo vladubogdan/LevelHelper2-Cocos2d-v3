@@ -124,7 +124,7 @@
     
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
-    
+    LH_SAFE_RELEASE(connections);
 
     LH_SUPER_DEALLOC();
 }
@@ -161,9 +161,9 @@
         connections = [[NSMutableArray alloc] init];
         
         NSArray* conInfo = [dict objectForKey:@"connections"];
-        for(NSDictionary* dict in conInfo)
+        for(NSDictionary* conDict in conInfo)
         {
-            LHBoneConnection* con = LH_AUTORELEASED([[LHBoneConnection alloc] initWithDictionary:dict bone:self]);
+            LHBoneConnection* con = LH_AUTORELEASED([[LHBoneConnection alloc] initWithDictionary:conDict bone:self]);
             [connections addObject:con];
         }
 
