@@ -109,8 +109,7 @@
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
 #if __CC_PLATFORM_IOS
-    [[[CCDirector sharedDirector] view] removeGestureRecognizer:pinchRecognizer];
-    LH_SAFE_RELEASE(pinchRecognizer);
+    [self removePinchRecognizer];
 #endif
     
     _backUiNode = nil;
@@ -237,8 +236,7 @@
         [self setUserInteractionEnabled:YES];
 
         #if __CC_PLATFORM_IOS
-        pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
-        [[[CCDirector sharedDirector] view] addGestureRecognizer:pinchRecognizer];
+        [self addPinchRecognizer];
         #endif
         
         
@@ -702,7 +700,20 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 ////////////////////////////////////////////////////////////////////////////////
 
 #if __CC_PLATFORM_IOS
-
+-(void)addPinchRecognizer
+{
+    if(!pinchRecognizer){
+        pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+        [[[CCDirector sharedDirector] view] addGestureRecognizer:pinchRecognizer];
+    }
+}
+-(void)removePinchRecognizer{
+    if(pinchRecognizer){
+        [[[CCDirector sharedDirector] view] removeGestureRecognizer:pinchRecognizer];
+        LH_SAFE_RELEASE(pinchRecognizer);
+    }
+}
+    
 - (void) pinch:(UIPinchGestureRecognizer *)recognizer{
     
     CGPoint touchLocation = [recognizer locationInView:recognizer.view];
