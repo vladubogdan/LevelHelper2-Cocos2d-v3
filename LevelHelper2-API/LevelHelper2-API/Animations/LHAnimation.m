@@ -326,7 +326,6 @@
 //    }
     
     
-    
     __weak CCNode<LHNodeAnimationProtocol, LHNodeProtocol>* animNode = node;
     if([prop isSubproperty] && [prop subpropertyNode]){
         animNode = [prop subpropertyNode];
@@ -739,6 +738,7 @@
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginRotation = [beginFrame rotationForUUID:[child uuid]];
+                
                 [child setRotation:beginRotation];
             }
         }
@@ -898,7 +898,11 @@
                 //lets calculate the new value based on the start - end and unit time
                 float newValue = beginValue + (endValue - beginValue)*timeUnit;
                 
-                [child setOpacity:newValue/255.0f];
+                if([child respondsToSelector:@selector(setCascadeOpacityEnabled:)]){
+                    ((CCNode*)child).cascadeOpacityEnabled = NO;
+                }
+
+                [(CCNode*)child setOpacity:newValue/255.0f];
             }
         }
     }
@@ -910,7 +914,12 @@
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginValue = [beginFrame opacityForUUID:[child uuid]];
-                [child setOpacity:beginValue/255.0f];
+                
+                if([child respondsToSelector:@selector(setCascadeOpacityEnabled:)]){
+                    ((CCNode*)child).cascadeOpacityEnabled = NO;
+                }
+                
+                [(CCNode*)child setOpacity:beginValue/255.0f];
             }
         }
     }
@@ -939,13 +948,14 @@
         
         //lets calculate the new value based on the start - end and unit time
         float newValue = beginValue + (endValue - beginValue)*timeUnit;
-                
+        
         [animNode setOpacity:newValue/255.0f];
     }
     else if(beginFrame)
     {
         //we only have begin frame so lets set value based on this frame
         float beginValue = [beginFrame opacityForUUID:[animNode uuid]];
+        
         [animNode setOpacity:beginValue/255.0f];
     }
 }
